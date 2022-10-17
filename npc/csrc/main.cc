@@ -3,7 +3,7 @@
 #include <Vtop.h>
 #include <verilated.h>
 #include <nvboard.h>
-#include <auto_bind.hpp>
+#include "auto_bind.hpp"
 
 VerilatedContext* contextp = new VerilatedContext;
 Vtop* top = new Vtop{contextp};
