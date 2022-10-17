@@ -39,4 +39,4 @@ target_link_libraries(Vtop ${CMAKE_SOURCE_DIR}/nvboard.a)
 verilate(Vtop COVERAGE TRACE
   INCLUDE_DIRS "../"
   VERILATOR_ARGS -f ./input.vc -x-assign fast
-  SOURCES vsrc/*.v )
+  SOURCES vsrc/top.v)
