@@ -23,6 +23,9 @@ TARGET := oldcmake
 endif
 endif
 
+NXDC_FILES = constr/top.nxdc
+SRC_AUTO_BIND = csrc/auto_bind.hpp
+
 # compile commands verilator --trace --cc --exe --build -j 0 -Wall csrc/main.cpp vsrc/our.v
 # CC = verilator
 # FLAGS = --trace --cc --exe --build -j 0 -Wall 
@@ -40,15 +43,25 @@ sim:
 	mkdir -p build && cd build && cmake ..
 
 	@echo
+	@echo "-- SRC-AUTO-BIND -------------------"
+	python3 $(NVBOARD_HOME)/scripts/auto_pin_bind.py ${NXDC_FILES} ${SRC_AUTO_BIND}
+
+	@echo
 	@echo "-- BUILD -------------------"
 	cmake --build build -j
 
 	@echo
 	@echo "-- RUN ---------------------"
-	build/Vour
+	@mkdir -p logs
+	build/Vtop +trace
+
+	@echo
+	@echo "-- COVERAGE ----------------"
+	$(VERILATOR_COVERAGE) --annotate logs/annotated logs/coverage.dat
 
 	@echo
 	@echo "-- DONE --------------------"
+	@echo "To see waveforms, open vlt_dump.vcd in a waveform viewer"
 	@echo
 
 	# $(CC) $(FLAGS) csrc/main.cpp vsrc/our.v
