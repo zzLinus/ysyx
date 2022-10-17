@@ -4,25 +4,26 @@
 #include <verilated.h>
 #include <nvboard.h>
 
-static TOP_NAME dut;
+VerilatedContext* contextp = new VerilatedContext;
+Vtop* top = new Vtop{contextp};
+
+// static TOP_NAME dut;
 
 void nvboard_bind_all_pins(Vtop* top);
 
 static void single_cycle() {
-  dut.clk = 0; dut.eval();
-  dut.clk = 1; dut.eval();
+  top->clk = 0; top->eval();
+  top->clk = 1; top->eval();
 }
 
 static void reset(int n) {
-  dut.rst = 1;
-  while (n -- > 0) single_cycle();
-  dut.rst = 0;
+  top->rst = 1;
+  while (n-- > 0) single_cycle();
+  top->rst = 0;
 }
 
 int main(int argc, char** argv, char** env) {
-VerilatedContext* contextp = new VerilatedContext;
 contextp->commandArgs(argc, argv);
-Vtop* top = new Vtop{contextp};
 while (!contextp->gotFinish()) { 
 	int a = rand() & 1;
 	int b = rand() & 1;
