@@ -36,4 +36,7 @@ VL_ATTR_COLD void Vour___024root___ctor_var_reset(Vour___024root* vlSelf) {
     vlSelf->a = VL_RAND_RESET_I(1);
     vlSelf->b = VL_RAND_RESET_I(1);
     vlSelf->f = VL_RAND_RESET_I(1);
+    vlSelf->our__DOT____Vtogcov__a = VL_RAND_RESET_I(1);
+    vlSelf->our__DOT____Vtogcov__b = VL_RAND_RESET_I(1);
+    vlSelf->our__DOT____Vtogcov__f = VL_RAND_RESET_I(1);
 }

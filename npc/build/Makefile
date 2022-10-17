@@ -177,6 +177,54 @@ CMakeFiles/Vour.dir/Vour.dir/Vour__Syms.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Syms.cpp.s
 .PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Syms.cpp.s
 
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.o: CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.o
+
+# target to build an object file
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.o
+
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.i: CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.i
+
+# target to preprocess a source file
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.i
+
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.s: CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.s
+
+# target to generate assembly for a file
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.cpp.s
+
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.o: CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.o
+
+# target to build an object file
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.o
+
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.i: CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.i
+
+# target to preprocess a source file
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.i
+
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.s: CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.s
+
+# target to generate assembly for a file
+CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.cpp.s
+
 CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0.o: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0.cpp.o
 .PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0.o
 
@@ -224,6 +272,54 @@ CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.s: CMakeF
 CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.cpp.s
 .PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.cpp.s
+
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.o: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.o
+
+# target to build an object file
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.o
+
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.i: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.i
+
+# target to preprocess a source file
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.i
+
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.s: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.s
+
+# target to generate assembly for a file
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.cpp.s
+
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.o: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.o
+
+# target to build an object file
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.o
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.o
+
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.i: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.i
+
+# target to preprocess a source file
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.i
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.i
+
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.s: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.s
+
+# target to generate assembly for a file
+CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.s
+.PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.cpp.s
 
 CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.o: CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.cpp.o
 .PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.o
@@ -297,6 +393,54 @@ usr/share/verilator/include/verilated.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated.cpp.s
 .PHONY : usr/share/verilator/include/verilated.cpp.s
 
+usr/share/verilator/include/verilated_cov.o: usr/share/verilator/include/verilated_cov.cpp.o
+.PHONY : usr/share/verilator/include/verilated_cov.o
+
+# target to build an object file
+usr/share/verilator/include/verilated_cov.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated_cov.cpp.o
+.PHONY : usr/share/verilator/include/verilated_cov.cpp.o
+
+usr/share/verilator/include/verilated_cov.i: usr/share/verilator/include/verilated_cov.cpp.i
+.PHONY : usr/share/verilator/include/verilated_cov.i
+
+# target to preprocess a source file
+usr/share/verilator/include/verilated_cov.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated_cov.cpp.i
+.PHONY : usr/share/verilator/include/verilated_cov.cpp.i
+
+usr/share/verilator/include/verilated_cov.s: usr/share/verilator/include/verilated_cov.cpp.s
+.PHONY : usr/share/verilator/include/verilated_cov.s
+
+# target to generate assembly for a file
+usr/share/verilator/include/verilated_cov.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated_cov.cpp.s
+.PHONY : usr/share/verilator/include/verilated_cov.cpp.s
+
+usr/share/verilator/include/verilated_vcd_c.o: usr/share/verilator/include/verilated_vcd_c.cpp.o
+.PHONY : usr/share/verilator/include/verilated_vcd_c.o
+
+# target to build an object file
+usr/share/verilator/include/verilated_vcd_c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated_vcd_c.cpp.o
+.PHONY : usr/share/verilator/include/verilated_vcd_c.cpp.o
+
+usr/share/verilator/include/verilated_vcd_c.i: usr/share/verilator/include/verilated_vcd_c.cpp.i
+.PHONY : usr/share/verilator/include/verilated_vcd_c.i
+
+# target to preprocess a source file
+usr/share/verilator/include/verilated_vcd_c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated_vcd_c.cpp.i
+.PHONY : usr/share/verilator/include/verilated_vcd_c.cpp.i
+
+usr/share/verilator/include/verilated_vcd_c.s: usr/share/verilator/include/verilated_vcd_c.cpp.s
+.PHONY : usr/share/verilator/include/verilated_vcd_c.s
+
+# target to generate assembly for a file
+usr/share/verilator/include/verilated_vcd_c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/usr/share/verilator/include/verilated_vcd_c.cpp.s
+.PHONY : usr/share/verilator/include/verilated_vcd_c.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -312,12 +456,24 @@ help:
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Syms.o"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Syms.i"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Syms.s"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.o"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.i"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0.s"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.o"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.i"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour__Trace__0__Slow.s"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0.o"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0.i"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0.s"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.o"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.i"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_h637983f1__0__Slow.s"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.o"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.i"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0.s"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.o"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.i"
+	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__DepSet_hf7027e39__0__Slow.s"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.o"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.i"
 	@echo "... CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.s"
@@ -327,6 +483,12 @@ help:
 	@echo "... usr/share/verilator/include/verilated.o"
 	@echo "... usr/share/verilator/include/verilated.i"
 	@echo "... usr/share/verilator/include/verilated.s"
+	@echo "... usr/share/verilator/include/verilated_cov.o"
+	@echo "... usr/share/verilator/include/verilated_cov.i"
+	@echo "... usr/share/verilator/include/verilated_cov.s"
+	@echo "... usr/share/verilator/include/verilated_vcd_c.o"
+	@echo "... usr/share/verilator/include/verilated_vcd_c.i"
+	@echo "... usr/share/verilator/include/verilated_vcd_c.s"
 .PHONY : help
 
 

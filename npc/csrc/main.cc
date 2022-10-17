@@ -6,7 +6,9 @@ int main(int argc, char** argv, char** env) {
 VerilatedContext* contextp = new VerilatedContext;
 contextp->commandArgs(argc, argv);
 Vour* top = new Vour{contextp};
-while (!contextp->gotFinish()) { 
+uint64_t a = 64;
+// while (!contextp->gotFinish()) { 
+while (a--) { 
 	int a = rand() & 1;
 	int b = rand() & 1;
 	top->a = a;
