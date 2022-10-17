@@ -30,13 +30,13 @@ if (NOT verilator_FOUND)
 endif()
 
 # Create a new executable target that will contain all your sources
-add_executable(Vour ../csrc/main.cc)
+add_executable(Vtop ../csrc/main.cc)
 
-target_include_directories(Vour PUBLIC ../nvboard/include)
-target_link_libraries(Vour ${CMAKE_SOURCE_DIR}/nvboard.a)
+target_include_directories(Vtop PUBLIC ../nvboard/include)
+target_link_libraries(Vtop ${CMAKE_SOURCE_DIR}/nvboard.a)
 
 # Add the Verilated circuit to the target
-verilate(Vour COVERAGE TRACE
+verilate(Vtop COVERAGE TRACE
   INCLUDE_DIRS "../"
   VERILATOR_ARGS -f ./input.vc -x-assign fast
-  SOURCES vsrc/our.v)
+  SOURCES vsrc/top.v)

@@ -46,7 +46,7 @@ sim:
 	@echo
 	@echo "-- RUN ---------------------"
 	@mkdir -p logs
-	build/Vour +trace
+	build/Vtop +trace
 
 	@echo
 	@echo "-- COVERAGE ----------------"
