@@ -23,6 +23,9 @@ TARGET := oldcmake
 endif
 endif
 
+NXDC_FILES = constr/top.nxdc
+SRC_AUTO_BIND = $(csrc/auto_bind.cc)
+
 # compile commands verilator --trace --cc --exe --build -j 0 -Wall csrc/main.cpp vsrc/our.v
 # CC = verilator
 # FLAGS = --trace --cc --exe --build -j 0 -Wall 
@@ -38,6 +41,10 @@ sim:
 	@echo
 	@echo "-- VERILATE ----------------"
 	mkdir -p build && cd build && cmake ..
+
+	@echo
+	@echo "-- SRC-AUTO-BIND -------------------"
+	python3 $(NVBOARD_HOME)/scripts/auto_pin_bind.py ${NXDC_FILES} ${SRC_AUTO_BIND}
 
 	@echo
 	@echo "-- BUILD -------------------"
