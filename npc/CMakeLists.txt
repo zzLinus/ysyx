@@ -35,5 +35,5 @@ add_executable(Vour ../csrc/main.cc)
 # Add the Verilated circuit to the target
 verilate(Vour COVERAGE TRACE
   INCLUDE_DIRS "../"
-  VERILATOR_ARGS -f ../input.vc -x-assign fast
+  VERILATOR_ARGS -f ./input.vc -x-assign fast
   SOURCES vsrc/our.v)
