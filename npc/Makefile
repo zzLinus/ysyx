@@ -45,10 +45,16 @@ sim:
 
 	@echo
 	@echo "-- RUN ---------------------"
-	build/Vour
+	@mkdir -p logs
+	build/Vour +trace
+
+	@echo
+	@echo "-- COVERAGE ----------------"
+	$(VERILATOR_COVERAGE) --annotate logs/annotated logs/coverage.dat
 
 	@echo
 	@echo "-- DONE --------------------"
+	@echo "To see waveforms, open vlt_dump.vcd in a waveform viewer"
 	@echo
 
 	# $(CC) $(FLAGS) csrc/main.cpp vsrc/our.v
