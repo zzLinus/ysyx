@@ -1,5 +1,3 @@
-// compile commands verilator --trace --cc --exe --build -j 0 -Wall csrc/main.cpp vsrc/our.v
-
 #include <stdlib.h>
 #include <assert.h>
 #include "Vour.h"
