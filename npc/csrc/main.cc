@@ -34,4 +34,5 @@ contextp->commandArgs(argc, argv);
     nvboard_update();
     single_cycle();
   }
+  free(top);
 }
