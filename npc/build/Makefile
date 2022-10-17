@@ -249,29 +249,29 @@ CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.cpp.s
 .PHONY : CMakeFiles/Vour.dir/Vour.dir/Vour___024root__Slow.cpp.s
 
-csrc/main.o: csrc/main.cpp.o
+csrc/main.o: csrc/main.cc.o
 .PHONY : csrc/main.o
 
 # target to build an object file
-csrc/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/csrc/main.cpp.o
-.PHONY : csrc/main.cpp.o
+csrc/main.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/csrc/main.cc.o
+.PHONY : csrc/main.cc.o
 
-csrc/main.i: csrc/main.cpp.i
+csrc/main.i: csrc/main.cc.i
 .PHONY : csrc/main.i
 
 # target to preprocess a source file
-csrc/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/csrc/main.cpp.i
-.PHONY : csrc/main.cpp.i
+csrc/main.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/csrc/main.cc.i
+.PHONY : csrc/main.cc.i
 
-csrc/main.s: csrc/main.cpp.s
+csrc/main.s: csrc/main.cc.s
 .PHONY : csrc/main.s
 
 # target to generate assembly for a file
-csrc/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/csrc/main.cpp.s
-.PHONY : csrc/main.cpp.s
+csrc/main.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vour.dir/build.make CMakeFiles/Vour.dir/csrc/main.cc.s
+.PHONY : csrc/main.cc.s
 
 usr/share/verilator/include/verilated.o: usr/share/verilator/include/verilated.cpp.o
 .PHONY : usr/share/verilator/include/verilated.o

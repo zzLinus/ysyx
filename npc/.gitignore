@@ -2,6 +2,7 @@
 *
 !*/
 !Makefile
+!CMakeLists.txt
 !*.mk
 !*.[cSh]
 !*.v
