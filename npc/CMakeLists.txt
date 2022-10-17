@@ -33,7 +33,7 @@ endif()
 add_executable(Vour ../csrc/main.cc)
 
 target_include_directories(Vour PUBLIC ${NVBOARD_HOME}/include)
-# target_link_libraries(Vour libbingitup.a)
+target_link_libraries(Vour nvboard.a)
 
 # Add the Verilated circuit to the target
 verilate(Vour COVERAGE TRACE
