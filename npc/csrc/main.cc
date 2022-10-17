@@ -24,7 +24,7 @@ static void reset(int n) {
 
 int main(int argc, char** argv, char** env) {
 contextp->commandArgs(argc, argv);
-  // nvboard_bind_all_pins(top);
+  nvboard_bind_all_pins(top);
   nvboard_init();
 
   reset(10);
