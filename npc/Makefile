@@ -45,7 +45,7 @@ sim:
 
 	@echo
 	@echo "-- RUN ---------------------"
-	build/example
+	build/Vour
 
 	@echo
 	@echo "-- DONE --------------------"
