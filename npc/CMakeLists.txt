@@ -34,7 +34,7 @@ add_executable(Vtop ../csrc/main.cc)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
 target_link_libraries(Vtop ${CMAKE_SOURCE_DIR}/nvboard.a)
-target_link_libraries(Vtop SDL2)
+target_link_libraries(Vtop SDL2 SDL2img)
 
 # Add the Verilated circuit to the target
 verilate(
