@@ -345,6 +345,30 @@ CMakeFiles/Vtop.dir/Vtop.dir/Vtop___024root__Slow.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/CMakeFiles/Vtop.dir/Vtop.dir/Vtop___024root__Slow.cpp.s
 .PHONY : CMakeFiles/Vtop.dir/Vtop.dir/Vtop___024root__Slow.cpp.s
 
+csrc/auto_bind.o: csrc/auto_bind.cc.o
+.PHONY : csrc/auto_bind.o
+
+# target to build an object file
+csrc/auto_bind.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/csrc/auto_bind.cc.o
+.PHONY : csrc/auto_bind.cc.o
+
+csrc/auto_bind.i: csrc/auto_bind.cc.i
+.PHONY : csrc/auto_bind.i
+
+# target to preprocess a source file
+csrc/auto_bind.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/csrc/auto_bind.cc.i
+.PHONY : csrc/auto_bind.cc.i
+
+csrc/auto_bind.s: csrc/auto_bind.cc.s
+.PHONY : csrc/auto_bind.s
+
+# target to generate assembly for a file
+csrc/auto_bind.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/csrc/auto_bind.cc.s
+.PHONY : csrc/auto_bind.cc.s
+
 csrc/main.o: csrc/main.cc.o
 .PHONY : csrc/main.o
 
@@ -477,6 +501,9 @@ help:
 	@echo "... CMakeFiles/Vtop.dir/Vtop.dir/Vtop___024root__Slow.o"
 	@echo "... CMakeFiles/Vtop.dir/Vtop.dir/Vtop___024root__Slow.i"
 	@echo "... CMakeFiles/Vtop.dir/Vtop.dir/Vtop___024root__Slow.s"
+	@echo "... csrc/auto_bind.o"
+	@echo "... csrc/auto_bind.i"
+	@echo "... csrc/auto_bind.s"
 	@echo "... csrc/main.o"
 	@echo "... csrc/main.i"
 	@echo "... csrc/main.s"

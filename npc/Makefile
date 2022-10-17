@@ -24,7 +24,7 @@ endif
 endif
 
 NXDC_FILES = constr/top.nxdc
-SRC_AUTO_BIND = csrc/auto_bind.cc
+SRC_AUTO_BIND = csrc/auto_bind.hpp
 
 # compile commands verilator --trace --cc --exe --build -j 0 -Wall csrc/main.cpp vsrc/our.v
 # CC = verilator
