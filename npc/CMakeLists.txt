@@ -32,8 +32,8 @@ endif()
 # Create a new executable target that will contain all your sources
 add_executable(Vour ../csrc/main.cc)
 
-target_include_directories(Vour PUBLIC $(NVBOARD_HOME)/include)
-target_link_libraries(Vour staticLibs/libbingitup.a)
+target_include_directories(Vour PUBLIC ${NVBOARD_HOME}/include)
+target_link_libraries(Vour ./staticLibs/libbingitup.a)
 
 # Add the Verilated circuit to the target
 verilate(Vour COVERAGE TRACE
