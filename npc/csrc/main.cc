@@ -24,16 +24,13 @@ static void reset(int n) {
 
 int main(int argc, char** argv, char** env) {
 contextp->commandArgs(argc, argv);
-while (!contextp->gotFinish()) { 
-	int a = rand() & 1;
-	int b = rand() & 1;
-	// top->a = a;
-	// top->b = b;
-	top->eval(); 
-	// printf("a = %d, b = %d, f = %d\n", a, b, top->f);
-	// assert(top->f == (a ^ b));
-}
-delete top;
-delete contextp;
-return 0;
+  nvboard_bind_all_pins(&top);
+  nvboard_init();
+
+  reset(10);
+
+  while(1) {
+    nvboard_update();
+    single_cycle();
+  }
 }
