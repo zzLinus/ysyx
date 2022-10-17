@@ -36,7 +36,9 @@ target_include_directories(Vtop PUBLIC ../nvboard/include)
 target_link_libraries(Vtop ${CMAKE_SOURCE_DIR}/nvboard.a)
 
 # Add the Verilated circuit to the target
-verilate(Vtop COVERAGE TRACE
-  INCLUDE_DIRS "../"
-  VERILATOR_ARGS -f ./input.vc -x-assign fast
-  SOURCES vsrc/top.v)
+verilate(
+	Vtop COVERAGE TRACE
+	INCLUDE_DIRS "../"
+	VERILATOR_ARGS -f ./input.vc -x-assign fast
+	SOURCES vsrc/top.v vsrc/led.v vsrc/ps2_keyboard.v vsrc/seg.v vsrc/vga_ctrl.v
+)
