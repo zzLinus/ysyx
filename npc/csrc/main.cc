@@ -27,11 +27,11 @@ contextp->commandArgs(argc, argv);
 while (!contextp->gotFinish()) { 
 	int a = rand() & 1;
 	int b = rand() & 1;
-	top->a = a;
-	top->b = b;
+	// top->a = a;
+	// top->b = b;
 	top->eval(); 
-	printf("a = %d, b = %d, f = %d\n", a, b, top->f);
-	assert(top->f == (a ^ b));
+	// printf("a = %d, b = %d, f = %d\n", a, b, top->f);
+	// assert(top->f == (a ^ b));
 }
 delete top;
 delete contextp;
