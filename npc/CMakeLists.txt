@@ -29,6 +29,10 @@ if (NOT verilator_FOUND)
   message(FATAL_ERROR "Verilator was not found. Either install it, or set the VERILATOR_ROOT environment variable")
 endif()
 
+target_include_directories(Vour PUBLIC $(NVBOARD_HOME)/include)
+
+target_link_libraries(Vour staticLibs/libbingitup.a)
+
 # Create a new executable target that will contain all your sources
 add_executable(Vour ../csrc/main.cc)
 
