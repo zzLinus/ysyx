@@ -37,6 +37,7 @@ int main(int argc, char** argv, char** env)
     top->trace(tfp, 99);
     nvboard_bind_all_pins(top);
     nvboard_init();
+    tfp->open("logs/vlt_dump.vcd");
 
     reset(10);
 
