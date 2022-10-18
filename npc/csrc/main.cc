@@ -1,3 +1,5 @@
+#include <verilated_vcd_c.h>
+
 #include <Vtop.h>
 #include <assert.h>
 #include <nvboard.h>
@@ -31,14 +33,17 @@ int main(int argc, char** argv, char** env)
 {
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
+    VerilatedVcdC* tfp = new VerilatedVcdC;
+    top->trace(tfp, 99);
     nvboard_bind_all_pins(top);
     nvboard_init();
 
     reset(10);
 
-    while (1) {
+    while (contextp->gotFinish()) {
         nvboard_update();
         single_cycle();
+        tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");

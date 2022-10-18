@@ -13,7 +13,6 @@ VL_ATTR_COLD void Vtop___024root___initial__TOP__0(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___initial__TOP__0\n"); );
     // Init
     VlWide<5>/*159:0*/ __Vtemp_h161bb746__0;
-    VlWide<5>/*159:0*/ __Vtemp_hfa1e3f21__0;
     // Body
     __Vtemp_h161bb746__0[0U] = 0x2e686578U;
     __Vtemp_h161bb746__0[1U] = 0x74757265U;
@@ -23,23 +22,7 @@ VL_ATTR_COLD void Vtop___024root___initial__TOP__0(Vtop___024root* vlSelf) {
     VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_h161bb746__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
-    if (VL_UNLIKELY((0U != VL_TESTPLUSARGS_I(std::string{"trace"})))) {
-        __Vtemp_hfa1e3f21__0[0U] = 0x2e766364U;
-        __Vtemp_hfa1e3f21__0[1U] = 0x64756d70U;
-        __Vtemp_hfa1e3f21__0[2U] = 0x766c745fU;
-        __Vtemp_hfa1e3f21__0[3U] = 0x6f67732fU;
-        __Vtemp_hfa1e3f21__0[4U] = 0x6cU;
-        vlSymsp->_vm_contextp__->dumpfile(VL_CVT_PACK_STR_NW(5, __Vtemp_hfa1e3f21__0));
-        vlSymsp->_traceDumpOpen();
-        ++(vlSymsp->__Vcoverage[374]);
-        VL_WRITEF("[%0t] Tracing to logs/vlt_dump.vcd...\n\n",
-                  64,VL_TIME_UNITED_Q(1),-12);
-    } else {
-        ++(vlSymsp->__Vcoverage[375]);
-    }
-    VL_WRITEF("[%0t] Model running...\n\n",64,VL_TIME_UNITED_Q(1),
-              -12);
-    ++(vlSymsp->__Vcoverage[376]);
+    ++(vlSymsp->__Vcoverage[374]);
 }
 
 VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
@@ -3796,7 +3779,5 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[164]), first, "vsrc/top.v", 87, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[21]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[165]), first, "vsrc/top.v", 87, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[22]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[166]), first, "vsrc/top.v", 87, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[374]), first, "vsrc/top.v", 94, 5, ".top.my_vmem", "v_branch/vmem", "if", "94-97");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[375]), first, "vsrc/top.v", 94, 6, ".top.my_vmem", "v_branch/vmem", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[376]), first, "vsrc/top.v", 92, 1, ".top.my_vmem", "v_line/vmem", "block", "92-93,99");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[374]), first, "vsrc/top.v", 92, 1, ".top.my_vmem", "v_line/vmem", "block", "92-93");
 }
