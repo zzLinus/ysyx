@@ -40,5 +40,8 @@ int main(int argc, char** argv, char** env)
         nvboard_update();
         single_cycle();
     }
-    free(top);
+
+    Verilated::mkdir("logs");
+    contextp->coveragep()->write("logs/coverage.dat");
+    top->final();
 }
