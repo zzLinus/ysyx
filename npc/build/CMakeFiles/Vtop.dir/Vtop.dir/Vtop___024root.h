@@ -21,6 +21,8 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(sw,7,0);
         VL_IN8(ps2_clk,0,0);
         VL_IN8(ps2_data,0,0);
+        VL_IN8(a,0,0);
+        VL_IN8(b,0,0);
         VL_OUT8(VGA_CLK,0,0);
         VL_OUT8(VGA_HSYNC,0,0);
         VL_OUT8(VGA_VSYNC,0,0);
@@ -36,11 +38,14 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(seg5,7,0);
         VL_OUT8(seg6,7,0);
         VL_OUT8(seg7,7,0);
+        VL_OUT8(f,0,0);
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
         CData/*7:0*/ top__DOT____Vtogcov__sw;
         CData/*0:0*/ top__DOT____Vtogcov__ps2_clk;
         CData/*0:0*/ top__DOT____Vtogcov__ps2_data;
+        CData/*0:0*/ top__DOT____Vtogcov__a;
+        CData/*0:0*/ top__DOT____Vtogcov__b;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_CLK;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_HSYNC;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_VSYNC;
@@ -56,6 +61,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__seg5;
         CData/*7:0*/ top__DOT____Vtogcov__seg6;
         CData/*7:0*/ top__DOT____Vtogcov__seg7;
+        CData/*0:0*/ top__DOT____Vtogcov__f;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;
@@ -74,14 +80,14 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*0:0*/ __Vclklast__TOP__clk;
         VL_OUT16(ledr,15,0);
+    };
+    struct {
         SData/*9:0*/ top__DOT__h_addr;
         SData/*9:0*/ top__DOT__v_addr;
         SData/*15:0*/ top__DOT____Vtogcov__ledr;
         SData/*9:0*/ top__DOT____Vtogcov__h_addr;
         SData/*9:0*/ top__DOT____Vtogcov__v_addr;
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT__x_cnt;
-    };
-    struct {
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT__y_cnt;
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt;
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt;
