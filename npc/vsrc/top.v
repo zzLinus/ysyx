@@ -79,13 +79,6 @@ vmem my_vmem(
     .vga_data(vga_data)
 );
 
-initial begin
-	$display("[%0t] Tracing to logs/vlt_dump.vcd...\n", $time);
-	$dumpfile("logs/vlt_dump.vcd");
-	$dumpvars(VGA_CLK);
-	$display("[%0t] Model running...\n", $time);
-end
-
 endmodule
 
 module vmem (
