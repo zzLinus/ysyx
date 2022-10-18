@@ -93,7 +93,7 @@ initial begin
     $readmemh("resource/picture.hex", vga_mem);
 	$display("[%0t] Tracing to logs/vlt_dump.vcd...\n", $time);
 	$dumpfile("logs/vlt_dump.vcd");
-	$dumpvars(VGA_CLK);
+	$dumpvars(vga_data);
 	$display("[%0t] Model running...\n", $time);
 end
 
