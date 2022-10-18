@@ -44,7 +44,7 @@ int main(int argc, char** argv, char** env)
     while (1) {
         nvboard_update();
         single_cycle();
-        tfp->dump(contextp->time());
+        // tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");
