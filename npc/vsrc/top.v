@@ -91,12 +91,6 @@ reg [23:0] vga_mem [524287:0];
 
 initial begin
     $readmemh("resource/picture.hex", vga_mem);
-    if ($test$plusargs("trace") != 0) begin
-		$display("[%0t] Tracing to logs/vlt_dump.vcd...\n", $time);
-		$dumpfile("logs/vlt_dump.vcd");
-		$dumpvars();
-    end
-    $display("[%0t] Model running...\n", $time);
 end
 
 assign vga_data = vga_mem[{h_addr, v_addr}];
