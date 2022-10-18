@@ -42,9 +42,10 @@ int main(int argc, char** argv, char** env)
     reset(10);
 
     while (1) {
+        contextp->timeInc(1);
         nvboard_update();
         single_cycle();
-        // tfp->dump(contextp->time());
+        tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");
