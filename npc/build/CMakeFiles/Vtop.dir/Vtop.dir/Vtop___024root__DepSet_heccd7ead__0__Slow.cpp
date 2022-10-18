@@ -7,7 +7,6 @@
 #include "Vtop___024root.h"
 
 VL_ATTR_COLD void Vtop___024root___initial__TOP__0(Vtop___024root* vlSelf);
-VL_ATTR_COLD void Vtop___024root___initial__TOP__1(Vtop___024root* vlSelf);
 
 VL_ATTR_COLD void Vtop___024root___eval_initial(Vtop___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
@@ -16,7 +15,6 @@ VL_ATTR_COLD void Vtop___024root___eval_initial(Vtop___024root* vlSelf) {
     // Body
     Vtop___024root___initial__TOP__0(vlSelf);
     vlSelf->__Vclklast__TOP__clk = vlSelf->clk;
-    Vtop___024root___initial__TOP__1(vlSelf);
 }
 
 VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf);
