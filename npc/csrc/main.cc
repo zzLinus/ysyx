@@ -49,4 +49,5 @@ int main(int argc, char** argv, char** env)
     Verilated::mkdir("logs");
     contextp->coveragep()->write("logs/coverage.dat");
     top->final();
+    tfp->close();
 }
