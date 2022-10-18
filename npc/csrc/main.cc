@@ -40,7 +40,7 @@ int main(int argc, char** argv, char** env)
 
     reset(10);
 
-    while (contextp->gotFinish()) {
+    while (1) {
         nvboard_update();
         single_cycle();
         tfp->dump(contextp->time());
