@@ -45,8 +45,9 @@ int main(int argc, char** argv, char** env)
 
     while (1) {
         contextp->timeInc(1);
-        top->a = rand() & 1;
-        top->b = rand() & 1;
+        top->a = 1;
+        top->b = 0;
+        top->s = rand() & 1;
         top->eval();
         nvboard_update();
         single_cycle();

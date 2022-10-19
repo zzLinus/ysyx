@@ -6,6 +6,7 @@ module top (
     input ps2_data,
 	input a,
 	input b,
+	input s,
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
@@ -22,7 +23,7 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
-	output f
+	output y
 );
 
 led led1(
@@ -33,7 +34,7 @@ led led1(
 );
 
 assign VGA_CLK = clk;
-assign f = a ^ b;
+assign y = (~s & a)|(s & b);
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
