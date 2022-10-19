@@ -43,5 +43,7 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("a");}
     if (VL_UNLIKELY((vlSelf->b & 0xfeU))) {
         Verilated::overWidthError("b");}
+    if (VL_UNLIKELY((vlSelf->s & 0xfeU))) {
+        Verilated::overWidthError("s");}
 }
 #endif  // VL_DEBUG

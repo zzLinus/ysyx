@@ -23,7 +23,7 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
-	output y
+	output reg y
 );
 
 led led1(
@@ -34,7 +34,12 @@ led led1(
 );
 
 assign VGA_CLK = clk;
-assign y = (~s & a)|(s & b);
+
+always @ (*)
+	if(s == 0)
+		y = a
+	else 
+		y = b
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
