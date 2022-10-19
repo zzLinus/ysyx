@@ -31,6 +31,7 @@ static void reset(int n)
 
 int main(int argc, char** argv, char** env)
 {
+
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
