@@ -37,9 +37,9 @@ assign VGA_CLK = clk;
 
 always @ (*)
 	if(s == 0)
-		y = a
+		y = a;
 	else 
-		y = b
+		y = b;
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
