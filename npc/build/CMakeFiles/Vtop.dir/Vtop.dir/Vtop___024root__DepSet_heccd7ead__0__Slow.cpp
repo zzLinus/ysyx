@@ -18,6 +18,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial(Vtop___024root* vlSelf) {
 }
 
 VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf);
+VL_ATTR_COLD void Vtop___024root___settle__TOP__1(Vtop___024root* vlSelf);
 
 VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
@@ -27,6 +28,7 @@ VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
     Vtop___024root___settle__TOP__0(vlSelf);
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
+    Vtop___024root___settle__TOP__1(vlSelf);
 }
 
 VL_ATTR_COLD void Vtop___024root___final(Vtop___024root* vlSelf) {

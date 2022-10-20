@@ -7,23 +7,24 @@
 %000000	    input ps2_data,
 %000000		input a,
 %000000		input b,
-%000001	    output [15:0] ledr,
- 000019	    output VGA_CLK,
+%000001		input s,
+ 000019	    output [15:0] ledr,
+%000000	    output VGA_CLK,
 %000000	    output VGA_HSYNC,
 %000000	    output VGA_VSYNC,
-%000000	    output VGA_BLANK_N,
-%000005	    output [7:0] VGA_R,
-%000004	    output [7:0] VGA_G,
-%000008	    output [7:0] VGA_B,
-%000001	    output [7:0] seg0,
-%000006	    output [7:0] seg1,
+%000005	    output VGA_BLANK_N,
+%000004	    output [7:0] VGA_R,
+%000008	    output [7:0] VGA_G,
+%000001	    output [7:0] VGA_B,
+%000006	    output [7:0] seg0,
+%000003	    output [7:0] seg1,
 %000003	    output [7:0] seg2,
-%000003	    output [7:0] seg3,
-%000004	    output [7:0] seg4,
-%000003	    output [7:0] seg5,
-%000002	    output [7:0] seg6,
-%000005	    output [7:0] seg7,
-%000000		output f
+%000004	    output [7:0] seg3,
+%000003	    output [7:0] seg4,
+%000002	    output [7:0] seg5,
+%000005	    output [7:0] seg6,
+%000000	    output [7:0] seg7,
+		output reg y
 	);
 	
 	led led1(
@@ -34,11 +35,16 @@
 	);
 	
 	assign VGA_CLK = clk;
-	assign f = a ^ b;
 	
-%000000	wire [9:0] h_addr;
-%000000	wire [9:0] v_addr;
-%000017	wire [23:0] vga_data;
+%000000	always @ (*)
+%000000		if(s == 0)
+%000017			y = a;
+		else 
+			y = b;
+	
+	wire [9:0] h_addr;
+	wire [9:0] v_addr;
+	wire [23:0] vga_data;
 	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
@@ -77,21 +83,21 @@
 	vmem my_vmem(
 	    .h_addr(h_addr),
 	    .v_addr(v_addr[8:0]),
-	    .vga_data(vga_data)
-	);
-	
+%000000	    .vga_data(vga_data)
+%000000	);
+%000017	
 	endmodule
 	
 	module vmem (
-%000000	    input [9:0] h_addr,
-%000000	    input [8:0] v_addr,
-%000017	    output [23:0] vga_data
+	    input [9:0] h_addr,
+%000002	    input [8:0] v_addr,
+%000001	    output [23:0] vga_data
 	);
 	
 	reg [23:0] vga_mem [524287:0];
 	
-%000002	initial begin
-%000001	    $readmemh("resource/picture.hex", vga_mem);
+	initial begin
+	    $readmemh("resource/picture.hex", vga_mem);
 	end
 	
 	assign vga_data = vga_mem[{h_addr, v_addr}];
