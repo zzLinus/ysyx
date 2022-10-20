@@ -64,8 +64,6 @@ sim:
 	@echo "To see waveforms, open vlt_dump.vcd in a waveform viewer"
 	@echo
 
-	# $(CC) $(FLAGS) csrc/main.cpp vsrc/our.v
-	
 clean mostlyclean distclean maintainer-clean:
 	@rm -rf build logs
 
