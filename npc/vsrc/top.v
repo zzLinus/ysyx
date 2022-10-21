@@ -4,10 +4,8 @@ module top (
     input [7:0] sw,
     input ps2_clk,
     input ps2_data,
-	input a,
-	input b,
-	input s,
-	var logic v,
+	input [3:0] a,
+	input [1:0] s,
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
@@ -34,13 +32,13 @@ led led1(
     .ledr(ledr)
 );
 
-assign VGA_CLK = clk;
+mux41 mux(
+	.a(a),
+	.s(s),
+	.y(y),
+)
 
-always @ (*)
-	if(s == 0)
-		y = a;
-	else 
-		y = b;
+assign VGA_CLK = clk;
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;

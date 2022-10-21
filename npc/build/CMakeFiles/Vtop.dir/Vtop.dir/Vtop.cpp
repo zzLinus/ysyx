@@ -19,6 +19,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , a{vlSymsp->TOP.a}
     , b{vlSymsp->TOP.b}
     , s{vlSymsp->TOP.s}
+    , v{vlSymsp->TOP.v}
     , VGA_CLK{vlSymsp->TOP.VGA_CLK}
     , VGA_HSYNC{vlSymsp->TOP.VGA_HSYNC}
     , VGA_VSYNC{vlSymsp->TOP.VGA_VSYNC}

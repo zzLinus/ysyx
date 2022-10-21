@@ -1,52 +1,15 @@
-module MuxKeyInternal #(NR_KEY = 2, KEY_LEN = 1, DATA_LEN = 1, HAS_DEFAULT = 0) (
-  output reg [DATA_LEN-1:0] out,
-  input [KEY_LEN-1:0] key,
-  input [DATA_LEN-1:0] default_out,
-  input [NR_KEY*(KEY_LEN + DATA_LEN)-1:0] lut
-);
+module mux41(a,s,y);
+  input  [3:0] a;  // 声明一个wire型输入变量a，其变量宽度是4位的。
+  input  [1:0] s;  // 声明一个wire型输入变量s，其变量宽度是2位的。
+  output reg y;   // 声明一个1位reg型的输出变量y。
 
-  localparam PAIR_LEN = KEY_LEN + DATA_LEN;
-  wire [PAIR_LEN-1:0] pair_list [NR_KEY-1:0];
-  wire [KEY_LEN-1:0] key_list [NR_KEY-1:0];
-  wire [DATA_LEN-1:0] data_list [NR_KEY-1:0];
+  always @ (s or a)
+    case (s)
+      0: y = a[0];
+      1: y = a[1];
+      2: y = a[2];
+      3: y = a[3];
+      default: y = 1'b0;
+    endcase
 
-  generate
-    for (genvar n = 0; n < NR_KEY; n = n + 1) begin
-      assign pair_list[n] = lut[PAIR_LEN*(n+1)-1 : PAIR_LEN*n];
-      assign data_list[n] = pair_list[n][DATA_LEN-1:0];
-      assign key_list[n]  = pair_list[n][PAIR_LEN-1:DATA_LEN];
-    end
-  endgenerate
-
-  reg [DATA_LEN-1 : 0] lut_out;
-  reg hit;
-  integer i;
-  always @(*) begin
-    lut_out = 0;
-    hit = 0;
-    for (i = 0; i < NR_KEY; i = i + 1) begin
-      lut_out = lut_out | ({DATA_LEN{key == key_list[i]}} & data_list[i]);
-      hit = hit | (key == key_list[i]);
-    end
-    if (!HAS_DEFAULT) out = lut_out;
-    else out = (hit ? lut_out : default_out);
-  end
-
-endmodule
-
-module MuxKey #(NR_KEY = 2, KEY_LEN = 1, DATA_LEN = 1) (
-  output [DATA_LEN-1:0] out,
-  input [KEY_LEN-1:0] key,
-  input [NR_KEY*(KEY_LEN + DATA_LEN)-1:0] lut
-);
-  MuxKeyInternal #(NR_KEY, KEY_LEN, DATA_LEN, 0) i0 (out, key, {DATA_LEN{1'b0}}, lut);
-endmodule
-
-module MuxKeyWithDefault #(NR_KEY = 2, KEY_LEN = 1, DATA_LEN = 1) (
-  output [DATA_LEN-1:0] out,
-  input [KEY_LEN-1:0] key,
-  input [DATA_LEN-1:0] default_out,
-  input [NR_KEY*(KEY_LEN + DATA_LEN)-1:0] lut
-);
-  MuxKeyInternal #(NR_KEY, KEY_LEN, DATA_LEN, 1) i0 (out, key, default_out, lut);
-endmodule
+endmodulele

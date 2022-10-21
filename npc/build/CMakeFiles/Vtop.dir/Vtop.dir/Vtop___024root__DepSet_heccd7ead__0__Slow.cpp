@@ -50,6 +50,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->a = VL_RAND_RESET_I(1);
     vlSelf->b = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(1);
+    vlSelf->v = VL_RAND_RESET_I(1);
     vlSelf->ledr = VL_RAND_RESET_I(16);
     vlSelf->VGA_CLK = VL_RAND_RESET_I(1);
     vlSelf->VGA_HSYNC = VL_RAND_RESET_I(1);
@@ -78,6 +79,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__a = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__b = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__s = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__v = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ledr = VL_RAND_RESET_I(16);
     vlSelf->top__DOT____Vtogcov__VGA_CLK = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_HSYNC = VL_RAND_RESET_I(1);
