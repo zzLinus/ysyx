@@ -5,10 +5,10 @@ module mux41(a,s,y);
 
   always @ (s or a)
     case (s)
-      0: y = a[1:0];
-      1: y = a[3:2];
-      2: y = a[5:4];
-      3: y = a[7:6];
+      0: y = 2'ba[0];
+      1: y = 2'ba[2];
+      2: y = 2'ba[4];
+      3: y = 2'ba[6];
       default: y = 2'b0;
     endcase
 
