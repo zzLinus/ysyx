@@ -33,9 +33,9 @@ led led1(
 );
 
 mux41 mux(
-	.a(a),
-	.s(s),
-	.y(y)
+	a,
+	s,
+	y
 );
 
 assign VGA_CLK = clk;
