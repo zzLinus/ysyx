@@ -34,7 +34,7 @@ led led1(
 
 mux41 mux(
 	.a(a),
-	.s(b),
+	.s(s),
 	.y(y),
 );
 
