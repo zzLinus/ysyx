@@ -26,16 +26,16 @@ module top (
 );
 
 led led1(
-    .clk(clk),
-    .rst(rst),
-    .sw(sw),
-    .ledr(ledr)
+    clk,
+    rst,
+    sw,
+    ledr
 );
 
 mux41 mux(
 	.a(a),
 	.s(s),
-	.y(y)
+	.y(y),
 );
 
 assign VGA_CLK = clk;
