@@ -23,7 +23,7 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
-	output reg y
+	output y
 );
 
 led led1(
