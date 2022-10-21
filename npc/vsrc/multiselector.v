@@ -12,4 +12,4 @@ module mux41(a,s,y);
       default: y = 1'b0;
     endcase
 
-endmodulele
+endmodule
