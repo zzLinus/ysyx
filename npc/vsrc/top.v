@@ -7,7 +7,7 @@ module top (
 	input a,
 	input b,
 	input s,
-	var logic v;
+	var logic v,
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
