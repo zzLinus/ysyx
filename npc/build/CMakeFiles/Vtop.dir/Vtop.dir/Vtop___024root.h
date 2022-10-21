@@ -39,7 +39,6 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(seg6,7,0);
         VL_OUT8(seg7,7,0);
         VL_OUT8(y,1,0);
-        CData/*0:0*/ top__DOT____Vcellout__mux__y;
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
         CData/*7:0*/ top__DOT____Vtogcov__sw;
@@ -65,7 +64,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*1:0*/ top__DOT____Vtogcov__y;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;
-        CData/*0:0*/ top__DOT__mux__DOT____Vtogcov__y;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__v_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid;
@@ -80,10 +78,10 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
-    };
-    struct {
         CData/*0:0*/ __Vclklast__TOP__clk;
         VL_OUT16(ledr,15,0);
+    };
+    struct {
         SData/*9:0*/ top__DOT__h_addr;
         SData/*9:0*/ top__DOT__v_addr;
         SData/*15:0*/ top__DOT____Vtogcov__ledr;
