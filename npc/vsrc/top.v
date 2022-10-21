@@ -36,7 +36,7 @@ mux41 mux(
 	.a(a),
 	.s(s),
 	.y(y),
-)
+);
 
 assign VGA_CLK = clk;
 
