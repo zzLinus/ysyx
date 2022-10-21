@@ -29,7 +29,6 @@ led led1(
     clk,
     rst,
     sw,
-    ledr,
 );
 
 mux41 mux(
