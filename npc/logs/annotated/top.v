@@ -5,7 +5,7 @@
 %000000	    input [7:0] sw,
 %000000	    input ps2_clk,
 %000000	    input ps2_data,
-%000000		input [3:0] a,
+%000000		input [7:0] a,
 %000000		input [1:0] s,
 %000001	    output [15:0] ledr,
  000019	    output VGA_CLK,
@@ -23,7 +23,7 @@
 %000003	    output [7:0] seg5,
 %000002	    output [7:0] seg6,
 %000005	    output [7:0] seg7,
-%000000		output reg y
+%000000		output reg [1:0] y
 	);
 	
 	led led1(
@@ -34,9 +34,9 @@
 	);
 	
 	mux41 mux(
-		a,
-		s,
-%000000		y
+		.a(a),
+		.s(s),
+%000000		.y(y)
 %000000	);
 %000017	
 	assign VGA_CLK = clk;
