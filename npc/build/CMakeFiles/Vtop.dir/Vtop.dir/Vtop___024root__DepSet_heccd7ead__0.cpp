@@ -39,13 +39,9 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("ps2_clk");}
     if (VL_UNLIKELY((vlSelf->ps2_data & 0xfeU))) {
         Verilated::overWidthError("ps2_data");}
-    if (VL_UNLIKELY((vlSelf->a & 0xfeU))) {
+    if (VL_UNLIKELY((vlSelf->a & 0xf0U))) {
         Verilated::overWidthError("a");}
-    if (VL_UNLIKELY((vlSelf->b & 0xfeU))) {
-        Verilated::overWidthError("b");}
-    if (VL_UNLIKELY((vlSelf->s & 0xfeU))) {
+    if (VL_UNLIKELY((vlSelf->s & 0xfcU))) {
         Verilated::overWidthError("s");}
-    if (VL_UNLIKELY((vlSelf->v & 0xfeU))) {
-        Verilated::overWidthError("v");}
 }
 #endif  // VL_DEBUG

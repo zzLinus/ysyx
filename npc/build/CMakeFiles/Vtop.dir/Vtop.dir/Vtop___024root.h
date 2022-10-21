@@ -21,10 +21,8 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(sw,7,0);
         VL_IN8(ps2_clk,0,0);
         VL_IN8(ps2_data,0,0);
-        VL_IN8(a,0,0);
-        VL_IN8(b,0,0);
-        VL_IN8(s,0,0);
-        VL_IN8(v,0,0);
+        VL_IN8(a,3,0);
+        VL_IN8(s,1,0);
         VL_OUT8(VGA_CLK,0,0);
         VL_OUT8(VGA_HSYNC,0,0);
         VL_OUT8(VGA_VSYNC,0,0);
@@ -46,10 +44,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__sw;
         CData/*0:0*/ top__DOT____Vtogcov__ps2_clk;
         CData/*0:0*/ top__DOT____Vtogcov__ps2_data;
-        CData/*0:0*/ top__DOT____Vtogcov__a;
-        CData/*0:0*/ top__DOT____Vtogcov__b;
-        CData/*0:0*/ top__DOT____Vtogcov__s;
-        CData/*0:0*/ top__DOT____Vtogcov__v;
+        CData/*3:0*/ top__DOT____Vtogcov__a;
+        CData/*1:0*/ top__DOT____Vtogcov__s;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_CLK;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_HSYNC;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_VSYNC;
@@ -80,12 +76,12 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
-    };
-    struct {
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*0:0*/ __Vclklast__TOP__clk;
         VL_OUT16(ledr,15,0);
+    };
+    struct {
         SData/*9:0*/ top__DOT__h_addr;
         SData/*9:0*/ top__DOT__v_addr;
         SData/*15:0*/ top__DOT____Vtogcov__ledr;
