@@ -312,7 +312,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                                                    & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                                                       >> 7U)));
         }
-        __Vdly__top__DOT__led1__DOT__count = ((0x4c4b40U 
+        __Vdly__top__DOT__led1__DOT__count = ((0x1f4U 
                                                <= vlSelf->top__DOT__led1__DOT__count)
                                                ? 0U
                                                : ((IData)(1U) 
