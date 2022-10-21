@@ -15,7 +15,7 @@
 %000000	      if (count == 0) led <= {led[6:0], led[7]};
 %000000	      verilator_coverage: (next point on previous line)
 
-%000000			count <= (count >= 500? 32'b0 : count + 1);
+%000000			count <= (count >= 50000? 32'b0 : count + 1);
 	    end
 	  end
 	
