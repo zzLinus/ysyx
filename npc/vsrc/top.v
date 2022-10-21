@@ -7,6 +7,7 @@ module top (
 	input a,
 	input b,
 	input s,
+	var logic v;
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
@@ -23,7 +24,7 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
-	output y
+	output reg y
 );
 
 led led1(
