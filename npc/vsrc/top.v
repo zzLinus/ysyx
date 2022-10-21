@@ -26,9 +26,10 @@ module top (
 );
 
 led led1(
-    clk,
-    rst,
-    sw,
+    .clk(clk),
+    .rst(rst),
+    .sw(sw),
+    .ledr(ledr)
 );
 
 mux41 mux(
