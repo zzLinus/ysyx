@@ -9,7 +9,7 @@ module mux41(a,s,y);
       1: y = a[3:2];
       2: y = a[5:4];
       3: y = a[7:6];
-      default: y = 1'b0;
+      default: y = 2'b0;
     endcase
 
 endmodule

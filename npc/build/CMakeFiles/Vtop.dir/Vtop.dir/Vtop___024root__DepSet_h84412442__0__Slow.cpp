@@ -23,18 +23,16 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__mu_seg__DOT__segs[7U] = 0xe0U;
     if ((0U == (IData)(vlSelf->s))) {
         ++(vlSymsp->__Vcoverage[221]);
-        vlSelf->y = (1U & (IData)(vlSelf->a));
+        vlSelf->y = (3U & (IData)(vlSelf->a));
     } else {
-        vlSelf->y = ((1U == (IData)(vlSelf->s)) ? (1U 
-                                                   & ((IData)(vlSelf->a) 
-                                                      >> 1U))
-                      : ((2U == (IData)(vlSelf->s))
-                          ? (1U & ((IData)(vlSelf->a) 
-                                   >> 2U)) : ((3U == (IData)(vlSelf->s))
-                                               ? (1U 
-                                                  & ((IData)(vlSelf->a) 
-                                                     >> 3U))
-                                               : 0U)));
+        vlSelf->y = (3U & ((1U == (IData)(vlSelf->s))
+                            ? ((IData)(vlSelf->a) >> 2U)
+                            : ((2U == (IData)(vlSelf->s))
+                                ? ((IData)(vlSelf->a) 
+                                   >> 4U) : ((3U == (IData)(vlSelf->s))
+                                              ? ((IData)(vlSelf->a) 
+                                                 >> 6U)
+                                              : 0U))));
     }
     if ((0U != (IData)(vlSelf->s))) {
         if ((1U == (IData)(vlSelf->s))) {
