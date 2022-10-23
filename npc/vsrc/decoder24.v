@@ -1,6 +1,6 @@
 module decoder24(
 	x,
-	en,
+	EN,
 	y
 );
 

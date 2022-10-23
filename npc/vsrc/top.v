@@ -43,7 +43,7 @@ mux41 mux(
 
 decoder24 dec(
 	.x(x),
-	.en(en),
+	.EN(en),
 	.y(y_dec),
 );
 
