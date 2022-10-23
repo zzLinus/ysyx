@@ -73,7 +73,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+31,"x", false,-1, 2,0);
     tracep->declBit(c+32,"EN", false,-1);
     tracep->declBus(c+51,"y", false,-1, 7,0);
-    tracep->declBus(c+52,"i", false,-1, 31,0);
+    tracep->declBus(c+52,"i", false,-1, 2,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("led1 ");
     tracep->declBit(c+25,"clk", false,-1);
@@ -239,7 +239,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+49,(vlSelf->seg7),8);
     bufp->fullCData(oldp+50,(vlSelf->y),2);
     bufp->fullCData(oldp+51,(vlSelf->y_dec),8);
-    bufp->fullIData(oldp+52,(vlSelf->top__DOT__dec__DOT__i),32);
+    bufp->fullCData(oldp+52,(vlSelf->top__DOT__dec__DOT__i),3);
     bufp->fullBit(oldp+53,((1U & (~ (IData)(vlSelf->rst)))));
     bufp->fullIData(oldp+54,(0x4c4b40U),32);
     bufp->fullIData(oldp+55,(0x60U),32);
