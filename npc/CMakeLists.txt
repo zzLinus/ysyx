@@ -40,6 +40,6 @@ target_link_libraries(Vtop SDL2 SDL2_image)
 verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
-	VERILATOR_ARGS -f ./input.vc -x-assign fast --trace
+	VERILATOR_ARGS -f ./input.vc -x-assign fast --trace lint_off WIDTH
 	SOURCES vsrc/top.v vsrc/led.v vsrc/ps2_keyboard.v vsrc/seg.v vsrc/vga_ctrl.v vsrc/multiselector.v vsrc/decoder.v
 )
