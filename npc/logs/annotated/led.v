@@ -19,6 +19,7 @@
 	    end
 	  end
 	
+	  //concat 2 8bit data
 	  assign ledr = {led, sw};
 	endmodule
 	
