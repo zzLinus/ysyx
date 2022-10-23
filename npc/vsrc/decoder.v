@@ -30,7 +30,7 @@ integer i;
 always @(x or EN)
 	if(EN) begin 
 		for( i = 0; i <= 7; i = i+1 )
-			if(integer(x) == i) // x is 3 bits number range from 0-7
+			if(integer'(x) == i) // x is 3 bits number range from 0-7
 				y[i] = 1;
 			else 
 				y[i] = 0;
