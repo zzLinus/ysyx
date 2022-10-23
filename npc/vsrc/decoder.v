@@ -25,7 +25,7 @@ module decoder38(
 	output reg [7:0] y
 );
 
-integer [2:0] i;
+integer i;
 
 always @(x or EN)
 	if(EN) begin 
