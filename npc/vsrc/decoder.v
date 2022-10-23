@@ -27,7 +27,7 @@ module decoder38(
 
 always @(x or EN)
 	if(EN) begin 
-		for( i = 0, i <= 7, i = i+1 )
+		for( i = 0; i <= 7; i = i+1 )
 			if(x == i) // x is 3 bits number range from 0-7
 				y[i] = 1;
 			else 
