@@ -106,7 +106,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__led1__DOT__led = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__led1__DOT____Vtogcov__count = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__led1__DOT____Vtogcov__led = VL_RAND_RESET_I(8);
-    vlSelf->top__DOT__dec__DOT__i = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid = VL_RAND_RESET_I(1);

@@ -103,7 +103,6 @@ class Vtop___024root final : public VerilatedModule {
         IData/*23:0*/ top__DOT____Vtogcov__vga_data;
         IData/*31:0*/ top__DOT__led1__DOT__count;
         IData/*31:0*/ top__DOT__led1__DOT____Vtogcov__count;
-        IData/*31:0*/ top__DOT__dec__DOT__i;
         IData/*31:0*/ top__DOT__mu_seg__DOT__count;
         IData/*31:0*/ top__DOT__mu_seg__DOT____Vtogcov__count;
         VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT__segs;

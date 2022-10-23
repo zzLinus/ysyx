@@ -25,12 +25,12 @@ module decoder38(
 	output reg [7:0] y
 );
 
-localparam [2:0] i = 3'b000;
+integer i;
 
 always @(x or EN)
 	if(EN) begin 
 		for( i = 0; i <= 7; i = i+1 )
-			if(x == i) // x is 3 bits number range from 0-7
+			if(x == [2:0]i) // x is 3 bits number range from 0-7
 				y[i] = 1;
 			else 
 				y[i] = 0;

@@ -73,7 +73,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+31,"x", false,-1, 2,0);
     tracep->declBit(c+32,"EN", false,-1);
     tracep->declBus(c+51,"y", false,-1, 7,0);
-    tracep->declBus(c+52,"i", false,-1, 31,0);
+    tracep->declBus(c+53,"i", false,-1, 2,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("led1 ");
     tracep->declBit(c+25,"clk", false,-1);
@@ -108,7 +108,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("my_keyboard ");
     tracep->declBit(c+25,"clk", false,-1);
-    tracep->declBit(c+53,"resetn", false,-1);
+    tracep->declBit(c+52,"resetn", false,-1);
     tracep->declBit(c+28,"ps2_clk", false,-1);
     tracep->declBit(c+29,"ps2_data", false,-1);
     tracep->declBus(c+16,"buffer", false,-1, 9,0);
@@ -239,8 +239,8 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+49,(vlSelf->seg7),8);
     bufp->fullCData(oldp+50,(vlSelf->y),2);
     bufp->fullCData(oldp+51,(vlSelf->y_dec),8);
-    bufp->fullIData(oldp+52,(vlSelf->top__DOT__dec__DOT__i),32);
-    bufp->fullBit(oldp+53,((1U & (~ (IData)(vlSelf->rst)))));
+    bufp->fullBit(oldp+52,((1U & (~ (IData)(vlSelf->rst)))));
+    bufp->fullCData(oldp+53,(0U),3);
     bufp->fullIData(oldp+54,(0x4c4b40U),32);
     bufp->fullIData(oldp+55,(0x60U),32);
     bufp->fullIData(oldp+56,(0x90U),32);
