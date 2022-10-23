@@ -6,7 +6,7 @@ module decoder24(
 
 input [1:0] x;
 input EN;
-output [3:0] y;
+output reg [3:0] y;
 
 always @(x or EN)
 	if (EN)
