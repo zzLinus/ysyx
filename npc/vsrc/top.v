@@ -5,6 +5,8 @@ module top (
     input ps2_clk,
     input ps2_data,
 	input [7:0] a,
+	input [1:0] x,
+	input en,
 	input [1:0] s,
     output [15:0] ledr,
     output VGA_CLK,
@@ -22,7 +24,8 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
-	output reg [1:0] y
+	output reg [1:0] y,
+	output reg [3:0] y_dec
 );
 
 led led1(
@@ -36,6 +39,12 @@ mux41 mux(
 	.a(a),
 	.s(s),
 	.y(y)
+);
+
+decoder24 dec(
+	.x(x),
+	.en(en),
+	.y(y_dec),
 );
 
 assign VGA_CLK = clk;

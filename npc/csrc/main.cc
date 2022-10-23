@@ -43,6 +43,7 @@ int main(int argc, char** argv, char** env)
     reset(10);
 
     while (1) {
+        top->en = 1;
         contextp->timeInc(1);
         top->a = 0b11100100;
         top->s = rand() & 1 + (rand() & 1) * 2;
@@ -50,6 +51,7 @@ int main(int argc, char** argv, char** env)
         nvboard_update();
         single_cycle();
         tfp->dump(contextp->time());
+        top->en = 0;
     }
 
     Verilated::mkdir("logs");
