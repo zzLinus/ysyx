@@ -44,7 +44,7 @@ mux41 mux(
 decoder24 dec(
 	.x(x),
 	.EN(en),
-	.y(y_dec),
+	.y(y_dec)
 );
 
 assign VGA_CLK = clk;
