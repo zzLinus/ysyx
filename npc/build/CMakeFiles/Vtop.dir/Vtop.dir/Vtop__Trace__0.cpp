@@ -57,7 +57,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgBit(oldp+27,(vlSelf->ps2_clk));
     bufp->chgBit(oldp+28,(vlSelf->ps2_data));
     bufp->chgCData(oldp+29,(vlSelf->a),8);
-    bufp->chgCData(oldp+30,(vlSelf->top__02Ex),3);
+    bufp->chgCData(oldp+30,(vlSelf->x),3);
     bufp->chgBit(oldp+31,(vlSelf->en));
     bufp->chgCData(oldp+32,(vlSelf->s),2);
     bufp->chgSData(oldp+33,(vlSelf->ledr),16);
@@ -76,13 +76,10 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgCData(oldp+46,(vlSelf->seg5),8);
     bufp->chgCData(oldp+47,(vlSelf->seg6),8);
     bufp->chgCData(oldp+48,(vlSelf->seg7),8);
-    bufp->chgCData(oldp+49,(vlSelf->top__02Ey),2);
+    bufp->chgCData(oldp+49,(vlSelf->y),2);
     bufp->chgCData(oldp+50,(vlSelf->y_dec),8);
-    bufp->chgCData(oldp+51,(vlSelf->decoder24__02Ex),2);
-    bufp->chgBit(oldp+52,(vlSelf->EN));
-    bufp->chgCData(oldp+53,(vlSelf->decoder24__02Ey),4);
-    bufp->chgIData(oldp+54,(vlSelf->top__DOT__dec__DOT__i),32);
-    bufp->chgBit(oldp+55,((1U & (~ (IData)(vlSelf->rst)))));
+    bufp->chgIData(oldp+51,(vlSelf->top__DOT__dec__DOT__i),32);
+    bufp->chgBit(oldp+52,((1U & (~ (IData)(vlSelf->rst)))));
 }
 
 void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {

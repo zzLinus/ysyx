@@ -42,16 +42,13 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___ctor_var_reset\n"); );
     // Body
-    vlSelf->decoder24__02Ex = VL_RAND_RESET_I(2);
-    vlSelf->EN = VL_RAND_RESET_I(1);
-    vlSelf->decoder24__02Ey = VL_RAND_RESET_I(4);
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->rst = VL_RAND_RESET_I(1);
     vlSelf->sw = VL_RAND_RESET_I(8);
     vlSelf->ps2_clk = VL_RAND_RESET_I(1);
     vlSelf->ps2_data = VL_RAND_RESET_I(1);
     vlSelf->a = VL_RAND_RESET_I(8);
-    vlSelf->top__02Ex = VL_RAND_RESET_I(3);
+    vlSelf->x = VL_RAND_RESET_I(3);
     vlSelf->en = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(2);
     vlSelf->ledr = VL_RAND_RESET_I(16);
@@ -70,11 +67,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->seg5 = VL_RAND_RESET_I(8);
     vlSelf->seg6 = VL_RAND_RESET_I(8);
     vlSelf->seg7 = VL_RAND_RESET_I(8);
-    vlSelf->top__02Ey = VL_RAND_RESET_I(2);
+    vlSelf->y = VL_RAND_RESET_I(2);
     vlSelf->y_dec = VL_RAND_RESET_I(8);
-    vlSelf->decoder24__DOT____Vtogcov__x = VL_RAND_RESET_I(2);
-    vlSelf->decoder24__DOT____Vtogcov__EN = VL_RAND_RESET_I(1);
-    vlSelf->decoder24__DOT____Vtogcov__y = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__v_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__vga_data = VL_RAND_RESET_I(24);
