@@ -1,12 +1,9 @@
 module decoder24(
-	x,
-	EN,
-	y
+	input [1:0] x,
+	input EN,
+	output reg [3:0] y
 );
 
-input [1:0] x;
-input EN;
-output reg [3:0] y;
 
 always @(x or EN)
 	if (EN)
@@ -19,5 +16,24 @@ always @(x or EN)
 		endcase
 	end
 	else y = 4'b0000;
+
+endmodule
+
+module decoder38(
+	input [2:0] x,
+	input EN,
+	output reg [7:0] y
+):
+
+always @(x or EN)
+	if(EN) begin 
+		for( i = 0, i <= 7, i = i+1 )
+			if(x == i) // x is 3 bits number range from 0-7
+				y[i] = 1;
+			else 
+				y[i] = 0;
+		end
+	else
+		y = 8'b00000000;
 
 endmodule
