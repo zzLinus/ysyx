@@ -8,8 +8,8 @@ input [1:0] x;
 input EN;
 output [3:0] y;
 
-always @(x or en)
-	if (en)
+always @(x or EN)
+	if (EN)
 	begin // if you want to use multiplu satement in if,you need to use degin && end
 		case (x)
 			2'd0 : y = 4'b0001;  // input = 0b0000
