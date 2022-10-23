@@ -51,7 +51,7 @@ decoder38 dec(
 	.x(x),
 	.EN(en),
 	.y(y_dec)
-)
+);
 
 assign VGA_CLK = clk;
 
