@@ -20,7 +20,20 @@ always @(x or EN)
 endmodule
 
 module decoder38(
-	x,
-	EN,
-	y
-)
+	input [2:0] x,
+	input EN,
+	output reg [7:0] y
+):
+
+always @(x or EN)
+	if(EN) begin 
+		for( i = 0, i <= 7, i = i+1 )
+			if(x == i) // x is 3 bits number range from 0-7
+				y[i] = 1;
+			else 
+				y[i] = 0;
+		end
+	else
+		y = 8'b00000000;
+
+endmodule
