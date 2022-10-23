@@ -23,7 +23,7 @@ module decoder38(
 	input [2:0] x,
 	input EN,
 	output reg [7:0] y
-):
+);
 
 always @(x or EN)
 	if(EN) begin 
