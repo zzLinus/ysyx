@@ -57,25 +57,28 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgBit(oldp+27,(vlSelf->ps2_clk));
     bufp->chgBit(oldp+28,(vlSelf->ps2_data));
     bufp->chgCData(oldp+29,(vlSelf->a),8);
-    bufp->chgCData(oldp+30,(vlSelf->s),2);
-    bufp->chgSData(oldp+31,(vlSelf->ledr),16);
-    bufp->chgBit(oldp+32,(vlSelf->VGA_CLK));
-    bufp->chgBit(oldp+33,(vlSelf->VGA_HSYNC));
-    bufp->chgBit(oldp+34,(vlSelf->VGA_VSYNC));
-    bufp->chgBit(oldp+35,(vlSelf->VGA_BLANK_N));
-    bufp->chgCData(oldp+36,(vlSelf->VGA_R),8);
-    bufp->chgCData(oldp+37,(vlSelf->VGA_G),8);
-    bufp->chgCData(oldp+38,(vlSelf->VGA_B),8);
-    bufp->chgCData(oldp+39,(vlSelf->seg0),8);
-    bufp->chgCData(oldp+40,(vlSelf->seg1),8);
-    bufp->chgCData(oldp+41,(vlSelf->seg2),8);
-    bufp->chgCData(oldp+42,(vlSelf->seg3),8);
-    bufp->chgCData(oldp+43,(vlSelf->seg4),8);
-    bufp->chgCData(oldp+44,(vlSelf->seg5),8);
-    bufp->chgCData(oldp+45,(vlSelf->seg6),8);
-    bufp->chgCData(oldp+46,(vlSelf->seg7),8);
-    bufp->chgCData(oldp+47,(vlSelf->y),2);
-    bufp->chgBit(oldp+48,((1U & (~ (IData)(vlSelf->rst)))));
+    bufp->chgCData(oldp+30,(vlSelf->x),2);
+    bufp->chgBit(oldp+31,(vlSelf->en));
+    bufp->chgCData(oldp+32,(vlSelf->s),2);
+    bufp->chgSData(oldp+33,(vlSelf->ledr),16);
+    bufp->chgBit(oldp+34,(vlSelf->VGA_CLK));
+    bufp->chgBit(oldp+35,(vlSelf->VGA_HSYNC));
+    bufp->chgBit(oldp+36,(vlSelf->VGA_VSYNC));
+    bufp->chgBit(oldp+37,(vlSelf->VGA_BLANK_N));
+    bufp->chgCData(oldp+38,(vlSelf->VGA_R),8);
+    bufp->chgCData(oldp+39,(vlSelf->VGA_G),8);
+    bufp->chgCData(oldp+40,(vlSelf->VGA_B),8);
+    bufp->chgCData(oldp+41,(vlSelf->seg0),8);
+    bufp->chgCData(oldp+42,(vlSelf->seg1),8);
+    bufp->chgCData(oldp+43,(vlSelf->seg2),8);
+    bufp->chgCData(oldp+44,(vlSelf->seg3),8);
+    bufp->chgCData(oldp+45,(vlSelf->seg4),8);
+    bufp->chgCData(oldp+46,(vlSelf->seg5),8);
+    bufp->chgCData(oldp+47,(vlSelf->seg6),8);
+    bufp->chgCData(oldp+48,(vlSelf->seg7),8);
+    bufp->chgCData(oldp+49,(vlSelf->y),2);
+    bufp->chgCData(oldp+50,(vlSelf->y_dec),4);
+    bufp->chgBit(oldp+51,((1U & (~ (IData)(vlSelf->rst)))));
 }
 
 void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
