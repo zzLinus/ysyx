@@ -48,8 +48,8 @@ int main(int argc, char** argv, char** env)
         contextp->timeInc(1);
         top->a = 0b11100100;
         top->alu_a = 0b01;
-        top->alu_b = 0b00;
-        top->alu_c = 0b00;
+        top->alu_b = 0b01;
+        top->alu_c = 0b01;
         top->x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->ec_x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4 + (rand() & 1) * 8 + (rand() & 1) * 16 + (rand() & 1) * 32 + (rand() & 1) * 64 + (rand() & 1) * 128;
         top->seg_x = top->ec_x;
