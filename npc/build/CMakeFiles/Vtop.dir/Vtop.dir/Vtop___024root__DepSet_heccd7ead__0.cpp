@@ -39,9 +39,21 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("ps2_clk");}
     if (VL_UNLIKELY((vlSelf->ps2_data & 0xfeU))) {
         Verilated::overWidthError("ps2_data");}
-    if (VL_UNLIKELY((vlSelf->a & 0xfeU))) {
-        Verilated::overWidthError("a");}
-    if (VL_UNLIKELY((vlSelf->b & 0xfeU))) {
-        Verilated::overWidthError("b");}
+    if (VL_UNLIKELY((vlSelf->x & 0xf8U))) {
+        Verilated::overWidthError("x");}
+    if (VL_UNLIKELY((vlSelf->seg_x & 0xf8U))) {
+        Verilated::overWidthError("seg_x");}
+    if (VL_UNLIKELY((vlSelf->alu_c & 0xfeU))) {
+        Verilated::overWidthError("alu_c");}
+    if (VL_UNLIKELY((vlSelf->alu_a & 0xfeU))) {
+        Verilated::overWidthError("alu_a");}
+    if (VL_UNLIKELY((vlSelf->alu_b & 0xfeU))) {
+        Verilated::overWidthError("alu_b");}
+    if (VL_UNLIKELY((vlSelf->en & 0xfeU))) {
+        Verilated::overWidthError("en");}
+    if (VL_UNLIKELY((vlSelf->ec_en & 0xfeU))) {
+        Verilated::overWidthError("ec_en");}
+    if (VL_UNLIKELY((vlSelf->s & 0xfcU))) {
+        Verilated::overWidthError("s");}
 }
 #endif  // VL_DEBUG
