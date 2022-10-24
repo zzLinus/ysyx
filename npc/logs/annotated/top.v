@@ -5,40 +5,70 @@
 %000000	    input [7:0] sw,
 %000000	    input ps2_clk,
 %000000	    input ps2_data,
-%000000		input a,
-%000000		input b,
-%000001	    output [15:0] ledr,
- 000019	    output VGA_CLK,
-%000000	    output VGA_HSYNC,
-%000000	    output VGA_VSYNC,
-%000000	    output VGA_BLANK_N,
-%000005	    output [7:0] VGA_R,
-%000004	    output [7:0] VGA_G,
-%000008	    output [7:0] VGA_B,
-%000001	    output [7:0] seg0,
-%000006	    output [7:0] seg1,
-%000003	    output [7:0] seg2,
-%000003	    output [7:0] seg3,
-%000004	    output [7:0] seg4,
-%000003	    output [7:0] seg5,
-%000002	    output [7:0] seg6,
-%000005	    output [7:0] seg7,
-%000000		output f
+%000000		input [7:0] a,
+%000000		input [2:0] x,
+%000001		input [7:0] ec_x,
+ 000019		input [2:0] seg_x,
+%000000		input en,
+%000000		input ec_en,
+%000000		input [1:0] s,
+%000005	    output [15:0] ledr,
+%000004	    output VGA_CLK,
+%000008	    output VGA_HSYNC,
+%000001	    output VGA_VSYNC,
+%000006	    output VGA_BLANK_N,
+%000003	    output [7:0] VGA_R,
+%000003	    output [7:0] VGA_G,
+%000004	    output [7:0] VGA_B,
+%000003	    output [7:0] seg0,
+%000002	    output [7:0] seg1,
+%000005	    output [7:0] seg2,
+%000000	    output [7:0] seg3,
+	    output [7:0] seg4,
+	    output [7:0] seg5,
+	    output [7:0] seg6,
+	    output [7:0] seg7,
+		output reg [1:0] y,
+		output reg [2:0] ec_y,
+		output reg [7:0] y_dec
 	);
 	
 	led led1(
 	    .clk(clk),
 	    .rst(rst),
-	    .sw(sw),
-	    .ledr(ledr)
+%000000	    .sw(sw),
+%000000	    .ledr(ledr)
+%000017	);
+	
+	mux41 mux(
+		.a(a),
+		.s(s),
+		.y(y)
+	);
+	
+	// decoder24 dec(
+	// 	.x(x),
+	// 	.EN(en),
+	// 	.y(y_dec)
+	// );
+	
+	decoder38 dec(
+		.x(x),
+		.EN(en),
+		.y(y_dec)
+	);
+	
+	encoder83 encoder(
+		.x(ec_x),
+		.EN(ec_en),
+		.y(ec_y)
 	);
 	
 	assign VGA_CLK = clk;
-	assign f = a ^ b;
 	
-%000000	wire [9:0] h_addr;
-%000000	wire [9:0] v_addr;
-%000017	wire [23:0] vga_data;
+	wire [9:0] h_addr;
+	wire [9:0] v_addr;
+	wire [23:0] vga_data;
 	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
@@ -53,16 +83,17 @@
 	    .vga_g(VGA_G),
 	    .vga_b(VGA_B)
 	);
-	
-	ps2_keyboard my_keyboard(
-	    .clk(clk),
+%000000	
+%000000	ps2_keyboard my_keyboard(
+%000017	    .clk(clk),
 	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
 	    .ps2_data(ps2_data)
 	);
-	
-	seg mu_seg(
+%000002	
+%000001	seg mu_seg(
 	    .clk(clk),
+		.seg_x(seg_x),
 	    .rst(rst),
 	    .o_seg0(seg0),
 	    .o_seg1(seg1),
@@ -83,15 +114,15 @@
 	endmodule
 	
 	module vmem (
-%000000	    input [9:0] h_addr,
-%000000	    input [8:0] v_addr,
-%000017	    output [23:0] vga_data
+	    input [9:0] h_addr,
+	    input [8:0] v_addr,
+	    output [23:0] vga_data
 	);
 	
 	reg [23:0] vga_mem [524287:0];
 	
-%000002	initial begin
-%000001	    $readmemh("resource/picture.hex", vga_mem);
+	initial begin
+	    $readmemh("resource/picture.hex", vga_mem);
 	end
 	
 	assign vga_data = vga_mem[{h_addr, v_addr}];

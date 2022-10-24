@@ -43,7 +43,15 @@ int main(int argc, char** argv, char** env)
     reset(10);
 
     while (1) {
+        top->en = !top->en;
+        top->ec_en = !top->ec_en;
         contextp->timeInc(1);
+        top->a = 0b11100100;
+        top->x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
+        top->ec_x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4 + (rand() & 1) * 8 + (rand() & 1) * 16 + (rand() & 1) * 32 + (rand() & 1) * 64 + (rand() & 1) * 128;
+        top->seg_x = top->ec_x;
+        top->s = rand() & 1 + (rand() & 1) * 2;
+        top->eval();
         nvboard_update();
         single_cycle();
         tfp->dump(contextp->time());

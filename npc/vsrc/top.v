@@ -4,8 +4,13 @@ module top (
     input [7:0] sw,
     input ps2_clk,
     input ps2_data,
-	input a,
-	input b,
+	input [7:0] a,
+	input [2:0] x,
+	input [7:0] ec_x,
+	input [2:0] seg_x,
+	input en,
+	input ec_en,
+	input [1:0] s,
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
@@ -22,7 +27,9 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
-	output f
+	output reg [1:0] y,
+	output reg [2:0] ec_y,
+	output reg [7:0] y_dec
 );
 
 led led1(
@@ -32,8 +39,31 @@ led led1(
     .ledr(ledr)
 );
 
+mux41 mux(
+	.a(a),
+	.s(s),
+	.y(y)
+);
+
+// decoder24 dec(
+// 	.x(x),
+// 	.EN(en),
+// 	.y(y_dec)
+// );
+
+decoder38 dec(
+	.x(x),
+	.EN(en),
+	.y(y_dec)
+);
+
+encoder83 encoder(
+	.x(ec_x),
+	.EN(ec_en),
+	.y(ec_y)
+);
+
 assign VGA_CLK = clk;
-assign f = a ^ b;
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
@@ -62,6 +92,7 @@ ps2_keyboard my_keyboard(
 
 seg mu_seg(
     .clk(clk),
+	.seg_x(seg_x),
     .rst(rst),
     .o_seg0(seg0),
     .o_seg1(seg1),
