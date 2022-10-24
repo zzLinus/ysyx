@@ -7,25 +7,28 @@
 %000000	    input ps2_data,
 %000000		input [7:0] a,
 %000000		input [2:0] x,
-%000001		input en,
- 000019		input [1:0] s,
+%000001		input [3:0] ec_x,
+ 000019		input en,
+%000000		input ec_en,
+%000000		input [1:0] s,
 %000000	    output [15:0] ledr,
-%000000	    output VGA_CLK,
-%000000	    output VGA_HSYNC,
-%000005	    output VGA_VSYNC,
-%000004	    output VGA_BLANK_N,
-%000008	    output [7:0] VGA_R,
-%000001	    output [7:0] VGA_G,
-%000006	    output [7:0] VGA_B,
-%000003	    output [7:0] seg0,
+%000005	    output VGA_CLK,
+%000004	    output VGA_HSYNC,
+%000008	    output VGA_VSYNC,
+%000001	    output VGA_BLANK_N,
+%000006	    output [7:0] VGA_R,
+%000003	    output [7:0] VGA_G,
+%000003	    output [7:0] VGA_B,
+%000004	    output [7:0] seg0,
 %000003	    output [7:0] seg1,
-%000004	    output [7:0] seg2,
-%000003	    output [7:0] seg3,
-%000002	    output [7:0] seg4,
-%000005	    output [7:0] seg5,
-%000000	    output [7:0] seg6,
+%000002	    output [7:0] seg2,
+%000005	    output [7:0] seg3,
+%000000	    output [7:0] seg4,
+	    output [7:0] seg5,
+	    output [7:0] seg6,
 	    output [7:0] seg7,
 		output reg [1:0] y,
+		output reg [1:0] ec_y,
 		output reg [7:0] y_dec
 	);
 	
@@ -33,12 +36,12 @@
 	    .clk(clk),
 	    .rst(rst),
 	    .sw(sw),
-	    .ledr(ledr)
-	);
-	
-%000000	mux41 mux(
-%000000		.a(a),
-%000017		.s(s),
+%000000	    .ledr(ledr)
+%000000	);
+%000017	
+	mux41 mux(
+		.a(a),
+		.s(s),
 		.y(y)
 	);
 	
@@ -52,6 +55,12 @@
 		.x(x),
 		.EN(en),
 		.y(y_dec)
+	);
+	
+	encoder24 encoder(
+		.x(ec_x),
+		.EN(ec_en),
+		.y(ec_y)
 	);
 	
 	assign VGA_CLK = clk;
@@ -74,24 +83,24 @@
 	    .vga_b(VGA_B)
 	);
 	
-	ps2_keyboard my_keyboard(
-	    .clk(clk),
-	    .resetn(~rst),
+%000000	ps2_keyboard my_keyboard(
+%000000	    .clk(clk),
+%000017	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
 	    .ps2_data(ps2_data)
 	);
 	
-	seg mu_seg(
-	    .clk(clk),
-%000000	    .rst(rst),
-%000000	    .o_seg0(seg0),
-%000017	    .o_seg1(seg1),
+%000002	seg mu_seg(
+%000001	    .clk(clk),
+	    .rst(rst),
+	    .o_seg0(seg0),
+	    .o_seg1(seg1),
 	    .o_seg2(seg2),
 	    .o_seg3(seg3),
 	    .o_seg4(seg4),
 	    .o_seg5(seg5),
-%000002	    .o_seg6(seg6),
-%000001	    .o_seg7(seg7)
+	    .o_seg6(seg6),
+	    .o_seg7(seg7)
 	);
 	
 	vmem my_vmem(
