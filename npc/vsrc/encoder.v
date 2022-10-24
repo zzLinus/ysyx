@@ -27,16 +27,17 @@ module encoder42(
 	output reg [1:0] y
 );
 
+integer i;
+
 always @(x or EN) 
 begin
-	integer i;
 	if (EN) 
 		begin
 			for ( i = 0; i <= 3; i = i+1 )
 				if(x[i] == 1) y = i[1:0];
 		end
 	else 
-		y = 2'b00;
+		y = 0;
 end
 
 endmodule
