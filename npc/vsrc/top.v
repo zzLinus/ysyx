@@ -8,6 +8,9 @@ module top (
 	input [2:0] x,
 	input [7:0] ec_x,
 	input [2:0] seg_x,
+	input alu_c,
+	input alu_a,
+	input alu_b,
 	input en,
 	input ec_en,
 	input [1:0] s,
@@ -29,7 +32,9 @@ module top (
     output [7:0] seg7,
 	output reg [1:0] y,
 	output reg [2:0] ec_y,
-	output reg [7:0] y_dec
+	output reg [7:0] y_dec,
+	output alu_s,
+	output alu_c_out
 );
 
 led led1(
@@ -88,6 +93,14 @@ ps2_keyboard my_keyboard(
     .resetn(~rst),
     .ps2_clk(ps2_clk),
     .ps2_data(ps2_data)
+);
+
+adder adder(
+	.c(alu_c),
+	.a(alu_a),
+	.b(alu_b),
+	.s(alu_s),
+	.c_out(alu_c_out),
 );
 
 seg mu_seg(
