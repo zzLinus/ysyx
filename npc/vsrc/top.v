@@ -6,7 +6,7 @@ module top (
     input ps2_data,
 	input [7:0] a,
 	input [2:0] x,
-	input [3:0] ec_x,
+	input [7:0] ec_x,
 	input [2:0] seg_x,
 	input en,
 	input ec_en,
@@ -28,7 +28,7 @@ module top (
     output [7:0] seg6,
     output [7:0] seg7,
 	output reg [1:0] y,
-	output reg [1:0] ec_y,
+	output reg [2:0] ec_y,
 	output reg [7:0] y_dec
 );
 
