@@ -82,6 +82,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*1:0*/ top__DOT__encoder__DOT__y__out__strong__out3;
     };
     struct {
+        CData/*1:0*/ top__DOT__encoder__DOT__y__out__strong__out5;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__v_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid;
