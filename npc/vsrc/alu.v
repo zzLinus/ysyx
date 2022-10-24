@@ -7,7 +7,7 @@ module adder (
 );
 
 reg tmp = (a|b)&(~(a&b));
-always @(*)
+always @(*) begin
 	assign s = (tmp|c)&(~(tmp&c));
 	assign c_out = (a&b)|(c&tmp);
 end
