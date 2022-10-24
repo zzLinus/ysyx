@@ -92,7 +92,7 @@ ps2_keyboard my_keyboard(
 
 seg mu_seg(
     .clk(clk),
-	.seg_x(seg_x)
+	.seg_x(seg_x),
     .rst(rst),
     .o_seg0(seg0),
     .o_seg1(seg1),

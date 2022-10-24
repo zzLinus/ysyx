@@ -35,7 +35,7 @@ always @(posedge clk) begin
 			if(count == CLK_NUM) begin offset <= offset + 1; end
 				count <= (count == CLK_NUM) ? 0 : count + 1;
 		end
-	x = seg_x
+	x = seg_x;
 end
 
 assign o_seg0 = ~segs[seg_x[2:0]];
