@@ -1,7 +1,7 @@
 module encoder24(
-	input [3:0] x;
-	input EN;
-	output reg [1:0] y;
+	input [3:0] x,
+	input EN,
+	output reg [1:0] y,
 );
 
 always @(x or EN) 
