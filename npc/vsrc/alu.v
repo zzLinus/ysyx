@@ -6,8 +6,10 @@ module adder (
 	output reg c_out
 );
 
-reg tmp = (a|b)&(~(a&b));
-assign s = (tmp|c)&(~(tmp&c));
-assign c_out = (a&b)|(c&tmp);
+always @(*)
+	reg tmp = (a|b)&(~(a&b));
+	assign s = (tmp|c)&(~(tmp&c));
+	assign c_out = (a&b)|(c&tmp);
+end
 
 endmodule
