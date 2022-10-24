@@ -7,7 +7,7 @@ module top (
 	input [7:0] a,
 	input [2:0] x,
 	input [3:0] ec_x,
-	input seg_x,
+	input [2:0] seg_x,
 	input en,
 	input ec_en,
 	input [1:0] s,
