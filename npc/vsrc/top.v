@@ -57,7 +57,7 @@ decoder38 dec(
 	.y(y_dec)
 );
 
-encoder encoder(
+encoder83 encoder(
 	.x(ec_x),
 	.EN(ec_en),
 	.y(ec_y)
