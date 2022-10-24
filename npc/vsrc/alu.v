@@ -3,7 +3,7 @@ module adder (
 	input a,
 	input b,
 	output reg s,
-	output reg c_out,
+	output reg c_out
 );
 
 reg tmp = (a|b)&~(a&b);

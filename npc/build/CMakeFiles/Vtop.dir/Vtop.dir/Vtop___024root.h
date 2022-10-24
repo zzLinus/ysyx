@@ -25,6 +25,9 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(x,2,0);
         VL_IN8(ec_x,7,0);
         VL_IN8(seg_x,2,0);
+        VL_IN8(alu_c,0,0);
+        VL_IN8(alu_a,0,0);
+        VL_IN8(alu_b,0,0);
         VL_IN8(en,0,0);
         VL_IN8(ec_en,0,0);
         VL_IN8(s,1,0);
@@ -46,6 +49,8 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(y,1,0);
         VL_OUT8(ec_y,2,0);
         VL_OUT8(y_dec,7,0);
+        VL_OUT8(alu_s,0,0);
+        VL_OUT8(alu_c_out,0,0);
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
         CData/*7:0*/ top__DOT____Vtogcov__sw;
@@ -55,6 +60,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT____Vtogcov__x;
         CData/*7:0*/ top__DOT____Vtogcov__ec_x;
         CData/*2:0*/ top__DOT____Vtogcov__seg_x;
+        CData/*0:0*/ top__DOT____Vtogcov__alu_c;
+        CData/*0:0*/ top__DOT____Vtogcov__alu_a;
+        CData/*0:0*/ top__DOT____Vtogcov__alu_b;
         CData/*0:0*/ top__DOT____Vtogcov__en;
         CData/*0:0*/ top__DOT____Vtogcov__ec_en;
         CData/*1:0*/ top__DOT____Vtogcov__s;
@@ -72,16 +80,18 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__seg4;
         CData/*7:0*/ top__DOT____Vtogcov__seg5;
         CData/*7:0*/ top__DOT____Vtogcov__seg6;
+    };
+    struct {
         CData/*7:0*/ top__DOT____Vtogcov__seg7;
         CData/*1:0*/ top__DOT____Vtogcov__y;
         CData/*2:0*/ top__DOT____Vtogcov__ec_y;
         CData/*7:0*/ top__DOT____Vtogcov__y_dec;
+        CData/*0:0*/ top__DOT____Vtogcov__alu_s;
+        CData/*0:0*/ top__DOT____Vtogcov__alu_c_out;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__v_valid;
-    };
-    struct {
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__v_valid;
         CData/*3:0*/ top__DOT__my_keyboard__DOT__count;
@@ -92,6 +102,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
+        CData/*0:0*/ top__DOT__adder__DOT__tmp;
+        CData/*0:0*/ top__DOT__adder__DOT____Vtogcov__tmp;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*0:0*/ __Vclklast__TOP__clk;

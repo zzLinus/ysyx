@@ -35,6 +35,9 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&x,2,0);
     VL_IN8(&ec_x,7,0);
     VL_IN8(&seg_x,2,0);
+    VL_IN8(&alu_c,0,0);
+    VL_IN8(&alu_a,0,0);
+    VL_IN8(&alu_b,0,0);
     VL_IN8(&en,0,0);
     VL_IN8(&ec_en,0,0);
     VL_IN8(&s,1,0);
@@ -56,6 +59,8 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&y,1,0);
     VL_OUT8(&ec_y,2,0);
     VL_OUT8(&y_dec,7,0);
+    VL_OUT8(&alu_s,0,0);
+    VL_OUT8(&alu_c_out,0,0);
     VL_OUT16(&ledr,15,0);
 
     // CELLS

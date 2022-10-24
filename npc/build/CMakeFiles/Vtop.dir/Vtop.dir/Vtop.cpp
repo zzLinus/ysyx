@@ -20,6 +20,9 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , x{vlSymsp->TOP.x}
     , ec_x{vlSymsp->TOP.ec_x}
     , seg_x{vlSymsp->TOP.seg_x}
+    , alu_c{vlSymsp->TOP.alu_c}
+    , alu_a{vlSymsp->TOP.alu_a}
+    , alu_b{vlSymsp->TOP.alu_b}
     , en{vlSymsp->TOP.en}
     , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}
@@ -41,6 +44,8 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , y{vlSymsp->TOP.y}
     , ec_y{vlSymsp->TOP.ec_y}
     , y_dec{vlSymsp->TOP.y_dec}
+    , alu_s{vlSymsp->TOP.alu_s}
+    , alu_c_out{vlSymsp->TOP.alu_c_out}
     , ledr{vlSymsp->TOP.ledr}
     , rootp{&(vlSymsp->TOP)}
 {
