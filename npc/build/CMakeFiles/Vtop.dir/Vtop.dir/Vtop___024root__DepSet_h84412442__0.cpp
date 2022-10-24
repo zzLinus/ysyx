@@ -157,7 +157,7 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 3U)))) {
             ++(vlSymsp->__Vcoverage[253]);
         }
-        vlSelf->top__DOT__encoder__DOT__unnamedblk1__DOT__i = 4U;
+        vlSelf->top__DOT__encoder__DOT__i = 4U;
     } else {
         vlSelf->ec_y = 0U;
     }
