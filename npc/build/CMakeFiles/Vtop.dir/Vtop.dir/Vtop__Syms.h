@@ -29,7 +29,7 @@ class Vtop__Syms final : public VerilatedSyms {
     Vtop___024root                 TOP;
 
     // COVERAGE
-    uint32_t __Vcoverage[421];
+    uint32_t __Vcoverage[424];
 
     // CONSTRUCTORS
     Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* modelp);

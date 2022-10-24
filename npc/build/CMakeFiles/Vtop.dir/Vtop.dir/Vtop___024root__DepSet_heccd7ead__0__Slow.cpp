@@ -50,6 +50,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->a = VL_RAND_RESET_I(8);
     vlSelf->x = VL_RAND_RESET_I(3);
     vlSelf->ec_x = VL_RAND_RESET_I(4);
+    vlSelf->seg_x = VL_RAND_RESET_I(3);
     vlSelf->en = VL_RAND_RESET_I(1);
     vlSelf->ec_en = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(2);
@@ -83,6 +84,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__a = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__x = VL_RAND_RESET_I(3);
     vlSelf->top__DOT____Vtogcov__ec_x = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT____Vtogcov__seg_x = VL_RAND_RESET_I(3);
     vlSelf->top__DOT____Vtogcov__en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ec_en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__s = VL_RAND_RESET_I(2);
@@ -137,6 +139,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     }
     vlSelf->top__DOT__mu_seg__DOT__count = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__mu_seg__DOT__offset = VL_RAND_RESET_I(3);
+    vlSelf->top__DOT__mu_seg__DOT__x = VL_RAND_RESET_I(32);
     for (int __Vi0=0; __Vi0<8; ++__Vi0) {
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[__Vi0] = VL_RAND_RESET_I(8);
     }

@@ -43,6 +43,8 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("x");}
     if (VL_UNLIKELY((vlSelf->ec_x & 0xf0U))) {
         Verilated::overWidthError("ec_x");}
+    if (VL_UNLIKELY((vlSelf->seg_x & 0xf8U))) {
+        Verilated::overWidthError("seg_x");}
     if (VL_UNLIKELY((vlSelf->en & 0xfeU))) {
         Verilated::overWidthError("en");}
     if (VL_UNLIKELY((vlSelf->ec_en & 0xfeU))) {
