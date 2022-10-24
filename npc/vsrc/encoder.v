@@ -26,10 +26,10 @@ module encoder42(
 	input EN,
 	output reg [1:0] y
 );
-// integer i;
 
 always @(x or EN) 
 begin
+	integer i;
 	if (EN) 
 		begin
 			for ( i = 0; i <= 3; i = i+1 )
