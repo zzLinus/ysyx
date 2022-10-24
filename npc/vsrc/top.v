@@ -100,7 +100,7 @@ adder adder(
 	.a(alu_a),
 	.b(alu_b),
 	.s(alu_s),
-	.c_out(alu_c_out),
+	.c_out(alu_c_out)
 );
 
 seg mu_seg(
