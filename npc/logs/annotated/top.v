@@ -9,36 +9,41 @@
 %000000		input [2:0] x,
 %000001		input [7:0] ec_x,
  000019		input [2:0] seg_x,
-%000000		input en,
-%000000		input ec_en,
-%000000		input [1:0] s,
-%000005	    output [15:0] ledr,
-%000004	    output VGA_CLK,
-%000008	    output VGA_HSYNC,
-%000001	    output VGA_VSYNC,
-%000006	    output VGA_BLANK_N,
+%000000		input alu_c,
+%000000		input alu_a,
+%000000		input alu_b,
+%000005		input en,
+%000004		input ec_en,
+%000008		input [1:0] s,
+%000001	    output [15:0] ledr,
+%000006	    output VGA_CLK,
+%000003	    output VGA_HSYNC,
+%000003	    output VGA_VSYNC,
+%000004	    output VGA_BLANK_N,
 %000003	    output [7:0] VGA_R,
-%000003	    output [7:0] VGA_G,
-%000004	    output [7:0] VGA_B,
-%000003	    output [7:0] seg0,
-%000002	    output [7:0] seg1,
-%000005	    output [7:0] seg2,
-%000000	    output [7:0] seg3,
+%000002	    output [7:0] VGA_G,
+%000005	    output [7:0] VGA_B,
+%000000	    output [7:0] seg0,
+	    output [7:0] seg1,
+	    output [7:0] seg2,
+	    output [7:0] seg3,
 	    output [7:0] seg4,
 	    output [7:0] seg5,
 	    output [7:0] seg6,
 	    output [7:0] seg7,
 		output reg [1:0] y,
 		output reg [2:0] ec_y,
-		output reg [7:0] y_dec
-	);
-	
-	led led1(
+		output reg [7:0] y_dec,
+		output alu_s,
+		output alu_c_out
+%000000	);
+%000000	
+%000017	led led1(
 	    .clk(clk),
 	    .rst(rst),
-%000000	    .sw(sw),
-%000000	    .ledr(ledr)
-%000017	);
+	    .sw(sw),
+	    .ledr(ledr)
+	);
 	
 	mux41 mux(
 		.a(a),
@@ -78,20 +83,28 @@
 	    .v_addr(v_addr),
 	    .hsync(VGA_HSYNC),
 	    .vsync(VGA_VSYNC),
-	    .valid(VGA_BLANK_N),
-	    .vga_r(VGA_R),
-	    .vga_g(VGA_G),
+%000000	    .valid(VGA_BLANK_N),
+%000000	    .vga_r(VGA_R),
+%000017	    .vga_g(VGA_G),
 	    .vga_b(VGA_B)
 	);
-%000000	
-%000000	ps2_keyboard my_keyboard(
-%000017	    .clk(clk),
-	    .resetn(~rst),
+	
+	ps2_keyboard my_keyboard(
+%000002	    .clk(clk),
+%000001	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
 	    .ps2_data(ps2_data)
 	);
-%000002	
-%000001	seg mu_seg(
+	
+	adder adder(
+		.c(alu_c),
+		.a(alu_a),
+		.b(alu_b),
+		.s(alu_s),
+		.c_out(alu_c_out)
+	);
+	
+	seg mu_seg(
 	    .clk(clk),
 		.seg_x(seg_x),
 	    .rst(rst),
