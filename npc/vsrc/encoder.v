@@ -21,10 +21,33 @@
 // end
 //
 // endmodule
-module encoder42(
-	input [3:0] x,
+
+// module encoder42(
+// 	input [3:0] x,
+// 	input EN,
+// 	output reg [1:0] y
+// );
+//
+// integer i;
+//
+// always @(x or EN) 
+// begin
+// 	if (EN) 
+// 		begin
+// 			y = 2'b00;
+// 			for ( i = 0; i <= 3; i = i+1 )
+// 				if(x[i] == 1) y = i[1:0];
+// 		end
+// 	else 
+// 		y = 2'b00;
+// end
+//
+// endmodule
+
+module encoder83(
+	input [7:0] x,
 	input EN,
-	output reg [1:0] y
+	output reg [2:0] y
 );
 
 integer i;
@@ -33,12 +56,12 @@ always @(x or EN)
 begin
 	if (EN) 
 		begin
-			y = 2'b00;
-			for ( i = 0; i <= 3; i = i+1 )
+			y = 2'b000;
+			for ( i = 0; i <= 7; i = i+1 )
 				if(x[i] == 1) y = i[1:0];
 		end
 	else 
-		y = 2'b00;
+		y = 2'b000;
 end
 
 endmodule
