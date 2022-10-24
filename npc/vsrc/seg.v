@@ -38,7 +38,7 @@ always @(posedge clk) begin
 	x = seg_x;
 end
 
-assign o_seg0 = ~segs[seg_x[2:0]];
+assign o_seg0 = ~segs[x[2:0]];
 assign o_seg1 = ~segs[3'd1];
 assign o_seg2 = ~segs[3'd7];
 assign o_seg3 = ~segs[3'd6];
