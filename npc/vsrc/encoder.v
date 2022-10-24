@@ -56,12 +56,12 @@ always @(x or EN)
 begin
 	if (EN) 
 		begin
-			y = 2'b000;
+			y = 3'b000;
 			for ( i = 0; i <= 7; i = i+1 )
 				if(x[i] == 1) y = i[1:0];
 		end
 	else 
-		y = 2'b000;
+		y = 3'b000;
 end
 
 endmodule
