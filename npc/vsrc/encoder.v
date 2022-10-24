@@ -17,7 +17,7 @@ begin
 			endcase
 		end
 	else 
-		y = 2'bz;
+		y = 2'b00;
 end
 
 endmodule
