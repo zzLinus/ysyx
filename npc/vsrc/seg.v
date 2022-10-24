@@ -1,6 +1,7 @@
 module seg(
   input clk,
   input rst,
+  input seg_x,
   output [7:0] o_seg0,
   output [7:0] o_seg1,
   output [7:0] o_seg2,
@@ -26,15 +27,18 @@ parameter CLK_NUM = 5000000;
 reg [31:0] count;
 reg [2:0] offset;
 
+integer x;
+
 always @(posedge clk) begin
-  if(rst) begin count <= 0; offset <= 0; end
-  else begin
-    if(count == CLK_NUM) begin offset <= offset + 1; end
-    count <= (count == CLK_NUM) ? 0 : count + 1;
-  end
+	if(rst) begin count <= 0; offset <= 0; end
+		else begin
+			if(count == CLK_NUM) begin offset <= offset + 1; end
+				count <= (count == CLK_NUM) ? 0 : count + 1;
+		end
+	x = seg_x
 end
 
-assign o_seg0 = ~segs[3'd0];
+assign o_seg0 = ~segs[seg_x[2:0]];
 assign o_seg1 = ~segs[3'd1];
 assign o_seg2 = ~segs[3'd7];
 assign o_seg3 = ~segs[3'd6];

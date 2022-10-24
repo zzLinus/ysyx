@@ -7,6 +7,7 @@ module top (
 	input [7:0] a,
 	input [2:0] x,
 	input [3:0] ec_x,
+	input seg_x,
 	input en,
 	input ec_en,
 	input [1:0] s,
@@ -91,6 +92,7 @@ ps2_keyboard my_keyboard(
 
 seg mu_seg(
     .clk(clk),
+	.seg_x(seg_x)
     .rst(rst),
     .o_seg0(seg0),
     .o_seg1(seg1),
