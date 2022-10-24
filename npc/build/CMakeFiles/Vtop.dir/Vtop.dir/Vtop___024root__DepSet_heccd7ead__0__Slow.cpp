@@ -49,7 +49,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->ps2_data = VL_RAND_RESET_I(1);
     vlSelf->a = VL_RAND_RESET_I(8);
     vlSelf->x = VL_RAND_RESET_I(3);
+    vlSelf->ec_x = VL_RAND_RESET_I(4);
     vlSelf->en = VL_RAND_RESET_I(1);
+    vlSelf->ec_en = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(2);
     vlSelf->ledr = VL_RAND_RESET_I(16);
     vlSelf->VGA_CLK = VL_RAND_RESET_I(1);
@@ -68,6 +70,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->seg6 = VL_RAND_RESET_I(8);
     vlSelf->seg7 = VL_RAND_RESET_I(8);
     vlSelf->y = VL_RAND_RESET_I(2);
+    vlSelf->ec_y = VL_RAND_RESET_I(2);
     vlSelf->y_dec = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__v_addr = VL_RAND_RESET_I(10);
@@ -79,7 +82,9 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__ps2_data = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__a = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__x = VL_RAND_RESET_I(3);
+    vlSelf->top__DOT____Vtogcov__ec_x = VL_RAND_RESET_I(4);
     vlSelf->top__DOT____Vtogcov__en = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__ec_en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__s = VL_RAND_RESET_I(2);
     vlSelf->top__DOT____Vtogcov__ledr = VL_RAND_RESET_I(16);
     vlSelf->top__DOT____Vtogcov__VGA_CLK = VL_RAND_RESET_I(1);
@@ -98,6 +103,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__seg6 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg7 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__y = VL_RAND_RESET_I(2);
+    vlSelf->top__DOT____Vtogcov__ec_y = VL_RAND_RESET_I(2);
     vlSelf->top__DOT____Vtogcov__y_dec = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(10);

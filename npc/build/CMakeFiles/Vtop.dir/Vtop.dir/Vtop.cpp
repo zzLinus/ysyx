@@ -18,7 +18,9 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , ps2_data{vlSymsp->TOP.ps2_data}
     , a{vlSymsp->TOP.a}
     , x{vlSymsp->TOP.x}
+    , ec_x{vlSymsp->TOP.ec_x}
     , en{vlSymsp->TOP.en}
+    , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}
     , VGA_CLK{vlSymsp->TOP.VGA_CLK}
     , VGA_HSYNC{vlSymsp->TOP.VGA_HSYNC}
@@ -36,6 +38,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , seg6{vlSymsp->TOP.seg6}
     , seg7{vlSymsp->TOP.seg7}
     , y{vlSymsp->TOP.y}
+    , ec_y{vlSymsp->TOP.ec_y}
     , y_dec{vlSymsp->TOP.y_dec}
     , ledr{vlSymsp->TOP.ledr}
     , rootp{&(vlSymsp->TOP)}
