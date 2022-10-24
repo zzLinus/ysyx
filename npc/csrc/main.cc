@@ -49,7 +49,7 @@ int main(int argc, char** argv, char** env)
         top->a = 0b11100100;
         top->x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->ec_x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4 + (rand() & 1) * 8;
-        top->seg_x = ec_x;
+        top->seg_x = top->ec_x;
         top->s = rand() & 1 + (rand() & 1) * 2;
         top->eval();
         nvboard_update();

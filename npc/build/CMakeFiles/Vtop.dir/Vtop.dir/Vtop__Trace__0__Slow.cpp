@@ -100,7 +100,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->pushNamePrefix("mu_seg ");
     tracep->declBit(c+26,"clk", false,-1);
     tracep->declBit(c+27,"rst", false,-1);
-    tracep->declBit(c+59,"seg_x", false,-1);
+    tracep->declBus(c+34,"seg_x", false,-1, 2,0);
     tracep->declBus(c+46,"o_seg0", false,-1, 7,0);
     tracep->declBus(c+47,"o_seg1", false,-1, 7,0);
     tracep->declBus(c+48,"o_seg2", false,-1, 7,0);
@@ -112,7 +112,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     for (int i = 0; i < 8; ++i) {
         tracep->declBus(c+1+i*1,"segs", true,(i+0), 7,0);
     }
-    tracep->declBus(c+61,"CLK_NUM", false,-1, 31,0);
+    tracep->declBus(c+60,"CLK_NUM", false,-1, 31,0);
     tracep->declBus(c+14,"count", false,-1, 31,0);
     tracep->declBus(c+15,"offset", false,-1, 2,0);
     tracep->declBus(c+16,"x", false,-1, 31,0);
@@ -124,7 +124,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("my_keyboard ");
     tracep->declBit(c+26,"clk", false,-1);
-    tracep->declBit(c+60,"resetn", false,-1);
+    tracep->declBit(c+59,"resetn", false,-1);
     tracep->declBit(c+29,"ps2_clk", false,-1);
     tracep->declBit(c+30,"ps2_data", false,-1);
     tracep->declBus(c+17,"buffer", false,-1, 9,0);
@@ -144,14 +144,14 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+43,"vga_r", false,-1, 7,0);
     tracep->declBus(c+44,"vga_g", false,-1, 7,0);
     tracep->declBus(c+45,"vga_b", false,-1, 7,0);
-    tracep->declBus(c+62,"h_frontporch", false,-1, 31,0);
-    tracep->declBus(c+63,"h_active", false,-1, 31,0);
-    tracep->declBus(c+64,"h_backporch", false,-1, 31,0);
-    tracep->declBus(c+65,"h_total", false,-1, 31,0);
-    tracep->declBus(c+66,"v_frontporch", false,-1, 31,0);
-    tracep->declBus(c+67,"v_active", false,-1, 31,0);
-    tracep->declBus(c+68,"v_backporch", false,-1, 31,0);
-    tracep->declBus(c+69,"v_total", false,-1, 31,0);
+    tracep->declBus(c+61,"h_frontporch", false,-1, 31,0);
+    tracep->declBus(c+62,"h_active", false,-1, 31,0);
+    tracep->declBus(c+63,"h_backporch", false,-1, 31,0);
+    tracep->declBus(c+64,"h_total", false,-1, 31,0);
+    tracep->declBus(c+65,"v_frontporch", false,-1, 31,0);
+    tracep->declBus(c+66,"v_active", false,-1, 31,0);
+    tracep->declBus(c+67,"v_backporch", false,-1, 31,0);
+    tracep->declBus(c+68,"v_total", false,-1, 31,0);
     tracep->declBus(c+21,"x_cnt", false,-1, 9,0);
     tracep->declBus(c+22,"y_cnt", false,-1, 9,0);
     tracep->declBit(c+23,"h_valid", false,-1);
@@ -262,15 +262,14 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+56,(vlSelf->y_dec),8);
     bufp->fullIData(oldp+57,(vlSelf->top__DOT__dec__DOT__i),32);
     bufp->fullIData(oldp+58,(vlSelf->top__DOT__encoder__DOT__i),32);
-    bufp->fullBit(oldp+59,((1U & (IData)(vlSelf->seg_x))));
-    bufp->fullBit(oldp+60,((1U & (~ (IData)(vlSelf->rst)))));
-    bufp->fullIData(oldp+61,(0x4c4b40U),32);
-    bufp->fullIData(oldp+62,(0x60U),32);
-    bufp->fullIData(oldp+63,(0x90U),32);
-    bufp->fullIData(oldp+64,(0x310U),32);
-    bufp->fullIData(oldp+65,(0x320U),32);
-    bufp->fullIData(oldp+66,(2U),32);
-    bufp->fullIData(oldp+67,(0x23U),32);
-    bufp->fullIData(oldp+68,(0x203U),32);
-    bufp->fullIData(oldp+69,(0x20dU),32);
+    bufp->fullBit(oldp+59,((1U & (~ (IData)(vlSelf->rst)))));
+    bufp->fullIData(oldp+60,(0x4c4b40U),32);
+    bufp->fullIData(oldp+61,(0x60U),32);
+    bufp->fullIData(oldp+62,(0x90U),32);
+    bufp->fullIData(oldp+63,(0x310U),32);
+    bufp->fullIData(oldp+64,(0x320U),32);
+    bufp->fullIData(oldp+65,(2U),32);
+    bufp->fullIData(oldp+66,(0x23U),32);
+    bufp->fullIData(oldp+67,(0x203U),32);
+    bufp->fullIData(oldp+68,(0x20dU),32);
 }

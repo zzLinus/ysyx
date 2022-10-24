@@ -517,7 +517,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
             ++(vlSymsp->__Vcoverage[286]);
         }
     }
-    vlSelf->top__DOT__mu_seg__DOT__x = (1U & (IData)(vlSelf->seg_x));
+    vlSelf->top__DOT__mu_seg__DOT__x = vlSelf->seg_x;
     vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync 
         = ((6U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                   << 1U)) | (IData)(vlSelf->ps2_clk));

@@ -4404,7 +4404,9 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[318]), first, "vsrc/ps2_keyboard.v", 14, 5, ".top.my_keyboard", "v_line/ps2_keyboard", "block", "14");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/seg.v", 2, 9, ".top.mu_seg", "v_toggle/seg", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/seg.v", 3, 9, ".top.mu_seg", "v_toggle/seg", "rst", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[27]), first, "vsrc/seg.v", 4, 9, ".top.mu_seg", "v_toggle/seg", "seg_x", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[27]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[28]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[29]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[78]), first, "vsrc/seg.v", 5, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[79]), first, "vsrc/seg.v", 5, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[80]), first, "vsrc/seg.v", 5, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[2]", "");
