@@ -23,7 +23,7 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(ps2_data,0,0);
         VL_IN8(a,7,0);
         VL_IN8(x,2,0);
-        VL_IN8(ec_x,3,0);
+        VL_IN8(ec_x,7,0);
         VL_IN8(seg_x,2,0);
         VL_IN8(en,0,0);
         VL_IN8(ec_en,0,0);
@@ -44,7 +44,7 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(seg6,7,0);
         VL_OUT8(seg7,7,0);
         VL_OUT8(y,1,0);
-        VL_OUT8(ec_y,1,0);
+        VL_OUT8(ec_y,2,0);
         VL_OUT8(y_dec,7,0);
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
@@ -53,7 +53,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__ps2_data;
         CData/*7:0*/ top__DOT____Vtogcov__a;
         CData/*2:0*/ top__DOT____Vtogcov__x;
-        CData/*3:0*/ top__DOT____Vtogcov__ec_x;
+        CData/*7:0*/ top__DOT____Vtogcov__ec_x;
         CData/*2:0*/ top__DOT____Vtogcov__seg_x;
         CData/*0:0*/ top__DOT____Vtogcov__en;
         CData/*0:0*/ top__DOT____Vtogcov__ec_en;
@@ -74,7 +74,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__seg6;
         CData/*7:0*/ top__DOT____Vtogcov__seg7;
         CData/*1:0*/ top__DOT____Vtogcov__y;
-        CData/*1:0*/ top__DOT____Vtogcov__ec_y;
+        CData/*2:0*/ top__DOT____Vtogcov__ec_y;
         CData/*7:0*/ top__DOT____Vtogcov__y_dec;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;

@@ -7,7 +7,7 @@
 %000000	    input ps2_data,
 %000000		input [7:0] a,
 %000000		input [2:0] x,
-%000001		input [3:0] ec_x,
+%000001		input [7:0] ec_x,
  000019		input [2:0] seg_x,
 %000000		input en,
 %000000		input ec_en,
@@ -29,7 +29,7 @@
 	    output [7:0] seg6,
 	    output [7:0] seg7,
 		output reg [1:0] y,
-		output reg [1:0] ec_y,
+		output reg [2:0] ec_y,
 		output reg [7:0] y_dec
 	);
 	
@@ -58,7 +58,7 @@
 		.y(y_dec)
 	);
 	
-	encoder42 encoder(
+	encoder83 encoder(
 		.x(ec_x),
 		.EN(ec_en),
 		.y(ec_y)

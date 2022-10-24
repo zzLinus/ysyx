@@ -59,7 +59,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgBit(oldp+29,(vlSelf->ps2_data));
     bufp->chgCData(oldp+30,(vlSelf->a),8);
     bufp->chgCData(oldp+31,(vlSelf->x),3);
-    bufp->chgCData(oldp+32,(vlSelf->ec_x),4);
+    bufp->chgCData(oldp+32,(vlSelf->ec_x),8);
     bufp->chgCData(oldp+33,(vlSelf->seg_x),3);
     bufp->chgBit(oldp+34,(vlSelf->en));
     bufp->chgBit(oldp+35,(vlSelf->ec_en));
@@ -81,7 +81,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgCData(oldp+51,(vlSelf->seg6),8);
     bufp->chgCData(oldp+52,(vlSelf->seg7),8);
     bufp->chgCData(oldp+53,(vlSelf->y),2);
-    bufp->chgCData(oldp+54,(vlSelf->ec_y),2);
+    bufp->chgCData(oldp+54,(vlSelf->ec_y),3);
     bufp->chgCData(oldp+55,(vlSelf->y_dec),8);
     bufp->chgIData(oldp+56,(vlSelf->top__DOT__dec__DOT__i),32);
     bufp->chgIData(oldp+57,(vlSelf->top__DOT__encoder__DOT__i),32);
