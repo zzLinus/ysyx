@@ -8,22 +8,23 @@
 %000000		input [7:0] a,
 %000000		input [2:0] x,
 %000001		input [3:0] ec_x,
- 000019		input en,
+ 000019		input [2:0] seg_x,
+%000000		input en,
 %000000		input ec_en,
 %000000		input [1:0] s,
-%000000	    output [15:0] ledr,
-%000005	    output VGA_CLK,
-%000004	    output VGA_HSYNC,
-%000008	    output VGA_VSYNC,
-%000001	    output VGA_BLANK_N,
-%000006	    output [7:0] VGA_R,
+%000005	    output [15:0] ledr,
+%000004	    output VGA_CLK,
+%000008	    output VGA_HSYNC,
+%000001	    output VGA_VSYNC,
+%000006	    output VGA_BLANK_N,
+%000003	    output [7:0] VGA_R,
 %000003	    output [7:0] VGA_G,
-%000003	    output [7:0] VGA_B,
-%000004	    output [7:0] seg0,
-%000003	    output [7:0] seg1,
-%000002	    output [7:0] seg2,
-%000005	    output [7:0] seg3,
-%000000	    output [7:0] seg4,
+%000004	    output [7:0] VGA_B,
+%000003	    output [7:0] seg0,
+%000002	    output [7:0] seg1,
+%000005	    output [7:0] seg2,
+%000000	    output [7:0] seg3,
+	    output [7:0] seg4,
 	    output [7:0] seg5,
 	    output [7:0] seg6,
 	    output [7:0] seg7,
@@ -35,10 +36,10 @@
 	led led1(
 	    .clk(clk),
 	    .rst(rst),
-	    .sw(sw),
+%000000	    .sw(sw),
 %000000	    .ledr(ledr)
-%000000	);
-%000017	
+%000017	);
+	
 	mux41 mux(
 		.a(a),
 		.s(s),
@@ -82,16 +83,17 @@
 	    .vga_g(VGA_G),
 	    .vga_b(VGA_B)
 	);
-	
+%000000	
 %000000	ps2_keyboard my_keyboard(
-%000000	    .clk(clk),
-%000017	    .resetn(~rst),
+%000017	    .clk(clk),
+	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
 	    .ps2_data(ps2_data)
 	);
-	
-%000002	seg mu_seg(
-%000001	    .clk(clk),
+%000002	
+%000001	seg mu_seg(
+	    .clk(clk),
+		.seg_x(seg_x),
 	    .rst(rst),
 	    .o_seg0(seg0),
 	    .o_seg1(seg1),
