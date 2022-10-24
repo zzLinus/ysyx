@@ -60,7 +60,7 @@ encoder24 encoder(
 	.x(ec_x),
 	.EN(ec_en),
 	.y(ec_y)
-)
+);
 
 assign VGA_CLK = clk;
 
