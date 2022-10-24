@@ -6,7 +6,7 @@
 %000000	    input ps2_clk,
 %000000	    input ps2_data,
 %000000		input [7:0] a,
-%000000		input [1:0] x,
+%000000		input [2:0] x,
 %000001		input en,
  000019		input [1:0] s,
 %000000	    output [15:0] ledr,
@@ -26,7 +26,7 @@
 %000000	    output [7:0] seg6,
 	    output [7:0] seg7,
 		output reg [1:0] y,
-		output reg [3:0] y_dec
+		output reg [7:0] y_dec
 	);
 	
 	led led1(
@@ -42,7 +42,13 @@
 		.y(y)
 	);
 	
-	decoder24 dec(
+	// decoder24 dec(
+	// 	.x(x),
+	// 	.EN(en),
+	// 	.y(y_dec)
+	// );
+	
+	decoder38 dec(
 		.x(x),
 		.EN(en),
 		.y(y_dec)
@@ -77,21 +83,21 @@
 	
 	seg mu_seg(
 	    .clk(clk),
-	    .rst(rst),
-	    .o_seg0(seg0),
-	    .o_seg1(seg1),
+%000000	    .rst(rst),
+%000000	    .o_seg0(seg0),
+%000017	    .o_seg1(seg1),
 	    .o_seg2(seg2),
 	    .o_seg3(seg3),
 	    .o_seg4(seg4),
-%000000	    .o_seg5(seg5),
-%000000	    .o_seg6(seg6),
-%000017	    .o_seg7(seg7)
+	    .o_seg5(seg5),
+%000002	    .o_seg6(seg6),
+%000001	    .o_seg7(seg7)
 	);
 	
 	vmem my_vmem(
 	    .h_addr(h_addr),
-%000002	    .v_addr(v_addr[8:0]),
-%000001	    .vga_data(vga_data)
+	    .v_addr(v_addr[8:0]),
+	    .vga_data(vga_data)
 	);
 	
 	endmodule

@@ -44,9 +44,11 @@ int main(int argc, char** argv, char** env)
 
     while (1) {
         top->en = !top->en;
+        top->ec_en = !top->ec_en;
         contextp->timeInc(1);
         top->a = 0b11100100;
         top->x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
+        top->ec_x = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4 + (rand() & 1) * 8;
         top->s = rand() & 1 + (rand() & 1) * 2;
         top->eval();
         nvboard_update();

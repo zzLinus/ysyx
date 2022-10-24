@@ -43,23 +43,85 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
             }
         }
     }
-    if ((1U & (~ (IData)(vlSelf->en)))) {
-        ++(vlSymsp->__Vcoverage[243]);
-    }
     if (vlSelf->en) {
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[241]);
         ++(vlSymsp->__Vcoverage[242]);
-        while (1U) {
-            if ((0U == (IData)(vlSelf->x))) {
-                ++(vlSymsp->__Vcoverage[239]);
-                vlSelf->y_dec = (1U | (IData)(vlSelf->y_dec));
-            } else {
-                ++(vlSymsp->__Vcoverage[240]);
-                vlSelf->y_dec = (0xfeU & (IData)(vlSelf->y_dec));
-            }
-            ++(vlSymsp->__Vcoverage[241]);
+        if ((6U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
         }
+        if ((5U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((4U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((4U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((3U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((3U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((6U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((0U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((0U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((5U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((1U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((1U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((2U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((2U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        if ((7U == (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[239]);
+        }
+        if ((7U != (IData)(vlSelf->x))) {
+            ++(vlSymsp->__Vcoverage[240]);
+        }
+        vlSelf->top__DOT__dec__DOT__i = 8U;
+        vlSelf->y_dec = ((0xf8U & (IData)(vlSelf->y_dec)) 
+                         | (((2U == (IData)(vlSelf->x)) 
+                             << 2U) | (((1U == (IData)(vlSelf->x)) 
+                                        << 1U) | (0U 
+                                                  == (IData)(vlSelf->x)))));
+        vlSelf->y_dec = ((0xc7U & (IData)(vlSelf->y_dec)) 
+                         | (((5U == (IData)(vlSelf->x)) 
+                             << 5U) | (((4U == (IData)(vlSelf->x)) 
+                                        << 4U) | ((3U 
+                                                   == (IData)(vlSelf->x)) 
+                                                  << 3U))));
+        vlSelf->y_dec = ((0x3fU & (IData)(vlSelf->y_dec)) 
+                         | (((7U == (IData)(vlSelf->x)) 
+                             << 7U) | ((6U == (IData)(vlSelf->x)) 
+                                       << 6U)));
     } else {
         vlSelf->y_dec = 0U;
+    }
+    if ((1U & (~ (IData)(vlSelf->en)))) {
+        ++(vlSymsp->__Vcoverage[243]);
     }
     if (((IData)(vlSelf->clk) ^ (IData)(vlSelf->top__DOT____Vtogcov__clk))) {
         ++(vlSymsp->__Vcoverage[0]);
