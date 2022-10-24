@@ -140,12 +140,20 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         ++(vlSymsp->__Vcoverage[254]);
         ++(vlSymsp->__Vcoverage[254]);
         ++(vlSymsp->__Vcoverage[255]);
-        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 1U)))) {
+        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 2U)))) {
             ++(vlSymsp->__Vcoverage[253]);
         }
         if ((1U & (~ (IData)(vlSelf->ec_x)))) {
             ++(vlSymsp->__Vcoverage[253]);
         }
+        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 1U)))) {
+            ++(vlSymsp->__Vcoverage[253]);
+        }
+        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 3U)))) {
+            ++(vlSymsp->__Vcoverage[253]);
+        }
+        vlSelf->top__DOT__encoder__DOT__i = 4U;
+        vlSelf->ec_y = 0U;
         if ((1U & (IData)(vlSelf->ec_x))) {
             ++(vlSymsp->__Vcoverage[252]);
             vlSelf->ec_y = 0U;
@@ -158,17 +166,10 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
             ++(vlSymsp->__Vcoverage[252]);
             vlSelf->ec_y = 2U;
         }
-        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 2U)))) {
-            ++(vlSymsp->__Vcoverage[253]);
-        }
         if ((8U & (IData)(vlSelf->ec_x))) {
             ++(vlSymsp->__Vcoverage[252]);
             vlSelf->ec_y = 3U;
         }
-        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 3U)))) {
-            ++(vlSymsp->__Vcoverage[253]);
-        }
-        vlSelf->top__DOT__encoder__DOT__i = 4U;
     } else {
         vlSelf->ec_y = 0U;
     }
@@ -3834,11 +3835,11 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[28]), first, "vsrc/encoder.v", 26, 8, ".top.encoder", "v_toggle/encoder42", "EN", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[141]), first, "vsrc/encoder.v", 27, 19, ".top.encoder", "v_toggle/encoder42", "y[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[142]), first, "vsrc/encoder.v", 27, 19, ".top.encoder", "v_toggle/encoder42", "y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[252]), first, "vsrc/encoder.v", 37, 5, ".top.encoder", "v_branch/encoder42", "if", "37");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[253]), first, "vsrc/encoder.v", 37, 6, ".top.encoder", "v_branch/encoder42", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[254]), first, "vsrc/encoder.v", 36, 4, ".top.encoder", "v_line/encoder42", "block", "36");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[255]), first, "vsrc/encoder.v", 34, 2, ".top.encoder", "v_branch/encoder42", "if", "34-36");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[256]), first, "vsrc/encoder.v", 34, 3, ".top.encoder", "v_branch/encoder42", "else", "40");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[252]), first, "vsrc/encoder.v", 38, 5, ".top.encoder", "v_branch/encoder42", "if", "38");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[253]), first, "vsrc/encoder.v", 38, 6, ".top.encoder", "v_branch/encoder42", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[254]), first, "vsrc/encoder.v", 37, 4, ".top.encoder", "v_line/encoder42", "block", "37");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[255]), first, "vsrc/encoder.v", 34, 2, ".top.encoder", "v_branch/encoder42", "if", "34-37");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[256]), first, "vsrc/encoder.v", 34, 3, ".top.encoder", "v_branch/encoder42", "else", "41");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[257]), first, "vsrc/encoder.v", 32, 1, ".top.encoder", "v_line/encoder42", "block", "32-33");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/vga_ctrl.v", 2, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "pclk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/vga_ctrl.v", 3, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "reset", "");

@@ -129,12 +129,20 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
         ++(vlSymsp->__Vcoverage[254]);
         ++(vlSymsp->__Vcoverage[254]);
         ++(vlSymsp->__Vcoverage[255]);
-        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 1U)))) {
+        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 2U)))) {
             ++(vlSymsp->__Vcoverage[253]);
         }
         if ((1U & (~ (IData)(vlSelf->ec_x)))) {
             ++(vlSymsp->__Vcoverage[253]);
         }
+        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 1U)))) {
+            ++(vlSymsp->__Vcoverage[253]);
+        }
+        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 3U)))) {
+            ++(vlSymsp->__Vcoverage[253]);
+        }
+        vlSelf->top__DOT__encoder__DOT__i = 4U;
+        vlSelf->ec_y = 0U;
         if ((1U & (IData)(vlSelf->ec_x))) {
             ++(vlSymsp->__Vcoverage[252]);
             vlSelf->ec_y = 0U;
@@ -147,17 +155,10 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
             ++(vlSymsp->__Vcoverage[252]);
             vlSelf->ec_y = 2U;
         }
-        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 2U)))) {
-            ++(vlSymsp->__Vcoverage[253]);
-        }
         if ((8U & (IData)(vlSelf->ec_x))) {
             ++(vlSymsp->__Vcoverage[252]);
             vlSelf->ec_y = 3U;
         }
-        if ((1U & (~ ((IData)(vlSelf->ec_x) >> 3U)))) {
-            ++(vlSymsp->__Vcoverage[253]);
-        }
-        vlSelf->top__DOT__encoder__DOT__i = 4U;
     } else {
         vlSelf->ec_y = 0U;
     }
