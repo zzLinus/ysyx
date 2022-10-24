@@ -26,7 +26,7 @@ module encoder42(
 	input EN,
 	output reg [1:0] y
 );
-integer i;
+// integer i;
 
 always @(x or EN) 
 begin
