@@ -3781,8 +3781,7 @@ VL_ATTR_COLD void Vtop___024root___initial__TOP__0(Vtop___024root* vlSelf) {
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
     ++(vlSymsp->__Vcoverage[465]);
-    vlSelf->top__DOT__alu__DOT__tmp = (0xfU & ((IData)(1U) 
-                                               + (~ (IData)(vlSelf->alu_b))));
+    vlSelf->top__DOT__alu__DOT__tmp = (0xfU & (~ (IData)(vlSelf->alu_b)));
     ++(vlSymsp->__Vcoverage[346]);
     if ((1U & ((IData)(vlSelf->top__DOT__alu__DOT__tmp) 
                ^ (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)))) {
