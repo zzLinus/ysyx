@@ -4814,7 +4814,7 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[360]), first, "vsrc/alu.v", 101, 4, ".top.alu", "v_branch/alu_4bit", "if", "101-102");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[361]), first, "vsrc/alu.v", 101, 5, ".top.alu", "v_branch/alu_4bit", "else", "104");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[362]), first, "vsrc/alu.v", 100, 10, ".top.alu", "v_line/alu_4bit", "case", "100,105-107");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[363]), first, "vsrc/alu.v", 109, 3, ".top.alu", "v_line/alu_4bit", "case", "109-113");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[363]), first, "vsrc/alu.v", 109, 3, ".top.alu", "v_line/alu_4bit", "case", "109-114");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[364]), first, "vsrc/alu.v", 46, 1, ".top.alu", "v_line/alu_4bit", "block", "46-47");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/seg.v", 2, 9, ".top.mu_seg", "v_toggle/seg", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/seg.v", 3, 9, ".top.mu_seg", "v_toggle/seg", "rst", "");
