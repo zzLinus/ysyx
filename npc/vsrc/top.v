@@ -109,7 +109,7 @@ alu_4bit alu(
 	.alu_fnselec(alu_fnselec),
 	.alu_a(alu_a),
 	.alu_b(alu_b)
-)
+);
 
 seg mu_seg(
     .clk(clk),
