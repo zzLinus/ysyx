@@ -108,7 +108,7 @@ ps2_keyboard my_keyboard(
 alu_4bit alu(
 	.alu_fnselec(alu_fnselec),
 	.alu_a(alu_a),
-	.alu_b(alu_b)
+	.alu_b(alu_b),
 	.alu_res(alu_res)
 );
 
