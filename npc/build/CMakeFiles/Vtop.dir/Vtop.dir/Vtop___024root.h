@@ -106,8 +106,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
-        CData/*3:0*/ top__DOT__alu__DOT__tmp;
-        CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*0:0*/ __Vclklast__TOP__clk;
@@ -135,7 +133,7 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT__segs;
         VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT____Vtogcov__segs;
         VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
-        VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 2> __Vm_traceActivity;
     };
 
     // INTERNAL VARIABLES
