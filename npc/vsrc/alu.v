@@ -53,27 +53,45 @@ always @(*) begin
 		end
 		3'b010 : begin
 			alu_res = ~alu_a;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
 		end
 		3'b011 : begin
 			alu_res = alu_a & alu_b;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
 		end
 		3'b100 : begin
 			alu_res = alu_a | alu_b;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
 		end
 		3'b101 : begin
 			alu_res = alu_a ^ alu_b;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
 		end
 		3'b110 : begin
 			if(alu_a < alu_b)
 				alu_res = 4'b0001;
 			else
 				alu_res = 4'b0000;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
 		end
 		3'b111 : begin
 			if(alu_a == alu_b)
 				alu_res = 4'b0001;
 			else
 				alu_res = 4'b0000;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
 		end
 		default: begin
 			alu_res = 4'b0000;
