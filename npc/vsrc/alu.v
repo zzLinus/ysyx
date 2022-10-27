@@ -100,7 +100,6 @@ always @(*) begin
 			assign alu_zero = 1'b0;
 		end
 		default: begin
-			assign tmp = 4'b0000;
 			assign alu_res = 4'b0000;
 			assign alu_carry = 1'b0;
 			assign alu_overflow = 1'b0;
