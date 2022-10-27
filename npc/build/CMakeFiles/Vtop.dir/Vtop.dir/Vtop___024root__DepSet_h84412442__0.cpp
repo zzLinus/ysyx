@@ -263,13 +263,11 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
         }
     } else if ((1U & (IData)(vlSelf->alu_fnselec))) {
         vlSelf->alu_carry = 0U;
-        vlSelf->alu_carry = (1U & (((IData)(1U) + ((IData)(vlSelf->alu_a) 
-                                                   + 
-                                                   (~ (IData)(vlSelf->alu_b)))) 
+        vlSelf->alu_carry = (1U & (((IData)(vlSelf->alu_a) 
+                                    + (~ (IData)(vlSelf->alu_b))) 
                                    >> 4U));
-        vlSelf->alu_res = (0xfU & ((IData)(1U) + ((IData)(vlSelf->alu_a) 
-                                                  + 
-                                                  (~ (IData)(vlSelf->alu_b)))));
+        vlSelf->alu_res = (0xfU & ((IData)(vlSelf->alu_a) 
+                                   + (~ (IData)(vlSelf->alu_b))));
         vlSelf->alu_overflow = (((1U & ((IData)(vlSelf->alu_a) 
                                         >> 3U)) == 
                                  (1U & (~ ((IData)(vlSelf->alu_b) 
