@@ -48,7 +48,6 @@ initial begin
 end
 
 always @(*) begin
-	tmp = alu_b;
 	case(alu_fnselec)
 		3'b000 : begin
 			assign alu_carry = 1'b0;
