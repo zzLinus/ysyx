@@ -65,15 +65,15 @@ always @(*) begin
 		end
 		3'b110 : begin
 			if(alu_a < alu_b)
-				alu_res = 3'b001;
+				alu_res = 4'b0001;
 			else
-				alu_res = 3'b000;
+				alu_res = 4'b0000;
 		end
 		3'b111 : begin
 			if(alu_a == alu_b)
-				alu_res = 3'b001;
+				alu_res = 4'b0001;
 			else
-				alu_res = 3'b000;
+				alu_res = 4'b0000;
 		end
 	endcase
 end
