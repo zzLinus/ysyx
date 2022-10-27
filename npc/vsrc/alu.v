@@ -41,7 +41,8 @@ module alu_4bit(
 	output reg alu_carry
 );
 
-reg [3:0] tmp = ~alu_b + 1;
+reg [3:0] tmp;
+assign tmp = (~alu_b) + 1;
 
 always @(*) begin
 	tmp = alu_b;
