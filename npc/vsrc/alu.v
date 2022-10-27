@@ -45,7 +45,7 @@ reg [3:0] tmp;
 
 
 always @(*) begin
-	assign tmp = (alu_b^4'b1111);
+	assign tmp = (alu_b^4'b1111) + 4'b0001;
 	case(alu_fnselec)
 		3'b000 : begin
 			assign alu_carry = 1'b0;
