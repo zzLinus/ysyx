@@ -16,10 +16,9 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval\n"); );
     // Body
     Vtop___024root___combo__TOP__0(vlSelf);
-    vlSelf->__Vm_traceActivity[1U] = 1U;
     if (((IData)(vlSelf->clk) & (~ (IData)(vlSelf->__Vclklast__TOP__clk)))) {
         Vtop___024root___sequent__TOP__0(vlSelf);
-        vlSelf->__Vm_traceActivity[2U] = 1U;
+        vlSelf->__Vm_traceActivity[1U] = 1U;
     }
     Vtop___024root___combo__TOP__1(vlSelf);
     // Final
@@ -44,11 +43,11 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("x");}
     if (VL_UNLIKELY((vlSelf->seg_x & 0xf8U))) {
         Verilated::overWidthError("seg_x");}
-    if (VL_UNLIKELY((vlSelf->alu_c & 0xfeU))) {
-        Verilated::overWidthError("alu_c");}
-    if (VL_UNLIKELY((vlSelf->alu_a & 0xfeU))) {
+    if (VL_UNLIKELY((vlSelf->alu_fnselec & 0xf8U))) {
+        Verilated::overWidthError("alu_fnselec");}
+    if (VL_UNLIKELY((vlSelf->alu_a & 0xf0U))) {
         Verilated::overWidthError("alu_a");}
-    if (VL_UNLIKELY((vlSelf->alu_b & 0xfeU))) {
+    if (VL_UNLIKELY((vlSelf->alu_b & 0xf0U))) {
         Verilated::overWidthError("alu_b");}
     if (VL_UNLIKELY((vlSelf->en & 0xfeU))) {
         Verilated::overWidthError("en");}
