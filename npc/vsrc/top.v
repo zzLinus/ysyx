@@ -95,7 +95,7 @@ ps2_keyboard my_keyboard(
     .ps2_data(ps2_data)
 );
 
-adder adder(
+adder adder_1bit(
 	.c(alu_c),
 	.a(alu_a),
 	.b(alu_b),

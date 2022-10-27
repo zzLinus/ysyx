@@ -1,4 +1,4 @@
-module adder (
+module adder_1bit (
 	input c,
 	input a,
 	input b,
