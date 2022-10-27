@@ -46,66 +46,66 @@ reg [3:0] tmp = 4'b0000;
 always @(*) begin
 	case(alu_fnselec)
 		3'b000 : begin
-			alu_carry = 1'b0;
-			{alu_carry,alu_res} = alu_a + alu_b;
-			alu_overflow = (alu_a[3] == alu_b[3]) && (alu_res[3] != alu_a[3]);
-			alu_zero = ~(|alu_res);
+			assign alu_carry = 1'b0;
+			assign {alu_carry,alu_res} = alu_a + alu_b;
+			assign alu_overflow = (alu_a[3] == alu_b[3]) && (alu_res[3] != alu_a[3]);
+			assign alu_zero = ~(|alu_res);
 		end
 		3'b001 : begin
 			assign tmp = (~alu_b + 1);
-			alu_carry = 1'b0;
-			{alu_carry,alu_res} = alu_a + tmp;
-			alu_overflow = (alu_a[3] == tmp[3]) && (alu_res[3] != alu_a[3]);
-			alu_zero = ~(|alu_res);
+			assign alu_carry = 1'b0;
+			assign {alu_carry,alu_res} = alu_a + tmp;
+			assign alu_overflow = (alu_a[3] == tmp[3]) && (alu_res[3] != alu_a[3]);
+			assign alu_zero = ~(|alu_res);
 		end
 		3'b010 : begin
-			alu_res = ~alu_a;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+			assign alu_res = ~alu_a;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 		3'b011 : begin
-			alu_res = alu_a & alu_b;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+			assign alu_res = alu_a & alu_b;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 		3'b100 : begin
-			alu_res = alu_a | alu_b;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+			assign alu_res = alu_a | alu_b;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 		3'b101 : begin
-			alu_res = alu_a ^ alu_b;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+			assign alu_res = alu_a ^ alu_b;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 		3'b110 : begin
 			if(alu_a < alu_b)
-				alu_res = 4'b0001;
+				assign alu_res = 4'b0001;
 			else
-				alu_res = 4'b0000;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+				assign alu_res = 4'b0000;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 		3'b111 : begin
 			if(alu_a == alu_b)
-				alu_res = 4'b0001;
+				assign alu_res = 4'b0001;
 			else
-				alu_res = 4'b0000;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+				assign alu_res = 4'b0000;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 		default: begin
-			tmp = 4'b0000;
-			alu_res = 4'b0000;
-			alu_carry = 1'b0;
-			alu_overflow = 1'b0;
-			alu_zero = 1'b0;
+			assign tmp = 4'b0000;
+			assign alu_res = 4'b0000;
+			assign alu_carry = 1'b0;
+			assign alu_overflow = 1'b0;
+			assign alu_zero = 1'b0;
 		end
 	endcase
 end
