@@ -99,9 +99,8 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBit(c+64,"alu_zero", false,-1);
     tracep->declBit(c+65,"alu_overflow", false,-1);
     tracep->declBit(c+66,"alu_carry", false,-1);
-    tracep->pushNamePrefix("unnamedblk1 ");
     tracep->declBus(c+9,"tmp", false,-1, 3,0);
-    tracep->popNamePrefix(2);
+    tracep->popNamePrefix(1);
     tracep->pushNamePrefix("dec ");
     tracep->declBus(c+35,"x", false,-1, 2,0);
     tracep->declBit(c+41,"EN", false,-1);
@@ -237,7 +236,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+6,(vlSelf->top__DOT__mu_seg__DOT__segs[5]),8);
     bufp->fullCData(oldp+7,(vlSelf->top__DOT__mu_seg__DOT__segs[6]),8);
     bufp->fullCData(oldp+8,(vlSelf->top__DOT__mu_seg__DOT__segs[7]),8);
-    bufp->fullCData(oldp+9,(vlSelf->top__DOT__alu__DOT__unnamedblk1__DOT__tmp),4);
+    bufp->fullCData(oldp+9,(vlSelf->top__DOT__alu__DOT__tmp),4);
     bufp->fullIData(oldp+10,(vlSelf->top__DOT__dec__DOT__i),32);
     bufp->fullIData(oldp+11,(vlSelf->top__DOT__encoder__DOT__i),32);
     bufp->fullSData(oldp+12,(vlSelf->top__DOT__h_addr),10);
