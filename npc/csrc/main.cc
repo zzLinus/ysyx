@@ -47,7 +47,7 @@ int main(int argc, char** argv, char** env)
         top->ec_en = !top->ec_en;
         contextp->timeInc(1);
         top->a = 0b11100100;
-        top->alu_fnselec = 0b010;
+        top->alu_fnselec = 0b110;
         top->alu_a = 0b001;
         top->alu_b = 0b001;
         top->seg_x = top->ec_x;
