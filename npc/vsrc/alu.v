@@ -75,6 +75,12 @@ always @(*) begin
 			else
 				alu_res = 4'b0000;
 		end
+		default: begin
+			alu_res = 4'b0000;
+			alu_carry = 1'b0;
+			alu_overflow = 1'b0;
+			alu_zero = 1'b0;
+		end
 	endcase
 end
 
