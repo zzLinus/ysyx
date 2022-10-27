@@ -46,7 +46,7 @@ module alu_4bit(
 always @(*) begin
 	case(alu_fnselec)
 		3'b000 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			alu_res = alu_a + alu_b;
 		end
 		3'b001 : begin
 		end
