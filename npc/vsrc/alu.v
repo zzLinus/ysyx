@@ -48,7 +48,7 @@ always @(alu_fnselec or alu_a or alu_b) begin
 		3'b000 : begin
 		end
 		3'b001 : begin
-		end;
+		end
 		3'b010 : ;
 		3'b011 : ;
 		3'b100 : ;
