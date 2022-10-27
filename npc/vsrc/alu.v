@@ -41,7 +41,6 @@ module alu_4bit(
 	output reg alu_carry
 );
 
-reg [3:0] tmp;
 
 always @(*) begin
 	case(alu_fnselec)
@@ -52,6 +51,7 @@ always @(*) begin
 			assign alu_zero = ~(|alu_res);
 		end
 		3'b001 : begin
+			reg [3:0] tmp;
 			assign alu_carry = 1'b0;
 			assign tmp = (~alu_b + 1);
 			{ alu_carry,alu_res } = alu_a + tmp;
