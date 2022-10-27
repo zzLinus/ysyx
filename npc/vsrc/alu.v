@@ -52,7 +52,7 @@ always @(*) begin
 				alu_zero = 1'b1;
 			else
 				alu_zero = 1'b0;
-			alu_overflow = (alu_a[3] == (~alu_b + 1)) && (alu_res[3] != alu_a[3]);
+			alu_overflow = (alu_a[3] == alu_b[3]) && (alu_res[3] != alu_a[3]);
 		end
 		3'b001 : begin
 			alu_carry = 1'b0;
@@ -61,7 +61,7 @@ always @(*) begin
 				alu_zero = 1'b1;
 			else
 				alu_zero = 1'b0;
-			alu_overflow = (alu_a[3] == (~alu_b + 1)) && (alu_res[3] != alu_a[3]);
+			alu_overflow = (alu_a[3] == (~alu_b + 1)[3]) && (alu_res[3] != alu_a[3]);
 		end
 		3'b010 : begin
 			alu_res = ~alu_a;
