@@ -273,27 +273,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
             vlSelf->alu_overflow = 0U;
             vlSelf->alu_zero = 0U;
         }
-    } else if ((1U & (IData)(vlSelf->alu_fnselec))) {
-        vlSelf->alu_carry = 0U;
-        vlSelf->alu_carry = (1U & (((IData)(1U) + ((IData)(vlSelf->alu_a) 
-                                                   + 
-                                                   (1U 
-                                                    ^ (IData)(vlSelf->alu_b)))) 
-                                   >> 4U));
-        vlSelf->alu_res = (0xfU & ((IData)(1U) + ((IData)(vlSelf->alu_a) 
-                                                  + 
-                                                  (1U 
-                                                   ^ (IData)(vlSelf->alu_b)))));
-        vlSelf->alu_overflow = (((1U & ((IData)(vlSelf->alu_a) 
-                                        >> 3U)) == 
-                                 (1U & (~ ((IData)(vlSelf->alu_b) 
-                                           >> 3U)))) 
-                                & ((1U & ((IData)(vlSelf->alu_res) 
-                                          >> 3U)) != 
-                                   (1U & ((IData)(vlSelf->alu_a) 
-                                          >> 3U))));
-        vlSelf->alu_zero = (1U & (~ (IData)((0U != (IData)(vlSelf->alu_res)))));
-    } else {
+    } else if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
         vlSelf->alu_carry = 0U;
         vlSelf->alu_carry = (1U & (((IData)(vlSelf->alu_a) 
                                     + (IData)(vlSelf->alu_b)) 
@@ -311,14 +291,6 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->alu_zero = (1U & (~ (IData)((0U != (IData)(vlSelf->alu_res)))));
     }
     if ((1U & (~ ((IData)(vlSelf->alu_fnselec) >> 2U)))) {
-        if ((2U & (IData)(vlSelf->alu_fnselec))) {
-            if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[344]);
-            }
-            if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[345]);
-            }
-        }
         if ((1U & (~ ((IData)(vlSelf->alu_fnselec) 
                       >> 1U)))) {
             if ((1U & (IData)(vlSelf->alu_fnselec))) {
@@ -326,6 +298,14 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
             }
             if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
                 ++(vlSymsp->__Vcoverage[342]);
+            }
+        }
+        if ((2U & (IData)(vlSelf->alu_fnselec))) {
+            if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
+                ++(vlSymsp->__Vcoverage[344]);
+            }
+            if ((1U & (IData)(vlSelf->alu_fnselec))) {
+                ++(vlSymsp->__Vcoverage[345]);
             }
         }
     }
@@ -4749,7 +4729,7 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[175]), first, "vsrc/alu.v", 40, 13, ".top.alu", "v_toggle/alu_4bit", "alu_overflow", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[176]), first, "vsrc/alu.v", 41, 13, ".top.alu", "v_toggle/alu_4bit", "alu_carry", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[342]), first, "vsrc/alu.v", 47, 10, ".top.alu", "v_line/alu_4bit", "case", "47-51");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[343]), first, "vsrc/alu.v", 53, 10, ".top.alu", "v_line/alu_4bit", "case", "53-57");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[343]), first, "vsrc/alu.v", 53, 10, ".top.alu", "v_line/alu_4bit", "case", "53");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[344]), first, "vsrc/alu.v", 59, 10, ".top.alu", "v_line/alu_4bit", "case", "59-63");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[345]), first, "vsrc/alu.v", 65, 10, ".top.alu", "v_line/alu_4bit", "case", "65-69");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[346]), first, "vsrc/alu.v", 71, 10, ".top.alu", "v_line/alu_4bit", "case", "71-75");
