@@ -49,7 +49,7 @@ int main(int argc, char** argv, char** env)
         top->a = 0b11100100;
         top->alu_fnselec = 0b001;
         top->alu_a = 0b0111;
-        top->alu_b = 0b0001;
+        top->alu_b = 0b0101;
         top->seg_x = top->ec_x;
         top->s = rand() & 1 + (rand() & 1) * 2;
         top->eval();
