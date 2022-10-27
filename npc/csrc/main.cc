@@ -47,7 +47,7 @@ int main(int argc, char** argv, char** env)
         top->ec_en = !top->ec_en;
         contextp->timeInc(1);
         top->a = 0b11100100;
-        top->alu_fnselec = 0b010;
+        top->alu_fnselec = 0b011;
         top->alu_a = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->alu_b = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->seg_x = top->ec_x;
