@@ -44,7 +44,7 @@ module alu_4bit(
 reg [3:0] tmp;
 
 initial begin
-	assign tmp = (alu_b^{4{1}})+4'b0001;
+	assign tmp = (alu_b^4'b1111)+4'b0001;
 end
 
 always @(*) begin
