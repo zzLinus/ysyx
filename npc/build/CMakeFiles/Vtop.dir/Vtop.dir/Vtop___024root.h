@@ -106,11 +106,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
-        CData/*3:0*/ top__DOT__alu__DOT__alu_res;
         CData/*0:0*/ top__DOT__alu__DOT__alu_zero;
         CData/*0:0*/ top__DOT__alu__DOT__alu_overflow;
         CData/*0:0*/ top__DOT__alu__DOT__alu_carry;
-        CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__alu_res;
         CData/*0:0*/ top__DOT__alu__DOT____Vtogcov__alu_zero;
         CData/*0:0*/ top__DOT__alu__DOT____Vtogcov__alu_overflow;
         CData/*0:0*/ top__DOT__alu__DOT____Vtogcov__alu_carry;
