@@ -42,7 +42,10 @@ module alu_4bit(
 );
 
 reg [3:0] tmp;
-assign tmp = ~alu_b;
+
+always @(alu_b)
+	assign tmp = ~alu_b;
+end
 
 always @(*) begin
 	tmp = alu_b;
@@ -73,13 +76,13 @@ always @(*) begin
 		end
 		3'b100 : begin
 			assign alu_res = alu_a | alu_b;
-			assign alu_carry = 1'b0;
+			assign alu_carry = 1'b0;(
 			assign alu_overflow = 1'b0;
 			assign alu_zero = 1'b0;
 		end
 		3'b101 : begin
 			assign alu_res = alu_a ^ alu_b;
-			assign alu_carry = 1'b0;
+			assign alu_carry = 1'b0;(
 			assign alu_overflow = 1'b0;
 			assign alu_zero = 1'b0;
 		end
