@@ -34,7 +34,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgCData(oldp+7,(vlSelf->top__DOT__mu_seg__DOT__segs[7]),8);
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[1U])) {
-        bufp->chgCData(oldp+8,(vlSelf->top__DOT__alu__DOT__tmp),4);
+        bufp->chgCData(oldp+8,(vlSelf->top__DOT__alu__DOT__unnamedblk1__DOT__tmp),4);
         bufp->chgIData(oldp+9,(vlSelf->top__DOT__dec__DOT__i),32);
         bufp->chgIData(oldp+10,(vlSelf->top__DOT__encoder__DOT__i),32);
     }
