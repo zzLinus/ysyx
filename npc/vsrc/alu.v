@@ -51,7 +51,7 @@ always @(*) begin
 			assign alu_zero = ~(|alu_res);
 		end
 		3'b001 : begin
-			reg [3:0] tmp;
+			reg [3:0] tmp = alu_b;
 			assign alu_carry = 1'b0;
 			{ alu_carry,alu_res } = alu_a + tmp;
 			assign alu_overflow = (alu_a[3] == alu_b[3]) && (alu_res[3] != alu_a[3]);
