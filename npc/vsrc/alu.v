@@ -46,7 +46,7 @@ module alu_4bit(
 always @(alu_fnselec or alu_a or alu_b) begin
 	case(alu_fnselec)
 		3'b000 : begin
-		end;
+		end
 		3'b001 : begin
 		end;
 		3'b010 : ;
