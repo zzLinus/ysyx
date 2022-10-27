@@ -9,9 +9,9 @@
 %000000		input [2:0] x,
 %000001		input [7:0] ec_x,
  000019		input [2:0] seg_x,
-%000000		input alu_c,
-%000000		input alu_a,
-%000000		input alu_b,
+%000000		input [2:0] alu_fnselec,
+%000000		input [3:0] alu_a,
+%000000		input [3:0] alu_b,
 %000005		input en,
 %000004		input ec_en,
 %000008		input [1:0] s,
@@ -34,11 +34,13 @@
 		output reg [1:0] y,
 		output reg [2:0] ec_y,
 		output reg [7:0] y_dec,
-		output alu_s,
-		output alu_c_out
-%000000	);
-%000000	
-%000017	led led1(
+		output [3:0] alu_res,
+		output alu_zero,
+%000000		output alu_overflow,
+%000000		output alu_carry
+%000017	);
+	
+	led led1(
 	    .clk(clk),
 	    .rst(rst),
 	    .sw(sw),
@@ -81,27 +83,37 @@
 	    .vga_data(vga_data),
 	    .h_addr(h_addr),
 	    .v_addr(v_addr),
-	    .hsync(VGA_HSYNC),
-	    .vsync(VGA_VSYNC),
-%000000	    .valid(VGA_BLANK_N),
-%000000	    .vga_r(VGA_R),
-%000017	    .vga_g(VGA_G),
+%000000	    .hsync(VGA_HSYNC),
+%000000	    .vsync(VGA_VSYNC),
+%000017	    .valid(VGA_BLANK_N),
+	    .vga_r(VGA_R),
+	    .vga_g(VGA_G),
 	    .vga_b(VGA_B)
 	);
-	
-	ps2_keyboard my_keyboard(
-%000002	    .clk(clk),
-%000001	    .resetn(~rst),
+%000002	
+%000001	ps2_keyboard my_keyboard(
+	    .clk(clk),
+	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
 	    .ps2_data(ps2_data)
 	);
 	
-	adder_1bit adder(
-		.c(alu_c),
-		.a(alu_a),
-		.b(alu_b),
-		.s(alu_s),
-		.c_out(alu_c_out)
+	// adder_1bit adder(
+	// 	.c(alu_c),
+	// 	.a(alu_a),
+	// 	.b(alu_b),
+	// 	.s(alu_s),
+	// 	.c_out(alu_c_out)
+	// );
+	
+	alu_4bit alu(
+		.alu_fnselec(alu_fnselec),
+		.alu_a(alu_a),
+		.alu_b(alu_b),
+		.alu_res(alu_res),
+		.alu_zero(alu_zero),
+		.alu_overflow(alu_overflow),
+		.alu_carry(alu_carry)
 	);
 	
 	seg mu_seg(
