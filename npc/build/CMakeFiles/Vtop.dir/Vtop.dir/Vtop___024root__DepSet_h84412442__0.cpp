@@ -505,7 +505,8 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
                                              | (0x80U 
                                                 & (IData)(vlSelf->ec_x)));
     }
-    vlSelf->top__DOT__alu__DOT__tmp = (0xfU & (~ (IData)(vlSelf->alu_b)));
+    vlSelf->top__DOT__alu__DOT__tmp = (0xfU & ((IData)(1U) 
+                                               + (~ (IData)(vlSelf->alu_b))));
     if ((4U & (IData)(vlSelf->alu_fnselec))) {
         if ((1U & (~ ((IData)(vlSelf->alu_fnselec) 
                       >> 1U)))) {
