@@ -49,25 +49,31 @@ always @(*) begin
 			{alu_carry,alu_res} = alu_a + alu_b;
 		end
 		3'b001 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			{alu_carry,alu_res} = alu_a - alu_b;
 		end
 		3'b010 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			alu_res = ~alu_a;
 		end
 		3'b011 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			alu_res = alu_a & alu_b;
 		end
 		3'b100 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			alu_res = alu_a | alu_b;
 		end
 		3'b101 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			alu_res = alu_a ^ alu_b;
 		end
 		3'b110 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			if(alu_a < alu_b)
+				alu_res = 3'b001;
+			else
+				alu_res = 3'b000;
 		end
 		3'b111 : begin
-			{alu_carry,alu_res} = alu_a + alu_b;
+			if(alu_a == alu_b)
+				alu_res = 3'b001;
+			else
+				alu_res = 3'b000;
 		end
 	endcase
 end
