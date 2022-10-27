@@ -42,7 +42,7 @@ module alu_4bit(
 );
 
 reg [3:0] tmp;
-assign tmp = (~alu_b) + 1;
+assign tmp = ~alu_b;
 
 always @(*) begin
 	tmp = alu_b;
