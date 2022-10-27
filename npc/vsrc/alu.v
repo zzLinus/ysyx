@@ -41,7 +41,7 @@ module alu_4bit(
 	output reg alu_carry
 );
 
-wire [3:0] tmp;
+tmp [3:0] tmp = 3'b0000;
 
 always @(*) begin
 	case(alu_fnselec)
