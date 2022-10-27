@@ -148,12 +148,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync = VL_RAND_RESET_I(3);
     vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__sampling = VL_RAND_RESET_I(1);
     vlSelf->top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0 = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__alu__DOT__alu_zero = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__alu__DOT__alu_overflow = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__alu__DOT__alu_carry = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__alu__DOT____Vtogcov__alu_zero = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__alu__DOT____Vtogcov__alu_overflow = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__alu__DOT____Vtogcov__alu_carry = VL_RAND_RESET_I(1);
     for (int __Vi0=0; __Vi0<8; ++__Vi0) {
         vlSelf->top__DOT__mu_seg__DOT__segs[__Vi0] = VL_RAND_RESET_I(8);
     }
