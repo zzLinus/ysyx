@@ -39,7 +39,8 @@ module top (
 	output alu_overflow,
 	output alu_carry,
 	output reg [2:0] inc_counter_out,
-	output reg [2:0] dec_counter_out
+	output reg [2:0] dec_counter_out,
+	output timer_out
 );
 
 led led1(
@@ -140,6 +141,11 @@ vmem my_vmem(
     .h_addr(h_addr),
     .v_addr(v_addr[8:0]),
     .vga_data(vga_data)
+);
+
+timer timer_1s(
+	.clk(clk),
+	.timer_out(timer_out)
 );
 
 endmodule
