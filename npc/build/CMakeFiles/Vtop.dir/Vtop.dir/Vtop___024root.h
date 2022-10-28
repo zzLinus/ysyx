@@ -98,8 +98,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
-        CData/*3:0*/ top__DOT____Vtogcov__seg_x;
-        CData/*3:0*/ top__DOT____Vtogcov__seg_y;
+        CData/*7:0*/ top__DOT____Vtogcov__seg_x;
+        CData/*7:0*/ top__DOT____Vtogcov__seg_y;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;

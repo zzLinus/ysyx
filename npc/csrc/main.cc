@@ -51,7 +51,7 @@ int main(int argc, char** argv, char** env)
         top->alu_fnselec = 0b111;
         top->alu_a = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->alu_b = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
-        top->seg_x = top->ec_x;
+        // top->seg_x = top->ec_x;
         top->s = rand() & 1 + (rand() & 1) * 2;
         top->eval();
         nvboard_update();
