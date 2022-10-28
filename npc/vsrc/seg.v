@@ -13,7 +13,7 @@ module seg(
   output [7:0] o_seg7
 );
 
-wire [7:0] segs [9:0];
+wire [7:0] segs [7:0];
 assign segs[0] = 8'b11111101;
 assign segs[1] = 8'b01100000;
 assign segs[2] = 8'b11011010;
