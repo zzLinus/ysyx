@@ -134,6 +134,7 @@ end
 always @(inc_counter_out) begin
 	if(inc_counter_out == 99)
 		inc_counter_out <= 0;
+	else
 end
 
 seg mu_seg(
