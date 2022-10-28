@@ -25,7 +25,6 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(a,7,0);
         VL_IN8(x,2,0);
         VL_IN8(ec_x,7,0);
-        VL_IN8(seg_x,2,0);
         VL_IN8(alu_fnselec,2,0);
         VL_IN8(alu_a,3,0);
         VL_IN8(alu_b,3,0);
@@ -57,6 +56,7 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(alu_carry,0,0);
         VL_OUT8(inc_counter_out,2,0);
         VL_OUT8(dec_counter_out,2,0);
+        CData/*7:0*/ top__DOT____Vcellout__inc_counter__out_q;
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
         CData/*7:0*/ top__DOT____Vtogcov__sw;
@@ -65,7 +65,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__a;
         CData/*2:0*/ top__DOT____Vtogcov__x;
         CData/*7:0*/ top__DOT____Vtogcov__ec_x;
-        CData/*2:0*/ top__DOT____Vtogcov__seg_x;
         CData/*2:0*/ top__DOT____Vtogcov__alu_fnselec;
         CData/*3:0*/ top__DOT____Vtogcov__alu_a;
         CData/*3:0*/ top__DOT____Vtogcov__alu_b;
@@ -80,9 +79,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__VGA_R;
         CData/*7:0*/ top__DOT____Vtogcov__VGA_G;
         CData/*7:0*/ top__DOT____Vtogcov__VGA_B;
+        CData/*7:0*/ top__DOT____Vtogcov__seg0;
     };
     struct {
-        CData/*7:0*/ top__DOT____Vtogcov__seg0;
         CData/*7:0*/ top__DOT____Vtogcov__seg1;
         CData/*7:0*/ top__DOT____Vtogcov__seg2;
         CData/*7:0*/ top__DOT____Vtogcov__seg3;
@@ -100,8 +99,11 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
+        CData/*3:0*/ top__DOT____Vtogcov__seg_x;
+        CData/*3:0*/ top__DOT____Vtogcov__seg_y;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;
+        CData/*7:0*/ top__DOT__inc_counter__DOT____Vtogcov__out_q;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__v_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid;
@@ -144,10 +146,10 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ top__DOT__mu_seg__DOT__x;
         IData/*31:0*/ top__DOT__mu_seg__DOT____Vtogcov__count;
         IData/*31:0*/ top__DOT__timer_1s__DOT__count_clk;
-        IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;
-        VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT__segs;
     };
     struct {
+        IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;
+        VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT__segs;
         VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT____Vtogcov__segs;
         VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
         VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;

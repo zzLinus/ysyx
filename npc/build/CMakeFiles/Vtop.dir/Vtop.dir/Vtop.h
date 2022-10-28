@@ -35,7 +35,6 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&a,7,0);
     VL_IN8(&x,2,0);
     VL_IN8(&ec_x,7,0);
-    VL_IN8(&seg_x,2,0);
     VL_IN8(&alu_fnselec,2,0);
     VL_IN8(&alu_a,3,0);
     VL_IN8(&alu_b,3,0);
