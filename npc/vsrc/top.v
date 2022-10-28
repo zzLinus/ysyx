@@ -7,7 +7,6 @@ module top (
 	input [7:0] a,
 	input [2:0] x,
 	input [7:0] ec_x,
-	input [2:0] seg_x,
 	input [2:0] alu_fnselec,
 	input [3:0] alu_a,
 	input [3:0] alu_b,
