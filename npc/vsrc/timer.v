@@ -13,6 +13,8 @@ always @(posedge clk) begin
 	end
 	else
 		count_clk <= count_clk + 1;
+
+    $dumpvars();
 end
 
 endmodule
