@@ -43,11 +43,11 @@ end
 
 assign o_seg0 = ~segs[seg_x];
 assign o_seg1 = ~segs[seg_y];
-assign o_seg2 = ~segs[3'd7];
-assign o_seg3 = ~segs[3'd6];
-assign o_seg4 = ~segs[3'd4];
-assign o_seg5 = ~segs[3'd5];
-assign o_seg6 = ~segs[3'd3];
-assign o_seg7 = ~segs[3'd2];
+assign o_seg2 = ~segs[4'd7];
+assign o_seg3 = ~segs[4'd6];
+assign o_seg4 = ~segs[4'd4];
+assign o_seg5 = ~segs[4'd5];
+assign o_seg6 = ~segs[4'd3];
+assign o_seg7 = ~segs[4'd2];
 
 endmodule
