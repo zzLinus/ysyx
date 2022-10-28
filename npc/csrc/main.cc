@@ -56,7 +56,7 @@ int main(int argc, char** argv, char** env)
         top->eval();
         nvboard_update();
         single_cycle();
-        tfp->dump(contextp->time());
+        // tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");
