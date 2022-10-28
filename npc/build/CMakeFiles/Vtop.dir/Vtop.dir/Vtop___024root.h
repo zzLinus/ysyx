@@ -145,10 +145,10 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ top__DOT__mu_seg__DOT____Vtogcov__count;
         IData/*31:0*/ top__DOT__timer_1s__DOT__count_clk;
         IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;
-        VlUnpacked<SData/*9:0*/, 8> top__DOT__mu_seg__DOT__segs;
+        VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT__segs;
     };
     struct {
-        VlUnpacked<SData/*9:0*/, 8> top__DOT__mu_seg__DOT____Vtogcov__segs;
+        VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT____Vtogcov__segs;
         VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
         VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
     };
