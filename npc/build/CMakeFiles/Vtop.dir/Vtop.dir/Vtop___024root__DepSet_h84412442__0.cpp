@@ -799,6 +799,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
     ++(vlSymsp->__Vcoverage[345]);
     ++(vlSymsp->__Vcoverage[355]);
     ++(vlSymsp->__Vcoverage[477]);
+    vlSymsp->_traceDumpOpen();
     ++(vlSymsp->__Vcoverage[514]);
     if (vlSelf->counter_EN) {
         ++(vlSymsp->__Vcoverage[292]);
