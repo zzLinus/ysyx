@@ -21,6 +21,8 @@ assign segs[4] = 8'b01100110;
 assign segs[5] = 8'b10110110;
 assign segs[6] = 8'b10111110;
 assign segs[7] = 8'b11100000;
+assign segs[8] = 8'b11111111;
+assign segs[9] = 8'b11100110;
 
 parameter CLK_NUM = 5000000;
 
@@ -38,7 +40,7 @@ always @(posedge clk) begin
 	x = integer'(seg_x);
 end
 
-assign o_seg0 = ~segs[x[2:0]];
+assign o_seg0 = ~segs[seg_x];
 assign o_seg1 = ~segs[3'd1];
 assign o_seg2 = ~segs[3'd7];
 assign o_seg3 = ~segs[3'd6];

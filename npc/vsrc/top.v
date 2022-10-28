@@ -81,7 +81,7 @@ inc_counter inc_counter(
 );
 
 dec_counter dec_counter(
-	.clk(clk),
+	.clk(timer_out),
 	.en(counter_EN),
 	.out_q(dec_counter_out)
 );
@@ -125,7 +125,7 @@ alu_4bit alu(
 
 seg mu_seg(
     .clk(clk),
-	.seg_x(seg_x),
+	.seg_x(inc_counter_out),
     .rst(rst),
     .o_seg0(seg0),
     .o_seg1(seg1),
