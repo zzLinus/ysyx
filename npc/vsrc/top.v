@@ -42,6 +42,10 @@ module top (
 	output timer_out
 );
 
+initial begin
+	inc_counter_out = 0;
+end
+
 led led1(
     .clk(clk),
     .rst(rst),
@@ -170,7 +174,6 @@ reg [23:0] vga_mem [524287:0];
 
 initial begin
     $readmemh("resource/picture.hex", vga_mem);
-	inc_counter_out = 0;
 end
 
 assign vga_data = vga_mem[{h_addr, v_addr}];
