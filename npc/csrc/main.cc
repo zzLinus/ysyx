@@ -45,6 +45,7 @@ int main(int argc, char** argv, char** env)
     while (1) {
         top->en = !top->en;
         top->ec_en = !top->ec_en;
+        top->counter_EN = 0b1;
         contextp->timeInc(1);
         top->a = 0b11100100;
         top->alu_fnselec = 0b111;

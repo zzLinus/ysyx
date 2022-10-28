@@ -11,6 +11,7 @@ module top (
 	input [2:0] alu_fnselec,
 	input [3:0] alu_a,
 	input [3:0] alu_b,
+	input counter_EN,
 	input en,
 	input ec_en,
 	input [1:0] s,
@@ -73,7 +74,7 @@ encoder83 encoder(
 
 inc_counter counter(
 	.clk(clk),
-	.en(ec_en),
+	.en(counter_EN),
 	.out_q(counter_out)
 );
 

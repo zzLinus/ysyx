@@ -37,8 +37,9 @@
 		output [3:0] alu_res,
 		output alu_zero,
 %000000		output alu_overflow,
-%000000		output alu_carry
-%000017	);
+%000000		output alu_carry,
+%000017		output reg [2:0] counter_out
+	);
 	
 	led led1(
 	    .clk(clk),
@@ -71,27 +72,33 @@
 		.y(ec_y)
 	);
 	
+	inc_counter counter(
+		.clk(clk),
+		.en(ec_en),
+		.out_q(counter_out)
+	);
+	
 	assign VGA_CLK = clk;
 	
 	wire [9:0] h_addr;
 	wire [9:0] v_addr;
 	wire [23:0] vga_data;
-	
-	vga_ctrl my_vga_ctrl(
-	    .pclk(clk),
+%000000	
+%000000	vga_ctrl my_vga_ctrl(
+%000017	    .pclk(clk),
 	    .reset(rst),
 	    .vga_data(vga_data),
 	    .h_addr(h_addr),
 	    .v_addr(v_addr),
-%000000	    .hsync(VGA_HSYNC),
-%000000	    .vsync(VGA_VSYNC),
-%000017	    .valid(VGA_BLANK_N),
+%000002	    .hsync(VGA_HSYNC),
+%000001	    .vsync(VGA_VSYNC),
+	    .valid(VGA_BLANK_N),
 	    .vga_r(VGA_R),
 	    .vga_g(VGA_G),
 	    .vga_b(VGA_B)
 	);
-%000002	
-%000001	ps2_keyboard my_keyboard(
+	
+	ps2_keyboard my_keyboard(
 	    .clk(clk),
 	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
