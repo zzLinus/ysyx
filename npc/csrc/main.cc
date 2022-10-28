@@ -38,7 +38,7 @@ int main(int argc, char** argv, char** env)
     nvboard_bind_all_pins(top);
     nvboard_init();
     tfp->open("logs/vlt_dump.vcd");
-    tfp->dumpvars(1, "top.timer_1s");
+    tfp->dumpvars(1, "top");
 
     reset(10);
 
