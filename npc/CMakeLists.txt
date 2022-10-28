@@ -41,5 +41,7 @@ verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
 	VERILATOR_ARGS -f ./input.vc -x-assign fast --trace
-	SOURCES vsrc/top.v vsrc/led.v vsrc/ps2_keyboard.v vsrc/seg.v vsrc/vga_ctrl.v vsrc/multiselector.v vsrc/decoder.v vsrc/encoder.v vsrc/alu.v
+	SOURCES vsrc/top.v vsrc/led.v vsrc/ps2_keyboard.v vsrc/seg.v vsrc/vga_ctrl.v
+	vsrc/multiselector.v vsrc/decoder.v vsrc/encoder.v vsrc/alu.v vsrc/binary_counter.v
+	vsrc/timer.v
 )

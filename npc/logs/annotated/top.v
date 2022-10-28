@@ -8,10 +8,10 @@
 %000000		input [7:0] a,
 %000000		input [2:0] x,
 %000001		input [7:0] ec_x,
- 000019		input [2:0] seg_x,
-%000000		input alu_c,
-%000000		input alu_a,
-%000000		input alu_b,
+ 000019		input [2:0] alu_fnselec,
+%000000		input [3:0] alu_a,
+%000000		input [3:0] alu_b,
+%000000		input counter_EN,
 %000005		input en,
 %000004		input ec_en,
 %000008		input [1:0] s,
@@ -34,11 +34,17 @@
 		output reg [1:0] y,
 		output reg [2:0] ec_y,
 		output reg [7:0] y_dec,
-		output alu_s,
-		output alu_c_out
-%000000	);
-%000000	
-%000017	led led1(
+		output [3:0] alu_res,
+		output alu_zero,
+%000000		output alu_overflow,
+%000000		output alu_carry,
+%000017		output reg [7:0] inc_counter_out,
+		output reg [2:0] dec_counter_out,
+		output timer_out
+	);
+	
+	
+	led led1(
 	    .clk(clk),
 	    .rst(rst),
 	    .sw(sw),
@@ -69,11 +75,23 @@
 		.y(ec_y)
 	);
 	
+	inc_counter inc_counter(
+		.clk(timer_out),
+		.en(counter_EN),
+		.out_q(inc_counter_out)
+	);
+	
+	dec_counter dec_counter(
+		.clk(timer_out),
+%000000		.en(counter_EN),
+%000000		.out_q(dec_counter_out)
+%000017	);
+	
 	assign VGA_CLK = clk;
 	
 	wire [9:0] h_addr;
-	wire [9:0] v_addr;
-	wire [23:0] vga_data;
+%000002	wire [9:0] v_addr;
+%000001	wire [23:0] vga_data;
 	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
@@ -83,30 +101,41 @@
 	    .v_addr(v_addr),
 	    .hsync(VGA_HSYNC),
 	    .vsync(VGA_VSYNC),
-%000000	    .valid(VGA_BLANK_N),
-%000000	    .vga_r(VGA_R),
-%000017	    .vga_g(VGA_G),
+	    .valid(VGA_BLANK_N),
+	    .vga_r(VGA_R),
+	    .vga_g(VGA_G),
 	    .vga_b(VGA_B)
 	);
 	
 	ps2_keyboard my_keyboard(
-%000002	    .clk(clk),
-%000001	    .resetn(~rst),
+	    .clk(clk),
+	    .resetn(~rst),
 	    .ps2_clk(ps2_clk),
 	    .ps2_data(ps2_data)
 	);
 	
-	adder adder(
-		.c(alu_c),
-		.a(alu_a),
-		.b(alu_b),
-		.s(alu_s),
-		.c_out(alu_c_out)
+	alu_4bit alu(
+		.alu_fnselec(alu_fnselec),
+		.alu_a(alu_a),
+		.alu_b(alu_b),
+		.alu_res(alu_res),
+		.alu_zero(alu_zero),
+		.alu_overflow(alu_overflow),
+		.alu_carry(alu_carry)
 	);
+	
+	reg [7:0] seg_x;
+	reg [7:0] seg_y;
+	
+	always @(inc_counter_out) begin
+		seg_x = inc_counter_out % 10;
+		seg_y = inc_counter_out / 10;
+	end
 	
 	seg mu_seg(
 	    .clk(clk),
-		.seg_x(seg_x),
+		.seg_x(seg_x[3:0]),
+		.seg_y(seg_y[3:0]),
 	    .rst(rst),
 	    .o_seg0(seg0),
 	    .o_seg1(seg1),
@@ -122,6 +151,11 @@
 	    .h_addr(h_addr),
 	    .v_addr(v_addr[8:0]),
 	    .vga_data(vga_data)
+	);
+	
+	timer timer_1s(
+		.clk(clk),
+		.timer_out(timer_out)
 	);
 	
 	endmodule

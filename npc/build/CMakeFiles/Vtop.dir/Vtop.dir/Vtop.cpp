@@ -12,6 +12,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtop__Syms(contextp(), _vcname__, this)}
     , clk{vlSymsp->TOP.clk}
+    , timer_out{vlSymsp->TOP.timer_out}
     , rst{vlSymsp->TOP.rst}
     , sw{vlSymsp->TOP.sw}
     , ps2_clk{vlSymsp->TOP.ps2_clk}
@@ -19,10 +20,10 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , a{vlSymsp->TOP.a}
     , x{vlSymsp->TOP.x}
     , ec_x{vlSymsp->TOP.ec_x}
-    , seg_x{vlSymsp->TOP.seg_x}
-    , alu_c{vlSymsp->TOP.alu_c}
+    , alu_fnselec{vlSymsp->TOP.alu_fnselec}
     , alu_a{vlSymsp->TOP.alu_a}
     , alu_b{vlSymsp->TOP.alu_b}
+    , counter_EN{vlSymsp->TOP.counter_EN}
     , en{vlSymsp->TOP.en}
     , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}
@@ -44,8 +45,12 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , y{vlSymsp->TOP.y}
     , ec_y{vlSymsp->TOP.ec_y}
     , y_dec{vlSymsp->TOP.y_dec}
-    , alu_s{vlSymsp->TOP.alu_s}
-    , alu_c_out{vlSymsp->TOP.alu_c_out}
+    , alu_res{vlSymsp->TOP.alu_res}
+    , alu_zero{vlSymsp->TOP.alu_zero}
+    , alu_overflow{vlSymsp->TOP.alu_overflow}
+    , alu_carry{vlSymsp->TOP.alu_carry}
+    , inc_counter_out{vlSymsp->TOP.inc_counter_out}
+    , dec_counter_out{vlSymsp->TOP.dec_counter_out}
     , ledr{vlSymsp->TOP.ledr}
     , rootp{&(vlSymsp->TOP)}
 {
@@ -71,6 +76,7 @@ Vtop::~Vtop() {
 void Vtop___024root___eval_initial(Vtop___024root* vlSelf);
 void Vtop___024root___eval_settle(Vtop___024root* vlSelf);
 void Vtop___024root___eval(Vtop___024root* vlSelf);
+QData Vtop___024root___change_request(Vtop___024root* vlSelf);
 #ifdef VL_DEBUG
 void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf);
 #endif  // VL_DEBUG
@@ -80,12 +86,27 @@ static void _eval_initial_loop(Vtop__Syms* __restrict vlSymsp) {
     vlSymsp->__Vm_didInit = true;
     Vtop___024root___eval_initial(&(vlSymsp->TOP));
     // Evaluate till stable
+    int __VclockLoop = 0;
+    QData __Vchange = 1;
     vlSymsp->__Vm_activity = true;
     do {
         VL_DEBUG_IF(VL_DBG_MSGF("+ Initial loop\n"););
         Vtop___024root___eval_settle(&(vlSymsp->TOP));
         Vtop___024root___eval(&(vlSymsp->TOP));
-    } while (0);
+        if (VL_UNLIKELY(++__VclockLoop > 100)) {
+            // About to fail, so enable debug to see what's not settling.
+            // Note you must run make with OPT=-DVL_DEBUG for debug prints.
+            int __Vsaved_debug = Verilated::debug();
+            Verilated::debug(1);
+            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
+            Verilated::debug(__Vsaved_debug);
+            VL_FATAL_MT("vsrc/top.v", 1, "",
+                "Verilated model didn't DC converge\n"
+                "- See https://verilator.org/warn/DIDNOTCONVERGE");
+        } else {
+            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
+        }
+    } while (VL_UNLIKELY(__Vchange));
 }
 
 void Vtop::eval_step() {
@@ -97,11 +118,26 @@ void Vtop::eval_step() {
     // Initialize
     if (VL_UNLIKELY(!vlSymsp->__Vm_didInit)) _eval_initial_loop(vlSymsp);
     // Evaluate till stable
+    int __VclockLoop = 0;
+    QData __Vchange = 1;
     vlSymsp->__Vm_activity = true;
     do {
         VL_DEBUG_IF(VL_DBG_MSGF("+ Clock loop\n"););
         Vtop___024root___eval(&(vlSymsp->TOP));
-    } while (0);
+        if (VL_UNLIKELY(++__VclockLoop > 100)) {
+            // About to fail, so enable debug to see what's not settling.
+            // Note you must run make with OPT=-DVL_DEBUG for debug prints.
+            int __Vsaved_debug = Verilated::debug();
+            Verilated::debug(1);
+            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
+            Verilated::debug(__Vsaved_debug);
+            VL_FATAL_MT("vsrc/top.v", 1, "",
+                "Verilated model didn't converge\n"
+                "- See https://verilator.org/warn/DIDNOTCONVERGE");
+        } else {
+            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
+        }
+    } while (VL_UNLIKELY(__Vchange));
     // Evaluate cleanup
 }
 

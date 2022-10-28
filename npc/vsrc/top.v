@@ -7,10 +7,10 @@ module top (
 	input [7:0] a,
 	input [2:0] x,
 	input [7:0] ec_x,
-	input [2:0] seg_x,
-	input alu_c,
-	input alu_a,
-	input alu_b,
+	input [2:0] alu_fnselec,
+	input [3:0] alu_a,
+	input [3:0] alu_b,
+	input counter_EN,
 	input en,
 	input ec_en,
 	input [1:0] s,
@@ -33,9 +33,15 @@ module top (
 	output reg [1:0] y,
 	output reg [2:0] ec_y,
 	output reg [7:0] y_dec,
-	output alu_s,
-	output alu_c_out
+	output [3:0] alu_res,
+	output alu_zero,
+	output alu_overflow,
+	output alu_carry,
+	output reg [7:0] inc_counter_out,
+	output reg [2:0] dec_counter_out,
+	output timer_out
 );
+
 
 led led1(
     .clk(clk),
@@ -68,6 +74,18 @@ encoder83 encoder(
 	.y(ec_y)
 );
 
+inc_counter inc_counter(
+	.clk(timer_out),
+	.en(counter_EN),
+	.out_q(inc_counter_out)
+);
+
+dec_counter dec_counter(
+	.clk(timer_out),
+	.en(counter_EN),
+	.out_q(dec_counter_out)
+);
+
 assign VGA_CLK = clk;
 
 wire [9:0] h_addr;
@@ -95,17 +113,28 @@ ps2_keyboard my_keyboard(
     .ps2_data(ps2_data)
 );
 
-adder adder(
-	.c(alu_c),
-	.a(alu_a),
-	.b(alu_b),
-	.s(alu_s),
-	.c_out(alu_c_out)
+alu_4bit alu(
+	.alu_fnselec(alu_fnselec),
+	.alu_a(alu_a),
+	.alu_b(alu_b),
+	.alu_res(alu_res),
+	.alu_zero(alu_zero),
+	.alu_overflow(alu_overflow),
+	.alu_carry(alu_carry)
 );
+
+reg [7:0] seg_x;
+reg [7:0] seg_y;
+
+always @(inc_counter_out) begin
+	seg_x = inc_counter_out % 10;
+	seg_y = inc_counter_out / 10;
+end
 
 seg mu_seg(
     .clk(clk),
-	.seg_x(seg_x),
+	.seg_x(seg_x[3:0]),
+	.seg_y(seg_y[3:0]),
     .rst(rst),
     .o_seg0(seg0),
     .o_seg1(seg1),
@@ -121,6 +150,11 @@ vmem my_vmem(
     .h_addr(h_addr),
     .v_addr(v_addr[8:0]),
     .vga_data(vga_data)
+);
+
+timer timer_1s(
+	.clk(clk),
+	.timer_out(timer_out)
 );
 
 endmodule
