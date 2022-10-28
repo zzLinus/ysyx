@@ -17,6 +17,7 @@ class Vtop___024root final : public VerilatedModule {
     // Anonymous structures to workaround compiler member-count bugs
     struct {
         VL_IN8(clk,0,0);
+        VL_OUT8(timer_out,0,0);
         VL_IN8(rst,0,0);
         VL_IN8(sw,7,0);
         VL_IN8(ps2_clk,0,0);
@@ -56,7 +57,6 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(alu_carry,0,0);
         VL_OUT8(inc_counter_out,2,0);
         VL_OUT8(dec_counter_out,2,0);
-        VL_OUT8(timer_out,0,0);
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
         CData/*7:0*/ top__DOT____Vtogcov__sw;
@@ -118,7 +118,10 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
+        CData/*0:0*/ __VinpClk__TOP__timer_out;
         CData/*0:0*/ __Vclklast__TOP__clk;
+        CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__timer_out;
+        CData/*0:0*/ __Vchglast__TOP__timer_out;
         VL_OUT16(ledr,15,0);
         SData/*9:0*/ top__DOT__h_addr;
         SData/*9:0*/ top__DOT__v_addr;
@@ -143,6 +146,8 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ top__DOT__timer_1s__DOT__count_clk;
         IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;
         VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT__segs;
+    };
+    struct {
         VlUnpacked<CData/*7:0*/, 8> top__DOT__mu_seg__DOT____Vtogcov__segs;
         VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
         VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;

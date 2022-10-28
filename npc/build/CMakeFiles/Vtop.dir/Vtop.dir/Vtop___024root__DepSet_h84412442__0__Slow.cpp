@@ -24,6 +24,8 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__mu_seg__DOT__segs[5U] = 0xb6U;
     vlSelf->top__DOT__mu_seg__DOT__segs[6U] = 0xbeU;
     vlSelf->top__DOT__mu_seg__DOT__segs[7U] = 0xe0U;
+    vlSelf->top__DOT__mu_seg__DOT__segs[0U] = 0xffU;
+    vlSelf->top__DOT__mu_seg__DOT__segs[1U] = 0xe6U;
     if ((0U == (IData)(vlSelf->s))) {
         ++(vlSymsp->__Vcoverage[274]);
         vlSelf->y = (3U & (IData)(vlSelf->a));
@@ -645,24 +647,6 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (4U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[181]);
-        vlSelf->top__DOT____Vtogcov__dec_counter_out 
-            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
-               | (1U & (IData)(vlSelf->dec_counter_out)));
-    }
-    if ((2U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[182]);
-        vlSelf->top__DOT____Vtogcov__dec_counter_out 
-            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
-               | (2U & (IData)(vlSelf->dec_counter_out)));
-    }
-    if ((4U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[183]);
-        vlSelf->top__DOT____Vtogcov__dec_counter_out 
-            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
-               | (4U & (IData)(vlSelf->dec_counter_out)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)))) {
@@ -1463,6 +1447,24 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                     < (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)) 
                                                    & (0x203U 
                                                       >= (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
+    if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[181]);
+        vlSelf->top__DOT____Vtogcov__dec_counter_out 
+            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
+               | (1U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((2U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[182]);
+        vlSelf->top__DOT____Vtogcov__dec_counter_out 
+            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
+               | (2U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((4U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[183]);
+        vlSelf->top__DOT____Vtogcov__dec_counter_out 
+            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
+               | (4U & (IData)(vlSelf->dec_counter_out)));
+    }
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
@@ -2644,7 +2646,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->seg7 = (0xffU & (~ vlSelf->top__DOT__mu_seg__DOT__segs
                              [2U]));
     vlSelf->seg0 = (0xffU & (~ vlSelf->top__DOT__mu_seg__DOT__segs
-                             [(7U & vlSelf->top__DOT__mu_seg__DOT__x)]));
+                             [vlSelf->inc_counter_out]));
     if (((IData)(vlSelf->VGA_CLK) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_CLK))) {
         ++(vlSymsp->__Vcoverage[66]);
         vlSelf->top__DOT____Vtogcov__VGA_CLK = vlSelf->VGA_CLK;
@@ -4913,7 +4915,7 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[292]), first, "vsrc/binary_counter.v", 9, 2, ".top.inc_counter", "v_branch/inc_counter", "if", "9-10");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[293]), first, "vsrc/binary_counter.v", 9, 3, ".top.inc_counter", "v_branch/inc_counter", "else", "12");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[294]), first, "vsrc/binary_counter.v", 8, 1, ".top.inc_counter", "v_line/inc_counter", "block", "8");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/binary_counter.v", 16, 8, ".top.dec_counter", "v_toggle/dec_counter", "clk", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[184]), first, "vsrc/binary_counter.v", 16, 8, ".top.dec_counter", "v_toggle/dec_counter", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[45]), first, "vsrc/binary_counter.v", 17, 8, ".top.dec_counter", "v_toggle/dec_counter", "en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[181]), first, "vsrc/binary_counter.v", 19, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[182]), first, "vsrc/binary_counter.v", 19, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[1]", "");
@@ -5093,9 +5095,9 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[373]), first, "vsrc/alu.v", 47, 1, ".top.alu", "v_line/alu_4bit", "block", "47-49");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/seg.v", 2, 9, ".top.mu_seg", "v_toggle/seg", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/seg.v", 3, 9, ".top.mu_seg", "v_toggle/seg", "rst", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[31]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[32]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[33]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[178]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[179]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[180]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[94]), first, "vsrc/seg.v", 5, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[95]), first, "vsrc/seg.v", 5, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[96]), first, "vsrc/seg.v", 5, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[2]", "");
@@ -5224,46 +5226,46 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[435]), first, "vsrc/seg.v", 15, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][5]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[436]), first, "vsrc/seg.v", 15, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][6]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[437]), first, "vsrc/seg.v", 15, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[438]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[439]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[440]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[441]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[442]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[443]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[444]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[445]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[446]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[447]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[448]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[449]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[450]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[451]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[452]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[453]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[454]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[455]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[456]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[457]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[458]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[459]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[460]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[461]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[462]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[463]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[464]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[465]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[466]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[467]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[468]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[469]), first, "vsrc/seg.v", 27, 12, ".top.mu_seg", "v_toggle/seg", "count[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[470]), first, "vsrc/seg.v", 28, 11, ".top.mu_seg", "v_toggle/seg", "offset[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[471]), first, "vsrc/seg.v", 28, 11, ".top.mu_seg", "v_toggle/seg", "offset[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[472]), first, "vsrc/seg.v", 28, 11, ".top.mu_seg", "v_toggle/seg", "offset[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[473]), first, "vsrc/seg.v", 35, 4, ".top.mu_seg", "v_branch/seg", "if", "35");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[474]), first, "vsrc/seg.v", 35, 5, ".top.mu_seg", "v_branch/seg", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[475]), first, "vsrc/seg.v", 33, 2, ".top.mu_seg", "v_branch/seg", "if", "33");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[476]), first, "vsrc/seg.v", 33, 3, ".top.mu_seg", "v_branch/seg", "else", "34,36");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[477]), first, "vsrc/seg.v", 32, 1, ".top.mu_seg", "v_line/seg", "block", "32,38");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[438]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[439]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[440]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[441]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[442]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[443]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[444]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[445]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[446]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[447]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[448]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[449]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[450]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[451]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[452]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[453]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[454]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[455]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[456]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[457]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[458]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[459]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[460]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[461]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[462]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[463]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[464]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[465]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[466]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[467]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[468]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[469]), first, "vsrc/seg.v", 29, 12, ".top.mu_seg", "v_toggle/seg", "count[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[470]), first, "vsrc/seg.v", 30, 11, ".top.mu_seg", "v_toggle/seg", "offset[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[471]), first, "vsrc/seg.v", 30, 11, ".top.mu_seg", "v_toggle/seg", "offset[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[472]), first, "vsrc/seg.v", 30, 11, ".top.mu_seg", "v_toggle/seg", "offset[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[473]), first, "vsrc/seg.v", 37, 4, ".top.mu_seg", "v_branch/seg", "if", "37");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[474]), first, "vsrc/seg.v", 37, 5, ".top.mu_seg", "v_branch/seg", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[475]), first, "vsrc/seg.v", 35, 2, ".top.mu_seg", "v_branch/seg", "if", "35");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[476]), first, "vsrc/seg.v", 35, 3, ".top.mu_seg", "v_branch/seg", "else", "36,38");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[477]), first, "vsrc/seg.v", 34, 1, ".top.mu_seg", "v_line/seg", "block", "34,40");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[185]), first, "vsrc/top.v", 154, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/top.v", 154, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[187]), first, "vsrc/top.v", 154, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[2]", "");

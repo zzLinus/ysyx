@@ -116,7 +116,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+10,"i", false,-1, 31,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("dec_counter ");
-    tracep->declBit(c+30,"clk", false,-1);
+    tracep->declBit(c+71,"clk", false,-1);
     tracep->declBit(c+42,"en", false,-1);
     tracep->declBus(c+70,"out_q", false,-1, 2,0);
     tracep->popNamePrefix(1);
@@ -142,7 +142,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->pushNamePrefix("mu_seg ");
     tracep->declBit(c+30,"clk", false,-1);
     tracep->declBit(c+31,"rst", false,-1);
-    tracep->declBus(c+38,"seg_x", false,-1, 2,0);
+    tracep->declBus(c+69,"seg_x", false,-1, 2,0);
     tracep->declBus(c+54,"o_seg0", false,-1, 7,0);
     tracep->declBus(c+55,"o_seg1", false,-1, 7,0);
     tracep->declBus(c+56,"o_seg2", false,-1, 7,0);
