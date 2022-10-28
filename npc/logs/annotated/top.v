@@ -43,6 +43,7 @@
 		output timer_out
 	);
 	
+	
 	led led1(
 	    .clk(clk),
 	    .rst(rst),
@@ -82,16 +83,16 @@
 	
 	dec_counter dec_counter(
 		.clk(timer_out),
-		.en(counter_EN),
+%000000		.en(counter_EN),
 %000000		.out_q(dec_counter_out)
-%000000	);
-%000017	
+%000017	);
+	
 	assign VGA_CLK = clk;
 	
 	wire [9:0] h_addr;
-	wire [9:0] v_addr;
-%000002	wire [23:0] vga_data;
-%000001	
+%000002	wire [9:0] v_addr;
+%000001	wire [23:0] vga_data;
+	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
 	    .reset(rst),
