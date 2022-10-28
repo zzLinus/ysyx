@@ -799,7 +799,6 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
     ++(vlSymsp->__Vcoverage[345]);
     ++(vlSymsp->__Vcoverage[355]);
     ++(vlSymsp->__Vcoverage[477]);
-    vlSymsp->_traceDumpOpen();
     ++(vlSymsp->__Vcoverage[514]);
     if (vlSelf->counter_EN) {
         ++(vlSymsp->__Vcoverage[292]);
@@ -879,6 +878,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
         = ((6U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                   << 1U)) | (IData)(vlSelf->ps2_clk));
     if ((0x17d783fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+        vlSymsp->_traceDumpOpen();
         ++(vlSymsp->__Vcoverage[512]);
     }
     if (vlSelf->rst) {
