@@ -123,9 +123,18 @@ alu_4bit alu(
 	.alu_carry(alu_carry)
 );
 
+reg [3:0] seg_x;
+reg [3:0] seg_y;
+
+always @(inc_counter_out) begin
+	seg_x = inc_counter_out % 10;
+	seg_y = inc_counter_out / 10;
+end
+
 seg mu_seg(
     .clk(clk),
-	.seg_x(inc_counter_out),
+	.seg_x(seg_x),
+	.seg_y(seg_y),
     .rst(rst),
     .o_seg0(seg0),
     .o_seg1(seg1),

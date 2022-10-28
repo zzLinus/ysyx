@@ -2,7 +2,7 @@ module inc_counter(
 	input clk,
 	input en,
 
-	output reg [2:0] out_q
+	output reg [7:0] out_q
 );
 
 always @(posedge clk)
