@@ -152,7 +152,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+60,"o_seg6", false,-1, 7,0);
     tracep->declBus(c+61,"o_seg7", false,-1, 7,0);
     for (int i = 0; i < 8; ++i) {
-        tracep->declBus(c+1+i*1,"segs", true,(i+0), 7,0);
+        tracep->declBus(c+1+i*1,"segs", true,(i+0), 9,0);
     }
     tracep->declBus(c+73,"CLK_NUM", false,-1, 31,0);
     tracep->declBus(c+17,"count", false,-1, 31,0);
@@ -251,14 +251,14 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     // Init
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode);
     // Body
-    bufp->fullCData(oldp+1,(vlSelf->top__DOT__mu_seg__DOT__segs[0]),8);
-    bufp->fullCData(oldp+2,(vlSelf->top__DOT__mu_seg__DOT__segs[1]),8);
-    bufp->fullCData(oldp+3,(vlSelf->top__DOT__mu_seg__DOT__segs[2]),8);
-    bufp->fullCData(oldp+4,(vlSelf->top__DOT__mu_seg__DOT__segs[3]),8);
-    bufp->fullCData(oldp+5,(vlSelf->top__DOT__mu_seg__DOT__segs[4]),8);
-    bufp->fullCData(oldp+6,(vlSelf->top__DOT__mu_seg__DOT__segs[5]),8);
-    bufp->fullCData(oldp+7,(vlSelf->top__DOT__mu_seg__DOT__segs[6]),8);
-    bufp->fullCData(oldp+8,(vlSelf->top__DOT__mu_seg__DOT__segs[7]),8);
+    bufp->fullSData(oldp+1,(vlSelf->top__DOT__mu_seg__DOT__segs[0]),10);
+    bufp->fullSData(oldp+2,(vlSelf->top__DOT__mu_seg__DOT__segs[1]),10);
+    bufp->fullSData(oldp+3,(vlSelf->top__DOT__mu_seg__DOT__segs[2]),10);
+    bufp->fullSData(oldp+4,(vlSelf->top__DOT__mu_seg__DOT__segs[3]),10);
+    bufp->fullSData(oldp+5,(vlSelf->top__DOT__mu_seg__DOT__segs[4]),10);
+    bufp->fullSData(oldp+6,(vlSelf->top__DOT__mu_seg__DOT__segs[5]),10);
+    bufp->fullSData(oldp+7,(vlSelf->top__DOT__mu_seg__DOT__segs[6]),10);
+    bufp->fullSData(oldp+8,(vlSelf->top__DOT__mu_seg__DOT__segs[7]),10);
     bufp->fullCData(oldp+9,(vlSelf->top__DOT__alu__DOT__tmp),4);
     bufp->fullIData(oldp+10,(vlSelf->top__DOT__dec__DOT__i),32);
     bufp->fullIData(oldp+11,(vlSelf->top__DOT__encoder__DOT__i),32);

@@ -24,14 +24,14 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     uint32_t* const oldp VL_ATTR_UNUSED = bufp->oldp(vlSymsp->__Vm_baseCode + 1);
     // Body
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[0U])) {
-        bufp->chgCData(oldp+0,(vlSelf->top__DOT__mu_seg__DOT__segs[0]),8);
-        bufp->chgCData(oldp+1,(vlSelf->top__DOT__mu_seg__DOT__segs[1]),8);
-        bufp->chgCData(oldp+2,(vlSelf->top__DOT__mu_seg__DOT__segs[2]),8);
-        bufp->chgCData(oldp+3,(vlSelf->top__DOT__mu_seg__DOT__segs[3]),8);
-        bufp->chgCData(oldp+4,(vlSelf->top__DOT__mu_seg__DOT__segs[4]),8);
-        bufp->chgCData(oldp+5,(vlSelf->top__DOT__mu_seg__DOT__segs[5]),8);
-        bufp->chgCData(oldp+6,(vlSelf->top__DOT__mu_seg__DOT__segs[6]),8);
-        bufp->chgCData(oldp+7,(vlSelf->top__DOT__mu_seg__DOT__segs[7]),8);
+        bufp->chgSData(oldp+0,(vlSelf->top__DOT__mu_seg__DOT__segs[0]),10);
+        bufp->chgSData(oldp+1,(vlSelf->top__DOT__mu_seg__DOT__segs[1]),10);
+        bufp->chgSData(oldp+2,(vlSelf->top__DOT__mu_seg__DOT__segs[2]),10);
+        bufp->chgSData(oldp+3,(vlSelf->top__DOT__mu_seg__DOT__segs[3]),10);
+        bufp->chgSData(oldp+4,(vlSelf->top__DOT__mu_seg__DOT__segs[4]),10);
+        bufp->chgSData(oldp+5,(vlSelf->top__DOT__mu_seg__DOT__segs[5]),10);
+        bufp->chgSData(oldp+6,(vlSelf->top__DOT__mu_seg__DOT__segs[6]),10);
+        bufp->chgSData(oldp+7,(vlSelf->top__DOT__mu_seg__DOT__segs[7]),10);
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[1U])) {
         bufp->chgCData(oldp+8,(vlSelf->top__DOT__alu__DOT__tmp),4);
