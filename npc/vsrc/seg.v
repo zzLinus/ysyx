@@ -2,6 +2,7 @@ module seg(
   input clk,
   input rst,
   input [2:0] seg_x,
+  input [2:0] seg_y,
   output [7:0] o_seg0,
   output [7:0] o_seg1,
   output [7:0] o_seg2,
@@ -39,7 +40,7 @@ always @(posedge clk) begin
 end
 
 assign o_seg0 = ~segs[seg_x];
-assign o_seg1 = ~segs[3'd1];
+assign o_seg1 = ~segs[seg_y];
 assign o_seg2 = ~segs[3'd7];
 assign o_seg3 = ~segs[3'd6];
 assign o_seg4 = ~segs[3'd4];
