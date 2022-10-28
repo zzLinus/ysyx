@@ -38,7 +38,7 @@ int main(int argc, char** argv, char** env)
     nvboard_bind_all_pins(top);
     nvboard_init();
     tfp->open("logs/vlt_dump.vcd");
-    tfp->dumpvars(1, "timer_1s");
+    // tfp->dumpvars(1, "timer_1s");
 
     reset(10);
 
@@ -56,7 +56,7 @@ int main(int argc, char** argv, char** env)
         top->eval();
         nvboard_update();
         single_cycle();
-        tfp->dump(contextp->time());
+        // tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");
