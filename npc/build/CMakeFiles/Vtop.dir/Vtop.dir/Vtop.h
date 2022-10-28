@@ -63,6 +63,7 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&alu_zero,0,0);
     VL_OUT8(&alu_overflow,0,0);
     VL_OUT8(&alu_carry,0,0);
+    VL_OUT8(&counter_out,2,0);
     VL_OUT16(&ledr,15,0);
 
     // CELLS
