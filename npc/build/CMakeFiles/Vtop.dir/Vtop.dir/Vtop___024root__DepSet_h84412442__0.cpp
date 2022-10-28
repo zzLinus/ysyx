@@ -858,7 +858,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
         }
     }
     vlSelf->top__DOT__mu_seg__DOT__x = vlSelf->inc_counter_out;
-    if ((0x26259fU != vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+    if ((0x17d783fU != vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
         ++(vlSymsp->__Vcoverage[513]);
     }
     vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync 
@@ -873,7 +873,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
     if (vlSelf->counter_EN) {
         ++(vlSymsp->__Vcoverage[292]);
     }
-    if ((0x26259fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+    if ((0x17d783fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
         ++(vlSymsp->__Vcoverage[512]);
     }
     if (vlSelf->rst) {
@@ -904,7 +904,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                 = (0xfU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
         }
     }
-    if ((0x26259fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+    if ((0x17d783fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
         vlSelf->timer_out = (1U & (~ (IData)(vlSelf->timer_out)));
         __Vdly__top__DOT__timer_1s__DOT__count_clk = 0U;
     } else {
