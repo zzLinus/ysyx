@@ -73,13 +73,13 @@ encoder83 encoder(
 	.y(ec_y)
 );
 
-inc_counter counter(
+inc_counter inc_counter(
 	.clk(clk),
 	.en(counter_EN),
 	.out_q(inc_counter_out)
 );
 
-dec_counter counter(
+dec_counter dec_counter(
 	.clk(clk),
 	.en(counter_EN),
 	.out_q(dec_counter_out)
