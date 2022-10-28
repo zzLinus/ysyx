@@ -42,9 +42,6 @@ module top (
 	output timer_out
 );
 
-initial begin
-	inc_counter_out = 0;
-end
 
 led led1(
     .clk(clk),
@@ -129,7 +126,7 @@ alu_4bit alu(
 reg [7:0] seg_x;
 reg [7:0] seg_y;
 
-always @(inc_counter_out) begin
+always @(*) begin
 	if(inc_counter_out == 99)
 		inc_counter_out <= 0;
 	seg_x = inc_counter_out % 10;
