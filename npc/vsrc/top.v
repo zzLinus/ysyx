@@ -37,6 +37,7 @@ module top (
 	output alu_zero,
 	output alu_overflow,
 	output alu_carry
+	output reg [2:0] counter_out
 );
 
 led led1(
@@ -72,7 +73,8 @@ encoder83 encoder(
 
 inc_counter counter(
 	.clk(clk),
-	.en(ec_en)
+	.en(ec_en),
+	.out_q(counter_out)
 );
 
 assign VGA_CLK = clk;
