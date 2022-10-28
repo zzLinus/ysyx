@@ -51,6 +51,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , alu_carry{vlSymsp->TOP.alu_carry}
     , inc_counter_out{vlSymsp->TOP.inc_counter_out}
     , dec_counter_out{vlSymsp->TOP.dec_counter_out}
+    , timer_out{vlSymsp->TOP.timer_out}
     , ledr{vlSymsp->TOP.ledr}
     , rootp{&(vlSymsp->TOP)}
 {

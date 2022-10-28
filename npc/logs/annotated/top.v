@@ -40,7 +40,8 @@
 %000000		output alu_overflow,
 %000017		output alu_carry,
 		output reg [2:0] inc_counter_out,
-		output reg [2:0] dec_counter_out
+		output reg [2:0] dec_counter_out,
+		output timer_out
 	);
 	
 	led led1(
@@ -82,16 +83,16 @@
 	
 	dec_counter dec_counter(
 		.clk(clk),
-		.en(counter_EN),
+%000000		.en(counter_EN),
 %000000		.out_q(dec_counter_out)
-%000000	);
-%000017	
+%000017	);
+	
 	assign VGA_CLK = clk;
 	
 	wire [9:0] h_addr;
-	wire [9:0] v_addr;
-%000002	wire [23:0] vga_data;
-%000001	
+%000002	wire [9:0] v_addr;
+%000001	wire [23:0] vga_data;
+	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
 	    .reset(rst),
@@ -141,6 +142,11 @@
 	    .h_addr(h_addr),
 	    .v_addr(v_addr[8:0]),
 	    .vga_data(vga_data)
+	);
+	
+	timer timer_1s(
+		.clk(clk),
+		.timer_out(timer_out)
 	);
 	
 	endmodule
