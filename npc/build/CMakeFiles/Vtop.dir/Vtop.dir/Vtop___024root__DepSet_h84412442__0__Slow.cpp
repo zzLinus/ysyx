@@ -3954,8 +3954,24 @@ VL_ATTR_COLD void Vtop___024root___initial__TOP__0(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___initial__TOP__0\n"); );
     // Init
+    VlWide<5>/*159:0*/ __Vtemp_hfa1e3f21__0;
     VlWide<5>/*159:0*/ __Vtemp_h161bb746__0;
     // Body
+    if ((0U != VL_TESTPLUSARGS_I(std::string{"trace"}))) {
+        __Vtemp_hfa1e3f21__0[0U] = 0x2e766364U;
+        __Vtemp_hfa1e3f21__0[1U] = 0x64756d70U;
+        __Vtemp_hfa1e3f21__0[2U] = 0x766c745fU;
+        __Vtemp_hfa1e3f21__0[3U] = 0x6f67732fU;
+        __Vtemp_hfa1e3f21__0[4U] = 0x6cU;
+        vlSymsp->_vm_contextp__->dumpfile(VL_CVT_PACK_STR_NW(5, __Vtemp_hfa1e3f21__0));
+        vlSymsp->_traceDumpOpen();
+        ++(vlSymsp->__Vcoverage[512]);
+    } else {
+        ++(vlSymsp->__Vcoverage[513]);
+    }
+    VL_WRITEF("[%0t] Model running...\n\n",64,VL_TIME_UNITED_Q(1),
+              -12);
+    ++(vlSymsp->__Vcoverage[514]);
     __Vtemp_h161bb746__0[0U] = 0x2e686578U;
     __Vtemp_h161bb746__0[1U] = 0x74757265U;
     __Vtemp_h161bb746__0[2U] = 0x2f706963U;
@@ -5343,7 +5359,10 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[509]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[30]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[510]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[31]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[511]), first, "vsrc/timer.v", 6, 24, ".top.timer_1s", "v_line/timer", "block", "6");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[512]), first, "vsrc/timer.v", 9, 2, ".top.timer_1s", "v_branch/timer", "if", "9-13");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[513]), first, "vsrc/timer.v", 9, 3, ".top.timer_1s", "v_branch/timer", "else", "16");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[514]), first, "vsrc/timer.v", 8, 1, ".top.timer_1s", "v_line/timer", "block", "8");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[512]), first, "vsrc/timer.v", 9, 2, ".top.timer_1s", "v_branch/timer", "if", "9-11");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[513]), first, "vsrc/timer.v", 9, 3, ".top.timer_1s", "v_branch/timer", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[514]), first, "vsrc/timer.v", 8, 1, ".top.timer_1s", "v_line/timer", "block", "8,13");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[515]), first, "vsrc/timer.v", 17, 2, ".top.timer_1s", "v_branch/timer", "if", "17-20");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[516]), first, "vsrc/timer.v", 17, 3, ".top.timer_1s", "v_branch/timer", "else", "23");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[517]), first, "vsrc/timer.v", 16, 1, ".top.timer_1s", "v_line/timer", "block", "16");
 }
