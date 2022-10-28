@@ -70,6 +70,11 @@ encoder83 encoder(
 	.y(ec_y)
 );
 
+inc_counter counter(
+	.clk(clk),
+	.en(ec_en),
+);
+
 assign VGA_CLK = clk;
 
 wire [9:0] h_addr;
