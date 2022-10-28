@@ -97,14 +97,6 @@ ps2_keyboard my_keyboard(
     .ps2_data(ps2_data)
 );
 
-// adder_1bit adder(
-// 	.c(alu_c),
-// 	.a(alu_a),
-// 	.b(alu_b),
-// 	.s(alu_s),
-// 	.c_out(alu_c_out)
-// );
-
 alu_4bit alu(
 	.alu_fnselec(alu_fnselec),
 	.alu_a(alu_a),
