@@ -127,14 +127,11 @@ reg [7:0] seg_x;
 reg [7:0] seg_y;
 
 always @(inc_counter_out) begin
-	seg_x = inc_counter_out % 10;
-	seg_y = inc_counter_out / 10;
-end
-
-always @(inc_counter_out) begin
 	if(inc_counter_out == 99)
 		inc_counter_out <= 0;
 	else
+	seg_x = inc_counter_out % 10;
+	seg_y = inc_counter_out / 10;
 end
 
 seg mu_seg(
