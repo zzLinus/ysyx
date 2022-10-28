@@ -3,7 +3,7 @@ module timer(
 	output reg timer_out
 );
 
-reg [31:0] count_clk = 0;
+reg [31:0] count_clk = 32'b0;
 
 always @(posedge clk) begin
 	if(count_clk == 24999999)
