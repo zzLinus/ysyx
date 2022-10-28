@@ -37,7 +37,7 @@ int main(int argc, char** argv, char** env)
     top->trace(tfp, 99);
     nvboard_bind_all_pins(top);
     nvboard_init();
-    tfp->open("logs/vlt_dump.vcd");
+    // tfp->open("logs/vlt_dump.vcd");
     // tfp->dumpvars(1, "timer_1s");
 
     reset(10);
@@ -56,11 +56,11 @@ int main(int argc, char** argv, char** env)
         top->eval();
         nvboard_update();
         single_cycle();
-        // tfp->dump(contextp->time());
+        tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");
     contextp->coveragep()->write("logs/coverage.dat");
     top->final();
-    tfp->close();
+    // tfp->close();
 }
