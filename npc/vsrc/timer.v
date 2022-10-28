@@ -6,9 +6,9 @@ module timer(
 reg [31:0] count_clk = 32'b0;
 
 always @(posedge clk) begin
-    $dumpvars();
 	if(count_clk == 24999999)
 	begin
+		$dumpvars();
 		count_clk <= 0;
 		timer_out <= ~timer_out;
 	end
