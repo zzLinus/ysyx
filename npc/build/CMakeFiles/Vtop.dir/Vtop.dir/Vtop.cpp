@@ -23,6 +23,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , alu_fnselec{vlSymsp->TOP.alu_fnselec}
     , alu_a{vlSymsp->TOP.alu_a}
     , alu_b{vlSymsp->TOP.alu_b}
+    , counter_EN{vlSymsp->TOP.counter_EN}
     , en{vlSymsp->TOP.en}
     , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}

@@ -12,18 +12,19 @@
 %000000		input [2:0] alu_fnselec,
 %000000		input [3:0] alu_a,
 %000000		input [3:0] alu_b,
-%000005		input en,
-%000004		input ec_en,
-%000008		input [1:0] s,
-%000001	    output [15:0] ledr,
-%000006	    output VGA_CLK,
+%000005		input counter_EN,
+%000004		input en,
+%000008		input ec_en,
+%000001		input [1:0] s,
+%000006	    output [15:0] ledr,
+%000003	    output VGA_CLK,
 %000003	    output VGA_HSYNC,
-%000003	    output VGA_VSYNC,
-%000004	    output VGA_BLANK_N,
-%000003	    output [7:0] VGA_R,
-%000002	    output [7:0] VGA_G,
-%000005	    output [7:0] VGA_B,
-%000000	    output [7:0] seg0,
+%000004	    output VGA_VSYNC,
+%000003	    output VGA_BLANK_N,
+%000002	    output [7:0] VGA_R,
+%000005	    output [7:0] VGA_G,
+%000000	    output [7:0] VGA_B,
+	    output [7:0] seg0,
 	    output [7:0] seg1,
 	    output [7:0] seg2,
 	    output [7:0] seg3,
@@ -35,10 +36,10 @@
 		output reg [2:0] ec_y,
 		output reg [7:0] y_dec,
 		output [3:0] alu_res,
-		output alu_zero,
+%000000		output alu_zero,
 %000000		output alu_overflow,
-%000000		output alu_carry,
-%000017		output reg [2:0] counter_out
+%000017		output alu_carry,
+		output reg [2:0] counter_out
 	);
 	
 	led led1(
@@ -74,7 +75,7 @@
 	
 	inc_counter counter(
 		.clk(clk),
-		.en(ec_en),
+		.en(counter_EN),
 		.out_q(counter_out)
 	);
 	
@@ -82,16 +83,16 @@
 	
 	wire [9:0] h_addr;
 	wire [9:0] v_addr;
-	wire [23:0] vga_data;
+%000000	wire [23:0] vga_data;
 %000000	
-%000000	vga_ctrl my_vga_ctrl(
-%000017	    .pclk(clk),
+%000017	vga_ctrl my_vga_ctrl(
+	    .pclk(clk),
 	    .reset(rst),
 	    .vga_data(vga_data),
 	    .h_addr(h_addr),
-	    .v_addr(v_addr),
-%000002	    .hsync(VGA_HSYNC),
-%000001	    .vsync(VGA_VSYNC),
+%000002	    .v_addr(v_addr),
+%000001	    .hsync(VGA_HSYNC),
+	    .vsync(VGA_VSYNC),
 	    .valid(VGA_BLANK_N),
 	    .vga_r(VGA_R),
 	    .vga_g(VGA_G),

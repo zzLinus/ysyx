@@ -28,6 +28,7 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(alu_fnselec,2,0);
         VL_IN8(alu_a,3,0);
         VL_IN8(alu_b,3,0);
+        VL_IN8(counter_EN,0,0);
         VL_IN8(en,0,0);
         VL_IN8(ec_en,0,0);
         VL_IN8(s,1,0);
@@ -66,6 +67,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT____Vtogcov__alu_fnselec;
         CData/*3:0*/ top__DOT____Vtogcov__alu_a;
         CData/*3:0*/ top__DOT____Vtogcov__alu_b;
+        CData/*0:0*/ top__DOT____Vtogcov__counter_EN;
         CData/*0:0*/ top__DOT____Vtogcov__en;
         CData/*0:0*/ top__DOT____Vtogcov__ec_en;
         CData/*1:0*/ top__DOT____Vtogcov__s;
@@ -78,10 +80,10 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__VGA_B;
         CData/*7:0*/ top__DOT____Vtogcov__seg0;
         CData/*7:0*/ top__DOT____Vtogcov__seg1;
-        CData/*7:0*/ top__DOT____Vtogcov__seg2;
-        CData/*7:0*/ top__DOT____Vtogcov__seg3;
     };
     struct {
+        CData/*7:0*/ top__DOT____Vtogcov__seg2;
+        CData/*7:0*/ top__DOT____Vtogcov__seg3;
         CData/*7:0*/ top__DOT____Vtogcov__seg4;
         CData/*7:0*/ top__DOT____Vtogcov__seg5;
         CData/*7:0*/ top__DOT____Vtogcov__seg6;
