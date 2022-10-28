@@ -1,6 +1,6 @@
 module timer(
 	input clk,
-	output timer_out
+	output reg timer_out
 );
 
 reg [31:0] count_clk = 0;
