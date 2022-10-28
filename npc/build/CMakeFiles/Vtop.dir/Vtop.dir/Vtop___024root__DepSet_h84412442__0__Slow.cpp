@@ -628,24 +628,6 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         ++(vlSymsp->__Vcoverage[184]);
         vlSelf->top__DOT____Vtogcov__timer_out = vlSelf->timer_out;
     }
-    if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[178]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (1U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[179]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (2U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[180]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (4U & (IData)(vlSelf->inc_counter_out)));
-    }
     if ((1U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)))) {
         ++(vlSymsp->__Vcoverage[342]);
@@ -1445,6 +1427,24 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                     < (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)) 
                                                    & (0x203U 
                                                       >= (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
+    if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[178]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (1U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[179]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (2U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[180]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (4U & (IData)(vlSelf->inc_counter_out)));
+    }
     if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
         ++(vlSymsp->__Vcoverage[181]);
         vlSelf->top__DOT____Vtogcov__dec_counter_out 
@@ -4905,7 +4905,7 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[289]), first, "vsrc/encoder.v", 57, 2, ".top.encoder", "v_branch/encoder83", "if", "57-60");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[290]), first, "vsrc/encoder.v", 57, 3, ".top.encoder", "v_branch/encoder83", "else", "64");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[291]), first, "vsrc/encoder.v", 55, 1, ".top.encoder", "v_line/encoder83", "block", "55-56");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/binary_counter.v", 2, 8, ".top.inc_counter", "v_toggle/inc_counter", "clk", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[184]), first, "vsrc/binary_counter.v", 2, 8, ".top.inc_counter", "v_toggle/inc_counter", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[45]), first, "vsrc/binary_counter.v", 3, 8, ".top.inc_counter", "v_toggle/inc_counter", "en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[178]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[179]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[1]", "");

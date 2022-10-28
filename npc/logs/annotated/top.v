@@ -76,7 +76,7 @@
 	);
 	
 	inc_counter inc_counter(
-		.clk(clk),
+		.clk(timer_out),
 		.en(counter_EN),
 		.out_q(inc_counter_out)
 	);

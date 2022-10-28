@@ -793,15 +793,11 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
     __Vdly__top__DOT__my_vga_ctrl__DOT__y_cnt = vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt;
     __Vdly__top__DOT__my_vga_ctrl__DOT__x_cnt = vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt;
     ++(vlSymsp->__Vcoverage[273]);
-    ++(vlSymsp->__Vcoverage[294]);
     ++(vlSymsp->__Vcoverage[326]);
     ++(vlSymsp->__Vcoverage[345]);
     ++(vlSymsp->__Vcoverage[355]);
     ++(vlSymsp->__Vcoverage[477]);
     ++(vlSymsp->__Vcoverage[514]);
-    if ((1U & (~ (IData)(vlSelf->counter_EN)))) {
-        ++(vlSymsp->__Vcoverage[293]);
-    }
     if ((1U & (~ (IData)(vlSelf->rst)))) {
         ++(vlSymsp->__Vcoverage[272]);
         ++(vlSymsp->__Vcoverage[325]);
@@ -858,23 +854,20 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
         }
     }
     vlSelf->top__DOT__mu_seg__DOT__x = vlSelf->inc_counter_out;
-    if ((0x9502f8ffU != vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+    if ((0x17d783fU != vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
         ++(vlSymsp->__Vcoverage[513]);
     }
     vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync 
         = ((6U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                   << 1U)) | (IData)(vlSelf->ps2_clk));
+    if ((0x17d783fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+        ++(vlSymsp->__Vcoverage[512]);
+    }
     if (vlSelf->rst) {
         ++(vlSymsp->__Vcoverage[271]);
         ++(vlSymsp->__Vcoverage[324]);
         ++(vlSymsp->__Vcoverage[353]);
         ++(vlSymsp->__Vcoverage[475]);
-    }
-    if (vlSelf->counter_EN) {
-        ++(vlSymsp->__Vcoverage[292]);
-    }
-    if ((0x9502f8ffU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
-        ++(vlSymsp->__Vcoverage[512]);
     }
     if (vlSelf->rst) {
         __Vdly__top__DOT__my_keyboard__DOT__count = 0U;
@@ -904,7 +897,7 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                 = (0xfU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
         }
     }
-    if ((0x9502f8ffU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
+    if ((0x17d783fU == vlSelf->top__DOT__timer_1s__DOT__count_clk)) {
         vlSelf->timer_out = (1U & (~ (IData)(vlSelf->timer_out)));
         __Vdly__top__DOT__timer_1s__DOT__count_clk = 0U;
     } else {
@@ -950,10 +943,6 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
                 = (0x3ffU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
         }
     }
-    vlSelf->inc_counter_out = ((IData)(vlSelf->counter_EN)
-                                ? (7U & ((IData)(1U) 
-                                         + (IData)(vlSelf->inc_counter_out)))
-                                : 0U);
     vlSelf->top__DOT__my_keyboard__DOT__count = __Vdly__top__DOT__my_keyboard__DOT__count;
     vlSelf->top__DOT__mu_seg__DOT__offset = __Vdly__top__DOT__mu_seg__DOT__offset;
     vlSelf->top__DOT__mu_seg__DOT__count = __Vdly__top__DOT__mu_seg__DOT__count;
@@ -1086,26 +1075,6 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
             = ((0x1ffU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x200U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
-    if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[178]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (1U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[179]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (2U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[180]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (4U & (IData)(vlSelf->inc_counter_out)));
-    }
-    vlSelf->seg0 = (0xffU & (~ vlSelf->top__DOT__mu_seg__DOT__segs
-                             [vlSelf->inc_counter_out]));
     if ((1U & ((IData)(vlSelf->top__DOT__mu_seg__DOT__offset) 
                ^ (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)))) {
         ++(vlSymsp->__Vcoverage[470]);
@@ -2010,62 +1979,6 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__sampling 
             = vlSelf->top__DOT__my_keyboard__DOT__sampling;
     }
-    if ((1U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[94]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xfeU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (1U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((2U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[95]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xfdU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (2U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((4U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[96]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xfbU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (4U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((8U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[97]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xf7U 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (8U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((0x10U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[98]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xefU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (0x10U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((0x20U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[99]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xdfU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (0x20U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((0x40U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[100]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0xbfU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (0x40U 
-                                                & (IData)(vlSelf->seg0)));
-    }
-    if ((0x80U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[101]);
-        vlSelf->top__DOT____Vtogcov__seg0 = ((0x7fU 
-                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
-                                             | (0x80U 
-                                                & (IData)(vlSelf->seg0)));
-    }
     if (((IData)(vlSelf->VGA_VSYNC) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_VSYNC))) {
         ++(vlSymsp->__Vcoverage[68]);
         vlSelf->top__DOT____Vtogcov__VGA_VSYNC = vlSelf->VGA_VSYNC;
@@ -2730,15 +2643,21 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__1(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___sequent__TOP__1\n"); );
     // Body
+    ++(vlSymsp->__Vcoverage[294]);
     ++(vlSymsp->__Vcoverage[297]);
     if (vlSelf->counter_EN) {
+        ++(vlSymsp->__Vcoverage[292]);
         ++(vlSymsp->__Vcoverage[295]);
         vlSelf->dec_counter_out = (7U & ((IData)(vlSelf->dec_counter_out) 
                                          - (IData)(1U)));
+        vlSelf->inc_counter_out = (7U & ((IData)(1U) 
+                                         + (IData)(vlSelf->inc_counter_out)));
     } else {
         vlSelf->dec_counter_out = 0U;
+        vlSelf->inc_counter_out = 0U;
     }
     if ((1U & (~ (IData)(vlSelf->counter_EN)))) {
+        ++(vlSymsp->__Vcoverage[293]);
         ++(vlSymsp->__Vcoverage[296]);
     }
     if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
@@ -2758,5 +2677,81 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__1(Vtop___024root* vlSelf) {
         vlSelf->top__DOT____Vtogcov__dec_counter_out 
             = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
                | (4U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[178]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (1U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[179]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (2U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[180]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (4U & (IData)(vlSelf->inc_counter_out)));
+    }
+    vlSelf->seg0 = (0xffU & (~ vlSelf->top__DOT__mu_seg__DOT__segs
+                             [vlSelf->inc_counter_out]));
+    if ((1U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[94]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xfeU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (1U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((2U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[95]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xfdU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (2U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((4U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[96]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xfbU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (4U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((8U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[97]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xf7U 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (8U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((0x10U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[98]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xefU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (0x10U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((0x20U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[99]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xdfU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (0x20U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((0x40U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[100]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0xbfU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (0x40U 
+                                                & (IData)(vlSelf->seg0)));
+    }
+    if ((0x80U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
+        ++(vlSymsp->__Vcoverage[101]);
+        vlSelf->top__DOT____Vtogcov__seg0 = ((0x7fU 
+                                              & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
+                                             | (0x80U 
+                                                & (IData)(vlSelf->seg0)));
     }
 }

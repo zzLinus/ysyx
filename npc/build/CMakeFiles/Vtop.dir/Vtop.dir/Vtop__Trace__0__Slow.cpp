@@ -127,7 +127,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+11,"i", false,-1, 31,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("inc_counter ");
-    tracep->declBit(c+30,"clk", false,-1);
+    tracep->declBit(c+71,"clk", false,-1);
     tracep->declBit(c+42,"en", false,-1);
     tracep->declBus(c+69,"out_q", false,-1, 2,0);
     tracep->popNamePrefix(1);
