@@ -23,7 +23,7 @@ assign segs[5] = 8'b10110110;
 assign segs[6] = 8'b10111110;
 assign segs[7] = 8'b11100000;
 assign segs[8] = 8'b11111111;
-assign segs[9] = 8'b111001100;
+assign segs[9] = 8'b11100110;
 
 parameter CLK_NUM = 5000000;
 
