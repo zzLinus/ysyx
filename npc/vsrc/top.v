@@ -130,6 +130,8 @@ always @(inc_counter_out) begin
 	if(inc_counter_out == 99)
 		inc_counter_out <= 0;
 	else
+		inc_counter_out <= inc_counter_out;
+
 	seg_x = inc_counter_out % 10;
 	seg_y = inc_counter_out / 10;
 end
