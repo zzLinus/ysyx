@@ -72,7 +72,7 @@ encoder83 encoder(
 
 inc_counter counter(
 	.clk(clk),
-	.en(ec_en),
+	.en(ec_en)
 );
 
 assign VGA_CLK = clk;

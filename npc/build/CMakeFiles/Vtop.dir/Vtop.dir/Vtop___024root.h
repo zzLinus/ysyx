@@ -94,6 +94,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__alu_carry;
         CData/*7:0*/ top__DOT__led1__DOT__led;
         CData/*7:0*/ top__DOT__led1__DOT____Vtogcov__led;
+        CData/*2:0*/ top__DOT__counter__DOT__out_q;
+        CData/*2:0*/ top__DOT__counter__DOT____Vtogcov__out_q;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__h_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT__v_valid;
         CData/*0:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid;
