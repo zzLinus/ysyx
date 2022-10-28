@@ -8,23 +8,22 @@
 %000000		input [7:0] a,
 %000000		input [2:0] x,
 %000001		input [7:0] ec_x,
- 000019		input [2:0] seg_x,
-%000000		input [2:0] alu_fnselec,
+ 000019		input [2:0] alu_fnselec,
 %000000		input [3:0] alu_a,
 %000000		input [3:0] alu_b,
-%000005		input counter_EN,
-%000004		input en,
-%000008		input ec_en,
-%000001		input [1:0] s,
-%000006	    output [15:0] ledr,
-%000003	    output VGA_CLK,
+%000000		input counter_EN,
+%000005		input en,
+%000004		input ec_en,
+%000008		input [1:0] s,
+%000001	    output [15:0] ledr,
+%000006	    output VGA_CLK,
 %000003	    output VGA_HSYNC,
-%000004	    output VGA_VSYNC,
-%000003	    output VGA_BLANK_N,
-%000002	    output [7:0] VGA_R,
-%000005	    output [7:0] VGA_G,
-%000000	    output [7:0] VGA_B,
-	    output [7:0] seg0,
+%000003	    output VGA_VSYNC,
+%000004	    output VGA_BLANK_N,
+%000003	    output [7:0] VGA_R,
+%000002	    output [7:0] VGA_G,
+%000005	    output [7:0] VGA_B,
+%000000	    output [7:0] seg0,
 	    output [7:0] seg1,
 	    output [7:0] seg2,
 	    output [7:0] seg3,
@@ -36,10 +35,10 @@
 		output reg [2:0] ec_y,
 		output reg [7:0] y_dec,
 		output [3:0] alu_res,
-%000000		output alu_zero,
+		output alu_zero,
 %000000		output alu_overflow,
-%000017		output alu_carry,
-		output reg [2:0] inc_counter_out,
+%000000		output alu_carry,
+%000017		output reg [7:0] inc_counter_out,
 		output reg [2:0] dec_counter_out,
 		output timer_out
 	);
@@ -83,16 +82,16 @@
 	
 	dec_counter dec_counter(
 		.clk(timer_out),
-%000000		.en(counter_EN),
+		.en(counter_EN),
 %000000		.out_q(dec_counter_out)
-%000017	);
-	
+%000000	);
+%000017	
 	assign VGA_CLK = clk;
 	
 	wire [9:0] h_addr;
-%000002	wire [9:0] v_addr;
-%000001	wire [23:0] vga_data;
-	
+	wire [9:0] v_addr;
+%000002	wire [23:0] vga_data;
+%000001	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
 	    .reset(rst),
@@ -124,9 +123,18 @@
 		.alu_carry(alu_carry)
 	);
 	
+	reg [7:0] seg_x;
+	reg [7:0] seg_y;
+	
+	always @(inc_counter_out) begin
+		seg_x = inc_counter_out % 10;
+		seg_y = inc_counter_out / 10;
+	end
+	
 	seg mu_seg(
 	    .clk(clk),
-		.seg_x(inc_counter_out),
+		.seg_x(seg_x[3:0]),
+		.seg_y(seg_y[3:0]),
 	    .rst(rst),
 	    .o_seg0(seg0),
 	    .o_seg1(seg1),
