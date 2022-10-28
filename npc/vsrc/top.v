@@ -36,7 +36,7 @@ module top (
 	output [3:0] alu_res,
 	output alu_zero,
 	output alu_overflow,
-	output alu_carry
+	output alu_carry,
 	output reg [2:0] counter_out
 );
 
