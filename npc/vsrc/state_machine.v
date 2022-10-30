@@ -39,11 +39,11 @@ MuxKeyWithDefault #(9,4,1) outMux (
 		S1, 1'b0,
 		S2, 1'b0,
 		S3, 1'b0,
-		S4, 1'b0,
+		S4, 1'b1,
 		S5, 1'b0,
 		S6, 1'b0,
 		S7, 1'b0,
-		S8, 1'b0
+		S8, 1'b1
 	})
 );
 
