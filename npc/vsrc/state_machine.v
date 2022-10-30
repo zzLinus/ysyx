@@ -35,7 +35,15 @@ MuxKeyWithDefault #(9,4,1) outMux (
 	.key(state_dout),
 	.default_out(0),
 	.lut({
-
+		S0, 1'b0,
+		S1, 1'b0,
+		S2, 1'b0,
+		S3, 1'b0,
+		S4, 1'b0,
+		S5, 1'b0,
+		S6, 1'b0,
+		S7, 1'b0,
+		S8, 1'b0
 	})
 );
 
@@ -44,7 +52,15 @@ MuxKeyWithDefault #(9,4,4) stateMux (
 	.key(state_dout),
 	.default_out(S0),
 	.lut({
-
+		S0, 1'b0,
+		S1, 1'b0,
+		S2, 1'b0,
+		S3, 1'b0,
+		S4, 1'b0,
+		S5, 1'b0,
+		S6, 1'b0,
+		S7, 1'b0,
+		S8, 1'b0
 	})
 );
 

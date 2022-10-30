@@ -4,8 +4,8 @@ module register#(
 	input load,
 	input clr,
 	input clk,
-	input inp,
-	output reg out_q
+	input [BITS-1:0] inp,
+	output reg [BITS-1:0] out_q
 );
 
 always @(posedge clk) begin

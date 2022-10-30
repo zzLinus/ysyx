@@ -12,6 +12,7 @@ module top (
 	input [3:0] alu_b,
 	input counter_EN,
 	input en,
+	input rand_in,
 	input ec_en,
 	input [1:0] s,
 	input [31:0] sft_rgtr_data,
@@ -134,6 +135,13 @@ alu_4bit alu(
 	.alu_zero(alu_zero),
 	.alu_overflow(alu_overflow),
 	.alu_carry(alu_carry)
+);
+
+state_machine state_machine(
+	.clk(clk),
+	.in(),
+	.reset(),
+	.out()
 );
 
 reg [7:0] seg_x;
