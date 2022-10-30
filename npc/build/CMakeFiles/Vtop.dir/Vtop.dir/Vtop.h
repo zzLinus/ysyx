@@ -40,6 +40,7 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&alu_b,3,0);
     VL_IN8(&counter_EN,0,0);
     VL_IN8(&en,0,0);
+    VL_IN8(&rand_in,0,0);
     VL_IN8(&ec_en,0,0);
     VL_IN8(&s,1,0);
     VL_IN8(&sft_rgtr_shamt,4,0);

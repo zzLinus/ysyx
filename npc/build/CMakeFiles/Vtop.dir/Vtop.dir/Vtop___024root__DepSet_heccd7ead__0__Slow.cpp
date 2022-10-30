@@ -61,6 +61,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->alu_b = VL_RAND_RESET_I(4);
     vlSelf->counter_EN = VL_RAND_RESET_I(1);
     vlSelf->en = VL_RAND_RESET_I(1);
+    vlSelf->rand_in = VL_RAND_RESET_I(1);
     vlSelf->ec_en = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(2);
     vlSelf->sft_rgtr_data = VL_RAND_RESET_I(32);
@@ -110,6 +111,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__alu_b = VL_RAND_RESET_I(4);
     vlSelf->top__DOT____Vtogcov__counter_EN = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__en = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__rand_in = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ec_en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__s = VL_RAND_RESET_I(2);
     vlSelf->top__DOT____Vtogcov__sft_rgtr_data = VL_RAND_RESET_I(32);

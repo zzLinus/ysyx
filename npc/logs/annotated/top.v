@@ -13,17 +13,18 @@
 %000000		input [3:0] alu_b,
 %000000		input counter_EN,
 %000005		input en,
-%000004		input ec_en,
-%000008		input [1:0] s,
-%000001		input [31:0] sft_rgtr_data,
-%000006		input [4:0] sft_rgtr_shamt,
+%000004		input rand_in,
+%000008		input ec_en,
+%000001		input [1:0] s,
+%000006		input [31:0] sft_rgtr_data,
+%000003		input [4:0] sft_rgtr_shamt,
 %000003		input sft_rgtr_l_or_r,
-%000003		input sft_rgtr_a_or_l,
-%000004	    output [15:0] ledr,
-%000003	    output VGA_CLK,
-%000002	    output VGA_HSYNC,
-%000005	    output VGA_VSYNC,
-%000000	    output VGA_BLANK_N,
+%000004		input sft_rgtr_a_or_l,
+%000003	    output [15:0] ledr,
+%000002	    output VGA_CLK,
+%000005	    output VGA_HSYNC,
+%000000	    output VGA_VSYNC,
+	    output VGA_BLANK_N,
 	    output [7:0] VGA_R,
 	    output [7:0] VGA_G,
 	    output [7:0] VGA_B,
@@ -35,10 +36,10 @@
 	    output [7:0] seg5,
 	    output [7:0] seg6,
 	    output [7:0] seg7,
-		output [31:0] sft_out_q,
+%000000		output [31:0] sft_out_q,
 %000000		output reg [1:0] y,
-%000000		output reg [2:0] ec_y,
-%000017		output reg [7:0] y_dec,
+%000017		output reg [2:0] ec_y,
+		output reg [7:0] y_dec,
 		output [3:0] alu_res,
 		output alu_zero,
 		output alu_overflow,
@@ -82,16 +83,16 @@
 	
 	inc_counter inc_counter(
 		.clk(timer_out),
-		.en(counter_EN),
+%000000		.en(counter_EN),
 %000000		.out_q(inc_counter_out)
-%000000	);
-%000017	
+%000017	);
+	
 	dec_counter dec_counter(
 		.clk(timer_out),
 		.en(counter_EN),
-		.out_q(dec_counter_out)
-%000002	);
-%000001	
+%000002		.out_q(dec_counter_out)
+%000001	);
+	
 	shift_register sft_regstr (
 		.data(sft_rgtr_data),
 		.shamt(sft_rgtr_shamt),
@@ -136,6 +137,13 @@
 		.alu_overflow(alu_overflow),
 		.alu_carry(alu_carry)
 	);
+	
+	// state_machine state_machine(
+	// 	.clk(clk),
+	// 	.in(),
+	// 	.reset(),
+	// 	.out()
+	// );
 	
 	reg [7:0] seg_x;
 	reg [7:0] seg_y;

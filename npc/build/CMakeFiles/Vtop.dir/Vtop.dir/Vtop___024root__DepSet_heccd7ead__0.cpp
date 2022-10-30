@@ -52,7 +52,7 @@ VL_INLINE_OPT QData Vtop___024root___change_request_1(Vtop___024root* vlSelf) {
     // Change detection
     QData __req = false;  // Logically a bool
     __req |= ((vlSelf->timer_out ^ vlSelf->__Vchglast__TOP__timer_out));
-    VL_DEBUG_IF( if(__req && ((vlSelf->timer_out ^ vlSelf->__Vchglast__TOP__timer_out))) VL_DBG_MSGF("        CHANGE: vsrc/top.v:47: timer_out\n"); );
+    VL_DEBUG_IF( if(__req && ((vlSelf->timer_out ^ vlSelf->__Vchglast__TOP__timer_out))) VL_DBG_MSGF("        CHANGE: vsrc/top.v:48: timer_out\n"); );
     // Final
     vlSelf->__Vchglast__TOP__timer_out = vlSelf->timer_out;
     return __req;
@@ -84,6 +84,8 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("counter_EN");}
     if (VL_UNLIKELY((vlSelf->en & 0xfeU))) {
         Verilated::overWidthError("en");}
+    if (VL_UNLIKELY((vlSelf->rand_in & 0xfeU))) {
+        Verilated::overWidthError("rand_in");}
     if (VL_UNLIKELY((vlSelf->ec_en & 0xfeU))) {
         Verilated::overWidthError("ec_en");}
     if (VL_UNLIKELY((vlSelf->s & 0xfcU))) {
