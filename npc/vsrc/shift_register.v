@@ -18,7 +18,7 @@ always @(*) begin
 			out_q = data >>> shamt;
 		end
 		else begin // logical shift
-			out_q = data >> shamt;
+			out_q = data >>> shamt;
 		end
 	end
 end
