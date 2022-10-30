@@ -212,8 +212,7 @@ VL_INLINE_OPT void Vtop___024root___combo__TOP__0(Vtop___024root* vlSelf) {
                              << (IData)(vlSelf->sft_rgtr_shamt));
     } else {
         vlSelf->sft_out_q = ((IData)(vlSelf->sft_rgtr_a_or_l)
-                              ? (vlSelf->sft_rgtr_data 
-                                 >> (IData)(vlSelf->sft_rgtr_shamt))
+                              ? VL_SHIFTRS_III(32,32,5, vlSelf->sft_rgtr_data, (IData)(vlSelf->sft_rgtr_shamt))
                               : (vlSelf->sft_rgtr_data 
                                  >> (IData)(vlSelf->sft_rgtr_shamt)));
     }
