@@ -5,7 +5,7 @@ module shift_register(
 	input [4:0] shamt,
 	input l_or_r,
 	input a_or_l,
-	output [31:0] out_q
+	output reg [31:0] out_q
 );
 
 
