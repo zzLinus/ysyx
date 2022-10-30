@@ -14,6 +14,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial\n"); );
     // Body
     Vtop___024root___initial__TOP__0(vlSelf);
+    vlSelf->__Vm_traceActivity[3U] = 1U;
     vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
@@ -31,6 +32,7 @@ VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_settle\n"); );
     // Body
     Vtop___024root___settle__TOP__0(vlSelf);
+    vlSelf->__Vm_traceActivity[3U] = 1U;
     vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
@@ -61,8 +63,14 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->alu_b = VL_RAND_RESET_I(4);
     vlSelf->counter_EN = VL_RAND_RESET_I(1);
     vlSelf->en = VL_RAND_RESET_I(1);
+    vlSelf->rand_in = VL_RAND_RESET_I(1);
+    vlSelf->state_machine_clr = VL_RAND_RESET_I(1);
     vlSelf->ec_en = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(2);
+    vlSelf->sft_rgtr_data = VL_RAND_RESET_I(32);
+    vlSelf->sft_rgtr_shamt = VL_RAND_RESET_I(5);
+    vlSelf->sft_rgtr_l_or_r = VL_RAND_RESET_I(1);
+    vlSelf->sft_rgtr_a_or_l = VL_RAND_RESET_I(1);
     vlSelf->ledr = VL_RAND_RESET_I(16);
     vlSelf->VGA_CLK = VL_RAND_RESET_I(1);
     vlSelf->VGA_HSYNC = VL_RAND_RESET_I(1);
@@ -79,6 +87,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->seg5 = VL_RAND_RESET_I(8);
     vlSelf->seg6 = VL_RAND_RESET_I(8);
     vlSelf->seg7 = VL_RAND_RESET_I(8);
+    vlSelf->sft_out_q = VL_RAND_RESET_I(32);
     vlSelf->y = VL_RAND_RESET_I(2);
     vlSelf->ec_y = VL_RAND_RESET_I(3);
     vlSelf->y_dec = VL_RAND_RESET_I(8);
@@ -86,6 +95,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->alu_zero = VL_RAND_RESET_I(1);
     vlSelf->alu_overflow = VL_RAND_RESET_I(1);
     vlSelf->alu_carry = VL_RAND_RESET_I(1);
+    vlSelf->state_machine_out = VL_RAND_RESET_I(1);
     vlSelf->inc_counter_out = VL_RAND_RESET_I(8);
     vlSelf->dec_counter_out = VL_RAND_RESET_I(3);
     vlSelf->timer_out = VL_RAND_RESET_I(1);
@@ -105,8 +115,14 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__alu_b = VL_RAND_RESET_I(4);
     vlSelf->top__DOT____Vtogcov__counter_EN = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__en = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__rand_in = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__state_machine_clr = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ec_en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__s = VL_RAND_RESET_I(2);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_data = VL_RAND_RESET_I(32);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt = VL_RAND_RESET_I(5);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_l_or_r = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_a_or_l = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ledr = VL_RAND_RESET_I(16);
     vlSelf->top__DOT____Vtogcov__VGA_CLK = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_HSYNC = VL_RAND_RESET_I(1);
@@ -123,6 +139,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__seg5 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg6 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg7 = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT____Vtogcov__sft_out_q = VL_RAND_RESET_I(32);
     vlSelf->top__DOT____Vtogcov__y = VL_RAND_RESET_I(2);
     vlSelf->top__DOT____Vtogcov__ec_y = VL_RAND_RESET_I(3);
     vlSelf->top__DOT____Vtogcov__y_dec = VL_RAND_RESET_I(8);
@@ -130,6 +147,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__alu_zero = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__alu_overflow = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__alu_carry = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__state_machine_out = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__inc_counter_out = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__dec_counter_out = VL_RAND_RESET_I(3);
     vlSelf->top__DOT____Vtogcov__timer_out = VL_RAND_RESET_I(1);
@@ -164,6 +182,59 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0 = VL_RAND_RESET_I(1);
     vlSelf->top__DOT__alu__DOT__tmp = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__alu__DOT____Vtogcov__tmp = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT__state_machine__DOT__state_din = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT__state_machine__DOT__state_dout = VL_RAND_RESET_I(4);
+    VL_RAND_RESET_W(72, vlSelf->top__DOT__state_machine__DOT____Vcellinp__stateMux__lut);
+    vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_din = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_wen = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut = VL_RAND_RESET_Q(45);
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[__Vi0] = VL_RAND_RESET_I(5);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__key_list[__Vi0] = VL_RAND_RESET_I(4);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__data_list[__Vi0] = VL_RAND_RESET_I(1);
+    }
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit = VL_RAND_RESET_I(1);
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__pair_list[__Vi0] = VL_RAND_RESET_I(5);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__key_list[__Vi0] = VL_RAND_RESET_I(4);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__data_list[__Vi0] = VL_RAND_RESET_I(1);
+    }
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__lut_out = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__hit = VL_RAND_RESET_I(1);
+    VL_RAND_RESET_W(72, vlSelf->top__DOT__state_machine__DOT__stateMux__DOT____Vtogcov__lut);
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[__Vi0] = VL_RAND_RESET_I(8);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list[__Vi0] = VL_RAND_RESET_I(4);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[__Vi0] = VL_RAND_RESET_I(4);
+    }
+    vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__lut_out = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit = VL_RAND_RESET_I(1);
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__pair_list[__Vi0] = VL_RAND_RESET_I(8);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__key_list[__Vi0] = VL_RAND_RESET_I(4);
+    }
+    for (int __Vi0=0; __Vi0<9; ++__Vi0) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__data_list[__Vi0] = VL_RAND_RESET_I(4);
+    }
+    vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__lut_out = VL_RAND_RESET_I(4);
+    vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit = VL_RAND_RESET_I(1);
     for (int __Vi0=0; __Vi0<10; ++__Vi0) {
         vlSelf->top__DOT__mu_seg__DOT__segs[__Vi0] = VL_RAND_RESET_I(8);
     }
@@ -182,7 +253,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
     vlSelf->__VinpClk__TOP__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__Vchglast__TOP__timer_out = VL_RAND_RESET_I(1);
-    for (int __Vi0=0; __Vi0<3; ++__Vi0) {
+    for (int __Vi0=0; __Vi0<4; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = VL_RAND_RESET_I(1);
     }
 }

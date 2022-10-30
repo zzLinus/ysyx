@@ -25,8 +25,13 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , alu_b{vlSymsp->TOP.alu_b}
     , counter_EN{vlSymsp->TOP.counter_EN}
     , en{vlSymsp->TOP.en}
+    , rand_in{vlSymsp->TOP.rand_in}
+    , state_machine_clr{vlSymsp->TOP.state_machine_clr}
     , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}
+    , sft_rgtr_shamt{vlSymsp->TOP.sft_rgtr_shamt}
+    , sft_rgtr_l_or_r{vlSymsp->TOP.sft_rgtr_l_or_r}
+    , sft_rgtr_a_or_l{vlSymsp->TOP.sft_rgtr_a_or_l}
     , VGA_CLK{vlSymsp->TOP.VGA_CLK}
     , VGA_HSYNC{vlSymsp->TOP.VGA_HSYNC}
     , VGA_VSYNC{vlSymsp->TOP.VGA_VSYNC}
@@ -49,9 +54,12 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , alu_zero{vlSymsp->TOP.alu_zero}
     , alu_overflow{vlSymsp->TOP.alu_overflow}
     , alu_carry{vlSymsp->TOP.alu_carry}
+    , state_machine_out{vlSymsp->TOP.state_machine_out}
     , inc_counter_out{vlSymsp->TOP.inc_counter_out}
     , dec_counter_out{vlSymsp->TOP.dec_counter_out}
     , ledr{vlSymsp->TOP.ledr}
+    , sft_rgtr_data{vlSymsp->TOP.sft_rgtr_data}
+    , sft_out_q{vlSymsp->TOP.sft_out_q}
     , rootp{&(vlSymsp->TOP)}
 {
     // Register model with the context

@@ -30,8 +30,13 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(alu_b,3,0);
         VL_IN8(counter_EN,0,0);
         VL_IN8(en,0,0);
+        VL_IN8(rand_in,0,0);
+        VL_IN8(state_machine_clr,0,0);
         VL_IN8(ec_en,0,0);
         VL_IN8(s,1,0);
+        VL_IN8(sft_rgtr_shamt,4,0);
+        VL_IN8(sft_rgtr_l_or_r,0,0);
+        VL_IN8(sft_rgtr_a_or_l,0,0);
         VL_OUT8(VGA_CLK,0,0);
         VL_OUT8(VGA_HSYNC,0,0);
         VL_OUT8(VGA_VSYNC,0,0);
@@ -54,6 +59,7 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(alu_zero,0,0);
         VL_OUT8(alu_overflow,0,0);
         VL_OUT8(alu_carry,0,0);
+        VL_OUT8(state_machine_out,0,0);
         VL_OUT8(inc_counter_out,7,0);
         VL_OUT8(dec_counter_out,2,0);
         CData/*0:0*/ top__DOT____Vtogcov__clk;
@@ -69,8 +75,15 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT____Vtogcov__alu_b;
         CData/*0:0*/ top__DOT____Vtogcov__counter_EN;
         CData/*0:0*/ top__DOT____Vtogcov__en;
+        CData/*0:0*/ top__DOT____Vtogcov__rand_in;
+        CData/*0:0*/ top__DOT____Vtogcov__state_machine_clr;
         CData/*0:0*/ top__DOT____Vtogcov__ec_en;
         CData/*1:0*/ top__DOT____Vtogcov__s;
+        CData/*4:0*/ top__DOT____Vtogcov__sft_rgtr_shamt;
+    };
+    struct {
+        CData/*0:0*/ top__DOT____Vtogcov__sft_rgtr_l_or_r;
+        CData/*0:0*/ top__DOT____Vtogcov__sft_rgtr_a_or_l;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_CLK;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_HSYNC;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_VSYNC;
@@ -80,8 +93,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__VGA_B;
         CData/*7:0*/ top__DOT____Vtogcov__seg0;
         CData/*7:0*/ top__DOT____Vtogcov__seg1;
-    };
-    struct {
         CData/*7:0*/ top__DOT____Vtogcov__seg2;
         CData/*7:0*/ top__DOT____Vtogcov__seg3;
         CData/*7:0*/ top__DOT____Vtogcov__seg4;
@@ -95,6 +106,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__alu_zero;
         CData/*0:0*/ top__DOT____Vtogcov__alu_overflow;
         CData/*0:0*/ top__DOT____Vtogcov__alu_carry;
+        CData/*0:0*/ top__DOT____Vtogcov__state_machine_out;
         CData/*7:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
@@ -116,10 +128,26 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
         CData/*3:0*/ top__DOT__alu__DOT__tmp;
         CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
+        CData/*3:0*/ top__DOT__state_machine__DOT__state_din;
+        CData/*3:0*/ top__DOT__state_machine__DOT__state_dout;
+        CData/*3:0*/ top__DOT__state_machine__DOT____Vtogcov__state_din;
+        CData/*3:0*/ top__DOT__state_machine__DOT____Vtogcov__state_dout;
+        CData/*0:0*/ top__DOT__state_machine__DOT____Vtogcov__state_wen;
+        CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out;
+        CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out;
+        CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit;
+        CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__lut_out;
+        CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__hit;
+        CData/*3:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__lut_out;
+        CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit;
+        CData/*3:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__lut_out;
+        CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*0:0*/ __VinpClk__TOP__timer_out;
         CData/*0:0*/ __Vclklast__TOP__clk;
+    };
+    struct {
         CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__timer_out;
         CData/*0:0*/ __Vchglast__TOP__timer_out;
         VL_OUT16(ledr,15,0);
@@ -134,23 +162,40 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt;
         SData/*9:0*/ top__DOT__my_keyboard__DOT__buffer;
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
+        VL_IN(sft_rgtr_data,31,0);
+        VL_OUT(sft_out_q,31,0);
         IData/*23:0*/ top__DOT__vga_data;
+        IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
+        IData/*31:0*/ top__DOT____Vtogcov__sft_out_q;
         IData/*23:0*/ top__DOT____Vtogcov__vga_data;
         IData/*31:0*/ top__DOT__led1__DOT__count;
         IData/*31:0*/ top__DOT__led1__DOT____Vtogcov__count;
         IData/*31:0*/ top__DOT__dec__DOT__i;
         IData/*31:0*/ top__DOT__encoder__DOT__i;
+        VlWide<3>/*71:0*/ top__DOT__state_machine__DOT____Vcellinp__stateMux__lut;
+        VlWide<3>/*71:0*/ top__DOT__state_machine__DOT__stateMux__DOT____Vtogcov__lut;
         IData/*31:0*/ top__DOT__mu_seg__DOT__count;
         IData/*31:0*/ top__DOT__mu_seg__DOT__x;
         IData/*31:0*/ top__DOT__mu_seg__DOT____Vtogcov__count;
         IData/*31:0*/ top__DOT__timer_1s__DOT__count_clk;
         IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;
+        QData/*44:0*/ top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut;
+        VlUnpacked<CData/*4:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list;
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__key_list;
+        VlUnpacked<CData/*0:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__data_list;
+        VlUnpacked<CData/*4:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__pair_list;
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__key_list;
+        VlUnpacked<CData/*0:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__data_list;
+        VlUnpacked<CData/*7:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list;
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list;
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list;
+        VlUnpacked<CData/*7:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__pair_list;
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__key_list;
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__data_list;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT__segs;
-    };
-    struct {
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT____Vtogcov__segs;
         VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
-        VlUnpacked<CData/*0:0*/, 3> __Vm_traceActivity;
+        VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };
 
     // INTERNAL VARIABLES

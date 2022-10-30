@@ -16,19 +16,12 @@
 // endmodule
 
 // 000 | 加法     | A+B
-//
 // 001 | 减法     | A-B
-//
 // 010 | 取反     | Not A
-//
 // 011 | 与 A     | and B
-//
 // 100 | 或 A     | or B
-//
 // 101 | 异或     | A xor B
-//
 // 110 | 比较大小 | If A<B then out=1; else out=0;
-//
 // 111 | 判断相等 | If A==B then out=1; else out=0;
 
 module alu_4bit( 
@@ -42,7 +35,6 @@ module alu_4bit(
 );
 
 reg [3:0] tmp;
-
 
 always @(*) begin
 	assign tmp = (alu_b^4'b1111) + 4'b0001;

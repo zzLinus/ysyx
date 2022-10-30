@@ -31,6 +31,7 @@ static void reset(int n)
 
 int main(int argc, char** argv, char** env)
 {
+    uint32_t shamt = 0;
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
     VerilatedVcdC* tfp = new VerilatedVcdC;
@@ -49,9 +50,18 @@ int main(int argc, char** argv, char** env)
         contextp->timeInc(1);
         top->a = 0b11100100;
         top->alu_fnselec = 0b111;
+        top->rand_in = rand() & 1;
+        top->state_machine_clr = rand() & 1;
         top->alu_a = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->alu_b = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         // top->seg_x = top->ec_x;
+        // shift register
+        // 置为1为左移，置为0为右移。 选择端A/L为算术逻辑选择，置为1为算术移位，置为0为逻辑移位。
+        top->sft_rgtr_data = 0b11110000101010100000000000000000;
+        top->sft_rgtr_shamt = shamt++;
+        top->sft_rgtr_a_or_l = 0b1;
+        top->sft_rgtr_l_or_r = 0b0;
+        // endshift register
         top->s = rand() & 1 + (rand() & 1) * 2;
         top->eval();
         nvboard_update();

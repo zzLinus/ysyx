@@ -12,8 +12,14 @@ module top (
 	input [3:0] alu_b,
 	input counter_EN,
 	input en,
+	input rand_in,
+	input state_machine_clr,
 	input ec_en,
 	input [1:0] s,
+	input [31:0] sft_rgtr_data,
+	input [4:0] sft_rgtr_shamt,
+	input sft_rgtr_l_or_r,
+	input sft_rgtr_a_or_l,
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
@@ -30,6 +36,7 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
+	output [31:0] sft_out_q,
 	output reg [1:0] y,
 	output reg [2:0] ec_y,
 	output reg [7:0] y_dec,
@@ -37,6 +44,7 @@ module top (
 	output alu_zero,
 	output alu_overflow,
 	output alu_carry,
+	output state_machine_out,
 	output reg [7:0] inc_counter_out,
 	output reg [2:0] dec_counter_out,
 	output timer_out
@@ -86,6 +94,14 @@ dec_counter dec_counter(
 	.out_q(dec_counter_out)
 );
 
+shift_register sft_regstr (
+	.data(sft_rgtr_data),
+	.shamt(sft_rgtr_shamt),
+	.l_or_r(sft_rgtr_l_or_r),
+	.a_or_l(sft_rgtr_a_or_l),
+	.out_q(sft_out_q)
+);
+
 assign VGA_CLK = clk;
 
 wire [9:0] h_addr;
@@ -121,6 +137,13 @@ alu_4bit alu(
 	.alu_zero(alu_zero),
 	.alu_overflow(alu_overflow),
 	.alu_carry(alu_carry)
+);
+
+state_machine state_machine(
+	.clk(timer_out),
+	.in(rand_in),
+	.reset(state_machine_clr),
+	.out(state_machine_out)
 );
 
 reg [7:0] seg_x;

@@ -13,32 +13,40 @@
 %000000		input [3:0] alu_b,
 %000000		input counter_EN,
 %000005		input en,
-%000004		input ec_en,
-%000008		input [1:0] s,
-%000001	    output [15:0] ledr,
-%000006	    output VGA_CLK,
-%000003	    output VGA_HSYNC,
-%000003	    output VGA_VSYNC,
-%000004	    output VGA_BLANK_N,
-%000003	    output [7:0] VGA_R,
-%000002	    output [7:0] VGA_G,
-%000005	    output [7:0] VGA_B,
-%000000	    output [7:0] seg0,
+%000004		input rand_in,
+%000008		input state_machine_clr,
+%000001		input ec_en,
+%000006		input [1:0] s,
+%000003		input [31:0] sft_rgtr_data,
+%000003		input [4:0] sft_rgtr_shamt,
+%000004		input sft_rgtr_l_or_r,
+%000003		input sft_rgtr_a_or_l,
+%000002	    output [15:0] ledr,
+%000005	    output VGA_CLK,
+%000000	    output VGA_HSYNC,
+	    output VGA_VSYNC,
+	    output VGA_BLANK_N,
+	    output [7:0] VGA_R,
+	    output [7:0] VGA_G,
+	    output [7:0] VGA_B,
+	    output [7:0] seg0,
 	    output [7:0] seg1,
 	    output [7:0] seg2,
 	    output [7:0] seg3,
 	    output [7:0] seg4,
 	    output [7:0] seg5,
 	    output [7:0] seg6,
-	    output [7:0] seg7,
-		output reg [1:0] y,
+%000000	    output [7:0] seg7,
+%000000		output [31:0] sft_out_q,
+%000017		output reg [1:0] y,
 		output reg [2:0] ec_y,
 		output reg [7:0] y_dec,
 		output [3:0] alu_res,
 		output alu_zero,
-%000000		output alu_overflow,
-%000000		output alu_carry,
-%000017		output reg [7:0] inc_counter_out,
+		output alu_overflow,
+		output alu_carry,
+		output state_machine_out,
+		output reg [7:0] inc_counter_out,
 		output reg [2:0] dec_counter_out,
 		output timer_out
 	);
@@ -75,23 +83,31 @@
 		.y(ec_y)
 	);
 	
-	inc_counter inc_counter(
-		.clk(timer_out),
-		.en(counter_EN),
+%000000	inc_counter inc_counter(
+%000000		.clk(timer_out),
+%000017		.en(counter_EN),
 		.out_q(inc_counter_out)
 	);
 	
 	dec_counter dec_counter(
-		.clk(timer_out),
-%000000		.en(counter_EN),
-%000000		.out_q(dec_counter_out)
-%000017	);
+%000002		.clk(timer_out),
+%000001		.en(counter_EN),
+		.out_q(dec_counter_out)
+	);
+	
+	shift_register sft_regstr (
+		.data(sft_rgtr_data),
+		.shamt(sft_rgtr_shamt),
+		.l_or_r(sft_rgtr_l_or_r),
+		.a_or_l(sft_rgtr_a_or_l),
+		.out_q(sft_out_q)
+	);
 	
 	assign VGA_CLK = clk;
 	
 	wire [9:0] h_addr;
-%000002	wire [9:0] v_addr;
-%000001	wire [23:0] vga_data;
+	wire [9:0] v_addr;
+	wire [23:0] vga_data;
 	
 	vga_ctrl my_vga_ctrl(
 	    .pclk(clk),
@@ -122,6 +138,13 @@
 		.alu_zero(alu_zero),
 		.alu_overflow(alu_overflow),
 		.alu_carry(alu_carry)
+	);
+	
+	state_machine state_machine(
+		.clk(timer_out),
+		.in(rand_in),
+		.reset(state_machine_clr),
+		.out(state_machine_out)
 	);
 	
 	reg [7:0] seg_x;
