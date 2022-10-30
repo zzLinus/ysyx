@@ -44,6 +44,7 @@
 		output alu_zero,
 		output alu_overflow,
 		output alu_carry,
+		output state_machine_out,
 		output reg [7:0] inc_counter_out,
 		output reg [2:0] dec_counter_out,
 		output timer_out
@@ -82,16 +83,16 @@
 	);
 	
 	inc_counter inc_counter(
-		.clk(timer_out),
+%000000		.clk(timer_out),
 %000000		.en(counter_EN),
-%000000		.out_q(inc_counter_out)
-%000017	);
+%000017		.out_q(inc_counter_out)
+	);
 	
 	dec_counter dec_counter(
 		.clk(timer_out),
-		.en(counter_EN),
-%000002		.out_q(dec_counter_out)
-%000001	);
+%000002		.en(counter_EN),
+%000001		.out_q(dec_counter_out)
+	);
 	
 	shift_register sft_regstr (
 		.data(sft_rgtr_data),
@@ -138,12 +139,12 @@
 		.alu_carry(alu_carry)
 	);
 	
-	// state_machine state_machine(
-	// 	.clk(clk),
-	// 	.in(),
-	// 	.reset(),
-	// 	.out()
-	// );
+	state_machine state_machine(
+		.clk(clk),
+		.in(rand_in),
+		.reset(0),
+		.out(state_machine_out)
+	);
 	
 	reg [7:0] seg_x;
 	reg [7:0] seg_y;
