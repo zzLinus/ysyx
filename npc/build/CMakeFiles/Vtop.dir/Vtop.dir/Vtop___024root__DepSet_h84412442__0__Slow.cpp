@@ -12,11 +12,12 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___settle__TOP__0\n"); );
     // Body
-    ++(vlSymsp->__Vcoverage[247]);
-    ++(vlSymsp->__Vcoverage[298]);
-    ++(vlSymsp->__Vcoverage[304]);
-    ++(vlSymsp->__Vcoverage[310]);
+    ++(vlSymsp->__Vcoverage[318]);
+    ++(vlSymsp->__Vcoverage[369]);
+    ++(vlSymsp->__Vcoverage[375]);
+    ++(vlSymsp->__Vcoverage[381]);
     ++(vlSymsp->__Vcoverage[394]);
+    ++(vlSymsp->__Vcoverage[470]);
     vlSelf->top__DOT__mu_seg__DOT__segs[0U] = 0xfdU;
     vlSelf->top__DOT__mu_seg__DOT__segs[1U] = 0x60U;
     vlSelf->top__DOT__mu_seg__DOT__segs[2U] = 0xdaU;
@@ -28,7 +29,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__mu_seg__DOT__segs[8U] = 0xffU;
     vlSelf->top__DOT__mu_seg__DOT__segs[9U] = 0xe6U;
     if ((0U == (IData)(vlSelf->s))) {
-        ++(vlSymsp->__Vcoverage[293]);
+        ++(vlSymsp->__Vcoverage[364]);
         vlSelf->y = (3U & (IData)(vlSelf->a));
     } else {
         vlSelf->y = (3U & ((1U == (IData)(vlSelf->s))
@@ -42,79 +43,79 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0U != (IData)(vlSelf->s))) {
         if ((1U == (IData)(vlSelf->s))) {
-            ++(vlSymsp->__Vcoverage[294]);
+            ++(vlSymsp->__Vcoverage[365]);
         }
         if ((1U != (IData)(vlSelf->s))) {
             if ((2U == (IData)(vlSelf->s))) {
-                ++(vlSymsp->__Vcoverage[295]);
+                ++(vlSymsp->__Vcoverage[366]);
             }
             if ((2U != (IData)(vlSelf->s))) {
                 if ((3U == (IData)(vlSelf->s))) {
-                    ++(vlSymsp->__Vcoverage[296]);
+                    ++(vlSymsp->__Vcoverage[367]);
                 }
                 if ((3U != (IData)(vlSelf->s))) {
-                    ++(vlSymsp->__Vcoverage[297]);
+                    ++(vlSymsp->__Vcoverage[368]);
                 }
             }
         }
     }
     if (vlSelf->en) {
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[301]);
-        ++(vlSymsp->__Vcoverage[302]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[372]);
+        ++(vlSymsp->__Vcoverage[373]);
         if ((6U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((5U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((4U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((4U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((3U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((3U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((6U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((0U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((0U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((5U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((1U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((1U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((2U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((2U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         if ((7U == (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[299]);
+            ++(vlSymsp->__Vcoverage[370]);
         }
         if ((7U != (IData)(vlSelf->x))) {
-            ++(vlSymsp->__Vcoverage[300]);
+            ++(vlSymsp->__Vcoverage[371]);
         }
         vlSelf->top__DOT__dec__DOT__i = 8U;
         vlSelf->y_dec = ((0xf8U & (IData)(vlSelf->y_dec)) 
@@ -136,98 +137,118 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->y_dec = 0U;
     }
     if ((1U & (~ (IData)(vlSelf->en)))) {
-        ++(vlSymsp->__Vcoverage[303]);
+        ++(vlSymsp->__Vcoverage[374]);
     }
     if (vlSelf->ec_en) {
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[307]);
-        ++(vlSymsp->__Vcoverage[308]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[379]);
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 4U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 3U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 1U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 5U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ (IData)(vlSelf->ec_x)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 6U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 2U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         if ((1U & (~ ((IData)(vlSelf->ec_x) >> 7U)))) {
-            ++(vlSymsp->__Vcoverage[306]);
+            ++(vlSymsp->__Vcoverage[377]);
         }
         vlSelf->top__DOT__encoder__DOT__i = 8U;
         vlSelf->ec_y = 0U;
         if ((1U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 0U;
         }
         if ((2U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 1U;
         }
         if ((4U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 2U;
         }
         if ((8U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 3U;
         }
         if ((0x10U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 4U;
         }
         if ((0x20U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 5U;
         }
         if ((0x40U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 6U;
         }
         if ((0x80U & (IData)(vlSelf->ec_x))) {
-            ++(vlSymsp->__Vcoverage[305]);
+            ++(vlSymsp->__Vcoverage[376]);
             vlSelf->ec_y = 7U;
         }
     } else {
         vlSelf->ec_y = 0U;
     }
     if ((1U & (~ (IData)(vlSelf->ec_en)))) {
-        ++(vlSymsp->__Vcoverage[309]);
+        ++(vlSymsp->__Vcoverage[380]);
+    }
+    if ((1U & (~ (IData)(vlSelf->sft_rgtr_l_or_r)))) {
+        ++(vlSymsp->__Vcoverage[393]);
+        if (vlSelf->sft_rgtr_a_or_l) {
+            ++(vlSymsp->__Vcoverage[390]);
+        }
+        if ((1U & (~ (IData)(vlSelf->sft_rgtr_a_or_l)))) {
+            ++(vlSymsp->__Vcoverage[391]);
+        }
+    }
+    if (vlSelf->sft_rgtr_l_or_r) {
+        ++(vlSymsp->__Vcoverage[392]);
+        vlSelf->sft_out_q = (vlSelf->sft_rgtr_data 
+                             << (IData)(vlSelf->sft_rgtr_shamt));
+    } else {
+        vlSelf->sft_out_q = ((IData)(vlSelf->sft_rgtr_a_or_l)
+                              ? (vlSelf->sft_rgtr_data 
+                                 >> (IData)(vlSelf->sft_rgtr_shamt))
+                              : (vlSelf->sft_rgtr_data 
+                                 >> (IData)(vlSelf->sft_rgtr_shamt)));
     }
     if ((1U & (~ ((IData)(vlSelf->alu_fnselec) >> 2U)))) {
         if ((1U & (~ ((IData)(vlSelf->alu_fnselec) 
                       >> 1U)))) {
             if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[382]);
+                ++(vlSymsp->__Vcoverage[458]);
             }
             if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[381]);
+                ++(vlSymsp->__Vcoverage[457]);
             }
         }
         if ((2U & (IData)(vlSelf->alu_fnselec))) {
             if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[383]);
+                ++(vlSymsp->__Vcoverage[459]);
             }
             if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[384]);
+                ++(vlSymsp->__Vcoverage[460]);
             }
         }
     }
@@ -259,8 +280,18 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         ++(vlSymsp->__Vcoverage[44]);
         vlSelf->top__DOT____Vtogcov__ec_en = vlSelf->ec_en;
     }
+    if (((IData)(vlSelf->sft_rgtr_l_or_r) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_l_or_r))) {
+        ++(vlSymsp->__Vcoverage[84]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_l_or_r 
+            = vlSelf->sft_rgtr_l_or_r;
+    }
+    if (((IData)(vlSelf->sft_rgtr_a_or_l) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_a_or_l))) {
+        ++(vlSymsp->__Vcoverage[85]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_a_or_l 
+            = vlSelf->sft_rgtr_a_or_l;
+    }
     if ((1U ^ ((IData)(vlSelf->rst) ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__resetn)))) {
-        ++(vlSymsp->__Vcoverage[348]);
+        ++(vlSymsp->__Vcoverage[424]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__resetn 
             = (1U & (~ (IData)(vlSelf->rst)));
     }
@@ -362,6 +393,36 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                  & (IData)(vlSelf->alu_b)));
     }
     vlSelf->VGA_CLK = vlSelf->clk;
+    if ((1U & ((IData)(vlSelf->sft_rgtr_shamt) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)))) {
+        ++(vlSymsp->__Vcoverage[79]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt 
+            = ((0x1eU & (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)) 
+               | (1U & (IData)(vlSelf->sft_rgtr_shamt)));
+    }
+    if ((2U & ((IData)(vlSelf->sft_rgtr_shamt) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)))) {
+        ++(vlSymsp->__Vcoverage[80]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt 
+            = ((0x1dU & (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)) 
+               | (2U & (IData)(vlSelf->sft_rgtr_shamt)));
+    }
+    if ((4U & ((IData)(vlSelf->sft_rgtr_shamt) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)))) {
+        ++(vlSymsp->__Vcoverage[81]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt 
+            = ((0x1bU & (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)) 
+               | (4U & (IData)(vlSelf->sft_rgtr_shamt)));
+    }
+    if ((8U & ((IData)(vlSelf->sft_rgtr_shamt) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)))) {
+        ++(vlSymsp->__Vcoverage[82]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt 
+            = ((0x17U & (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)) 
+               | (8U & (IData)(vlSelf->sft_rgtr_shamt)));
+    }
+    if ((0x10U & ((IData)(vlSelf->sft_rgtr_shamt) ^ (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)))) {
+        ++(vlSymsp->__Vcoverage[83]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt 
+            = ((0xfU & (IData)(vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt)) 
+               | (0x10U & (IData)(vlSelf->sft_rgtr_shamt)));
+    }
     if ((1U & ((IData)(vlSelf->sw) ^ (IData)(vlSelf->top__DOT____Vtogcov__sw)))) {
         ++(vlSymsp->__Vcoverage[2]);
         vlSelf->top__DOT____Vtogcov__sw = ((0xfeU & (IData)(vlSelf->top__DOT____Vtogcov__sw)) 
@@ -506,29 +567,222 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                              | (0x80U 
                                                 & (IData)(vlSelf->ec_x)));
     }
+    if ((1U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[47]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffffeU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (1U & vlSelf->sft_rgtr_data));
+    }
+    if ((2U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[48]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffffdU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (2U & vlSelf->sft_rgtr_data));
+    }
+    if ((4U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[49]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffffbU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (4U & vlSelf->sft_rgtr_data));
+    }
+    if ((8U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[50]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffff7U & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (8U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x10U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[51]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffffefU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x10U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x20U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[52]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffffdfU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x20U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x40U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[53]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffffbfU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x40U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x80U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[54]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffff7fU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x80U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x100U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[55]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffeffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x100U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x200U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[56]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffdffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x200U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x400U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[57]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffffbffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x400U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x800U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[58]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffff7ffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x800U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x1000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[59]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffefffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x1000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x2000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[60]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffdfffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x2000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x4000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[61]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffffbfffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x4000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x8000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[62]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffff7fffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x8000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x10000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[63]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffeffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x10000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x20000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[64]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffdffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x20000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x40000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[65]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfffbffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x40000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x80000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[66]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfff7ffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x80000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x100000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[67]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffefffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x100000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x200000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[68]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffdfffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x200000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x400000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[69]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xffbfffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x400000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x800000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[70]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xff7fffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x800000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x1000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[71]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfeffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x1000000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x2000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[72]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfdffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x2000000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x4000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[73]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xfbffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x4000000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x8000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[74]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xf7ffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x8000000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x10000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[75]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xefffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x10000000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x20000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[76]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xdfffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x20000000U & vlSelf->sft_rgtr_data));
+    }
+    if ((0x40000000U & (vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data))) {
+        ++(vlSymsp->__Vcoverage[77]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0xbfffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x40000000U & vlSelf->sft_rgtr_data));
+    }
+    if (((vlSelf->sft_rgtr_data ^ vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+         >> 0x1fU)) {
+        ++(vlSymsp->__Vcoverage[78]);
+        vlSelf->top__DOT____Vtogcov__sft_rgtr_data 
+            = ((0x7fffffffU & vlSelf->top__DOT____Vtogcov__sft_rgtr_data) 
+               | (0x80000000U & vlSelf->sft_rgtr_data));
+    }
     vlSelf->top__DOT__alu__DOT__tmp = (0xfU & ((IData)(1U) 
                                                + (~ (IData)(vlSelf->alu_b))));
     if ((4U & (IData)(vlSelf->alu_fnselec))) {
         if ((1U & (~ ((IData)(vlSelf->alu_fnselec) 
                       >> 1U)))) {
             if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[385]);
+                ++(vlSymsp->__Vcoverage[461]);
             }
             if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[386]);
+                ++(vlSymsp->__Vcoverage[462]);
             }
         }
         if ((2U & (IData)(vlSelf->alu_fnselec))) {
             if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[392]);
+                ++(vlSymsp->__Vcoverage[468]);
                 if (((IData)(vlSelf->alu_a) == (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[390]);
+                    ++(vlSymsp->__Vcoverage[466]);
                     vlSelf->alu_res = 1U;
                 } else {
                     vlSelf->alu_res = 0U;
                 }
                 if (((IData)(vlSelf->alu_a) != (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[391]);
+                    ++(vlSymsp->__Vcoverage[467]);
                 }
                 vlSelf->alu_carry = 0U;
                 vlSelf->alu_overflow = 0U;
@@ -542,12 +796,12 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                 vlSelf->alu_zero = 0U;
             }
             if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[389]);
+                ++(vlSymsp->__Vcoverage[465]);
                 if (((IData)(vlSelf->alu_a) >= (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[388]);
+                    ++(vlSymsp->__Vcoverage[464]);
                 }
                 if (((IData)(vlSelf->alu_a) < (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[387]);
+                    ++(vlSymsp->__Vcoverage[463]);
                 }
             }
         } else if ((1U & (IData)(vlSelf->alu_fnselec))) {
@@ -610,75 +864,75 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->alu_zero = (1U & (~ (IData)((0U != (IData)(vlSelf->alu_res)))));
     }
     if (((IData)(vlSelf->timer_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__timer_out))) {
-        ++(vlSymsp->__Vcoverage[186]);
+        ++(vlSymsp->__Vcoverage[257]);
         vlSelf->top__DOT____Vtogcov__timer_out = vlSelf->timer_out;
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)))) {
-        ++(vlSymsp->__Vcoverage[363]);
+        ++(vlSymsp->__Vcoverage[439]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync 
             = ((6U & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)) 
                | (1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)))) {
-        ++(vlSymsp->__Vcoverage[364]);
+        ++(vlSymsp->__Vcoverage[440]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync 
             = ((5U & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)) 
                | (2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)))) {
-        ++(vlSymsp->__Vcoverage[365]);
+        ++(vlSymsp->__Vcoverage[441]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync 
             = ((3U & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)) 
                | (4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__mu_seg__DOT__offset) 
                ^ (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)))) {
-        ++(vlSymsp->__Vcoverage[507]);
+        ++(vlSymsp->__Vcoverage[583]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset 
             = ((6U & (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)) 
                | (1U & (IData)(vlSelf->top__DOT__mu_seg__DOT__offset)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__mu_seg__DOT__offset) 
                ^ (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)))) {
-        ++(vlSymsp->__Vcoverage[508]);
+        ++(vlSymsp->__Vcoverage[584]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset 
             = ((5U & (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)) 
                | (2U & (IData)(vlSelf->top__DOT__mu_seg__DOT__offset)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__mu_seg__DOT__offset) 
                ^ (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)))) {
-        ++(vlSymsp->__Vcoverage[509]);
+        ++(vlSymsp->__Vcoverage[585]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset 
             = ((3U & (IData)(vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset)) 
                | (4U & (IData)(vlSelf->top__DOT__mu_seg__DOT__offset)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__count) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)))) {
-        ++(vlSymsp->__Vcoverage[359]);
+        ++(vlSymsp->__Vcoverage[435]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count 
             = ((0xeU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)) 
                | (1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__count) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)))) {
-        ++(vlSymsp->__Vcoverage[360]);
+        ++(vlSymsp->__Vcoverage[436]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count 
             = ((0xdU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)) 
                | (2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__count) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)))) {
-        ++(vlSymsp->__Vcoverage[361]);
+        ++(vlSymsp->__Vcoverage[437]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count 
             = ((0xbU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)) 
                | (4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__count) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)))) {
-        ++(vlSymsp->__Vcoverage[362]);
+        ++(vlSymsp->__Vcoverage[438]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count 
             = ((7U & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)) 
                | (8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
@@ -692,710 +946,710 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                              & (IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync))));
     if ((1U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[280]);
+        ++(vlSymsp->__Vcoverage[351]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xfeU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (1U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[281]);
+        ++(vlSymsp->__Vcoverage[352]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xfdU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (2U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[282]);
+        ++(vlSymsp->__Vcoverage[353]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xfbU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (4U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[283]);
+        ++(vlSymsp->__Vcoverage[354]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xf7U & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (8U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((0x10U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                   ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[284]);
+        ++(vlSymsp->__Vcoverage[355]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xefU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (0x10U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((0x20U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                   ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[285]);
+        ++(vlSymsp->__Vcoverage[356]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xdfU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (0x20U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((0x40U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                   ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[286]);
+        ++(vlSymsp->__Vcoverage[357]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0xbfU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (0x40U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((0x80U & ((IData)(vlSelf->top__DOT__led1__DOT__led) 
                   ^ (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)))) {
-        ++(vlSymsp->__Vcoverage[287]);
+        ++(vlSymsp->__Vcoverage[358]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__led 
             = ((0x7fU & (IData)(vlSelf->top__DOT__led1__DOT____Vtogcov__led)) 
                | (0x80U & (IData)(vlSelf->top__DOT__led1__DOT__led)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[319]);
+        ++(vlSymsp->__Vcoverage[395]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3feU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (1U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[320]);
+        ++(vlSymsp->__Vcoverage[396]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3fdU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (2U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[321]);
+        ++(vlSymsp->__Vcoverage[397]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3fbU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (4U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[322]);
+        ++(vlSymsp->__Vcoverage[398]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3f7U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (8U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((0x10U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[323]);
+        ++(vlSymsp->__Vcoverage[399]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3efU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (0x10U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((0x20U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[324]);
+        ++(vlSymsp->__Vcoverage[400]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3dfU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (0x20U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((0x40U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[325]);
+        ++(vlSymsp->__Vcoverage[401]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x3bfU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (0x40U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((0x80U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[326]);
+        ++(vlSymsp->__Vcoverage[402]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x37fU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (0x80U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((0x100U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                    ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[327]);
+        ++(vlSymsp->__Vcoverage[403]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x2ffU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (0x100U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((0x200U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt) 
                    ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)))) {
-        ++(vlSymsp->__Vcoverage[328]);
+        ++(vlSymsp->__Vcoverage[404]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt 
             = ((0x1ffU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt)) 
                | (0x200U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[329]);
+        ++(vlSymsp->__Vcoverage[405]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3feU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (1U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[330]);
+        ++(vlSymsp->__Vcoverage[406]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3fdU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (2U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[331]);
+        ++(vlSymsp->__Vcoverage[407]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3fbU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (4U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[332]);
+        ++(vlSymsp->__Vcoverage[408]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3f7U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (8U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((0x10U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[333]);
+        ++(vlSymsp->__Vcoverage[409]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3efU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (0x10U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((0x20U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[334]);
+        ++(vlSymsp->__Vcoverage[410]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3dfU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (0x20U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((0x40U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[335]);
+        ++(vlSymsp->__Vcoverage[411]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x3bfU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (0x40U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((0x80U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                   ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[336]);
+        ++(vlSymsp->__Vcoverage[412]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x37fU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (0x80U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((0x100U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                    ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[337]);
+        ++(vlSymsp->__Vcoverage[413]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x2ffU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (0x100U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((0x200U & ((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt) 
                    ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)))) {
-        ++(vlSymsp->__Vcoverage[338]);
+        ++(vlSymsp->__Vcoverage[414]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt 
             = ((0x1ffU & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt)) 
                | (0x200U & (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[349]);
+        ++(vlSymsp->__Vcoverage[425]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3feU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[350]);
+        ++(vlSymsp->__Vcoverage[426]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3fdU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[351]);
+        ++(vlSymsp->__Vcoverage[427]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3fbU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[352]);
+        ++(vlSymsp->__Vcoverage[428]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3f7U & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((0x10U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                   ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[353]);
+        ++(vlSymsp->__Vcoverage[429]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3efU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x10U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((0x20U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                   ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[354]);
+        ++(vlSymsp->__Vcoverage[430]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3dfU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x20U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((0x40U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                   ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[355]);
+        ++(vlSymsp->__Vcoverage[431]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x3bfU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x40U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((0x80U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                   ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[356]);
+        ++(vlSymsp->__Vcoverage[432]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x37fU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x80U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((0x100U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                    ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[357]);
+        ++(vlSymsp->__Vcoverage[433]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x2ffU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x100U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((0x200U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
                    ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)))) {
-        ++(vlSymsp->__Vcoverage[358]);
+        ++(vlSymsp->__Vcoverage[434]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer 
             = ((0x1ffU & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__buffer)) 
                | (0x200U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer)));
     }
     if ((1U & (vlSelf->top__DOT__led1__DOT__count ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[248]);
+        ++(vlSymsp->__Vcoverage[319]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffffeU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (1U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((2U & (vlSelf->top__DOT__led1__DOT__count ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[249]);
+        ++(vlSymsp->__Vcoverage[320]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffffdU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (2U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((4U & (vlSelf->top__DOT__led1__DOT__count ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[250]);
+        ++(vlSymsp->__Vcoverage[321]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffffbU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (4U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((8U & (vlSelf->top__DOT__led1__DOT__count ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[251]);
+        ++(vlSymsp->__Vcoverage[322]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffff7U & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (8U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x10U & (vlSelf->top__DOT__led1__DOT__count 
                   ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[252]);
+        ++(vlSymsp->__Vcoverage[323]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffffefU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x10U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x20U & (vlSelf->top__DOT__led1__DOT__count 
                   ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[253]);
+        ++(vlSymsp->__Vcoverage[324]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffffdfU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x20U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x40U & (vlSelf->top__DOT__led1__DOT__count 
                   ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[254]);
+        ++(vlSymsp->__Vcoverage[325]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffffbfU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x40U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x80U & (vlSelf->top__DOT__led1__DOT__count 
                   ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[255]);
+        ++(vlSymsp->__Vcoverage[326]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffff7fU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x80U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x100U & (vlSelf->top__DOT__led1__DOT__count 
                    ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[256]);
+        ++(vlSymsp->__Vcoverage[327]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffeffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x100U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x200U & (vlSelf->top__DOT__led1__DOT__count 
                    ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[257]);
+        ++(vlSymsp->__Vcoverage[328]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffdffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x200U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x400U & (vlSelf->top__DOT__led1__DOT__count 
                    ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[258]);
+        ++(vlSymsp->__Vcoverage[329]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffffbffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x400U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x800U & (vlSelf->top__DOT__led1__DOT__count 
                    ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[259]);
+        ++(vlSymsp->__Vcoverage[330]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffff7ffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x800U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x1000U & (vlSelf->top__DOT__led1__DOT__count 
                     ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[260]);
+        ++(vlSymsp->__Vcoverage[331]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffefffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x1000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x2000U & (vlSelf->top__DOT__led1__DOT__count 
                     ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[261]);
+        ++(vlSymsp->__Vcoverage[332]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffdfffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x2000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x4000U & (vlSelf->top__DOT__led1__DOT__count 
                     ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[262]);
+        ++(vlSymsp->__Vcoverage[333]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffffbfffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x4000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x8000U & (vlSelf->top__DOT__led1__DOT__count 
                     ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[263]);
+        ++(vlSymsp->__Vcoverage[334]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffff7fffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x8000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x10000U & (vlSelf->top__DOT__led1__DOT__count 
                      ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[264]);
+        ++(vlSymsp->__Vcoverage[335]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffeffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x10000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x20000U & (vlSelf->top__DOT__led1__DOT__count 
                      ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[265]);
+        ++(vlSymsp->__Vcoverage[336]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffdffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x20000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x40000U & (vlSelf->top__DOT__led1__DOT__count 
                      ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[266]);
+        ++(vlSymsp->__Vcoverage[337]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfffbffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x40000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x80000U & (vlSelf->top__DOT__led1__DOT__count 
                      ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[267]);
+        ++(vlSymsp->__Vcoverage[338]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfff7ffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x80000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x100000U & (vlSelf->top__DOT__led1__DOT__count 
                       ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[268]);
+        ++(vlSymsp->__Vcoverage[339]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffefffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x100000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x200000U & (vlSelf->top__DOT__led1__DOT__count 
                       ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[269]);
+        ++(vlSymsp->__Vcoverage[340]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffdfffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x200000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x400000U & (vlSelf->top__DOT__led1__DOT__count 
                       ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[270]);
+        ++(vlSymsp->__Vcoverage[341]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xffbfffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x400000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x800000U & (vlSelf->top__DOT__led1__DOT__count 
                       ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[271]);
+        ++(vlSymsp->__Vcoverage[342]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xff7fffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x800000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x1000000U & (vlSelf->top__DOT__led1__DOT__count 
                        ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[272]);
+        ++(vlSymsp->__Vcoverage[343]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfeffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x1000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x2000000U & (vlSelf->top__DOT__led1__DOT__count 
                        ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[273]);
+        ++(vlSymsp->__Vcoverage[344]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfdffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x2000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x4000000U & (vlSelf->top__DOT__led1__DOT__count 
                        ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[274]);
+        ++(vlSymsp->__Vcoverage[345]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xfbffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x4000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x8000000U & (vlSelf->top__DOT__led1__DOT__count 
                        ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[275]);
+        ++(vlSymsp->__Vcoverage[346]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xf7ffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x8000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x10000000U & (vlSelf->top__DOT__led1__DOT__count 
                         ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[276]);
+        ++(vlSymsp->__Vcoverage[347]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xefffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x10000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x20000000U & (vlSelf->top__DOT__led1__DOT__count 
                         ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[277]);
+        ++(vlSymsp->__Vcoverage[348]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xdfffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x20000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((0x40000000U & (vlSelf->top__DOT__led1__DOT__count 
                         ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[278]);
+        ++(vlSymsp->__Vcoverage[349]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0xbfffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x40000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if (((vlSelf->top__DOT__led1__DOT__count ^ vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[279]);
+        ++(vlSymsp->__Vcoverage[350]);
         vlSelf->top__DOT__led1__DOT____Vtogcov__count 
             = ((0x7fffffffU & vlSelf->top__DOT__led1__DOT____Vtogcov__count) 
                | (0x80000000U & vlSelf->top__DOT__led1__DOT__count));
     }
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__count 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[475]);
+        ++(vlSymsp->__Vcoverage[551]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffffeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (1U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__count 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[476]);
+        ++(vlSymsp->__Vcoverage[552]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffffdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (2U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__count 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[477]);
+        ++(vlSymsp->__Vcoverage[553]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffffbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (4U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__count 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[478]);
+        ++(vlSymsp->__Vcoverage[554]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffff7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (8U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__count 
                   ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[479]);
+        ++(vlSymsp->__Vcoverage[555]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffffefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x10U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__count 
                   ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[480]);
+        ++(vlSymsp->__Vcoverage[556]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffffdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x20U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__count 
                   ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[481]);
+        ++(vlSymsp->__Vcoverage[557]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffffbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x40U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__count 
                   ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[482]);
+        ++(vlSymsp->__Vcoverage[558]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffff7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x80U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x100U & (vlSelf->top__DOT__mu_seg__DOT__count 
                    ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[483]);
+        ++(vlSymsp->__Vcoverage[559]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffeffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x100U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x200U & (vlSelf->top__DOT__mu_seg__DOT__count 
                    ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[484]);
+        ++(vlSymsp->__Vcoverage[560]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffdffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x200U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x400U & (vlSelf->top__DOT__mu_seg__DOT__count 
                    ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[485]);
+        ++(vlSymsp->__Vcoverage[561]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffffbffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x400U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x800U & (vlSelf->top__DOT__mu_seg__DOT__count 
                    ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[486]);
+        ++(vlSymsp->__Vcoverage[562]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffff7ffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x800U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x1000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                     ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[487]);
+        ++(vlSymsp->__Vcoverage[563]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffefffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x1000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x2000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                     ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[488]);
+        ++(vlSymsp->__Vcoverage[564]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffdfffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x2000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x4000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                     ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[489]);
+        ++(vlSymsp->__Vcoverage[565]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffffbfffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x4000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x8000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                     ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[490]);
+        ++(vlSymsp->__Vcoverage[566]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffff7fffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x8000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x10000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                      ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[491]);
+        ++(vlSymsp->__Vcoverage[567]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffeffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x10000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x20000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                      ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[492]);
+        ++(vlSymsp->__Vcoverage[568]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffdffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x20000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x40000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                      ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[493]);
+        ++(vlSymsp->__Vcoverage[569]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfffbffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x40000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x80000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                      ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[494]);
+        ++(vlSymsp->__Vcoverage[570]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfff7ffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x80000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x100000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                       ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[495]);
+        ++(vlSymsp->__Vcoverage[571]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffefffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x100000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x200000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                       ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[496]);
+        ++(vlSymsp->__Vcoverage[572]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffdfffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x200000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x400000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                       ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[497]);
+        ++(vlSymsp->__Vcoverage[573]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xffbfffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x400000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x800000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                       ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[498]);
+        ++(vlSymsp->__Vcoverage[574]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xff7fffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x800000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x1000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                        ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[499]);
+        ++(vlSymsp->__Vcoverage[575]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfeffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x1000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x2000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                        ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[500]);
+        ++(vlSymsp->__Vcoverage[576]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfdffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x2000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x4000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                        ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[501]);
+        ++(vlSymsp->__Vcoverage[577]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xfbffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x4000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x8000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                        ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[502]);
+        ++(vlSymsp->__Vcoverage[578]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xf7ffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x8000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x10000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                         ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[503]);
+        ++(vlSymsp->__Vcoverage[579]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xefffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x10000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x20000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                         ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[504]);
+        ++(vlSymsp->__Vcoverage[580]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xdfffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x20000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if ((0x40000000U & (vlSelf->top__DOT__mu_seg__DOT__count 
                         ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count))) {
-        ++(vlSymsp->__Vcoverage[505]);
+        ++(vlSymsp->__Vcoverage[581]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0xbfffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x40000000U & vlSelf->top__DOT__mu_seg__DOT__count));
     }
     if (((vlSelf->top__DOT__mu_seg__DOT__count ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[506]);
+        ++(vlSymsp->__Vcoverage[582]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count 
             = ((0x7fffffffU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count) 
                | (0x80000000U & vlSelf->top__DOT__mu_seg__DOT__count));
@@ -1413,78 +1667,78 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                    & (0x203U 
                                                       >= (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
     if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[183]);
+        ++(vlSymsp->__Vcoverage[254]);
         vlSelf->top__DOT____Vtogcov__dec_counter_out 
             = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
                | (1U & (IData)(vlSelf->dec_counter_out)));
     }
     if ((2U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[184]);
+        ++(vlSymsp->__Vcoverage[255]);
         vlSelf->top__DOT____Vtogcov__dec_counter_out 
             = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
                | (2U & (IData)(vlSelf->dec_counter_out)));
     }
     if ((4U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[185]);
+        ++(vlSymsp->__Vcoverage[256]);
         vlSelf->top__DOT____Vtogcov__dec_counter_out 
             = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
                | (4U & (IData)(vlSelf->dec_counter_out)));
     }
     if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[175]);
+        ++(vlSymsp->__Vcoverage[246]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xfeU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (1U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[176]);
+        ++(vlSymsp->__Vcoverage[247]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xfdU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (2U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[177]);
+        ++(vlSymsp->__Vcoverage[248]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xfbU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (4U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((8U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[178]);
+        ++(vlSymsp->__Vcoverage[249]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xf7U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (8U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((0x10U & ((IData)(vlSelf->inc_counter_out) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[179]);
+        ++(vlSymsp->__Vcoverage[250]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xefU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (0x10U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((0x20U & ((IData)(vlSelf->inc_counter_out) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[180]);
+        ++(vlSymsp->__Vcoverage[251]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xdfU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (0x20U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((0x40U & ((IData)(vlSelf->inc_counter_out) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[181]);
+        ++(vlSymsp->__Vcoverage[252]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0xbfU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (0x40U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((0x80U & ((IData)(vlSelf->inc_counter_out) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[182]);
+        ++(vlSymsp->__Vcoverage[253]);
         vlSelf->top__DOT____Vtogcov__inc_counter_out 
             = ((0x7fU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
                | (0x80U & (IData)(vlSelf->inc_counter_out)));
     }
     if ((1U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[231]);
+        ++(vlSymsp->__Vcoverage[302]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xfeU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (1U 
@@ -1492,7 +1746,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((2U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[232]);
+        ++(vlSymsp->__Vcoverage[303]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xfdU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (2U 
@@ -1500,7 +1754,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((4U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[233]);
+        ++(vlSymsp->__Vcoverage[304]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xfbU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (4U 
@@ -1508,7 +1762,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((8U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[234]);
+        ++(vlSymsp->__Vcoverage[305]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xf7U 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (8U 
@@ -1516,7 +1770,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x10U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[235]);
+        ++(vlSymsp->__Vcoverage[306]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xefU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (0x10U 
@@ -1524,7 +1778,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x20U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[236]);
+        ++(vlSymsp->__Vcoverage[307]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xdfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (0x20U 
@@ -1532,7 +1786,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x40U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[237]);
+        ++(vlSymsp->__Vcoverage[308]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0xbfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (0x40U 
@@ -1540,7 +1794,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x80U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[238]);
+        ++(vlSymsp->__Vcoverage[309]);
         vlSelf->top__DOT____Vtogcov__seg_x = ((0x7fU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
                                               | (0x80U 
@@ -1548,7 +1802,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((1U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[239]);
+        ++(vlSymsp->__Vcoverage[310]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xfeU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (1U 
@@ -1556,7 +1810,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((2U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[240]);
+        ++(vlSymsp->__Vcoverage[311]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xfdU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (2U 
@@ -1564,7 +1818,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((4U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[241]);
+        ++(vlSymsp->__Vcoverage[312]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xfbU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (4U 
@@ -1572,7 +1826,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((8U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[242]);
+        ++(vlSymsp->__Vcoverage[313]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xf7U 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (8U 
@@ -1580,7 +1834,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x10U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[243]);
+        ++(vlSymsp->__Vcoverage[314]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xefU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (0x10U 
@@ -1588,7 +1842,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x20U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[244]);
+        ++(vlSymsp->__Vcoverage[315]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xdfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (0x20U 
@@ -1596,7 +1850,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x40U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[245]);
+        ++(vlSymsp->__Vcoverage[316]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0xbfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (0x40U 
@@ -1604,7 +1858,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x80U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[246]);
+        ++(vlSymsp->__Vcoverage[317]);
         vlSelf->top__DOT____Vtogcov__seg_y = ((0x7fU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
                                               | (0x80U 
@@ -1613,7 +1867,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[395]);
+        ++(vlSymsp->__Vcoverage[471]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1622,7 +1876,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[396]);
+        ++(vlSymsp->__Vcoverage[472]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1631,7 +1885,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[397]);
+        ++(vlSymsp->__Vcoverage[473]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1640,7 +1894,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[398]);
+        ++(vlSymsp->__Vcoverage[474]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1649,7 +1903,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[399]);
+        ++(vlSymsp->__Vcoverage[475]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1658,7 +1912,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[400]);
+        ++(vlSymsp->__Vcoverage[476]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1667,7 +1921,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[401]);
+        ++(vlSymsp->__Vcoverage[477]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1676,7 +1930,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[402]);
+        ++(vlSymsp->__Vcoverage[478]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1685,7 +1939,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[403]);
+        ++(vlSymsp->__Vcoverage[479]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1694,7 +1948,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[404]);
+        ++(vlSymsp->__Vcoverage[480]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1703,7 +1957,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[405]);
+        ++(vlSymsp->__Vcoverage[481]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1712,7 +1966,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[406]);
+        ++(vlSymsp->__Vcoverage[482]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1721,7 +1975,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[407]);
+        ++(vlSymsp->__Vcoverage[483]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1730,7 +1984,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[408]);
+        ++(vlSymsp->__Vcoverage[484]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1739,7 +1993,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[409]);
+        ++(vlSymsp->__Vcoverage[485]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1748,7 +2002,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[410]);
+        ++(vlSymsp->__Vcoverage[486]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1757,7 +2011,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[411]);
+        ++(vlSymsp->__Vcoverage[487]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1766,7 +2020,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[412]);
+        ++(vlSymsp->__Vcoverage[488]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1775,7 +2029,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[413]);
+        ++(vlSymsp->__Vcoverage[489]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1784,7 +2038,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[414]);
+        ++(vlSymsp->__Vcoverage[490]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1793,7 +2047,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[415]);
+        ++(vlSymsp->__Vcoverage[491]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1802,7 +2056,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[416]);
+        ++(vlSymsp->__Vcoverage[492]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1811,7 +2065,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[417]);
+        ++(vlSymsp->__Vcoverage[493]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1820,7 +2074,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[418]);
+        ++(vlSymsp->__Vcoverage[494]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1829,7 +2083,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[419]);
+        ++(vlSymsp->__Vcoverage[495]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1838,7 +2092,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[420]);
+        ++(vlSymsp->__Vcoverage[496]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1847,7 +2101,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[421]);
+        ++(vlSymsp->__Vcoverage[497]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1856,7 +2110,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[422]);
+        ++(vlSymsp->__Vcoverage[498]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1865,7 +2119,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[423]);
+        ++(vlSymsp->__Vcoverage[499]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1874,7 +2128,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[424]);
+        ++(vlSymsp->__Vcoverage[500]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1883,7 +2137,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[425]);
+        ++(vlSymsp->__Vcoverage[501]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1892,7 +2146,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[426]);
+        ++(vlSymsp->__Vcoverage[502]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1901,7 +2155,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[427]);
+        ++(vlSymsp->__Vcoverage[503]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1910,7 +2164,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[428]);
+        ++(vlSymsp->__Vcoverage[504]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1919,7 +2173,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[429]);
+        ++(vlSymsp->__Vcoverage[505]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1928,7 +2182,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[430]);
+        ++(vlSymsp->__Vcoverage[506]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1937,7 +2191,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[431]);
+        ++(vlSymsp->__Vcoverage[507]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1946,7 +2200,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[432]);
+        ++(vlSymsp->__Vcoverage[508]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1955,7 +2209,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[433]);
+        ++(vlSymsp->__Vcoverage[509]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1964,7 +2218,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[434]);
+        ++(vlSymsp->__Vcoverage[510]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1973,7 +2227,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[435]);
+        ++(vlSymsp->__Vcoverage[511]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1982,7 +2236,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[436]);
+        ++(vlSymsp->__Vcoverage[512]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -1991,7 +2245,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[437]);
+        ++(vlSymsp->__Vcoverage[513]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2000,7 +2254,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[438]);
+        ++(vlSymsp->__Vcoverage[514]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2009,7 +2263,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[439]);
+        ++(vlSymsp->__Vcoverage[515]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2018,7 +2272,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[440]);
+        ++(vlSymsp->__Vcoverage[516]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2027,7 +2281,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[441]);
+        ++(vlSymsp->__Vcoverage[517]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2036,7 +2290,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[442]);
+        ++(vlSymsp->__Vcoverage[518]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2045,7 +2299,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[443]);
+        ++(vlSymsp->__Vcoverage[519]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2054,7 +2308,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[444]);
+        ++(vlSymsp->__Vcoverage[520]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2063,7 +2317,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[445]);
+        ++(vlSymsp->__Vcoverage[521]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2072,7 +2326,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[446]);
+        ++(vlSymsp->__Vcoverage[522]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2081,7 +2335,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[447]);
+        ++(vlSymsp->__Vcoverage[523]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2090,7 +2344,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[448]);
+        ++(vlSymsp->__Vcoverage[524]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2099,7 +2353,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[449]);
+        ++(vlSymsp->__Vcoverage[525]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2108,7 +2362,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[450]);
+        ++(vlSymsp->__Vcoverage[526]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2117,7 +2371,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[451]);
+        ++(vlSymsp->__Vcoverage[527]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2126,7 +2380,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[452]);
+        ++(vlSymsp->__Vcoverage[528]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2135,7 +2389,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[453]);
+        ++(vlSymsp->__Vcoverage[529]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2144,7 +2398,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[454]);
+        ++(vlSymsp->__Vcoverage[530]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2153,7 +2407,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[455]);
+        ++(vlSymsp->__Vcoverage[531]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2162,7 +2416,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[456]);
+        ++(vlSymsp->__Vcoverage[532]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2171,7 +2425,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[457]);
+        ++(vlSymsp->__Vcoverage[533]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2180,7 +2434,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[458]);
+        ++(vlSymsp->__Vcoverage[534]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2189,7 +2443,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[459]);
+        ++(vlSymsp->__Vcoverage[535]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2198,7 +2452,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[460]);
+        ++(vlSymsp->__Vcoverage[536]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2207,7 +2461,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[461]);
+        ++(vlSymsp->__Vcoverage[537]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2216,7 +2470,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[462]);
+        ++(vlSymsp->__Vcoverage[538]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2225,7 +2479,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[463]);
+        ++(vlSymsp->__Vcoverage[539]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2234,7 +2488,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[464]);
+        ++(vlSymsp->__Vcoverage[540]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2243,7 +2497,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[465]);
+        ++(vlSymsp->__Vcoverage[541]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2252,7 +2506,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[466]);
+        ++(vlSymsp->__Vcoverage[542]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2261,7 +2515,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[467]);
+        ++(vlSymsp->__Vcoverage[543]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2270,7 +2524,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[468]);
+        ++(vlSymsp->__Vcoverage[544]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2279,7 +2533,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[469]);
+        ++(vlSymsp->__Vcoverage[545]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2288,7 +2542,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[470]);
+        ++(vlSymsp->__Vcoverage[546]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2297,7 +2551,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[471]);
+        ++(vlSymsp->__Vcoverage[547]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2306,7 +2560,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[472]);
+        ++(vlSymsp->__Vcoverage[548]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2315,7 +2569,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[473]);
+        ++(vlSymsp->__Vcoverage[549]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2324,7 +2578,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[474]);
+        ++(vlSymsp->__Vcoverage[550]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2333,7 +2587,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[395]);
+        ++(vlSymsp->__Vcoverage[471]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2342,7 +2596,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[396]);
+        ++(vlSymsp->__Vcoverage[472]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2351,7 +2605,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[397]);
+        ++(vlSymsp->__Vcoverage[473]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2360,7 +2614,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {
-        ++(vlSymsp->__Vcoverage[398]);
+        ++(vlSymsp->__Vcoverage[474]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2369,7 +2623,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[399]);
+        ++(vlSymsp->__Vcoverage[475]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2378,7 +2632,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[400]);
+        ++(vlSymsp->__Vcoverage[476]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2387,7 +2641,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[401]);
+        ++(vlSymsp->__Vcoverage[477]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2396,7 +2650,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [0U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [0U]))) {
-        ++(vlSymsp->__Vcoverage[402]);
+        ++(vlSymsp->__Vcoverage[478]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[0U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [0U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2405,7 +2659,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[403]);
+        ++(vlSymsp->__Vcoverage[479]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2414,7 +2668,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[404]);
+        ++(vlSymsp->__Vcoverage[480]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2423,7 +2677,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[405]);
+        ++(vlSymsp->__Vcoverage[481]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2432,7 +2686,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[1U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [1U]))) {
-        ++(vlSymsp->__Vcoverage[406]);
+        ++(vlSymsp->__Vcoverage[482]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2441,7 +2695,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[407]);
+        ++(vlSymsp->__Vcoverage[483]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2450,7 +2704,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[408]);
+        ++(vlSymsp->__Vcoverage[484]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2459,7 +2713,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[409]);
+        ++(vlSymsp->__Vcoverage[485]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2468,7 +2722,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [1U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [1U]))) {
-        ++(vlSymsp->__Vcoverage[410]);
+        ++(vlSymsp->__Vcoverage[486]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[1U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [1U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2477,7 +2731,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[411]);
+        ++(vlSymsp->__Vcoverage[487]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2486,7 +2740,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[412]);
+        ++(vlSymsp->__Vcoverage[488]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2495,7 +2749,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[413]);
+        ++(vlSymsp->__Vcoverage[489]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2504,7 +2758,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[2U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [2U]))) {
-        ++(vlSymsp->__Vcoverage[414]);
+        ++(vlSymsp->__Vcoverage[490]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2513,7 +2767,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[415]);
+        ++(vlSymsp->__Vcoverage[491]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2522,7 +2776,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[416]);
+        ++(vlSymsp->__Vcoverage[492]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2531,7 +2785,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[417]);
+        ++(vlSymsp->__Vcoverage[493]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2540,7 +2794,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [2U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [2U]))) {
-        ++(vlSymsp->__Vcoverage[418]);
+        ++(vlSymsp->__Vcoverage[494]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[2U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [2U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2549,7 +2803,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[419]);
+        ++(vlSymsp->__Vcoverage[495]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2558,7 +2812,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[420]);
+        ++(vlSymsp->__Vcoverage[496]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2567,7 +2821,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[421]);
+        ++(vlSymsp->__Vcoverage[497]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2576,7 +2830,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[3U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [3U]))) {
-        ++(vlSymsp->__Vcoverage[422]);
+        ++(vlSymsp->__Vcoverage[498]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2585,7 +2839,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[423]);
+        ++(vlSymsp->__Vcoverage[499]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2594,7 +2848,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[424]);
+        ++(vlSymsp->__Vcoverage[500]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2603,7 +2857,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[425]);
+        ++(vlSymsp->__Vcoverage[501]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2612,7 +2866,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [3U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [3U]))) {
-        ++(vlSymsp->__Vcoverage[426]);
+        ++(vlSymsp->__Vcoverage[502]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[3U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [3U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2621,7 +2875,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[427]);
+        ++(vlSymsp->__Vcoverage[503]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2630,7 +2884,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[428]);
+        ++(vlSymsp->__Vcoverage[504]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2639,7 +2893,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[429]);
+        ++(vlSymsp->__Vcoverage[505]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2648,7 +2902,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[4U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [4U]))) {
-        ++(vlSymsp->__Vcoverage[430]);
+        ++(vlSymsp->__Vcoverage[506]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2657,7 +2911,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[431]);
+        ++(vlSymsp->__Vcoverage[507]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2666,7 +2920,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[432]);
+        ++(vlSymsp->__Vcoverage[508]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2675,7 +2929,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[433]);
+        ++(vlSymsp->__Vcoverage[509]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2684,7 +2938,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [4U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [4U]))) {
-        ++(vlSymsp->__Vcoverage[434]);
+        ++(vlSymsp->__Vcoverage[510]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[4U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [4U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2693,7 +2947,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[435]);
+        ++(vlSymsp->__Vcoverage[511]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2702,7 +2956,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[436]);
+        ++(vlSymsp->__Vcoverage[512]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2711,7 +2965,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[437]);
+        ++(vlSymsp->__Vcoverage[513]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2720,7 +2974,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[5U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [5U]))) {
-        ++(vlSymsp->__Vcoverage[438]);
+        ++(vlSymsp->__Vcoverage[514]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2729,7 +2983,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[439]);
+        ++(vlSymsp->__Vcoverage[515]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2738,7 +2992,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[440]);
+        ++(vlSymsp->__Vcoverage[516]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2747,7 +3001,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[441]);
+        ++(vlSymsp->__Vcoverage[517]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2756,7 +3010,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [5U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [5U]))) {
-        ++(vlSymsp->__Vcoverage[442]);
+        ++(vlSymsp->__Vcoverage[518]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[5U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [5U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2765,7 +3019,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[443]);
+        ++(vlSymsp->__Vcoverage[519]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2774,7 +3028,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[444]);
+        ++(vlSymsp->__Vcoverage[520]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2783,7 +3037,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[445]);
+        ++(vlSymsp->__Vcoverage[521]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2792,7 +3046,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[6U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [6U]))) {
-        ++(vlSymsp->__Vcoverage[446]);
+        ++(vlSymsp->__Vcoverage[522]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2801,7 +3055,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[447]);
+        ++(vlSymsp->__Vcoverage[523]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2810,7 +3064,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[448]);
+        ++(vlSymsp->__Vcoverage[524]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2819,7 +3073,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[449]);
+        ++(vlSymsp->__Vcoverage[525]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2828,7 +3082,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [6U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [6U]))) {
-        ++(vlSymsp->__Vcoverage[450]);
+        ++(vlSymsp->__Vcoverage[526]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[6U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [6U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2837,7 +3091,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[451]);
+        ++(vlSymsp->__Vcoverage[527]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2846,7 +3100,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[452]);
+        ++(vlSymsp->__Vcoverage[528]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2855,7 +3109,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[453]);
+        ++(vlSymsp->__Vcoverage[529]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2864,7 +3118,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[7U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [7U]))) {
-        ++(vlSymsp->__Vcoverage[454]);
+        ++(vlSymsp->__Vcoverage[530]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2873,7 +3127,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[455]);
+        ++(vlSymsp->__Vcoverage[531]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2882,7 +3136,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[456]);
+        ++(vlSymsp->__Vcoverage[532]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2891,7 +3145,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[457]);
+        ++(vlSymsp->__Vcoverage[533]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2900,7 +3154,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [7U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [7U]))) {
-        ++(vlSymsp->__Vcoverage[458]);
+        ++(vlSymsp->__Vcoverage[534]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[7U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [7U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2909,7 +3163,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[459]);
+        ++(vlSymsp->__Vcoverage[535]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2918,7 +3172,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[460]);
+        ++(vlSymsp->__Vcoverage[536]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2927,7 +3181,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[461]);
+        ++(vlSymsp->__Vcoverage[537]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2936,7 +3190,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[8U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [8U]))) {
-        ++(vlSymsp->__Vcoverage[462]);
+        ++(vlSymsp->__Vcoverage[538]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2945,7 +3199,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[463]);
+        ++(vlSymsp->__Vcoverage[539]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2954,7 +3208,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[464]);
+        ++(vlSymsp->__Vcoverage[540]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2963,7 +3217,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[465]);
+        ++(vlSymsp->__Vcoverage[541]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2972,7 +3226,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [8U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [8U]))) {
-        ++(vlSymsp->__Vcoverage[466]);
+        ++(vlSymsp->__Vcoverage[542]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[8U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [8U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2981,7 +3235,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[467]);
+        ++(vlSymsp->__Vcoverage[543]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xfeU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (1U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2990,7 +3244,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((2U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[468]);
+        ++(vlSymsp->__Vcoverage[544]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xfdU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (2U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -2999,7 +3253,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((4U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[469]);
+        ++(vlSymsp->__Vcoverage[545]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xfbU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (4U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -3008,7 +3262,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((8U & (vlSelf->top__DOT__mu_seg__DOT__segs[9U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [9U]))) {
-        ++(vlSymsp->__Vcoverage[470]);
+        ++(vlSymsp->__Vcoverage[546]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xf7U & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (8U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -3017,7 +3271,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x10U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[471]);
+        ++(vlSymsp->__Vcoverage[547]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xefU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x10U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -3026,7 +3280,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x20U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[472]);
+        ++(vlSymsp->__Vcoverage[548]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xdfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x20U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -3035,7 +3289,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x40U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[473]);
+        ++(vlSymsp->__Vcoverage[549]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0xbfU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x40U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -3044,7 +3298,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     if ((0x80U & (vlSelf->top__DOT__mu_seg__DOT__segs
                   [9U] ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                   [9U]))) {
-        ++(vlSymsp->__Vcoverage[474]);
+        ++(vlSymsp->__Vcoverage[550]);
         vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs[9U] 
             = ((0x7fU & vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                 [9U]) | (0x80U & vlSelf->top__DOT__mu_seg__DOT__segs
@@ -3083,282 +3337,507 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                 [(0xfU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))]
                                  : 0U)));
     if (((IData)(vlSelf->VGA_CLK) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_CLK))) {
-        ++(vlSymsp->__Vcoverage[63]);
+        ++(vlSymsp->__Vcoverage[102]);
         vlSelf->top__DOT____Vtogcov__VGA_CLK = vlSelf->VGA_CLK;
     }
     if ((1U & ((IData)(vlSelf->y) ^ (IData)(vlSelf->top__DOT____Vtogcov__y)))) {
-        ++(vlSymsp->__Vcoverage[155]);
+        ++(vlSymsp->__Vcoverage[226]);
         vlSelf->top__DOT____Vtogcov__y = ((2U & (IData)(vlSelf->top__DOT____Vtogcov__y)) 
                                           | (1U & (IData)(vlSelf->y)));
     }
     if ((2U & ((IData)(vlSelf->y) ^ (IData)(vlSelf->top__DOT____Vtogcov__y)))) {
-        ++(vlSymsp->__Vcoverage[156]);
+        ++(vlSymsp->__Vcoverage[227]);
         vlSelf->top__DOT____Vtogcov__y = ((1U & (IData)(vlSelf->top__DOT____Vtogcov__y)) 
                                           | (2U & (IData)(vlSelf->y)));
     }
     if ((1U & ((IData)(vlSelf->ec_y) ^ (IData)(vlSelf->top__DOT____Vtogcov__ec_y)))) {
-        ++(vlSymsp->__Vcoverage[157]);
+        ++(vlSymsp->__Vcoverage[228]);
         vlSelf->top__DOT____Vtogcov__ec_y = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__ec_y)) 
                                              | (1U 
                                                 & (IData)(vlSelf->ec_y)));
     }
     if ((2U & ((IData)(vlSelf->ec_y) ^ (IData)(vlSelf->top__DOT____Vtogcov__ec_y)))) {
-        ++(vlSymsp->__Vcoverage[158]);
+        ++(vlSymsp->__Vcoverage[229]);
         vlSelf->top__DOT____Vtogcov__ec_y = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__ec_y)) 
                                              | (2U 
                                                 & (IData)(vlSelf->ec_y)));
     }
     if ((4U & ((IData)(vlSelf->ec_y) ^ (IData)(vlSelf->top__DOT____Vtogcov__ec_y)))) {
-        ++(vlSymsp->__Vcoverage[159]);
+        ++(vlSymsp->__Vcoverage[230]);
         vlSelf->top__DOT____Vtogcov__ec_y = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__ec_y)) 
                                              | (4U 
                                                 & (IData)(vlSelf->ec_y)));
     }
     if (((IData)(vlSelf->alu_carry) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_carry))) {
-        ++(vlSymsp->__Vcoverage[174]);
+        ++(vlSymsp->__Vcoverage[245]);
         vlSelf->top__DOT____Vtogcov__alu_carry = vlSelf->alu_carry;
     }
     if (((IData)(vlSelf->alu_overflow) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_overflow))) {
-        ++(vlSymsp->__Vcoverage[173]);
+        ++(vlSymsp->__Vcoverage[244]);
         vlSelf->top__DOT____Vtogcov__alu_overflow = vlSelf->alu_overflow;
     }
     if (((IData)(vlSelf->alu_zero) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_zero))) {
-        ++(vlSymsp->__Vcoverage[172]);
+        ++(vlSymsp->__Vcoverage[243]);
         vlSelf->top__DOT____Vtogcov__alu_zero = vlSelf->alu_zero;
     }
     if ((1U & ((IData)(vlSelf->top__DOT__alu__DOT__tmp) 
                ^ (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)))) {
-        ++(vlSymsp->__Vcoverage[377]);
+        ++(vlSymsp->__Vcoverage[453]);
         vlSelf->top__DOT__alu__DOT____Vtogcov__tmp 
             = ((0xeU & (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)) 
                | (1U & (IData)(vlSelf->top__DOT__alu__DOT__tmp)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__alu__DOT__tmp) 
                ^ (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)))) {
-        ++(vlSymsp->__Vcoverage[378]);
+        ++(vlSymsp->__Vcoverage[454]);
         vlSelf->top__DOT__alu__DOT____Vtogcov__tmp 
             = ((0xdU & (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)) 
                | (2U & (IData)(vlSelf->top__DOT__alu__DOT__tmp)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__alu__DOT__tmp) 
                ^ (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)))) {
-        ++(vlSymsp->__Vcoverage[379]);
+        ++(vlSymsp->__Vcoverage[455]);
         vlSelf->top__DOT__alu__DOT____Vtogcov__tmp 
             = ((0xbU & (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)) 
                | (4U & (IData)(vlSelf->top__DOT__alu__DOT__tmp)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__alu__DOT__tmp) 
                ^ (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)))) {
-        ++(vlSymsp->__Vcoverage[380]);
+        ++(vlSymsp->__Vcoverage[456]);
         vlSelf->top__DOT__alu__DOT____Vtogcov__tmp 
             = ((7U & (IData)(vlSelf->top__DOT__alu__DOT____Vtogcov__tmp)) 
                | (8U & (IData)(vlSelf->top__DOT__alu__DOT__tmp)));
     }
     if ((1U & ((IData)(vlSelf->alu_res) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_res)))) {
-        ++(vlSymsp->__Vcoverage[168]);
+        ++(vlSymsp->__Vcoverage[239]);
         vlSelf->top__DOT____Vtogcov__alu_res = ((0xeU 
                                                  & (IData)(vlSelf->top__DOT____Vtogcov__alu_res)) 
                                                 | (1U 
                                                    & (IData)(vlSelf->alu_res)));
     }
     if ((2U & ((IData)(vlSelf->alu_res) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_res)))) {
-        ++(vlSymsp->__Vcoverage[169]);
+        ++(vlSymsp->__Vcoverage[240]);
         vlSelf->top__DOT____Vtogcov__alu_res = ((0xdU 
                                                  & (IData)(vlSelf->top__DOT____Vtogcov__alu_res)) 
                                                 | (2U 
                                                    & (IData)(vlSelf->alu_res)));
     }
     if ((4U & ((IData)(vlSelf->alu_res) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_res)))) {
-        ++(vlSymsp->__Vcoverage[170]);
+        ++(vlSymsp->__Vcoverage[241]);
         vlSelf->top__DOT____Vtogcov__alu_res = ((0xbU 
                                                  & (IData)(vlSelf->top__DOT____Vtogcov__alu_res)) 
                                                 | (4U 
                                                    & (IData)(vlSelf->alu_res)));
     }
     if ((8U & ((IData)(vlSelf->alu_res) ^ (IData)(vlSelf->top__DOT____Vtogcov__alu_res)))) {
-        ++(vlSymsp->__Vcoverage[171]);
+        ++(vlSymsp->__Vcoverage[242]);
         vlSelf->top__DOT____Vtogcov__alu_res = ((7U 
                                                  & (IData)(vlSelf->top__DOT____Vtogcov__alu_res)) 
                                                 | (8U 
                                                    & (IData)(vlSelf->alu_res)));
     }
     if ((1U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[160]);
+        ++(vlSymsp->__Vcoverage[231]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xfeU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (1U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((2U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[161]);
+        ++(vlSymsp->__Vcoverage[232]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xfdU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (2U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((4U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[162]);
+        ++(vlSymsp->__Vcoverage[233]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xfbU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (4U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((8U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[163]);
+        ++(vlSymsp->__Vcoverage[234]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xf7U 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (8U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((0x10U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[164]);
+        ++(vlSymsp->__Vcoverage[235]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xefU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (0x10U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((0x20U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[165]);
+        ++(vlSymsp->__Vcoverage[236]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xdfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (0x20U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((0x40U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[166]);
+        ++(vlSymsp->__Vcoverage[237]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0xbfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (0x40U 
                                                  & (IData)(vlSelf->y_dec)));
     }
     if ((0x80U & ((IData)(vlSelf->y_dec) ^ (IData)(vlSelf->top__DOT____Vtogcov__y_dec)))) {
-        ++(vlSymsp->__Vcoverage[167]);
+        ++(vlSymsp->__Vcoverage[238]);
         vlSelf->top__DOT____Vtogcov__y_dec = ((0x7fU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__y_dec)) 
                                               | (0x80U 
                                                  & (IData)(vlSelf->y_dec)));
     }
+    if ((1U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[194]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffffeU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (1U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((2U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[195]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffffdU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (2U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((4U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[196]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffffbU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (4U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((8U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[197]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffff7U 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (8U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x10U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[198]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffffefU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x10U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x20U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[199]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffffdfU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x20U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x40U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[200]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffffbfU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x40U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x80U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[201]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffff7fU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x80U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x100U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[202]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffeffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x100U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x200U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[203]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffdffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x200U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x400U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[204]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffffbffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x400U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x800U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[205]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffff7ffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x800U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x1000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[206]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffefffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x1000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x2000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[207]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffdfffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x2000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x4000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[208]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffffbfffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x4000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x8000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[209]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffff7fffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x8000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x10000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[210]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffeffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x10000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x20000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[211]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffdffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x20000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x40000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[212]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfffbffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x40000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x80000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[213]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfff7ffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x80000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x100000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[214]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffefffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x100000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x200000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[215]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffdfffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x200000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x400000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[216]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xffbfffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x400000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x800000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[217]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xff7fffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x800000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x1000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[218]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfeffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x1000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x2000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[219]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfdffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x2000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x4000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[220]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xfbffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x4000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x8000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[221]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xf7ffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x8000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x10000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[222]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xefffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x10000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x20000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[223]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xdfffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x20000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if ((0x40000000U & (vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q))) {
+        ++(vlSymsp->__Vcoverage[224]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0xbfffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x40000000U 
+                                                     & vlSelf->sft_out_q));
+    }
+    if (((vlSelf->sft_out_q ^ vlSelf->top__DOT____Vtogcov__sft_out_q) 
+         >> 0x1fU)) {
+        ++(vlSymsp->__Vcoverage[225]);
+        vlSelf->top__DOT____Vtogcov__sft_out_q = ((0x7fffffffU 
+                                                   & vlSelf->top__DOT____Vtogcov__sft_out_q) 
+                                                  | (0x80000000U 
+                                                     & vlSelf->sft_out_q));
+    }
     if (((IData)(vlSelf->VGA_HSYNC) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_HSYNC))) {
-        ++(vlSymsp->__Vcoverage[64]);
+        ++(vlSymsp->__Vcoverage[103]);
         vlSelf->top__DOT____Vtogcov__VGA_HSYNC = vlSelf->VGA_HSYNC;
     }
     if (((IData)(vlSelf->VGA_VSYNC) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_VSYNC))) {
-        ++(vlSymsp->__Vcoverage[65]);
+        ++(vlSymsp->__Vcoverage[104]);
         vlSelf->top__DOT____Vtogcov__VGA_VSYNC = vlSelf->VGA_VSYNC;
     }
     if (((IData)(vlSelf->top__DOT__my_keyboard__DOT__sampling) 
          ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__sampling))) {
-        ++(vlSymsp->__Vcoverage[367]);
+        ++(vlSymsp->__Vcoverage[443]);
         vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__sampling 
             = vlSelf->top__DOT__my_keyboard__DOT__sampling;
     }
     if ((1U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[47]);
+        ++(vlSymsp->__Vcoverage[86]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfffeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (1U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((2U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[48]);
+        ++(vlSymsp->__Vcoverage[87]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfffdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (2U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((4U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[49]);
+        ++(vlSymsp->__Vcoverage[88]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfffbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (4U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((8U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[50]);
+        ++(vlSymsp->__Vcoverage[89]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfff7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (8U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x10U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[51]);
+        ++(vlSymsp->__Vcoverage[90]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xffefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x20U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[52]);
+        ++(vlSymsp->__Vcoverage[91]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xffdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x40U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[53]);
+        ++(vlSymsp->__Vcoverage[92]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xffbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x80U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[54]);
+        ++(vlSymsp->__Vcoverage[93]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xff7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x100U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[55]);
+        ++(vlSymsp->__Vcoverage[94]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfeffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x100U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x200U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[56]);
+        ++(vlSymsp->__Vcoverage[95]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfdffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x200U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x400U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[57]);
+        ++(vlSymsp->__Vcoverage[96]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xfbffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x400U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x800U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[58]);
+        ++(vlSymsp->__Vcoverage[97]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xf7ffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x800U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x1000U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[59]);
+        ++(vlSymsp->__Vcoverage[98]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xefffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x1000U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x2000U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[60]);
+        ++(vlSymsp->__Vcoverage[99]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xdfffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x2000U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x4000U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[61]);
+        ++(vlSymsp->__Vcoverage[100]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0xbfffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x4000U 
                                                 & (IData)(vlSelf->ledr)));
     }
     if ((0x8000U & ((IData)(vlSelf->ledr) ^ (IData)(vlSelf->top__DOT____Vtogcov__ledr)))) {
-        ++(vlSymsp->__Vcoverage[62]);
+        ++(vlSymsp->__Vcoverage[101]);
         vlSelf->top__DOT____Vtogcov__ledr = ((0x7fffU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__ledr)) 
                                              | (0x8000U 
@@ -3366,7 +3845,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if (((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid) 
          ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid))) {
-        ++(vlSymsp->__Vcoverage[339]);
+        ++(vlSymsp->__Vcoverage[415]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__h_valid 
             = vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid;
     }
@@ -3376,7 +3855,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                  : 0U);
     if (((IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid) 
          ^ (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__v_valid))) {
-        ++(vlSymsp->__Vcoverage[340]);
+        ++(vlSymsp->__Vcoverage[416]);
         vlSelf->top__DOT__my_vga_ctrl__DOT____Vtogcov__v_valid 
             = vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid;
     }
@@ -3389,812 +3868,812 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->top__DOT__v_addr = 0U;
     }
     if ((1U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[107]);
+        ++(vlSymsp->__Vcoverage[146]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((2U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[108]);
+        ++(vlSymsp->__Vcoverage[147]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((4U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[109]);
+        ++(vlSymsp->__Vcoverage[148]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((8U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[110]);
+        ++(vlSymsp->__Vcoverage[149]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x10U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[111]);
+        ++(vlSymsp->__Vcoverage[150]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x20U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[112]);
+        ++(vlSymsp->__Vcoverage[151]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x40U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[113]);
+        ++(vlSymsp->__Vcoverage[152]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x80U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[114]);
+        ++(vlSymsp->__Vcoverage[153]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((1U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[107]);
+        ++(vlSymsp->__Vcoverage[146]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((2U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[108]);
+        ++(vlSymsp->__Vcoverage[147]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((4U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[109]);
+        ++(vlSymsp->__Vcoverage[148]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((8U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[110]);
+        ++(vlSymsp->__Vcoverage[149]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x10U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[111]);
+        ++(vlSymsp->__Vcoverage[150]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x20U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[112]);
+        ++(vlSymsp->__Vcoverage[151]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x40U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[113]);
+        ++(vlSymsp->__Vcoverage[152]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((0x80U & ((IData)(vlSelf->seg2) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg2)))) {
-        ++(vlSymsp->__Vcoverage[114]);
+        ++(vlSymsp->__Vcoverage[153]);
         vlSelf->top__DOT____Vtogcov__seg2 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg2)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg2)));
     }
     if ((1U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[115]);
+        ++(vlSymsp->__Vcoverage[154]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((2U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[116]);
+        ++(vlSymsp->__Vcoverage[155]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((4U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[117]);
+        ++(vlSymsp->__Vcoverage[156]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((8U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[118]);
+        ++(vlSymsp->__Vcoverage[157]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x10U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[119]);
+        ++(vlSymsp->__Vcoverage[158]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x20U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[120]);
+        ++(vlSymsp->__Vcoverage[159]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x40U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[121]);
+        ++(vlSymsp->__Vcoverage[160]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x80U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[122]);
+        ++(vlSymsp->__Vcoverage[161]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((1U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[115]);
+        ++(vlSymsp->__Vcoverage[154]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((2U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[116]);
+        ++(vlSymsp->__Vcoverage[155]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((4U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[117]);
+        ++(vlSymsp->__Vcoverage[156]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((8U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[118]);
+        ++(vlSymsp->__Vcoverage[157]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x10U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[119]);
+        ++(vlSymsp->__Vcoverage[158]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x20U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[120]);
+        ++(vlSymsp->__Vcoverage[159]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x40U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[121]);
+        ++(vlSymsp->__Vcoverage[160]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((0x80U & ((IData)(vlSelf->seg3) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg3)))) {
-        ++(vlSymsp->__Vcoverage[122]);
+        ++(vlSymsp->__Vcoverage[161]);
         vlSelf->top__DOT____Vtogcov__seg3 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg3)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg3)));
     }
     if ((1U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[123]);
+        ++(vlSymsp->__Vcoverage[162]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((2U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[124]);
+        ++(vlSymsp->__Vcoverage[163]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((4U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[125]);
+        ++(vlSymsp->__Vcoverage[164]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((8U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[126]);
+        ++(vlSymsp->__Vcoverage[165]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x10U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[127]);
+        ++(vlSymsp->__Vcoverage[166]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x20U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[128]);
+        ++(vlSymsp->__Vcoverage[167]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x40U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[129]);
+        ++(vlSymsp->__Vcoverage[168]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x80U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[130]);
+        ++(vlSymsp->__Vcoverage[169]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((1U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[123]);
+        ++(vlSymsp->__Vcoverage[162]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((2U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[124]);
+        ++(vlSymsp->__Vcoverage[163]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((4U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[125]);
+        ++(vlSymsp->__Vcoverage[164]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((8U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[126]);
+        ++(vlSymsp->__Vcoverage[165]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x10U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[127]);
+        ++(vlSymsp->__Vcoverage[166]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x20U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[128]);
+        ++(vlSymsp->__Vcoverage[167]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x40U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[129]);
+        ++(vlSymsp->__Vcoverage[168]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((0x80U & ((IData)(vlSelf->seg4) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg4)))) {
-        ++(vlSymsp->__Vcoverage[130]);
+        ++(vlSymsp->__Vcoverage[169]);
         vlSelf->top__DOT____Vtogcov__seg4 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg4)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg4)));
     }
     if ((1U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[131]);
+        ++(vlSymsp->__Vcoverage[170]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((2U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[132]);
+        ++(vlSymsp->__Vcoverage[171]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((4U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[133]);
+        ++(vlSymsp->__Vcoverage[172]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((8U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[134]);
+        ++(vlSymsp->__Vcoverage[173]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x10U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[135]);
+        ++(vlSymsp->__Vcoverage[174]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x20U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[136]);
+        ++(vlSymsp->__Vcoverage[175]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x40U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[137]);
+        ++(vlSymsp->__Vcoverage[176]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x80U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[138]);
+        ++(vlSymsp->__Vcoverage[177]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((1U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[131]);
+        ++(vlSymsp->__Vcoverage[170]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((2U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[132]);
+        ++(vlSymsp->__Vcoverage[171]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((4U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[133]);
+        ++(vlSymsp->__Vcoverage[172]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((8U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[134]);
+        ++(vlSymsp->__Vcoverage[173]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x10U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[135]);
+        ++(vlSymsp->__Vcoverage[174]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x20U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[136]);
+        ++(vlSymsp->__Vcoverage[175]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x40U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[137]);
+        ++(vlSymsp->__Vcoverage[176]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((0x80U & ((IData)(vlSelf->seg5) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg5)))) {
-        ++(vlSymsp->__Vcoverage[138]);
+        ++(vlSymsp->__Vcoverage[177]);
         vlSelf->top__DOT____Vtogcov__seg5 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg5)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg5)));
     }
     if ((1U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[139]);
+        ++(vlSymsp->__Vcoverage[178]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((2U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[140]);
+        ++(vlSymsp->__Vcoverage[179]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((4U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[141]);
+        ++(vlSymsp->__Vcoverage[180]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((8U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[142]);
+        ++(vlSymsp->__Vcoverage[181]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x10U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[143]);
+        ++(vlSymsp->__Vcoverage[182]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x20U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[144]);
+        ++(vlSymsp->__Vcoverage[183]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x40U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[145]);
+        ++(vlSymsp->__Vcoverage[184]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x80U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[146]);
+        ++(vlSymsp->__Vcoverage[185]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((1U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[139]);
+        ++(vlSymsp->__Vcoverage[178]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((2U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[140]);
+        ++(vlSymsp->__Vcoverage[179]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((4U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[141]);
+        ++(vlSymsp->__Vcoverage[180]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((8U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[142]);
+        ++(vlSymsp->__Vcoverage[181]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x10U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[143]);
+        ++(vlSymsp->__Vcoverage[182]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x20U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[144]);
+        ++(vlSymsp->__Vcoverage[183]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x40U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[145]);
+        ++(vlSymsp->__Vcoverage[184]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((0x80U & ((IData)(vlSelf->seg6) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg6)))) {
-        ++(vlSymsp->__Vcoverage[146]);
+        ++(vlSymsp->__Vcoverage[185]);
         vlSelf->top__DOT____Vtogcov__seg6 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg6)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg6)));
     }
     if ((1U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[147]);
+        ++(vlSymsp->__Vcoverage[186]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((2U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[148]);
+        ++(vlSymsp->__Vcoverage[187]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((4U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[149]);
+        ++(vlSymsp->__Vcoverage[188]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((8U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[150]);
+        ++(vlSymsp->__Vcoverage[189]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x10U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[151]);
+        ++(vlSymsp->__Vcoverage[190]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x20U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[152]);
+        ++(vlSymsp->__Vcoverage[191]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x40U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[153]);
+        ++(vlSymsp->__Vcoverage[192]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x80U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[154]);
+        ++(vlSymsp->__Vcoverage[193]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((1U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[147]);
+        ++(vlSymsp->__Vcoverage[186]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((2U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[148]);
+        ++(vlSymsp->__Vcoverage[187]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((4U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[149]);
+        ++(vlSymsp->__Vcoverage[188]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((8U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[150]);
+        ++(vlSymsp->__Vcoverage[189]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x10U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[151]);
+        ++(vlSymsp->__Vcoverage[190]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x20U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[152]);
+        ++(vlSymsp->__Vcoverage[191]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x40U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[153]);
+        ++(vlSymsp->__Vcoverage[192]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((0x80U & ((IData)(vlSelf->seg7) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg7)))) {
-        ++(vlSymsp->__Vcoverage[154]);
+        ++(vlSymsp->__Vcoverage[193]);
         vlSelf->top__DOT____Vtogcov__seg7 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg7)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg7)));
     }
     if ((1U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[91]);
+        ++(vlSymsp->__Vcoverage[130]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((2U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[92]);
+        ++(vlSymsp->__Vcoverage[131]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((4U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[93]);
+        ++(vlSymsp->__Vcoverage[132]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((8U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[94]);
+        ++(vlSymsp->__Vcoverage[133]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((0x10U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[95]);
+        ++(vlSymsp->__Vcoverage[134]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((0x20U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[96]);
+        ++(vlSymsp->__Vcoverage[135]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((0x40U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[97]);
+        ++(vlSymsp->__Vcoverage[136]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((0x80U & ((IData)(vlSelf->seg0) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg0)))) {
-        ++(vlSymsp->__Vcoverage[98]);
+        ++(vlSymsp->__Vcoverage[137]);
         vlSelf->top__DOT____Vtogcov__seg0 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg0)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg0)));
     }
     if ((1U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[99]);
+        ++(vlSymsp->__Vcoverage[138]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xfeU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (1U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((2U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[100]);
+        ++(vlSymsp->__Vcoverage[139]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xfdU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (2U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((4U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[101]);
+        ++(vlSymsp->__Vcoverage[140]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xfbU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (4U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((8U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[102]);
+        ++(vlSymsp->__Vcoverage[141]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xf7U 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (8U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((0x10U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[103]);
+        ++(vlSymsp->__Vcoverage[142]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xefU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (0x10U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((0x20U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[104]);
+        ++(vlSymsp->__Vcoverage[143]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xdfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (0x20U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((0x40U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[105]);
+        ++(vlSymsp->__Vcoverage[144]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0xbfU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (0x40U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((0x80U & ((IData)(vlSelf->seg1) ^ (IData)(vlSelf->top__DOT____Vtogcov__seg1)))) {
-        ++(vlSymsp->__Vcoverage[106]);
+        ++(vlSymsp->__Vcoverage[145]);
         vlSelf->top__DOT____Vtogcov__seg1 = ((0x7fU 
                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg1)) 
                                              | (0x80U 
                                                 & (IData)(vlSelf->seg1)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__h_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[187]);
+        ++(vlSymsp->__Vcoverage[258]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3feU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (1U 
                                                   & (IData)(vlSelf->top__DOT__h_addr)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__h_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[188]);
+        ++(vlSymsp->__Vcoverage[259]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3fdU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (2U 
                                                   & (IData)(vlSelf->top__DOT__h_addr)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__h_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[189]);
+        ++(vlSymsp->__Vcoverage[260]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3fbU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (4U 
                                                   & (IData)(vlSelf->top__DOT__h_addr)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__h_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[190]);
+        ++(vlSymsp->__Vcoverage[261]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3f7U 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (8U 
@@ -4202,7 +4681,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x10U & ((IData)(vlSelf->top__DOT__h_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[191]);
+        ++(vlSymsp->__Vcoverage[262]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3efU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (0x10U 
@@ -4210,7 +4689,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x20U & ((IData)(vlSelf->top__DOT__h_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[192]);
+        ++(vlSymsp->__Vcoverage[263]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3dfU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (0x20U 
@@ -4218,7 +4697,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x40U & ((IData)(vlSelf->top__DOT__h_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[193]);
+        ++(vlSymsp->__Vcoverage[264]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x3bfU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (0x40U 
@@ -4226,7 +4705,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x80U & ((IData)(vlSelf->top__DOT__h_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[194]);
+        ++(vlSymsp->__Vcoverage[265]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x37fU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (0x80U 
@@ -4234,7 +4713,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x100U & ((IData)(vlSelf->top__DOT__h_addr) 
                    ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[195]);
+        ++(vlSymsp->__Vcoverage[266]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x2ffU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (0x100U 
@@ -4242,39 +4721,39 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x200U & ((IData)(vlSelf->top__DOT__h_addr) 
                    ^ (IData)(vlSelf->top__DOT____Vtogcov__h_addr)))) {
-        ++(vlSymsp->__Vcoverage[196]);
+        ++(vlSymsp->__Vcoverage[267]);
         vlSelf->top__DOT____Vtogcov__h_addr = ((0x1ffU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__h_addr)) 
                                                | (0x200U 
                                                   & (IData)(vlSelf->top__DOT__h_addr)));
     }
     if (((IData)(vlSelf->VGA_BLANK_N) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_BLANK_N))) {
-        ++(vlSymsp->__Vcoverage[66]);
+        ++(vlSymsp->__Vcoverage[105]);
         vlSelf->top__DOT____Vtogcov__VGA_BLANK_N = vlSelf->VGA_BLANK_N;
     }
     if ((1U & ((IData)(vlSelf->top__DOT__v_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[197]);
+        ++(vlSymsp->__Vcoverage[268]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3feU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (1U 
                                                   & (IData)(vlSelf->top__DOT__v_addr)));
     }
     if ((2U & ((IData)(vlSelf->top__DOT__v_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[198]);
+        ++(vlSymsp->__Vcoverage[269]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3fdU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (2U 
                                                   & (IData)(vlSelf->top__DOT__v_addr)));
     }
     if ((4U & ((IData)(vlSelf->top__DOT__v_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[199]);
+        ++(vlSymsp->__Vcoverage[270]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3fbU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (4U 
                                                   & (IData)(vlSelf->top__DOT__v_addr)));
     }
     if ((8U & ((IData)(vlSelf->top__DOT__v_addr) ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[200]);
+        ++(vlSymsp->__Vcoverage[271]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3f7U 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (8U 
@@ -4282,7 +4761,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x10U & ((IData)(vlSelf->top__DOT__v_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[201]);
+        ++(vlSymsp->__Vcoverage[272]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3efU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (0x10U 
@@ -4290,7 +4769,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x20U & ((IData)(vlSelf->top__DOT__v_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[202]);
+        ++(vlSymsp->__Vcoverage[273]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3dfU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (0x20U 
@@ -4298,7 +4777,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x40U & ((IData)(vlSelf->top__DOT__v_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[203]);
+        ++(vlSymsp->__Vcoverage[274]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x3bfU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (0x40U 
@@ -4306,7 +4785,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x80U & ((IData)(vlSelf->top__DOT__v_addr) 
                   ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[204]);
+        ++(vlSymsp->__Vcoverage[275]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x37fU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (0x80U 
@@ -4314,7 +4793,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x100U & ((IData)(vlSelf->top__DOT__v_addr) 
                    ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[205]);
+        ++(vlSymsp->__Vcoverage[276]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x2ffU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (0x100U 
@@ -4322,7 +4801,7 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     }
     if ((0x200U & ((IData)(vlSelf->top__DOT__v_addr) 
                    ^ (IData)(vlSelf->top__DOT____Vtogcov__v_addr)))) {
-        ++(vlSymsp->__Vcoverage[206]);
+        ++(vlSymsp->__Vcoverage[277]);
         vlSelf->top__DOT____Vtogcov__v_addr = ((0x1ffU 
                                                 & (IData)(vlSelf->top__DOT____Vtogcov__v_addr)) 
                                                | (0x200U 
@@ -4345,9 +4824,9 @@ VL_ATTR_COLD void Vtop___024root___initial__TOP__0(Vtop___024root* vlSelf) {
     VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_h161bb746__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
-    ++(vlSymsp->__Vcoverage[515]);
+    ++(vlSymsp->__Vcoverage[591]);
     vlSelf->top__DOT__timer_1s__DOT__count_clk = 0U;
-    ++(vlSymsp->__Vcoverage[548]);
+    ++(vlSymsp->__Vcoverage[624]);
 }
 
 VL_ATTR_COLD void Vtop___024root___settle__TOP__1(Vtop___024root* vlSelf) {
@@ -4360,217 +4839,217 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__1(Vtop___024root* vlSelf) {
           | (0x1ffU & (IData)(vlSelf->top__DOT__v_addr)))];
     if ((1U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[516]);
+        ++(vlSymsp->__Vcoverage[592]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffffeU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (1U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((2U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[517]);
+        ++(vlSymsp->__Vcoverage[593]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffffdU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (2U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((4U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[518]);
+        ++(vlSymsp->__Vcoverage[594]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffffbU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (4U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((8U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[519]);
+        ++(vlSymsp->__Vcoverage[595]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffff7U & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (8U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x10U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                   ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[520]);
+        ++(vlSymsp->__Vcoverage[596]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffffefU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x10U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x20U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                   ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[521]);
+        ++(vlSymsp->__Vcoverage[597]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffffdfU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x20U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x40U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                   ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[522]);
+        ++(vlSymsp->__Vcoverage[598]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffffbfU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x40U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x80U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                   ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[523]);
+        ++(vlSymsp->__Vcoverage[599]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffff7fU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x80U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x100U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                    ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[524]);
+        ++(vlSymsp->__Vcoverage[600]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffeffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x100U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x200U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                    ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[525]);
+        ++(vlSymsp->__Vcoverage[601]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffdffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x200U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x400U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                    ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[526]);
+        ++(vlSymsp->__Vcoverage[602]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffffbffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x400U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x800U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                    ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[527]);
+        ++(vlSymsp->__Vcoverage[603]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffff7ffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x800U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x1000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                     ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[528]);
+        ++(vlSymsp->__Vcoverage[604]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffefffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x1000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x2000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                     ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[529]);
+        ++(vlSymsp->__Vcoverage[605]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffdfffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x2000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x4000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                     ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[530]);
+        ++(vlSymsp->__Vcoverage[606]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffffbfffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x4000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x8000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                     ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[531]);
+        ++(vlSymsp->__Vcoverage[607]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffff7fffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x8000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x10000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                      ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[532]);
+        ++(vlSymsp->__Vcoverage[608]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffeffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x10000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x20000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                      ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[533]);
+        ++(vlSymsp->__Vcoverage[609]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffdffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x20000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x40000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                      ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[534]);
+        ++(vlSymsp->__Vcoverage[610]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfffbffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x40000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x80000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                      ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[535]);
+        ++(vlSymsp->__Vcoverage[611]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfff7ffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x80000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x100000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                       ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[536]);
+        ++(vlSymsp->__Vcoverage[612]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffefffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x100000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x200000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                       ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[537]);
+        ++(vlSymsp->__Vcoverage[613]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffdfffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x200000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x400000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                       ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[538]);
+        ++(vlSymsp->__Vcoverage[614]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xffbfffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x400000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x800000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                       ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[539]);
+        ++(vlSymsp->__Vcoverage[615]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xff7fffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x800000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x1000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                        ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[540]);
+        ++(vlSymsp->__Vcoverage[616]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfeffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x1000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x2000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                        ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[541]);
+        ++(vlSymsp->__Vcoverage[617]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfdffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x2000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x4000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                        ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[542]);
+        ++(vlSymsp->__Vcoverage[618]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xfbffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x4000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x8000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                        ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[543]);
+        ++(vlSymsp->__Vcoverage[619]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xf7ffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x8000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x10000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                         ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[544]);
+        ++(vlSymsp->__Vcoverage[620]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xefffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x10000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x20000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                         ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[545]);
+        ++(vlSymsp->__Vcoverage[621]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xdfffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x20000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((0x40000000U & (vlSelf->top__DOT__timer_1s__DOT__count_clk 
                         ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk))) {
-        ++(vlSymsp->__Vcoverage[546]);
+        ++(vlSymsp->__Vcoverage[622]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0xbfffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x40000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
@@ -4578,174 +5057,174 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__1(Vtop___024root* vlSelf) {
     if (((vlSelf->top__DOT__timer_1s__DOT__count_clk 
           ^ vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
          >> 0x1fU)) {
-        ++(vlSymsp->__Vcoverage[547]);
+        ++(vlSymsp->__Vcoverage[623]);
         vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk 
             = ((0x7fffffffU & vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk) 
                | (0x80000000U & vlSelf->top__DOT__timer_1s__DOT__count_clk));
     }
     if ((1U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[207]);
+        ++(vlSymsp->__Vcoverage[278]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffeU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (1U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((2U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[208]);
+        ++(vlSymsp->__Vcoverage[279]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffdU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (2U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((4U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[209]);
+        ++(vlSymsp->__Vcoverage[280]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffbU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (4U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((8U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[210]);
+        ++(vlSymsp->__Vcoverage[281]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffff7U 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (8U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x10U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[211]);
+        ++(vlSymsp->__Vcoverage[282]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffffefU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x10U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x20U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[212]);
+        ++(vlSymsp->__Vcoverage[283]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffffdfU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x20U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x40U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[213]);
+        ++(vlSymsp->__Vcoverage[284]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffffbfU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x40U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x80U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[214]);
+        ++(vlSymsp->__Vcoverage[285]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffff7fU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x80U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x100U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[215]);
+        ++(vlSymsp->__Vcoverage[286]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffeffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x100U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x200U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[216]);
+        ++(vlSymsp->__Vcoverage[287]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffdffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x200U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x400U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[217]);
+        ++(vlSymsp->__Vcoverage[288]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffbffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x400U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x800U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[218]);
+        ++(vlSymsp->__Vcoverage[289]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfff7ffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x800U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x1000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[219]);
+        ++(vlSymsp->__Vcoverage[290]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffefffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x1000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x2000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[220]);
+        ++(vlSymsp->__Vcoverage[291]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffdfffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x2000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x4000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[221]);
+        ++(vlSymsp->__Vcoverage[292]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffbfffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x4000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x8000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[222]);
+        ++(vlSymsp->__Vcoverage[293]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xff7fffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x8000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x10000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[223]);
+        ++(vlSymsp->__Vcoverage[294]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfeffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x10000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x20000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[224]);
+        ++(vlSymsp->__Vcoverage[295]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfdffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x20000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x40000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[225]);
+        ++(vlSymsp->__Vcoverage[296]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfbffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x40000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x80000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[226]);
+        ++(vlSymsp->__Vcoverage[297]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xf7ffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x80000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x100000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[227]);
+        ++(vlSymsp->__Vcoverage[298]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xefffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x100000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x200000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[228]);
+        ++(vlSymsp->__Vcoverage[299]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xdfffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x200000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x400000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[229]);
+        ++(vlSymsp->__Vcoverage[300]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xbfffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x400000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
     if ((0x800000U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
-        ++(vlSymsp->__Vcoverage[230]);
+        ++(vlSymsp->__Vcoverage[301]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0x7fffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | (0x800000U 
@@ -4757,168 +5236,168 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__1(Vtop___024root* vlSelf) {
                               >> 8U));
     vlSelf->VGA_B = (0xffU & vlSelf->top__DOT__vga_data);
     if ((1U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[67]);
+        ++(vlSymsp->__Vcoverage[106]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xfeU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (1U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((2U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[68]);
+        ++(vlSymsp->__Vcoverage[107]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xfdU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (2U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((4U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[69]);
+        ++(vlSymsp->__Vcoverage[108]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xfbU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (4U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((8U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[70]);
+        ++(vlSymsp->__Vcoverage[109]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xf7U 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (8U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((0x10U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[71]);
+        ++(vlSymsp->__Vcoverage[110]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xefU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (0x10U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((0x20U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[72]);
+        ++(vlSymsp->__Vcoverage[111]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xdfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (0x20U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((0x40U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[73]);
+        ++(vlSymsp->__Vcoverage[112]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xbfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (0x40U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((0x80U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
-        ++(vlSymsp->__Vcoverage[74]);
+        ++(vlSymsp->__Vcoverage[113]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0x7fU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)) 
                                               | (0x80U 
                                                  & (IData)(vlSelf->VGA_R)));
     }
     if ((1U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[75]);
+        ++(vlSymsp->__Vcoverage[114]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xfeU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (1U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((2U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[76]);
+        ++(vlSymsp->__Vcoverage[115]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xfdU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (2U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((4U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[77]);
+        ++(vlSymsp->__Vcoverage[116]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xfbU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (4U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((8U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[78]);
+        ++(vlSymsp->__Vcoverage[117]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xf7U 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (8U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((0x10U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[79]);
+        ++(vlSymsp->__Vcoverage[118]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xefU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (0x10U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((0x20U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[80]);
+        ++(vlSymsp->__Vcoverage[119]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xdfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (0x20U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((0x40U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[81]);
+        ++(vlSymsp->__Vcoverage[120]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0xbfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (0x40U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((0x80U & ((IData)(vlSelf->VGA_G) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)))) {
-        ++(vlSymsp->__Vcoverage[82]);
+        ++(vlSymsp->__Vcoverage[121]);
         vlSelf->top__DOT____Vtogcov__VGA_G = ((0x7fU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_G)) 
                                               | (0x80U 
                                                  & (IData)(vlSelf->VGA_G)));
     }
     if ((1U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[83]);
+        ++(vlSymsp->__Vcoverage[122]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xfeU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (1U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((2U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[84]);
+        ++(vlSymsp->__Vcoverage[123]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xfdU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (2U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((4U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[85]);
+        ++(vlSymsp->__Vcoverage[124]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xfbU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (4U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((8U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[86]);
+        ++(vlSymsp->__Vcoverage[125]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xf7U 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (8U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((0x10U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[87]);
+        ++(vlSymsp->__Vcoverage[126]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xefU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (0x10U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((0x20U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[88]);
+        ++(vlSymsp->__Vcoverage[127]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xdfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (0x20U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((0x40U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[89]);
+        ++(vlSymsp->__Vcoverage[128]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0xbfU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (0x40U 
                                                  & (IData)(vlSelf->VGA_B)));
     }
     if ((0x80U & ((IData)(vlSelf->VGA_B) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)))) {
-        ++(vlSymsp->__Vcoverage[90]);
+        ++(vlSymsp->__Vcoverage[129]);
         vlSelf->top__DOT____Vtogcov__VGA_B = ((0x7fU 
                                                & (IData)(vlSelf->top__DOT____Vtogcov__VGA_B)) 
                                               | (0x80U 
@@ -4979,207 +5458,278 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[44]), first, "vsrc/top.v", 15, 8, ".top", "v_toggle/top", "ec_en", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[45]), first, "vsrc/top.v", 16, 14, ".top", "v_toggle/top", "s[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[46]), first, "vsrc/top.v", 16, 14, ".top", "v_toggle/top", "s[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[47]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[48]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[49]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[50]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[51]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[52]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[53]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[54]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[55]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[56]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[57]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[58]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[59]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[60]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[61]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[62]), first, "vsrc/top.v", 17, 19, ".top", "v_toggle/top", "ledr[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[63]), first, "vsrc/top.v", 18, 12, ".top", "v_toggle/top", "VGA_CLK", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[64]), first, "vsrc/top.v", 19, 12, ".top", "v_toggle/top", "VGA_HSYNC", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[65]), first, "vsrc/top.v", 20, 12, ".top", "v_toggle/top", "VGA_VSYNC", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[66]), first, "vsrc/top.v", 21, 12, ".top", "v_toggle/top", "VGA_BLANK_N", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[67]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[68]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[69]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[70]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[71]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[72]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[73]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[74]), first, "vsrc/top.v", 22, 18, ".top", "v_toggle/top", "VGA_R[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[75]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[76]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[77]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[78]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[79]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[80]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[81]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[82]), first, "vsrc/top.v", 23, 18, ".top", "v_toggle/top", "VGA_G[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[83]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[84]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[85]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[86]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[87]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[88]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[89]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[90]), first, "vsrc/top.v", 24, 18, ".top", "v_toggle/top", "VGA_B[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[91]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[92]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[93]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[94]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[95]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[96]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[97]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[98]), first, "vsrc/top.v", 25, 18, ".top", "v_toggle/top", "seg0[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[99]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[100]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[101]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[102]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[103]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[104]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[105]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[106]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "seg1[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[107]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[108]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[109]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[110]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[111]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[112]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[113]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[114]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "seg2[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[115]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[116]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[117]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[118]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[119]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[120]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[121]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[122]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "seg3[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[123]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[124]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[125]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[126]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[127]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[128]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[129]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[130]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg4[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[131]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[132]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[133]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[134]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[135]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[136]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[137]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[138]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg5[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[139]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[140]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[141]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[142]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[143]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[144]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[145]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[146]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg6[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[147]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[148]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[149]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[150]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[151]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[152]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[153]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[154]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg7[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[155]), first, "vsrc/top.v", 33, 19, ".top", "v_toggle/top", "y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[156]), first, "vsrc/top.v", 33, 19, ".top", "v_toggle/top", "y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[157]), first, "vsrc/top.v", 34, 19, ".top", "v_toggle/top", "ec_y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[158]), first, "vsrc/top.v", 34, 19, ".top", "v_toggle/top", "ec_y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[159]), first, "vsrc/top.v", 34, 19, ".top", "v_toggle/top", "ec_y[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[160]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[161]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[162]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[163]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[164]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[165]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[166]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[167]), first, "vsrc/top.v", 35, 19, ".top", "v_toggle/top", "y_dec[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[168]), first, "vsrc/top.v", 36, 15, ".top", "v_toggle/top", "alu_res[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[169]), first, "vsrc/top.v", 36, 15, ".top", "v_toggle/top", "alu_res[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[170]), first, "vsrc/top.v", 36, 15, ".top", "v_toggle/top", "alu_res[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[171]), first, "vsrc/top.v", 36, 15, ".top", "v_toggle/top", "alu_res[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[172]), first, "vsrc/top.v", 37, 9, ".top", "v_toggle/top", "alu_zero", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[173]), first, "vsrc/top.v", 38, 9, ".top", "v_toggle/top", "alu_overflow", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[174]), first, "vsrc/top.v", 39, 9, ".top", "v_toggle/top", "alu_carry", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[175]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[176]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[177]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[178]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[179]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[180]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[181]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[182]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "inc_counter_out[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[183]), first, "vsrc/top.v", 41, 19, ".top", "v_toggle/top", "dec_counter_out[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[184]), first, "vsrc/top.v", 41, 19, ".top", "v_toggle/top", "dec_counter_out[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[185]), first, "vsrc/top.v", 41, 19, ".top", "v_toggle/top", "dec_counter_out[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/top.v", 42, 9, ".top", "v_toggle/top", "timer_out", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[187]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[188]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[189]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[190]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[191]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[192]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[193]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[194]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[195]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[196]), first, "vsrc/top.v", 91, 12, ".top", "v_toggle/top", "h_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[197]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[198]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[199]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[200]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[201]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[202]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[203]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[204]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[205]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[206]), first, "vsrc/top.v", 92, 12, ".top", "v_toggle/top", "v_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[207]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[208]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[209]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[210]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[211]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[212]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[213]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[214]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[215]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[216]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[217]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[218]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[219]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[220]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[221]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[222]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[223]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[224]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[225]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[226]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[227]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[228]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[229]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[230]), first, "vsrc/top.v", 93, 13, ".top", "v_toggle/top", "vga_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[231]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[232]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[233]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[234]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[235]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[236]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[237]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[238]), first, "vsrc/top.v", 126, 11, ".top", "v_toggle/top", "seg_x[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[239]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[240]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[241]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[242]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[243]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[244]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[245]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[246]), first, "vsrc/top.v", 127, 11, ".top", "v_toggle/top", "seg_y[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[247]), first, "vsrc/top.v", 129, 1, ".top", "v_line/top", "block", "129-131");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[47]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[48]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[49]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[50]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[51]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[52]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[53]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[54]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[55]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[56]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[57]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[58]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[59]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[60]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[61]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[62]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[63]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[64]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[65]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[66]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[67]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[68]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[69]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[70]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[71]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[72]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[73]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[74]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[75]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[76]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[77]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[78]), first, "vsrc/top.v", 17, 15, ".top", "v_toggle/top", "sft_rgtr_data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[79]), first, "vsrc/top.v", 18, 14, ".top", "v_toggle/top", "sft_rgtr_shamt[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[80]), first, "vsrc/top.v", 18, 14, ".top", "v_toggle/top", "sft_rgtr_shamt[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[81]), first, "vsrc/top.v", 18, 14, ".top", "v_toggle/top", "sft_rgtr_shamt[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[82]), first, "vsrc/top.v", 18, 14, ".top", "v_toggle/top", "sft_rgtr_shamt[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[83]), first, "vsrc/top.v", 18, 14, ".top", "v_toggle/top", "sft_rgtr_shamt[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[84]), first, "vsrc/top.v", 19, 8, ".top", "v_toggle/top", "sft_rgtr_l_or_r", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[85]), first, "vsrc/top.v", 20, 8, ".top", "v_toggle/top", "sft_rgtr_a_or_l", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[86]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[87]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[88]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[89]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[90]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[91]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[92]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[93]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[94]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[95]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[96]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[97]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[98]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[99]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[100]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[101]), first, "vsrc/top.v", 21, 19, ".top", "v_toggle/top", "ledr[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[102]), first, "vsrc/top.v", 22, 12, ".top", "v_toggle/top", "VGA_CLK", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[103]), first, "vsrc/top.v", 23, 12, ".top", "v_toggle/top", "VGA_HSYNC", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[104]), first, "vsrc/top.v", 24, 12, ".top", "v_toggle/top", "VGA_VSYNC", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[105]), first, "vsrc/top.v", 25, 12, ".top", "v_toggle/top", "VGA_BLANK_N", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[106]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[107]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[108]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[109]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[110]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[111]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[112]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[113]), first, "vsrc/top.v", 26, 18, ".top", "v_toggle/top", "VGA_R[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[114]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[115]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[116]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[117]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[118]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[119]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[120]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[121]), first, "vsrc/top.v", 27, 18, ".top", "v_toggle/top", "VGA_G[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[122]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[123]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[124]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[125]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[126]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[127]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[128]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[129]), first, "vsrc/top.v", 28, 18, ".top", "v_toggle/top", "VGA_B[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[130]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[131]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[132]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[133]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[134]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[135]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[136]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[137]), first, "vsrc/top.v", 29, 18, ".top", "v_toggle/top", "seg0[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[138]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[139]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[140]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[141]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[142]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[143]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[144]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[145]), first, "vsrc/top.v", 30, 18, ".top", "v_toggle/top", "seg1[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[146]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[147]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[148]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[149]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[150]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[151]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[152]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[153]), first, "vsrc/top.v", 31, 18, ".top", "v_toggle/top", "seg2[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[154]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[155]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[156]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[157]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[158]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[159]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[160]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[161]), first, "vsrc/top.v", 32, 18, ".top", "v_toggle/top", "seg3[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[162]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[163]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[164]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[165]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[166]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[167]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[168]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[169]), first, "vsrc/top.v", 33, 18, ".top", "v_toggle/top", "seg4[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[170]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[171]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[172]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[173]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[174]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[175]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[176]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[177]), first, "vsrc/top.v", 34, 18, ".top", "v_toggle/top", "seg5[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[178]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[179]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[180]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[181]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[182]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[183]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[184]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[185]), first, "vsrc/top.v", 35, 18, ".top", "v_toggle/top", "seg6[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[187]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[188]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[189]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[190]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[191]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[192]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[193]), first, "vsrc/top.v", 36, 18, ".top", "v_toggle/top", "seg7[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[194]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[195]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[196]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[197]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[198]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[199]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[200]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[201]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[202]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[203]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[204]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[205]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[206]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[207]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[208]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[209]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[210]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[211]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[212]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[213]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[214]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[215]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[216]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[217]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[218]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[219]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[220]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[221]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[222]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[223]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[224]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[225]), first, "vsrc/top.v", 37, 16, ".top", "v_toggle/top", "sft_out_q[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[226]), first, "vsrc/top.v", 38, 19, ".top", "v_toggle/top", "y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[227]), first, "vsrc/top.v", 38, 19, ".top", "v_toggle/top", "y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[228]), first, "vsrc/top.v", 39, 19, ".top", "v_toggle/top", "ec_y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[229]), first, "vsrc/top.v", 39, 19, ".top", "v_toggle/top", "ec_y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[230]), first, "vsrc/top.v", 39, 19, ".top", "v_toggle/top", "ec_y[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[231]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[232]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[233]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[234]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[235]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[236]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[237]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[238]), first, "vsrc/top.v", 40, 19, ".top", "v_toggle/top", "y_dec[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[239]), first, "vsrc/top.v", 41, 15, ".top", "v_toggle/top", "alu_res[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[240]), first, "vsrc/top.v", 41, 15, ".top", "v_toggle/top", "alu_res[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[241]), first, "vsrc/top.v", 41, 15, ".top", "v_toggle/top", "alu_res[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[242]), first, "vsrc/top.v", 41, 15, ".top", "v_toggle/top", "alu_res[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[243]), first, "vsrc/top.v", 42, 9, ".top", "v_toggle/top", "alu_zero", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[244]), first, "vsrc/top.v", 43, 9, ".top", "v_toggle/top", "alu_overflow", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[245]), first, "vsrc/top.v", 44, 9, ".top", "v_toggle/top", "alu_carry", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[246]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[247]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[248]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[249]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[250]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[251]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[252]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[253]), first, "vsrc/top.v", 45, 19, ".top", "v_toggle/top", "inc_counter_out[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[254]), first, "vsrc/top.v", 46, 19, ".top", "v_toggle/top", "dec_counter_out[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[255]), first, "vsrc/top.v", 46, 19, ".top", "v_toggle/top", "dec_counter_out[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[256]), first, "vsrc/top.v", 46, 19, ".top", "v_toggle/top", "dec_counter_out[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[257]), first, "vsrc/top.v", 47, 9, ".top", "v_toggle/top", "timer_out", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[258]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[259]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[260]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[261]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[262]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[263]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[264]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[265]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[266]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[267]), first, "vsrc/top.v", 104, 12, ".top", "v_toggle/top", "h_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[268]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[269]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[270]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[271]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[272]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[273]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[274]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[275]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[276]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[277]), first, "vsrc/top.v", 105, 12, ".top", "v_toggle/top", "v_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[278]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[279]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[280]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[281]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[282]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[283]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[284]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[285]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[286]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[287]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[288]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[289]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[290]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[291]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[292]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[293]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[294]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[295]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[296]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[297]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[298]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[299]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[300]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[301]), first, "vsrc/top.v", 106, 13, ".top", "v_toggle/top", "vga_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[302]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[303]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[304]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[305]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[306]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[307]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[308]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[309]), first, "vsrc/top.v", 139, 11, ".top", "v_toggle/top", "seg_x[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[310]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[311]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[312]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[313]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[314]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[315]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[316]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[317]), first, "vsrc/top.v", 140, 11, ".top", "v_toggle/top", "seg_y[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[318]), first, "vsrc/top.v", 142, 1, ".top", "v_line/top", "block", "142-144");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/led.v", 2, 9, ".top.led1", "v_toggle/led", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/led.v", 3, 9, ".top.led1", "v_toggle/led", "rst", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[2]), first, "vsrc/led.v", 4, 15, ".top.led1", "v_toggle/led", "sw[0]", "");
@@ -5190,67 +5740,67 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[7]), first, "vsrc/led.v", 4, 15, ".top.led1", "v_toggle/led", "sw[5]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[8]), first, "vsrc/led.v", 4, 15, ".top.led1", "v_toggle/led", "sw[6]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[9]), first, "vsrc/led.v", 4, 15, ".top.led1", "v_toggle/led", "sw[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[47]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[48]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[49]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[50]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[51]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[52]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[53]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[54]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[55]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[56]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[57]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[58]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[59]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[60]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[61]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[62]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[248]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[249]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[250]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[251]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[252]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[253]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[254]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[255]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[256]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[257]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[258]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[259]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[260]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[261]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[262]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[263]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[264]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[265]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[266]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[267]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[268]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[269]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[270]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[271]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[272]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[273]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[274]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[275]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[276]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[277]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[278]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[279]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[280]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[281]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[282]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[283]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[284]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[285]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[286]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[287]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[288]), first, "vsrc/led.v", 12, 7, ".top.led1", "v_branch/led", "if", "12");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[289]), first, "vsrc/led.v", 12, 8, ".top.led1", "v_branch/led", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[290]), first, "vsrc/led.v", 10, 5, ".top.led1", "v_branch/led", "if", "10");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[291]), first, "vsrc/led.v", 10, 6, ".top.led1", "v_branch/led", "else", "11,13");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[292]), first, "vsrc/led.v", 9, 3, ".top.led1", "v_line/led", "block", "9");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[86]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[87]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[88]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[89]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[90]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[91]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[92]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[93]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[94]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[95]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[96]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[97]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[98]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[99]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[100]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[101]), first, "vsrc/led.v", 5, 17, ".top.led1", "v_toggle/led", "ledr[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[319]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[320]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[321]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[322]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[323]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[324]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[325]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[326]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[327]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[328]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[329]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[330]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[331]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[332]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[333]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[334]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[335]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[336]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[337]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[338]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[339]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[340]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[341]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[342]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[343]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[344]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[345]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[346]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[347]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[348]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[349]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[350]), first, "vsrc/led.v", 7, 14, ".top.led1", "v_toggle/led", "count[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[351]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[352]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[353]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[354]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[355]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[356]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[357]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[358]), first, "vsrc/led.v", 8, 13, ".top.led1", "v_toggle/led", "led[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[359]), first, "vsrc/led.v", 12, 7, ".top.led1", "v_branch/led", "if", "12");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[360]), first, "vsrc/led.v", 12, 8, ".top.led1", "v_branch/led", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[361]), first, "vsrc/led.v", 10, 5, ".top.led1", "v_branch/led", "if", "10");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[362]), first, "vsrc/led.v", 10, 6, ".top.led1", "v_branch/led", "else", "11,13");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[363]), first, "vsrc/led.v", 9, 3, ".top.led1", "v_line/led", "block", "9");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[12]), first, "vsrc/multiselector.v", 2, 16, ".top.mux", "v_toggle/mux41", "a[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[13]), first, "vsrc/multiselector.v", 2, 16, ".top.mux", "v_toggle/mux41", "a[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[14]), first, "vsrc/multiselector.v", 2, 16, ".top.mux", "v_toggle/mux41", "a[2]", "");
@@ -5261,32 +5811,32 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[19]), first, "vsrc/multiselector.v", 2, 16, ".top.mux", "v_toggle/mux41", "a[7]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[45]), first, "vsrc/multiselector.v", 3, 16, ".top.mux", "v_toggle/mux41", "s[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[46]), first, "vsrc/multiselector.v", 3, 16, ".top.mux", "v_toggle/mux41", "s[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[155]), first, "vsrc/multiselector.v", 4, 20, ".top.mux", "v_toggle/mux41", "y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[156]), first, "vsrc/multiselector.v", 4, 20, ".top.mux", "v_toggle/mux41", "y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[293]), first, "vsrc/multiselector.v", 8, 8, ".top.mux", "v_line/mux41", "case", "8");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[294]), first, "vsrc/multiselector.v", 9, 8, ".top.mux", "v_line/mux41", "case", "9");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[295]), first, "vsrc/multiselector.v", 10, 8, ".top.mux", "v_line/mux41", "case", "10");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[296]), first, "vsrc/multiselector.v", 11, 8, ".top.mux", "v_line/mux41", "case", "11");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[297]), first, "vsrc/multiselector.v", 12, 7, ".top.mux", "v_line/mux41", "case", "12");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[298]), first, "vsrc/multiselector.v", 6, 3, ".top.mux", "v_line/mux41", "block", "6-7");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[226]), first, "vsrc/multiselector.v", 4, 20, ".top.mux", "v_toggle/mux41", "y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[227]), first, "vsrc/multiselector.v", 4, 20, ".top.mux", "v_toggle/mux41", "y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[364]), first, "vsrc/multiselector.v", 8, 8, ".top.mux", "v_line/mux41", "case", "8");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[365]), first, "vsrc/multiselector.v", 9, 8, ".top.mux", "v_line/mux41", "case", "9");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[366]), first, "vsrc/multiselector.v", 10, 8, ".top.mux", "v_line/mux41", "case", "10");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[367]), first, "vsrc/multiselector.v", 11, 8, ".top.mux", "v_line/mux41", "case", "11");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[368]), first, "vsrc/multiselector.v", 12, 7, ".top.mux", "v_line/mux41", "case", "12");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[369]), first, "vsrc/multiselector.v", 6, 3, ".top.mux", "v_line/mux41", "block", "6-7");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[20]), first, "vsrc/decoder.v", 23, 14, ".top.dec", "v_toggle/decoder38", "x[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[21]), first, "vsrc/decoder.v", 23, 14, ".top.dec", "v_toggle/decoder38", "x[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[22]), first, "vsrc/decoder.v", 23, 14, ".top.dec", "v_toggle/decoder38", "x[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[43]), first, "vsrc/decoder.v", 24, 8, ".top.dec", "v_toggle/decoder38", "EN", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[160]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[161]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[162]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[163]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[164]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[165]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[166]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[167]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[299]), first, "vsrc/decoder.v", 33, 4, ".top.dec", "v_branch/decoder38", "if", "33-34");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[300]), first, "vsrc/decoder.v", 33, 5, ".top.dec", "v_branch/decoder38", "else", "36");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[301]), first, "vsrc/decoder.v", 32, 3, ".top.dec", "v_line/decoder38", "block", "32");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[302]), first, "vsrc/decoder.v", 31, 2, ".top.dec", "v_branch/decoder38", "if", "31-32");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[303]), first, "vsrc/decoder.v", 31, 3, ".top.dec", "v_branch/decoder38", "else", "39");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[304]), first, "vsrc/decoder.v", 30, 1, ".top.dec", "v_line/decoder38", "block", "30");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[231]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[232]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[233]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[234]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[235]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[236]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[237]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[238]), first, "vsrc/decoder.v", 25, 19, ".top.dec", "v_toggle/decoder38", "y[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[370]), first, "vsrc/decoder.v", 33, 4, ".top.dec", "v_branch/decoder38", "if", "33-34");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[371]), first, "vsrc/decoder.v", 33, 5, ".top.dec", "v_branch/decoder38", "else", "36");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[372]), first, "vsrc/decoder.v", 32, 3, ".top.dec", "v_line/decoder38", "block", "32");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[373]), first, "vsrc/decoder.v", 31, 2, ".top.dec", "v_branch/decoder38", "if", "31-32");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[374]), first, "vsrc/decoder.v", 31, 3, ".top.dec", "v_branch/decoder38", "else", "39");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[375]), first, "vsrc/decoder.v", 30, 1, ".top.dec", "v_line/decoder38", "block", "30");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[23]), first, "vsrc/encoder.v", 48, 14, ".top.encoder", "v_toggle/encoder83", "x[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[24]), first, "vsrc/encoder.v", 48, 14, ".top.encoder", "v_toggle/encoder83", "x[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[25]), first, "vsrc/encoder.v", 48, 14, ".top.encoder", "v_toggle/encoder83", "x[2]", "");
@@ -5296,172 +5846,248 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[29]), first, "vsrc/encoder.v", 48, 14, ".top.encoder", "v_toggle/encoder83", "x[6]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[30]), first, "vsrc/encoder.v", 48, 14, ".top.encoder", "v_toggle/encoder83", "x[7]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[44]), first, "vsrc/encoder.v", 49, 8, ".top.encoder", "v_toggle/encoder83", "EN", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[157]), first, "vsrc/encoder.v", 50, 19, ".top.encoder", "v_toggle/encoder83", "y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[158]), first, "vsrc/encoder.v", 50, 19, ".top.encoder", "v_toggle/encoder83", "y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[159]), first, "vsrc/encoder.v", 50, 19, ".top.encoder", "v_toggle/encoder83", "y[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[305]), first, "vsrc/encoder.v", 61, 5, ".top.encoder", "v_branch/encoder83", "if", "61");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[306]), first, "vsrc/encoder.v", 61, 6, ".top.encoder", "v_branch/encoder83", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[307]), first, "vsrc/encoder.v", 60, 4, ".top.encoder", "v_line/encoder83", "block", "60");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[308]), first, "vsrc/encoder.v", 57, 2, ".top.encoder", "v_branch/encoder83", "if", "57-60");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[309]), first, "vsrc/encoder.v", 57, 3, ".top.encoder", "v_branch/encoder83", "else", "64");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[310]), first, "vsrc/encoder.v", 55, 1, ".top.encoder", "v_line/encoder83", "block", "55-56");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/binary_counter.v", 2, 8, ".top.inc_counter", "v_toggle/inc_counter", "clk", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[228]), first, "vsrc/encoder.v", 50, 19, ".top.encoder", "v_toggle/encoder83", "y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[229]), first, "vsrc/encoder.v", 50, 19, ".top.encoder", "v_toggle/encoder83", "y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[230]), first, "vsrc/encoder.v", 50, 19, ".top.encoder", "v_toggle/encoder83", "y[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[376]), first, "vsrc/encoder.v", 61, 5, ".top.encoder", "v_branch/encoder83", "if", "61");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[377]), first, "vsrc/encoder.v", 61, 6, ".top.encoder", "v_branch/encoder83", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[378]), first, "vsrc/encoder.v", 60, 4, ".top.encoder", "v_line/encoder83", "block", "60");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[379]), first, "vsrc/encoder.v", 57, 2, ".top.encoder", "v_branch/encoder83", "if", "57-60");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[380]), first, "vsrc/encoder.v", 57, 3, ".top.encoder", "v_branch/encoder83", "else", "64");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[381]), first, "vsrc/encoder.v", 55, 1, ".top.encoder", "v_line/encoder83", "block", "55-56");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[257]), first, "vsrc/binary_counter.v", 2, 8, ".top.inc_counter", "v_toggle/inc_counter", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[42]), first, "vsrc/binary_counter.v", 3, 8, ".top.inc_counter", "v_toggle/inc_counter", "en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[175]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[176]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[177]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[178]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[179]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[180]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[181]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[182]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[311]), first, "vsrc/binary_counter.v", 10, 3, ".top.inc_counter", "v_branch/inc_counter", "if", "10-11");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[312]), first, "vsrc/binary_counter.v", 10, 4, ".top.inc_counter", "v_branch/inc_counter", "else", "13");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[313]), first, "vsrc/binary_counter.v", 9, 2, ".top.inc_counter", "v_branch/inc_counter", "if", "9");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[314]), first, "vsrc/binary_counter.v", 9, 3, ".top.inc_counter", "v_branch/inc_counter", "else", "16");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[315]), first, "vsrc/binary_counter.v", 8, 1, ".top.inc_counter", "v_line/inc_counter", "block", "8");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/binary_counter.v", 20, 8, ".top.dec_counter", "v_toggle/dec_counter", "clk", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[246]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[247]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[248]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[249]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[250]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[251]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[252]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[253]), first, "vsrc/binary_counter.v", 5, 19, ".top.inc_counter", "v_toggle/inc_counter", "out_q[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[382]), first, "vsrc/binary_counter.v", 10, 3, ".top.inc_counter", "v_branch/inc_counter", "if", "10-11");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[383]), first, "vsrc/binary_counter.v", 10, 4, ".top.inc_counter", "v_branch/inc_counter", "else", "13");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[384]), first, "vsrc/binary_counter.v", 9, 2, ".top.inc_counter", "v_branch/inc_counter", "if", "9");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[385]), first, "vsrc/binary_counter.v", 9, 3, ".top.inc_counter", "v_branch/inc_counter", "else", "16");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[386]), first, "vsrc/binary_counter.v", 8, 1, ".top.inc_counter", "v_line/inc_counter", "block", "8");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[257]), first, "vsrc/binary_counter.v", 20, 8, ".top.dec_counter", "v_toggle/dec_counter", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[42]), first, "vsrc/binary_counter.v", 21, 8, ".top.dec_counter", "v_toggle/dec_counter", "en", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[183]), first, "vsrc/binary_counter.v", 23, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[184]), first, "vsrc/binary_counter.v", 23, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[185]), first, "vsrc/binary_counter.v", 23, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[316]), first, "vsrc/binary_counter.v", 27, 2, ".top.dec_counter", "v_branch/dec_counter", "if", "27-28");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[317]), first, "vsrc/binary_counter.v", 27, 3, ".top.dec_counter", "v_branch/dec_counter", "else", "30");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[318]), first, "vsrc/binary_counter.v", 26, 1, ".top.dec_counter", "v_line/dec_counter", "block", "26");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[254]), first, "vsrc/binary_counter.v", 23, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[255]), first, "vsrc/binary_counter.v", 23, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[256]), first, "vsrc/binary_counter.v", 23, 19, ".top.dec_counter", "v_toggle/dec_counter", "out_q[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[387]), first, "vsrc/binary_counter.v", 27, 2, ".top.dec_counter", "v_branch/dec_counter", "if", "27-28");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[388]), first, "vsrc/binary_counter.v", 27, 3, ".top.dec_counter", "v_branch/dec_counter", "else", "30");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[389]), first, "vsrc/binary_counter.v", 26, 1, ".top.dec_counter", "v_line/dec_counter", "block", "26");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[47]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[48]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[49]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[50]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[51]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[52]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[53]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[54]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[55]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[56]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[57]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[58]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[59]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[60]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[61]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[62]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[63]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[64]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[65]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[66]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[67]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[68]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[69]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[70]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[71]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[72]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[73]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[74]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[75]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[76]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[77]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[78]), first, "vsrc/shift_register.v", 4, 15, ".top.sft_regstr", "v_toggle/shift_register", "data[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[79]), first, "vsrc/shift_register.v", 5, 14, ".top.sft_regstr", "v_toggle/shift_register", "shamt[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[80]), first, "vsrc/shift_register.v", 5, 14, ".top.sft_regstr", "v_toggle/shift_register", "shamt[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[81]), first, "vsrc/shift_register.v", 5, 14, ".top.sft_regstr", "v_toggle/shift_register", "shamt[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[82]), first, "vsrc/shift_register.v", 5, 14, ".top.sft_regstr", "v_toggle/shift_register", "shamt[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[83]), first, "vsrc/shift_register.v", 5, 14, ".top.sft_regstr", "v_toggle/shift_register", "shamt[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[84]), first, "vsrc/shift_register.v", 6, 8, ".top.sft_regstr", "v_toggle/shift_register", "l_or_r", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[85]), first, "vsrc/shift_register.v", 7, 8, ".top.sft_regstr", "v_toggle/shift_register", "a_or_l", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[194]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[195]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[196]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[197]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[198]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[199]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[200]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[201]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[202]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[203]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[204]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[205]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[206]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[207]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[208]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[209]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[210]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[211]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[212]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[213]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[214]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[215]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[216]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[217]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[218]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[219]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[220]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[221]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[222]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[223]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[224]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[225]), first, "vsrc/shift_register.v", 8, 20, ".top.sft_regstr", "v_toggle/shift_register", "out_q[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[390]), first, "vsrc/shift_register.v", 17, 3, ".top.sft_regstr", "v_branch/shift_register", "if", "17-18");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[391]), first, "vsrc/shift_register.v", 17, 4, ".top.sft_regstr", "v_branch/shift_register", "else", "20-21");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[392]), first, "vsrc/shift_register.v", 13, 2, ".top.sft_regstr", "v_branch/shift_register", "if", "13-14");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[393]), first, "vsrc/shift_register.v", 13, 3, ".top.sft_regstr", "v_branch/shift_register", "else", "16");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[394]), first, "vsrc/shift_register.v", 12, 1, ".top.sft_regstr", "v_line/shift_register", "block", "12");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/vga_ctrl.v", 2, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "pclk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/vga_ctrl.v", 3, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "reset", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[207]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[208]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[209]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[210]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[211]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[212]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[213]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[214]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[215]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[216]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[217]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[218]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[219]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[220]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[221]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[222]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[223]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[224]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[225]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[226]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[227]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[228]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[229]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[230]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[187]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[188]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[189]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[190]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[191]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[192]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[193]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[194]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[195]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[196]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[197]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[198]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[199]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[200]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[201]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[202]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[203]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[204]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[205]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[206]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[64]), first, "vsrc/vga_ctrl.v", 7, 12, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "hsync", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[65]), first, "vsrc/vga_ctrl.v", 8, 12, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vsync", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[66]), first, "vsrc/vga_ctrl.v", 9, 12, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "valid", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[67]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[68]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[69]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[70]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[71]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[72]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[73]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[74]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[75]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[76]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[77]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[78]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[79]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[80]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[81]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[82]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[83]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[84]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[85]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[86]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[87]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[88]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[89]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[90]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[319]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[320]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[321]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[322]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[323]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[324]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[325]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[326]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[327]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[328]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[329]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[330]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[331]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[332]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[333]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[334]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[335]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[336]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[337]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[338]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[339]), first, "vsrc/vga_ctrl.v", 27, 6, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_valid", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[340]), first, "vsrc/vga_ctrl.v", 28, 6, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_valid", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[341]), first, "vsrc/vga_ctrl.v", 38, 13, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "if", "38");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[342]), first, "vsrc/vga_ctrl.v", 38, 14, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "else", "39");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[343]), first, "vsrc/vga_ctrl.v", 36, 9, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "if", "36-37");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[344]), first, "vsrc/vga_ctrl.v", 36, 10, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "else", "41");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[345]), first, "vsrc/vga_ctrl.v", 31, 5, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "if", "31-33");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[346]), first, "vsrc/vga_ctrl.v", 31, 6, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "else", "35");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[347]), first, "vsrc/vga_ctrl.v", 30, 1, ".top.my_vga_ctrl", "v_line/vga_ctrl", "block", "30");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[278]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[279]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[280]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[281]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[282]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[283]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[284]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[285]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[286]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[287]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[288]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[289]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[290]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[291]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[292]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[293]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[294]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[295]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[296]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[297]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[298]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[299]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[300]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[301]), first, "vsrc/vga_ctrl.v", 4, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[258]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[259]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[260]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[261]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[262]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[263]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[264]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[265]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[266]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[267]), first, "vsrc/vga_ctrl.v", 5, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[268]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[269]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[270]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[271]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[272]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[273]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[274]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[275]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[276]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[277]), first, "vsrc/vga_ctrl.v", 6, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[103]), first, "vsrc/vga_ctrl.v", 7, 12, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "hsync", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[104]), first, "vsrc/vga_ctrl.v", 8, 12, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vsync", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[105]), first, "vsrc/vga_ctrl.v", 9, 12, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "valid", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[106]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[107]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[108]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[109]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[110]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[111]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[112]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[113]), first, "vsrc/vga_ctrl.v", 10, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_r[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[114]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[115]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[116]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[117]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[118]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[119]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[120]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[121]), first, "vsrc/vga_ctrl.v", 11, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_g[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[122]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[123]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[124]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[125]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[126]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[127]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[128]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[129]), first, "vsrc/vga_ctrl.v", 12, 18, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "vga_b[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[395]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[396]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[397]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[398]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[399]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[400]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[401]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[402]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[403]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[404]), first, "vsrc/vga_ctrl.v", 25, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "x_cnt[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[405]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[406]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[407]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[408]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[409]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[410]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[411]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[412]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[413]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[414]), first, "vsrc/vga_ctrl.v", 26, 11, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "y_cnt[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[415]), first, "vsrc/vga_ctrl.v", 27, 6, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "h_valid", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[416]), first, "vsrc/vga_ctrl.v", 28, 6, ".top.my_vga_ctrl", "v_toggle/vga_ctrl", "v_valid", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[417]), first, "vsrc/vga_ctrl.v", 38, 13, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "if", "38");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[418]), first, "vsrc/vga_ctrl.v", 38, 14, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "else", "39");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[419]), first, "vsrc/vga_ctrl.v", 36, 9, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "if", "36-37");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[420]), first, "vsrc/vga_ctrl.v", 36, 10, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "else", "41");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[421]), first, "vsrc/vga_ctrl.v", 31, 5, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "if", "31-33");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[422]), first, "vsrc/vga_ctrl.v", 31, 6, ".top.my_vga_ctrl", "v_branch/vga_ctrl", "else", "35");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[423]), first, "vsrc/vga_ctrl.v", 30, 1, ".top.my_vga_ctrl", "v_line/vga_ctrl", "block", "30");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/ps2_keyboard.v", 8, 7, ".top.my_keyboard", "v_toggle/ps2_keyboard", "clk", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[348]), first, "vsrc/ps2_keyboard.v", 8, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "resetn", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[424]), first, "vsrc/ps2_keyboard.v", 8, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "resetn", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[10]), first, "vsrc/ps2_keyboard.v", 8, 18, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[11]), first, "vsrc/ps2_keyboard.v", 8, 26, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_data", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[349]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[350]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[351]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[352]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[353]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[354]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[355]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[356]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[357]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[358]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[359]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[360]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[361]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[362]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[363]), first, "vsrc/ps2_keyboard.v", 12, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk_sync[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[364]), first, "vsrc/ps2_keyboard.v", 12, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk_sync[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[365]), first, "vsrc/ps2_keyboard.v", 12, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk_sync[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[366]), first, "vsrc/ps2_keyboard.v", 14, 1, ".top.my_keyboard", "v_line/ps2_keyboard", "block", "14-15");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[367]), first, "vsrc/ps2_keyboard.v", 18, 6, ".top.my_keyboard", "v_toggle/ps2_keyboard", "sampling", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[368]), first, "vsrc/ps2_keyboard.v", 27, 4, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "27,29-30");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[369]), first, "vsrc/ps2_keyboard.v", 27, 5, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[370]), first, "vsrc/ps2_keyboard.v", 26, 5, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "26,32");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[371]), first, "vsrc/ps2_keyboard.v", 26, 6, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "33-35");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[372]), first, "vsrc/ps2_keyboard.v", 25, 3, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "25");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[373]), first, "vsrc/ps2_keyboard.v", 25, 4, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[374]), first, "vsrc/ps2_keyboard.v", 21, 2, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "21-22");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[375]), first, "vsrc/ps2_keyboard.v", 21, 3, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "24");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[376]), first, "vsrc/ps2_keyboard.v", 20, 1, ".top.my_keyboard", "v_line/ps2_keyboard", "block", "20");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[425]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[426]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[427]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[428]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[429]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[430]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[431]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[432]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[433]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[434]), first, "vsrc/ps2_keyboard.v", 10, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "buffer[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[435]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[436]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[437]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[438]), first, "vsrc/ps2_keyboard.v", 11, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "count[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[439]), first, "vsrc/ps2_keyboard.v", 12, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk_sync[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[440]), first, "vsrc/ps2_keyboard.v", 12, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk_sync[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[441]), first, "vsrc/ps2_keyboard.v", 12, 11, ".top.my_keyboard", "v_toggle/ps2_keyboard", "ps2_clk_sync[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[442]), first, "vsrc/ps2_keyboard.v", 14, 1, ".top.my_keyboard", "v_line/ps2_keyboard", "block", "14-15");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[443]), first, "vsrc/ps2_keyboard.v", 18, 6, ".top.my_keyboard", "v_toggle/ps2_keyboard", "sampling", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[444]), first, "vsrc/ps2_keyboard.v", 27, 4, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "27,29-30");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[445]), first, "vsrc/ps2_keyboard.v", 27, 5, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[446]), first, "vsrc/ps2_keyboard.v", 26, 5, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "26,32");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[447]), first, "vsrc/ps2_keyboard.v", 26, 6, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "33-35");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[448]), first, "vsrc/ps2_keyboard.v", 25, 3, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "25");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[449]), first, "vsrc/ps2_keyboard.v", 25, 4, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[450]), first, "vsrc/ps2_keyboard.v", 21, 2, ".top.my_keyboard", "v_branch/ps2_keyboard", "if", "21-22");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[451]), first, "vsrc/ps2_keyboard.v", 21, 3, ".top.my_keyboard", "v_branch/ps2_keyboard", "else", "24");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[452]), first, "vsrc/ps2_keyboard.v", 20, 1, ".top.my_keyboard", "v_line/ps2_keyboard", "block", "20");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[31]), first, "vsrc/alu.v", 28, 14, ".top.alu", "v_toggle/alu_4bit", "alu_fnselec[0]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[32]), first, "vsrc/alu.v", 28, 14, ".top.alu", "v_toggle/alu_4bit", "alu_fnselec[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[33]), first, "vsrc/alu.v", 28, 14, ".top.alu", "v_toggle/alu_4bit", "alu_fnselec[2]", "");
@@ -5473,305 +6099,305 @@ VL_ATTR_COLD void Vtop___024root___configure_coverage(Vtop___024root* vlSelf, bo
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[39]), first, "vsrc/alu.v", 30, 14, ".top.alu", "v_toggle/alu_4bit", "alu_b[1]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[40]), first, "vsrc/alu.v", 30, 14, ".top.alu", "v_toggle/alu_4bit", "alu_b[2]", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[41]), first, "vsrc/alu.v", 30, 14, ".top.alu", "v_toggle/alu_4bit", "alu_b[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[168]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[169]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[170]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[171]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[172]), first, "vsrc/alu.v", 32, 13, ".top.alu", "v_toggle/alu_4bit", "alu_zero", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[173]), first, "vsrc/alu.v", 33, 13, ".top.alu", "v_toggle/alu_4bit", "alu_overflow", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[174]), first, "vsrc/alu.v", 34, 13, ".top.alu", "v_toggle/alu_4bit", "alu_carry", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[377]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[378]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[379]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[380]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[381]), first, "vsrc/alu.v", 42, 10, ".top.alu", "v_line/alu_4bit", "case", "42-46");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[382]), first, "vsrc/alu.v", 48, 10, ".top.alu", "v_line/alu_4bit", "case", "48-52");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[383]), first, "vsrc/alu.v", 54, 10, ".top.alu", "v_line/alu_4bit", "case", "54-58");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[384]), first, "vsrc/alu.v", 60, 10, ".top.alu", "v_line/alu_4bit", "case", "60-64");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[385]), first, "vsrc/alu.v", 66, 10, ".top.alu", "v_line/alu_4bit", "case", "66-70");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[386]), first, "vsrc/alu.v", 72, 10, ".top.alu", "v_line/alu_4bit", "case", "72-76");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[387]), first, "vsrc/alu.v", 79, 4, ".top.alu", "v_branch/alu_4bit", "if", "79-80");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[388]), first, "vsrc/alu.v", 79, 5, ".top.alu", "v_branch/alu_4bit", "else", "82");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[389]), first, "vsrc/alu.v", 78, 10, ".top.alu", "v_line/alu_4bit", "case", "78,83-85");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[390]), first, "vsrc/alu.v", 88, 4, ".top.alu", "v_branch/alu_4bit", "if", "88-89");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[391]), first, "vsrc/alu.v", 88, 5, ".top.alu", "v_branch/alu_4bit", "else", "91");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[392]), first, "vsrc/alu.v", 87, 10, ".top.alu", "v_line/alu_4bit", "case", "87,92-94");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[393]), first, "vsrc/alu.v", 96, 3, ".top.alu", "v_line/alu_4bit", "case", "96-100");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[394]), first, "vsrc/alu.v", 39, 1, ".top.alu", "v_line/alu_4bit", "block", "39-41");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[239]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[240]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[241]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[242]), first, "vsrc/alu.v", 31, 19, ".top.alu", "v_toggle/alu_4bit", "alu_res[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[243]), first, "vsrc/alu.v", 32, 13, ".top.alu", "v_toggle/alu_4bit", "alu_zero", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[244]), first, "vsrc/alu.v", 33, 13, ".top.alu", "v_toggle/alu_4bit", "alu_overflow", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[245]), first, "vsrc/alu.v", 34, 13, ".top.alu", "v_toggle/alu_4bit", "alu_carry", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[453]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[454]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[455]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[456]), first, "vsrc/alu.v", 37, 11, ".top.alu", "v_toggle/alu_4bit", "tmp[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[457]), first, "vsrc/alu.v", 42, 10, ".top.alu", "v_line/alu_4bit", "case", "42-46");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[458]), first, "vsrc/alu.v", 48, 10, ".top.alu", "v_line/alu_4bit", "case", "48-52");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[459]), first, "vsrc/alu.v", 54, 10, ".top.alu", "v_line/alu_4bit", "case", "54-58");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[460]), first, "vsrc/alu.v", 60, 10, ".top.alu", "v_line/alu_4bit", "case", "60-64");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[461]), first, "vsrc/alu.v", 66, 10, ".top.alu", "v_line/alu_4bit", "case", "66-70");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[462]), first, "vsrc/alu.v", 72, 10, ".top.alu", "v_line/alu_4bit", "case", "72-76");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[463]), first, "vsrc/alu.v", 79, 4, ".top.alu", "v_branch/alu_4bit", "if", "79-80");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[464]), first, "vsrc/alu.v", 79, 5, ".top.alu", "v_branch/alu_4bit", "else", "82");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[465]), first, "vsrc/alu.v", 78, 10, ".top.alu", "v_line/alu_4bit", "case", "78,83-85");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[466]), first, "vsrc/alu.v", 88, 4, ".top.alu", "v_branch/alu_4bit", "if", "88-89");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[467]), first, "vsrc/alu.v", 88, 5, ".top.alu", "v_branch/alu_4bit", "else", "91");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[468]), first, "vsrc/alu.v", 87, 10, ".top.alu", "v_line/alu_4bit", "case", "87,92-94");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[469]), first, "vsrc/alu.v", 96, 3, ".top.alu", "v_line/alu_4bit", "case", "96-100");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[470]), first, "vsrc/alu.v", 39, 1, ".top.alu", "v_line/alu_4bit", "block", "39-41");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/seg.v", 2, 9, ".top.mu_seg", "v_toggle/seg", "clk", "");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[1]), first, "vsrc/seg.v", 3, 9, ".top.mu_seg", "v_toggle/seg", "rst", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[231]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[232]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[233]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[234]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[239]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[240]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[241]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[242]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[91]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[92]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[93]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[94]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[95]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[96]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[97]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[98]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[99]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[100]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[101]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[102]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[103]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[104]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[105]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[106]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[107]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[108]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[109]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[110]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[111]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[112]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[113]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[114]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[115]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[116]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[117]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[118]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[119]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[120]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[121]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[122]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[123]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[124]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[125]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[126]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[127]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[128]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[129]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[130]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[131]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[132]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[133]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[134]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[135]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[136]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[137]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[138]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[139]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[140]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[141]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[142]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[143]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[144]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[145]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[146]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[147]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[148]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[149]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[150]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[151]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[152]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[153]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[154]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[395]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[396]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[397]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[398]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[399]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[400]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[401]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[402]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[403]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[404]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[405]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[406]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[407]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[408]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[409]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[410]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[411]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[412]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[413]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[414]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[415]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[416]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[417]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[418]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[419]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[420]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[421]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[422]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[423]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[424]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[425]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[426]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[427]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[428]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[429]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[430]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[431]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[432]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[433]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[434]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[435]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[436]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[437]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[438]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[439]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[440]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[441]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[442]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[443]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[444]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[445]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[446]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[447]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[448]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[449]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[450]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[451]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[452]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[453]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[454]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[455]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[456]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[457]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[458]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[459]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[460]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[461]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[462]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[463]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[464]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[465]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[466]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[467]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[468]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[469]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[470]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[471]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[472]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[473]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[474]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[475]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[476]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[477]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[478]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[479]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[480]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[481]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[482]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[483]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[484]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[485]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[486]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[487]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[488]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[489]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[490]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[491]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[492]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[493]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[494]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[495]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[496]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[497]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[498]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[499]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[500]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[501]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[502]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[503]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[504]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[505]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[506]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[507]), first, "vsrc/seg.v", 31, 11, ".top.mu_seg", "v_toggle/seg", "offset[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[508]), first, "vsrc/seg.v", 31, 11, ".top.mu_seg", "v_toggle/seg", "offset[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[509]), first, "vsrc/seg.v", 31, 11, ".top.mu_seg", "v_toggle/seg", "offset[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[510]), first, "vsrc/seg.v", 38, 4, ".top.mu_seg", "v_branch/seg", "if", "38");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[511]), first, "vsrc/seg.v", 38, 5, ".top.mu_seg", "v_branch/seg", "else", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[512]), first, "vsrc/seg.v", 36, 2, ".top.mu_seg", "v_branch/seg", "if", "36");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[513]), first, "vsrc/seg.v", 36, 3, ".top.mu_seg", "v_branch/seg", "else", "37,39");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[514]), first, "vsrc/seg.v", 35, 1, ".top.mu_seg", "v_line/seg", "block", "35,41");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[187]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[188]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[189]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[190]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[191]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[192]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[193]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[194]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[195]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[196]), first, "vsrc/top.v", 163, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[197]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[198]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[199]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[200]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[201]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[202]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[203]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[204]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[205]), first, "vsrc/top.v", 164, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[207]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[208]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[209]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[210]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[211]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[212]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[213]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[214]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[215]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[216]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[217]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[218]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[219]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[220]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[221]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[222]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[223]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[224]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[225]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[226]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[227]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[228]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[229]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[230]), first, "vsrc/top.v", 165, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[515]), first, "vsrc/top.v", 170, 1, ".top.my_vmem", "v_line/vmem", "block", "170-171");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[302]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[303]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[304]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[305]), first, "vsrc/seg.v", 4, 15, ".top.mu_seg", "v_toggle/seg", "seg_x[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[310]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[311]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[312]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[313]), first, "vsrc/seg.v", 5, 15, ".top.mu_seg", "v_toggle/seg", "seg_y[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[130]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[131]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[132]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[133]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[134]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[135]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[136]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[137]), first, "vsrc/seg.v", 6, 16, ".top.mu_seg", "v_toggle/seg", "o_seg0[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[138]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[139]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[140]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[141]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[142]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[143]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[144]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[145]), first, "vsrc/seg.v", 7, 16, ".top.mu_seg", "v_toggle/seg", "o_seg1[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[146]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[147]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[148]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[149]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[150]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[151]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[152]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[153]), first, "vsrc/seg.v", 8, 16, ".top.mu_seg", "v_toggle/seg", "o_seg2[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[154]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[155]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[156]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[157]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[158]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[159]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[160]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[161]), first, "vsrc/seg.v", 9, 16, ".top.mu_seg", "v_toggle/seg", "o_seg3[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[162]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[163]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[164]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[165]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[166]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[167]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[168]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[169]), first, "vsrc/seg.v", 10, 16, ".top.mu_seg", "v_toggle/seg", "o_seg4[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[170]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[171]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[172]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[173]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[174]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[175]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[176]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[177]), first, "vsrc/seg.v", 11, 16, ".top.mu_seg", "v_toggle/seg", "o_seg5[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[178]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[179]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[180]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[181]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[182]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[183]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[184]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[185]), first, "vsrc/seg.v", 12, 16, ".top.mu_seg", "v_toggle/seg", "o_seg6[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[187]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[188]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[189]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[190]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[191]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[192]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[193]), first, "vsrc/seg.v", 13, 16, ".top.mu_seg", "v_toggle/seg", "o_seg7[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[471]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[472]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[473]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[474]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[475]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[476]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[477]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[478]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[0][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[479]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[480]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[481]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[482]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[483]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[484]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[485]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[486]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[1][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[487]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[488]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[489]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[490]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[491]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[492]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[493]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[494]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[2][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[495]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[496]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[497]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[498]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[499]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[500]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[501]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[502]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[3][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[503]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[504]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[505]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[506]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[507]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[508]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[509]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[510]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[4][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[511]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[512]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[513]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[514]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[515]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[516]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[517]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[518]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[5][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[519]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[520]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[521]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[522]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[523]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[524]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[525]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[526]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[6][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[527]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[528]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[529]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[530]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[531]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[532]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[533]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[534]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[7][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[535]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[536]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[537]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[538]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[539]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[540]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[541]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[542]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[8][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[543]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[544]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[545]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[546]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[547]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[548]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[549]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[550]), first, "vsrc/seg.v", 16, 12, ".top.mu_seg", "v_toggle/seg", "segs[9][7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[551]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[552]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[553]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[554]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[555]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[556]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[557]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[558]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[559]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[560]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[561]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[562]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[563]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[564]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[565]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[566]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[567]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[568]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[569]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[570]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[571]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[572]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[573]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[574]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[575]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[576]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[577]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[578]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[579]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[580]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[581]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[582]), first, "vsrc/seg.v", 30, 12, ".top.mu_seg", "v_toggle/seg", "count[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[583]), first, "vsrc/seg.v", 31, 11, ".top.mu_seg", "v_toggle/seg", "offset[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[584]), first, "vsrc/seg.v", 31, 11, ".top.mu_seg", "v_toggle/seg", "offset[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[585]), first, "vsrc/seg.v", 31, 11, ".top.mu_seg", "v_toggle/seg", "offset[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[586]), first, "vsrc/seg.v", 38, 4, ".top.mu_seg", "v_branch/seg", "if", "38");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[587]), first, "vsrc/seg.v", 38, 5, ".top.mu_seg", "v_branch/seg", "else", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[588]), first, "vsrc/seg.v", 36, 2, ".top.mu_seg", "v_branch/seg", "if", "36");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[589]), first, "vsrc/seg.v", 36, 3, ".top.mu_seg", "v_branch/seg", "else", "37,39");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[590]), first, "vsrc/seg.v", 35, 1, ".top.mu_seg", "v_line/seg", "block", "35,41");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[258]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[259]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[260]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[261]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[262]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[263]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[264]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[265]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[266]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[267]), first, "vsrc/top.v", 176, 17, ".top.my_vmem", "v_toggle/vmem", "h_addr[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[268]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[269]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[270]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[271]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[272]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[273]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[274]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[275]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[276]), first, "vsrc/top.v", 177, 17, ".top.my_vmem", "v_toggle/vmem", "v_addr[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[278]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[279]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[280]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[281]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[282]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[283]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[284]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[285]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[286]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[287]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[288]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[289]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[290]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[291]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[292]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[293]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[294]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[295]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[296]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[297]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[298]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[299]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[300]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[301]), first, "vsrc/top.v", 178, 19, ".top.my_vmem", "v_toggle/vmem", "vga_data[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[591]), first, "vsrc/top.v", 183, 1, ".top.my_vmem", "v_line/vmem", "block", "183-184");
     vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[0]), first, "vsrc/timer.v", 2, 8, ".top.timer_1s", "v_toggle/timer", "clk", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[186]), first, "vsrc/timer.v", 3, 13, ".top.timer_1s", "v_toggle/timer", "timer_out", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[516]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[0]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[517]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[1]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[518]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[2]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[519]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[3]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[520]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[4]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[521]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[5]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[522]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[6]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[523]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[7]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[524]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[8]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[525]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[9]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[526]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[10]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[527]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[11]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[528]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[12]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[529]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[13]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[530]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[14]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[531]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[15]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[532]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[16]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[533]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[17]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[534]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[18]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[535]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[19]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[536]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[20]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[537]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[21]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[538]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[22]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[539]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[23]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[540]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[24]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[541]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[25]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[542]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[26]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[543]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[27]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[544]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[28]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[545]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[29]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[546]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[30]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[547]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[31]", "");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[548]), first, "vsrc/timer.v", 6, 24, ".top.timer_1s", "v_line/timer", "block", "6");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[549]), first, "vsrc/timer.v", 10, 2, ".top.timer_1s", "v_branch/timer", "if", "10-13");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[550]), first, "vsrc/timer.v", 10, 3, ".top.timer_1s", "v_branch/timer", "else", "16");
-    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[551]), first, "vsrc/timer.v", 9, 1, ".top.timer_1s", "v_line/timer", "block", "9");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[257]), first, "vsrc/timer.v", 3, 13, ".top.timer_1s", "v_toggle/timer", "timer_out", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[592]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[0]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[593]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[1]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[594]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[2]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[595]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[3]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[596]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[4]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[597]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[5]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[598]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[6]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[599]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[7]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[600]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[8]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[601]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[9]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[602]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[10]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[603]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[11]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[604]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[12]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[605]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[13]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[606]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[14]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[607]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[15]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[608]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[16]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[609]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[17]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[610]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[18]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[611]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[19]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[612]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[20]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[613]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[21]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[614]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[22]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[615]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[23]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[616]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[24]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[617]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[25]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[618]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[26]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[619]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[27]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[620]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[28]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[621]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[29]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[622]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[30]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[623]), first, "vsrc/timer.v", 6, 12, ".top.timer_1s", "v_toggle/timer", "count_clk[31]", "");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[624]), first, "vsrc/timer.v", 6, 24, ".top.timer_1s", "v_line/timer", "block", "6");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[625]), first, "vsrc/timer.v", 10, 2, ".top.timer_1s", "v_branch/timer", "if", "10-13");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[626]), first, "vsrc/timer.v", 10, 3, ".top.timer_1s", "v_branch/timer", "else", "16");
+    vlSelf->__vlCoverInsert(&(vlSymsp->__Vcoverage[627]), first, "vsrc/timer.v", 9, 1, ".top.timer_1s", "v_line/timer", "block", "9");
 }

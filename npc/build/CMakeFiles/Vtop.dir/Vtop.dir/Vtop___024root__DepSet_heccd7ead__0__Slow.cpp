@@ -63,6 +63,10 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->en = VL_RAND_RESET_I(1);
     vlSelf->ec_en = VL_RAND_RESET_I(1);
     vlSelf->s = VL_RAND_RESET_I(2);
+    vlSelf->sft_rgtr_data = VL_RAND_RESET_I(32);
+    vlSelf->sft_rgtr_shamt = VL_RAND_RESET_I(5);
+    vlSelf->sft_rgtr_l_or_r = VL_RAND_RESET_I(1);
+    vlSelf->sft_rgtr_a_or_l = VL_RAND_RESET_I(1);
     vlSelf->ledr = VL_RAND_RESET_I(16);
     vlSelf->VGA_CLK = VL_RAND_RESET_I(1);
     vlSelf->VGA_HSYNC = VL_RAND_RESET_I(1);
@@ -79,6 +83,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->seg5 = VL_RAND_RESET_I(8);
     vlSelf->seg6 = VL_RAND_RESET_I(8);
     vlSelf->seg7 = VL_RAND_RESET_I(8);
+    vlSelf->sft_out_q = VL_RAND_RESET_I(32);
     vlSelf->y = VL_RAND_RESET_I(2);
     vlSelf->ec_y = VL_RAND_RESET_I(3);
     vlSelf->y_dec = VL_RAND_RESET_I(8);
@@ -107,6 +112,10 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ec_en = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__s = VL_RAND_RESET_I(2);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_data = VL_RAND_RESET_I(32);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_shamt = VL_RAND_RESET_I(5);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_l_or_r = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT____Vtogcov__sft_rgtr_a_or_l = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__ledr = VL_RAND_RESET_I(16);
     vlSelf->top__DOT____Vtogcov__VGA_CLK = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_HSYNC = VL_RAND_RESET_I(1);
@@ -123,6 +132,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__seg5 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg6 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg7 = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT____Vtogcov__sft_out_q = VL_RAND_RESET_I(32);
     vlSelf->top__DOT____Vtogcov__y = VL_RAND_RESET_I(2);
     vlSelf->top__DOT____Vtogcov__ec_y = VL_RAND_RESET_I(3);
     vlSelf->top__DOT____Vtogcov__y_dec = VL_RAND_RESET_I(8);

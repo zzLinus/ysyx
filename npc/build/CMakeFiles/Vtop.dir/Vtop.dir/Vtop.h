@@ -42,6 +42,9 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&en,0,0);
     VL_IN8(&ec_en,0,0);
     VL_IN8(&s,1,0);
+    VL_IN8(&sft_rgtr_shamt,4,0);
+    VL_IN8(&sft_rgtr_l_or_r,0,0);
+    VL_IN8(&sft_rgtr_a_or_l,0,0);
     VL_OUT8(&VGA_CLK,0,0);
     VL_OUT8(&VGA_HSYNC,0,0);
     VL_OUT8(&VGA_VSYNC,0,0);
@@ -67,6 +70,8 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&inc_counter_out,7,0);
     VL_OUT8(&dec_counter_out,2,0);
     VL_OUT16(&ledr,15,0);
+    VL_IN(&sft_rgtr_data,31,0);
+    VL_OUT(&sft_out_q,31,0);
 
     // CELLS
     // Public to allow access to /* verilator public */ items.
