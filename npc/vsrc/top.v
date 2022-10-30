@@ -43,7 +43,7 @@ module top (
 	output alu_zero,
 	output alu_overflow,
 	output alu_carry,
-	output [3:0] state_machine_out,
+	output state_machine_out,
 	output reg [7:0] inc_counter_out,
 	output reg [2:0] dec_counter_out,
 	output timer_out
