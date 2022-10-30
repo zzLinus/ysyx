@@ -55,7 +55,7 @@ int main(int argc, char** argv, char** env)
         // top->seg_x = top->ec_x;
         // shift register
         // 置为1为左移，置为0为右移。 选择端A/L为算术逻辑选择，置为1为算术移位，置为0为逻辑移位。
-        top->sft_rgtr_data = 0b1111000010101010;
+        top->sft_rgtr_data = 0b111100001010101000000000;
         top->sft_rgtr_shamt = shamt++;
         top->sft_rgtr_a_or_l = 0b1;
         top->sft_rgtr_l_or_r = 0b0;
