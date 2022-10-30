@@ -2,11 +2,17 @@
 //
 module shift_register(
 	input [31:0] data,
-	input reg [4:0] shamt,
+	input [4:0] shamt,
 	input l_or_r,
 	input a_or_l,
 	output [31:0] out_q
 );
+
+reg [4:0] tmp;
+
+initial begin
+	tmp = shamt;
+end
 
 always @(*) begin
 	if(l_or_r == 1) begin // shift left
