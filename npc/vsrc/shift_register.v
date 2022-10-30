@@ -1,9 +1,8 @@
 // 置为1为左移，置为0为右移。 选择端A/L为算术逻辑选择，置为1为算术移位，置为0为逻辑移位。
 //
 module shift_register#(
-	parameter shamt = 0,
-)
-(
+	parameter shamt = 0
+)(
 	input [31:0] data,
 	input l_or_r,
 	input a_or_l,
