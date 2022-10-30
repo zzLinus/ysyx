@@ -1133,34 +1133,6 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
             = ((7U & (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count)) 
                | (8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__count)));
     }
-    if ((1U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[478]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((0xeU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (1U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((2U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[479]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((0xdU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (2U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((4U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[480]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((0xbU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (4U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((8U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[481]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((7U & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (8U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
     vlSelf->VGA_HSYNC = (0x60U < (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt));
     vlSelf->VGA_VSYNC = (2U < (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt));
     vlSelf->top__DOT__my_keyboard__DOT__sampling = (IData)(
@@ -1907,6 +1879,34 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         vlSelf->top__DOT____Vtogcov__dec_counter_out 
             = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
                | (4U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((1U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[478]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((0xeU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (1U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((2U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[479]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((0xdU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (2U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((4U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[480]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((0xbU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (4U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((8U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[481]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((7U & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (8U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
     }
     if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
         ++(vlSymsp->__Vcoverage[248]);

@@ -140,7 +140,7 @@
 	);
 	
 	state_machine state_machine(
-		.clk(clk),
+		.clk(timer_out),
 		.in(rand_in),
 		.reset(0),
 		.out(state_machine_out)

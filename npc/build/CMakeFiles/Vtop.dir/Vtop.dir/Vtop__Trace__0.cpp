@@ -116,10 +116,12 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
         bufp->chgBit(oldp+88,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
         bufp->chgSData(oldp+89,((0x1ffU & (IData)(vlSelf->top__DOT__v_addr))),9);
-        bufp->chgCData(oldp+90,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
-        bufp->chgBit(oldp+91,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
-        bufp->chgBit(oldp+92,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
-        bufp->chgIData(oldp+93,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
+        bufp->chgIData(oldp+90,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
+    }
+    if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[3U])) {
+        bufp->chgCData(oldp+91,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
+        bufp->chgBit(oldp+92,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
+        bufp->chgBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
     }
     bufp->chgBit(oldp+94,(vlSelf->clk));
     bufp->chgBit(oldp+95,(vlSelf->rst));
@@ -186,4 +188,5 @@ void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
     vlSymsp->TOP.__Vm_traceActivity[0U] = 0U;
     vlSymsp->TOP.__Vm_traceActivity[1U] = 0U;
     vlSymsp->TOP.__Vm_traceActivity[2U] = 0U;
+    vlSymsp->TOP.__Vm_traceActivity[3U] = 0U;
 }
