@@ -28,7 +28,7 @@ register #(
 	.clk(clk),
 	.inp(state_din),
 	.out_q(state_dout)
-)
+);
 
 MuxKeyWithDefault #(9,4,1) outMux (
 	.out(out),
