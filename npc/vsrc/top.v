@@ -34,6 +34,7 @@ module top (
     output [7:0] seg5,
     output [7:0] seg6,
     output [7:0] seg7,
+	output [31:0] sft_out_q,
 	output reg [1:0] y,
 	output reg [2:0] ec_y,
 	output reg [7:0] y_dec,
@@ -94,7 +95,8 @@ shift_register sft_regstr(
 	.data(sft_rgtr_data),
 	.shamt(sft_rgtr_shamt),
 	.l_or_r(sft_rgtr_l_or_r),
-	.a_or_l(sft_rgtr_a_or_l)
+	.a_or_l(sft_rgtr_a_or_l),
+	.out_q(sft_out_q)
 );
 
 assign VGA_CLK = clk;
