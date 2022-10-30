@@ -14,6 +14,10 @@ module top (
 	input en,
 	input ec_en,
 	input [1:0] s,
+	input [31:0] sft_rgtr_data,
+	input [4:0] sft_rgtr_shamt,
+	input sft_rgtr_l_or_r,
+	input sft_rgtr_a_or_l,
     output [15:0] ledr,
     output VGA_CLK,
     output VGA_HSYNC,
@@ -85,6 +89,13 @@ dec_counter dec_counter(
 	.en(counter_EN),
 	.out_q(dec_counter_out)
 );
+
+shift_register sft_regstr{
+	.data(sft_rgtr_data),
+	.shamt(sft_rgtr_shamt),
+	.l_or_r(sft_rgtr_l_or_r),
+	.a_or_l(sft_rgtr_a_or_l)
+};
 
 assign VGA_CLK = clk;
 
