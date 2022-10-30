@@ -91,8 +91,9 @@ dec_counter dec_counter(
 	.out_q(dec_counter_out)
 );
 
-shift_register # (sft_rgtr_shamt) sft_regstr (
+shift_register sft_regstr (
 	.data(sft_rgtr_data),
+	.shamt(sft_rgtr_shamt),
 	.l_or_r(sft_rgtr_l_or_r),
 	.a_or_l(sft_rgtr_a_or_l),
 	.out_q(sft_out_q)
