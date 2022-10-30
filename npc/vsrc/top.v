@@ -13,6 +13,7 @@ module top (
 	input counter_EN,
 	input en,
 	input rand_in,
+	input state_machine_clr,
 	input ec_en,
 	input [1:0] s,
 	input [31:0] sft_rgtr_data,
@@ -141,7 +142,7 @@ alu_4bit alu(
 state_machine state_machine(
 	.clk(timer_out),
 	.in(rand_in),
-	.reset(0),
+	.reset(state_machine_clr),
 	.out(state_machine_out)
 );
 

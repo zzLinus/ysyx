@@ -51,6 +51,7 @@ int main(int argc, char** argv, char** env)
         top->a = 0b11100100;
         top->alu_fnselec = 0b111;
         top->rand_in = rand() & 1;
+        top->state_machine_clr = rand() & 1;
         top->alu_a = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         top->alu_b = rand() & 1 + (rand() & 1) * 2 + (rand() & 1) * 4;
         // top->seg_x = top->ec_x;

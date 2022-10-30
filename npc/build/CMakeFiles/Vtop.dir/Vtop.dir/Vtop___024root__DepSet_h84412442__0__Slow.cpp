@@ -64,11 +64,11 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__mu_seg__DOT__segs[7U] = 0xe0U;
     vlSelf->top__DOT__mu_seg__DOT__segs[8U] = 0xffU;
     vlSelf->top__DOT__mu_seg__DOT__segs[9U] = 0xe6U;
-    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[0U] = 0x10U;
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[0U] = 0x11U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[1U] = 0xeU;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[2U] = 0xcU;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[3U] = 0xaU;
-    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[4U] = 8U;
+    vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[4U] = 9U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[5U] = 6U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[6U] = 4U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[7U] = 2U;
