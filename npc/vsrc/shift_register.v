@@ -2,7 +2,7 @@
 //
 module shift_register(
 	input [31:0] data,
-	input [4:0] shamt,
+	input reg [4:0] shamt,
 	input l_or_r,
 	input a_or_l,
 	output [31:0] out_q
