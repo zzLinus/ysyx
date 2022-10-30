@@ -22,7 +22,7 @@ assign state_wen = 1;
 
 register #(
 	.BITS(4)
-)(
+) state (
 	.load(in),
 	.clr(reset),
 	.clk(clk),
