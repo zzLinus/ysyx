@@ -13,7 +13,7 @@ module shift_register#(
 always @(*) begin
 	if(l_or_r == 1) begin // shift left
 		out_q <= {data[31-shamt:0],{(shamt){1'b0}}};
-	en cd
+	end
 	else begin // shift right
 		if(a_or_l == 1) begin // algo shift
 			out_q <= {{(shamt){data[31]}},data[31:shamt-1]};
