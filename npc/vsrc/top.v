@@ -137,12 +137,12 @@ alu_4bit alu(
 	.alu_carry(alu_carry)
 );
 
-state_machine state_machine(
-	.clk(clk),
-	.in(),
-	.reset(),
-	.out()
-);
+// state_machine state_machine(
+// 	.clk(clk),
+// 	.in(),
+// 	.reset(),
+// 	.out()
+// );
 
 reg [7:0] seg_x;
 reg [7:0] seg_y;
