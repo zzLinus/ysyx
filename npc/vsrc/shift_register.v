@@ -15,10 +15,10 @@ always @(*) begin
 	end
 	else begin // shift right
 		if(a_or_l == 1) begin // algo shift
-			out_q = data >>> shamt;
+			out_q = $signed(data) >>> shamt;
 		end
 		else begin // logical shift
-			out_q = data >>> shamt;
+			out_q = data >> shamt;
 		end
 	end
 end
