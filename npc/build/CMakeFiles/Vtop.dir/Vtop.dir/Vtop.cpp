@@ -12,6 +12,8 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     : VerilatedModel{*_vcontextp__}
     , vlSymsp{new Vtop__Syms(contextp(), _vcname__, this)}
     , clk{vlSymsp->TOP.clk}
+    , en{vlSymsp->TOP.en}
+    , ec_en{vlSymsp->TOP.ec_en}
     , timer_out{vlSymsp->TOP.timer_out}
     , rst{vlSymsp->TOP.rst}
     , sw{vlSymsp->TOP.sw}
@@ -24,10 +26,8 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , alu_a{vlSymsp->TOP.alu_a}
     , alu_b{vlSymsp->TOP.alu_b}
     , counter_EN{vlSymsp->TOP.counter_EN}
-    , en{vlSymsp->TOP.en}
     , rand_in{vlSymsp->TOP.rand_in}
     , state_machine_clr{vlSymsp->TOP.state_machine_clr}
-    , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}
     , sft_rgtr_shamt{vlSymsp->TOP.sft_rgtr_shamt}
     , sft_rgtr_l_or_r{vlSymsp->TOP.sft_rgtr_l_or_r}
@@ -79,43 +79,15 @@ Vtop::~Vtop() {
 }
 
 //============================================================
-// Evaluation loop
+// Evaluation function
 
-void Vtop___024root___eval_initial(Vtop___024root* vlSelf);
-void Vtop___024root___eval_settle(Vtop___024root* vlSelf);
-void Vtop___024root___eval(Vtop___024root* vlSelf);
-QData Vtop___024root___change_request(Vtop___024root* vlSelf);
 #ifdef VL_DEBUG
 void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf);
 #endif  // VL_DEBUG
-void Vtop___024root___final(Vtop___024root* vlSelf);
-
-static void _eval_initial_loop(Vtop__Syms* __restrict vlSymsp) {
-    vlSymsp->__Vm_didInit = true;
-    Vtop___024root___eval_initial(&(vlSymsp->TOP));
-    // Evaluate till stable
-    int __VclockLoop = 0;
-    QData __Vchange = 1;
-    vlSymsp->__Vm_activity = true;
-    do {
-        VL_DEBUG_IF(VL_DBG_MSGF("+ Initial loop\n"););
-        Vtop___024root___eval_settle(&(vlSymsp->TOP));
-        Vtop___024root___eval(&(vlSymsp->TOP));
-        if (VL_UNLIKELY(++__VclockLoop > 100)) {
-            // About to fail, so enable debug to see what's not settling.
-            // Note you must run make with OPT=-DVL_DEBUG for debug prints.
-            int __Vsaved_debug = Verilated::debug();
-            Verilated::debug(1);
-            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
-            Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("vsrc/top.v", 1, "",
-                "Verilated model didn't DC converge\n"
-                "- See https://verilator.org/warn/DIDNOTCONVERGE");
-        } else {
-            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
-        }
-    } while (VL_UNLIKELY(__Vchange));
-}
+void Vtop___024root___eval_static(Vtop___024root* vlSelf);
+void Vtop___024root___eval_initial(Vtop___024root* vlSelf);
+void Vtop___024root___eval_settle(Vtop___024root* vlSelf);
+void Vtop___024root___eval(Vtop___024root* vlSelf);
 
 void Vtop::eval_step() {
     VL_DEBUG_IF(VL_DBG_MSGF("+++++TOP Evaluate Vtop::eval_step\n"); );
@@ -123,30 +95,26 @@ void Vtop::eval_step() {
     // Debug assertions
     Vtop___024root___eval_debug_assertions(&(vlSymsp->TOP));
 #endif  // VL_DEBUG
-    // Initialize
-    if (VL_UNLIKELY(!vlSymsp->__Vm_didInit)) _eval_initial_loop(vlSymsp);
-    // Evaluate till stable
-    int __VclockLoop = 0;
-    QData __Vchange = 1;
     vlSymsp->__Vm_activity = true;
-    do {
-        VL_DEBUG_IF(VL_DBG_MSGF("+ Clock loop\n"););
-        Vtop___024root___eval(&(vlSymsp->TOP));
-        if (VL_UNLIKELY(++__VclockLoop > 100)) {
-            // About to fail, so enable debug to see what's not settling.
-            // Note you must run make with OPT=-DVL_DEBUG for debug prints.
-            int __Vsaved_debug = Verilated::debug();
-            Verilated::debug(1);
-            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
-            Verilated::debug(__Vsaved_debug);
-            VL_FATAL_MT("vsrc/top.v", 1, "",
-                "Verilated model didn't converge\n"
-                "- See https://verilator.org/warn/DIDNOTCONVERGE");
-        } else {
-            __Vchange = Vtop___024root___change_request(&(vlSymsp->TOP));
-        }
-    } while (VL_UNLIKELY(__Vchange));
+    if (VL_UNLIKELY(!vlSymsp->__Vm_didInit)) {
+        vlSymsp->__Vm_didInit = true;
+        VL_DEBUG_IF(VL_DBG_MSGF("+ Initial\n"););
+        Vtop___024root___eval_static(&(vlSymsp->TOP));
+        Vtop___024root___eval_initial(&(vlSymsp->TOP));
+        Vtop___024root___eval_settle(&(vlSymsp->TOP));
+    }
+    VL_DEBUG_IF(VL_DBG_MSGF("+ Eval\n"););
+    Vtop___024root___eval(&(vlSymsp->TOP));
     // Evaluate cleanup
+}
+
+//============================================================
+// Events and timing
+bool Vtop::eventsPending() { return false; }
+
+uint64_t Vtop::nextTimeSlot() {
+    VL_FATAL_MT(__FILE__, __LINE__, "", "%Error: No delays in the design");
+    return 0;
 }
 
 //============================================================
@@ -159,8 +127,10 @@ const char* Vtop::name() const {
 //============================================================
 // Invoke final blocks
 
+void Vtop___024root___eval_final(Vtop___024root* vlSelf);
+
 VL_ATTR_COLD void Vtop::final() {
-    Vtop___024root___final(&(vlSymsp->TOP));
+    Vtop___024root___eval_final(&(vlSymsp->TOP));
 }
 
 //============================================================

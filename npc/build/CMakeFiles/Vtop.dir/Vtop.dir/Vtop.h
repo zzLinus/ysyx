@@ -27,6 +27,8 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
     VL_IN8(&clk,0,0);
+    VL_IN8(&en,0,0);
+    VL_IN8(&ec_en,0,0);
     VL_OUT8(&timer_out,0,0);
     VL_IN8(&rst,0,0);
     VL_IN8(&sw,7,0);
@@ -39,10 +41,8 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&alu_a,3,0);
     VL_IN8(&alu_b,3,0);
     VL_IN8(&counter_EN,0,0);
-    VL_IN8(&en,0,0);
     VL_IN8(&rand_in,0,0);
     VL_IN8(&state_machine_clr,0,0);
-    VL_IN8(&ec_en,0,0);
     VL_IN8(&s,1,0);
     VL_IN8(&sft_rgtr_shamt,4,0);
     VL_IN8(&sft_rgtr_l_or_r,0,0);
@@ -107,6 +107,10 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     void eval_end_step() {}
     /// Simulation complete, run final blocks.  Application must call on completion.
     void final();
+    /// Are there scheduled events to handle?
+    bool eventsPending();
+    /// Returns time at next time slot. Aborts if !eventsPending()
+    uint64_t nextTimeSlot();
     /// Trace signals in the model; called by application code
     void trace(VerilatedVcdC* tfp, int levels, int options = 0);
     /// Retrieve name of this model instance (as passed to constructor).

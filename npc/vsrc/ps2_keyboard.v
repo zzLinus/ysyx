@@ -9,7 +9,7 @@ input clk,resetn,ps2_clk,ps2_data;
 
 reg [9:0] buffer;        // ps2_data bits
 reg [3:0] count;  // count ps2_data bits
-reg [2:0] ps2_clk_sync;
+reg [2:0] ps2_clk_sync; // buffered 3 clock bits
 
 always @(posedge clk) begin
 	ps2_clk_sync <=  {ps2_clk_sync[1:0],ps2_clk};

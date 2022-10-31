@@ -17,6 +17,8 @@ class Vtop___024root final : public VerilatedModule {
     // Anonymous structures to workaround compiler member-count bugs
     struct {
         VL_IN8(clk,0,0);
+        VL_IN8(en,0,0);
+        VL_IN8(ec_en,0,0);
         VL_OUT8(timer_out,0,0);
         VL_IN8(rst,0,0);
         VL_IN8(sw,7,0);
@@ -29,10 +31,8 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(alu_a,3,0);
         VL_IN8(alu_b,3,0);
         VL_IN8(counter_EN,0,0);
-        VL_IN8(en,0,0);
         VL_IN8(rand_in,0,0);
         VL_IN8(state_machine_clr,0,0);
-        VL_IN8(ec_en,0,0);
         VL_IN8(s,1,0);
         VL_IN8(sft_rgtr_shamt,4,0);
         VL_IN8(sft_rgtr_l_or_r,0,0);
@@ -125,14 +125,13 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__my_keyboard__DOT____Vtogcov__count;
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
-        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h658e4cf0__0;
+        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h68ebe97f__0;
         CData/*3:0*/ top__DOT__alu__DOT__tmp;
         CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
         CData/*3:0*/ top__DOT__state_machine__DOT__state_din;
         CData/*3:0*/ top__DOT__state_machine__DOT__state_dout;
         CData/*3:0*/ top__DOT__state_machine__DOT____Vtogcov__state_din;
         CData/*3:0*/ top__DOT__state_machine__DOT____Vtogcov__state_dout;
-        CData/*0:0*/ top__DOT__state_machine__DOT____Vtogcov__state_wen;
         CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out;
         CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out;
         CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit;
@@ -144,15 +143,16 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
-        CData/*0:0*/ __VinpClk__TOP__timer_out;
-        CData/*0:0*/ __Vclklast__TOP__clk;
+        CData/*0:0*/ __Vdly__timer_out;
+        CData/*0:0*/ __Vtrigrprev__TOP__clk;
+        CData/*0:0*/ __Vtrigrprev__TOP__timer_out;
     };
     struct {
-        CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__timer_out;
-        CData/*0:0*/ __Vchglast__TOP__timer_out;
+        CData/*0:0*/ __VactContinue;
         VL_OUT16(ledr,15,0);
         SData/*9:0*/ top__DOT__h_addr;
         SData/*9:0*/ top__DOT__v_addr;
+        SData/*8:0*/ top__DOT____Vcellinp__my_vmem__v_addr;
         SData/*15:0*/ top__DOT____Vtogcov__ledr;
         SData/*9:0*/ top__DOT____Vtogcov__h_addr;
         SData/*9:0*/ top__DOT____Vtogcov__v_addr;
@@ -162,6 +162,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt;
         SData/*9:0*/ top__DOT__my_keyboard__DOT__buffer;
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
+        SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
         IData/*23:0*/ top__DOT__vga_data;
@@ -179,6 +180,9 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ top__DOT__mu_seg__DOT____Vtogcov__count;
         IData/*31:0*/ top__DOT__timer_1s__DOT__count_clk;
         IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;
+        IData/*31:0*/ __VstlIterCount;
+        IData/*31:0*/ __VicoIterCount;
+        IData/*31:0*/ __VactIterCount;
         QData/*44:0*/ top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut;
         VlUnpacked<CData/*4:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__key_list;
@@ -197,6 +201,10 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
         VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };
+    VlTriggerVec<1> __VstlTriggered;
+    VlTriggerVec<1> __VicoTriggered;
+    VlTriggerVec<2> __VactTriggered;
+    VlTriggerVec<2> __VnbaTriggered;
 
     // INTERNAL VARIABLES
     Vtop__Syms* const vlSymsp;
