@@ -15,7 +15,9 @@ void nvboard_bind_all_pins(Vtop* top);
 
 static void single_cycle()
 {
-    top->clk = ~top->clk;
+    top->clk = 0;
+    top->eval();
+    top->clk = 1;
     top->eval();
 }
 
