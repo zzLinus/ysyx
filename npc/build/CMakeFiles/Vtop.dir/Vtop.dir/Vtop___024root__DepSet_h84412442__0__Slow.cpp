@@ -46,6 +46,10 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
         ++(vlSymsp->__Vcoverage[486]);
         vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out = 0U;
     }
+    if (((IData)(vlSelf->timer_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__timer_out))) {
+        ++(vlSymsp->__Vcoverage[260]);
+        vlSelf->top__DOT____Vtogcov__timer_out = vlSelf->timer_out;
+    }
     if ((1U & (~ (IData)(vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut)))) {
         ++(vlSymsp->__Vcoverage[487]);
         vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut 
@@ -1067,9 +1071,231 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                                 ? 8U
                                                                 : 1U)))))))) 
                     >> 0x20U)) >> 0x18U);
-    if (((IData)(vlSelf->timer_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__timer_out))) {
-        ++(vlSymsp->__Vcoverage[260]);
-        vlSelf->top__DOT____Vtogcov__timer_out = vlSelf->timer_out;
+    if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[257]);
+        vlSelf->top__DOT____Vtogcov__dec_counter_out 
+            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
+               | (1U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((2U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[258]);
+        vlSelf->top__DOT____Vtogcov__dec_counter_out 
+            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
+               | (2U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((4U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[259]);
+        vlSelf->top__DOT____Vtogcov__dec_counter_out 
+            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
+               | (4U & (IData)(vlSelf->dec_counter_out)));
+    }
+    if ((1U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[478]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((0xeU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (1U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((2U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[479]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((0xdU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (2U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((4U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[480]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((0xbU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (4U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((8U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
+               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
+        ++(vlSymsp->__Vcoverage[481]);
+        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
+            = ((7U & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
+               | (8U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
+    }
+    if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[249]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xfeU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (1U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[250]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xfdU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (2U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[251]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xfbU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (4U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((8U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[252]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xf7U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (8U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((0x10U & ((IData)(vlSelf->inc_counter_out) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[253]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xefU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (0x10U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((0x20U & ((IData)(vlSelf->inc_counter_out) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[254]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xdfU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (0x20U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((0x40U & ((IData)(vlSelf->inc_counter_out) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[255]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0xbfU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (0x40U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((0x80U & ((IData)(vlSelf->inc_counter_out) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
+        ++(vlSymsp->__Vcoverage[256]);
+        vlSelf->top__DOT____Vtogcov__inc_counter_out 
+            = ((0x7fU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
+               | (0x80U & (IData)(vlSelf->inc_counter_out)));
+    }
+    if ((1U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[305]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xfeU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (1U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((2U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[306]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xfdU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (2U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((4U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[307]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xfbU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (4U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((8U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[308]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xf7U 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (8U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x10U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[309]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xefU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (0x10U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x20U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[310]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xdfU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (0x20U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x40U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[311]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0xbfU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (0x40U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x80U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
+        ++(vlSymsp->__Vcoverage[312]);
+        vlSelf->top__DOT____Vtogcov__seg_x = ((0x7fU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
+                                              | (0x80U 
+                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((1U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[313]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xfeU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (1U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((2U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[314]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xfdU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (2U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((4U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[315]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xfbU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (4U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((8U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[316]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xf7U 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (8U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x10U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[317]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xefU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (0x10U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x20U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[318]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xdfU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (0x20U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x40U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[319]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0xbfU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (0x40U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
+    }
+    if ((0x80U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
+                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
+        ++(vlSymsp->__Vcoverage[320]);
+        vlSelf->top__DOT____Vtogcov__seg_y = ((0x7fU 
+                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
+                                              | (0x80U 
+                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync) 
                ^ (IData)(vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync)))) {
@@ -1870,232 +2096,6 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
                                                     < (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)) 
                                                    & (0x203U 
                                                       >= (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
-    if ((1U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[257]);
-        vlSelf->top__DOT____Vtogcov__dec_counter_out 
-            = ((6U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
-               | (1U & (IData)(vlSelf->dec_counter_out)));
-    }
-    if ((2U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[258]);
-        vlSelf->top__DOT____Vtogcov__dec_counter_out 
-            = ((5U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
-               | (2U & (IData)(vlSelf->dec_counter_out)));
-    }
-    if ((4U & ((IData)(vlSelf->dec_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[259]);
-        vlSelf->top__DOT____Vtogcov__dec_counter_out 
-            = ((3U & (IData)(vlSelf->top__DOT____Vtogcov__dec_counter_out)) 
-               | (4U & (IData)(vlSelf->dec_counter_out)));
-    }
-    if ((1U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[478]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((0xeU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (1U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((2U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[479]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((0xdU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (2U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((4U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[480]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((0xbU & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (4U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((8U & ((IData)(vlSelf->top__DOT__state_machine__DOT__state_dout) 
-               ^ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)))) {
-        ++(vlSymsp->__Vcoverage[481]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout 
-            = ((7U & (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout)) 
-               | (8U & (IData)(vlSelf->top__DOT__state_machine__DOT__state_dout)));
-    }
-    if ((1U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[249]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xfeU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (1U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((2U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[250]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xfdU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (2U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((4U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[251]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xfbU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (4U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((8U & ((IData)(vlSelf->inc_counter_out) ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[252]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xf7U & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (8U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((0x10U & ((IData)(vlSelf->inc_counter_out) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[253]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xefU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (0x10U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((0x20U & ((IData)(vlSelf->inc_counter_out) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[254]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xdfU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (0x20U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((0x40U & ((IData)(vlSelf->inc_counter_out) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[255]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0xbfU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (0x40U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((0x80U & ((IData)(vlSelf->inc_counter_out) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)))) {
-        ++(vlSymsp->__Vcoverage[256]);
-        vlSelf->top__DOT____Vtogcov__inc_counter_out 
-            = ((0x7fU & (IData)(vlSelf->top__DOT____Vtogcov__inc_counter_out)) 
-               | (0x80U & (IData)(vlSelf->inc_counter_out)));
-    }
-    if ((1U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[305]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xfeU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (1U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((2U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[306]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xfdU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (2U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((4U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[307]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xfbU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (4U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((8U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[308]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xf7U 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (8U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x10U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[309]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xefU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (0x10U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x20U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[310]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xdfU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (0x20U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x40U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[311]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0xbfU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (0x40U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x80U & (VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_x)))) {
-        ++(vlSymsp->__Vcoverage[312]);
-        vlSelf->top__DOT____Vtogcov__seg_x = ((0x7fU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_x)) 
-                                              | (0x80U 
-                                                 & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((1U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[313]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xfeU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (1U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((2U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[314]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xfdU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (2U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((4U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[315]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xfbU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (4U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((8U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-               ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[316]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xf7U 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (8U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x10U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[317]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xefU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (0x10U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x20U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[318]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xdfU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (0x20U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x40U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[319]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0xbfU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (0x40U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
-    if ((0x80U & (VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)) 
-                  ^ (IData)(vlSelf->top__DOT____Vtogcov__seg_y)))) {
-        ++(vlSymsp->__Vcoverage[320]);
-        vlSelf->top__DOT____Vtogcov__seg_y = ((0x7fU 
-                                               & (IData)(vlSelf->top__DOT____Vtogcov__seg_y)) 
-                                              | (0x80U 
-                                                 & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU))));
-    }
     if ((1U & (vlSelf->top__DOT__mu_seg__DOT__segs[0U] 
                ^ vlSelf->top__DOT__mu_seg__DOT____Vtogcov__segs
                [0U]))) {

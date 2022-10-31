@@ -13,14 +13,14 @@ VL_ATTR_COLD void Vtop___024root___eval_initial(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial\n"); );
     // Body
+    vlSelf->__Vclklast__TOP____VinpClk__TOP__timer_out 
+        = vlSelf->__VinpClk__TOP__timer_out;
     Vtop___024root___initial__TOP__0(vlSelf);
     vlSelf->__Vm_traceActivity[3U] = 1U;
     vlSelf->__Vm_traceActivity[2U] = 1U;
     vlSelf->__Vm_traceActivity[1U] = 1U;
     vlSelf->__Vm_traceActivity[0U] = 1U;
     vlSelf->__Vclklast__TOP__clk = vlSelf->clk;
-    vlSelf->__Vclklast__TOP____VinpClk__TOP__timer_out 
-        = vlSelf->__VinpClk__TOP__timer_out;
 }
 
 VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf);
@@ -250,6 +250,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     }
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
+    vlSelf->__Vdly__inc_counter_out = VL_RAND_RESET_I(8);
     vlSelf->__VinpClk__TOP__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__Vchglast__TOP__timer_out = VL_RAND_RESET_I(1);
     for (int __Vi0=0; __Vi0<4; ++__Vi0) {

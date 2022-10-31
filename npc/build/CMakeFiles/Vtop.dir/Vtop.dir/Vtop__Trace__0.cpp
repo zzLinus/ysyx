@@ -99,29 +99,29 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgBit(oldp+72,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit));
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[2U])) {
-        bufp->chgSData(oldp+73,(vlSelf->top__DOT__h_addr),10);
-        bufp->chgSData(oldp+74,(vlSelf->top__DOT__v_addr),10);
-        bufp->chgIData(oldp+75,(vlSelf->top__DOT__vga_data),24);
-        bufp->chgIData(oldp+76,(vlSelf->top__DOT__led1__DOT__count),32);
-        bufp->chgCData(oldp+77,(vlSelf->top__DOT__led1__DOT__led),8);
-        bufp->chgIData(oldp+78,(vlSelf->top__DOT__mu_seg__DOT__count),32);
-        bufp->chgCData(oldp+79,(vlSelf->top__DOT__mu_seg__DOT__offset),3);
-        bufp->chgIData(oldp+80,(vlSelf->top__DOT__mu_seg__DOT__x),32);
-        bufp->chgSData(oldp+81,(vlSelf->top__DOT__my_keyboard__DOT__buffer),10);
-        bufp->chgCData(oldp+82,(vlSelf->top__DOT__my_keyboard__DOT__count),4);
-        bufp->chgCData(oldp+83,(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync),3);
-        bufp->chgBit(oldp+84,(vlSelf->top__DOT__my_keyboard__DOT__sampling));
-        bufp->chgSData(oldp+85,(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt),10);
-        bufp->chgSData(oldp+86,(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt),10);
-        bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
-        bufp->chgBit(oldp+88,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
-        bufp->chgSData(oldp+89,((0x1ffU & (IData)(vlSelf->top__DOT__v_addr))),9);
-        bufp->chgIData(oldp+90,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
+        bufp->chgCData(oldp+73,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
+        bufp->chgBit(oldp+74,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
+        bufp->chgBit(oldp+75,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[3U])) {
-        bufp->chgCData(oldp+91,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
-        bufp->chgBit(oldp+92,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
-        bufp->chgBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
+        bufp->chgSData(oldp+76,(vlSelf->top__DOT__h_addr),10);
+        bufp->chgSData(oldp+77,(vlSelf->top__DOT__v_addr),10);
+        bufp->chgIData(oldp+78,(vlSelf->top__DOT__vga_data),24);
+        bufp->chgIData(oldp+79,(vlSelf->top__DOT__led1__DOT__count),32);
+        bufp->chgCData(oldp+80,(vlSelf->top__DOT__led1__DOT__led),8);
+        bufp->chgIData(oldp+81,(vlSelf->top__DOT__mu_seg__DOT__count),32);
+        bufp->chgCData(oldp+82,(vlSelf->top__DOT__mu_seg__DOT__offset),3);
+        bufp->chgIData(oldp+83,(vlSelf->top__DOT__mu_seg__DOT__x),32);
+        bufp->chgSData(oldp+84,(vlSelf->top__DOT__my_keyboard__DOT__buffer),10);
+        bufp->chgCData(oldp+85,(vlSelf->top__DOT__my_keyboard__DOT__count),4);
+        bufp->chgCData(oldp+86,(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync),3);
+        bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_keyboard__DOT__sampling));
+        bufp->chgSData(oldp+88,(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt),10);
+        bufp->chgSData(oldp+89,(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt),10);
+        bufp->chgBit(oldp+90,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
+        bufp->chgBit(oldp+91,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
+        bufp->chgSData(oldp+92,((0x1ffU & (IData)(vlSelf->top__DOT__v_addr))),9);
+        bufp->chgIData(oldp+93,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     }
     bufp->chgBit(oldp+94,(vlSelf->clk));
     bufp->chgBit(oldp+95,(vlSelf->rst));

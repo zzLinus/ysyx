@@ -143,11 +143,12 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
+        CData/*7:0*/ __Vdly__inc_counter_out;
         CData/*0:0*/ __VinpClk__TOP__timer_out;
-        CData/*0:0*/ __Vclklast__TOP__clk;
         CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__timer_out;
     };
     struct {
+        CData/*0:0*/ __Vclklast__TOP__clk;
         CData/*0:0*/ __Vchglast__TOP__timer_out;
         VL_OUT16(ledr,15,0);
         SData/*9:0*/ top__DOT__h_addr;
