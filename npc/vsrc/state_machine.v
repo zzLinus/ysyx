@@ -21,7 +21,7 @@ wire [3:0] state_din,state_dout;
 register #(
 	.BITS(4)
 ) state (
-	.load(in),
+	.load(clk),
 	.clr(reset),
 	.clk(clk),
 	.inp(state_din),

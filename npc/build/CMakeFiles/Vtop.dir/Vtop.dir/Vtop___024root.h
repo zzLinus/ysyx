@@ -132,7 +132,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__state_machine__DOT__state_dout;
         CData/*3:0*/ top__DOT__state_machine__DOT____Vtogcov__state_din;
         CData/*3:0*/ top__DOT__state_machine__DOT____Vtogcov__state_dout;
-        CData/*0:0*/ top__DOT__state_machine__DOT____Vtogcov__state_wen;
         CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out;
         CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out;
         CData/*0:0*/ top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit;
@@ -146,9 +145,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*0:0*/ __VinpClk__TOP__timer_out;
         CData/*0:0*/ __Vclklast__TOP__clk;
+        CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__timer_out;
     };
     struct {
-        CData/*0:0*/ __Vclklast__TOP____VinpClk__TOP__timer_out;
         CData/*0:0*/ __Vchglast__TOP__timer_out;
         VL_OUT16(ledr,15,0);
         SData/*9:0*/ top__DOT__h_addr;

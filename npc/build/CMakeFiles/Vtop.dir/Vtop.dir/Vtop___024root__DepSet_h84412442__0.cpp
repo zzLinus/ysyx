@@ -5143,9 +5143,9 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__1(Vtop___024root* vlSelf) {
     // Body
     ++(vlSymsp->__Vcoverage[389]);
     ++(vlSymsp->__Vcoverage[392]);
-    ++(vlSymsp->__Vcoverage[486]);
+    ++(vlSymsp->__Vcoverage[485]);
     if (vlSelf->state_machine_clr) {
-        ++(vlSymsp->__Vcoverage[485]);
+        ++(vlSymsp->__Vcoverage[484]);
         vlSelf->top__DOT__state_machine__DOT__state_dout = 0U;
     } else if (vlSelf->rand_in) {
         vlSelf->top__DOT__state_machine__DOT__state_dout 
@@ -5153,10 +5153,10 @@ VL_INLINE_OPT void Vtop___024root___sequent__TOP__1(Vtop___024root* vlSelf) {
     }
     if ((1U & (~ (IData)(vlSelf->state_machine_clr)))) {
         if (vlSelf->rand_in) {
-            ++(vlSymsp->__Vcoverage[483]);
+            ++(vlSymsp->__Vcoverage[482]);
         }
         if ((1U & (~ (IData)(vlSelf->rand_in)))) {
-            ++(vlSymsp->__Vcoverage[484]);
+            ++(vlSymsp->__Vcoverage[483]);
         }
     }
     if (vlSelf->counter_EN) {

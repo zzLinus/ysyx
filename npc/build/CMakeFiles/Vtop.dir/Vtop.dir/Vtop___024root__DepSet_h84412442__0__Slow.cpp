@@ -42,13 +42,14 @@ VL_ATTR_COLD void Vtop___024root___settle__TOP__0(Vtop___024root* vlSelf) {
     ++(vlSymsp->__Vcoverage[806]);
     ++(vlSymsp->__Vcoverage[806]);
     ++(vlSymsp->__Vcoverage[809]);
-    if ((1U & (~ (IData)(vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_wen)))) {
-        ++(vlSymsp->__Vcoverage[482]);
-        vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_wen = 1U;
-    }
     if (vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out) {
-        ++(vlSymsp->__Vcoverage[487]);
+        ++(vlSymsp->__Vcoverage[486]);
         vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out = 0U;
+    }
+    if ((1U & (~ (IData)(vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut)))) {
+        ++(vlSymsp->__Vcoverage[487]);
+        vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut 
+            = (1ULL | vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut);
     }
     if ((1U & (IData)((vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut 
                        >> 1U)))) {
