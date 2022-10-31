@@ -16,9 +16,7 @@ parameter [3:0] S0 = 0,
 				S8 = 8;
 
 wire [3:0] state_din,state_dout;
-wire state_wen;
 
-assign state_wen = 1;
 
 register #(
 	.BITS(4)
