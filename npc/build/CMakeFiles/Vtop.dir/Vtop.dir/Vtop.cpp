@@ -26,6 +26,7 @@ Vtop::Vtop(VerilatedContext* _vcontextp__, const char* _vcname__)
     , counter_EN{vlSymsp->TOP.counter_EN}
     , en{vlSymsp->TOP.en}
     , rand_in{vlSymsp->TOP.rand_in}
+    , state_machine_clr{vlSymsp->TOP.state_machine_clr}
     , ec_en{vlSymsp->TOP.ec_en}
     , s{vlSymsp->TOP.s}
     , sft_rgtr_shamt{vlSymsp->TOP.sft_rgtr_shamt}
