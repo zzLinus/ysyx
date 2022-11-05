@@ -12,6 +12,7 @@ module vga_ctrl (
     output [7:0] vga_b
 );
 
+// const defination  (clock patch)
 parameter h_frontporch = 96;
 parameter h_active = 144;
 parameter h_backporch = 784;
@@ -22,6 +23,7 @@ parameter v_active = 35;
 parameter v_backporch = 515;
 parameter v_total = 525;
 
+// pixel counter
 reg [9:0] x_cnt;
 reg [9:0] y_cnt;
 wire h_valid;
@@ -38,7 +40,7 @@ always @(posedge pclk) begin
             if(y_cnt == v_total) y_cnt <= 1;
             else y_cnt <= y_cnt + 1;
         end
-        else x_cnt <= x_cnt + 1;
+		else x_cnt <= x_cnt + 1;
     end
 end
 
