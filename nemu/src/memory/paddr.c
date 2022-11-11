@@ -18,7 +18,7 @@
 #include <device/mmio.h>
 #include <isa.h>
 
-#if   defined(CONFIG_PMEM_MALLOC)
+#if   defined(CONFIG_PMEM_MALLOC) // dynamic memory allloc on heap
 static uint8_t *pmem = NULL;
 #else // CONFIG_PMEM_GARRAY
 static uint8_t pmem[CONFIG_MSIZE] PG_ALIGN = {};

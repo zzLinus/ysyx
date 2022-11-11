@@ -30,6 +30,6 @@ typedef struct {
   } inst;
 } riscv64_ISADecodeInfo;
 
-#define isa_mmu_check(vaddr, len, type) (MMU_DIRECT)
+#define isa_mmu_check(vaddr, len, type) (MMU_DIRECT) // mmu memory management unit
 
 #endif
