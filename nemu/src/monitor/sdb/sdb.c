@@ -17,7 +17,6 @@
 #include <cpu/cpu.h>
 #include <readline/readline.h>
 #include <readline/history.h>
-#include <stdlib.h>
 #include "sdb.h"
 
 static int is_batch_mode = false;
