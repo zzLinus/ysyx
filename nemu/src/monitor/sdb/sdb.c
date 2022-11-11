@@ -75,12 +75,12 @@ static struct {
   { "help", "Display information about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
-  { "si [N]", "Single step N times", cmd_si },
-  { "info SUBCMD", "Print register value", cmd_info },
-  { "x N EXPR", "Value EXPR and store it's resalt in hex, print N bytes start with the resalt that's been store", cmd_x },
-  { "p EXPR", "Evaluate EXPR", cmd_p },
-  { "w EXPR", "Watch EXPR,if it change stop the program", cmd_w },
-  { "d N", "Delete watch point number N", cmd_d },
+  { "si", "Single step N times", cmd_si },
+  { "info", "Print register value", cmd_info },
+  { "x", "Value EXPR and store it's resalt in hex, print N bytes start with the resalt that's been store", cmd_x },
+  { "p", "Evaluate EXPR", cmd_p },
+  { "w", "Watch EXPR,if it change stop the program", cmd_w },
+  { "d", "Delete watch point number N", cmd_d },
   /* TODO: Add more commands */
 };
 
