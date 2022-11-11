@@ -17,6 +17,7 @@
 #include <cpu/cpu.h>
 #include <readline/readline.h>
 #include <readline/history.h>
+#include <stdlib.h>
 #include "sdb.h"
 
 static int is_batch_mode = false;
@@ -54,6 +55,18 @@ static int cmd_q(char *args) {
 
 static int cmd_help(char *args);
 
+static int cmd_si(char *args);
+
+static int cmd_info(char *args);
+
+static int cmd_x(char *args);
+
+static int cmd_p(char *args);
+
+static int cmd_w(char *args);
+
+static int cmd_d(char *args);
+
 static struct {
   const char *name;
   const char *description;
@@ -62,10 +75,46 @@ static struct {
   { "help", "Display information about all supported commands", cmd_help },
   { "c", "Continue the execution of the program", cmd_c },
   { "q", "Exit NEMU", cmd_q },
-
+  { "si [N]", "Single step N times", cmd_si },
+  { "info SUBCMD", "Print register value", cmd_info },
+  { "x N EXPR", "Value EXPR and store it's resalt in hex, print N bytes start with the resalt that's been store", cmd_x },
+  { "p EXPR", "Evaluate EXPR", cmd_p },
+  { "w EXPR", "Watch EXPR,if it change stop the program", cmd_w },
+  { "d N", "Delete watch point number N", cmd_d },
   /* TODO: Add more commands */
-
 };
+
+static int cmd_si(char *args)
+{
+	cpu_exec(atoi(args));
+	return 0;
+}
+
+static int cmd_info(char *args)
+{
+	return 0;
+}
+
+static int cmd_x(char *args)
+{
+	return 0;
+}
+
+static int cmd_p(char *args)
+{
+	return 0;
+}
+
+static int cmd_w(char *args)
+{
+	return 0;
+}
+
+static int cmd_d(char *args)
+{
+	return 0;
+}
+
 
 #define NR_CMD ARRLEN(cmd_table)
 
