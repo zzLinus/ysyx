@@ -13,6 +13,7 @@
 * See the Mulan PSL v2 for more details.
 ***************************************************************************************/
 
+#include "memory/paddr.h"
 #include <isa.h>
 #include <stdlib.h>
 #include <cpu/cpu.h>
@@ -106,21 +107,37 @@ static int cmd_info(char *args)
 
 static int cmd_x(char *args)
 {
+	uint32_t arg0 = 0, arg1 = 0;
+	char *arg = strtok(args, " ");
+	if (arg == NULL) {
+		printf("Unavaliable args");
+		return 0;
+	}
+	arg0 = atoi(arg);
+	arg = strtok(NULL, " ");
+	if (arg == NULL) {
+		printf("Too less args,need 2,only 1 provided");
+	}
+	arg1 = strtol(arg, NULL, 16);
+	printf("0x%lx\n", paddr_read(arg1, arg0));
 	return 0;
 }
 
 static int cmd_p(char *args)
 {
+	printf("Unimplemented command");
 	return 0;
 }
 
 static int cmd_w(char *args)
 {
+	printf("Unimplemented command");
 	return 0;
 }
 
 static int cmd_d(char *args)
 {
+	printf("Unimplemented command");
 	return 0;
 }
 
