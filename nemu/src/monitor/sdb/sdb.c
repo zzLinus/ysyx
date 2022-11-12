@@ -109,14 +109,17 @@ static int cmd_x(char *args)
 {
 	uint32_t arg0 = 0, arg1 = 0;
 	char *arg = strtok(args, " ");
+	// error handling
 	if (arg == NULL) {
 		printf("Unavaliable args");
 		return 0;
 	}
 	arg0 = atoi(arg);
 	arg = strtok(NULL, " ");
+	// error handling
 	if (arg == NULL) {
 		printf("Too less args,need 2,only 1 provided");
+		return 0;
 	}
 	arg1 = strtol(arg, NULL, 16);
 	printf("0x%016lx\n", paddr_read(arg1, arg0));
