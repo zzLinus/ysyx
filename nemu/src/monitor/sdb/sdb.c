@@ -119,7 +119,6 @@ static int cmd_x(char *args)
 		printf("Too less args,need 2,only 1 provided");
 	}
 	arg1 = strtol(arg, NULL, 16);
-	printf("arg1: 0x%x | arg0: %d\n", arg1, arg0);
 	printf("0x%lx\n", paddr_read(arg1, arg0));
 	return 0;
 }
