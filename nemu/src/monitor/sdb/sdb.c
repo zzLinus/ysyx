@@ -131,23 +131,23 @@ static int cmd_x(char *args)
 	arg1 = strtol(arg, NULL, 16);
 	unsigned i;
 	for (i = 0; i < arg0 / 8; ++i) {
-		arg1 += 8;
 		printf("0x%016lx\n", paddr_read(arg1, 8));
+		arg1 += 8;
 	}
 	arg0 %= 8;
 	for (i = 0; i < arg0 / 4; ++i) {
-		arg1 += 4;
 		printf("0x%016lx\n", paddr_read(arg1, 4));
+		arg1 += 4;
 	}
 	arg0 %= 4;
 	for (i = 0; i < arg0 / 2; ++i) {
-		arg1 += 2;
 		printf("0x%016lx\n", paddr_read(arg1, 2));
+		arg1 += 2;
 	}
 	arg0 %= 2;
 	for (i = 0; i < arg0 / 1; ++i) {
-		arg1 += 1;
 		printf("0x%016lx\n", paddr_read(arg1, 1));
+		arg1 += 1;
 	}
 	arg0 %= 2;
 	return 0;
