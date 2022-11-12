@@ -90,6 +90,10 @@ static struct {
 
 static int cmd_si(char *args)
 {
+	if (args == NULL) {
+		printf("Not enought arguments,Need 1 provided 0\n");
+		return 0;
+	}
 	cpu_exec(atoi(args));
 	return 0;
 }
@@ -99,9 +103,12 @@ static int cmd_info(char *args)
 	if (strcmp(args, "r") == 0) {
 		isa_reg_display();
 	} else if (strcmp(args, "w") == 0) {
-		printf("watch point info display uninplemente now");
-	} else
-		printf("Unavaliable args");
+		printf("watch point info display uninplemente now\n");
+		return 0;
+	} else {
+		printf("Unavaliable args\n");
+		return 0;
+	}
 	return 0;
 }
 
@@ -109,35 +116,58 @@ static int cmd_x(char *args)
 {
 	uint32_t arg0 = 0, arg1 = 0;
 	char *arg = strtok(args, " ");
+	// error handling
 	if (arg == NULL) {
-		printf("Unavaliable args");
+		printf("Unavaliable args\n");
 		return 0;
 	}
 	arg0 = atoi(arg);
 	arg = strtok(NULL, " ");
+	// error handling
 	if (arg == NULL) {
-		printf("Too less args,need 2,only 1 provided");
+		printf("Too less args,need 2,only 1 provided\n");
+		return 0;
 	}
 	arg1 = strtol(arg, NULL, 16);
-	printf("0x%lx\n", paddr_read(arg1, arg0));
+	unsigned i;
+	for (i = 0; i < arg0 / 8; ++i) {
+		printf("0x%016lx\n", paddr_read(arg1, 8));
+		arg1 += 8;
+	}
+	arg0 %= 8;
+	for (i = 0; i < arg0 / 4; ++i) {
+		printf("0x%016lx\n", paddr_read(arg1, 4));
+		arg1 += 4;
+	}
+	arg0 %= 4;
+	for (i = 0; i < arg0 / 2; ++i) {
+		printf("0x%016lx\n", paddr_read(arg1, 2));
+		arg1 += 2;
+	}
+	arg0 %= 2;
+	for (i = 0; i < arg0 / 1; ++i) {
+		printf("0x%016lx\n", paddr_read(arg1, 1));
+		arg1 += 1;
+	}
+	arg0 %= 2;
 	return 0;
 }
 
 static int cmd_p(char *args)
 {
-	printf("Unimplemented command");
+	printf("Unimplemented command\n");
 	return 0;
 }
 
 static int cmd_w(char *args)
 {
-	printf("Unimplemented command");
+	printf("Unimplemented command\n");
 	return 0;
 }
 
 static int cmd_d(char *args)
 {
-	printf("Unimplemented command");
+	printf("Unimplemented command\n");
 	return 0;
 }
 
