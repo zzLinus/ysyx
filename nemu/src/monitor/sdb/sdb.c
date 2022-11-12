@@ -130,21 +130,25 @@ static int cmd_x(char *args)
 	}
 	arg1 = strtol(arg, NULL, 16);
 	unsigned i;
+	printf("Memory from %x to %x\n", arg1, arg1 + (arg0 / 8) * 8);
 	for (i = 0; i < arg0 / 8; ++i) {
 		printf("0x%016lx\n", paddr_read(arg1, 8));
 		arg1 += 8;
 	}
 	arg0 %= 8;
+	printf("Memory from %x to %x\n", arg1, arg1 + (arg0 / 4) * 4);
 	for (i = 0; i < arg0 / 4; ++i) {
 		printf("0x%016lx\n", paddr_read(arg1, 4));
 		arg1 += 4;
 	}
 	arg0 %= 4;
+	printf("Memory from %x to %x\n", arg1, arg1 + (arg0 / 2) * 2);
 	for (i = 0; i < arg0 / 2; ++i) {
 		printf("0x%016lx\n", paddr_read(arg1, 2));
 		arg1 += 2;
 	}
 	arg0 %= 2;
+	printf("Memory from %x to %x\n", arg1, arg1 + (arg0 / 1) * 1);
 	for (i = 0; i < arg0 / 1; ++i) {
 		printf("0x%016lx\n", paddr_read(arg1, 1));
 		arg1 += 1;
