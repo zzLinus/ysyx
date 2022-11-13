@@ -40,8 +40,8 @@
 #include <linux/mmc/mmc.h>
 #include <linux/mmc/sd.h>
 
-#define SDCMD  0x00 /* Command to SD card              - 16 R/W */
-#define SDARG  0x04 /* Argument to SD card             - 32 R/W */
+#define SDCMD 0x00 /* Command to SD card              - 16 R/W */
+#define SDARG 0x04 /* Argument to SD card             - 32 R/W */
 #define SDTOUT 0x08 /* Start value for timeout counter - 32 R/W */
 #define SDCDIV 0x0c /* Start value for clock divider   - 11 R/W */
 #define SDRSP0 0x10 /* SD card response (31:0)         - 32 R   */
@@ -49,52 +49,52 @@
 #define SDRSP2 0x18 /* SD card response (95:64)        - 32 R   */
 #define SDRSP3 0x1c /* SD card response (127:96)       - 32 R   */
 #define SDHSTS 0x20 /* SD host status                  - 11 R/W */
-#define SDVDD  0x30 /* SD card power control           -  1 R/W */
-#define SDEDM  0x34 /* Emergency Debug Mode            - 13 R/W */
+#define SDVDD 0x30 /* SD card power control           -  1 R/W */
+#define SDEDM 0x34 /* Emergency Debug Mode            - 13 R/W */
 #define SDHCFG 0x38 /* Host configuration              -  2 R/W */
 #define SDHBCT 0x3c /* Host byte count (debug)         - 32 R/W */
 #define SDDATA 0x40 /* Data to/from SD card            - 32 R/W */
 #define SDHBLC 0x50 /* Host block count (SDIO/SDHC)    -  9 R/W */
 
-#define SDCMD_NEW_FLAG			0x8000
-#define SDCMD_FAIL_FLAG			0x4000
-#define SDCMD_BUSYWAIT			0x800
-#define SDCMD_NO_RESPONSE		0x400
-#define SDCMD_LONG_RESPONSE		0x200
-#define SDCMD_WRITE_CMD			0x80
-#define SDCMD_READ_CMD			0x40
-#define SDCMD_CMD_MASK			0x3f
+#define SDCMD_NEW_FLAG 0x8000
+#define SDCMD_FAIL_FLAG 0x4000
+#define SDCMD_BUSYWAIT 0x800
+#define SDCMD_NO_RESPONSE 0x400
+#define SDCMD_LONG_RESPONSE 0x200
+#define SDCMD_WRITE_CMD 0x80
+#define SDCMD_READ_CMD 0x40
+#define SDCMD_CMD_MASK 0x3f
 
-#define SDCDIV_MAX_CDIV			0x7ff
+#define SDCDIV_MAX_CDIV 0x7ff
 
-#define SDDATA_FIFO_WORDS	16
+#define SDDATA_FIFO_WORDS 16
 
-#define FIFO_READ_THRESHOLD	4
-#define FIFO_WRITE_THRESHOLD	4
-#define SDDATA_FIFO_PIO_BURST	8
+#define FIFO_READ_THRESHOLD 4
+#define FIFO_WRITE_THRESHOLD 4
+#define SDDATA_FIFO_PIO_BURST 8
 
-#define PIO_THRESHOLD	1  /* Maximum block count for PIO (0 = always DMA) */
+#define PIO_THRESHOLD 1 /* Maximum block count for PIO (0 = always DMA) */
 
 struct nemu_host {
-	spinlock_t		lock;
-	struct mutex		mutex;
+	spinlock_t lock;
+	struct mutex mutex;
 
-	void __iomem		*ioaddr;
-	u32			phys_addr;
+	void __iomem *ioaddr;
+	u32 phys_addr;
 
-	struct mmc_host		*mmc;
-	struct platform_device	*pdev;
+	struct mmc_host *mmc;
+	struct platform_device *pdev;
 
-	int			clock;		/* Current clock speed */
-	unsigned int		max_clk;	/* Max possible freq */
-	struct sg_mapping_iter	sg_miter;	/* SG state for PIO */
-	unsigned int		blocks;		/* remaining PIO blocks */
+	int clock; /* Current clock speed */
+	unsigned int max_clk; /* Max possible freq */
+	struct sg_mapping_iter sg_miter; /* SG state for PIO */
+	unsigned int blocks; /* remaining PIO blocks */
 
-	struct mmc_request	*mrq;		/* Current request */
-	struct mmc_command	*cmd;		/* Current command */
-	struct mmc_data		*data;		/* Current data request */
-	bool			data_complete:1;/* Data finished before cmd */
-	bool			use_sbc:1;	/* Send CMD23 */
+	struct mmc_request *mrq; /* Current request */
+	struct mmc_command *cmd; /* Current command */
+	struct mmc_data *data; /* Current data request */
+	bool data_complete : 1; /* Data finished before cmd */
+	bool use_sbc : 1; /* Send CMD23 */
 };
 
 static void nemu_reset(struct mmc_host *mmc)
@@ -175,11 +175,10 @@ static void nemu_transfer_pio(struct nemu_host *host)
 	nemu_transfer_block_pio(host, is_read);
 }
 
-static
-void nemu_prepare_data(struct nemu_host *host, struct mmc_command *cmd)
+static void nemu_prepare_data(struct nemu_host *host, struct mmc_command *cmd)
 {
 	struct mmc_data *data = cmd->data;
-  int flags = SG_MITER_ATOMIC;
+	int flags = SG_MITER_ATOMIC;
 
 	WARN_ON(host->data);
 
@@ -190,13 +189,13 @@ void nemu_prepare_data(struct nemu_host *host, struct mmc_command *cmd)
 	host->data_complete = false;
 	host->data->bytes_xfered = 0;
 
-  /* Use PIO */
-  if (data->flags & MMC_DATA_READ)
-    flags |= SG_MITER_TO_SG;
-  else
-    flags |= SG_MITER_FROM_SG;
-  sg_miter_start(&host->sg_miter, data->sg, data->sg_len, flags);
-  host->blocks = data->blocks;
+	/* Use PIO */
+	if (data->flags & MMC_DATA_READ)
+		flags |= SG_MITER_TO_SG;
+	else
+		flags |= SG_MITER_FROM_SG;
+	sg_miter_start(&host->sg_miter, data->sg, data->sg_len, flags);
+	host->blocks = data->blocks;
 }
 
 static void nemu_finish_request(struct nemu_host *host)
@@ -212,8 +211,7 @@ static void nemu_finish_request(struct nemu_host *host)
 	mmc_request_done(host->mmc, mrq);
 }
 
-static
-bool nemu_send_command(struct nemu_host *host, struct mmc_command *cmd)
+static bool nemu_send_command(struct nemu_host *host, struct mmc_command *cmd)
 {
 	u32 sdcmd;
 
@@ -240,7 +238,7 @@ bool nemu_send_command(struct nemu_host *host, struct mmc_command *cmd)
 	if (cmd->data) {
 		if (cmd->data->flags & MMC_DATA_WRITE) {
 			sdcmd |= SDCMD_WRITE_CMD;
-    }
+		}
 		if (cmd->data->flags & MMC_DATA_READ)
 			sdcmd |= SDCMD_READ_CMD;
 	}
@@ -265,7 +263,7 @@ static void nemu_transfer_complete(struct nemu_host *host)
 	 */
 	if (host->mrq->stop && (data->error || !host->use_sbc)) {
 		if (nemu_send_command(host, host->mrq->stop)) {
-      nemu_finish_command(host);
+			nemu_finish_command(host);
 		}
 	} else {
 		nemu_finish_request(host);
@@ -288,8 +286,7 @@ static void nemu_finish_data(struct nemu_host *host)
 		 * command completed. Make sure we do
 		 * things in the proper order.
 		 */
-		dev_dbg(dev, "Finished early - HSTS %08x\n",
-			readl(host->ioaddr + SDHSTS));
+		dev_dbg(dev, "Finished early - HSTS %08x\n", readl(host->ioaddr + SDHSTS));
 	} else {
 		nemu_transfer_complete(host);
 	}
@@ -298,13 +295,12 @@ static void nemu_finish_data(struct nemu_host *host)
 static void nemu_finish_command(struct nemu_host *host)
 {
 	struct mmc_command *cmd = host->cmd;
-  int i;
+	int i;
 
 	if (cmd->flags & MMC_RSP_PRESENT) {
 		if (cmd->flags & MMC_RSP_136) {
 			for (i = 0; i < 4; i++) {
-				cmd->resp[3 - i] =
-					readl(host->ioaddr + SDRSP0 + i * 4);
+				cmd->resp[3 - i] = readl(host->ioaddr + SDRSP0 + i * 4);
 			}
 		} else {
 			cmd->resp[0] = readl(host->ioaddr + SDRSP0);
@@ -316,15 +312,15 @@ static void nemu_finish_command(struct nemu_host *host)
 		host->cmd = NULL;
 		if (nemu_send_command(host, host->mrq->cmd)) {
 			if (host->data) {
-        // start PIO right now
-        for (i = 0; i < host->data->blocks; i ++) {
-          nemu_transfer_pio(host);
-        }
+				// start PIO right now
+				for (i = 0; i < host->data->blocks; i++) {
+					nemu_transfer_pio(host);
+				}
 
-        nemu_finish_data(host);
-      }
+				nemu_finish_data(host);
+			}
 
-      nemu_finish_command(host);
+			nemu_finish_command(host);
 		}
 	} else if (cmd == host->mrq->stop) {
 		/* Finished CMD12 */
@@ -334,10 +330,9 @@ static void nemu_finish_command(struct nemu_host *host)
 		host->cmd = NULL;
 		if (!host->data) {
 			nemu_finish_request(host);
-    }
-		else if (host->data_complete) {
+		} else if (host->data_complete) {
 			nemu_transfer_complete(host);
-    }
+		}
 	}
 }
 
@@ -357,8 +352,7 @@ static void nemu_request(struct mmc_host *mmc, struct mmc_request *mrq)
 		mrq->stop->error = 0;
 
 	if (mrq->data && !is_power_of_2(mrq->data->blksz)) {
-		dev_err(dev, "unsupported block size (%d bytes)\n",
-			mrq->data->blksz);
+		dev_err(dev, "unsupported block size (%d bytes)\n", mrq->data->blksz);
 
 		if (mrq->cmd)
 			mrq->cmd->error = -EINVAL;
@@ -372,23 +366,22 @@ static void nemu_request(struct mmc_host *mmc, struct mmc_request *mrq)
 	WARN_ON(host->mrq);
 	host->mrq = mrq;
 
-	host->use_sbc = !!mrq->sbc && host->mrq->data &&
-			(host->mrq->data->flags & MMC_DATA_READ);
+	host->use_sbc = !!mrq->sbc && host->mrq->data && (host->mrq->data->flags & MMC_DATA_READ);
 	if (host->use_sbc) {
 		if (nemu_send_command(host, mrq->sbc)) {
-      nemu_finish_command(host);
+			nemu_finish_command(host);
 		}
 	} else if (mrq->cmd && nemu_send_command(host, mrq->cmd)) {
 		if (host->data) {
-      int i;
-      // start PIO right now
-      for (i = 0; i < host->data->blocks; i ++) {
-        nemu_transfer_pio(host);
-      }
-      nemu_finish_data(host);
-    }
+			int i;
+			// start PIO right now
+			for (i = 0; i < host->data->blocks; i++) {
+				nemu_transfer_pio(host);
+			}
+			nemu_finish_data(host);
+		}
 
-    nemu_finish_command(host);
+		nemu_finish_command(host);
 	}
 
 	mutex_unlock(&host->mutex);
@@ -416,13 +409,11 @@ static int nemu_add_host(struct nemu_host *host)
 
 	mmc->max_busy_timeout = ~0 / (mmc->f_max / 1000);
 
-	dev_dbg(dev, "f_max %d, f_min %d, max_busy_timeout %d\n",
-		mmc->f_max, mmc->f_min, mmc->max_busy_timeout);
+	dev_dbg(dev, "f_max %d, f_min %d, max_busy_timeout %d\n", mmc->f_max, mmc->f_min, mmc->max_busy_timeout);
 
 	/* host controller capabilities */
-	mmc->caps |= MMC_CAP_SD_HIGHSPEED | MMC_CAP_MMC_HIGHSPEED |
-		     MMC_CAP_NEEDS_POLL | MMC_CAP_HW_RESET | MMC_CAP_ERASE |
-		     MMC_CAP_CMD23;
+	mmc->caps |= MMC_CAP_SD_HIGHSPEED | MMC_CAP_MMC_HIGHSPEED | MMC_CAP_NEEDS_POLL | MMC_CAP_HW_RESET |
+		     MMC_CAP_ERASE | MMC_CAP_CMD23;
 
 	spin_lock_init(&host->lock);
 	mutex_init(&host->mutex);
@@ -431,7 +422,7 @@ static int nemu_add_host(struct nemu_host *host)
 	mmc->max_req_size = 524288;
 	mmc->max_seg_size = mmc->max_req_size;
 	mmc->max_blk_size = 1024;
-	mmc->max_blk_count =  65535;
+	mmc->max_blk_count = 65535;
 
 	/* report supported voltage ranges */
 	mmc->ocr_avail = MMC_VDD_32_33 | MMC_VDD_33_34;
@@ -520,10 +511,7 @@ static int nemu_remove(struct platform_device *pdev)
 	return 0;
 }
 
-static const struct of_device_id nemu_match[] = {
-	{ .compatible = "nemu-sdhost" },
-	{ }
-};
+static const struct of_device_id nemu_match[] = { { .compatible = "nemu-sdhost" }, {} };
 MODULE_DEVICE_TABLE(of, nemu_match);
 
 static struct platform_driver nemu_driver = {

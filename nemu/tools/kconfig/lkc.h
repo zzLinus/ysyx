@@ -25,20 +25,12 @@ extern "C" {
 #endif
 static inline const char *CONFIG_prefix(void)
 {
-	return getenv( "CONFIG_" ) ?: CONFIG_;
+	return getenv("CONFIG_") ?: CONFIG_;
 }
 #undef CONFIG_
 #define CONFIG_ CONFIG_prefix()
 
-enum conf_def_mode {
-	def_default,
-	def_yes,
-	def_mod,
-	def_y2m,
-	def_m2y,
-	def_no,
-	def_random
-};
+enum conf_def_mode { def_default, def_yes, def_mod, def_y2m, def_m2y, def_no, def_random };
 
 extern int yylineno;
 void zconfdump(FILE *out);
@@ -79,7 +71,7 @@ int yylex(void);
 
 struct gstr {
 	size_t len;
-	char  *s;
+	char *s;
 	/*
 	* when max_width is not zero long lines in string s (if any) get
 	* wrapped not to exceed the max_width value
@@ -134,7 +126,6 @@ static inline tristate sym_get_tristate_value(struct symbol *sym)
 {
 	return sym->curr.tri;
 }
-
 
 static inline struct symbol *sym_get_choice_value(struct symbol *sym)
 {

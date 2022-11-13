@@ -14,19 +14,19 @@
 struct symbol symbol_yes = {
 	.name = "y",
 	.curr = { "y", yes },
-	.flags = SYMBOL_CONST|SYMBOL_VALID,
+	.flags = SYMBOL_CONST | SYMBOL_VALID,
 };
 
 struct symbol symbol_mod = {
 	.name = "m",
 	.curr = { "m", mod },
-	.flags = SYMBOL_CONST|SYMBOL_VALID,
+	.flags = SYMBOL_CONST | SYMBOL_VALID,
 };
 
 struct symbol symbol_no = {
 	.name = "n",
 	.curr = { "n", no },
-	.flags = SYMBOL_CONST|SYMBOL_VALID,
+	.flags = SYMBOL_CONST | SYMBOL_VALID,
 };
 
 static struct symbol symbol_empty = {
@@ -75,8 +75,7 @@ struct property *sym_get_choice_prop(struct symbol *sym)
 {
 	struct property *prop;
 
-	for_all_choices(sym, prop)
-		return prop;
+	for_all_choices(sym, prop) return prop;
 	return NULL;
 }
 
@@ -84,7 +83,8 @@ static struct property *sym_get_default_prop(struct symbol *sym)
 {
 	struct property *prop;
 
-	for_all_defaults(sym, prop) {
+	for_all_defaults(sym, prop)
+	{
 		prop->visible.tri = expr_calc_value(prop->visible.expr);
 		if (prop->visible.tri != no)
 			return prop;
@@ -96,7 +96,8 @@ struct property *sym_get_range_prop(struct symbol *sym)
 {
 	struct property *prop;
 
-	for_all_properties(sym, prop, P_RANGE) {
+	for_all_properties(sym, prop, P_RANGE)
+	{
 		prop->visible.tri = expr_calc_value(prop->visible.expr);
 		if (prop->visible.tri != no)
 			return prop;
@@ -170,8 +171,7 @@ static void sym_set_all_changed(void)
 	struct symbol *sym;
 	int i;
 
-	for_all_symbols(i, sym)
-		sym_set_changed(sym);
+	for_all_symbols(i, sym) sym_set_changed(sym);
 }
 
 static void sym_calc_visibility(struct symbol *sym)
@@ -186,15 +186,15 @@ static void sym_calc_visibility(struct symbol *sym)
 	if (sym_is_choice_value(sym))
 		choice_sym = prop_get_symbol(sym_get_choice_prop(sym));
 
-	for_all_prompts(sym, prop) {
+	for_all_prompts(sym, prop)
+	{
 		prop->visible.tri = expr_calc_value(prop->visible.expr);
 		/*
 		 * Tristate choice_values with visibility 'mod' are
 		 * not visible if the corresponding choice's value is
 		 * 'yes'.
 		 */
-		if (choice_sym && sym->type == S_TRISTATE &&
-		    prop->visible.tri == mod && choice_sym->curr.tri == yes)
+		if (choice_sym && sym->type == S_TRISTATE && prop->visible.tri == mod && choice_sym->curr.tri == yes)
 			prop->visible.tri = no;
 
 		tri = EXPR_OR(tri, prop->visible.tri);
@@ -250,7 +250,8 @@ struct symbol *sym_choice_default(struct symbol *sym)
 	struct expr *e;
 
 	/* any of the defaults visible? */
-	for_all_defaults(sym, prop) {
+	for_all_defaults(sym, prop)
+	{
 		prop->visible.tri = expr_calc_value(prop->visible.expr);
 		if (prop->visible.tri == no)
 			continue;
@@ -261,9 +262,7 @@ struct symbol *sym_choice_default(struct symbol *sym)
 
 	/* just get the first visible value */
 	prop = sym_get_choice_prop(sym);
-	expr_list_for_each_sym(prop->expr, e, def_sym)
-		if (def_sym->visible != no)
-			return def_sym;
+	expr_list_for_each_sym(prop->expr, e, def_sym) if (def_sym->visible != no) return def_sym;
 
 	/* failed to locate any defaults */
 	return NULL;
@@ -279,7 +278,8 @@ static struct symbol *sym_calc_choice(struct symbol *sym)
 	/* first calculate all choice values' visibilities */
 	flags = sym->flags;
 	prop = sym_get_choice_prop(sym);
-	expr_list_for_each_sym(prop->expr, e, def_sym) {
+	expr_list_for_each_sym(prop->expr, e, def_sym)
+	{
 		sym_calc_visibility(def_sym);
 		if (def_sym->visible != no)
 			flags &= def_sym->flags;
@@ -305,19 +305,13 @@ static void sym_warn_unmet_dep(struct symbol *sym)
 {
 	struct gstr gs = str_new();
 
-	str_printf(&gs,
-		   "\nWARNING: unmet direct dependencies detected for %s\n",
-		   sym->name);
-	str_printf(&gs,
-		   "  Depends on [%c]: ",
-		   sym->dir_dep.tri == mod ? 'm' : 'n');
+	str_printf(&gs, "\nWARNING: unmet direct dependencies detected for %s\n", sym->name);
+	str_printf(&gs, "  Depends on [%c]: ", sym->dir_dep.tri == mod ? 'm' : 'n');
 	expr_gstr_print(sym->dir_dep.expr, &gs);
 	str_printf(&gs, "\n");
 
-	expr_gstr_print_revdep(sym->rev_dep.expr, &gs, yes,
-			       "  Selected by [y]:\n");
-	expr_gstr_print_revdep(sym->rev_dep.expr, &gs, mod,
-			       "  Selected by [m]:\n");
+	expr_gstr_print_revdep(sym->rev_dep.expr, &gs, yes, "  Selected by [y]:\n");
+	expr_gstr_print_revdep(sym->rev_dep.expr, &gs, mod, "  Selected by [m]:\n");
 
 	fputs(str_get(&gs), stderr);
 }
@@ -334,8 +328,7 @@ void sym_calc_value(struct symbol *sym)
 	if (sym->flags & SYMBOL_VALID)
 		return;
 
-	if (sym_is_choice_value(sym) &&
-	    sym->flags & SYMBOL_NEED_SET_CHOICE_VALUES) {
+	if (sym_is_choice_value(sym) && sym->flags & SYMBOL_NEED_SET_CHOICE_VALUES) {
 		sym->flags &= ~SYMBOL_NEED_SET_CHOICE_VALUES;
 		prop = sym_get_choice_prop(sym);
 		sym_calc_value(prop_get_symbol(prop));
@@ -382,8 +375,7 @@ void sym_calc_value(struct symbol *sym)
 				 * if available, otherwise try the default value
 				 */
 				if (sym_has_value(sym)) {
-					newval.tri = EXPR_AND(sym->def[S_DEF_USER].tri,
-							      sym->visible);
+					newval.tri = EXPR_AND(sym->def[S_DEF_USER].tri, sym->visible);
 					goto calc_newval;
 				}
 			}
@@ -392,19 +384,17 @@ void sym_calc_value(struct symbol *sym)
 			if (!sym_is_choice(sym)) {
 				prop = sym_get_default_prop(sym);
 				if (prop) {
-					newval.tri = EXPR_AND(expr_calc_value(prop->expr),
-							      prop->visible.tri);
+					newval.tri = EXPR_AND(expr_calc_value(prop->expr), prop->visible.tri);
 					if (newval.tri != no)
 						sym->flags |= SYMBOL_WRITE;
 				}
 				if (sym->implied.tri != no) {
 					sym->flags |= SYMBOL_WRITE;
 					newval.tri = EXPR_OR(newval.tri, sym->implied.tri);
-					newval.tri = EXPR_AND(newval.tri,
-							      sym->dir_dep.tri);
+					newval.tri = EXPR_AND(newval.tri, sym->dir_dep.tri);
 				}
 			}
-		calc_newval:
+calc_newval:
 			if (sym->dir_dep.tri < sym->rev_dep.tri)
 				sym_warn_unmet_dep(sym);
 			newval.tri = EXPR_OR(newval.tri, sym->rev_dep.tri);
@@ -429,8 +419,7 @@ void sym_calc_value(struct symbol *sym)
 			}
 		}
 		break;
-	default:
-		;
+	default:;
 	}
 
 	sym->curr = newval;
@@ -450,9 +439,9 @@ void sym_calc_value(struct symbol *sym)
 		struct symbol *choice_sym;
 
 		prop = sym_get_choice_prop(sym);
-		expr_list_for_each_sym(prop->expr, e, choice_sym) {
-			if ((sym->flags & SYMBOL_WRITE) &&
-			    choice_sym->visible != no)
+		expr_list_for_each_sym(prop->expr, e, choice_sym)
+		{
+			if ((sym->flags & SYMBOL_WRITE) && choice_sym->visible != no)
 				choice_sym->flags |= SYMBOL_WRITE;
 			if (sym->flags & SYMBOL_CHANGED)
 				sym_set_changed(choice_sym);
@@ -471,8 +460,7 @@ void sym_clear_all_valid(void)
 	struct symbol *sym;
 	int i;
 
-	for_all_symbols(i, sym)
-		sym->flags &= ~SYMBOL_VALID;
+	for_all_symbols(i, sym) sym->flags &= ~SYMBOL_VALID;
 	sym_add_change_count(1);
 	sym_calc_value(modules_sym);
 }
@@ -587,9 +575,12 @@ bool sym_string_valid(struct symbol *sym, const char *str)
 	case S_BOOLEAN:
 	case S_TRISTATE:
 		switch (str[0]) {
-		case 'y': case 'Y':
-		case 'm': case 'M':
-		case 'n': case 'N':
+		case 'y':
+		case 'Y':
+		case 'm':
+		case 'M':
+		case 'n':
+		case 'N':
 			return true;
 		}
 		return false;
@@ -627,11 +618,14 @@ bool sym_string_within_range(struct symbol *sym, const char *str)
 	case S_BOOLEAN:
 	case S_TRISTATE:
 		switch (str[0]) {
-		case 'y': case 'Y':
+		case 'y':
+		case 'Y':
 			return sym_tristate_within_range(sym, yes);
-		case 'm': case 'M':
+		case 'm':
+		case 'M':
 			return sym_tristate_within_range(sym, mod);
-		case 'n': case 'N':
+		case 'n':
+		case 'N':
 			return sym_tristate_within_range(sym, no);
 		}
 		return false;
@@ -650,16 +644,18 @@ bool sym_set_string_value(struct symbol *sym, const char *newval)
 	case S_BOOLEAN:
 	case S_TRISTATE:
 		switch (newval[0]) {
-		case 'y': case 'Y':
+		case 'y':
+		case 'Y':
 			return sym_set_tristate_value(sym, yes);
-		case 'm': case 'M':
+		case 'm':
+		case 'M':
 			return sym_set_tristate_value(sym, mod);
-		case 'n': case 'N':
+		case 'n':
+		case 'N':
 			return sym_set_tristate_value(sym, no);
 		}
 		return false;
-	default:
-		;
+	default:;
 	}
 
 	if (!sym_string_within_range(sym, newval))
@@ -751,9 +747,12 @@ const char *sym_get_string_default(struct symbol *sym)
 	case S_BOOLEAN:
 	case S_TRISTATE:
 		switch (val) {
-		case no: return "n";
-		case mod: return "m";
-		case yes: return "y";
+		case no:
+			return "n";
+		case mod:
+			return "m";
+		case yes:
+			return "y";
 		}
 	case S_INT:
 	case S_HEX:
@@ -784,8 +783,7 @@ const char *sym_get_string_value(struct symbol *sym)
 			return "y";
 		}
 		break;
-	default:
-		;
+	default:;
 	}
 	return (const char *)sym->curr.val;
 }
@@ -813,18 +811,19 @@ struct symbol *sym_lookup(const char *name, int flags)
 	if (name) {
 		if (name[0] && !name[1]) {
 			switch (name[0]) {
-			case 'y': return &symbol_yes;
-			case 'm': return &symbol_mod;
-			case 'n': return &symbol_no;
+			case 'y':
+				return &symbol_yes;
+			case 'm':
+				return &symbol_mod;
+			case 'n':
+				return &symbol_no;
 			}
 		}
 		hash = strhash(name) % SYMBOL_HASHSIZE;
 
 		for (symbol = symbol_hash[hash]; symbol; symbol = symbol->next) {
-			if (symbol->name &&
-			    !strcmp(symbol->name, name) &&
-			    (flags ? symbol->flags & flags
-				   : !(symbol->flags & (SYMBOL_CONST|SYMBOL_CHOICE))))
+			if (symbol->name && !strcmp(symbol->name, name) &&
+			    (flags ? symbol->flags & flags : !(symbol->flags & (SYMBOL_CONST | SYMBOL_CHOICE))))
 				return symbol;
 		}
 		new_name = xstrdup(name);
@@ -855,18 +854,19 @@ struct symbol *sym_find(const char *name)
 
 	if (name[0] && !name[1]) {
 		switch (name[0]) {
-		case 'y': return &symbol_yes;
-		case 'm': return &symbol_mod;
-		case 'n': return &symbol_no;
+		case 'y':
+			return &symbol_yes;
+		case 'm':
+			return &symbol_mod;
+		case 'n':
+			return &symbol_no;
 		}
 	}
 	hash = strhash(name) % SYMBOL_HASHSIZE;
 
 	for (symbol = symbol_hash[hash]; symbol; symbol = symbol->next) {
-		if (symbol->name &&
-		    !strcmp(symbol->name, name) &&
-		    !(symbol->flags & SYMBOL_CONST))
-				break;
+		if (symbol->name && !strcmp(symbol->name, name) && !(symbol->flags & SYMBOL_CONST))
+			break;
 	}
 
 	return symbol;
@@ -916,8 +916,8 @@ const char *sym_escape_string_value(const char *in)
 }
 
 struct sym_match {
-	struct symbol	*sym;
-	off_t		so, eo;
+	struct symbol *sym;
+	off_t so, eo;
 };
 
 /* Compare matched symbols as thus:
@@ -962,10 +962,11 @@ struct symbol **sym_re_search(const char *pattern)
 	/* Skip if empty */
 	if (strlen(pattern) == 0)
 		return NULL;
-	if (regcomp(&re, pattern, REG_EXTENDED|REG_ICASE))
+	if (regcomp(&re, pattern, REG_EXTENDED | REG_ICASE))
 		return NULL;
 
-	for_all_symbols(i, sym) {
+	for_all_symbols(i, sym)
+	{
 		if (sym->flags & SYMBOL_CONST || !sym->name)
 			continue;
 		if (regexec(&re, sym->name, 1, match, 0))
@@ -988,7 +989,7 @@ struct symbol **sym_re_search(const char *pattern)
 	}
 	if (sym_match_arr) {
 		qsort(sym_match_arr, cnt, sizeof(struct sym_match), sym_rel_comp);
-		sym_arr = malloc((cnt+1) * sizeof(struct symbol *));
+		sym_arr = malloc((cnt + 1) * sizeof(struct symbol *));
 		if (!sym_arr)
 			goto sym_re_search_free;
 		for (i = 0; i < cnt; i++)
@@ -1014,7 +1015,7 @@ static struct dep_stack {
 	struct symbol *sym;
 	struct property *prop;
 	struct expr **expr;
-} *check_top;
+} * check_top;
 
 static void dep_stack_insert(struct dep_stack *stack, struct symbol *sym)
 {
@@ -1075,53 +1076,38 @@ static void sym_check_print_recursive(struct symbol *last_sym)
 			}
 		}
 		if (stack->sym == last_sym)
-			fprintf(stderr, "%s:%d:error: recursive dependency detected!\n",
-				prop->file->name, prop->lineno);
+			fprintf(stderr, "%s:%d:error: recursive dependency detected!\n", prop->file->name,
+				prop->lineno);
 
 		if (sym_is_choice(sym)) {
-			fprintf(stderr, "%s:%d:\tchoice %s contains symbol %s\n",
-				menu->file->name, menu->lineno,
-				sym->name ? sym->name : "<choice>",
-				next_sym->name ? next_sym->name : "<choice>");
+			fprintf(stderr, "%s:%d:\tchoice %s contains symbol %s\n", menu->file->name, menu->lineno,
+				sym->name ? sym->name : "<choice>", next_sym->name ? next_sym->name : "<choice>");
 		} else if (sym_is_choice_value(sym)) {
-			fprintf(stderr, "%s:%d:\tsymbol %s is part of choice %s\n",
-				menu->file->name, menu->lineno,
-				sym->name ? sym->name : "<choice>",
-				next_sym->name ? next_sym->name : "<choice>");
+			fprintf(stderr, "%s:%d:\tsymbol %s is part of choice %s\n", menu->file->name, menu->lineno,
+				sym->name ? sym->name : "<choice>", next_sym->name ? next_sym->name : "<choice>");
 		} else if (stack->expr == &sym->dir_dep.expr) {
-			fprintf(stderr, "%s:%d:\tsymbol %s depends on %s\n",
-				prop->file->name, prop->lineno,
-				sym->name ? sym->name : "<choice>",
-				next_sym->name ? next_sym->name : "<choice>");
+			fprintf(stderr, "%s:%d:\tsymbol %s depends on %s\n", prop->file->name, prop->lineno,
+				sym->name ? sym->name : "<choice>", next_sym->name ? next_sym->name : "<choice>");
 		} else if (stack->expr == &sym->rev_dep.expr) {
-			fprintf(stderr, "%s:%d:\tsymbol %s is selected by %s\n",
-				prop->file->name, prop->lineno,
-				sym->name ? sym->name : "<choice>",
-				next_sym->name ? next_sym->name : "<choice>");
+			fprintf(stderr, "%s:%d:\tsymbol %s is selected by %s\n", prop->file->name, prop->lineno,
+				sym->name ? sym->name : "<choice>", next_sym->name ? next_sym->name : "<choice>");
 		} else if (stack->expr == &sym->implied.expr) {
-			fprintf(stderr, "%s:%d:\tsymbol %s is implied by %s\n",
-				prop->file->name, prop->lineno,
-				sym->name ? sym->name : "<choice>",
-				next_sym->name ? next_sym->name : "<choice>");
+			fprintf(stderr, "%s:%d:\tsymbol %s is implied by %s\n", prop->file->name, prop->lineno,
+				sym->name ? sym->name : "<choice>", next_sym->name ? next_sym->name : "<choice>");
 		} else if (stack->expr) {
-			fprintf(stderr, "%s:%d:\tsymbol %s %s value contains %s\n",
-				prop->file->name, prop->lineno,
-				sym->name ? sym->name : "<choice>",
-				prop_get_type_name(prop->type),
+			fprintf(stderr, "%s:%d:\tsymbol %s %s value contains %s\n", prop->file->name, prop->lineno,
+				sym->name ? sym->name : "<choice>", prop_get_type_name(prop->type),
 				next_sym->name ? next_sym->name : "<choice>");
 		} else {
-			fprintf(stderr, "%s:%d:\tsymbol %s %s is visible depending on %s\n",
-				prop->file->name, prop->lineno,
-				sym->name ? sym->name : "<choice>",
-				prop_get_type_name(prop->type),
+			fprintf(stderr, "%s:%d:\tsymbol %s %s is visible depending on %s\n", prop->file->name,
+				prop->lineno, sym->name ? sym->name : "<choice>", prop_get_type_name(prop->type),
 				next_sym->name ? next_sym->name : "<choice>");
 		}
 	}
 
-	fprintf(stderr,
-		"For a resolution refer to Documentation/kbuild/kconfig-language.rst\n"
-		"subsection \"Kconfig recursive dependency limitations\"\n"
-		"\n");
+	fprintf(stderr, "For a resolution refer to Documentation/kbuild/kconfig-language.rst\n"
+			"subsection \"Kconfig recursive dependency limitations\"\n"
+			"\n");
 
 	if (check_top == &cv_stack)
 		dep_stack_remove();
@@ -1188,8 +1174,7 @@ static struct symbol *sym_check_sym_deps(struct symbol *sym)
 	stack.expr = NULL;
 
 	for (prop = sym->prop; prop; prop = prop->next) {
-		if (prop->type == P_CHOICE || prop->type == P_SELECT ||
-		    prop->type == P_IMPLY)
+		if (prop->type == P_CHOICE || prop->type == P_SELECT || prop->type == P_IMPLY)
 			continue;
 		stack.prop = prop;
 		sym2 = sym_check_expr_deps(prop->visible.expr);
@@ -1220,8 +1205,7 @@ static struct symbol *sym_check_choice_deps(struct symbol *choice)
 	dep_stack_insert(&stack, choice);
 
 	prop = sym_get_choice_prop(choice);
-	expr_list_for_each_sym(prop->expr, e, sym)
-		sym->flags |= (SYMBOL_CHECK | SYMBOL_CHECKED);
+	expr_list_for_each_sym(prop->expr, e, sym) sym->flags |= (SYMBOL_CHECK | SYMBOL_CHECKED);
 
 	choice->flags |= (SYMBOL_CHECK | SYMBOL_CHECKED);
 	sym2 = sym_check_sym_deps(choice);
@@ -1229,17 +1213,16 @@ static struct symbol *sym_check_choice_deps(struct symbol *choice)
 	if (sym2)
 		goto out;
 
-	expr_list_for_each_sym(prop->expr, e, sym) {
+	expr_list_for_each_sym(prop->expr, e, sym)
+	{
 		sym2 = sym_check_sym_deps(sym);
 		if (sym2)
 			break;
 	}
 out:
-	expr_list_for_each_sym(prop->expr, e, sym)
-		sym->flags &= ~SYMBOL_CHECK;
+	expr_list_for_each_sym(prop->expr, e, sym) sym->flags &= ~SYMBOL_CHECK;
 
-	if (sym2 && sym_is_choice_value(sym2) &&
-	    prop_get_symbol(sym_get_choice_prop(sym2)) == choice)
+	if (sym2 && sym_is_choice_value(sym2) && prop_get_symbol(sym_get_choice_prop(sym2)) == choice)
 		sym2 = choice;
 
 	dep_stack_remove();
@@ -1280,8 +1263,7 @@ struct symbol *sym_check_deps(struct symbol *sym)
 
 struct symbol *prop_get_symbol(struct property *prop)
 {
-	if (prop->expr && (prop->expr->type == E_SYMBOL ||
-			   prop->expr->type == E_LIST))
+	if (prop->expr && (prop->expr->type == E_SYMBOL || prop->expr->type == E_LIST))
 		return prop->expr->left.sym;
 	return NULL;
 }
