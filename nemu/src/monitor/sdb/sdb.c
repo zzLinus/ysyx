@@ -249,6 +249,8 @@ void sdb_mainloop()
 		}
 
 		if (i == NR_CMD) {
+			bool *sucsess = false;
+			expr(str, sucsess);
 			printf("Unknown command '%s'\n", cmd);
 		}
 	}
