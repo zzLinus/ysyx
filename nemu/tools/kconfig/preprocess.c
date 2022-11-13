@@ -12,7 +12,7 @@
 #include "list.h"
 #include "lkc.h"
 
-#define ARRAY_SIZE(arr)		(sizeof(arr) / sizeof((arr)[0]))
+#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
 
 static char *expand_string_with_args(const char *in, int argc, char *argv[]);
 static char *expand_string(const char *in);
@@ -181,23 +181,18 @@ static char *do_shell(int argc, char *argv[])
 static char *do_warning_if(int argc, char *argv[])
 {
 	if (!strcmp(argv[0], "y"))
-		fprintf(stderr, "%s:%d: %s\n",
-			current_file->name, yylineno, argv[1]);
+		fprintf(stderr, "%s:%d: %s\n", current_file->name, yylineno, argv[1]);
 
 	return xstrdup("");
 }
 
 static const struct function function_table[] = {
 	/* Name		MIN	MAX	Function */
-	{ "error-if",	2,	2,	do_error_if },
-	{ "filename",	0,	0,	do_filename },
-	{ "info",	1,	1,	do_info },
-	{ "lineno",	0,	0,	do_lineno },
-	{ "shell",	1,	1,	do_shell },
-	{ "warning-if",	2,	2,	do_warning_if },
+	{ "error-if", 2, 2, do_error_if }, { "filename", 0, 0, do_filename }, { "info", 1, 1, do_info },
+	{ "lineno", 0, 0, do_lineno },	   { "shell", 1, 1, do_shell },	      { "warning-if", 2, 2, do_warning_if },
 };
 
-#define FUNCTION_MAX_ARGS		16
+#define FUNCTION_MAX_ARGS 16
 
 static char *function_expand(const char *name, int argc, char *argv[])
 {
@@ -210,12 +205,10 @@ static char *function_expand(const char *name, int argc, char *argv[])
 			continue;
 
 		if (argc < f->min_args)
-			pperror("too few function arguments passed to '%s'",
-				name);
+			pperror("too few function arguments passed to '%s'", name);
 
 		if (argc > f->max_args)
-			pperror("too many function arguments passed to '%s'",
-				name);
+			pperror("too many function arguments passed to '%s'", name);
 
 		return f->func(argc, argv);
 	}
@@ -258,8 +251,7 @@ static char *variable_expand(const char *name, int argc, char *argv[])
 		return NULL;
 
 	if (argc == 0 && v->exp_count)
-		pperror("Recursive variable '%s' references itself (eventually)",
-			name);
+		pperror("Recursive variable '%s' references itself (eventually)", name);
 
 	if (v->exp_count > 1000)
 		pperror("Too deep recursive expansion");
@@ -276,8 +268,7 @@ static char *variable_expand(const char *name, int argc, char *argv[])
 	return res;
 }
 
-void variable_add(const char *name, const char *value,
-		  enum variable_flavor flavor)
+void variable_add(const char *name, const char *value, enum variable_flavor flavor)
 {
 	struct variable *v;
 	char *new_value;
@@ -311,8 +302,7 @@ void variable_add(const char *name, const char *value,
 		new_value = xstrdup(value);
 
 	if (append) {
-		v->value = xrealloc(v->value,
-				    strlen(v->value) + strlen(new_value) + 2);
+		v->value = xrealloc(v->value, strlen(v->value) + strlen(new_value) + 2);
 		strcat(v->value, " ");
 		strcat(v->value, new_value);
 		free(new_value);
@@ -407,8 +397,7 @@ static char *eval_clause(const char *str, size_t len, int argc, char *argv[])
 	name = expand_string_with_args(new_argv[0], argc, argv);
 	new_argc--;
 	for (i = 0; i < new_argc; i++)
-		new_argv[i] = expand_string_with_args(new_argv[i + 1],
-						      argc, argv);
+		new_argv[i] = expand_string_with_args(new_argv[i + 1], argc, argv);
 
 	/* Search for variables */
 	res = variable_expand(name, new_argc, new_argv);
@@ -492,8 +481,7 @@ char *expand_dollar(const char **str)
 	return expand_dollar_with_args(str, 0, NULL);
 }
 
-static char *__expand_string(const char **str, bool (*is_end)(char c),
-			     int argc, char *argv[])
+static char *__expand_string(const char **str, bool (*is_end)(char c), int argc, char *argv[])
 {
 	const char *in, *p;
 	char *expansion, *out;

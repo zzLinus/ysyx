@@ -11,7 +11,7 @@
 /*
  * Display termination buttons
  */
-static void print_buttons(WINDOW * dialog, int height, int width, int selected)
+static void print_buttons(WINDOW *dialog, int height, int width, int selected)
 {
 	int x = width / 2 - 10;
 	int y = height - 2;
@@ -46,8 +46,7 @@ do_resize:
 	dialog = newwin(height, width, y, x);
 	keypad(dialog, TRUE);
 
-	draw_box(dialog, 0, 0, height, width,
-		 dlg.dialog.atr, dlg.border.atr);
+	draw_box(dialog, 0, 0, height, width, dlg.dialog.atr, dlg.border.atr);
 	wattrset(dialog, dlg.border.atr);
 	mvwaddch(dialog, height - 3, 0, ACS_LTEE);
 	for (i = 0; i < width - 2; i++)
@@ -97,5 +96,5 @@ do_resize:
 	}
 
 	delwin(dialog);
-	return key;		/* ESC pressed */
+	return key; /* ESC pressed */
 }

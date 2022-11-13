@@ -157,10 +157,10 @@ static void print_dep(const char *m, int slen, const char *dir)
 }
 
 struct item {
-	struct item	*next;
-	unsigned int	len;
-	unsigned int	hash;
-	char		name[];
+	struct item *next;
+	unsigned int len;
+	unsigned int hash;
+	char name[];
 };
 
 #define HASHSZ 256
@@ -184,8 +184,7 @@ static int is_defined_config(const char *name, int len, unsigned int hash)
 	struct item *aux;
 
 	for (aux = hashtab[hash % HASHSZ]; aux; aux = aux->next) {
-		if (aux->hash == hash && aux->len == len &&
-		    memcmp(aux->name, name, len) == 0)
+		if (aux->hash == hash && aux->len == len && memcmp(aux->name, name, len) == 0)
 			return 1;
 	}
 	return 0;
@@ -217,7 +216,7 @@ static void use_config(const char *m, int slen)
 	unsigned int hash = strhash(m, slen);
 
 	if (is_defined_config(m, slen, hash))
-	    return;
+		return;
 
 	define_config(m, slen, hash);
 	print_dep(m, slen, "include/config");
@@ -324,7 +323,7 @@ static void parse_dep_file(char *m, const char *target)
 			p++;
 		is_last = (*p == '\0');
 		/* Is the token we found a target name? */
-		is_target = (*(p-1) == ':');
+		is_target = (*(p - 1) == ':');
 		/* Don't write any target names into the dependency file */
 		if (is_target) {
 			/* The /next/ file is the first dependency */
@@ -349,8 +348,7 @@ static void parse_dep_file(char *m, const char *target)
 				 */
 				if (!saw_any_target) {
 					saw_any_target = 1;
-					xprintf("source_%s := %s\n\n",
-						target, m);
+					xprintf("source_%s := %s\n\n", target, m);
 					xprintf("deps_%s := \\\n", target);
 				}
 				is_first_dep = 0;
