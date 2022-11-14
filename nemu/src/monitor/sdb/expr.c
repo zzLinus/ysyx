@@ -41,6 +41,7 @@ static struct rule {
 	{ "\\+", '+' }, // plus
 	{ "\\-", '-' }, // sub
 	{ "\\*", '*' }, // mult
+	{ "\\/", '*' }, // mult
 	{ "\\(", '(' }, // left breck
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
