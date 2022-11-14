@@ -25,7 +25,7 @@ enum {
 	TK_EQ,
 
 	/* TODO: Add more token types */
-
+	TK_NUM,
 };
 
 static struct rule {
@@ -40,6 +40,7 @@ static struct rule {
 	{ " +", TK_NOTYPE }, // spaces
 	{ "\\+", '+' }, // plus
 	{ "==", TK_EQ }, // equal
+	{ "/[0-9]/", TK_NUM }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -100,7 +101,6 @@ static bool make_token(char *e)
 
 				switch (rules[i].token_type) {
 				case '+':
-					printf("+ is being handled");
 					tokens[nr_token++].type = '+';
 					strcpy(tokens[nr_token++].str, "");
 					break;
