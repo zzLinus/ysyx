@@ -222,11 +222,11 @@ void sdb_mainloop()
 
 		/* extract the first token as the command */
 		char *cmd = strtok(string, " ");
-		printf("string len: %lu,string :%s\n", strlen(string), string);
 		if (cmd == NULL) {
 			continue;
 		}
 
+		printf("string len: %lu,string :%s\n", strlen(string), string);
 		/* treat the remaining string as the arguments,
      * which may need further parsing
      */
@@ -252,7 +252,6 @@ void sdb_mainloop()
 
 		if (i == NR_CMD) {
 			bool *sucsess = false;
-			printf("string len: %lu,string :%s\n", strlen(string), string);
 			expr(string, sucsess);
 			if (!*sucsess)
 				printf("Unknown command '%s'\n", cmd);
