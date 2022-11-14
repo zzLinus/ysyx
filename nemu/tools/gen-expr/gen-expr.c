@@ -19,9 +19,10 @@
 #include <time.h>
 #include <assert.h>
 #include <string.h>
+#include <stdlib.h>
 
 // this should be enough
-static char buf[65536] = {};
+static char buf[65536] = { 0 };
 static char code_buf[65536 + 128] = {}; // a little larger than `buf`
 static char *code_format = "#include <stdio.h>\n"
 			   "int main() { "
@@ -30,9 +31,66 @@ static char *code_format = "#include <stdio.h>\n"
 			   "  return 0; "
 			   "}";
 
+uint32_t choose(uint32_t n);
+void gen(char c);
+void gen_rand_op(void);
+void gen_num(uint32_t n);
+
 static void gen_rand_expr()
 {
-	buf[0] = '\0';
+	switch (choose(3)) {
+	case 0:
+		gen_num(10);
+		break;
+	case 1:
+		gen('(');
+		gen_rand_expr();
+		gen(')');
+		break;
+	default:
+		gen_rand_expr();
+		gen_rand_op();
+		gen_rand_expr();
+		break;
+	}
+}
+
+void gen(char c)
+{
+	char str[2] = "\0";
+	str[0] = c;
+	strcat(buf, str);
+}
+
+void gen_rand_op(void)
+{
+	switch (choose(4)) {
+	case 0:
+		strcat(buf, "-");
+		break;
+	case 1:
+		strcat(buf, "+");
+		break;
+	case 2:
+		strcat(buf, "*");
+		break;
+	case 3:
+		strcat(buf, "/");
+		break;
+	}
+}
+
+void gen_num(uint32_t n)
+{
+	int num = choose(n);
+	char str[8];
+	snprintf(str, 8, "%d", num);
+	strcat(buf, str);
+}
+
+uint32_t choose(uint32_t n)
+{
+	return rand() % n;
 }
 
 int main(int argc, char *argv[])
