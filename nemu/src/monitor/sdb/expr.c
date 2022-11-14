@@ -106,6 +106,10 @@ static bool make_token(char *e)
 					break;
 				case TK_EQ:
 					break;
+				case TK_NUM:
+					tokens[nr_token++].type = TK_NUM;
+					strncpy(tokens[nr_token++].str, substr_start, substr_len);
+					break;
 				default:
 					TODO();
 				}
