@@ -219,6 +219,8 @@ void sdb_mainloop()
 	for (char *string; (string = rl_gets()) != NULL;) {
 		char *str_end = string + strlen(string);
 		char *str = malloc(32 * sizeof(char));
+		printf("string len: %lu,string :%s\n", strlen(string), string);
+		printf("string len: %lu,string :%s\n", strlen(str), str);
 		do {
 			if (*string != ' ')
 				*str++ = *string;
