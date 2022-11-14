@@ -216,27 +216,19 @@ void sdb_mainloop()
 		return;
 	}
 
-	for (char *string; (string = rl_gets()) != NULL;) {
-		char *str_end = string + strlen(string);
-		char *str = malloc(32 * sizeof(char));
-		printf("string len: %lu,string :%s\n", strlen(string), string);
-		printf("string len: %lu,string :%s\n", strlen(str), str);
-		do {
-			if (*string != ' ')
-				*str++ = *string;
-		} while (*string++);
-		printf("string len: %lu,string :%s\n", strlen(string), string);
-		printf("string len: %lu,string :%s\n", strlen(str), str);
+	for (char *str; (str = rl_gets()) != NULL;) {
+		char *str_end = str + strlen(str);
+		printf("input string info: %s %lu\n", str, strlen(str));
 
 		/* extract the first token as the command */
-		char *cmd = strtok(string, " ");
+		char *cmd = strtok(str, " ");
 		if (cmd == NULL) {
 			continue;
 		}
 
 		/* treat the remaining string as the arguments,
-		 * which may need further parsing
-		 */
+     * which may need further parsing
+     */
 		char *args = cmd + strlen(cmd) + 1;
 		if (args >= str_end) {
 			args = NULL;
@@ -259,7 +251,7 @@ void sdb_mainloop()
 
 		if (i == NR_CMD) {
 			bool *sucsess = false;
-			expr(string, sucsess);
+			expr(str, sucsess);
 			if (!*sucsess)
 				printf("Unknown command '%s'\n", cmd);
 		}
