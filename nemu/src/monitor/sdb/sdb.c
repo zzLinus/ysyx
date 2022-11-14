@@ -220,7 +220,6 @@ void sdb_mainloop()
 		char *str_end = string + strlen(string);
 		char *str = malloc(32 * sizeof(char));
 		strcpy(str, string);
-		printf("string len: %lu,string :%s\n", strlen(string), string);
 		printf("string len: %lu,string :%s\n", strlen(str), str);
 
 		/* extract the first token as the command */
@@ -229,8 +228,6 @@ void sdb_mainloop()
 			continue;
 		}
 
-		printf("string len: %lu,string :%s\n", strlen(string), string);
-		printf("string len: %lu,string :%s\n", strlen(str), str);
 		/* treat the remaining string as the arguments,
 		 * which may need further parsing
 		 */
@@ -256,6 +253,7 @@ void sdb_mainloop()
 
 		if (i == NR_CMD) {
 			bool *sucsess = false;
+			printf("string len: %lu,string :%s\n", strlen(str), str);
 			expr(string, sucsess);
 			if (!*sucsess)
 				printf("Unknown command '%s'\n", cmd);
