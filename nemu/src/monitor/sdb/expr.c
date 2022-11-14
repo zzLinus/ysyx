@@ -88,6 +88,7 @@ static bool make_token(char *e)
 	nr_token = 0;
 
 	rm_white_space(e);
+	printf("%s\n", e);
 
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
