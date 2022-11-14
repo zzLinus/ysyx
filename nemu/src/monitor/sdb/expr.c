@@ -105,8 +105,8 @@ static bool make_token(char *e)
 					break;
 				case TK_EQ:
 					break;
-				default:
-					TODO();
+					/* default: */
+					/* TODO(); */
 				}
 
 				break;
