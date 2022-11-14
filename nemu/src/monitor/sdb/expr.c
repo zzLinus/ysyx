@@ -87,6 +87,8 @@ static bool make_token(char *e)
 
 	printf("string len: %lu,string :%s", strlen(e), e);
 
+	printf("string len: %lu,string :%s", strlen(e), e);
+
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
 		for (i = 0; i < NR_REGEX; i++) {
