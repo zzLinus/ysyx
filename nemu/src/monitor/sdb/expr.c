@@ -100,13 +100,14 @@ static bool make_token(char *e)
 
 				switch (rules[i].token_type) {
 				case '+':
+					printf("+ is being handled");
 					tokens[nr_token++].type = '+';
 					strcpy(tokens[nr_token++].str, "");
 					break;
 				case TK_EQ:
 					break;
-					/* default: */
-					/* TODO(); */
+				default:
+					TODO();
 				}
 
 				break;
