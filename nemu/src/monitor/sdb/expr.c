@@ -39,11 +39,12 @@ static struct rule {
 
 	{ " +", TK_NOTYPE }, // spaces
 	{ "\\+", '+' }, // plus
-	{ "\\\"", '"' }, // plus
+	{ "\\\"", '"' }, // double quote
 	{ "\\-", '-' }, // sub
 	{ "\\*", '*' }, // mult
 	{ "\\(", '(' }, // left breck
 	{ "\\)", ')' }, // right breck
+	{ "\\/)", '/' }, // devide
 	{ "==", TK_EQ }, // equal
 	{ "[0-9]+", TK_NUM }, // number
 };
@@ -123,6 +124,10 @@ static bool make_token(char *e)
 					break;
 				case '*':
 					tokens[nr_token].type = '*';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '/':
+					tokens[nr_token].type = '/';
 					strcpy(tokens[nr_token++].str, "");
 					break;
 				case '(':
