@@ -83,11 +83,10 @@ static bool make_token(char *e)
 	int position = 0;
 	int i;
 	regmatch_t pmatch;
-	int str_len = strlen(e);
 
 	nr_token = 0;
 
-	while (position < str_len) { // iterate every possible substring
+	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
 		for (i = 0; i < NR_REGEX; i++) {
 			if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
