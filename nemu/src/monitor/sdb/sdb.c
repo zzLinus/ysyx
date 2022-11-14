@@ -222,6 +222,7 @@ void sdb_mainloop()
 
 		/* extract the first token as the command */
 		char *cmd = strtok(string, " ");
+		printf("string len: %lu,string :%s\n", strlen(string), string);
 		if (cmd == NULL) {
 			continue;
 		}
