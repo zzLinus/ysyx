@@ -218,7 +218,10 @@ void sdb_mainloop()
 
 	for (char *string; (string = rl_gets()) != NULL;) {
 		char *str_end = string + strlen(string);
+		char *str = malloc(32 * sizeof(char));
+		strcpy(str, string);
 		printf("string len: %lu,string :%s\n", strlen(string), string);
+		printf("string len: %lu,string :%s\n", strlen(str), str);
 
 		/* extract the first token as the command */
 		char *cmd = strtok(string, " ");
@@ -227,9 +230,10 @@ void sdb_mainloop()
 		}
 
 		printf("string len: %lu,string :%s\n", strlen(string), string);
+		printf("string len: %lu,string :%s\n", strlen(str), str);
 		/* treat the remaining string as the arguments,
-     * which may need further parsing
-     */
+		 * which may need further parsing
+		 */
 		char *args = cmd + strlen(cmd) + 1;
 		if (args >= str_end) {
 			args = NULL;
