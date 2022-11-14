@@ -85,7 +85,6 @@ static bool make_token(char *e)
 	regmatch_t pmatch;
 
 	nr_token = 0;
-	printf("size of string :%lu\n", strlen(e));
 
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
