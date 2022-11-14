@@ -25,7 +25,7 @@ enum {
 	TK_EQ,
 
 	/* TODO: Add more token types */
-
+	TK_NUM,
 };
 
 static struct rule {
@@ -39,7 +39,12 @@ static struct rule {
 
 	{ " +", TK_NOTYPE }, // spaces
 	{ "\\+", '+' }, // plus
+	{ "\\-", '-' }, // sub
+	{ "\\*", '*' }, // mult
+	{ "\\(", '(' }, // left breck
+	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
+	{ "[0-9]+", TK_NUM }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -56,6 +61,7 @@ void init_regex()
 	int ret;
 
 	for (i = 0; i < NR_REGEX; i++) {
+		/* regcomp() is used to compile a regular expression into a form that is suitable for subsequent regexec() searches. */
 		ret = regcomp(&re[i], rules[i].regex, REG_EXTENDED);
 		if (ret != 0) {
 			regerror(ret, &re[i], error_msg, 128);
@@ -77,10 +83,9 @@ static bool make_token(char *e)
 	int position = 0;
 	int i;
 	regmatch_t pmatch;
-
 	nr_token = 0;
 
-	while (e[position] != '\0') {
+	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
 		for (i = 0; i < NR_REGEX; i++) {
 			if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
@@ -93,11 +98,39 @@ static bool make_token(char *e)
 				position += substr_len;
 
 				/* TODO: Now a new token is recognized with rules[i]. Add codes
-         * to record the token in the array `tokens'. For certain types
-         * of tokens, some extra actions should be performed.
-         */
+				 * to record the token in the array `tokens'. For certain types
+				 * of tokens, some extra actions should be performed.
+				 */
 
 				switch (rules[i].token_type) {
+				case TK_EQ:
+					break;
+				case TK_NUM:
+					tokens[nr_token].type = TK_NUM;
+					strncpy(tokens[nr_token++].str, substr_start, substr_len);
+					break;
+				case TK_NOTYPE:
+					break;
+				case '+':
+					tokens[nr_token].type = '+';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '-':
+					tokens[nr_token].type = '-';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '*':
+					tokens[nr_token].type = '*';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '(':
+					tokens[nr_token].type = '(';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case ')':
+					tokens[nr_token].type = ')';
+					strcpy(tokens[nr_token++].str, "");
+					break;
 				default:
 					TODO();
 				}
@@ -107,8 +140,6 @@ static bool make_token(char *e)
 		}
 
 		if (i == NR_REGEX) {
-			printf("no match at position %d\n%s\n%*.s^\n", position, e, position, "");
-			return false;
 		}
 	}
 

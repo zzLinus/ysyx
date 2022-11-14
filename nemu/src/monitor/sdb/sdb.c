@@ -163,19 +163,19 @@ static int cmd_x(char *args)
 
 static int cmd_p(char *args)
 {
-	printf("Unimplemented command\n");
+	TODO();
 	return 0;
 }
 
 static int cmd_w(char *args)
 {
-	printf("Unimplemented command\n");
+	TODO();
 	return 0;
 }
 
 static int cmd_d(char *args)
 {
-	printf("Unimplemented command\n");
+	TODO();
 	return 0;
 }
 
@@ -218,9 +218,10 @@ void sdb_mainloop()
 
 	for (char *str; (str = rl_gets()) != NULL;) {
 		char *str_end = str + strlen(str);
+		printf("input string info: %s %lu\n", str, strlen(str));
 
 		/* extract the first token as the command */
-		char *cmd = strtok(str, " ");
+		char *cmd = strtok(str, "\32");
 		if (cmd == NULL) {
 			continue;
 		}
@@ -249,7 +250,10 @@ void sdb_mainloop()
 		}
 
 		if (i == NR_CMD) {
-			printf("Unknown command '%s'\n", cmd);
+			bool *sucsess = false;
+			expr(str, sucsess);
+			if (!*sucsess)
+				printf("Unknown command '%s'\n", cmd);
 		}
 	}
 }
