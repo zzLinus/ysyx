@@ -51,8 +51,6 @@ static struct rule {
 
 static regex_t re[NR_REGEX] = {};
 
-void rm_white_space(char *s);
-
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
  */
@@ -87,7 +85,6 @@ static bool make_token(char *e)
 	regmatch_t pmatch;
 	nr_token = 0;
 
-	rm_white_space(e);
 	printf("%s\n", e);
 
 	while (e[position] != '\0') { // iterate every possible substring
@@ -149,18 +146,6 @@ static bool make_token(char *e)
 	}
 
 	return true;
-}
-
-void rm_white_space(char *s)
-{
-	char *d = s;
-	do {
-		while (*d == ' ') {
-			++d;
-		}
-		*s++ = *d++;
-	} while (*d != '\0');
-	*s = '\0';
 }
 
 word_t expr(char *e, bool *success)
