@@ -39,6 +39,7 @@ static struct rule {
 
 	{ " +", TK_NOTYPE }, // spaces
 	{ "\\+", '+' }, // plus
+	{ "\\\"", '"' }, // plus
 	{ "\\-", '-' }, // sub
 	{ "\\*", '*' }, // mult
 	{ "\\(", '(' }, // left breck
@@ -131,6 +132,8 @@ static bool make_token(char *e)
 				case ')':
 					tokens[nr_token].type = ')';
 					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '"':
 					break;
 				default:
 					TODO();
