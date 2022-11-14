@@ -176,7 +176,6 @@ word_t eval(int p, int q)
 		return eval(p + 1, q - 1);
 	} else {
 		int op = get_opt(p, q);
-		printf("op is %c\n", tokens[op].type);
 		int val1 = eval(p, op - 1);
 		int val2 = eval(op + 1, q);
 
@@ -233,19 +232,19 @@ uint32_t get_opt(int p, int q)
 	for (int i = p; i <= q; i++) {
 		if (!stop) {
 			switch (tokens[i].type) {
-			case '+':
-				if (pri == 1)
-					res = i;
-				break;
-			case '-':
-				if (pri == 1)
-					res = i;
-				break;
 			case '*':
+				if (pri == 1)
+					res = i;
+				break;
+			case '/':
+				if (pri == 1)
+					res = i;
+				break;
+			case '+':
 				pri = 2;
 				res = i;
 				break;
-			case '/':
+			case '-':
 				pri = 2;
 				res = i;
 				break;
