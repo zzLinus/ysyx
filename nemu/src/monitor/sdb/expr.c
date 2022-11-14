@@ -85,8 +85,6 @@ static bool make_token(char *e)
 	regmatch_t pmatch;
 	nr_token = 0;
 
-	printf("string len: %lu,string :%s\n", strlen(e), e);
-
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
 		for (i = 0; i < NR_REGEX; i++) {
@@ -154,7 +152,6 @@ word_t expr(char *e, bool *success)
 		*success = false;
 		return 0;
 	}
-	printf("string len: %lu,string :%s\n", strlen(e), e);
 
 	/* TODO: Insert codes to evaluate the expression. */
 	TODO();

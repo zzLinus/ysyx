@@ -253,7 +253,6 @@ void sdb_mainloop()
 
 		if (i == NR_CMD) {
 			bool *sucsess = false;
-			printf("string len: %lu,string :%s\n", strlen(str), str);
 			expr(string, sucsess);
 			if (!*sucsess)
 				printf("Unknown command '%s'\n", cmd);
