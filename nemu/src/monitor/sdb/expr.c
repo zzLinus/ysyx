@@ -41,6 +41,7 @@ static struct rule {
 	{ "\\+", '+' }, // plus
 	{ "\\-", '-' }, // sub
 	{ "\\*", '*' }, // mult
+	{ "\\/", '/' }, // mult
 	{ "\\(", '(' }, // left breck
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
@@ -50,6 +51,10 @@ static struct rule {
 #define NR_REGEX ARRLEN(rules)
 
 static regex_t re[NR_REGEX] = {};
+
+bool check_parentheses(int p, int q);
+word_t eval(int p, int q);
+uint32_t get_opt(int p, int q);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -123,6 +128,10 @@ static bool make_token(char *e)
 					tokens[nr_token].type = '*';
 					strcpy(tokens[nr_token++].str, "");
 					break;
+				case '/':
+					tokens[nr_token].type = '/';
+					strcpy(tokens[nr_token++].str, "");
+					break;
 				case '(':
 					tokens[nr_token].type = '(';
 					strcpy(tokens[nr_token++].str, "");
@@ -153,8 +162,107 @@ word_t expr(char *e, bool *success)
 		return 0;
 	}
 
-	/* TODO: Insert codes to evaluate the expression. */
-	TODO();
+	int res = eval(0, nr_token - 1);
+	printf("result : %d\n", res);
 
 	return 0;
+}
+
+word_t eval(int p, int q)
+{
+	if (p > q) {
+		/* Bad expression */
+	} else if (p == q) {
+		return (word_t)atoi(tokens[p].str);
+	} else if (check_parentheses(p, q) == true) {
+		/* The expression is surrounded by a matched pair of parentheses.
+		 * If that is the case, just throw away the parentheses.
+		 */
+		return eval(p + 1, q - 1);
+	} else {
+		int op = get_opt(p, q);
+		printf("op is %d\n", op);
+		int val1 = eval(p, op - 1);
+		int val2 = eval(op + 1, q);
+
+		switch (tokens[op].type) {
+		case '+':
+			return val1 + val2;
+		case '-':
+			return val1 - val2;
+		case '*':
+			return val1 * val2;
+		case '/':
+			return val1 / val2;
+		default:
+			assert(0);
+		}
+	}
+	return -1;
+}
+
+bool check_parentheses(int p, int q)
+{
+	int arr[32] = { 0 };
+	int count = 0, sum = 0;
+	for (int i = p; i <= q; i++) {
+		if (tokens[i].type == '(')
+			arr[count++] = 1;
+		else if (tokens[i].type == ')')
+			arr[count++] = -1;
+	}
+	for (int i = 0; i < count; i++) {
+		sum += arr[i];
+	}
+	if (sum != 0) {
+		panic("Bad expression");
+		return false;
+	}
+	if (tokens[p].type == '(' && tokens[q].type == ')') {
+		sum = 0;
+		for (int i = 0; i < count; i++) {
+			sum += arr[i];
+			if (sum == 0 && i != count - 1)
+				return false;
+		}
+		return true;
+	} else
+		return false;
+	return false;
+}
+
+uint32_t get_opt(int p, int q)
+{
+	bool stop = false;
+	uint32_t res = -1, pri = 1;
+	for (int i = p; i <= q; i++) {
+		if (tokens[i].type == '(')
+			stop = true;
+		else if (tokens[i].type == ')')
+			stop = false;
+		if (!stop) {
+			switch (tokens[i].type) {
+			case '*':
+				if (pri == 1)
+					res = i;
+				break;
+			case '/':
+				if (pri == 1)
+					res = i;
+				break;
+			case '+':
+				pri = 2;
+				res = i;
+				break;
+			case '-':
+				pri = 2;
+				res = i;
+				break;
+			}
+		}
+	}
+	if (res != -1)
+		return res;
+	else
+		return -1;
 }
