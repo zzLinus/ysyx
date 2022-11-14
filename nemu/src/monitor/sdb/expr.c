@@ -80,6 +80,7 @@ static int nr_token __attribute__((used)) = 0;
 
 static bool make_token(char *e)
 {
+	printf("input string info: %s %lu\n", e, strlen(e));
 	int position = 0;
 	int i;
 	regmatch_t pmatch;
@@ -149,7 +150,6 @@ static bool make_token(char *e)
 
 word_t expr(char *e, bool *success)
 {
-	printf("input string info: %s %lu\n", e, strlen(e));
 	if (!make_token(e)) {
 		*success = false;
 		return 0;
