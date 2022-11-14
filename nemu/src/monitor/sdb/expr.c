@@ -40,7 +40,7 @@ static struct rule {
 	{ " +", TK_NOTYPE }, // spaces
 	{ "\\+", '+' }, // plus
 	{ "==", TK_EQ }, // equal
-	{ "\\d", TK_NUM }, // number
+	{ "[0-9]", TK_NUM }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
