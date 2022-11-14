@@ -210,7 +210,7 @@ bool check_parentheses(int p, int q)
 		else if (tokens[i].type == ')')
 			arr[count++] = -1;
 	}
-	for (int i = 0; i <= q - p; i++) {
+	for (int i = 0; i < count; i++) {
 		sum += arr[i];
 	}
 	if (sum != 0) {
@@ -219,7 +219,7 @@ bool check_parentheses(int p, int q)
 	}
 	if (tokens[p].type == '(' && tokens[q].type == ')') {
 		sum = 0;
-		for (int i = 0; i <= q - p; i++) {
+		for (int i = 0; i < count; i++) {
 			sum += arr[i];
 			if (sum == 0)
 				return false;
