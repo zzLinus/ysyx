@@ -235,33 +235,29 @@ uint32_t get_opt(int p, int q)
 	bool stop = false;
 	uint32_t res = -1, pri = 1;
 	for (int i = p; i <= q; i++) {
-		switch (tokens[i].type) {
-		case '*':
-			if (pri == 1 && !stop)
-				res = i;
-			break;
-		case '/':
-			if (pri == 1 && !stop)
-				res = i;
-			break;
-		case '+':
-			if (!stop) {
-				pri = 2;
-				res = i;
-			}
-			break;
-		case '-':
-			if (!stop) {
-				pri = 2;
-				res = i;
-			}
-			break;
-		case '(':
+		if (tokens[i].type == '(')
 			stop = true;
-			break;
-		case ')':
+		else if (tokens[i].type == ')')
 			stop = false;
-			break;
+		if (!stop) {
+			switch (tokens[i].type) {
+			case '*':
+				if (pri == 1)
+					res = i;
+				break;
+			case '/':
+				if (pri == 1)
+					res = i;
+				break;
+			case '+':
+				pri = 2;
+				res = i;
+				break;
+			case '-':
+				pri = 2;
+				res = i;
+				break;
+			}
 		}
 	}
 	if (res != -1)
