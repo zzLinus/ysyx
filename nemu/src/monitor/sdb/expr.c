@@ -222,7 +222,7 @@ bool check_parentheses(int p, int q)
 		sum = 0;
 		for (int i = 0; i < count; i++) {
 			sum += arr[i];
-			if (sum == 0)
+			if (sum == 0 && i != count - 1)
 				return false;
 		}
 		return true;
