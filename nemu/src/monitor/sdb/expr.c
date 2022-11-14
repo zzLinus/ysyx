@@ -85,6 +85,7 @@ static bool make_token(char *e)
 	regmatch_t pmatch;
 
 	nr_token = 0;
+	printf("size of string :%lu\n", strlen(e));
 
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
@@ -132,6 +133,8 @@ static bool make_token(char *e)
 					tokens[nr_token].type = ')';
 					strcpy(tokens[nr_token++].str, "");
 					break;
+				default:
+					TODO();
 				}
 
 				break;
@@ -139,8 +142,6 @@ static bool make_token(char *e)
 		}
 
 		if (i == NR_REGEX) {
-			printf("no match at position %d\n%s\n%*.s^\n", position, e, position, "");
-			return false;
 		}
 	}
 
