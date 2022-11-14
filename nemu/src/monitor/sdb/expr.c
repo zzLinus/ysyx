@@ -56,6 +56,7 @@ void init_regex()
 	int ret;
 
 	for (i = 0; i < NR_REGEX; i++) {
+		/* regcomp() is used to compile a regular expression into a form that is suitable for subsequent regexec() searches. */
 		ret = regcomp(&re[i], rules[i].regex, REG_EXTENDED);
 		if (ret != 0) {
 			regerror(ret, &re[i], error_msg, 128);
@@ -80,7 +81,7 @@ static bool make_token(char *e)
 
 	nr_token = 0;
 
-	while (e[position] != '\0') {
+	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
 		for (i = 0; i < NR_REGEX; i++) {
 			if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
@@ -93,9 +94,9 @@ static bool make_token(char *e)
 				position += substr_len;
 
 				/* TODO: Now a new token is recognized with rules[i]. Add codes
-         * to record the token in the array `tokens'. For certain types
-         * of tokens, some extra actions should be performed.
-         */
+				 * to record the token in the array `tokens'. For certain types
+				 * of tokens, some extra actions should be performed.
+				 */
 
 				switch (rules[i].token_type) {
 				default:
