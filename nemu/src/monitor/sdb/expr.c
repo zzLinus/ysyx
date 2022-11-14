@@ -80,12 +80,13 @@ static int nr_token __attribute__((used)) = 0;
 
 static bool make_token(char *e)
 {
-	printf("input string info: %s %lu\n", e, strlen(e));
 	int position = 0;
 	int i;
 	regmatch_t pmatch;
 
 	nr_token = 0;
+	for (uint32_t i = 0; e[i] != '\0'; i++)
+		printf("STFU\n");
 
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
