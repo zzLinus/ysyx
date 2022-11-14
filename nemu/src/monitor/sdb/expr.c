@@ -104,17 +104,33 @@ static bool make_token(char *e)
 				 */
 
 				switch (rules[i].token_type) {
-				case '+':
-					tokens[nr_token++].type = '+';
-					strcpy(tokens[nr_token].str, "");
-					break;
 				case TK_EQ:
 					break;
 				case TK_NUM:
-					tokens[nr_token++].type = TK_NUM;
+					tokens[nr_token].type = TK_NUM;
 					strncpy(tokens[nr_token++].str, substr_start, substr_len);
 					break;
 				case TK_NOTYPE:
+					break;
+				case '+':
+					tokens[nr_token].type = '+';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '-':
+					tokens[nr_token].type = '-';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '*':
+					tokens[nr_token].type = '*';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case '(':
+					tokens[nr_token].type = '(';
+					strcpy(tokens[nr_token++].str, "");
+					break;
+				case ')':
+					tokens[nr_token].type = ')';
+					strcpy(tokens[nr_token++].str, "");
 					break;
 				default:
 					TODO();
