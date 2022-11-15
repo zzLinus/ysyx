@@ -288,6 +288,7 @@ void eval_deref(void)
 				tokens[j].type = tokens[j + 1].type;
 				strcpy(tokens[j].str, tokens[j + 1].str);
 			}
+			nr_token--;
 		}
 	}
 }
