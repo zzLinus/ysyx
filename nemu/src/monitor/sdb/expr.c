@@ -28,6 +28,7 @@ enum {
 	TK_NUM,
 	TK_HEX,
 	TK_REG,
+	TK_DEREF,
 };
 
 static struct rule {
@@ -60,6 +61,7 @@ bool check_parentheses(int p, int q);
 uint32_t eval(int p, int q);
 uint32_t get_opt(int p, int q);
 void eval_reg(void);
+void eval_deref(void);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -176,6 +178,7 @@ word_t expr(char *e, bool *success)
 	}
 
 	eval_reg();
+	/* eval_deref(); */
 
 	word_t res = eval(0, nr_token - 1);
 	printf("result : %lu\n", res);
@@ -196,7 +199,7 @@ uint32_t eval(int p, int q)
 		 */
 		return eval(p + 1, q - 1);
 	} else {
-		int op = get_opt(p, q);
+		uint32_t op = get_opt(p, q);
 		printf("op is %d\n", op);
 		uint32_t val1 = eval(p, op - 1);
 		uint32_t val2 = eval(op + 1, q);
@@ -260,6 +263,15 @@ void eval_reg(void)
 			tokens[i].type = TK_NUM;
 			sprintf(num, "%u", tmp);
 			strcpy(tokens[i].str, num);
+		}
+	}
+}
+
+void eval_deref(void)
+{
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == '*' && (i == 0 || tokens[i - 1].type != TK_NUM)) {
+			tokens[i].type = TK_DEREF;
 		}
 	}
 }
