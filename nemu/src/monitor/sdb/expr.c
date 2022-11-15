@@ -177,8 +177,8 @@ word_t expr(char *e, bool *success)
 
 	eval_reg();
 
-	int res = eval(0, nr_token - 1);
-	printf("result : %d\n", res);
+	word_t res = eval(0, nr_token - 1);
+	printf("result : %lu\n", res);
 
 	return 0;
 }
