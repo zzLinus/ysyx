@@ -188,7 +188,8 @@ int eval(int p, int q)
 	if (p > q) {
 		/* Bad expression */
 	} else if (p == q) {
-		return (int)atoi(tokens[p].str);
+		int tmp = (int)atoi(tokens[p].str);
+		return tmp;
 	} else if (check_parentheses(p, q) == true) {
 		/* The expression is surrounded by a matched pair of parentheses.
 		 * If that is the case, just throw away the parentheses.
