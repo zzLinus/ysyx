@@ -26,6 +26,8 @@ enum {
 
 	/* TODO: Add more token types */
 	TK_NUM,
+	TK_REG,
+	TK_HEX,
 };
 
 static struct rule {
@@ -46,6 +48,8 @@ static struct rule {
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
 	{ "[0-9]+", TK_NUM }, // number
+	{ "$[a-zA-Z]+", TK_REG }, // reg_name
+	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // reg_name
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -139,6 +143,10 @@ static bool make_token(char *e)
 				case ')':
 					tokens[nr_token].type = ')';
 					strcpy(tokens[nr_token++].str, "");
+					break;
+				case TK_REG:
+					break;
+				case TK_HEX:
 					break;
 				default:
 					TODO();
