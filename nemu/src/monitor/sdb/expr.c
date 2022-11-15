@@ -48,9 +48,9 @@ static struct rule {
 	{ "\\(", '(' }, // left breck
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
+	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // number
 	{ "[0-9]+", TK_NUM }, // number
 	{ "\\$[a-zA-Z0-9]+", TK_REG }, // number
-	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
