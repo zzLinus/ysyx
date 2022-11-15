@@ -141,6 +141,12 @@ static bool make_token(char *e)
 					tokens[nr_token].type = '(';
 					strcpy(tokens[nr_token++].str, "");
 					break;
+				case TK_REG:
+					tokens[nr_token].type = TK_REG;
+					strncpy(tokens[nr_token++].str, substr_start + 1, substr_len);
+					break;
+				case TK_HEX:
+					break;
 				case ')':
 					tokens[nr_token].type = ')';
 					strcpy(tokens[nr_token++].str, "");
@@ -168,6 +174,7 @@ word_t expr(char *e, bool *success)
 	}
 
 	eval_reg();
+
 	int res = eval(0, nr_token - 1);
 	printf("result : %d\n", res);
 
