@@ -48,7 +48,7 @@ static struct rule {
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
 	{ "[0-9]+", TK_NUM }, // number
-	{ "$[a-zA-Z]+", TK_REG }, // number
+	{ "$[a-zA-Z0-9]+", TK_REG }, // number
 	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // number
 };
 
