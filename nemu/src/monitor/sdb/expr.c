@@ -146,11 +146,11 @@ static bool make_token(char *e)
 					break;
 				case TK_REG:
 					tokens[nr_token].type = TK_REG;
-					strcpy(tokens[nr_token++].str, "");
+					strncpy(tokens[nr_token++].str, substr_start, substr_len);
 					break;
 				case TK_HEX:
 					tokens[nr_token].type = TK_HEX;
-					strcpy(tokens[nr_token++].str, "");
+					strncpy(tokens[nr_token++].str, substr_start, substr_len);
 					break;
 				default:
 					TODO();
