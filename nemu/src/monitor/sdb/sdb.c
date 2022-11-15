@@ -220,7 +220,6 @@ void sdb_mainloop()
 		char *str_end = str + strlen(str);
 		char cpy[64];
 		strcpy(cpy, str);
-		printf("input string info: %s %lu\n", str, strlen(str));
 
 		/* extract the first token as the command */
 		char *cmd = strtok(cpy, " ");
@@ -229,8 +228,8 @@ void sdb_mainloop()
 		}
 
 		/* treat the remaining string as the arguments,
-     * which may need further parsing
-     */
+		 * which may need further parsing
+		 */
 		char *args = str + strlen(cmd) + 1;
 		if (args >= str_end) {
 			args = NULL;

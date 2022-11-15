@@ -19,6 +19,7 @@
  * Type 'man regex' for more information about POSIX regex functions.
  */
 #include <regex.h>
+#include "memory/paddr.h"
 
 enum {
 	TK_NOTYPE = 256,
@@ -26,6 +27,8 @@ enum {
 
 	/* TODO: Add more token types */
 	TK_NUM,
+	TK_HEX,
+	TK_REG,
 };
 
 static struct rule {
@@ -45,7 +48,9 @@ static struct rule {
 	{ "\\(", '(' }, // left breck
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
+	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // number
 	{ "[0-9]+", TK_NUM }, // number
+	{ "\\$[a-zA-Z0-9]+", TK_REG }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -53,8 +58,10 @@ static struct rule {
 static regex_t re[NR_REGEX] = {};
 
 bool check_parentheses(int p, int q);
-word_t eval(int p, int q);
-uint32_t get_opt(int p, int q);
+uint64_t eval(int p, int q);
+uint64_t get_opt(int p, int q);
+void eval_reg(void);
+void eval_deref(void);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -92,6 +99,7 @@ static bool make_token(char *e)
 
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
+		bool new_token = false;
 		for (i = 0; i < NR_REGEX; i++) {
 			if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
 				char *substr_start = e + position;
@@ -107,6 +115,7 @@ static bool make_token(char *e)
 				 * of tokens, some extra actions should be performed.
 				 */
 
+				new_token = true;
 				switch (rules[i].token_type) {
 				case TK_EQ:
 					break;
@@ -136,6 +145,15 @@ static bool make_token(char *e)
 					tokens[nr_token].type = '(';
 					strcpy(tokens[nr_token++].str, "");
 					break;
+				case TK_REG:
+					tokens[nr_token].type = TK_REG;
+					// remove the '$' sign
+					strncpy(tokens[nr_token++].str, substr_start + 1, substr_len - 1);
+					break;
+				case TK_HEX:
+					tokens[nr_token].type = TK_HEX;
+					strncpy(tokens[nr_token++].str, substr_start, substr_len);
+					break;
 				case ')':
 					tokens[nr_token].type = ')';
 					strcpy(tokens[nr_token++].str, "");
@@ -148,7 +166,8 @@ static bool make_token(char *e)
 			}
 		}
 
-		if (i == NR_REGEX) {
+		if (!new_token) {
+			position++;
 		}
 	}
 
@@ -162,28 +181,32 @@ word_t expr(char *e, bool *success)
 		return 0;
 	}
 
-	int res = eval(0, nr_token - 1);
-	printf("result : %d\n", res);
+	eval_reg();
+	eval_deref();
+
+	word_t res = eval(0, nr_token - 1);
+	printf("result : %lu\n", res);
 
 	return 0;
 }
 
-word_t eval(int p, int q)
+uint64_t eval(int p, int q)
 {
 	if (p > q) {
 		/* Bad expression */
 	} else if (p == q) {
-		return (word_t)atoi(tokens[p].str);
+		uint64_t tmp = atoi(tokens[p].str);
+		return tmp;
 	} else if (check_parentheses(p, q) == true) {
 		/* The expression is surrounded by a matched pair of parentheses.
 		 * If that is the case, just throw away the parentheses.
 		 */
 		return eval(p + 1, q - 1);
 	} else {
-		int op = get_opt(p, q);
-		printf("op is %d\n", op);
-		int val1 = eval(p, op - 1);
-		int val2 = eval(op + 1, q);
+		uint64_t op = get_opt(p, q);
+		printf("op is %lu\n", op);
+		uint64_t val1 = eval(p, op - 1);
+		uint64_t val2 = eval(op + 1, q);
 
 		switch (tokens[op].type) {
 		case '+':
@@ -231,10 +254,49 @@ bool check_parentheses(int p, int q)
 	return false;
 }
 
-uint32_t get_opt(int p, int q)
+void eval_reg(void)
+{
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == TK_REG) {
+			bool success = false;
+			char num[32];
+			uint64_t tmp = isa_reg_str2val(tokens[i].str, &success);
+			printf("reg name :%s\n", tokens[i].str);
+			if (!success)
+				panic("Read register failed, may be the wrong reg name.");
+			tokens[i].type = TK_NUM;
+			sprintf(num, "%lu", tmp);
+			strcpy(tokens[i].str, num);
+		}
+	}
+}
+
+void eval_deref(void)
+{
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == '*' && (i == 0 || tokens[i - 1].type != TK_NUM)) {
+			uint64_t tmp;
+			char num[32];
+			tokens[i].type = TK_NUM;
+			tmp = strtol(tokens[i + 1].str, NULL, 16); // turn hex string to int
+			tmp = paddr_read(tmp, 8); // value in the memory location
+			sprintf(num, "%lu", tmp);
+			strcpy(tokens[i].str, num);
+			tokens[i + 1].type = TK_NOTYPE;
+			strcpy(tokens[i + 1].str, "");
+			for (int j = i + 1; j < nr_token; j++) {
+				tokens[j].type = tokens[j + 1].type;
+				strcpy(tokens[j].str, tokens[j + 1].str);
+			}
+			nr_token--;
+		}
+	}
+}
+
+uint64_t get_opt(int p, int q)
 {
 	bool stop = false;
-	uint32_t res = -1, pri = 1;
+	uint64_t res = -1, pri = 1;
 	for (int i = p; i <= q; i++) {
 		if (tokens[i].type == '(')
 			stop = true;
