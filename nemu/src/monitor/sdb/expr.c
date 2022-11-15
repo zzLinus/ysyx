@@ -57,7 +57,7 @@ static struct rule {
 static regex_t re[NR_REGEX] = {};
 
 bool check_parentheses(int p, int q);
-word_t eval(int p, int q);
+int eval(int p, int q);
 uint32_t get_opt(int p, int q);
 void eval_reg(void);
 
@@ -183,7 +183,7 @@ word_t expr(char *e, bool *success)
 	return 0;
 }
 
-word_t eval(int p, int q)
+int eval(int p, int q)
 {
 	if (p > q) {
 		/* Bad expression */
