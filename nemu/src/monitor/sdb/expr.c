@@ -177,8 +177,8 @@ word_t expr(char *e, bool *success)
 
 	eval_reg();
 
-	word_t res = eval(0, nr_token - 1);
-	printf("result : %lu\n", res);
+	int res = eval(0, nr_token - 1);
+	printf("result : %d\n", res);
 
 	return 0;
 }
@@ -252,12 +252,12 @@ void eval_reg(void)
 		if (tokens[i].type == TK_REG) {
 			bool success = false;
 			char num[32];
-			word_t tmp = isa_reg_str2val(tokens[i].str, &success);
+			int tmp = isa_reg_str2val(tokens[i].str, &success);
 			printf("reg name :%s\n", tokens[i].str);
 			if (!success)
 				panic("Read register failed, may be the wrong reg name.");
 			tokens[i].type = TK_NUM;
-			sprintf(num, "%lu", tmp);
+			sprintf(num, "%d", tmp);
 			strcpy(tokens[i].str, num);
 		}
 	}
