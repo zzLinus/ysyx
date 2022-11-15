@@ -35,5 +35,12 @@ void isa_reg_display()
 
 word_t isa_reg_str2val(const char *s, bool *success)
 {
-	return 0;
+	word_t reg_val;
+	for (int i = 0; i < 31; i++) {
+		if (strcmp(s, reg_name(i, NOTIMPLEMENT)) == 0) {
+			reg_val = cpu.gpr[i];
+			*success = true;
+		}
+	}
+	return reg_val;
 }
