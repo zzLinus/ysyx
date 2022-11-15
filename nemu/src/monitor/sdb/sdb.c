@@ -229,8 +229,8 @@ void sdb_mainloop()
 		}
 
 		/* treat the remaining string as the arguments,
-     * which may need further parsing
-     */
+		 * which may need further parsing
+		 */
 		char *args = str + strlen(cmd) + 1;
 		if (args >= str_end) {
 			args = NULL;

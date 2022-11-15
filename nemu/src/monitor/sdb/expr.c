@@ -26,6 +26,8 @@ enum {
 
 	/* TODO: Add more token types */
 	TK_NUM,
+	TK_HEX,
+	TK_REG,
 };
 
 static struct rule {
@@ -46,6 +48,8 @@ static struct rule {
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
 	{ "[0-9]+", TK_NUM }, // number
+	{ "$[a-zA-Z]+", TK_REG }, // number
+	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -55,6 +59,7 @@ static regex_t re[NR_REGEX] = {};
 bool check_parentheses(int p, int q);
 word_t eval(int p, int q);
 uint32_t get_opt(int p, int q);
+void eval_reg(void);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -229,6 +234,22 @@ bool check_parentheses(int p, int q)
 	} else
 		return false;
 	return false;
+}
+
+void eval_reg(void)
+{
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == TK_REG) {
+			bool success = false;
+			char num[32];
+			word_t tmp = isa_reg_str2val(tokens[i].str, &success);
+			if (!success)
+				panic("Read register failed, may be the wrong reg name.");
+			tokens[i].type = TK_NUM;
+			sprintf(num, "%lu", tmp);
+			strcpy(tokens[i].str, num);
+		}
+	}
 }
 
 uint32_t get_opt(int p, int q)
