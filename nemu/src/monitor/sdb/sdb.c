@@ -218,10 +218,12 @@ void sdb_mainloop()
 
 	for (char *str; (str = rl_gets()) != NULL;) {
 		char *str_end = str + strlen(str);
+		char cpy[64];
+		strcpy(cpy, str);
 		printf("input string info: %s %lu\n", str, strlen(str));
 
 		/* extract the first token as the command */
-		char *cmd = strtok(str, "\32");
+		char *cmd = strtok(cpy, " ");
 		if (cmd == NULL) {
 			continue;
 		}
@@ -229,7 +231,7 @@ void sdb_mainloop()
 		/* treat the remaining string as the arguments,
      * which may need further parsing
      */
-		char *args = cmd + strlen(cmd) + 1;
+		char *args = str + strlen(cmd) + 1;
 		if (args >= str_end) {
 			args = NULL;
 		}
