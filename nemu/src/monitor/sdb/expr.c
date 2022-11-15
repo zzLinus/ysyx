@@ -285,10 +285,10 @@ void eval_deref(void)
 			tokens[i + 1].type = TK_NOTYPE;
 			strcpy(tokens[i + 1].str, "");
 			for (int j = i + 1; j < nr_token; j++) {
-				/* if (tokens[j + 1].type == 0 && tokens[j + 2].type == 0) { */
-				tokens[j].type = tokens[j + 1].type;
-				strcpy(tokens[j].str, tokens[j + 1].str);
-				/* } */
+				if (tokens[j + 1].type == 0 && tokens[j + 2].type == 0) {
+					tokens[j].type = tokens[j + 1].type;
+					strcpy(tokens[j].str, tokens[j + 1].str);
+				}
 			}
 		}
 	}
