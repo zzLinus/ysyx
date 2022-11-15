@@ -57,8 +57,8 @@ static struct rule {
 static regex_t re[NR_REGEX] = {};
 
 bool check_parentheses(int p, int q);
-int eval(int p, int q);
-uint32_t get_opt(int p, int q);
+word_t eval(int p, int q);
+word_t get_opt(int p, int q);
 void eval_reg(void);
 
 /* Rules are used for many times.
@@ -177,13 +177,13 @@ word_t expr(char *e, bool *success)
 
 	eval_reg();
 
-	int res = eval(0, nr_token - 1);
-	printf("result : %d\n", res);
+	word_t res = eval(0, nr_token - 1);
+	printf("result : %lu\n", res);
 
 	return 0;
 }
 
-int eval(int p, int q)
+word_t eval(int p, int q)
 {
 	if (p > q) {
 		/* Bad expression */
@@ -253,18 +253,18 @@ void eval_reg(void)
 		if (tokens[i].type == TK_REG) {
 			bool success = false;
 			char num[32];
-			int tmp = isa_reg_str2val(tokens[i].str, &success);
+			word_t tmp = isa_reg_str2val(tokens[i].str, &success);
 			printf("reg name :%s\n", tokens[i].str);
 			if (!success)
 				panic("Read register failed, may be the wrong reg name.");
 			tokens[i].type = TK_NUM;
-			sprintf(num, "%d", tmp);
+			sprintf(num, "%lu", tmp);
 			strcpy(tokens[i].str, num);
 		}
 	}
 }
 
-uint32_t get_opt(int p, int q)
+word_t get_opt(int p, int q)
 {
 	bool stop = false;
 	uint32_t res = -1, pri = 1;
