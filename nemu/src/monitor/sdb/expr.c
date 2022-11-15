@@ -99,6 +99,7 @@ static bool make_token(char *e)
 
 	while (e[position] != '\0') { // iterate every possible substring
 		/* Try all rules one by one. */
+		bool new_token = false;
 		for (i = 0; i < NR_REGEX; i++) {
 			if (regexec(&re[i], e + position, 1, &pmatch, 0) == 0 && pmatch.rm_so == 0) {
 				char *substr_start = e + position;
@@ -114,6 +115,7 @@ static bool make_token(char *e)
 				 * of tokens, some extra actions should be performed.
 				 */
 
+				new_token = true;
 				switch (rules[i].token_type) {
 				case TK_EQ:
 					break;
@@ -164,7 +166,7 @@ static bool make_token(char *e)
 			}
 		}
 
-		if (i == NR_REGEX - 1) {
+		if (!new_token) {
 			position++;
 		}
 	}
