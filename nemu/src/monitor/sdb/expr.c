@@ -58,8 +58,8 @@ static struct rule {
 static regex_t re[NR_REGEX] = {};
 
 bool check_parentheses(int p, int q);
-uint32_t eval(int p, int q);
-uint32_t get_opt(int p, int q);
+uint64_t eval(int p, int q);
+uint64_t get_opt(int p, int q);
 void eval_reg(void);
 void eval_deref(void);
 
@@ -188,12 +188,12 @@ word_t expr(char *e, bool *success)
 	return 0;
 }
 
-uint32_t eval(int p, int q)
+uint64_t eval(int p, int q)
 {
 	if (p > q) {
 		/* Bad expression */
 	} else if (p == q) {
-		uint32_t tmp = atoi(tokens[p].str);
+		uint64_t tmp = atoi(tokens[p].str);
 		return tmp;
 	} else if (check_parentheses(p, q) == true) {
 		/* The expression is surrounded by a matched pair of parentheses.
@@ -201,10 +201,10 @@ uint32_t eval(int p, int q)
 		 */
 		return eval(p + 1, q - 1);
 	} else {
-		uint32_t op = get_opt(p, q);
-		printf("op is %d\n", op);
-		uint32_t val1 = eval(p, op - 1);
-		uint32_t val2 = eval(op + 1, q);
+		uint64_t op = get_opt(p, q);
+		printf("op is %lu\n", op);
+		uint64_t val1 = eval(p, op - 1);
+		uint64_t val2 = eval(op + 1, q);
 
 		switch (tokens[op].type) {
 		case '+':
@@ -258,12 +258,12 @@ void eval_reg(void)
 		if (tokens[i].type == TK_REG) {
 			bool success = false;
 			char num[32];
-			uint32_t tmp = isa_reg_str2val(tokens[i].str, &success);
+			uint64_t tmp = isa_reg_str2val(tokens[i].str, &success);
 			printf("reg name :%s\n", tokens[i].str);
 			if (!success)
 				panic("Read register failed, may be the wrong reg name.");
 			tokens[i].type = TK_NUM;
-			sprintf(num, "%u", tmp);
+			sprintf(num, "%lu", tmp);
 			strcpy(tokens[i].str, num);
 		}
 	}
@@ -273,12 +273,12 @@ void eval_deref(void)
 {
 	for (int i = 0; i < nr_token; i++) {
 		if (tokens[i].type == '*' && (i == 0 || tokens[i - 1].type != TK_NUM)) {
-			uint32_t tmp;
+			uint64_t tmp;
 			char num[32];
 			tokens[i].type = TK_NUM;
 			tmp = strtol(tokens[i + 1].str, NULL, 16); // turn hex string to int
 			tmp = paddr_read(tmp, 8); // value in the memory location
-			sprintf(num, "%u", tmp);
+			sprintf(num, "%lu", tmp);
 			strcpy(tokens[i].str, num);
 			tokens[i + 1].type = TK_NOTYPE;
 			strcpy(tokens[i + 1].str, "");
@@ -291,10 +291,10 @@ void eval_deref(void)
 	}
 }
 
-uint32_t get_opt(int p, int q)
+uint64_t get_opt(int p, int q)
 {
 	bool stop = false;
-	uint32_t res = -1, pri = 1;
+	uint64_t res = -1, pri = 1;
 	for (int i = p; i <= q; i++) {
 		if (tokens[i].type == '(')
 			stop = true;
