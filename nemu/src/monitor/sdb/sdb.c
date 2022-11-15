@@ -129,6 +129,7 @@ static int cmd_x(char *args)
 		return 0;
 	}
 	arg1 = strtol(arg, NULL, 16);
+	printf("arg1 :%d\n", arg1);
 	unsigned i;
 	for (i = 0; i < arg0 / 8; ++i) {
 		if (i == 0)
