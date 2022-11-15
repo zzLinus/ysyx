@@ -252,6 +252,7 @@ void eval_reg(void)
 			bool success = false;
 			char num[32];
 			word_t tmp = isa_reg_str2val(tokens[i].str, &success);
+			printf("reg name :%s\n", tokens[i].str);
 			if (!success)
 				panic("Read register failed, may be the wrong reg name.");
 			tokens[i].type = TK_NUM;
