@@ -26,8 +26,6 @@ enum {
 
 	/* TODO: Add more token types */
 	TK_NUM,
-	TK_REG,
-	TK_HEX,
 };
 
 static struct rule {
@@ -48,8 +46,6 @@ static struct rule {
 	{ "\\)", ')' }, // right breck
 	{ "==", TK_EQ }, // equal
 	{ "[0-9]+", TK_NUM }, // number
-	{ "$[a-zA-Z]+", TK_REG }, // reg_name
-	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // reg_name
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -144,14 +140,6 @@ static bool make_token(char *e)
 					tokens[nr_token].type = ')';
 					strcpy(tokens[nr_token++].str, "");
 					break;
-				case TK_REG:
-					tokens[nr_token].type = TK_REG;
-					strncpy(tokens[nr_token++].str, substr_start, substr_len);
-					break;
-				case TK_HEX:
-					tokens[nr_token].type = TK_HEX;
-					strncpy(tokens[nr_token++].str, substr_start, substr_len);
-					break;
 				default:
 					TODO();
 				}
@@ -174,8 +162,8 @@ word_t expr(char *e, bool *success)
 		return 0;
 	}
 
-	word_t res = eval(0, nr_token - 1);
-	printf("result : %lu\n", res);
+	int res = eval(0, nr_token - 1);
+	printf("result : %d\n", res);
 
 	return 0;
 }
@@ -211,21 +199,6 @@ word_t eval(int p, int q)
 		}
 	}
 	return -1;
-}
-
-void eval_reg(void)
-{
-	word_t res = 0;
-	bool success = false;
-	for (int i = 0; i < nr_token; i++) {
-		if (tokens[i].type == TK_REG) {
-			char str[32];
-			res = isa_reg_str2val(tokens[i].str, &success);
-			tokens[i].type = TK_NUM;
-			sprintf(str, "%lu", res);
-			strcpy(tokens[i].str, str);
-		}
-	}
 }
 
 bool check_parentheses(int p, int q)
