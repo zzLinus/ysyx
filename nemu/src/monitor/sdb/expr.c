@@ -279,6 +279,7 @@ void eval_deref(void)
 			printf("hex string:%s\n", tokens[i + 1].str);
 			tmp = strtol(tokens[i + 1].str, NULL, 16); // turn hex string to int
 			tmp = paddr_read(tmp, 8); // value in the memory location
+			printf("value: %x\n", tmp);
 			sprintf(num, "%u", tmp);
 			strcpy(tokens[i].str, num);
 			tokens[i + 1].type = TK_NOTYPE;
