@@ -174,8 +174,8 @@ word_t expr(char *e, bool *success)
 		return 0;
 	}
 
-	int res = eval(0, nr_token - 1);
-	printf("result : %d\n", res);
+	word_t res = eval(0, nr_token - 1);
+	printf("result : %lu\n", res);
 
 	return 0;
 }
@@ -211,6 +211,21 @@ word_t eval(int p, int q)
 		}
 	}
 	return -1;
+}
+
+void eval_reg(void)
+{
+	word_t res = 0;
+	bool success = false;
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == TK_REG) {
+			char str[32];
+			res = isa_reg_str2val(tokens[i].str, &success);
+			tokens[i].type = TK_NUM;
+			sprintf(str, "%lu", res);
+			strcpy(tokens[i].str, str);
+		}
+	}
 }
 
 bool check_parentheses(int p, int q)
