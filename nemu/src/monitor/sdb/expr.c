@@ -145,8 +145,12 @@ static bool make_token(char *e)
 					strcpy(tokens[nr_token++].str, "");
 					break;
 				case TK_REG:
+					tokens[nr_token].type = TK_REG;
+					strcpy(tokens[nr_token++].str, "");
 					break;
 				case TK_HEX:
+					tokens[nr_token].type = TK_HEX;
+					strcpy(tokens[nr_token++].str, "");
 					break;
 				default:
 					TODO();
