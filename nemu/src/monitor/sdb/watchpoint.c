@@ -95,11 +95,20 @@ void check_watchpoint()
 		strcpy(tmp_name, tmp->var_name);
 		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
 			nemu_state.state = NEMU_STOP;
-			printf("old reg %s,value %u\n", tmp->var_name, tmp->value);
+			printf("Reg %s,old value %u\n", tmp->var_name, tmp->value);
 			tmp->value = atoi(tmp_name);
-			printf("old reg %s,value %u\n", tmp->var_name, tmp->value);
-			printf("watchpoint value has changed\n");
+			printf("Reg %s,new value %u\n", tmp->var_name, tmp->value);
+			printf("Watchpoint value has changed\n");
 			return;
 		}
+	}
+}
+
+void wp_disp()
+{
+	int count = 0;
+	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
+		printf("watch point %d\n watching: %s\n current value: %d\n", count, tmp->var_name, tmp->value);
+		count++;
 	}
 }
