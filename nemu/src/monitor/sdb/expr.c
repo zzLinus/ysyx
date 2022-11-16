@@ -186,8 +186,6 @@ word_t expr(char *e, bool *success)
 
 	uint64_t res = eval(0, nr_token - 1);
 
-	printf("haha\n");
-
 	printf("result : %lu\n", res);
 	*success = true;
 
