@@ -31,7 +31,7 @@ static uint64_t g_timer = 0; // unit: us
 static bool g_print_step = false;
 
 void device_update();
-void check_watchpoint();
+void check_wp();
 
 static void trace_and_difftest(Decode *_this, vaddr_t dnpc)
 {
@@ -44,7 +44,7 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc)
 		IFDEF(CONFIG_ITRACE, puts(_this->logbuf));
 	}
 	IFDEF(CONFIG_DIFFTEST, difftest_step(_this->pc, dnpc));
-	check_watchpoint();
+	check_wp();
 }
 
 static void exec_once(Decode *s, vaddr_t pc)

@@ -171,7 +171,10 @@ static int cmd_p(char *args)
 static int cmd_w(char *args)
 {
 	bool success = false;
-	create_wp(args, &success);
+	if (args != NULL)
+		create_wp(args, &success);
+	else
+		printf("Invalied arguments.\n");
 
 	if (!success)
 		printf("Watch point create failed.\n");
@@ -180,7 +183,11 @@ static int cmd_w(char *args)
 
 static int cmd_d(char *args)
 {
-	TODO();
+	bool success = false;
+
+	delete_wp(args, &success);
+	if (!success)
+		printf("Watch point delete failed.\n");
 	return 0;
 }
 

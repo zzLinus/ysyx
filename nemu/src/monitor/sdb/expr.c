@@ -268,9 +268,10 @@ uint64_t eval_reg(char *str)
 	bool success = false;
 	char num[32];
 	uint64_t tmp = isa_reg_str2val(str, &success);
-	printf("reg name :%s\n", str);
 	if (!success)
 		panic("Read register failed, may be the wrong reg name.");
+	else
+		printf("reg name :%s is successfully evalued.\n", str);
 	sprintf(num, "%lu", tmp);
 	strcpy(str, num);
 	return tmp;

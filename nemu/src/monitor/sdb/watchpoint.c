@@ -31,7 +31,7 @@ static WP *head = NULL, *free_ = NULL;
 
 WP *new_wp();
 void free_wp(WP *wp);
-void check_watchpoint();
+void check_wp();
 
 void init_wp_pool()
 {
@@ -52,9 +52,8 @@ void init_wp_pool()
 void create_wp(char *args, bool *success)
 {
 	WP *wp = new_wp();
-	printf("%s\n", args);
+	args = strtok(args, " ");
 	memmove(args, args + 1, strlen(args));
-	printf("%s\n", args);
 	strcpy(wp->var_name, args);
 	wp->value = eval_reg(args);
 	*success = true;
@@ -65,6 +64,7 @@ WP *new_wp()
 {
 	assert(free_->next != NULL); // check if there is no enough watch point
 	WP *tmp = free_;
+	free_ = free_->next;
 	if (head == NULL) {
 		tmp->next = NULL;
 		head = tmp;
@@ -72,15 +72,20 @@ WP *new_wp()
 		tmp->next = head;
 		head = tmp;
 	}
-	free_ = free_->next;
 	return tmp;
 }
 
 void free_wp(WP *wp)
 {
-	for (WP *tmp = head; tmp->next != NULL; tmp = tmp->next)
-		if (tmp->next == wp)
+	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
+		if (tmp == wp) {
+			if (head->next != NULL)
+				head = head->next;
+			else
+				head = NULL;
+		} else if (tmp->next == wp)
 			tmp->next = wp->next;
+	}
 	if (free_ == NULL)
 		wp->next = NULL;
 	else
@@ -88,7 +93,7 @@ void free_wp(WP *wp)
 	free_ = wp;
 }
 
-void check_watchpoint()
+void check_wp()
 {
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
 		char tmp_name[10];
@@ -115,4 +120,20 @@ void wp_disp()
 		printf("watch point %d\nwatching: %s\ncurrent value: %u\n", count, tmp->var_name, tmp->value);
 		count++;
 	}
+}
+
+void delete_wp(char *args, bool *success)
+{
+	args = strtok(args, " ");
+	memmove(args, args + 1, strlen(args));
+	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
+		if (strcmp(tmp->var_name, args) == 0) {
+			free_wp(tmp);
+			*success = true;
+			printf("Watchpoint deleted\n");
+			return;
+		}
+	}
+	*success = false;
+	return;
 }
