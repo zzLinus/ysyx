@@ -108,7 +108,7 @@ void wp_disp()
 {
 	int count = 0;
 	if (head == NULL) {
-		printf("No watch point created.");
+		printf("No watch point created.\n");
 	}
 
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
