@@ -31,11 +31,7 @@ static WP *head = NULL, *free_ = NULL;
 
 WP *new_wp();
 void free_wp(WP *wp);
-
-void check_watchpoint()
-{
-	printf("scanning all watch point\n");
-}
+void check_watchpoint();
 
 void init_wp_pool()
 {
@@ -43,7 +39,7 @@ void init_wp_pool()
 	for (i = 0; i < NR_WP; i++) {
 		wp_pool[i].NO = i;
 		wp_pool[i].next = (i == NR_WP - 1 ? NULL : &wp_pool[i + 1]);
-		strcpy(wp_pool[i].var_name, "");
+		strcpy(wp_pool[i].var_name, "INVAI");
 		wp_pool[i].value = 0;
 	}
 
@@ -89,4 +85,16 @@ void free_wp(WP *wp)
 	else
 		wp->next = free_;
 	free_ = wp;
+}
+
+void check_watchpoint()
+{
+	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
+		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp->var_name)) {
+			nemu_state.state = NEMU_STOP;
+			tmp->value = eval_reg(tmp->var_name);
+			printf("watchpoint value has changed");
+			return;
+		}
+	}
 }
