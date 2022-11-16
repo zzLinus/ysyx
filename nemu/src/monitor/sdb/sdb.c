@@ -180,7 +180,10 @@ static int cmd_w(char *args)
 
 static int cmd_d(char *args)
 {
-	TODO();
+	bool success = false;
+
+	if (!success)
+		printf("Watch point delete failed.\n");
 	return 0;
 }
 
