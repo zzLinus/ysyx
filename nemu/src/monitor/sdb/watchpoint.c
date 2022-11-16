@@ -53,9 +53,7 @@ void create_wp(char *args, bool *success)
 {
 	WP *wp = new_wp();
 	args = strtok(args, " ");
-	printf("%s\n", args);
 	memmove(args, args + 1, strlen(args));
-	printf("%s\n", args);
 	strcpy(wp->var_name, args);
 	wp->value = eval_reg(args);
 	*success = true;
