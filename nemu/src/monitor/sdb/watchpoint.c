@@ -107,6 +107,10 @@ void check_watchpoint()
 void wp_disp()
 {
 	int count = 0;
+	if (head == NULL) {
+		printf("No watch point created.");
+	}
+
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
 		printf("watch point %d\n watching: %s\n current value: %d\n", count, tmp->var_name, tmp->value);
 		count++;
