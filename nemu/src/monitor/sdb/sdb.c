@@ -166,6 +166,7 @@ static int cmd_p(char *args)
 	bool *sucsess = false;
 	expr(args, sucsess);
 
+	printf("haha");
 	if (!*sucsess)
 		printf("Can't evaluate expression.\n");
 	return 0;
