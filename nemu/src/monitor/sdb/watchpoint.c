@@ -93,7 +93,7 @@ void check_watchpoint()
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
 		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp->var_name)) {
 			nemu_state.state = NEMU_STOP;
-			printf("watchpoint value has changed");
+			printf("watchpoint value has changed\n");
 			return;
 		}
 	}
