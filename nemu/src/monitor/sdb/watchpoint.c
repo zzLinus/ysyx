@@ -64,6 +64,7 @@ WP *new_wp()
 {
 	assert(free_->next != NULL); // check if there is no enough watch point
 	WP *tmp = free_;
+	free_ = free_->next;
 	if (head == NULL) {
 		tmp->next = NULL;
 		head = tmp;
@@ -71,7 +72,6 @@ WP *new_wp()
 		tmp->next = head;
 		head = tmp;
 	}
-	free_ = free_->next;
 	return tmp;
 }
 
