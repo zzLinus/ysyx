@@ -121,8 +121,9 @@ void wp_disp()
 void delete_wp(char *args, bool *success)
 {
 	args = strtok(args, " ");
+	memmove(args, args + 1, strlen(args));
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
-		if (strcmp(tmp->var_name, args)) {
+		if (strcmp(tmp->var_name, args) == 0) {
 			free_wp(tmp);
 			*success = true;
 			printf("Watchpoint deleted\n");
