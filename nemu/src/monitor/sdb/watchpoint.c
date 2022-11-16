@@ -94,7 +94,6 @@ void check_watchpoint()
 		char tmp_name[10];
 		strcpy(tmp_name, tmp->var_name);
 		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
-			tmp->value = eval_reg(tmp->var_name);
 			nemu_state.state = NEMU_STOP;
 			printf("old reg %s,value %lu\n", tmp->var_name, tmp->value);
 			tmp->value = atoi(tmp_name);
