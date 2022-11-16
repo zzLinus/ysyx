@@ -182,6 +182,7 @@ static int cmd_d(char *args)
 {
 	bool success = false;
 
+	delete_wp(args, &success);
 	if (!success)
 		printf("Watch point delete failed.\n");
 	return 0;

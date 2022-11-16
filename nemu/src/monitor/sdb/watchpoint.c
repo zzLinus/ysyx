@@ -32,7 +32,6 @@ static WP *head = NULL, *free_ = NULL;
 WP *new_wp();
 void free_wp(WP *wp);
 void check_wp();
-void delete_wp();
 
 void init_wp_pool()
 {
@@ -118,15 +117,16 @@ void wp_disp()
 	}
 }
 
-void delete_wp()
+void delete_wp(char *args, bool *success)
 {
-	int count = 0;
-	if (head == NULL) {
-		printf("No watch point created.\n");
-	}
-
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
-		printf("watch point %d\nwatching: %s\ncurrent value: %u\n", count, tmp->var_name, tmp->value);
-		count++;
+		if (strcmp(tmp->var_name, args)) {
+			free_wp(tmp);
+			*success = true;
+			printf("Watchpoint deleted\n");
+			return;
+		}
 	}
+	*success = false;
+	return;
 }
