@@ -21,6 +21,6 @@
 word_t expr(char *e, bool *success);
 void init_regex();
 void init_wp_pool();
-void create_wp(bool *success);
+void create_wp(char *args, bool *success);
 
 #endif

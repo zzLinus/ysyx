@@ -22,7 +22,8 @@ typedef struct watchpoint {
 	struct watchpoint *next;
 
 	/* TODO: Add more members if necessary */
-
+	char var_name[16];
+	uint64_t value;
 } WP;
 
 static WP wp_pool[NR_WP] = {}; // allocate stright on stack
@@ -37,6 +38,8 @@ void init_wp_pool()
 	for (i = 0; i < NR_WP; i++) {
 		wp_pool[i].NO = i;
 		wp_pool[i].next = (i == NR_WP - 1 ? NULL : &wp_pool[i + 1]);
+		strcpy(wp_pool[i].var_name, "");
+		wp_pool[i].value = 0;
 	}
 
 	head = NULL;
@@ -45,7 +48,7 @@ void init_wp_pool()
 
 /* TODO: Implement the functionality of watchpoint */
 
-void create_wp(bool *success)
+void create_wp(char *args, bool *success)
 {
 	printf("create watch point\n");
 }
