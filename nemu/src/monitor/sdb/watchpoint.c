@@ -45,7 +45,7 @@ void init_wp_pool()
 
 /* TODO: Implement the functionality of watchpoint */
 
-void create_wp(void)
+void create_wp(bool *success)
 {
 	printf("create watch point\n");
 }

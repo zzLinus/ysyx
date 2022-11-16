@@ -170,7 +170,11 @@ static int cmd_p(char *args)
 
 static int cmd_w(char *args)
 {
-	create_wp();
+	bool success = false;
+	create_wp(&success);
+
+	if (!success)
+		printf("Watch point create failed.\n");
 	return 0;
 }
 
