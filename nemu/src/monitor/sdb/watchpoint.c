@@ -32,6 +32,11 @@ static WP *head = NULL, *free_ = NULL;
 WP *new_wp();
 void free_wp(WP *wp);
 
+void check_watchpoint()
+{
+	printf("scanning all watch point\n");
+}
+
 void init_wp_pool()
 {
 	int i;
