@@ -112,7 +112,7 @@ void wp_disp()
 	}
 
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
-		printf("watch point %d\n watching: %s\n current value: %d\n", count, tmp->var_name, tmp->value);
+		printf("watch point %d\nwatching: %s\ncurrent value: %u\n", count, tmp->var_name, tmp->value);
 		count++;
 	}
 }
