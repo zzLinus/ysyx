@@ -50,6 +50,7 @@ void init_wp_pool()
 
 void create_wp(char *args, bool *success)
 {
+	eval_reg();
 	printf("create watch point\n");
 }
 

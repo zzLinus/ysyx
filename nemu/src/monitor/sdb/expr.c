@@ -60,7 +60,7 @@ static regex_t re[NR_REGEX] = {};
 bool check_parentheses(int p, int q);
 uint64_t eval(int p, int q);
 uint64_t get_opt(int p, int q);
-void eval_reg(char *str);
+uint64_t eval_reg(char *str);
 void eval_deref(void);
 void clear_tokens(void);
 
@@ -263,7 +263,7 @@ bool check_parentheses(int p, int q)
 	return false;
 }
 
-void eval_reg(char *str)
+uint64_t eval_reg(char *str)
 {
 	bool success = false;
 	char num[32];
@@ -273,6 +273,7 @@ void eval_reg(char *str)
 		panic("Read register failed, may be the wrong reg name.");
 	sprintf(num, "%lu", tmp);
 	strcpy(str, num);
+	return tmp;
 }
 
 void eval_deref(void)
