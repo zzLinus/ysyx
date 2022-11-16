@@ -79,7 +79,7 @@ WP *new_wp()
 
 void free_wp(WP *wp)
 {
-	for (WP *tmp = head; tmp->next != NULL; tmp = tmp->next)
+	for (WP *tmp = head; tmp != NULL; tmp = tmp->next)
 		if (tmp->next == wp)
 			tmp->next = wp->next;
 	if (free_ == NULL)
