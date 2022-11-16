@@ -45,6 +45,11 @@ void init_wp_pool()
 
 /* TODO: Implement the functionality of watchpoint */
 
+void create_wp(void)
+{
+	printf("create watch point\n");
+}
+
 WP *new_wp()
 {
 	assert(free_->next != NULL); // check if there is no enough watch point
