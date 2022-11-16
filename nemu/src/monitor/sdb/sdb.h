@@ -23,5 +23,6 @@ uint64_t eval_reg(char *args);
 void init_regex();
 void init_wp_pool();
 void create_wp(char *args, bool *success);
+void wp_disp();
 
 #endif
