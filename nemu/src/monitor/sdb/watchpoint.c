@@ -23,7 +23,7 @@ typedef struct watchpoint {
 
 	/* TODO: Add more members if necessary */
 	char var_name[16];
-	uint64_t value;
+	uint32_t value;
 } WP;
 
 static WP wp_pool[NR_WP] = {}; // allocate stright on stack
@@ -58,7 +58,7 @@ void create_wp(char *args, bool *success)
 	strcpy(wp->var_name, args);
 	wp->value = eval_reg(args);
 	*success = true;
-	printf("create watch point\nvar_name: %s\nvar_value: %lu\n", wp->var_name, wp->value);
+	printf("create watch point\nvar_name: %s\nvar_value: %u\n", wp->var_name, wp->value);
 }
 
 WP *new_wp()
@@ -95,9 +95,9 @@ void check_watchpoint()
 		strcpy(tmp_name, tmp->var_name);
 		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
 			nemu_state.state = NEMU_STOP;
-			printf("old reg %s,value %lu\n", tmp->var_name, tmp->value);
+			printf("old reg %s,value %u\n", tmp->var_name, tmp->value);
 			tmp->value = atoi(tmp_name);
-			printf("old reg %s,value %lu\n", tmp->var_name, tmp->value);
+			printf("old reg %s,value %u\n", tmp->var_name, tmp->value);
 			printf("watchpoint value has changed\n");
 			return;
 		}
