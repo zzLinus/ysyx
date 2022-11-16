@@ -62,6 +62,7 @@ uint64_t eval(int p, int q);
 uint64_t get_opt(int p, int q);
 void eval_reg(void);
 void eval_deref(void);
+void clear_tokens(void);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -187,8 +188,9 @@ word_t expr(char *e, bool *success)
 	uint64_t res = eval(0, nr_token - 1);
 
 	printf("result : %lu\n", res);
-	*success = true;
 
+	*success = true;
+	nr_token = 0;
 	return 0;
 }
 
