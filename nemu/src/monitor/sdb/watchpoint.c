@@ -47,7 +47,7 @@ void init_wp_pool()
 
 WP *new_wp()
 {
-	assert(free_->next != NULL);
+	assert(free_->next != NULL); // check if there is no enough watch point
 	WP *tmp = free_;
 	free_ = free_->next;
 	return tmp;

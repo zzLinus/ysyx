@@ -184,8 +184,10 @@ word_t expr(char *e, bool *success)
 	eval_reg();
 	eval_deref();
 
-	word_t res = eval(0, nr_token - 1);
+	uint64_t res = eval(0, nr_token - 1);
+
 	printf("result : %lu\n", res);
+	*success = true;
 
 	return 0;
 }

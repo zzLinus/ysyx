@@ -163,7 +163,11 @@ static int cmd_x(char *args)
 
 static int cmd_p(char *args)
 {
-	TODO();
+	bool success = false;
+	expr(args, &success);
+
+	if (!success)
+		printf("Can't evaluate expression.\n");
 	return 0;
 }
 
@@ -251,10 +255,7 @@ void sdb_mainloop()
 		}
 
 		if (i == NR_CMD) {
-			bool *sucsess = false;
-			expr(str, sucsess);
-			if (!*sucsess)
-				printf("Unknown command '%s'\n", cmd);
+			printf("Unknown command '%s'\n", cmd);
 		}
 	}
 }
