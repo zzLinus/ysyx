@@ -52,6 +52,7 @@ void init_wp_pool()
 void create_wp(char *args, bool *success)
 {
 	WP *wp = new_wp();
+	args = strtok(args, " ");
 	printf("%s\n", args);
 	memmove(args, args + 1, strlen(args));
 	printf("%s\n", args);
@@ -119,6 +120,7 @@ void wp_disp()
 
 void delete_wp(char *args, bool *success)
 {
+	args = strtok(args, " ");
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
 		if (strcmp(tmp->var_name, args)) {
 			free_wp(tmp);
