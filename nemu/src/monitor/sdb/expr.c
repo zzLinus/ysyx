@@ -60,7 +60,7 @@ static regex_t re[NR_REGEX] = {};
 bool check_parentheses(int p, int q);
 uint64_t eval(int p, int q);
 uint64_t get_opt(int p, int q);
-void eval_reg(void);
+void eval_reg(char *str);
 void eval_deref(void);
 void clear_tokens(void);
 
@@ -182,7 +182,12 @@ word_t expr(char *e, bool *success)
 		return 0;
 	}
 
-	eval_reg();
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == TK_REG) {
+			eval_reg(tokens[i].str);
+			tokens[i].type = TK_NUM;
+		}
+	}
 	eval_deref();
 
 	uint64_t res = eval(0, nr_token - 1);
@@ -258,21 +263,16 @@ bool check_parentheses(int p, int q)
 	return false;
 }
 
-void eval_reg(void)
+void eval_reg(char *str)
 {
-	for (int i = 0; i < nr_token; i++) {
-		if (tokens[i].type == TK_REG) {
-			bool success = false;
-			char num[32];
-			uint64_t tmp = isa_reg_str2val(tokens[i].str, &success);
-			printf("reg name :%s\n", tokens[i].str);
-			if (!success)
-				panic("Read register failed, may be the wrong reg name.");
-			tokens[i].type = TK_NUM;
-			sprintf(num, "%lu", tmp);
-			strcpy(tokens[i].str, num);
-		}
-	}
+	bool success = false;
+	char num[32];
+	uint64_t tmp = isa_reg_str2val(str, &success);
+	printf("reg name :%s\n", str);
+	if (!success)
+		panic("Read register failed, may be the wrong reg name.");
+	sprintf(num, "%lu", tmp);
+	strcpy(str, num);
 }
 
 void eval_deref(void)
