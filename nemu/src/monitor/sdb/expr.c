@@ -50,7 +50,7 @@ static struct rule {
 	{ "==", TK_EQ }, // equal
 	{ "0[xX][0-9a-fA-F]+", TK_HEX }, // number
 	{ "[0-9]+", TK_NUM }, // number
-	{ "\\$[a-zA-Z0-9]+", TK_REG }, // number
+	{ "\\$[$a-zA-Z0-9]+", TK_REG }, // number
 };
 
 #define NR_REGEX ARRLEN(rules)
@@ -60,8 +60,9 @@ static regex_t re[NR_REGEX] = {};
 bool check_parentheses(int p, int q);
 uint64_t eval(int p, int q);
 uint64_t get_opt(int p, int q);
-void eval_reg(void);
+uint64_t eval_reg(char *str);
 void eval_deref(void);
+void clear_tokens(void);
 
 /* Rules are used for many times.
  * Therefore we compile them only once before any usage.
@@ -181,14 +182,20 @@ word_t expr(char *e, bool *success)
 		return 0;
 	}
 
-	eval_reg();
+	for (int i = 0; i < nr_token; i++) {
+		if (tokens[i].type == TK_REG) {
+			eval_reg(tokens[i].str);
+			tokens[i].type = TK_NUM;
+		}
+	}
 	eval_deref();
 
 	uint64_t res = eval(0, nr_token - 1);
 
 	printf("result : %lu\n", res);
-	*success = true;
 
+	*success = true;
+	nr_token = 0;
 	return 0;
 }
 
@@ -197,7 +204,7 @@ uint64_t eval(int p, int q)
 	if (p > q) {
 		/* Bad expression */
 	} else if (p == q) {
-		uint64_t tmp = atoi(tokens[p].str);
+		uint32_t tmp = atoi(tokens[p].str);
 		return tmp;
 	} else if (check_parentheses(p, q) == true) {
 		/* The expression is surrounded by a matched pair of parentheses.
@@ -256,27 +263,24 @@ bool check_parentheses(int p, int q)
 	return false;
 }
 
-void eval_reg(void)
+uint64_t eval_reg(char *str)
 {
-	for (int i = 0; i < nr_token; i++) {
-		if (tokens[i].type == TK_REG) {
-			bool success = false;
-			char num[32];
-			uint64_t tmp = isa_reg_str2val(tokens[i].str, &success);
-			printf("reg name :%s\n", tokens[i].str);
-			if (!success)
-				panic("Read register failed, may be the wrong reg name.");
-			tokens[i].type = TK_NUM;
-			sprintf(num, "%lu", tmp);
-			strcpy(tokens[i].str, num);
-		}
-	}
+	bool success = false;
+	char num[32];
+	uint64_t tmp = isa_reg_str2val(str, &success);
+	printf("reg name :%s\n", str);
+	if (!success)
+		panic("Read register failed, may be the wrong reg name.");
+	sprintf(num, "%lu", tmp);
+	strcpy(str, num);
+	return tmp;
 }
 
 void eval_deref(void)
 {
 	for (int i = 0; i < nr_token; i++) {
-		if (tokens[i].type == '*' && (i == 0 || tokens[i - 1].type != TK_NUM)) {
+		if (tokens[i].type == '*' && (i == 0 || (tokens[i - 1].type != TK_NUM && tokens[i - 1].type != '(' &&
+							 tokens[i - 1].type != ')'))) {
 			uint64_t tmp;
 			char num[32];
 			tokens[i].type = TK_NUM;

@@ -22,7 +22,8 @@ typedef struct watchpoint {
 	struct watchpoint *next;
 
 	/* TODO: Add more members if necessary */
-
+	char var_name[16];
+	uint32_t value;
 } WP;
 
 static WP wp_pool[NR_WP] = {}; // allocate stright on stack
@@ -30,6 +31,7 @@ static WP *head = NULL, *free_ = NULL;
 
 WP *new_wp();
 void free_wp(WP *wp);
+void check_watchpoint();
 
 void init_wp_pool()
 {
@@ -37,6 +39,8 @@ void init_wp_pool()
 	for (i = 0; i < NR_WP; i++) {
 		wp_pool[i].NO = i;
 		wp_pool[i].next = (i == NR_WP - 1 ? NULL : &wp_pool[i + 1]);
+		strcpy(wp_pool[i].var_name, "INVAI");
+		wp_pool[i].value = 0;
 	}
 
 	head = NULL;
@@ -45,16 +49,57 @@ void init_wp_pool()
 
 /* TODO: Implement the functionality of watchpoint */
 
+void create_wp(char *args, bool *success)
+{
+	WP *wp = new_wp();
+	printf("%s\n", args);
+	memmove(args, args + 1, strlen(args));
+	printf("%s\n", args);
+	strcpy(wp->var_name, args);
+	wp->value = eval_reg(args);
+	*success = true;
+	printf("create watch point\nvar_name: %s\nvar_value: %u\n", wp->var_name, wp->value);
+}
+
 WP *new_wp()
 {
 	assert(free_->next != NULL); // check if there is no enough watch point
 	WP *tmp = free_;
+	if (head == NULL) {
+		tmp->next = NULL;
+		head = tmp;
+	} else {
+		tmp->next = head;
+		head = tmp;
+	}
 	free_ = free_->next;
 	return tmp;
 }
 
 void free_wp(WP *wp)
 {
-	wp->next = free_;
+	for (WP *tmp = head; tmp->next != NULL; tmp = tmp->next)
+		if (tmp->next == wp)
+			tmp->next = wp->next;
+	if (free_ == NULL)
+		wp->next = NULL;
+	else
+		wp->next = free_;
 	free_ = wp;
+}
+
+void check_watchpoint()
+{
+	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
+		char tmp_name[10];
+		strcpy(tmp_name, tmp->var_name);
+		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
+			nemu_state.state = NEMU_STOP;
+			printf("Reg %s,old value %u\n", tmp->var_name, tmp->value);
+			tmp->value = atoi(tmp_name);
+			printf("Reg %s,new value %u\n", tmp->var_name, tmp->value);
+			printf("Watchpoint value has changed\n");
+			return;
+		}
+	}
 }
