@@ -163,10 +163,10 @@ static int cmd_x(char *args)
 
 static int cmd_p(char *args)
 {
-	bool *sucsess = false;
-	expr(args, sucsess);
+	bool *success = false;
+	expr(args, success);
 
-	if (!*sucsess)
+	if (!*success)
 		printf("Can't evaluate expression.\n");
 	return 0;
 }
