@@ -278,7 +278,8 @@ void eval_reg(void)
 void eval_deref(void)
 {
 	for (int i = 0; i < nr_token; i++) {
-		if (tokens[i].type == '*' && (i == 0 || tokens[i - 1].type != TK_NUM)) {
+		if (tokens[i].type == '*' && (i == 0 || (tokens[i - 1].type != TK_NUM && tokens[i - 1].type != '(' &&
+							 tokens[i - 1].type != ')'))) {
 			uint64_t tmp;
 			char num[32];
 			tokens[i].type = TK_NUM;
