@@ -50,25 +50,36 @@ void init_wp_pool()
 
 void create_wp(char *args, bool *success)
 {
+	WP *wp = new_wp();
 	memmove(args, args + 1, strlen(args) - 1);
-	eval_reg(args);
-	printf("create watch point\n");
+	strcpy(wp->var_name, args);
+	wp->value = eval_reg(args);
+	printf("create watch point\nvar_name: %s\nvar_value: %lu\n", wp->var_name, wp->value);
 }
 
 WP *new_wp()
 {
 	assert(free_->next != NULL); // check if there is no enough watch point
 	WP *tmp = free_;
-	if (head == NULL)
+	if (head == NULL) {
+		tmp->next = NULL;
 		head = tmp;
-	else
-		head->next = tmp;
+	} else {
+		tmp->next = head;
+		head = tmp;
+	}
 	free_ = free_->next;
 	return tmp;
 }
 
 void free_wp(WP *wp)
 {
-	wp->next = free_;
+	for (WP *tmp = head; tmp->next != NULL; tmp = tmp->next)
+		if (tmp->next == wp)
+			tmp->next = wp->next;
+	if (free_ == NULL)
+		wp->next = NULL;
+	else
+		wp->next = free_;
 	free_ = wp;
 }
