@@ -204,7 +204,7 @@ uint64_t eval(int p, int q)
 	if (p > q) {
 		/* Bad expression */
 	} else if (p == q) {
-		uint64_t tmp = (uint64_t)atoi(tokens[p].str);
+		uint32_t tmp = atoi(tokens[p].str);
 		return tmp;
 	} else if (check_parentheses(p, q) == true) {
 		/* The expression is surrounded by a matched pair of parentheses.
