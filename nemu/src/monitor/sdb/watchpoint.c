@@ -95,8 +95,10 @@ void free_wp(WP *wp)
 
 void check_wp()
 {
+	if (head == NULL)
+		return;
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
-		char tmp_name[10];
+		char tmp_name[16];
 		strcpy(tmp_name, tmp->var_name);
 		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
 			nemu_state.state = NEMU_STOP;
