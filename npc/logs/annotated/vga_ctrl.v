@@ -13,6 +13,7 @@
 %000008	    output [7:0] vga_b
 	);
 	
+	// const defination  (clock patch)
 	parameter h_frontporch = 96;
 	parameter h_active = 144;
 	parameter h_backporch = 784;
@@ -22,30 +23,31 @@
 	parameter v_active = 35;
 	parameter v_backporch = 515;
 	parameter v_total = 525;
-	
-%000001	reg [9:0] x_cnt;
-%000001	reg [9:0] y_cnt;
-%000000	wire h_valid;
-%000000	wire v_valid;
-	
- 000020	always @(posedge pclk) begin
- 000020	    if(reset == 1'b1) begin
+%000001	
+%000001	// pixel counter
+%000000	reg [9:0] x_cnt;
+%000000	reg [9:0] y_cnt;
+	wire h_valid;
+ 000020	wire v_valid;
+ 000020	
+%000000	verilator_coverage: (next point on previous line)
+
+ 000010	always @(posedge pclk) begin
+ 000010	    if(reset == 1'b1) begin
+	        x_cnt <= 1;
+%000000	        y_cnt <= 1;
+%000000	    end
 %000000	    verilator_coverage: (next point on previous line)
 
- 000010	        x_cnt <= 1;
- 000010	        y_cnt <= 1;
-	    end
 %000000	    else begin
 %000000	        if(x_cnt == h_total)begin
 %000000	        verilator_coverage: (next point on previous line)
 
 %000000	            x_cnt <= 1;
-%000000	            if(y_cnt == v_total) y_cnt <= 1;
-%000000	            verilator_coverage: (next point on previous line)
-
+	            if(y_cnt == v_total) y_cnt <= 1;
 %000000	            else y_cnt <= y_cnt + 1;
 	        end
-%000000	        else x_cnt <= x_cnt + 1;
+			else x_cnt <= x_cnt + 1;
 	    end
 	end
 	
@@ -60,7 +62,7 @@
 	assign h_addr = h_valid ? (x_cnt - 10'd145) : 10'd0;
 	assign v_addr = v_valid ? (y_cnt - 10'd36) : 10'd0;
 	//设置输出的颜色值
-	assign {vga_r, vga_g, vga_b} = vga_data;
+	assign {vga_b, vga_g, vga_r} = vga_data;
 	
 	endmodule
 	

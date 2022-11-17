@@ -4910,11 +4910,11 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                                                  | (0x800000U 
                                                     & vlSelf->top__DOT__vga_data));
     }
-    vlSelf->VGA_R = (0xffU & (vlSelf->top__DOT__vga_data 
-                              >> 0x10U));
+    vlSelf->VGA_R = (0xffU & vlSelf->top__DOT__vga_data);
     vlSelf->VGA_G = (0xffU & (vlSelf->top__DOT__vga_data 
                               >> 8U));
-    vlSelf->VGA_B = (0xffU & vlSelf->top__DOT__vga_data);
+    vlSelf->VGA_B = (0xffU & (vlSelf->top__DOT__vga_data 
+                              >> 0x10U));
     if ((1U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
         ++(vlSymsp->__Vcoverage[108]);
         vlSelf->top__DOT____Vtogcov__VGA_R = ((0xfeU 
