@@ -100,7 +100,7 @@ static int cmd_info(char *args)
 	if (strcmp(args, "r") == 0) {
 		isa_reg_display();
 	} else if (strcmp(args, "w") == 0) {
-		wp_disp();
+		printf("watch point info display uninplemente now\n");
 		return 0;
 	} else {
 		printf("Unavaliable args\n");
