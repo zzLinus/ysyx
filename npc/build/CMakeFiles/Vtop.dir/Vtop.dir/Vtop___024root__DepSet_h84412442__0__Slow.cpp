@@ -116,7 +116,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     __Vtemp_h154fd1c8__0[1U] = 0x2f686868U;
     __Vtemp_h154fd1c8__0[2U] = 0x75726365U;
     __Vtemp_h154fd1c8__0[3U] = 0x7265736fU;
-    VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(4, __Vtemp_h154fd1c8__0)
+    VL_READMEM_N(false, 24, 524288, 0, VL_CVT_PACK_STR_NW(4, __Vtemp_h154fd1c8__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
     ++(vlSymsp->__Vcoverage[939]);
