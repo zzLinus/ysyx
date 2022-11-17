@@ -52,10 +52,7 @@ void init_wp_pool()
 void create_wp(char *args, bool *success)
 {
 	WP *wp = new_wp();
-	char reg[10] = { 0 };
-	strcpy(reg, strtok(args, " "));
-	if (strtok(NULL, " ") != NULL) {
-	}
+	args = strtok(args, " ");
 	memmove(args, args + 1, strlen(args));
 	strcpy(wp->var_name, args);
 	wp->value = eval_reg(args);
