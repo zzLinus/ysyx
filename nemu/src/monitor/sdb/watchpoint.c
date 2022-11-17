@@ -95,6 +95,8 @@ void free_wp(WP *wp)
 
 void check_wp()
 {
+	if (head == NULL)
+		return;
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
 		char tmp_name[10];
 		strcpy(tmp_name, tmp->var_name);
