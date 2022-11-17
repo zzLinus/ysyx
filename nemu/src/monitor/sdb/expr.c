@@ -335,3 +335,8 @@ uint64_t get_opt(int p, int q)
 	else
 		return -1;
 }
+
+word_t eval_wp(char *e, bool *success)
+{
+	return 0;
+}
