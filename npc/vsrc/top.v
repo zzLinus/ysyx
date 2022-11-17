@@ -191,7 +191,7 @@ module vmem (
 reg [23:0] vga_mem [524287:0];
 
 initial begin
-    $readmemmif("resource/hhh.mif", vga_mem);
+    $readmem("resource/hhh.mif", vga_mem);
 end
 
 assign vga_data = vga_mem[{h_addr, v_addr}];
