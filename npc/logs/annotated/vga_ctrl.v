@@ -62,7 +62,7 @@
 	assign h_addr = h_valid ? (x_cnt - 10'd145) : 10'd0;
 	assign v_addr = v_valid ? (y_cnt - 10'd36) : 10'd0;
 	//设置输出的颜色值
-	assign {vga_b, vga_g, vga_r} = vga_data;
+	assign {vga_r, vga_g, vga_b} = vga_data;
 	
 	endmodule
 	
