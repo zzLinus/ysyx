@@ -21,7 +21,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     // Init
-    VlWide<5>/*159:0*/ __Vtemp_h161bb746__0;
+    VlWide<5>/*159:0*/ __Vtemp_h043eeb69__0;
     // Body
     ++(vlSymsp->__Vcoverage[321]);
     ++(vlSymsp->__Vcoverage[372]);
@@ -112,12 +112,12 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[6U] = 4U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[7U] = 2U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[8U] = 0U;
-    __Vtemp_h161bb746__0[0U] = 0x2e686578U;
-    __Vtemp_h161bb746__0[1U] = 0x74757265U;
-    __Vtemp_h161bb746__0[2U] = 0x2f706963U;
-    __Vtemp_h161bb746__0[3U] = 0x75726365U;
-    __Vtemp_h161bb746__0[4U] = 0x7265736fU;
-    VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_h161bb746__0)
+    __Vtemp_h043eeb69__0[0U] = 0x2e6d6966U;
+    __Vtemp_h043eeb69__0[1U] = 0x74757265U;
+    __Vtemp_h043eeb69__0[2U] = 0x2f706963U;
+    __Vtemp_h043eeb69__0[3U] = 0x75726365U;
+    __Vtemp_h043eeb69__0[4U] = 0x7265736fU;
+    VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_h043eeb69__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
     ++(vlSymsp->__Vcoverage[939]);
