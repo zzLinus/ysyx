@@ -102,7 +102,7 @@ void check_wp()
 		char tmp_name[10];
 		strcpy(tmp_name, tmp->var_name);
 		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
-			/* nemu_state.state = NEMU_STOP; */
+			nemu_state.state = NEMU_STOP;
 			printf("Reg %s,old value %u\n", tmp->var_name, tmp->value);
 			tmp->value = atoi(tmp_name);
 			printf("Reg %s,new value %u\n", tmp->var_name, tmp->value);
