@@ -192,7 +192,7 @@
 	reg [23:0] vga_mem [524287:0];
 	
 	initial begin
-	    $readmemh("resource/picture.mif", vga_mem);
+	    $readmemh("resource/hhh.hex", vga_mem);
 	end
 	
 	assign vga_data = vga_mem[{h_addr, v_addr}];
