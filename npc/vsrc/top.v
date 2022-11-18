@@ -205,6 +205,6 @@ end
 
 // assign vga_data = vga_mem[{h_addr, v_addr}];
 assign word = vga_mem[{font_h, font_v}] // get the 8 bit ascii value
-assign vga_data = ;
+assign vga_data = font_rom[word+h_addr+v_addr];
 
 endmodule
