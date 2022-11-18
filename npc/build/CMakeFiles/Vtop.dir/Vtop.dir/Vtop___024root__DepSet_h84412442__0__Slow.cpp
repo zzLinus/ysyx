@@ -7302,8 +7302,8 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                | (0x100U & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr)));
     }
     vlSelf->top__DOT__vga_data = vlSelf->top__DOT__my_vmem__DOT__vga_mem
-        [(((IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr) 
-           << 0xaU) | (IData)(vlSelf->top__DOT__h_addr))];
+        [(((IData)(vlSelf->top__DOT__h_addr) << 9U) 
+          | (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))];
     if (((IData)(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit) 
          ^ (IData)(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit))) {
         ++(vlSymsp->__Vcoverage[817]);
