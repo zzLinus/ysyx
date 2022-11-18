@@ -198,12 +198,12 @@ module vmem (
 
 // reg [23:0] vga_mem [524287:0];
 reg [7:0] vga_mem [2099:0];
-reg font_rom [36863:0];
+reg font_rom [49150:0];
 wire [15:0] font_addr;
 wire [7:0] word;
 
 initial begin
-    $readmemh("resource/A.txt", font_rom);
+    $readmemh("resource/vga_font.txt", font_rom);
     $readmemh("resource/test.txt", vga_mem);
     // $readmemh("resource/hhh2.txt", vga_mem);
 end
