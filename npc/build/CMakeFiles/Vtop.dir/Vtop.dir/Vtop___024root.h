@@ -145,7 +145,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____VdfgTmp_hcaa42a04__0;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____VdfgTmp_h4cb6247e__0;
     };
     struct {
         CData/*0:0*/ __Vdly__timer_out;
@@ -167,7 +167,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
         SData/*9:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
-        SData/*11:0*/ __VdfgTmp_h77f539de__0;
+        SData/*11:0*/ __VdfgTmp_h6020060d__0;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
