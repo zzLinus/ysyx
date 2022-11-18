@@ -363,11 +363,11 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     for (int __Vi0 = 0; __Vi0 < 49153; ++__Vi0) {
         vlSelf->top__DOT__my_vmem__DOT__font_rom[__Vi0] = VL_RAND_RESET_I(1);
     }
+    vlSelf->top__DOT__my_vmem__DOT__font_addr = VL_RAND_RESET_I(16);
     vlSelf->top__DOT__my_vmem__DOT__word = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(9);
-    vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_addr = VL_RAND_RESET_I(24);
+    vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_addr = VL_RAND_RESET_I(16);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__word = VL_RAND_RESET_I(8);
-    vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_hcffb5f60__0 = 0;
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
     vlSelf->__VdfgTmp_h64914f53__0 = 0;
