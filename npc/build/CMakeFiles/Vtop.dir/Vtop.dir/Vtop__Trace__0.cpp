@@ -100,7 +100,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgSData(oldp+71,(vlSelf->top__DOT__v_addr),10);
         bufp->chgCData(oldp+72,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(0x46U)))),6);
         bufp->chgCData(oldp+73,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__v_addr), (IData)(0x1eU)))),6);
-        bufp->chgIData(oldp+74,(((IData)(vlSelf->__VdfgTmp_h0db62662__0)
+        bufp->chgIData(oldp+74,(((IData)(vlSelf->__VdfgTmp_he9a8801e__0)
                                   ? 0U : 0xffffffU)),24);
         bufp->chgIData(oldp+75,(vlSelf->top__DOT__led1__DOT__count),32);
         bufp->chgCData(oldp+76,(vlSelf->top__DOT__led1__DOT__led),8);
