@@ -107,6 +107,8 @@
 	
 	wire [9:0] h_addr;
 	wire [9:0] v_addr;
+	wire [6:0] font_h;
+	wire [4:0] font_v;
 	wire [23:0] vga_data;
 	
 	vga_ctrl my_vga_ctrl(
@@ -115,6 +117,8 @@
 	    .vga_data(vga_data),
 	    .h_addr(h_addr),
 	    .v_addr(v_addr),
+		.font_h(font_h),
+		.font_v(font_v),
 	    .hsync(VGA_HSYNC),
 	    .vsync(VGA_VSYNC),
 	    .valid(VGA_BLANK_N),
@@ -173,6 +177,8 @@
 	vmem my_vmem(
 	    .h_addr(h_addr),
 	    .v_addr(v_addr[8:0]),
+		.font_h(font_h),
+		.font_v(font_v),
 	    .vga_data(vga_data)
 	);
 	
@@ -186,16 +192,31 @@
 	module vmem (
 	    input [9:0] h_addr,
 	    input [8:0] v_addr,
+		input [6:0] font_h,
+		input [4:0] font_v,
 	    output [23:0] vga_data
 	);
 	
-	reg [23:0] vga_mem [524287:0];
+	// reg [23:0] vga_mem [524287:0];
+	reg [7:0] vga_mem [2099:0];
+	reg font_rom [49150:0];
+	wire [15:0] font_addr;
+	wire [7:0] word;
+	wire [7:0] font_cord_v;
+	wire [7:0] font_cord_h;
 	
 	initial begin
-	    $readmemh("resource/picture.hex", vga_mem);
+	    $readmemh("resource/vga_font2.txt", font_rom);
+	    $readmemh("resource/test.txt", vga_mem);
+	    // $readmemh("resource/hhh2.txt", vga_mem);
 	end
 	
-	assign vga_data = vga_mem[{h_addr, v_addr}];
+	// assign vga_data = vga_mem[{h_addr, v_addr}];
+	assign word = vga_mem[{font_v,font_h}]; // get the 8 bit ascii value
+	assign font_cord_v = {v_addr%9'd16}[7:0];
+	assign font_cord_h = {h_addr%10'd9}[7:0];
+	assign font_addr = {word,font_cord_v+font_cord_h};
+	assign vga_data = font_rom[font_addr] ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
 	
 	endmodule
 	

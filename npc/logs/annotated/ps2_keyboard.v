@@ -16,7 +16,7 @@
  000010	
 	reg [9:0] buffer;        // ps2_data bits
 	reg [3:0] count;  // count ps2_data bits
-%000000	reg [2:0] ps2_clk_sync;
+%000000	reg [2:0] ps2_clk_sync; // buffered 3 clock bits
 	
  000020	always @(posedge clk) begin
  000020		ps2_clk_sync <=  {ps2_clk_sync[1:0],ps2_clk};
