@@ -176,6 +176,8 @@ seg mu_seg(
 vmem my_vmem(
     .h_addr(h_addr),
     .v_addr(v_addr[8:0]),
+	.font_h(font_h),
+	.font_v(font_v),
     .vga_data(vga_data)
 );
 
@@ -189,6 +191,8 @@ endmodule
 module vmem (
     input [9:0] h_addr,
     input [8:0] v_addr,
+	input [6:0] font_h,
+	input [6:0] font_v,
     output [23:0] vga_data
 );
 
