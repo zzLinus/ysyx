@@ -100,7 +100,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgSData(oldp+71,(vlSelf->top__DOT__v_addr),10);
         bufp->chgCData(oldp+72,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(0x46U)))),6);
         bufp->chgCData(oldp+73,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__v_addr), (IData)(0x1eU)))),6);
-        bufp->chgIData(oldp+74,(vlSelf->__VdfgTmp_h136fee98__0),24);
+        bufp->chgIData(oldp+74,(vlSelf->__VdfgTmp_h6020060d__0),24);
         bufp->chgIData(oldp+75,(vlSelf->top__DOT__led1__DOT__count),32);
         bufp->chgCData(oldp+76,(vlSelf->top__DOT__led1__DOT__led),8);
         bufp->chgIData(oldp+77,(vlSelf->top__DOT__mu_seg__DOT__count),32);
@@ -115,7 +115,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgBit(oldp+86,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
         bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
         bufp->chgSData(oldp+88,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-        bufp->chgSData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT__word),10);
+        bufp->chgSData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_h4cb6247e__0),10);
         bufp->chgIData(oldp+90,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[3U])) {

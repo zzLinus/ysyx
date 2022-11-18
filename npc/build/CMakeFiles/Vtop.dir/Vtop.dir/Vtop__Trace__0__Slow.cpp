@@ -442,7 +442,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullSData(oldp+72,(vlSelf->top__DOT__v_addr),10);
     bufp->fullCData(oldp+73,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(0x46U)))),6);
     bufp->fullCData(oldp+74,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__v_addr), (IData)(0x1eU)))),6);
-    bufp->fullIData(oldp+75,(vlSelf->__VdfgTmp_h136fee98__0),24);
+    bufp->fullIData(oldp+75,(vlSelf->__VdfgTmp_h6020060d__0),24);
     bufp->fullIData(oldp+76,(vlSelf->top__DOT__led1__DOT__count),32);
     bufp->fullCData(oldp+77,(vlSelf->top__DOT__led1__DOT__led),8);
     bufp->fullIData(oldp+78,(vlSelf->top__DOT__mu_seg__DOT__count),32);
@@ -457,7 +457,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
     bufp->fullBit(oldp+88,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
     bufp->fullSData(oldp+89,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-    bufp->fullSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),10);
+    bufp->fullSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_h4cb6247e__0),10);
     bufp->fullIData(oldp+91,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     bufp->fullCData(oldp+92,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
     bufp->fullBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
