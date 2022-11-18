@@ -110,6 +110,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
+        CData/*6:0*/ top__DOT____Vtogcov__font_h;
+        CData/*6:0*/ top__DOT____Vtogcov__font_v;
         CData/*7:0*/ top__DOT____Vtogcov__seg_x;
         CData/*7:0*/ top__DOT____Vtogcov__seg_y;
         CData/*7:0*/ top__DOT__led1__DOT__led;
@@ -143,11 +145,13 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
+        CData/*7:0*/ top__DOT__my_vmem__DOT__word;
+    };
+    struct {
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
         CData/*0:0*/ __Vtrigrprev__TOP__timer_out;
-    };
-    struct {
         CData/*0:0*/ __VactContinue;
         VL_OUT16(ledr,15,0);
         SData/*9:0*/ top__DOT__h_addr;
@@ -163,9 +167,9 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_keyboard__DOT__buffer;
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
+        SData/*11:0*/ __VdfgTmp_h0fbf475b__0;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
-        IData/*23:0*/ top__DOT__vga_data;
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
         IData/*31:0*/ top__DOT____Vtogcov__sft_out_q;
         IData/*23:0*/ top__DOT____Vtogcov__vga_data;
@@ -198,7 +202,8 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__data_list;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT__segs;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT____Vtogcov__segs;
-        VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
+        VlUnpacked<CData/*7:0*/, 2100> top__DOT__my_vmem__DOT__vga_mem;
+        VlUnpacked<SData/*11:0*/, 4096> top__DOT__my_vmem__DOT__font_rom;
         VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };
     VlTriggerVec<1> __VstlTriggered;

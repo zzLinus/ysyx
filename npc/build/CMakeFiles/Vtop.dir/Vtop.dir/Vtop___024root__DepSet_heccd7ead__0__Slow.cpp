@@ -213,7 +213,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->timer_out = VL_RAND_RESET_I(1);
     vlSelf->top__DOT__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__v_addr = VL_RAND_RESET_I(10);
-    vlSelf->top__DOT__vga_data = VL_RAND_RESET_I(24);
     vlSelf->top__DOT____Vcellinp__my_vmem__v_addr = VL_RAND_RESET_I(9);
     vlSelf->top__DOT____Vtogcov__clk = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__rst = VL_RAND_RESET_I(1);
@@ -266,6 +265,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__timer_out = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(10);
+    vlSelf->top__DOT____Vtogcov__font_h = VL_RAND_RESET_I(7);
+    vlSelf->top__DOT____Vtogcov__font_v = VL_RAND_RESET_I(7);
     vlSelf->top__DOT____Vtogcov__vga_data = VL_RAND_RESET_I(24);
     vlSelf->top__DOT____Vtogcov__seg_x = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg_y = VL_RAND_RESET_I(8);
@@ -358,12 +359,18 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     }
     vlSelf->top__DOT__mu_seg__DOT____Vtogcov__count = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__mu_seg__DOT____Vtogcov__offset = VL_RAND_RESET_I(3);
-    for (int __Vi0 = 0; __Vi0 < 524288; ++__Vi0) {
-        vlSelf->top__DOT__my_vmem__DOT__vga_mem[__Vi0] = VL_RAND_RESET_I(24);
+    for (int __Vi0 = 0; __Vi0 < 2100; ++__Vi0) {
+        vlSelf->top__DOT__my_vmem__DOT__vga_mem[__Vi0] = VL_RAND_RESET_I(8);
     }
+    for (int __Vi0 = 0; __Vi0 < 4096; ++__Vi0) {
+        vlSelf->top__DOT__my_vmem__DOT__font_rom[__Vi0] = VL_RAND_RESET_I(12);
+    }
+    vlSelf->top__DOT__my_vmem__DOT__word = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(9);
+    vlSelf->top__DOT__my_vmem__DOT____Vtogcov__word = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
+    vlSelf->__VdfgTmp_h0fbf475b__0 = 0;
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__VstlIterCount = 0;
     vlSelf->__VicoIterCount = 0;
