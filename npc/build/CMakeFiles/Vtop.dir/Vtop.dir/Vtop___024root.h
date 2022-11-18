@@ -169,6 +169,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
+        IData/*23:0*/ top__DOT__vga_data;
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
         IData/*31:0*/ top__DOT____Vtogcov__sft_out_q;
         IData/*23:0*/ top__DOT____Vtogcov__vga_data;
@@ -201,7 +202,7 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__data_list;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT__segs;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT____Vtogcov__segs;
-        VlUnpacked<CData/*7:0*/, 2100> top__DOT__my_vmem__DOT__vga_mem;
+        VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
         VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };
     VlTriggerVec<1> __VstlTriggered;
