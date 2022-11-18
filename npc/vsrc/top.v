@@ -199,6 +199,7 @@ module vmem (
 // reg [23:0] vga_mem [524287:0];
 reg [7:0] vga_mem [2099:0];
 reg font_rom [49152:0];
+wire [23:0] font_addr;
 wire [7:0] word;
 
 initial begin
@@ -209,7 +210,8 @@ end
 
 // assign vga_data = vga_mem[{h_addr, v_addr}];
 assign word = vga_mem[{font_h,font_v}]; // get the 8 bit ascii value
-assign vga_data = font_rom[{word,{h_addr%10'd70}[7:0]+{v_addr%9'd30}[7:0]}] ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
+assign font_addr = {word,{h_addr%10'd70}[7:0]+{v_addr%9'd30}[7:0]};
+assign vga_data = font_rom[font_addr] ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
 // assign vga_data = 24'b111111111111111111111111;
 
 endmodule
