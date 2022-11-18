@@ -7615,223 +7615,223 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                       & vlSelf->top__DOT__my_vmem__DOT__font_rom
                                       [vlSelf->top__DOT__my_vmem__DOT__font_addr]);
     if ((1U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                 ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                 ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[277]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffeU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 1U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 1U));
     }
     if ((2U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                 ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                 ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[278]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffdU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 2U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 2U));
     }
     if ((4U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                 ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                 ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[279]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffbU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 4U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 4U));
     }
     if ((8U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                 ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                 ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[280]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffff7U 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 8U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 8U));
     }
     if ((0x10U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                    ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                    ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[281]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffffefU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x10U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x10U));
     }
     if ((0x20U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                    ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                    ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[282]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffffdfU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x20U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x20U));
     }
     if ((0x40U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                    ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                    ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[283]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffffbfU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x40U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x40U));
     }
     if ((0x80U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                    ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                    ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[284]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffff7fU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x80U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x80U));
     }
     if ((0x100U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                     ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                     ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[285]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffeffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x100U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x100U));
     }
     if ((0x200U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                     ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                     ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[286]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffdffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x200U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x200U));
     }
     if ((0x400U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                     ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                     ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[287]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffbffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x400U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x400U));
     }
     if ((0x800U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                     ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                     ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[288]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfff7ffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x800U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x800U));
     }
     if ((0x1000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                      ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                      ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[289]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffefffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x1000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x1000U));
     }
     if ((0x2000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                      ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                      ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[290]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffdfffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x2000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x2000U));
     }
     if ((0x4000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                      ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                      ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[291]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xffbfffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x4000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x4000U));
     }
     if ((0x8000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                      ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                      ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[292]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xff7fffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x8000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x8000U));
     }
     if ((0x10000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                       ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                       ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[293]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfeffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x10000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x10000U));
     }
     if ((0x20000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                       ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                       ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[294]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfdffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x20000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x20000U));
     }
     if ((0x40000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                       ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                       ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[295]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfbffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x40000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x40000U));
     }
     if ((0x80000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                       ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                       ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[296]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xf7ffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x80000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x80000U));
     }
     if ((0x100000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                        ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                        ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[297]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xefffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x100000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x100000U));
     }
     if ((0x200000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                        ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                        ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[298]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xdfffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x200000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x200000U));
     }
     if ((0x400000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                        ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                        ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[299]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xbfffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x400000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x400000U));
     }
     if ((0x800000U & (((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                        ? 0xffffffU : 0U) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
+                        ? 0U : 0xffffffU) ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[300]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0x7fffffU 
                                                   & vlSelf->top__DOT____Vtogcov__vga_data) 
                                                  | ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                                                     ? 0x800000U
-                                                     : 0U));
+                                                     ? 0U
+                                                     : 0x800000U));
     }
     vlSelf->VGA_R = ((IData)(vlSelf->__VdfgTmp_h0a46912f__0)
-                      ? 0xffU : 0U);
+                      ? 0U : 0xffU);
     vlSelf->VGA_G = vlSelf->VGA_R;
     vlSelf->VGA_B = vlSelf->VGA_R;
     if ((1U & ((IData)(vlSelf->VGA_R) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_R)))) {
