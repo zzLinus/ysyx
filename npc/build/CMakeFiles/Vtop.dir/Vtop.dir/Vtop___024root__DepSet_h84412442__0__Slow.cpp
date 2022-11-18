@@ -21,7 +21,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     // Init
-    VlWide<6>/*191:0*/ __Vtemp_h6b654b6a__0;
+    VlWide<6>/*191:0*/ __Vtemp_h27723e7d__0;
     VlWide<5>/*159:0*/ __Vtemp_h127e8b07__0;
     // Body
     ++(vlSymsp->__Vcoverage[317]);
@@ -113,13 +113,13 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[6U] = 4U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[7U] = 2U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[8U] = 0U;
-    __Vtemp_h6b654b6a__0[0U] = 0x2e747874U;
-    __Vtemp_h6b654b6a__0[1U] = 0x6f6e7432U;
-    __Vtemp_h6b654b6a__0[2U] = 0x67615f66U;
-    __Vtemp_h6b654b6a__0[3U] = 0x63652f76U;
-    __Vtemp_h6b654b6a__0[4U] = 0x736f7572U;
-    __Vtemp_h6b654b6a__0[5U] = 0x7265U;
-    VL_READMEM_N(true, 1, 49153, 0, VL_CVT_PACK_STR_NW(6, __Vtemp_h6b654b6a__0)
+    __Vtemp_h27723e7d__0[0U] = 0x2e747874U;
+    __Vtemp_h27723e7d__0[1U] = 0x6f6e7431U;
+    __Vtemp_h27723e7d__0[2U] = 0x67615f66U;
+    __Vtemp_h27723e7d__0[3U] = 0x63652f76U;
+    __Vtemp_h27723e7d__0[4U] = 0x736f7572U;
+    __Vtemp_h27723e7d__0[5U] = 0x7265U;
+    VL_READMEM_N(true, 1, 49153, 0, VL_CVT_PACK_STR_NW(6, __Vtemp_h27723e7d__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__font_rom)
                  , 0, ~0ULL);
     __Vtemp_h127e8b07__0[0U] = 0x2e747874U;
