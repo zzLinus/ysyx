@@ -191,7 +191,7 @@ module vmem (
 reg [23:0] vga_mem [524287:0];
 
 initial begin
-    $readmemh("resource/out2.txt", vga_mem);
+    $readmemh("resource/hhh2.txt", vga_mem);
     // $readmemh("resource/picture.hex", vga_mem);
 end
 
