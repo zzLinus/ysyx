@@ -48,7 +48,7 @@ int main(int argc, char** argv, char** env)
         top->en = !top->en;
         top->ec_en = !top->ec_en;
         top->counter_EN = 0b1;
-        // contextp->timeInc(1);
+        contextp->timeInc(1);
         top->a = 0b11100100;
         top->alu_fnselec = 0b111;
         if (counter == 1)
@@ -71,7 +71,7 @@ int main(int argc, char** argv, char** env)
         top->eval();
         nvboard_update();
         single_cycle();
-        // tfp->dump(contextp->time());
+        tfp->dump(contextp->time());
     }
 
     Verilated::mkdir("logs");
