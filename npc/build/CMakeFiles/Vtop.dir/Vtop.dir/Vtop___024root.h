@@ -89,6 +89,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__VGA_VSYNC;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_BLANK_N;
         CData/*7:0*/ top__DOT____Vtogcov__VGA_R;
+        CData/*7:0*/ top__DOT____Vtogcov__VGA_G;
         CData/*7:0*/ top__DOT____Vtogcov__VGA_B;
         CData/*7:0*/ top__DOT____Vtogcov__seg0;
         CData/*7:0*/ top__DOT____Vtogcov__seg1;
@@ -145,10 +146,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*7:0*/ top__DOT__my_vmem__DOT__word;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
     };
     struct {
-        CData/*0:0*/ __VdfgTmp_h64914f53__0;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
         CData/*0:0*/ __Vtrigrprev__TOP__timer_out;
@@ -169,6 +169,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
+        IData/*23:0*/ top__DOT__vga_data;
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
         IData/*31:0*/ top__DOT____Vtogcov__sft_out_q;
         IData/*23:0*/ top__DOT____Vtogcov__vga_data;
@@ -201,8 +202,7 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__data_list;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT__segs;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT____Vtogcov__segs;
-        VlUnpacked<CData/*7:0*/, 2100> top__DOT__my_vmem__DOT__vga_mem;
-        VlUnpacked<CData/*0:0*/, 49153> top__DOT__my_vmem__DOT__font_rom;
+        VlUnpacked<IData/*23:0*/, 524288> top__DOT__my_vmem__DOT__vga_mem;
         VlUnpacked<CData/*0:0*/, 4> __Vm_traceActivity;
     };
     VlTriggerVec<1> __VstlTriggered;
