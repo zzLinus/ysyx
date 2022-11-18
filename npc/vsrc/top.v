@@ -106,6 +106,8 @@ assign VGA_CLK = clk;
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
+wire [6:0] font_h;
+wire [6:0] font_v;
 wire [23:0] vga_data;
 
 vga_ctrl my_vga_ctrl(
@@ -114,6 +116,8 @@ vga_ctrl my_vga_ctrl(
     .vga_data(vga_data),
     .h_addr(h_addr),
     .v_addr(v_addr),
+	.font_h(font_h),
+	.font_v(font_v),
     .hsync(VGA_HSYNC),
     .vsync(VGA_VSYNC),
     .valid(VGA_BLANK_N),
@@ -188,13 +192,19 @@ module vmem (
     output [23:0] vga_data
 );
 
-reg [23:0] vga_mem [524287:0];
+// reg [23:0] vga_mem [524287:0];
+reg [7:0] vga_mem [2099:0];
+reg [11:0] font_rom [4095:0];
+wire [7:0] word;
 
 initial begin
-    $readmemh("resource/vga_font.txt", vga_mem);
+    $readmemh("resource/vga_font.txt", font_rom);
+    $readmemh("resource/test.txt", vga_mem);
     // $readmemh("resource/picture.hex", vga_mem);
 end
 
-assign vga_data = vga_mem[{h_addr, v_addr}];
+// assign vga_data = vga_mem[{h_addr, v_addr}];
+assign word = vga_mem[{font_h, font_v}] // get the 8 bit ascii value
+assign vga_data = ;
 
 endmodule

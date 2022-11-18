@@ -4,6 +4,8 @@ module vga_ctrl (
     input [23:0] vga_data,
     output [9:0] h_addr,
     output [9:0] v_addr,
+	output [6:0] font_h,
+	output [6:0] font_v,
     output hsync,
     output vsync,
     output valid,
@@ -54,6 +56,8 @@ assign valid = h_valid & v_valid;
 //计算当前有效像素坐标
 assign h_addr = h_valid ? (x_cnt - 10'd145) : 10'd0;
 assign v_addr = v_valid ? (y_cnt - 10'd36) : 10'd0;
+assign font_h = h_addr / 70;
+assign font_v = v_addr / 30;
 //设置输出的颜色值
 assign {vga_r, vga_g, vga_b} = vga_data;
 
