@@ -98,9 +98,9 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[2U])) {
         bufp->chgSData(oldp+70,(vlSelf->top__DOT__h_addr),10);
         bufp->chgSData(oldp+71,(vlSelf->top__DOT__v_addr),10);
-        bufp->chgCData(oldp+72,(vlSelf->top__DOT__font_h),6);
-        bufp->chgCData(oldp+73,(vlSelf->top__DOT__font_v),6);
-        bufp->chgIData(oldp+74,(vlSelf->__VdfgTmp_h2c9b2051__0),24);
+        bufp->chgCData(oldp+72,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(6U)))),6);
+        bufp->chgCData(oldp+73,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__v_addr), (IData)(0x1eU)))),6);
+        bufp->chgIData(oldp+74,(vlSelf->__VdfgTmp_h5cfaf7e8__0),24);
         bufp->chgIData(oldp+75,(vlSelf->top__DOT__led1__DOT__count),32);
         bufp->chgCData(oldp+76,(vlSelf->top__DOT__led1__DOT__led),8);
         bufp->chgIData(oldp+77,(vlSelf->top__DOT__mu_seg__DOT__count),32);
