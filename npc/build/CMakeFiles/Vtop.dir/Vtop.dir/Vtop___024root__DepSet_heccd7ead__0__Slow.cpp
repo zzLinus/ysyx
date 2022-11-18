@@ -241,7 +241,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__VGA_VSYNC = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_BLANK_N = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_R = VL_RAND_RESET_I(8);
-    vlSelf->top__DOT____Vtogcov__VGA_G = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__VGA_B = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg0 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg1 = VL_RAND_RESET_I(8);

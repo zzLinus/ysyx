@@ -89,7 +89,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__VGA_VSYNC;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_BLANK_N;
         CData/*7:0*/ top__DOT____Vtogcov__VGA_R;
-        CData/*7:0*/ top__DOT____Vtogcov__VGA_G;
         CData/*7:0*/ top__DOT____Vtogcov__VGA_B;
         CData/*7:0*/ top__DOT____Vtogcov__seg0;
         CData/*7:0*/ top__DOT____Vtogcov__seg1;
@@ -146,9 +145,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*7:0*/ top__DOT__my_vmem__DOT__word;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
     };
     struct {
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         CData/*0:0*/ __VdfgTmp_h64914f53__0;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
