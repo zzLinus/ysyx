@@ -21,7 +21,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     // Init
-    VlWide<5>/*159:0*/ __Vtemp_he4cf429d__0;
+    VlWide<4>/*127:0*/ __Vtemp_h490fd1c6__0;
     // Body
     ++(vlSymsp->__Vcoverage[333]);
     ++(vlSymsp->__Vcoverage[384]);
@@ -112,12 +112,11 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[6U] = 4U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[7U] = 2U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[8U] = 0U;
-    __Vtemp_he4cf429d__0[0U] = 0x2e747874U;
-    __Vtemp_he4cf429d__0[1U] = 0x6f757432U;
-    __Vtemp_he4cf429d__0[2U] = 0x7263652fU;
-    __Vtemp_he4cf429d__0[3U] = 0x65736f75U;
-    __Vtemp_he4cf429d__0[4U] = 0x72U;
-    VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_he4cf429d__0)
+    __Vtemp_h490fd1c6__0[0U] = 0x2e747874U;
+    __Vtemp_h490fd1c6__0[1U] = 0x2f686868U;
+    __Vtemp_h490fd1c6__0[2U] = 0x75726365U;
+    __Vtemp_h490fd1c6__0[3U] = 0x7265736fU;
+    VL_READMEM_N(true, 24, 524288, 0, VL_CVT_PACK_STR_NW(4, __Vtemp_h490fd1c6__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
     ++(vlSymsp->__Vcoverage[961]);
@@ -7303,8 +7302,8 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                | (0x100U & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr)));
     }
     vlSelf->top__DOT__vga_data = vlSelf->top__DOT__my_vmem__DOT__vga_mem
-        [(((IData)(vlSelf->top__DOT__h_addr) << 9U) 
-          | (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))];
+        [(((IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr) 
+           << 0xaU) | (IData)(vlSelf->top__DOT__h_addr))];
     if (((IData)(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit) 
          ^ (IData)(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit))) {
         ++(vlSymsp->__Vcoverage[817]);
