@@ -241,6 +241,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__VGA_VSYNC = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_BLANK_N = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__VGA_R = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT____Vtogcov__VGA_G = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__VGA_B = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg0 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg1 = VL_RAND_RESET_I(8);
@@ -301,7 +302,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_din = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__state_machine__DOT____Vtogcov__state_dout = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__default_out = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut = VL_RAND_RESET_Q(45);
     for (int __Vi0 = 0; __Vi0 < 9; ++__Vi0) {
         vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[__Vi0] = VL_RAND_RESET_I(5);
     }
@@ -361,15 +361,11 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     for (int __Vi0 = 0; __Vi0 < 2100; ++__Vi0) {
         vlSelf->top__DOT__my_vmem__DOT__vga_mem[__Vi0] = VL_RAND_RESET_I(8);
     }
-    for (int __Vi0 = 0; __Vi0 < 49153; ++__Vi0) {
-        vlSelf->top__DOT__my_vmem__DOT__font_rom[__Vi0] = VL_RAND_RESET_I(1);
-    }
     vlSelf->top__DOT__my_vmem__DOT__word = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(9);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__word = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
-    vlSelf->__VdfgTmp_h64914f53__0 = 0;
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__VstlIterCount = 0;
     vlSelf->__VicoIterCount = 0;
