@@ -441,9 +441,9 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+70,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[8]),4);
     bufp->fullSData(oldp+71,(vlSelf->top__DOT__h_addr),10);
     bufp->fullSData(oldp+72,(vlSelf->top__DOT__v_addr),10);
-    bufp->fullCData(oldp+73,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(0x46U)))),6);
-    bufp->fullCData(oldp+74,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__v_addr), (IData)(0x1eU)))),6);
-    bufp->fullIData(oldp+75,(((IData)(vlSelf->__VdfgTmp_he5d58b8c__0)
+    bufp->fullCData(oldp+73,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),6);
+    bufp->fullCData(oldp+74,((0x3fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__v_addr), (IData)(0U)))),6);
+    bufp->fullIData(oldp+75,(((IData)(vlSelf->__VdfgTmp_h8d01b47f__0)
                                ? 0xffffffU : 0U)),24);
     bufp->fullIData(oldp+76,(vlSelf->top__DOT__led1__DOT__count),32);
     bufp->fullCData(oldp+77,(vlSelf->top__DOT__led1__DOT__led),8);
