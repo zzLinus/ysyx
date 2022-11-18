@@ -110,8 +110,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
-        CData/*6:0*/ top__DOT____Vtogcov__font_h;
-        CData/*6:0*/ top__DOT____Vtogcov__font_v;
+        CData/*5:0*/ top__DOT____Vtogcov__font_h;
+        CData/*5:0*/ top__DOT____Vtogcov__font_v;
         CData/*7:0*/ top__DOT____Vtogcov__seg_x;
         CData/*7:0*/ top__DOT____Vtogcov__seg_y;
         CData/*7:0*/ top__DOT__led1__DOT__led;
@@ -167,7 +167,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_keyboard__DOT__buffer;
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
-        SData/*11:0*/ __VdfgTmp_hce5f6417__0;
+        SData/*11:0*/ __VdfgTmp_h136fee98__0;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
