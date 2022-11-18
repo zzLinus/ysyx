@@ -62,7 +62,6 @@ class Vtop___024root final : public VerilatedModule {
         VL_OUT8(state_machine_out,0,0);
         VL_OUT8(inc_counter_out,7,0);
         VL_OUT8(dec_counter_out,2,0);
-        CData/*5:0*/ top__DOT__font_v;
         CData/*0:0*/ top__DOT____Vtogcov__clk;
         CData/*0:0*/ top__DOT____Vtogcov__rst;
         CData/*7:0*/ top__DOT____Vtogcov__sw;
@@ -80,9 +79,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__state_machine_clr;
         CData/*0:0*/ top__DOT____Vtogcov__ec_en;
         CData/*1:0*/ top__DOT____Vtogcov__s;
+        CData/*4:0*/ top__DOT____Vtogcov__sft_rgtr_shamt;
     };
     struct {
-        CData/*4:0*/ top__DOT____Vtogcov__sft_rgtr_shamt;
         CData/*0:0*/ top__DOT____Vtogcov__sft_rgtr_l_or_r;
         CData/*0:0*/ top__DOT____Vtogcov__sft_rgtr_a_or_l;
         CData/*0:0*/ top__DOT____Vtogcov__VGA_CLK;
@@ -109,8 +108,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
-        CData/*5:0*/ top__DOT____Vtogcov__font_h;
-        CData/*5:0*/ top__DOT____Vtogcov__font_v;
+        CData/*6:0*/ top__DOT____Vtogcov__font_h;
+        CData/*6:0*/ top__DOT____Vtogcov__font_v;
         CData/*7:0*/ top__DOT____Vtogcov__seg_x;
         CData/*7:0*/ top__DOT____Vtogcov__seg_y;
         CData/*7:0*/ top__DOT__led1__DOT__led;
@@ -146,9 +145,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*7:0*/ top__DOT__my_vmem__DOT__word;
         CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
+        CData/*0:0*/ __VdfgTmp_ha5970130__0;
     };
     struct {
-        CData/*0:0*/ __VdfgTmp_h685737e6__0;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
         CData/*0:0*/ __Vtrigrprev__TOP__timer_out;

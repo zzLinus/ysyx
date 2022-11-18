@@ -107,7 +107,7 @@ assign VGA_CLK = clk;
 wire [9:0] h_addr;
 wire [9:0] v_addr;
 wire [6:0] font_h;
-wire [6:0] font_v;
+wire [4:0] font_v;
 wire [23:0] vga_data;
 
 vga_ctrl my_vga_ctrl(
@@ -192,7 +192,7 @@ module vmem (
     input [9:0] h_addr,
     input [8:0] v_addr,
 	input [6:0] font_h,
-	input [6:0] font_v,
+	input [4:0] font_v,
     output [23:0] vga_data
 );
 
