@@ -226,7 +226,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+73,"font_h", false,-1, 5,0);
     tracep->declBus(c+74,"font_v", false,-1, 5,0);
     tracep->declBus(c+75,"vga_data", false,-1, 23,0);
-    tracep->declBus(c+90,"word", false,-1, 7,0);
+    tracep->declBus(c+90,"word", false,-1, 9,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("sft_regstr ");
     tracep->declBus(c+112,"data", false,-1, 31,0);
@@ -457,7 +457,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
     bufp->fullBit(oldp+88,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
     bufp->fullSData(oldp+89,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-    bufp->fullCData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),8);
+    bufp->fullSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),10);
     bufp->fullIData(oldp+91,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     bufp->fullCData(oldp+92,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
     bufp->fullBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
