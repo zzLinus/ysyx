@@ -199,7 +199,7 @@ module vmem (
 // reg [23:0] vga_mem [524287:0];
 reg [7:0] vga_mem [2099:0];
 reg font_rom [49152:0];
-wire [23:0] font_addr;
+wire [15:0] font_addr;
 wire [7:0] word;
 
 initial begin
