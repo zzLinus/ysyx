@@ -186,6 +186,7 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ __VstlIterCount;
         IData/*31:0*/ __VicoIterCount;
         IData/*31:0*/ __VactIterCount;
+        QData/*44:0*/ top__DOT__state_machine__DOT__outMux__DOT____Vtogcov__lut;
         VlUnpacked<CData/*4:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__key_list;
         VlUnpacked<CData/*0:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__data_list;
