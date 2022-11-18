@@ -4846,8 +4846,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__0(Vtop___024root* vlSelf) 
                | (0x100U & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr)));
     }
     vlSelf->top__DOT__vga_data = vlSelf->top__DOT__my_vmem__DOT__vga_mem
-        [(((IData)(vlSelf->top__DOT__h_addr) << 9U) 
-          | (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))];
+        [(((IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr) 
+           << 0xaU) | (IData)(vlSelf->top__DOT__h_addr))];
     if ((1U & (vlSelf->top__DOT__vga_data ^ vlSelf->top__DOT____Vtogcov__vga_data))) {
         ++(vlSymsp->__Vcoverage[293]);
         vlSelf->top__DOT____Vtogcov__vga_data = ((0xfffffeU 
