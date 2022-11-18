@@ -201,6 +201,8 @@ reg [7:0] vga_mem [2099:0];
 reg font_rom [49150:0];
 wire [15:0] font_addr;
 wire [7:0] word;
+wire [7:0] font_cord_v;
+wire [7:0] font_cord_h;
 
 initial begin
     $readmemh("resource/vga_font2.txt", font_rom);
@@ -210,7 +212,9 @@ end
 
 // assign vga_data = vga_mem[{h_addr, v_addr}];
 assign word = vga_mem[{font_v,font_h}]; // get the 8 bit ascii value
-assign font_addr = {word,{v_addr%9'd30}[7:0]+{h_addr%10'd70}[7:0]};
+assign font_cord_v = {v_addr%9'd30}[7:0];
+assign font_cord_h = {h_addr%10'd70}[7:0];
+assign font_addr = {word,font_cord_v+font_cord_h};
 assign vga_data = font_rom[font_addr] ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
 
 endmodule
