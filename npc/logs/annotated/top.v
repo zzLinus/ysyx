@@ -205,7 +205,7 @@
 	initial begin
 	    // $readmemh("resource/vga_font.txt", font_rom);
 	    // $readmemh("resource/test.txt", vga_mem);
-	    $readmemh("resource/hhh.txt", vga_mem);
+	    $readmemh("resource/hhh2.txt", vga_mem);
 	end
 	
 	assign vga_data = vga_mem[{h_addr, v_addr}];
