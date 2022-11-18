@@ -362,15 +362,15 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     for (int __Vi0 = 0; __Vi0 < 2100; ++__Vi0) {
         vlSelf->top__DOT__my_vmem__DOT__vga_mem[__Vi0] = VL_RAND_RESET_I(8);
     }
-    for (int __Vi0 = 0; __Vi0 < 4096; ++__Vi0) {
-        vlSelf->top__DOT__my_vmem__DOT__font_rom[__Vi0] = VL_RAND_RESET_I(12);
+    for (int __Vi0 = 0; __Vi0 < 49153; ++__Vi0) {
+        vlSelf->top__DOT__my_vmem__DOT__font_rom[__Vi0] = VL_RAND_RESET_I(1);
     }
     vlSelf->top__DOT__my_vmem__DOT__word = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(9);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__word = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
-    vlSelf->__VdfgTmp_h8010b72b__0 = 0;
+    vlSelf->__VdfgTmp_ha61e2e48__0 = 0;
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__VstlIterCount = 0;
     vlSelf->__VicoIterCount = 0;
