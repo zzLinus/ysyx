@@ -15,7 +15,7 @@
 	    output [7:0] vga_b
 	);
 	
-	// const defination  (clock patch)
+	// uonst defination  (clock patch)
 	parameter h_frontporch = 96;
 	parameter h_active = 144;
 	parameter h_backporch = 784;
