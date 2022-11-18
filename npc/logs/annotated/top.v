@@ -192,7 +192,7 @@
 	reg [23:0] vga_mem [524287:0];
 	
 	initial begin
-	    $readmemh("resource/hhh.hex", vga_mem);
+	    $readmemh("resource/out2.txt", vga_mem);
 	    // $readmemh("resource/picture.hex", vga_mem);
 	end
 	
