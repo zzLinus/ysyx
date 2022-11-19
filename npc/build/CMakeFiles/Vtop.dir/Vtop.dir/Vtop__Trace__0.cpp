@@ -116,10 +116,10 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgBit(oldp+86,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
         bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
         bufp->chgSData(oldp+88,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-        bufp->chgIData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT__font_addr),20);
+        bufp->chgIData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_h47fdb84c__0),20);
         bufp->chgCData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),8);
-        bufp->chgCData(oldp+91,(vlSelf->top__DOT__my_vmem__DOT__font_cord_v),6);
-        bufp->chgCData(oldp+92,((0x3fU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),6);
+        bufp->chgCData(oldp+91,(vlSelf->top__DOT__my_vmem__DOT__font_cord_v),4);
+        bufp->chgCData(oldp+92,((0xfU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),4);
         bufp->chgBit(oldp+93,(vlSelf->top__DOT__my_vmem__DOT__font_data));
         bufp->chgIData(oldp+94,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     }
