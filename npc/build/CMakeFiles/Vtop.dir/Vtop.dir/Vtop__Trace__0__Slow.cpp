@@ -226,10 +226,10 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+73,"font_h", false,-1, 6,0);
     tracep->declBus(c+74,"font_v", false,-1, 4,0);
     tracep->declBus(c+75,"vga_data", false,-1, 23,0);
-    tracep->declBus(c+90,"font_addr", false,-1, 15,0);
+    tracep->declBus(c+90,"font_addr", false,-1, 19,0);
     tracep->declBus(c+91,"word", false,-1, 7,0);
-    tracep->declBus(c+92,"font_cord_v", false,-1, 7,0);
-    tracep->declBus(c+93,"font_cord_h", false,-1, 7,0);
+    tracep->declBus(c+92,"font_cord_v", false,-1, 11,0);
+    tracep->declBus(c+93,"font_cord_h", false,-1, 11,0);
     tracep->declBit(c+94,"font_data", false,-1);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("sft_regstr ");
@@ -462,10 +462,10 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
     bufp->fullBit(oldp+88,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
     bufp->fullSData(oldp+89,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-    bufp->fullSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__font_addr),16);
+    bufp->fullIData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__font_addr),20);
     bufp->fullCData(oldp+91,(vlSelf->top__DOT__my_vmem__DOT__word),8);
-    bufp->fullCData(oldp+92,(vlSelf->top__DOT__my_vmem__DOT__font_cord_v),8);
-    bufp->fullCData(oldp+93,((0xffU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),8);
+    bufp->fullSData(oldp+92,((0xfU & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))),12);
+    bufp->fullSData(oldp+93,((0x3ffU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),12);
     bufp->fullBit(oldp+94,(vlSelf->top__DOT__my_vmem__DOT__font_data));
     bufp->fullIData(oldp+95,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     bufp->fullCData(oldp+96,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
