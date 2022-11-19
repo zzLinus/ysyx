@@ -204,6 +204,7 @@
 	wire [7:0] word;
 	wire [7:0] font_cord_v;
 	wire [7:0] font_cord_h;
+	wire font_data;
 	
 	initial begin
 	    $readmemh("resource/vga_font2.txt", font_rom);
@@ -216,7 +217,8 @@
 	assign font_cord_v = {v_addr%9'd16}[7:0];
 	assign font_cord_h = {h_addr%10'd9}[7:0];
 	assign font_addr = {word,font_cord_v+font_cord_h};
-	assign vga_data = font_rom[font_addr] ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
+	assign font_data = font_rom[font_addr];
+	assign vga_data = font_data ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
 	
 	endmodule
 	
