@@ -220,8 +220,8 @@ wire [11:0] font_data;
 always @(ascii_code) begin
 	if (ascii_code != 8'h00) begin
 		if(ascii_code == 8'ha9) begin
-			word_count = (word_count / 12'd127) + 12'b1;
-			word_count = word_count * 12'd127;
+			word_count = (word_count / 12'd70) + 12'b1;
+			word_count = word_count * 12'd70;
 			$display("word_count %d", word_count);
 		end
 		else

@@ -108,8 +108,6 @@ class Vtop___024root final : public VerilatedModule {
         CData/*7:0*/ top__DOT____Vtogcov__inc_counter_out;
         CData/*2:0*/ top__DOT____Vtogcov__dec_counter_out;
         CData/*0:0*/ top__DOT____Vtogcov__timer_out;
-        CData/*6:0*/ top__DOT____Vtogcov__font_h;
-        CData/*6:0*/ top__DOT____Vtogcov__font_v;
         CData/*7:0*/ top__DOT____Vtogcov__seg_x;
         CData/*7:0*/ top__DOT____Vtogcov__seg_y;
         CData/*7:0*/ top__DOT____Vtogcov__key_code;
@@ -146,14 +144,14 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
-    };
-    struct {
         CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
         CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
+    };
+    struct {
         CData/*7:0*/ top__DOT__lookup__DOT__ascii;
         CData/*0:0*/ top__DOT__lookup__DOT__pressing;
         CData/*0:0*/ top__DOT__lookup__DOT____Vtogcov__pressing;
-        CData/*0:0*/ __VdfgTmp_ha996f758__0;
+        CData/*0:0*/ __VdfgTmp_hcb78dc13__0;
         CData/*3:0*/ __Vdly__top__DOT__my_keyboard__DOT__count;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
@@ -169,6 +167,8 @@ class Vtop___024root final : public VerilatedModule {
         SData/*15:0*/ top__DOT____Vtogcov__ledr;
         SData/*9:0*/ top__DOT____Vtogcov__h_addr;
         SData/*9:0*/ top__DOT____Vtogcov__v_addr;
+        SData/*11:0*/ top__DOT____Vtogcov__font_h;
+        SData/*11:0*/ top__DOT____Vtogcov__font_v;
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT__x_cnt;
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT__y_cnt;
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__x_cnt;
@@ -185,6 +185,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_data;
+        SData/*11:0*/ top__DOT__my_vmem__DOT____VdfgTmp_hcec74e9b__0;
         SData/*9:0*/ __Vdly__top__DOT__my_keyboard__DOT__buffer;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
@@ -211,9 +212,9 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<CData/*0:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__data_list;
         VlUnpacked<CData/*4:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__pair_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__key_list;
-        VlUnpacked<CData/*0:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__data_list;
     };
     struct {
+        VlUnpacked<CData/*0:0*/, 9> top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__data_list;
         VlUnpacked<CData/*7:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list;

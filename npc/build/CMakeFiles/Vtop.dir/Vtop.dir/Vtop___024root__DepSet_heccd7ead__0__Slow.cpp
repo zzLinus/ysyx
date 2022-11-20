@@ -282,8 +282,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__timer_out = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT____Vtogcov__v_addr = VL_RAND_RESET_I(10);
-    vlSelf->top__DOT____Vtogcov__font_h = VL_RAND_RESET_I(7);
-    vlSelf->top__DOT____Vtogcov__font_v = VL_RAND_RESET_I(7);
+    vlSelf->top__DOT____Vtogcov__font_h = VL_RAND_RESET_I(12);
+    vlSelf->top__DOT____Vtogcov__font_v = VL_RAND_RESET_I(12);
     vlSelf->top__DOT____Vtogcov__vga_data = VL_RAND_RESET_I(24);
     vlSelf->top__DOT____Vtogcov__seg_x = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg_y = VL_RAND_RESET_I(8);
@@ -397,12 +397,13 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_cord_h = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_data = VL_RAND_RESET_I(12);
     vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0 = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_hcec74e9b__0 = 0;
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__lookup__DOT__ascii = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__lookup__DOT__pressing = VL_RAND_RESET_I(1);
     vlSelf->top__DOT__lookup__DOT____Vtogcov__pressing = VL_RAND_RESET_I(1);
-    vlSelf->__VdfgTmp_ha996f758__0 = 0;
+    vlSelf->__VdfgTmp_hcb78dc13__0 = 0;
     vlSelf->__Vdly__top__DOT__my_keyboard__DOT__count = VL_RAND_RESET_I(4);
     vlSelf->__Vdly__top__DOT__my_keyboard__DOT__buffer = VL_RAND_RESET_I(10);
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
