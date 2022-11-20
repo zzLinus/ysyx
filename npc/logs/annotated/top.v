@@ -207,7 +207,7 @@
 	wire font_data;
 	
 	initial begin
-	    $readmemh("resource/vga_font2.txt", font_rom);
+	    $readmemh("resource/vga_font.txt", font_rom);
 	    $readmemh("resource/test.txt", vga_mem);
 	    // $readmemh("resource/hhh2.txt", vga_mem);
 	end
