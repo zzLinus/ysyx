@@ -47,9 +47,11 @@ always @(key_code) begin
 end
 
 
-if(pressing)
-	ascii_code = ascii;
-else
-	ascii_code = 8'h00;
+always@(pressing) begin
+	if(pressing)
+		ascii_code = ascii;
+	else
+		ascii_code = 8'h00;
+end
 
 endmodule
