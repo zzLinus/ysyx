@@ -210,7 +210,7 @@ module vmem (
 // reg [23:0] vga_mem [524287:0];
 reg [7:0] vga_mem [2099:0];
 reg [11:0] font_rom [4095:0];
-reg [7:0] word_count;
+reg [11:0] word_count;
 wire [11:0] font_addr;
 wire [11:0] word;
 wire [11:0] font_cord_v;
