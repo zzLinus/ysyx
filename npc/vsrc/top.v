@@ -130,7 +130,8 @@ ps2_keyboard my_keyboard(
     .clk(clk),
     .resetn(~rst),
     .ps2_clk(ps2_clk),
-    .ps2_data(ps2_data)
+    .ps2_data(ps2_data),
+	.key_code(key_code)
 );
 
 alu_4bit alu(
@@ -178,12 +179,21 @@ vmem my_vmem(
     .v_addr(v_addr[8:0]),
 	.font_h(font_h),
 	.font_v(font_v),
+	.ascii_code(ascii_code),
     .vga_data(vga_data)
 );
 
 timer timer_1s(
 	.clk(clk),
 	.timer_out(timer_out)
+);
+
+wire [7:0] key_code;
+wire [7:0] ascii_code;
+
+lookup_table lookup(
+	.key_code(key_code),
+	.ascii_code(ascii_code)
 );
 
 endmodule
@@ -193,21 +203,30 @@ module vmem (
     input [8:0] v_addr,
 	input [6:0] font_h,
 	input [4:0] font_v,
+	input [7:0] ascii_code,
     output [23:0] vga_data
 );
 
 // reg [23:0] vga_mem [524287:0];
 reg [7:0] vga_mem [2099:0];
 reg [11:0] font_rom [4095:0];
+reg [11:0] word_count;
 wire [11:0] font_addr;
 wire [11:0] word;
 wire [11:0] font_cord_v;
 wire [3:0] font_cord_h;
 wire [11:0] font_data;
 
+always @(ascii_code) begin
+	if (ascii_code != 8'h00) begin
+		word_count = word_count + 1;
+		vga_mem[word_count] = ascii_code;
+	end
+end
+
 initial begin
-    $readmemh("resource/vga_font2.txt", font_rom);
-    $readmemh("resource/test.txt", vga_mem);
+    $readmemh("resource/vga_font.txt", font_rom);
+    // $readmemh("resource/test.txt", vga_mem);
     // $readmemh("resource/hhh2.txt", vga_mem);
 end
 
@@ -215,8 +234,7 @@ end
 assign word = {{4'b0000},vga_mem[{font_v,font_h}]}; // get the 8 bit ascii value
 assign font_cord_v = {{3'b000},{v_addr%9'd16}};
 assign font_cord_h = {h_addr%10'd9}[3:0];
-// assign font_addr = {word*12'd16+{8'b00000000,font_cord_v},font_cord_h}; // bit = word * row_num * bit_per_row + h_bit + v_bit * bit_per_row
-assign font_addr = word * 12'd16 + font_cord_v; // bit = word * row_num * bit_per_row + h_bit + v_bit * bit_per_row
+assign font_addr = word * 12'd16 + font_cord_v; 
 assign font_data = font_rom[font_addr];
 assign vga_data = font_data[font_cord_h] ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
 

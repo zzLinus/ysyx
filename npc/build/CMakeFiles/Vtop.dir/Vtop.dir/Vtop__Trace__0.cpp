@@ -100,33 +100,35 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgSData(oldp+71,(vlSelf->top__DOT__v_addr),10);
         bufp->chgCData(oldp+72,((0x7fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),7);
         bufp->chgCData(oldp+73,(vlSelf->top__DOT__font_v),5);
-        bufp->chgIData(oldp+74,(((IData)(vlSelf->__VdfgTmp_h1c0fb021__0)
-                                  ? 0xffffffU : 0U)),24);
-        bufp->chgIData(oldp+75,(vlSelf->top__DOT__led1__DOT__count),32);
-        bufp->chgCData(oldp+76,(vlSelf->top__DOT__led1__DOT__led),8);
-        bufp->chgIData(oldp+77,(vlSelf->top__DOT__mu_seg__DOT__count),32);
-        bufp->chgCData(oldp+78,(vlSelf->top__DOT__mu_seg__DOT__offset),3);
-        bufp->chgIData(oldp+79,(vlSelf->top__DOT__mu_seg__DOT__x),32);
-        bufp->chgSData(oldp+80,(vlSelf->top__DOT__my_keyboard__DOT__buffer),10);
-        bufp->chgCData(oldp+81,(vlSelf->top__DOT__my_keyboard__DOT__count),4);
-        bufp->chgCData(oldp+82,(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync),3);
-        bufp->chgBit(oldp+83,(vlSelf->top__DOT__my_keyboard__DOT__sampling));
-        bufp->chgSData(oldp+84,(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt),10);
-        bufp->chgSData(oldp+85,(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt),10);
-        bufp->chgBit(oldp+86,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
-        bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
-        bufp->chgSData(oldp+88,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-        bufp->chgSData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT__font_addr),12);
-        bufp->chgSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),12);
-        bufp->chgSData(oldp+91,((0xfU & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))),12);
-        bufp->chgCData(oldp+92,((0xfU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),4);
-        bufp->chgSData(oldp+93,(vlSelf->top__DOT__my_vmem__DOT__font_data),12);
-        bufp->chgIData(oldp+94,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
+        bufp->chgIData(oldp+74,(vlSelf->top__DOT__led1__DOT__count),32);
+        bufp->chgCData(oldp+75,(vlSelf->top__DOT__led1__DOT__led),8);
+        bufp->chgIData(oldp+76,(vlSelf->top__DOT__mu_seg__DOT__count),32);
+        bufp->chgCData(oldp+77,(vlSelf->top__DOT__mu_seg__DOT__offset),3);
+        bufp->chgIData(oldp+78,(vlSelf->top__DOT__mu_seg__DOT__x),32);
+        bufp->chgSData(oldp+79,(vlSelf->top__DOT__my_keyboard__DOT__buffer),10);
+        bufp->chgCData(oldp+80,(vlSelf->top__DOT__my_keyboard__DOT__count),4);
+        bufp->chgCData(oldp+81,(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync),3);
+        bufp->chgBit(oldp+82,(vlSelf->top__DOT__my_keyboard__DOT__sampling));
+        bufp->chgSData(oldp+83,(vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt),10);
+        bufp->chgSData(oldp+84,(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt),10);
+        bufp->chgBit(oldp+85,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
+        bufp->chgBit(oldp+86,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
+        bufp->chgSData(oldp+87,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
+        bufp->chgSData(oldp+88,((0xfU & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))),12);
+        bufp->chgCData(oldp+89,((0xfU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),4);
+        bufp->chgIData(oldp+90,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[3U])) {
-        bufp->chgCData(oldp+95,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
-        bufp->chgBit(oldp+96,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
-        bufp->chgBit(oldp+97,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
+        bufp->chgCData(oldp+91,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
+        bufp->chgBit(oldp+92,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
+        bufp->chgBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
+    }
+    if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[4U])) {
+        bufp->chgIData(oldp+94,(((IData)(vlSelf->__VdfgTmp_h1c0fb021__0)
+                                  ? 0xffffffU : 0U)),24);
+        bufp->chgSData(oldp+95,(vlSelf->top__DOT__my_vmem__DOT__font_addr),12);
+        bufp->chgSData(oldp+96,(vlSelf->top__DOT__my_vmem__DOT__word),12);
+        bufp->chgSData(oldp+97,(vlSelf->top__DOT__my_vmem__DOT__font_data),12);
     }
     bufp->chgBit(oldp+98,(vlSelf->clk));
     bufp->chgBit(oldp+99,(vlSelf->rst));
@@ -179,12 +181,16 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgBit(oldp+146,(vlSelf->timer_out));
     bufp->chgCData(oldp+147,((0xffU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),8);
     bufp->chgCData(oldp+148,((0xffU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),8);
-    bufp->chgCData(oldp+149,((0xfU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
-    bufp->chgCData(oldp+150,((0xfU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
-    bufp->chgBit(oldp+151,((1U & (~ (IData)(vlSelf->rst)))));
-    bufp->chgCData(oldp+152,(vlSelf->top__DOT__state_machine__DOT__state_din),4);
-    bufp->chgCData(oldp+153,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__lut_out),4);
-    bufp->chgBit(oldp+154,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit));
+    bufp->chgCData(oldp+149,(vlSelf->top__DOT__my_keyboard__DOT__keycode),8);
+    bufp->chgCData(oldp+150,(vlSelf->top__DOT__lookup__DOT__ascii),8);
+    bufp->chgBit(oldp+151,(vlSelf->top__DOT__lookup__DOT__pressing));
+    bufp->chgCData(oldp+152,((0xfU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
+    bufp->chgCData(oldp+153,((0xfU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
+    bufp->chgBit(oldp+154,((1U & (~ (IData)(vlSelf->rst)))));
+    bufp->chgSData(oldp+155,(vlSelf->top__DOT__my_vmem__DOT__word_count),12);
+    bufp->chgCData(oldp+156,(vlSelf->top__DOT__state_machine__DOT__state_din),4);
+    bufp->chgCData(oldp+157,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__lut_out),4);
+    bufp->chgBit(oldp+158,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit));
 }
 
 void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
@@ -198,4 +204,5 @@ void Vtop___024root__trace_cleanup(void* voidSelf, VerilatedVcd* /*unused*/) {
     vlSymsp->TOP.__Vm_traceActivity[1U] = 0U;
     vlSymsp->TOP.__Vm_traceActivity[2U] = 0U;
     vlSymsp->TOP.__Vm_traceActivity[3U] = 0U;
+    vlSymsp->TOP.__Vm_traceActivity[4U] = 0U;
 }
