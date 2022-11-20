@@ -6018,9 +6018,9 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__2(Vtop___024root* vlSelf) 
                 vlSelf->top__DOT__my_vmem__DOT__vga_mem[vlSelf->top__DOT__my_vmem__DOT__word_count] 
                     = vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
             }
+            vlSelf->top__DOT__my_vmem__DOT__word_count 
+                = (0xfffU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
         }
-        vlSelf->top__DOT__my_vmem__DOT__word_count 
-            = (0xfffU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_vmem__DOT__word_count) 
                ^ (IData)(vlSelf->top__DOT__my_vmem__DOT____Vtogcov__word_count)))) {
