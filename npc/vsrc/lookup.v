@@ -4,6 +4,7 @@ module lookup_table(
 );
 
 reg [7:0] ascii;
+reg pressing = 1'b0;
 
 always @(*) begin
 	case(key_code)
