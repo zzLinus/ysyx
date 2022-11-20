@@ -106,8 +106,8 @@ assign VGA_CLK = clk;
 
 wire [9:0] h_addr;
 wire [9:0] v_addr;
-wire [6:0] font_h;
-wire [4:0] font_v;
+wire [11:0] font_h;
+wire [11:0] font_v;
 wire [23:0] vga_data;
 
 vga_ctrl my_vga_ctrl(
@@ -201,8 +201,8 @@ endmodule
 module vmem (
     input [9:0] h_addr,
     input [8:0] v_addr,
-	input [6:0] font_h,
-	input [4:0] font_v,
+	input [11:0] font_h,
+	input [11:0] font_v,
 	input [7:0] ascii_code,
     output [23:0] vga_data
 );
@@ -219,8 +219,15 @@ wire [11:0] font_data;
 
 always @(ascii_code) begin
 	if (ascii_code != 8'h00) begin
-		word_count = word_count + 1;
-		vga_mem[word_count] = ascii_code;
+		if(ascii_code == 8'ha9) begin
+			word_count = (word_count / 12'd71) + 12'b1;
+			word_count = word_count * 12'd71;
+			$display("word_count %d", word_count);
+		end
+		else begin 
+			vga_mem[word_count] = ascii_code;
+			word_count = word_count + 1;
+		end
 	end
 end
 
@@ -231,7 +238,7 @@ initial begin
 end
 
 // assign vga_data = vga_mem[{h_addr, v_addr}];
-assign word = {{4'b0000},vga_mem[{font_v,font_h}]}; // get the 8 bit ascii value
+assign word = {{4'b0000},vga_mem[font_v*12'd71 + font_h]}; // get the 8 bit ascii value
 assign font_cord_v = {{3'b000},{v_addr%9'd16}};
 assign font_cord_h = {h_addr%10'd9}[3:0];
 assign font_addr = word * 12'd16 + font_cord_v; 
