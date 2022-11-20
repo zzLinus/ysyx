@@ -99,7 +99,8 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgSData(oldp+70,(vlSelf->top__DOT__h_addr),10);
         bufp->chgSData(oldp+71,(vlSelf->top__DOT__v_addr),10);
         bufp->chgCData(oldp+72,((0x7fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),7);
-        bufp->chgCData(oldp+73,(vlSelf->top__DOT__font_v),5);
+        bufp->chgCData(oldp+73,((0x7fU & ((IData)(vlSelf->top__DOT__v_addr) 
+                                          >> 4U))),7);
         bufp->chgIData(oldp+74,(vlSelf->top__DOT__led1__DOT__count),32);
         bufp->chgCData(oldp+75,(vlSelf->top__DOT__led1__DOT__led),8);
         bufp->chgIData(oldp+76,(vlSelf->top__DOT__mu_seg__DOT__count),32);
@@ -124,7 +125,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[4U])) {
-        bufp->chgIData(oldp+94,(((IData)(vlSelf->__VdfgTmp_h1c0fb021__0)
+        bufp->chgIData(oldp+94,(((IData)(vlSelf->__VdfgTmp_ha996f758__0)
                                   ? 0xffffffU : 0U)),24);
         bufp->chgSData(oldp+95,(vlSelf->top__DOT__my_vmem__DOT__font_addr),12);
         bufp->chgSData(oldp+96,(vlSelf->top__DOT__my_vmem__DOT__word),12);
