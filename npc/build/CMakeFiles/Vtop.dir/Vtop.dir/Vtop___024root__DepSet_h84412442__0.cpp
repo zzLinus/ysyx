@@ -5889,14 +5889,14 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__2(Vtop___024root* vlSelf) 
     ++(vlSymsp->__Vcoverage[1017]);
     if ((0U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
         ++(vlSymsp->__Vcoverage[1015]);
-        vlSelf->top__DOT__my_vmem__DOT__word_count 
-            = (0xfffU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
         vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0 
             = vlSelf->top__DOT__lookup__DOT__ascii;
         if ((0x833U >= (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count))) {
             vlSelf->top__DOT__my_vmem__DOT__vga_mem[vlSelf->top__DOT__my_vmem__DOT__word_count] 
                 = vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
         }
+        vlSelf->top__DOT__my_vmem__DOT__word_count 
+            = (0xfffU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
     }
     if ((0U == (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
         ++(vlSymsp->__Vcoverage[1016]);
