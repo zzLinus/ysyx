@@ -9,7 +9,7 @@ module ps2_keyboard(
 input clk,resetn,ps2_clk,ps2_data;
 
 reg [9:0] buffer;        // ps2_data bits
-reg [9:0] keycode;
+reg [7:0] keycode;
 reg [3:0] count;  // count ps2_data bits
 reg [2:0] ps2_clk_sync; // buffered 3 clock bits
 
