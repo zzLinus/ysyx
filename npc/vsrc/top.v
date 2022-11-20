@@ -219,7 +219,7 @@ wire [11:0] font_data;
 
 always @(ascii_code) begin
 	if (ascii_code != 8'h00) begin
-		if(ascii_code = 8'h5a)
+		if(ascii_code == 8'h5a)
 			word_count += 30;
 		else
 			vga_mem[word_count] = ascii_code;
