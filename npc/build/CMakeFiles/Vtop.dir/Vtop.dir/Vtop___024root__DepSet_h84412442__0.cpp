@@ -5887,12 +5887,23 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__2(Vtop___024root* vlSelf) 
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__2\n"); );
     // Body
     ++(vlSymsp->__Vcoverage[1019]);
+    if ((0U == (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
+        ++(vlSymsp->__Vcoverage[1018]);
+    }
     if ((0U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
-        ++(vlSymsp->__Vcoverage[1017]);
+        if ((0x5aU != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
+            ++(vlSymsp->__Vcoverage[1016]);
+        }
         if ((0x5aU == (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
             ++(vlSymsp->__Vcoverage[1015]);
+        }
+        ++(vlSymsp->__Vcoverage[1017]);
+    }
+    if ((0U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
+        if (VL_UNLIKELY((0x5aU == (IData)(vlSelf->top__DOT__lookup__DOT__ascii)))) {
             vlSelf->top__DOT__my_vmem__DOT__word_count 
                 = (0xfffU & ((IData)(0x1eU) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
+            VL_WRITEF("word_count %4#\n",12,vlSelf->top__DOT__my_vmem__DOT__word_count);
         } else {
             vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0 
                 = vlSelf->top__DOT__lookup__DOT__ascii;
@@ -5901,14 +5912,8 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__2(Vtop___024root* vlSelf) 
                     = vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
             }
         }
-        if ((0x5aU != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
-            ++(vlSymsp->__Vcoverage[1016]);
-        }
         vlSelf->top__DOT__my_vmem__DOT__word_count 
             = (0xfffU & ((IData)(1U) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
-    }
-    if ((0U == (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
-        ++(vlSymsp->__Vcoverage[1018]);
     }
     if ((1U & ((IData)(vlSelf->top__DOT__my_vmem__DOT__word_count) 
                ^ (IData)(vlSelf->top__DOT__my_vmem__DOT____Vtogcov__word_count)))) {
