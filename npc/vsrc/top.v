@@ -201,7 +201,7 @@ reg [7:0] vga_mem [2099:0];
 reg [11:0] font_rom [4095:0];
 wire [11:0] font_addr;
 wire [11:0] word;
-wire [12:0] font_cord_v;
+wire [11:0] font_cord_v;
 wire [3:0] font_cord_h;
 wire [11:0] font_data;
 
