@@ -193,7 +193,7 @@ wire [7:0] ascii_code;
 reg [7:0] word_cunt;
 
 lookup_table lookup(
-	.key_code(key_code)S
+	.key_code(key_code),
 	.ascii_code(ascii_code)
 );
 
