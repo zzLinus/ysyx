@@ -20,7 +20,6 @@ class Vtop___024root final : public VerilatedModule {
         VL_IN8(en,0,0);
         VL_IN8(ec_en,0,0);
         VL_OUT8(timer_out,0,0);
-        CData/*0:0*/ top__DOT__lookup__DOT__pressing;
         VL_IN8(rst,0,0);
         VL_IN8(sw,7,0);
         VL_IN8(ps2_clk,0,0);
@@ -80,9 +79,9 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT____Vtogcov__en;
         CData/*0:0*/ top__DOT____Vtogcov__rand_in;
         CData/*0:0*/ top__DOT____Vtogcov__state_machine_clr;
+        CData/*0:0*/ top__DOT____Vtogcov__ec_en;
     };
     struct {
-        CData/*0:0*/ top__DOT____Vtogcov__ec_en;
         CData/*1:0*/ top__DOT____Vtogcov__s;
         CData/*4:0*/ top__DOT____Vtogcov__sft_rgtr_shamt;
         CData/*0:0*/ top__DOT____Vtogcov__sft_rgtr_l_or_r;
@@ -146,13 +145,14 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit;
         CData/*3:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__lut_out;
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
+        CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
     };
     struct {
-        CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
         CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
         CData/*7:0*/ top__DOT__lookup__DOT__ascii;
+        CData/*0:0*/ top__DOT__lookup__DOT__pressing;
         CData/*0:0*/ top__DOT__lookup__DOT____Vtogcov__pressing;
         CData/*0:0*/ __VdfgTmp_h1c0fb021__0;
         CData/*0:0*/ __Vdly__timer_out;

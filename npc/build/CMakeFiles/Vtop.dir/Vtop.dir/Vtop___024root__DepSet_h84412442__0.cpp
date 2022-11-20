@@ -3177,6 +3177,10 @@ VL_INLINE_OPT void Vtop___024root___act_sequent__TOP__0(Vtop___024root* vlSelf) 
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___act_sequent__TOP__0\n"); );
     // Body
+    if ((0xf0U == (IData)(vlSelf->top__DOT__key_code))) {
+        vlSelf->top__DOT__lookup__DOT__pressing = (1U 
+                                                   & (~ (IData)(vlSelf->top__DOT__lookup__DOT__pressing)));
+    }
     vlSelf->top__DOT__lookup__DOT__ascii = ((0x80U 
                                              & (IData)(vlSelf->top__DOT__key_code))
                                              ? 0U : 
@@ -3422,15 +3426,7 @@ VL_INLINE_OPT void Vtop___024root___act_sequent__TOP__0(Vtop___024root* vlSelf) 
                                                        : 0U))
                                                      : 0U))
                                                    : 0U))));
-    if ((0xf0U == (IData)(vlSelf->top__DOT__key_code))) {
-        vlSelf->top__DOT__lookup__DOT__pressing = (1U 
-                                                   & (~ (IData)(vlSelf->top__DOT__lookup__DOT__pressing)));
-    }
-    if (vlSelf->top__DOT__lookup__DOT__pressing) {
-        ++(vlSymsp->__Vcoverage[1094]);
-    }
     if ((1U & (~ (IData)(vlSelf->top__DOT__lookup__DOT__pressing)))) {
-        ++(vlSymsp->__Vcoverage[1093]);
         vlSelf->top__DOT__lookup__DOT__ascii = 0U;
     }
     if (((IData)(vlSelf->top__DOT__lookup__DOT__pressing) 
@@ -5922,7 +5918,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__3\n"); );
     // Body
-    ++(vlSymsp->__Vcoverage[1092]);
+    ++(vlSymsp->__Vcoverage[1094]);
+    if (vlSelf->top__DOT__lookup__DOT__pressing) {
+        ++(vlSymsp->__Vcoverage[1093]);
+    }
+    if ((1U & (~ (IData)(vlSelf->top__DOT__lookup__DOT__pressing)))) {
+        ++(vlSymsp->__Vcoverage[1092]);
+    }
     if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
                   >> 7U)))) {
         if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
@@ -5935,11 +5937,11 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                         if ((4U & (IData)(vlSelf->top__DOT__key_code))) {
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
                                           >> 1U)))) {
-                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
-                                    ++(vlSymsp->__Vcoverage[1059]);
-                                }
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
                                     ++(vlSymsp->__Vcoverage[1091]);
+                                }
+                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
+                                    ++(vlSymsp->__Vcoverage[1059]);
                                 }
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
@@ -5989,6 +5991,77 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                 }
             }
             if ((0x20U & (IData)(vlSelf->top__DOT__key_code))) {
+                if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                              >> 4U)))) {
+                    if ((8U & (IData)(vlSelf->top__DOT__key_code))) {
+                        if ((4U & (IData)(vlSelf->top__DOT__key_code))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                          >> 1U)))) {
+                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
+                                    ++(vlSymsp->__Vcoverage[1063]);
+                                }
+                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
+                                    ++(vlSymsp->__Vcoverage[1062]);
+                                }
+                            }
+                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
+                                ++(vlSymsp->__Vcoverage[1091]);
+                            }
+                        }
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                      >> 2U)))) {
+                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
+                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
+                                    ++(vlSymsp->__Vcoverage[1085]);
+                                }
+                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
+                                    ++(vlSymsp->__Vcoverage[1074]);
+                                }
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                          >> 1U)))) {
+                                ++(vlSymsp->__Vcoverage[1091]);
+                            }
+                        }
+                    }
+                    if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                  >> 3U)))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                      >> 2U)))) {
+                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
+                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
+                                    ++(vlSymsp->__Vcoverage[1083]);
+                                }
+                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
+                                    ++(vlSymsp->__Vcoverage[1073]);
+                                }
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                          >> 1U)))) {
+                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
+                                    ++(vlSymsp->__Vcoverage[1084]);
+                                }
+                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
+                                    ++(vlSymsp->__Vcoverage[1091]);
+                                }
+                            }
+                        }
+                        if ((4U & (IData)(vlSelf->top__DOT__key_code))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
+                                          >> 1U)))) {
+                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
+                                    ++(vlSymsp->__Vcoverage[1061]);
+                                }
+                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
+                                    ++(vlSymsp->__Vcoverage[1091]);
+                                }
+                            }
+                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
+                                ++(vlSymsp->__Vcoverage[1091]);
+                            }
+                        }
+                    }
+                }
                 if ((0x10U & (IData)(vlSelf->top__DOT__key_code))) {
                     if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
                                   >> 3U)))) {
@@ -6055,77 +6128,6 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
                                 ++(vlSymsp->__Vcoverage[1091]);
-                            }
-                        }
-                    }
-                }
-                if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                              >> 4U)))) {
-                    if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                  >> 3U)))) {
-                        if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                      >> 2U)))) {
-                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
-                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
-                                    ++(vlSymsp->__Vcoverage[1083]);
-                                }
-                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
-                                    ++(vlSymsp->__Vcoverage[1073]);
-                                }
-                            }
-                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                          >> 1U)))) {
-                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
-                                    ++(vlSymsp->__Vcoverage[1084]);
-                                }
-                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
-                                    ++(vlSymsp->__Vcoverage[1091]);
-                                }
-                            }
-                        }
-                        if ((4U & (IData)(vlSelf->top__DOT__key_code))) {
-                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                          >> 1U)))) {
-                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
-                                    ++(vlSymsp->__Vcoverage[1061]);
-                                }
-                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
-                                    ++(vlSymsp->__Vcoverage[1091]);
-                                }
-                            }
-                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
-                                ++(vlSymsp->__Vcoverage[1091]);
-                            }
-                        }
-                    }
-                    if ((8U & (IData)(vlSelf->top__DOT__key_code))) {
-                        if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                      >> 2U)))) {
-                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
-                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
-                                    ++(vlSymsp->__Vcoverage[1085]);
-                                }
-                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
-                                    ++(vlSymsp->__Vcoverage[1074]);
-                                }
-                            }
-                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                          >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1091]);
-                            }
-                        }
-                        if ((4U & (IData)(vlSelf->top__DOT__key_code))) {
-                            if ((2U & (IData)(vlSelf->top__DOT__key_code))) {
-                                ++(vlSymsp->__Vcoverage[1091]);
-                            }
-                            if ((1U & (~ ((IData)(vlSelf->top__DOT__key_code) 
-                                          >> 1U)))) {
-                                if ((1U & (IData)(vlSelf->top__DOT__key_code))) {
-                                    ++(vlSymsp->__Vcoverage[1062]);
-                                }
-                                if ((1U & (~ (IData)(vlSelf->top__DOT__key_code)))) {
-                                    ++(vlSymsp->__Vcoverage[1063]);
-                                }
                             }
                         }
                     }
