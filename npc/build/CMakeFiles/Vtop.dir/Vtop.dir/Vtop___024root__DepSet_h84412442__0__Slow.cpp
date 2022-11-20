@@ -22,7 +22,6 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     // Init
     VlWide<6>/*191:0*/ __Vtemp_hb31f595a__0;
-    VlWide<5>/*159:0*/ __Vtemp_h127e8b07__0;
     // Body
     ++(vlSymsp->__Vcoverage[317]);
     ++(vlSymsp->__Vcoverage[384]);
@@ -122,14 +121,6 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     __Vtemp_hb31f595a__0[5U] = 0x72U;
     VL_READMEM_N(true, 12, 4096, 0, VL_CVT_PACK_STR_NW(6, __Vtemp_hb31f595a__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__font_rom)
-                 , 0, ~0ULL);
-    __Vtemp_h127e8b07__0[0U] = 0x2e747874U;
-    __Vtemp_h127e8b07__0[1U] = 0x74657374U;
-    __Vtemp_h127e8b07__0[2U] = 0x7263652fU;
-    __Vtemp_h127e8b07__0[3U] = 0x65736f75U;
-    __Vtemp_h127e8b07__0[4U] = 0x72U;
-    VL_READMEM_N(true, 8, 2100, 0, VL_CVT_PACK_STR_NW(5, __Vtemp_h127e8b07__0)
-                 ,  &(vlSelf->top__DOT__my_vmem__DOT__vga_mem)
                  , 0, ~0ULL);
     ++(vlSymsp->__Vcoverage[1006]);
     vlSelf->seg2 = 0x1fU;
