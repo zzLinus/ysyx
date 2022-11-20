@@ -180,6 +180,7 @@ vmem my_vmem(
 	.font_h(font_h),
 	.word_cunt(word_cunt),
 	.font_v(font_v),
+	.ascii_code(ascii_code),
     .vga_data(vga_data)
 );
 
