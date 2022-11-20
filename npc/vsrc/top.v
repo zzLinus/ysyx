@@ -221,7 +221,7 @@ wire [11:0] font_data;
 
 always @(ascii_code) begin
 	if (ascii_code != 8'h00) begin
-		word = word + 1;
+		word = word + 1'b1;
 		vga_mem[word] = ascii_code;
 	end
 end
