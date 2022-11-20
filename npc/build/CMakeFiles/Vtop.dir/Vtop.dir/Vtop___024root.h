@@ -171,7 +171,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_addr;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
-        SData/*12:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
+        SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_data;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);

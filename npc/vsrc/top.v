@@ -213,7 +213,7 @@ end
 
 // assign vga_data = vga_mem[{h_addr, v_addr}];
 assign word = {{4'b0000},vga_mem[{font_v,font_h}]}; // get the 8 bit ascii value
-assign font_cord_v = {{2'b00},{v_addr%9'd16}};
+assign font_cord_v = {{3'b000},{v_addr%9'd16}};
 assign font_cord_h = {h_addr%10'd9}[3:0];
 // assign font_addr = {word*12'd16+{8'b00000000,font_cord_v},font_cord_h}; // bit = word * row_num * bit_per_row + h_bit + v_bit * bit_per_row
 assign font_addr = word * 12'd16 + font_cord_v; // bit = word * row_num * bit_per_row + h_bit + v_bit * bit_per_row
