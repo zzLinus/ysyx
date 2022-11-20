@@ -3,7 +3,7 @@ module lookup_table(
 	output [7:0] ascii_code
 );
 
-always(*) begin
+always @(*) begin
 	case(key_code)
 			8'h15 : ascii_code = 8'h51;
 			8'h1d : ascii_code = 8'h57;
