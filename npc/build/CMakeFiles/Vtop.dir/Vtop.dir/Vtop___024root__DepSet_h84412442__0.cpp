@@ -6007,9 +6007,9 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__2(Vtop___024root* vlSelf) 
     if ((0U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
         if (VL_UNLIKELY((0xa9U == (IData)(vlSelf->top__DOT__lookup__DOT__ascii)))) {
             vlSelf->top__DOT__my_vmem__DOT__word_count 
-                = (0xfffU & ((IData)(1U) + VL_DIV_III(12, (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count), (IData)(0x47U))));
+                = (0xfffU & ((IData)(1U) + VL_DIV_III(12, (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count), (IData)(0x46U))));
             vlSelf->top__DOT__my_vmem__DOT__word_count 
-                = (0xfffU & ((IData)(0x47U) * (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
+                = (0xfffU & ((IData)(0x46U) * (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
             VL_WRITEF("word_count %4#\n",12,vlSelf->top__DOT__my_vmem__DOT__word_count);
         } else {
             vlSelf->top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0 
