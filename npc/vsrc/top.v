@@ -130,7 +130,8 @@ ps2_keyboard my_keyboard(
     .clk(clk),
     .resetn(~rst),
     .ps2_clk(ps2_clk),
-    .ps2_data(ps2_data)
+    .ps2_data(ps2_data),
+	.key_code(key_code)
 );
 
 alu_4bit alu(
@@ -184,6 +185,14 @@ vmem my_vmem(
 timer timer_1s(
 	.clk(clk),
 	.timer_out(timer_out)
+);
+
+wire [7:0] key_code;
+wire [7:0] ascii_code;
+
+lookup_table lookup(
+	.key_code(key_code),
+	.ascii_code(ascii_code)
 );
 
 endmodule
