@@ -222,7 +222,7 @@
 		if (ascii_code != 8'h00) begin
 			if(ascii_code == 8'ha9) begin
 				word_count = (word_count / 12'd71) + 12'b1;
-				word_count = word_count * 12'd71 + 12'd1;
+				word_count = word_count * 12'd71;
 				$display("word_count %d", word_count);
 			end
 			else

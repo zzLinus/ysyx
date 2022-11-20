@@ -224,9 +224,10 @@ always @(ascii_code) begin
 			word_count = word_count * 12'd71;
 			$display("word_count %d", word_count);
 		end
-		else
+		else begin 
 			vga_mem[word_count] = ascii_code;
-		word_count = word_count + 1;
+			word_count = word_count + 1;
+		end
 	end
 end
 
