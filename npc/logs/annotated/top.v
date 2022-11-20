@@ -220,7 +220,10 @@
 	
 	always @(ascii_code) begin
 		if (ascii_code != 8'h00) begin
-			vga_mem[word_count] = ascii_code;
+			if(ascii_code == 8'h5a)
+				word_count += 30;
+			else
+				vga_mem[word_count] = ascii_code;
 			word_count = word_count + 1;
 		end
 	end
