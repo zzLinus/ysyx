@@ -3252,7 +3252,7 @@ VL_INLINE_OPT void Vtop___024root___act_sequent__TOP__1(Vtop___024root* vlSelf) 
                                                      ((1U 
                                                        & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))
                                                        ? 0x4cU
-                                                       : 0x43U)
+                                                       : 0x2fU)
                                                       : 
                                                      ((1U 
                                                        & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))
@@ -3363,7 +3363,7 @@ VL_INLINE_OPT void Vtop___024root___act_sequent__TOP__1(Vtop___024root* vlSelf) 
                                                       : 
                                                      ((1U 
                                                        & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))
-                                                       ? 0x2fU
+                                                       ? 0x20U
                                                        : 0U)))
                                                     : 
                                                    ((4U 
