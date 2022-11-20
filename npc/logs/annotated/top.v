@@ -216,7 +216,7 @@
 	assign word = {{4'b0000},vga_mem[{font_v,font_h}]}; // get the 8 bit ascii value
 	assign font_cord_v = {v_addr%9'd16}[3:0];
 	assign font_cord_h = {h_addr%10'd9}[3:0];
-	assign font_addr = {word*12'd12+{8'b00000000,font_cord_v},font_cord_h};
+	assign font_addr = {word*12'd3*12'd16+{8'b00000000,font_cord_v},font_cord_h};
 	assign font_data = font_rom[font_addr];
 	assign vga_data = font_data ? 24'b111111111111111111111111 : 24'b000000000000000000000000;
 	

@@ -7457,7 +7457,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                | (0x800U & (IData)(vlSelf->top__DOT__my_vmem__DOT__word)));
     }
     vlSelf->top__DOT__my_vmem__DOT__font_addr = ((0xfff0U 
-                                                  & ((((IData)(0xcU) 
+                                                  & ((((IData)(0x30U) 
                                                        * (IData)(vlSelf->top__DOT__my_vmem__DOT__word)) 
                                                       + (IData)(vlSelf->top__DOT__my_vmem__DOT__font_cord_v)) 
                                                      << 4U)) 
