@@ -40,7 +40,8 @@ always @(*) begin
 			8'h49 : ascii = 8'h43;
 			8'h4a : ascii = 8'h43;
 	endcase
-	assign ascii_code = ascii;
 end
+
+assign ascii_code = ascii;
 
 endmodule
