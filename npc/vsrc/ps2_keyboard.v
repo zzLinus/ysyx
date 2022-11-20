@@ -32,7 +32,7 @@ always @(posedge clk) begin
 				(ps2_data)       &&  // stop bit
 				(^buffer[9:1])) begin      // odd  parity
 				$display("receive %x", buffer[8:1]);
-				key_code = buffer[8:1];
+				keycode = buffer[8:1];
 			end
 			count <= 0;     // for next
 		  end else begin
