@@ -211,7 +211,7 @@
 	// reg [23:0] vga_mem [524287:0];
 	reg [7:0] vga_mem [2099:0];
 	reg [11:0] font_rom [4095:0];
-	reg [7:0] word_count;
+	reg [11:0] word_count;
 	wire [11:0] font_addr;
 	wire [11:0] word;
 	wire [11:0] font_cord_v;
@@ -221,7 +221,7 @@
 	always @(ascii_code) begin
 		if (ascii_code != 8'h00) begin
 			word_count = word_count + 1;
-			vga_mem[word] = ascii_code;
+			vga_mem[word_count] = ascii_code;
 		end
 	end
 	

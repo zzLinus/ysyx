@@ -148,9 +148,8 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
     };
     struct {
-        CData/*7:0*/ top__DOT__my_vmem__DOT__word_count;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vtogcov__word_count;
         CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
         CData/*7:0*/ top__DOT__lookup__DOT__ascii;
         CData/*0:0*/ __VdfgTmp_h1c0fb021__0;
         CData/*0:0*/ __Vdly__timer_out;
@@ -172,10 +171,12 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_vga_ctrl__DOT____Vtogcov__y_cnt;
         SData/*9:0*/ top__DOT__my_keyboard__DOT__buffer;
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
+        SData/*11:0*/ top__DOT__my_vmem__DOT__word_count;
         SData/*11:0*/ top__DOT__my_vmem__DOT__font_addr;
         SData/*11:0*/ top__DOT__my_vmem__DOT__word;
         SData/*11:0*/ top__DOT__my_vmem__DOT__font_data;
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
+        SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word_count;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_addr;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
@@ -211,9 +212,9 @@ class Vtop___024root final : public VerilatedModule {
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list;
         VlUnpacked<CData/*7:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__pair_list;
-        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__key_list;
     };
     struct {
+        VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__key_list;
         VlUnpacked<CData/*3:0*/, 9> top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__data_list;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT__segs;
         VlUnpacked<CData/*7:0*/, 10> top__DOT__mu_seg__DOT____Vtogcov__segs;

@@ -235,7 +235,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+74,"font_v", false,-1, 4,0);
     tracep->declBus(c+151,"ascii_code", false,-1, 7,0);
     tracep->declBus(c+96,"vga_data", false,-1, 23,0);
-    tracep->declBus(c+155,"word_count", false,-1, 7,0);
+    tracep->declBus(c+155,"word_count", false,-1, 11,0);
     tracep->declBus(c+97,"font_addr", false,-1, 11,0);
     tracep->declBus(c+98,"word", false,-1, 11,0);
     tracep->declBus(c+90,"font_cord_v", false,-1, 11,0);
@@ -538,7 +538,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+152,((0xfU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
     bufp->fullCData(oldp+153,((0xfU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
     bufp->fullBit(oldp+154,((1U & (~ (IData)(vlSelf->rst)))));
-    bufp->fullCData(oldp+155,(vlSelf->top__DOT__my_vmem__DOT__word_count),8);
+    bufp->fullSData(oldp+155,(vlSelf->top__DOT__my_vmem__DOT__word_count),12);
     bufp->fullCData(oldp+156,(vlSelf->top__DOT__state_machine__DOT__state_din),4);
     bufp->fullCData(oldp+157,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__lut_out),4);
     bufp->fullBit(oldp+158,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit));

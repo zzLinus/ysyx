@@ -187,7 +187,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgCData(oldp+151,((0xfU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
     bufp->chgCData(oldp+152,((0xfU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
     bufp->chgBit(oldp+153,((1U & (~ (IData)(vlSelf->rst)))));
-    bufp->chgCData(oldp+154,(vlSelf->top__DOT__my_vmem__DOT__word_count),8);
+    bufp->chgSData(oldp+154,(vlSelf->top__DOT__my_vmem__DOT__word_count),12);
     bufp->chgCData(oldp+155,(vlSelf->top__DOT__state_machine__DOT__state_din),4);
     bufp->chgCData(oldp+156,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__lut_out),4);
     bufp->chgBit(oldp+157,(vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__hit));
