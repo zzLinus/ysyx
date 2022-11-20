@@ -44,11 +44,12 @@ always @(key_code) begin
 			8'h4a : ascii = 8'h43;
 			default: ascii = 8'h00;
 	endcase
-	if(pressing)
-		ascii_code = ascii;
-	else
-		ascii_code = 8'h00;
 end
 
+
+if(pressing)
+	ascii_code = ascii;
+else
+	ascii_code = 8'h00;
 
 endmodule
