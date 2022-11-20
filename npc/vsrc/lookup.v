@@ -48,10 +48,10 @@ end
 
 
 always@(pressing) begin
-	if(pressing)
-		ascii_code = ascii;
-	else
-		ascii_code = 8'h00;
+	if(!pressing)
+		ascii = 8'h00;
 end
+
+assign ascii_code = ascii;
 
 endmodule
