@@ -47,7 +47,7 @@ always @(key_code) begin
 end
 
 
-always@(pressing) begin
+always @(pressing) begin
 	if(!pressing)
 		ascii = 8'h00;
 end
