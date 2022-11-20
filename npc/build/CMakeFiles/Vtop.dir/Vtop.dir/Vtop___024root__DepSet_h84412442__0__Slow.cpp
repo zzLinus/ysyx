@@ -67,7 +67,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     ++(vlSymsp->__Vcoverage[810]);
     ++(vlSymsp->__Vcoverage[810]);
     ++(vlSymsp->__Vcoverage[813]);
-    ++(vlSymsp->__Vcoverage[1064]);
+    ++(vlSymsp->__Vcoverage[1065]);
     vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list[0U] = 8U;
     vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list[1U] = 7U;
     vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__key_list[2U] = 6U;
@@ -302,297 +302,373 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
             }
         }
     }
-    if ((1U & (~ ((((((((0x15U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U))) 
-                        | (0x1dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                              >> 1U)))) 
-                       | (0x24U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                             >> 1U)))) 
-                      | (0x2dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                     | (0x2cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U)))) 
-                    | (0x35U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U)))) 
-                   | (0x3cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                         >> 1U)))) 
-                  | (0x43U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U))))))) {
-        if ((1U & (~ ((((((((0x44U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U))) 
-                            | (0x4dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) 
-                           | (0x54U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                 >> 1U)))) 
-                          | (0x5bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) 
-                         | (0x1cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                               >> 1U)))) 
-                        | (0x1bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                              >> 1U)))) 
-                       | (0x23U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                             >> 1U)))) 
-                      | (0x2bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U))))))) {
-            if ((1U & (~ ((((((((0x34U == (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U))) 
-                                | (0x33U == (0xffU 
-                                             & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) 
-                               | (0x3bU == (0xffU & 
-                                            ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                             >> 1U)))) 
-                              | (0x42U == (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                             | (0x4bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                   >> 1U)))) 
-                            | (0x4cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) 
-                           | (0x52U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                 >> 1U)))) 
-                          | (0x1aU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U))))))) {
-                if (((((((((0x22U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                               >> 1U))) 
-                           | (0x21U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                 >> 1U)))) 
-                          | (0x2aU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) 
-                         | (0x32U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                               >> 1U)))) 
-                        | (0x31U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                              >> 1U)))) 
-                       | (0x41U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                             >> 1U)))) 
-                      | (0x49U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                     | (0x4aU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U))))) {
-                    if ((0x22U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        if ((0x21U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            if ((0x2aU == (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1058]);
+    if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                  >> 8U)))) {
+        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                      >> 7U)))) {
+            if ((0x40U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                if ((0x20U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                    if ((0x10U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
                             }
-                            if ((0x2aU != (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                if ((0x32U == (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    ++(vlSymsp->__Vcoverage[1059]);
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
                                 }
-                                if ((0x32U != (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    if ((0x31U == (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) {
-                                        ++(vlSymsp->__Vcoverage[1060]);
-                                    }
-                                    if ((0x31U != (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) {
-                                        if ((0x41U 
-                                             == (0xffU 
-                                                 & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                    >> 1U)))) {
-                                            ++(vlSymsp->__Vcoverage[1061]);
-                                        }
-                                        if ((0x41U 
-                                             != (0xffU 
-                                                 & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                    >> 1U)))) {
-                                            if ((0x49U 
-                                                 == 
-                                                 (0xffU 
-                                                  & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                     >> 1U)))) {
-                                                ++(vlSymsp->__Vcoverage[1062]);
-                                            }
-                                            if ((0x49U 
-                                                 != 
-                                                 (0xffU 
-                                                  & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                     >> 1U)))) {
-                                                ++(vlSymsp->__Vcoverage[1063]);
-                                            }
-                                        }
-                                    }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1038]);
                                 }
                             }
                         }
-                        if ((0x21U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            ++(vlSymsp->__Vcoverage[1057]);
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1050]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
                         }
                     }
-                    if ((0x22U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        ++(vlSymsp->__Vcoverage[1056]);
+                    if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                  >> 4U)))) {
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1037]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1048]);
+                                }
+                            }
+                        }
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1049]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1059]);
+                                }
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1060]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                            }
+                        }
+                    }
+                }
+                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                              >> 5U)))) {
+                    if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                  >> 4U)))) {
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1034]);
+                                }
+                            }
+                        }
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1046]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1056]);
+                                }
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1057]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                            }
+                        }
+                    }
+                    if ((0x10U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1058]);
+                                }
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1047]);
+                                }
+                            }
+                        }
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1036]);
+                                }
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1035]);
+                                }
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                        }
                     }
                 }
             }
-            if (((((((((0x34U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U))) 
-                       | (0x33U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                             >> 1U)))) 
-                      | (0x3bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                     | (0x42U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U)))) 
-                    | (0x4bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U)))) 
-                   | (0x4cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                         >> 1U)))) 
-                  | (0x52U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) | 
-                 (0x1aU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U))))) {
-                if ((0x34U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) {
-                    if ((0x33U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        ++(vlSymsp->__Vcoverage[1049]);
-                    }
-                    if ((0x33U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        if ((0x3bU != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            if ((0x42U != (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                if ((0x4bU != (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    if ((0x4cU != (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) {
-                                        if ((0x52U 
-                                             != (0xffU 
-                                                 & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                    >> 1U)))) {
-                                            ++(vlSymsp->__Vcoverage[1055]);
-                                        }
-                                        if ((0x52U 
-                                             == (0xffU 
-                                                 & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                    >> 1U)))) {
-                                            ++(vlSymsp->__Vcoverage[1054]);
-                                        }
-                                    }
-                                    if ((0x4cU == (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) {
-                                        ++(vlSymsp->__Vcoverage[1053]);
-                                    }
-                                }
-                                if ((0x4bU == (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    ++(vlSymsp->__Vcoverage[1052]);
-                                }
+            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                          >> 6U)))) {
+                if ((0x20U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                    if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                  >> 4U)))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            ++(vlSymsp->__Vcoverage[1064]);
+                        }
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
                             }
-                            if ((0x42U == (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1051]);
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1032]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
                             }
                         }
-                        if ((0x3bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            ++(vlSymsp->__Vcoverage[1050]);
+                    }
+                    if ((0x10U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1045]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1055]);
+                                }
+                            }
+                        }
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1033]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1044]);
+                                }
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
                         }
                     }
                 }
-                if ((0x34U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) {
-                    ++(vlSymsp->__Vcoverage[1048]);
+                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                              >> 5U)))) {
+                    ++(vlSymsp->__Vcoverage[1064]);
                 }
             }
         }
-        if (((((((((0x44U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                       >> 1U))) | (0x4dU 
-                                                   == 
-                                                   (0xffU 
-                                                    & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                       >> 1U)))) 
-                  | (0x54U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) | 
-                 (0x5bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U)))) | (0x1cU 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) 
-               | (0x1bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U)))) | (0x23U 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) 
-             | (0x2bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                   >> 1U))))) {
-            if ((0x44U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                    >> 1U)))) {
-                if ((0x4dU != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) {
-                    if ((0x54U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        if ((0x5bU != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            if ((0x1cU != (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                if ((0x1bU != (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    if ((0x23U != (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) {
-                                        ++(vlSymsp->__Vcoverage[1047]);
-                                    }
-                                    if ((0x23U == (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) {
-                                        ++(vlSymsp->__Vcoverage[1046]);
-                                    }
+        if ((0x80U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                          >> 6U)))) {
+                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                              >> 5U)))) {
+                    if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                  >> 4U)))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
                                 }
-                                if ((0x1bU == (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    ++(vlSymsp->__Vcoverage[1045]);
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1061]);
                                 }
                             }
-                            if ((0x1cU == (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1044]);
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1051]);
+                                }
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1039]);
+                                }
                             }
                         }
-                        if ((0x5bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            ++(vlSymsp->__Vcoverage[1043]);
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1040]);
+                                }
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
                         }
                     }
-                    if ((0x54U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        ++(vlSymsp->__Vcoverage[1042]);
+                    if ((0x10U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1062]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1063]);
+                                }
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1052]);
+                                }
+                            }
+                        }
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1053]);
+                                }
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1041]);
+                                }
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                        }
                     }
                 }
-                if ((0x4dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) {
-                    ++(vlSymsp->__Vcoverage[1041]);
+                if ((0x20U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                    if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                  >> 4U)))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1054]);
+                                }
+                            }
+                        }
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1042]);
+                                }
+                            }
+                        }
+                    }
+                    if ((0x10U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                        if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                      >> 3U)))) {
+                            if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                                    ++(vlSymsp->__Vcoverage[1043]);
+                                }
+                                if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                              >> 1U)))) {
+                                    ++(vlSymsp->__Vcoverage[1064]);
+                                }
+                            }
+                            if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
+                                          >> 2U)))) {
+                                ++(vlSymsp->__Vcoverage[1064]);
+                            }
+                        }
+                        if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                            ++(vlSymsp->__Vcoverage[1064]);
+                        }
+                    }
                 }
             }
-            if ((0x44U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                    >> 1U)))) {
-                ++(vlSymsp->__Vcoverage[1040]);
+            if ((0x40U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+                ++(vlSymsp->__Vcoverage[1064]);
             }
         }
     }
@@ -887,266 +963,254 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                             == 
                                                             (6U 
                                                              & (IData)(vlSelf->top__DOT__my_keyboard__DOT__ps2_clk_sync))));
-    if (((((((((0x15U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                   >> 1U))) | (0x1dU 
-                                               == (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) 
-              | (0x24U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                    >> 1U)))) | (0x2dU 
-                                                 == 
-                                                 (0xffU 
-                                                  & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                     >> 1U)))) 
-            | (0x2cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                  >> 1U)))) | (0x35U 
-                                               == (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))) 
-          | (0x3cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                >> 1U)))) | (0x43U 
-                                             == (0xffU 
-                                                 & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                    >> 1U))))) {
-        if ((0x15U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                >> 1U)))) {
-            if ((0x1dU != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                    >> 1U)))) {
-                if ((0x24U != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) {
-                    if ((0x2dU != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        if ((0x2cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            ++(vlSymsp->__Vcoverage[1036]);
-                        }
-                        if ((0x2cU != (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                >> 1U)))) {
-                            if ((0x35U == (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1037]);
-                            }
-                            if ((0x35U != (0xffU & 
-                                           ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                                if ((0x3cU == (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    ++(vlSymsp->__Vcoverage[1038]);
-                                }
-                                if ((0x3cU != (0xffU 
-                                               & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                  >> 1U)))) {
-                                    ++(vlSymsp->__Vcoverage[1039]);
-                                }
-                            }
-                        }
-                    }
-                    if ((0x2dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) {
-                        ++(vlSymsp->__Vcoverage[1035]);
-                    }
-                }
-                if ((0x24U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) {
-                    ++(vlSymsp->__Vcoverage[1034]);
-                }
-            }
-            if ((0x1dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                    >> 1U)))) {
-                ++(vlSymsp->__Vcoverage[1033]);
-            }
-        }
-        if ((0x15U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                >> 1U)))) {
-            ++(vlSymsp->__Vcoverage[1032]);
-            vlSelf->top__DOT__lookup__DOT__ascii = 0x51U;
-        } else {
-            vlSelf->top__DOT__lookup__DOT__ascii = 
-                ((0x1dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U))) ? 0x57U
-                  : ((0x24U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                         >> 1U))) ? 0x45U
-                      : ((0x2dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                             >> 1U)))
-                          ? 0x52U : ((0x2cU == (0xffU 
-                                                & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                   >> 1U)))
-                                      ? 0x54U : ((0x35U 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))
-                                                  ? 0x59U
+    if ((0x100U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))) {
+        ++(vlSymsp->__Vcoverage[1064]);
+        vlSelf->top__DOT__lookup__DOT__ascii = 0U;
+    } else {
+        vlSelf->top__DOT__lookup__DOT__ascii = ((0x80U 
+                                                 & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                 ? 
+                                                ((0x40U 
+                                                  & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                  ? 0U
                                                   : 
-                                                 ((0x3cU 
-                                                   == 
-                                                   (0xffU 
-                                                    & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                       >> 1U)))
-                                                   ? 0x55U
-                                                   : 0x49U))))));
-        }
-    } else if (((((((((0x44U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U))) 
-                      | (0x4dU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                     | (0x54U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U)))) 
-                    | (0x5bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U)))) 
-                   | (0x1cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                         >> 1U)))) 
-                  | (0x1bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) | 
-                 (0x23U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U)))) | (0x2bU 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U))))) {
-        vlSelf->top__DOT__lookup__DOT__ascii = ((0x44U 
-                                                 == 
-                                                 (0xffU 
-                                                  & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                     >> 1U)))
-                                                 ? 0x4fU
-                                                 : 
-                                                ((0x4dU 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))
-                                                  ? 0x50U
-                                                  : 
-                                                 ((0x54U 
-                                                   == 
-                                                   (0xffU 
-                                                    & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                       >> 1U)))
-                                                   ? 0x5bU
-                                                   : 
-                                                  ((0x5bU 
-                                                    == 
-                                                    (0xffU 
-                                                     & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                        >> 1U)))
-                                                    ? 0x5dU
-                                                    : 
-                                                   ((0x1cU 
-                                                     == 
-                                                     (0xffU 
-                                                      & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                         >> 1U)))
-                                                     ? 0x41U
+                                                 ((0x20U 
+                                                   & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                   ? 
+                                                  ((0x10U 
+                                                    & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                    ? 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 0U
                                                      : 
-                                                    ((0x1bU 
-                                                      == 
-                                                      (0xffU 
-                                                       & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                          >> 1U)))
-                                                      ? 0x53U
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x5dU
+                                                       : 0U)
+                                                      : 0U))
+                                                    : 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
                                                       : 
-                                                     ((0x23U 
-                                                       == 
-                                                       (0xffU 
-                                                        & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                           >> 1U)))
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0U
+                                                       : 0x5bU))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0U
+                                                       : 0x22U)
+                                                      : 0U)))
+                                                   : 
+                                                  ((0x10U 
+                                                    & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                    ? 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x50U
+                                                       : 0x3bU))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x4cU
+                                                       : 0x43U)
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x43U
+                                                       : 0U)))
+                                                    : 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0U
+                                                       : 0x4fU))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x49U
+                                                       : 0x4bU)
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x43U
+                                                       : 0U))))))
+                                                 : 
+                                                ((0x40U 
+                                                  & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                  ? 
+                                                 ((0x20U 
+                                                   & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                   ? 
+                                                  ((0x10U 
+                                                    & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                    ? 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0U
+                                                       : 0x55U))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x4aU
+                                                       : 0U)
+                                                      : 0U))
+                                                    : 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x59U
+                                                       : 0x47U))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x48U
+                                                       : 0x43U)
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x43U
+                                                       : 0U))))
+                                                   : 
+                                                  ((0x10U 
+                                                    & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                    ? 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x52U
+                                                       : 0x54U))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x46U
+                                                       : 0x43U)
+                                                      : 0U))
+                                                    : 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0U
+                                                       : 0x45U))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
                                                        ? 0x44U
-                                                       : 0x46U)))))));
-    } else if (((((((((0x34U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U))) 
-                      | (0x33U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                     | (0x3bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U)))) 
-                    | (0x42U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U)))) 
-                   | (0x4bU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                         >> 1U)))) 
-                  | (0x4cU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) | 
-                 (0x52U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U)))) | (0x1aU 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U))))) {
-        vlSelf->top__DOT__lookup__DOT__ascii = ((0x34U 
-                                                 == 
-                                                 (0xffU 
-                                                  & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                     >> 1U)))
-                                                 ? 0x47U
-                                                 : 
-                                                ((0x33U 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U)))
-                                                  ? 0x48U
-                                                  : 
-                                                 ((0x3bU 
-                                                   == 
-                                                   (0xffU 
-                                                    & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                       >> 1U)))
-                                                   ? 0x4aU
-                                                   : 
-                                                  ((0x42U 
-                                                    == 
-                                                    (0xffU 
-                                                     & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                        >> 1U)))
-                                                    ? 0x4bU
-                                                    : 
-                                                   ((0x4bU 
-                                                     == 
-                                                     (0xffU 
-                                                      & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                         >> 1U)))
-                                                     ? 0x4cU
-                                                     : 
-                                                    ((0x4cU 
-                                                      == 
-                                                      (0xffU 
-                                                       & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                          >> 1U)))
-                                                      ? 0x3bU
+                                                       : 0x58U)
                                                       : 
-                                                     ((0x52U 
-                                                       == 
-                                                       (0xffU 
-                                                        & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                           >> 1U)))
-                                                       ? 0x22U
-                                                       : 0x5aU)))))));
-    } else if (((((((((0x22U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U))) 
-                      | (0x21U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                            >> 1U)))) 
-                     | (0x2aU == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                           >> 1U)))) 
-                    | (0x32U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                          >> 1U)))) 
-                   | (0x31U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                         >> 1U)))) 
-                  | (0x41U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                        >> 1U)))) | 
-                 (0x49U == (0xffU & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                     >> 1U)))) | (0x4aU 
-                                                  == 
-                                                  (0xffU 
-                                                   & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                      >> 1U))))) {
-        vlSelf->top__DOT__lookup__DOT__ascii = ((0x22U 
-                                                 == 
-                                                 (0xffU 
-                                                  & ((IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer) 
-                                                     >> 1U)))
-                                                 ? 0x58U
-                                                 : 0x43U);
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x43U
+                                                       : 0U)))))
+                                                  : 
+                                                 ((0x20U 
+                                                   & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                   ? 
+                                                  ((0x10U 
+                                                    & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                    ? 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x57U
+                                                       : 0x41U))
+                                                     : 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x53U
+                                                       : 0x5aU)
+                                                      : 0U))
+                                                    : 
+                                                   ((8U 
+                                                     & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                     ? 
+                                                    ((4U 
+                                                      & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                      ? 0U
+                                                      : 
+                                                     ((2U 
+                                                       & (IData)(vlSelf->top__DOT__my_keyboard__DOT__buffer))
+                                                       ? 0x51U
+                                                       : 0U))
+                                                     : 0U))
+                                                   : 0U)));
     }
     if (vlSelf->en) {
         ++(vlSymsp->__Vcoverage[387]);
@@ -4052,6 +4116,37 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                 [3U]) | (8U & vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list
                          [3U]));
     }
+    if ((4U & (IData)(vlSelf->alu_fnselec))) {
+        if ((1U & (~ ((IData)(vlSelf->alu_fnselec) 
+                      >> 1U)))) {
+            if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
+                ++(vlSymsp->__Vcoverage[468]);
+            }
+            if ((1U & (IData)(vlSelf->alu_fnselec))) {
+                ++(vlSymsp->__Vcoverage[469]);
+            }
+        }
+        if ((2U & (IData)(vlSelf->alu_fnselec))) {
+            if ((1U & (IData)(vlSelf->alu_fnselec))) {
+                ++(vlSymsp->__Vcoverage[475]);
+                if (((IData)(vlSelf->alu_a) == (IData)(vlSelf->alu_b))) {
+                    ++(vlSymsp->__Vcoverage[473]);
+                }
+                if (((IData)(vlSelf->alu_a) != (IData)(vlSelf->alu_b))) {
+                    ++(vlSymsp->__Vcoverage[474]);
+                }
+            }
+            if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
+                ++(vlSymsp->__Vcoverage[472]);
+                if (((IData)(vlSelf->alu_a) >= (IData)(vlSelf->alu_b))) {
+                    ++(vlSymsp->__Vcoverage[471]);
+                }
+                if (((IData)(vlSelf->alu_a) < (IData)(vlSelf->alu_b))) {
+                    ++(vlSymsp->__Vcoverage[470]);
+                }
+            }
+        }
+    }
     if ((0x10U & (vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list
                   [3U] ^ vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT____Vtogcov__pair_list
                   [3U]))) {
@@ -4289,27 +4384,11 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__alu__DOT__tmp = (0xfU & ((IData)(1U) 
                                                + (~ (IData)(vlSelf->alu_b))));
     if ((4U & (IData)(vlSelf->alu_fnselec))) {
-        if ((1U & (~ ((IData)(vlSelf->alu_fnselec) 
-                      >> 1U)))) {
-            if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[468]);
-            }
-            if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[469]);
-            }
-        }
         if ((2U & (IData)(vlSelf->alu_fnselec))) {
             if ((1U & (IData)(vlSelf->alu_fnselec))) {
-                ++(vlSymsp->__Vcoverage[475]);
-                if (((IData)(vlSelf->alu_a) == (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[473]);
-                    vlSelf->alu_res = 1U;
-                } else {
-                    vlSelf->alu_res = 0U;
-                }
-                if (((IData)(vlSelf->alu_a) != (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[474]);
-                }
+                vlSelf->alu_res = (((IData)(vlSelf->alu_a) 
+                                    == (IData)(vlSelf->alu_b))
+                                    ? 1U : 0U);
                 vlSelf->alu_carry = 0U;
                 vlSelf->alu_overflow = 0U;
                 vlSelf->alu_zero = 0U;
@@ -4320,15 +4399,6 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                 vlSelf->alu_carry = 0U;
                 vlSelf->alu_overflow = 0U;
                 vlSelf->alu_zero = 0U;
-            }
-            if ((1U & (~ (IData)(vlSelf->alu_fnselec)))) {
-                ++(vlSymsp->__Vcoverage[472]);
-                if (((IData)(vlSelf->alu_a) >= (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[471]);
-                }
-                if (((IData)(vlSelf->alu_a) < (IData)(vlSelf->alu_b))) {
-                    ++(vlSymsp->__Vcoverage[470]);
-                }
             }
         } else if ((1U & (IData)(vlSelf->alu_fnselec))) {
             vlSelf->alu_res = ((IData)(vlSelf->alu_a) 

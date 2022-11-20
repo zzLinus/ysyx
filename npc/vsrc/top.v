@@ -178,6 +178,7 @@ vmem my_vmem(
     .h_addr(h_addr),
     .v_addr(v_addr[8:0]),
 	.font_h(font_h),
+	.word_cunt(word_cunt),
 	.font_v(font_v),
     .vga_data(vga_data)
 );
@@ -189,9 +190,10 @@ timer timer_1s(
 
 wire [7:0] key_code;
 wire [7:0] ascii_code;
+reg [7:0] word_cunt;
 
 lookup_table lookup(
-	.key_code(key_code),
+	.key_code(key_code)S
 	.ascii_code(ascii_code)
 );
 
@@ -202,6 +204,8 @@ module vmem (
     input [8:0] v_addr,
 	input [6:0] font_h,
 	input [4:0] font_v,
+	input [7:0] word_cunt,
+	input [7:0] ascii_code,
     output [23:0] vga_data
 );
 
@@ -213,6 +217,13 @@ wire [11:0] word;
 wire [11:0] font_cord_v;
 wire [3:0] font_cord_h;
 wire [11:0] font_data;
+
+always @(ascii_code) begin
+	if (ascii_code != 8'h00) begin
+		word = word + 1;
+		vga_mem[word] = ascii_code;
+	end
+end
 
 initial begin
     $readmemh("resource/vga_font.txt", font_rom);
