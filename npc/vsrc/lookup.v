@@ -36,13 +36,14 @@ always @(key_code) begin
 			8'h1a : ascii = 8'h5a;
 			8'h22 : ascii = 8'h58;
 			8'h21 : ascii = 8'h43;
-			8'h2a : ascii = 8'h43;
-			8'h32 : ascii = 8'h43;
-			8'h31 : ascii = 8'h43;
-			8'h41 : ascii = 8'h43;
-			8'h49 : ascii = 8'h43;
+			8'h2a : ascii = 8'h56;
+			8'h32 : ascii = 8'h42;
+			8'h31 : ascii = 8'h4e;
+			8'h3a : ascii = 8'h4d;
+			8'h41 : ascii = 8'h2c;
+			8'h49 : ascii = 8'h2e;
 			8'h4a : ascii = 8'h43;
-			8'h29 : ascii = 8'h20;
+			8'h29 : ascii = 8'h2f;
 			default: ascii = 8'h00;
 	endcase
 	if(!pressing)
