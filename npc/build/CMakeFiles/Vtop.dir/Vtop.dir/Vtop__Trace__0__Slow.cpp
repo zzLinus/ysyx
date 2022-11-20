@@ -198,6 +198,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBit(c+102,"ps2_clk", false,-1);
     tracep->declBit(c+103,"ps2_data", false,-1);
     tracep->declBus(c+80,"buffer", false,-1, 9,0);
+    tracep->declBus(c+150,"keycode", false,-1, 7,0);
     tracep->declBus(c+81,"count", false,-1, 3,0);
     tracep->declBus(c+82,"ps2_clk_sync", false,-1, 2,0);
     tracep->declBit(c+83,"sampling", false,-1);
@@ -533,7 +534,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullBit(oldp+147,(vlSelf->timer_out));
     bufp->fullCData(oldp+148,((0xffU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),8);
     bufp->fullCData(oldp+149,((0xffU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),8);
-    bufp->fullCData(oldp+150,(vlSelf->top__DOT__key_code),8);
+    bufp->fullCData(oldp+150,(vlSelf->top__DOT__my_keyboard__DOT__keycode),8);
     bufp->fullCData(oldp+151,(vlSelf->top__DOT__lookup__DOT__ascii),8);
     bufp->fullBit(oldp+152,(vlSelf->top__DOT__lookup__DOT__pressing));
     bufp->fullCData(oldp+153,((0xfU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);

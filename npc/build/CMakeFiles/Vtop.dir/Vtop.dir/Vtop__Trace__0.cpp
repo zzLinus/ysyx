@@ -181,7 +181,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
     bufp->chgBit(oldp+146,(vlSelf->timer_out));
     bufp->chgCData(oldp+147,((0xffU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),8);
     bufp->chgCData(oldp+148,((0xffU & VL_DIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),8);
-    bufp->chgCData(oldp+149,(vlSelf->top__DOT__key_code),8);
+    bufp->chgCData(oldp+149,(vlSelf->top__DOT__my_keyboard__DOT__keycode),8);
     bufp->chgCData(oldp+150,(vlSelf->top__DOT__lookup__DOT__ascii),8);
     bufp->chgBit(oldp+151,(vlSelf->top__DOT__lookup__DOT__pressing));
     bufp->chgCData(oldp+152,((0xfU & VL_MODDIV_III(32, (IData)(vlSelf->inc_counter_out), (IData)(0xaU)))),4);
