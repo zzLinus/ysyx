@@ -221,7 +221,7 @@
 	always @(ascii_code) begin
 		if (ascii_code != 8'h00) begin
 			if(ascii_code == 8'ha9) begin
-				word_count += 120;
+				word_count += 140;
 				$display("word_count %d", word_count);
 			end
 			else
