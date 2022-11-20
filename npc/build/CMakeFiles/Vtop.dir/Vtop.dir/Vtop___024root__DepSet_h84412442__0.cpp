@@ -3207,7 +3207,7 @@ VL_INLINE_OPT void Vtop___024root___act_sequent__TOP__1(Vtop___024root* vlSelf) 
                                                      ((1U 
                                                        & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))
                                                        ? 0x5dU
-                                                       : 0U)
+                                                       : 0xa9U)
                                                       : 0U))
                                                     : 
                                                    ((4U 
@@ -5891,16 +5891,16 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__2(Vtop___024root* vlSelf) 
         ++(vlSymsp->__Vcoverage[1018]);
     }
     if ((0U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
-        if ((0x5aU != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
+        if ((0xa9U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
             ++(vlSymsp->__Vcoverage[1016]);
         }
-        if ((0x5aU == (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
+        if ((0xa9U == (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
             ++(vlSymsp->__Vcoverage[1015]);
         }
         ++(vlSymsp->__Vcoverage[1017]);
     }
     if ((0U != (IData)(vlSelf->top__DOT__lookup__DOT__ascii))) {
-        if (VL_UNLIKELY((0x5aU == (IData)(vlSelf->top__DOT__lookup__DOT__ascii)))) {
+        if (VL_UNLIKELY((0xa9U == (IData)(vlSelf->top__DOT__lookup__DOT__ascii)))) {
             vlSelf->top__DOT__my_vmem__DOT__word_count 
                 = (0xfffU & ((IData)(0x1eU) + (IData)(vlSelf->top__DOT__my_vmem__DOT__word_count)));
             VL_WRITEF("word_count %4#\n",12,vlSelf->top__DOT__my_vmem__DOT__word_count);
@@ -6006,12 +6006,12 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___nba_sequent__TOP__3\n"); );
     // Body
-    ++(vlSymsp->__Vcoverage[1098]);
+    ++(vlSymsp->__Vcoverage[1099]);
     if (vlSelf->top__DOT__lookup__DOT__pressing) {
-        ++(vlSymsp->__Vcoverage[1097]);
+        ++(vlSymsp->__Vcoverage[1098]);
     }
     if ((1U & (~ (IData)(vlSelf->top__DOT__lookup__DOT__pressing)))) {
-        ++(vlSymsp->__Vcoverage[1096]);
+        ++(vlSymsp->__Vcoverage[1097]);
     }
     if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                   >> 7U)))) {
@@ -6024,7 +6024,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                   >> 3U)))) {
                         if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
@@ -6032,13 +6032,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                     ++(vlSymsp->__Vcoverage[1061]);
                                 }
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                             }
                         }
                         if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                       >> 2U)))) {
-                            ++(vlSymsp->__Vcoverage[1095]);
+                            ++(vlSymsp->__Vcoverage[1096]);
                         }
                     }
                     if ((8U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
@@ -6053,7 +6053,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                 }
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                         if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
@@ -6068,14 +6068,14 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             }
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                     }
                 }
                 if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                               >> 4U)))) {
-                    ++(vlSymsp->__Vcoverage[1095]);
+                    ++(vlSymsp->__Vcoverage[1096]);
                 }
             }
             if ((0x20U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
@@ -6088,7 +6088,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                                     ++(vlSymsp->__Vcoverage[1086]);
@@ -6107,14 +6107,14 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
                                     ++(vlSymsp->__Vcoverage[1063]);
                                 }
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                     }
@@ -6130,7 +6130,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                 }
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                         if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
@@ -6146,7 +6146,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                                     ++(vlSymsp->__Vcoverage[1094]);
@@ -6163,7 +6163,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                                     ++(vlSymsp->__Vcoverage[1089]);
@@ -6189,7 +6189,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                 }
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                     }
@@ -6198,7 +6198,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                       >> 2U)))) {
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
@@ -6216,11 +6216,11 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                     ++(vlSymsp->__Vcoverage[1067]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                     }
@@ -6240,22 +6240,22 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                     ++(vlSymsp->__Vcoverage[1083]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                             }
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                         }
                         if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
                                     ++(vlSymsp->__Vcoverage[1071]);
@@ -6268,7 +6268,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                       >> 2U)))) {
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
@@ -6280,7 +6280,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             }
                         }
                         if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                            ++(vlSymsp->__Vcoverage[1095]);
+                            ++(vlSymsp->__Vcoverage[1096]);
                         }
                     }
                 }
@@ -6304,13 +6304,13 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                     ++(vlSymsp->__Vcoverage[1091]);
                                 }
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                             }
                         }
                         if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
@@ -6318,7 +6318,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                                     ++(vlSymsp->__Vcoverage[1069]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                             }
                         }
@@ -6337,7 +6337,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
                                 if ((1U & (~ (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode)))) {
-                                    ++(vlSymsp->__Vcoverage[1095]);
+                                    ++(vlSymsp->__Vcoverage[1096]);
                                 }
                                 if ((1U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                                     ++(vlSymsp->__Vcoverage[1092]);
@@ -6346,7 +6346,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                         }
                         if ((4U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
                             if ((2U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                                ++(vlSymsp->__Vcoverage[1095]);
+                                ++(vlSymsp->__Vcoverage[1096]);
                             }
                             if ((1U & (~ ((IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode) 
                                           >> 1U)))) {
@@ -6362,7 +6362,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
                 }
             }
             if ((0x20U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-                ++(vlSymsp->__Vcoverage[1095]);
+                ++(vlSymsp->__Vcoverage[1096]);
             }
         }
     }
@@ -6373,7 +6373,7 @@ VL_INLINE_OPT void Vtop___024root___nba_sequent__TOP__3(Vtop___024root* vlSelf) 
         ++(vlSymsp->__Vcoverage[1060]);
     }
     if ((0x80U & (IData)(vlSelf->top__DOT__my_keyboard__DOT__keycode))) {
-        ++(vlSymsp->__Vcoverage[1095]);
+        ++(vlSymsp->__Vcoverage[1096]);
     }
 }
 
