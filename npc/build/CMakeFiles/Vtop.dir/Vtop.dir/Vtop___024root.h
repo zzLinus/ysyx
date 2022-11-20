@@ -144,14 +144,10 @@ class Vtop___024root final : public VerilatedModule {
         CData/*0:0*/ top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT____Vtogcov__hit;
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
-        CData/*3:0*/ top__DOT__my_vmem__DOT__font_cord_v;
         CData/*0:0*/ top__DOT__my_vmem__DOT__font_data;
+        CData/*0:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_data;
     };
     struct {
-        CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
-        CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
-        CData/*0:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_data;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____VdfgTmp_h396aef74__0;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
         CData/*0:0*/ __Vtrigrprev__TOP__timer_out;
@@ -170,9 +166,12 @@ class Vtop___024root final : public VerilatedModule {
         SData/*9:0*/ top__DOT__my_keyboard__DOT__buffer;
         SData/*9:0*/ top__DOT__my_keyboard__DOT____Vtogcov__buffer;
         SData/*15:0*/ top__DOT__my_vmem__DOT__font_addr;
+        SData/*15:0*/ top__DOT__my_vmem__DOT__word;
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
         SData/*15:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_addr;
-        SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
+        SData/*15:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
+        SData/*15:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
+        SData/*15:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
