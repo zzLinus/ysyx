@@ -44,13 +44,11 @@ always @(key_code) begin
 			8'h4a : ascii = 8'h43;
 			default: ascii = 8'h00;
 	endcase
-end
-
-
-always @(pressing) begin
 	if(!pressing)
 		ascii = 8'h00;
 end
+
+
 
 assign ascii_code = ascii;
 
