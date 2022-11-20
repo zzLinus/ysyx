@@ -39,6 +39,7 @@ always @(*) begin
 			8'h41 : ascii = 8'h43;
 			8'h49 : ascii = 8'h43;
 			8'h4a : ascii = 8'h43;
+			default: ascii = 8'h00;
 	endcase
 end
 

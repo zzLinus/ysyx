@@ -215,7 +215,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__v_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__font_v = VL_RAND_RESET_I(5);
     vlSelf->top__DOT____Vcellinp__my_vmem__v_addr = VL_RAND_RESET_I(9);
-    vlSelf->top__DOT__ascii_code = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__clk = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__rst = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__sw = VL_RAND_RESET_I(8);
@@ -378,6 +377,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_data = VL_RAND_RESET_I(12);
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
+    vlSelf->top__DOT__lookup__DOT__ascii = VL_RAND_RESET_I(8);
     vlSelf->__VdfgTmp_h1c0fb021__0 = 0;
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__VstlIterCount = 0;
