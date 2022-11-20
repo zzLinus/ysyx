@@ -100,7 +100,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgSData(oldp+71,(vlSelf->top__DOT__v_addr),10);
         bufp->chgCData(oldp+72,((0x7fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),7);
         bufp->chgCData(oldp+73,(vlSelf->top__DOT__font_v),5);
-        bufp->chgIData(oldp+74,(((IData)(vlSelf->top__DOT__my_vmem__DOT__font_data)
+        bufp->chgIData(oldp+74,(((IData)(vlSelf->__VdfgTmp_h613ff63e__0)
                                   ? 0xffffffU : 0U)),24);
         bufp->chgIData(oldp+75,(vlSelf->top__DOT__led1__DOT__count),32);
         bufp->chgCData(oldp+76,(vlSelf->top__DOT__led1__DOT__led),8);
@@ -120,7 +120,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),16);
         bufp->chgSData(oldp+91,((0xfU & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))),16);
         bufp->chgSData(oldp+92,((0x3ffU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),16);
-        bufp->chgBit(oldp+93,(vlSelf->top__DOT__my_vmem__DOT__font_data));
+        bufp->chgSData(oldp+93,(vlSelf->top__DOT__my_vmem__DOT__font_data),12);
         bufp->chgIData(oldp+94,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     }
     if (VL_UNLIKELY(vlSelf->__Vm_traceActivity[3U])) {

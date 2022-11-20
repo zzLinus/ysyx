@@ -230,7 +230,7 @@ VL_ATTR_COLD void Vtop___024root__trace_init_sub__TOP__0(Vtop___024root* vlSelf,
     tracep->declBus(c+91,"word", false,-1, 15,0);
     tracep->declBus(c+92,"font_cord_v", false,-1, 15,0);
     tracep->declBus(c+93,"font_cord_h", false,-1, 15,0);
-    tracep->declBit(c+94,"font_data", false,-1);
+    tracep->declBus(c+94,"font_data", false,-1, 11,0);
     tracep->popNamePrefix(1);
     tracep->pushNamePrefix("sft_regstr ");
     tracep->declBus(c+116,"data", false,-1, 31,0);
@@ -446,7 +446,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullSData(oldp+72,(vlSelf->top__DOT__v_addr),10);
     bufp->fullCData(oldp+73,((0x7fU & VL_DIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),7);
     bufp->fullCData(oldp+74,(vlSelf->top__DOT__font_v),5);
-    bufp->fullIData(oldp+75,(((IData)(vlSelf->top__DOT__my_vmem__DOT__font_data)
+    bufp->fullIData(oldp+75,(((IData)(vlSelf->__VdfgTmp_h613ff63e__0)
                                ? 0xffffffU : 0U)),24);
     bufp->fullIData(oldp+76,(vlSelf->top__DOT__led1__DOT__count),32);
     bufp->fullCData(oldp+77,(vlSelf->top__DOT__led1__DOT__led),8);
@@ -466,7 +466,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullSData(oldp+91,(vlSelf->top__DOT__my_vmem__DOT__word),16);
     bufp->fullSData(oldp+92,((0xfU & (IData)(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr))),16);
     bufp->fullSData(oldp+93,((0x3ffU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),16);
-    bufp->fullBit(oldp+94,(vlSelf->top__DOT__my_vmem__DOT__font_data));
+    bufp->fullSData(oldp+94,(vlSelf->top__DOT__my_vmem__DOT__font_data),12);
     bufp->fullIData(oldp+95,(vlSelf->top__DOT__timer_1s__DOT__count_clk),32);
     bufp->fullCData(oldp+96,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
     bufp->fullBit(oldp+97,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
