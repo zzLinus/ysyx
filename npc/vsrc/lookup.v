@@ -6,7 +6,9 @@ module lookup_table(
 reg [7:0] ascii;
 reg pressing = 1'b0;
 
-always @(*) begin
+always @(key_code) begin
+	if(key_code == 8'hf0)
+		pressing != pressing;
 	case(key_code)
 			8'h15 : ascii = 8'h51;
 			8'h1d : ascii = 8'h57;
@@ -42,8 +44,11 @@ always @(*) begin
 			8'h4a : ascii = 8'h43;
 			default: ascii = 8'h00;
 	endcase
+	if(pressing)
+		ascii_code = ascii;
+	else
+		ascii_code = 8'h00;
 end
 
-assign ascii_code = ascii;
 
 endmodule

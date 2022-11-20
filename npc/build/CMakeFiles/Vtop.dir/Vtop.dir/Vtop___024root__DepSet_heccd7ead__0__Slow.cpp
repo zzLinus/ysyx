@@ -393,6 +393,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__lookup__DOT__ascii = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT__lookup__DOT__pressing = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT__lookup__DOT____Vtogcov__pressing = VL_RAND_RESET_I(1);
     vlSelf->__VdfgTmp_h1c0fb021__0 = 0;
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__VstlIterCount = 0;
