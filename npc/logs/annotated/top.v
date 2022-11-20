@@ -180,6 +180,7 @@
 	    .v_addr(v_addr[8:0]),
 		.font_h(font_h),
 		.font_v(font_v),
+		.ascii_code(ascii_code),
 	    .vga_data(vga_data)
 	);
 	
@@ -203,17 +204,26 @@
 	    input [8:0] v_addr,
 		input [6:0] font_h,
 		input [4:0] font_v,
+		input [7:0] ascii_code,
 	    output [23:0] vga_data
 	);
 	
 	// reg [23:0] vga_mem [524287:0];
 	reg [7:0] vga_mem [2099:0];
 	reg [11:0] font_rom [4095:0];
+	reg [7:0] word_count;
 	wire [11:0] font_addr;
 	wire [11:0] word;
 	wire [11:0] font_cord_v;
 	wire [3:0] font_cord_h;
 	wire [11:0] font_data;
+	
+	always @(ascii_code) begin
+		if (ascii_code != 8'h00) begin
+			word_count = word_count + 1;
+			vga_mem[word] = ascii_code;
+		end
+	end
 	
 	initial begin
 	    $readmemh("resource/vga_font.txt", font_rom);
