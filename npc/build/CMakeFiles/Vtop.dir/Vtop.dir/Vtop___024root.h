@@ -171,6 +171,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*11:0*/ top__DOT__my_vmem__DOT__word;
         SData/*8:0*/ top__DOT__my_vmem__DOT____Vtogcov__v_addr;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
+        SData/*15:0*/ top__DOT__my_vmem__DOT____VdfgTmp_hf55c7d58__0;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
         IData/*31:0*/ top__DOT____Vtogcov__sft_rgtr_data;
@@ -185,7 +186,6 @@ class Vtop___024root final : public VerilatedModule {
         IData/*31:0*/ top__DOT__mu_seg__DOT__count;
         IData/*31:0*/ top__DOT__mu_seg__DOT__x;
         IData/*31:0*/ top__DOT__mu_seg__DOT____Vtogcov__count;
-        IData/*19:0*/ top__DOT__my_vmem__DOT__font_addr;
         IData/*19:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_addr;
         IData/*31:0*/ top__DOT__timer_1s__DOT__count_clk;
         IData/*31:0*/ top__DOT__timer_1s__DOT____Vtogcov__count_clk;

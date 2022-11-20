@@ -116,7 +116,7 @@ void Vtop___024root__trace_chg_sub_0(Vtop___024root* vlSelf, VerilatedVcd::Buffe
         bufp->chgBit(oldp+86,(vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid));
         bufp->chgBit(oldp+87,(vlSelf->top__DOT__my_vga_ctrl__DOT__v_valid));
         bufp->chgSData(oldp+88,(vlSelf->top__DOT____Vcellinp__my_vmem__v_addr),9);
-        bufp->chgIData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT__font_addr),20);
+        bufp->chgIData(oldp+89,(vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_hf55c7d58__0),20);
         bufp->chgSData(oldp+90,(vlSelf->top__DOT__my_vmem__DOT__word),12);
         bufp->chgCData(oldp+91,(vlSelf->top__DOT__my_vmem__DOT__font_cord_v),4);
         bufp->chgCData(oldp+92,((0xfU & VL_MODDIV_III(10, (IData)(vlSelf->top__DOT__h_addr), (IData)(9U)))),4);
