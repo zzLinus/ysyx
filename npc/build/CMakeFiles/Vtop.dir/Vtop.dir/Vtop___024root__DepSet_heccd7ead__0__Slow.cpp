@@ -215,6 +215,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__v_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__font_v = VL_RAND_RESET_I(5);
     vlSelf->top__DOT____Vcellinp__my_vmem__v_addr = VL_RAND_RESET_I(9);
+    vlSelf->top__DOT__ascii_code = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__clk = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__rst = VL_RAND_RESET_I(1);
     vlSelf->top__DOT____Vtogcov__sw = VL_RAND_RESET_I(8);
@@ -269,6 +270,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT____Vtogcov__vga_data = VL_RAND_RESET_I(24);
     vlSelf->top__DOT____Vtogcov__seg_x = VL_RAND_RESET_I(8);
     vlSelf->top__DOT____Vtogcov__seg_y = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT____Vtogcov__key_code = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT____Vtogcov__ascii_code = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__led1__DOT__count = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__led1__DOT__led = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__led1__DOT____Vtogcov__count = VL_RAND_RESET_I(32);
