@@ -60,7 +60,7 @@ static regex_t re[NR_REGEX] = {};
 bool check_parentheses(int p, int q);
 uint64_t eval(int p, int q);
 uint64_t get_opt(int p, int q);
-uint64_t eval_reg(char *str);
+int64_t eval_reg(char *str);
 void eval_deref(void);
 void clear_tokens(void);
 
@@ -85,7 +85,7 @@ void init_regex()
 
 typedef struct token {
 	int type;
-	char str[32];
+	char str[64];
 } Token;
 
 static Token tokens[32] __attribute__((used)) = {};
@@ -263,13 +263,13 @@ bool check_parentheses(int p, int q)
 	return false;
 }
 
-uint64_t eval_reg(char *str)
+int64_t eval_reg(char *str)
 {
 	bool success = false;
 	char num[64];
 	uint64_t tmp = isa_reg_str2val(str, &success);
 	if (!success)
-		panic("Read register failed, may be the wrong reg name.");
+		return -1;
 	sprintf(num, "%lu", tmp);
 	strcpy(str, num);
 	return tmp;

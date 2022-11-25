@@ -19,7 +19,7 @@
 #include <common.h>
 
 word_t expr(char *e, bool *success);
-uint64_t eval_reg(char *args);
+int64_t eval_reg(char *args);
 void init_regex();
 void init_wp_pool();
 void create_wp(char *args, bool *success);

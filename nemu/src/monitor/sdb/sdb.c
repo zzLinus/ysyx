@@ -164,7 +164,7 @@ static int cmd_p(char *args)
 	expr(args, &success);
 
 	if (!success)
-		printf("Can't evaluate expression.\n");
+		printf("Can't rauate expression.\n");
 	return 0;
 }
 
