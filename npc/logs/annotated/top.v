@@ -225,6 +225,10 @@
 				word_count = word_count * 12'd71;
 				$display("word_count %d", word_count);
 			end
+			else if (ascii_code == 8'h7f) begin
+				word_count = word_count - 1;
+				vga_mem[word_count] = 8'h20;
+			end
 			else begin 
 				vga_mem[word_count] = ascii_code;
 				word_count = word_count + 1;
