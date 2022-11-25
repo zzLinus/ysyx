@@ -55,7 +55,7 @@ void create_wp(char *args, bool *success)
 	args = strtok(args, " ");
 	memmove(args, args + 1, strlen(args));
 	strcpy(wp->var_name, args);
-	wp->value = eval_reg(args);
+	wp->value = (uint32_t)eval_reg(args);
 	*success = true;
 	printf("create watch point\nvar_name: %s\nvar_value: %u\n", wp->var_name, wp->value);
 }
@@ -100,7 +100,7 @@ void check_wp()
 	for (WP *tmp = head; tmp != NULL; tmp = tmp->next) {
 		char tmp_name[16];
 		strcpy(tmp_name, tmp->var_name);
-		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != eval_reg(tmp_name)) {
+		if (strcmp(tmp->var_name, "INVAI") != 0 && tmp->value != (uint32_t)eval_reg(tmp_name)) {
 			nemu_state.state = NEMU_STOP;
 			printf("Reg %s,old value %u\n", tmp->var_name, tmp->value);
 			tmp->value = atoi(tmp_name);
