@@ -46,6 +46,7 @@ always @(key_code) begin
 			8'h29 : ascii = 8'h20;
 			8'h5a : ascii = 8'ha9;
 			8'h16 : ascii = 8'h21;
+			8'h66 : ascii = 8'h7f;
 			default: ascii = 8'h00;
 	endcase
 	if(!pressing)
