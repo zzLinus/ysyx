@@ -57,7 +57,7 @@ void create_wp(char *args, bool *success)
 	strcpy(wp->var_name, args);
 	wp->value = (uint32_t)eval_reg(args);
 	*success = true;
-	printf("create watch point\nvar_name: %s\nvar_value: %u\n", wp->var_name, wp->value);
+	printf("create watch point\nwp_name: %s\nwp_value: %u\n", wp->var_name, wp->value);
 }
 
 WP *new_wp()
