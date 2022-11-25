@@ -29,7 +29,11 @@ class Vtop__Syms final : public VerilatedSyms {
     Vtop___024root                 TOP;
 
     // COVERAGE
+<<<<<<< HEAD
+    uint32_t __Vcoverage[1112];
+=======
     uint32_t __Vcoverage[1115];
+>>>>>>> aad8e6e (> sim RTL)
 
     // CONSTRUCTORS
     Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* modelp);
