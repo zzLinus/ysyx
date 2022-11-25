@@ -126,35 +126,10 @@ static int cmd_x(char *args)
 		return 0;
 	}
 	arg1 = strtol(arg, NULL, 16);
-	unsigned i;
-	for (i = 0; i < arg0 / 8; ++i) {
-		if (i == 0)
-			printf("Memory from %x to %x:\n", arg1, arg1 + (arg0 / 8) * 8);
-		printf("0x%016lx\n", paddr_read(arg1, 8));
-		arg1 += 8;
-	}
-	arg0 %= 8;
-	for (i = 0; i < arg0 / 4; ++i) {
-		if (i == 0)
-			printf("Memory from %x to %x:\n", arg1, arg1 + (arg0 / 4) * 4);
-		printf("0x%016lx\n", paddr_read(arg1, 4));
+	for (int i = 0; i < arg0; i++) {
+		printf("0x%08lx\n", paddr_read(arg1, 4));
 		arg1 += 4;
 	}
-	arg0 %= 4;
-	for (i = 0; i < arg0 / 2; ++i) {
-		if (i == 0)
-			printf("Memory from %x to %x:\n", arg1, arg1 + (arg0 / 2) * 2);
-		printf("0x%016lx\n", paddr_read(arg1, 2));
-		arg1 += 2;
-	}
-	arg0 %= 2;
-	for (i = 0; i < arg0 / 1; ++i) {
-		if (i == 0)
-			printf("Memory from %x to %x:\n", arg1, arg1 + (arg0 / 1) * 1);
-		printf("0x%016lx\n", paddr_read(arg1, 1));
-		arg1 += 1;
-	}
-	arg0 %= 2;
 	return 0;
 }
 
@@ -164,7 +139,7 @@ static int cmd_p(char *args)
 	expr(args, &success);
 
 	if (!success)
-		printf("Can't evaluate expression.\n");
+		printf("Can't rauate expression.\n");
 	return 0;
 }
 
