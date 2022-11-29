@@ -120,7 +120,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__ico(vlSelf);
 #endif
-                VL_FATAL_MT("vsrc/top.v", 1, "", "Input combinational region did not converge.");
+                VL_FATAL_MT("vsrc/encoder.v", 47, "", "Input combinational region did not converge.");
             }
             vlSelf->__VicoIterCount = ((IData)(1U) 
                                        + vlSelf->__VicoIterCount);
@@ -143,7 +143,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                     Vtop___024root___dump_triggers__act(vlSelf);
 #endif
-                    VL_FATAL_MT("vsrc/top.v", 1, "", "Active region did not converge.");
+                    VL_FATAL_MT("vsrc/encoder.v", 47, "", "Active region did not converge.");
                 }
                 vlSelf->__VactIterCount = ((IData)(1U) 
                                            + vlSelf->__VactIterCount);
@@ -158,7 +158,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__nba(vlSelf);
 #endif
-                VL_FATAL_MT("vsrc/top.v", 1, "", "NBA region did not converge.");
+                VL_FATAL_MT("vsrc/encoder.v", 47, "", "NBA region did not converge.");
             }
             __VnbaIterCount = ((IData)(1U) + __VnbaIterCount);
             Vtop___024root___eval_nba(vlSelf);
@@ -172,6 +172,8 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_debug_assertions\n"); );
     // Body
+    if (VL_UNLIKELY((vlSelf->EN & 0xfeU))) {
+        Verilated::overWidthError("EN");}
     if (VL_UNLIKELY((vlSelf->clk & 0xfeU))) {
         Verilated::overWidthError("clk");}
     if (VL_UNLIKELY((vlSelf->rst & 0xfeU))) {
@@ -180,8 +182,8 @@ void Vtop___024root___eval_debug_assertions(Vtop___024root* vlSelf) {
         Verilated::overWidthError("ps2_clk");}
     if (VL_UNLIKELY((vlSelf->ps2_data & 0xfeU))) {
         Verilated::overWidthError("ps2_data");}
-    if (VL_UNLIKELY((vlSelf->x & 0xf8U))) {
-        Verilated::overWidthError("x");}
+    if (VL_UNLIKELY((vlSelf->top__02Ex & 0xf8U))) {
+        Verilated::overWidthError("top.x");}
     if (VL_UNLIKELY((vlSelf->alu_fnselec & 0xf8U))) {
         Verilated::overWidthError("alu_fnselec");}
     if (VL_UNLIKELY((vlSelf->alu_a & 0xf0U))) {
