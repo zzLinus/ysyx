@@ -76,11 +76,6 @@ decoder38 dec(
 	.y(y_dec)
 );
 
-encoder83 encoder(
-	.x(ec_x),
-	.EN(ec_en),
-	.y(ec_y)
-);
 
 inc_counter inc_counter(
 	.clk(timer_out),
