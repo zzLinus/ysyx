@@ -26,18 +26,16 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     // PORTS
     // The application code writes and reads these signals to
     // propagate new values into/out from the Verilated model.
-    VL_IN8(&EN,0,0);
     VL_IN8(&clk,0,0);
     VL_IN8(&en,0,0);
+    VL_IN8(&ec_en,0,0);
     VL_OUT8(&timer_out,0,0);
-    VL_IN8(&encoder83__02Ex,7,0);
-    VL_OUT8(&encoder83__02Ey,2,0);
     VL_IN8(&rst,0,0);
     VL_IN8(&sw,7,0);
     VL_IN8(&ps2_clk,0,0);
     VL_IN8(&ps2_data,0,0);
     VL_IN8(&a,7,0);
-    VL_IN8(&top__02Ex,2,0);
+    VL_IN8(&x,2,0);
     VL_IN8(&ec_x,7,0);
     VL_IN8(&alu_fnselec,2,0);
     VL_IN8(&alu_a,3,0);
@@ -45,7 +43,6 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_IN8(&counter_EN,0,0);
     VL_IN8(&rand_in,0,0);
     VL_IN8(&state_machine_clr,0,0);
-    VL_IN8(&ec_en,0,0);
     VL_IN8(&s,1,0);
     VL_IN8(&sft_rgtr_shamt,4,0);
     VL_IN8(&sft_rgtr_l_or_r,0,0);
@@ -65,7 +62,7 @@ class Vtop VL_NOT_FINAL : public VerilatedModel {
     VL_OUT8(&seg5,7,0);
     VL_OUT8(&seg6,7,0);
     VL_OUT8(&seg7,7,0);
-    VL_OUT8(&top__02Ey,1,0);
+    VL_OUT8(&y,1,0);
     VL_OUT8(&ec_y,2,0);
     VL_OUT8(&y_dec,7,0);
     VL_OUT8(&alu_res,3,0);

@@ -72,7 +72,7 @@ VL_ATTR_COLD void Vtop___024root___eval_settle(Vtop___024root* vlSelf) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__stl(vlSelf);
 #endif
-                VL_FATAL_MT("vsrc/encoder.v", 47, "", "Settle region did not converge.");
+                VL_FATAL_MT("vsrc/top.v", 1, "", "Settle region did not converge.");
             }
             vlSelf->__VstlIterCount = ((IData)(1U) 
                                        + vlSelf->__VstlIterCount);
@@ -181,16 +181,13 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___ctor_var_reset\n"); );
     // Body
-    vlSelf->encoder83__02Ex = VL_RAND_RESET_I(8);
-    vlSelf->EN = VL_RAND_RESET_I(1);
-    vlSelf->encoder83__02Ey = VL_RAND_RESET_I(3);
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->rst = VL_RAND_RESET_I(1);
     vlSelf->sw = VL_RAND_RESET_I(8);
     vlSelf->ps2_clk = VL_RAND_RESET_I(1);
     vlSelf->ps2_data = VL_RAND_RESET_I(1);
     vlSelf->a = VL_RAND_RESET_I(8);
-    vlSelf->top__02Ex = VL_RAND_RESET_I(3);
+    vlSelf->x = VL_RAND_RESET_I(3);
     vlSelf->ec_x = VL_RAND_RESET_I(8);
     vlSelf->alu_fnselec = VL_RAND_RESET_I(3);
     vlSelf->alu_a = VL_RAND_RESET_I(4);
@@ -222,7 +219,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->seg6 = VL_RAND_RESET_I(8);
     vlSelf->seg7 = VL_RAND_RESET_I(8);
     vlSelf->sft_out_q = VL_RAND_RESET_I(32);
-    vlSelf->top__02Ey = VL_RAND_RESET_I(2);
+    vlSelf->y = VL_RAND_RESET_I(2);
     vlSelf->ec_y = VL_RAND_RESET_I(3);
     vlSelf->y_dec = VL_RAND_RESET_I(8);
     vlSelf->alu_res = VL_RAND_RESET_I(4);
@@ -233,10 +230,6 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->inc_counter_out = VL_RAND_RESET_I(8);
     vlSelf->dec_counter_out = VL_RAND_RESET_I(3);
     vlSelf->timer_out = VL_RAND_RESET_I(1);
-    vlSelf->encoder83__DOT__i = VL_RAND_RESET_I(32);
-    vlSelf->encoder83__DOT____Vtogcov__x = VL_RAND_RESET_I(8);
-    vlSelf->encoder83__DOT____Vtogcov__EN = VL_RAND_RESET_I(1);
-    vlSelf->encoder83__DOT____Vtogcov__y = VL_RAND_RESET_I(3);
     vlSelf->top__DOT__h_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__v_addr = VL_RAND_RESET_I(10);
     vlSelf->top__DOT____Vcellinp__my_vmem__v_addr = VL_RAND_RESET_I(9);
@@ -301,6 +294,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__led1__DOT____Vtogcov__count = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__led1__DOT____Vtogcov__led = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__dec__DOT__i = VL_RAND_RESET_I(32);
+    vlSelf->top__DOT__encoder__DOT__i = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__my_vga_ctrl__DOT__x_cnt = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt = VL_RAND_RESET_I(10);
     vlSelf->top__DOT__my_vga_ctrl__DOT__h_valid = VL_RAND_RESET_I(1);
