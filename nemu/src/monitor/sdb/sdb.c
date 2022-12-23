@@ -127,7 +127,7 @@ static int cmd_x(char *args)
 	}
 	arg1 = strtol(arg, NULL, 16);
 	for (int i = 0; i < arg0; i++) {
-		printf("0x%0lx\n", paddr_read(arg1, 4));
+		printf("0x%08lx\n", paddr_read(arg1, 4));
 		arg1 += 4;
 	}
 	return 0;
