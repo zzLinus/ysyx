@@ -116,7 +116,7 @@ static bool make_token(char *e)
 				 * of tokens, some extra actions should be performed.
 				 */
 
-				new_token = true;
+				new_token = 1;
 				switch (rules[i].token_type) {
 				case TK_EQ:
 					break;
@@ -278,8 +278,7 @@ int64_t eval_reg(char *str)
 void eval_deref(void)
 {
 	for (int i = 0; i < nr_token; i++) {
-		if (tokens[i].type == '*' && (i == 0 || (tokens[i - 1].type != TK_NUM && tokens[i - 1].type != '(' &&
-							 tokens[i - 1].type != ')'))) {
+		if (tokens[i].type == '*' && (i == 0 || (tokens[i - 1].type != TK_NUM && tokens[i - 1].type != ')'))) {
 			uint64_t tmp;
 			char num[32];
 			tokens[i].type = TK_NUM;
