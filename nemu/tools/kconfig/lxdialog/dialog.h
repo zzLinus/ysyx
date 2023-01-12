@@ -5,13 +5,13 @@
  *  AUTHOR: Savio Lam (lam836@cs.cuhk.hk)
  */
 
-#include <sys/types.h>
-#include <fcntl.h>
-#include <unistd.h>
 #include <ctype.h>
+#include <fcntl.h>
+#include <stdbool.h>
 #include <stdlib.h>
 #include <string.h>
-#include <stdbool.h>
+#include <sys/types.h>
+#include <unistd.h>
 
 #ifdef __sun__
 #define CURS_MACROS
@@ -36,10 +36,10 @@
 
 #define TR(params) _tracef params
 
-#define KEY_ESC 27
-#define TAB 9
-#define MAX_LEN 2048
-#define BUF_SIZE (10 * 1024)
+#define KEY_ESC   27
+#define TAB       9
+#define MAX_LEN   2048
+#define BUF_SIZE  (10 * 1024)
 #define MIN(x, y) (x < y ? x : y)
 #define MAX(x, y) (x > y ? x : y)
 
@@ -80,50 +80,53 @@
 /*
  *   Color definitions
  */
-struct dialog_color {
-	chtype atr; /* Color attribute */
-	int fg; /* foreground */
-	int bg; /* background */
-	int hl; /* highlight this item */
+struct dialog_color
+{
+  chtype atr; /* Color attribute */
+  int fg;     /* foreground */
+  int bg;     /* background */
+  int hl;     /* highlight this item */
 };
 
-struct subtitle_list {
-	struct subtitle_list *next;
-	const char *text;
+struct subtitle_list
+{
+  struct subtitle_list *next;
+  const char *text;
 };
 
-struct dialog_info {
-	const char *backtitle;
-	struct subtitle_list *subtitles;
-	struct dialog_color screen;
-	struct dialog_color shadow;
-	struct dialog_color dialog;
-	struct dialog_color title;
-	struct dialog_color border;
-	struct dialog_color button_active;
-	struct dialog_color button_inactive;
-	struct dialog_color button_key_active;
-	struct dialog_color button_key_inactive;
-	struct dialog_color button_label_active;
-	struct dialog_color button_label_inactive;
-	struct dialog_color inputbox;
-	struct dialog_color inputbox_border;
-	struct dialog_color searchbox;
-	struct dialog_color searchbox_title;
-	struct dialog_color searchbox_border;
-	struct dialog_color position_indicator;
-	struct dialog_color menubox;
-	struct dialog_color menubox_border;
-	struct dialog_color item;
-	struct dialog_color item_selected;
-	struct dialog_color tag;
-	struct dialog_color tag_selected;
-	struct dialog_color tag_key;
-	struct dialog_color tag_key_selected;
-	struct dialog_color check;
-	struct dialog_color check_selected;
-	struct dialog_color uarrow;
-	struct dialog_color darrow;
+struct dialog_info
+{
+  const char *backtitle;
+  struct subtitle_list *subtitles;
+  struct dialog_color screen;
+  struct dialog_color shadow;
+  struct dialog_color dialog;
+  struct dialog_color title;
+  struct dialog_color border;
+  struct dialog_color button_active;
+  struct dialog_color button_inactive;
+  struct dialog_color button_key_active;
+  struct dialog_color button_key_inactive;
+  struct dialog_color button_label_active;
+  struct dialog_color button_label_inactive;
+  struct dialog_color inputbox;
+  struct dialog_color inputbox_border;
+  struct dialog_color searchbox;
+  struct dialog_color searchbox_title;
+  struct dialog_color searchbox_border;
+  struct dialog_color position_indicator;
+  struct dialog_color menubox;
+  struct dialog_color menubox_border;
+  struct dialog_color item;
+  struct dialog_color item_selected;
+  struct dialog_color tag;
+  struct dialog_color tag_selected;
+  struct dialog_color tag_key;
+  struct dialog_color tag_key_selected;
+  struct dialog_color check;
+  struct dialog_color check_selected;
+  struct dialog_color uarrow;
+  struct dialog_color darrow;
 };
 
 /*
@@ -150,17 +153,19 @@ char item_tag(void);
 
 /* item list manipulation for lxdialog use */
 #define MAXITEMSTR 200
-struct dialog_item {
-	char str[MAXITEMSTR]; /* prompt displayed */
-	char tag;
-	void *data; /* pointer to menu item - used by menubox+checklist */
-	int selected; /* Set to 1 by dialog_*() function if selected. */
+struct dialog_item
+{
+  char str[MAXITEMSTR]; /* prompt displayed */
+  char tag;
+  void *data;   /* pointer to menu item - used by menubox+checklist */
+  int selected; /* Set to 1 by dialog_*() function if selected. */
 };
 
 /* list of lialog_items */
-struct dialog_list {
-	struct dialog_item node;
-	struct dialog_list *next;
+struct dialog_list
+{
+  struct dialog_item node;
+  struct dialog_list *next;
 };
 
 extern struct dialog_list *item_cur;
@@ -173,9 +178,8 @@ int item_n(void);
 const char *item_str(void);
 int item_is_selected(void);
 int item_is_tag(char tag);
-#define item_foreach()                                                                         \
-	for (item_cur = item_head ? item_head : item_cur; item_cur && (item_cur != &item_nil); \
-	     item_cur = item_cur->next)
+#define item_foreach() \
+  for (item_cur = item_head ? item_head : item_cur; item_cur && (item_cur != &item_nil); item_cur = item_cur->next)
 
 /* generic key handlers */
 int on_key_esc(WINDOW *win);
@@ -183,17 +187,17 @@ int on_key_resize(void);
 
 /* minimum (re)size values */
 #define CHECKLIST_HEIGTH_MIN 6 /* For dialog_checklist() */
-#define CHECKLIST_WIDTH_MIN 6
-#define INPUTBOX_HEIGTH_MIN 2 /* For dialog_inputbox() */
-#define INPUTBOX_WIDTH_MIN 2
-#define MENUBOX_HEIGTH_MIN 15 /* For dialog_menu() */
-#define MENUBOX_WIDTH_MIN 65
-#define TEXTBOX_HEIGTH_MIN 8 /* For dialog_textbox() */
-#define TEXTBOX_WIDTH_MIN 8
-#define YESNO_HEIGTH_MIN 4 /* For dialog_yesno() */
-#define YESNO_WIDTH_MIN 4
-#define WINDOW_HEIGTH_MIN 19 /* For init_dialog() */
-#define WINDOW_WIDTH_MIN 80
+#define CHECKLIST_WIDTH_MIN  6
+#define INPUTBOX_HEIGTH_MIN  2 /* For dialog_inputbox() */
+#define INPUTBOX_WIDTH_MIN   2
+#define MENUBOX_HEIGTH_MIN   15 /* For dialog_menu() */
+#define MENUBOX_WIDTH_MIN    65
+#define TEXTBOX_HEIGTH_MIN   8 /* For dialog_textbox() */
+#define TEXTBOX_WIDTH_MIN    8
+#define YESNO_HEIGTH_MIN     4 /* For dialog_yesno() */
+#define YESNO_WIDTH_MIN      4
+#define WINDOW_HEIGTH_MIN    19 /* For init_dialog() */
+#define WINDOW_WIDTH_MIN     80
 
 int init_dialog(const char *backtitle);
 void set_dialog_backtitle(const char *backtitle);
@@ -212,8 +216,16 @@ int dialog_yesno(const char *title, const char *prompt, int height, int width);
 int dialog_msgbox(const char *title, const char *prompt, int height, int width, int pause);
 
 typedef void (*update_text_fn)(char *buf, size_t start, size_t end, void *_data);
-int dialog_textbox(const char *title, char *tbuf, int initial_height, int initial_width, int *keys, int *_vscroll,
-		   int *_hscroll, update_text_fn update_text, void *data);
+int dialog_textbox(
+    const char *title,
+    char *tbuf,
+    int initial_height,
+    int initial_width,
+    int *keys,
+    int *_vscroll,
+    int *_hscroll,
+    update_text_fn update_text,
+    void *data);
 int dialog_menu(const char *title, const char *prompt, const void *selected, int *s_scroll);
 int dialog_checklist(const char *title, const char *prompt, int height, int width, int list_height);
 int dialog_inputbox(const char *title, const char *prompt, int height, int width, const char *init);

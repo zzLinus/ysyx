@@ -35,10 +35,11 @@ const char *sym_get_string_value(struct symbol *sym);
 const char *prop_get_type_name(enum prop_type type);
 
 /* preprocess.c */
-enum variable_flavor {
-	VAR_SIMPLE,
-	VAR_RECURSIVE,
-	VAR_APPEND,
+enum variable_flavor
+{
+  VAR_SIMPLE,
+  VAR_RECURSIVE,
+  VAR_APPEND,
 };
 void env_write_dep(FILE *f, const char *auto_conf_name);
 void variable_add(const char *name, const char *value, enum variable_flavor flavor);

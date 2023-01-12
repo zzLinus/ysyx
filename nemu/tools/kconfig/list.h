@@ -16,20 +16,21 @@
  * @member:     the name of the member within the struct.
  *
  */
-#define container_of(ptr, type, member)                            \
-	({                                                         \
-		const typeof(((type *)0)->member) *__mptr = (ptr); \
-		(type *)((char *)__mptr - offsetof(type, member)); \
-	})
+#define container_of(ptr, type, member)                \
+  ({                                                   \
+    const typeof(((type *)0)->member) *__mptr = (ptr); \
+    (type *)((char *)__mptr - offsetof(type, member)); \
+  })
 
-struct list_head {
-	struct list_head *next, *prev;
+struct list_head
+{
+  struct list_head *next, *prev;
 };
 
-#define LIST_HEAD_INIT(name)     \
-	{                        \
-		&(name), &(name) \
-	}
+#define LIST_HEAD_INIT(name) \
+  {                          \
+    &(name), &(name)         \
+  }
 
 #define LIST_HEAD(name) struct list_head name = LIST_HEAD_INIT(name)
 
@@ -47,9 +48,9 @@ struct list_head {
  * @head:	the head for your list.
  * @member:	the name of the list_head within the struct.
  */
-#define list_for_each_entry(pos, head, member)                                             \
-	for (pos = list_entry((head)->next, typeof(*pos), member); &pos->member != (head); \
-	     pos = list_entry(pos->member.next, typeof(*pos), member))
+#define list_for_each_entry(pos, head, member)                                       \
+  for (pos = list_entry((head)->next, typeof(*pos), member); &pos->member != (head); \
+       pos = list_entry(pos->member.next, typeof(*pos), member))
 
 /**
  * list_for_each_entry_safe - iterate over list of given type safe against removal of list entry
@@ -58,10 +59,10 @@ struct list_head {
  * @head:	the head for your list.
  * @member:	the name of the list_head within the struct.
  */
-#define list_for_each_entry_safe(pos, n, head, member)              \
-	for (pos = list_entry((head)->next, typeof(*pos), member),  \
-	    n = list_entry(pos->member.next, typeof(*pos), member); \
-	     &pos->member != (head); pos = n, n = list_entry(n->member.next, typeof(*n), member))
+#define list_for_each_entry_safe(pos, n, head, member)                                                               \
+  for (pos = list_entry((head)->next, typeof(*pos), member), n = list_entry(pos->member.next, typeof(*pos), member); \
+       &pos->member != (head);                                                                                       \
+       pos = n, n = list_entry(n->member.next, typeof(*n), member))
 
 /**
  * list_empty - tests whether a list is empty
@@ -69,7 +70,7 @@ struct list_head {
  */
 static inline int list_empty(const struct list_head *head)
 {
-	return head->next == head;
+  return head->next == head;
 }
 
 /*
@@ -80,10 +81,10 @@ static inline int list_empty(const struct list_head *head)
  */
 static inline void __list_add(struct list_head *_new, struct list_head *prev, struct list_head *next)
 {
-	next->prev = _new;
-	_new->next = next;
-	_new->prev = prev;
-	prev->next = _new;
+  next->prev = _new;
+  _new->next = next;
+  _new->prev = prev;
+  prev->next = _new;
 }
 
 /**
@@ -96,7 +97,7 @@ static inline void __list_add(struct list_head *_new, struct list_head *prev, st
  */
 static inline void list_add_tail(struct list_head *_new, struct list_head *head)
 {
-	__list_add(_new, head->prev, head);
+  __list_add(_new, head->prev, head);
 }
 
 /*
@@ -108,8 +109,8 @@ static inline void list_add_tail(struct list_head *_new, struct list_head *head)
  */
 static inline void __list_del(struct list_head *prev, struct list_head *next)
 {
-	next->prev = prev;
-	prev->next = next;
+  next->prev = prev;
+  prev->next = next;
 }
 
 #define LIST_POISON1 ((void *)0x00100100)
@@ -122,8 +123,8 @@ static inline void __list_del(struct list_head *prev, struct list_head *next)
  */
 static inline void list_del(struct list_head *entry)
 {
-	__list_del(entry->prev, entry->next);
-	entry->next = (struct list_head *)LIST_POISON1;
-	entry->prev = (struct list_head *)LIST_POISON2;
+  __list_del(entry->prev, entry->next);
+  entry->next = (struct list_head *)LIST_POISON1;
+  entry->prev = (struct list_head *)LIST_POISON2;
 }
 #endif
