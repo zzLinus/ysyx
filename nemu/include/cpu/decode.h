@@ -65,8 +65,13 @@ pattern_decode(const char *str, int len, uint64_t *key, uint64_t *mask, uint64_t
 #define macro64(i) \
   macro32(i);      \
   macro32((i) + 32)
-  macro64(0);
-  panic("pattern too long");
+  macro64(0);  // line get execute first
+               // NOTE :basicly these bunch of macros is a for(int i = 0; i < 64; ++i) macro(i)
+               // i truly don't know why they write code like these may be,just may be,it
+               // generate less jum instruction, instead it makes them line by line in sequence
+               // to exec and use goto to termenate when it reach the end of the instruction
+
+  panic("pattern too long");  // if not goto finish
 #undef macro
 finish:
   *key = __key >> __shift;
@@ -115,6 +120,7 @@ finish:
     }                                                              \
   } while (0)
 
+//  these two # is usless imo
 #define INSTPAT_START(name) \
   {                         \
     const void **__instpat_end = &&concat(__instpat_end_, name);

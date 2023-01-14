@@ -28,6 +28,7 @@ enum
   TYPE_I,
   TYPE_U,
   TYPE_S,
+  TYPE_J,
   TYPE_N,  // none
 };
 
@@ -56,6 +57,17 @@ enum
   {                                                          \
     *imm = (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); \
   } while (0)
+#define immJ()                                                                                                    \
+  do                                                                                                              \
+  {                                                                                                               \
+    *imm =                                                                                                        \
+        ((SEXT(BITS(i, 30, 30), 1) << 19) | (SEXT(BITS(i, 19, 12), 8) << 18) | (SEXT(BITS(i, 20, 20), 1) << 10) | \
+         BITS(i, 30, 21));                                                                                        \
+    *imm = *imm << 1;                                                                                             \
+    printf(" imm : %lx\n", *imm);                                                                                 \
+  } while (0)
+// NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
+// multiples of 2 bytes.
 
 static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, word_t *imm, int type)
 {
@@ -64,12 +76,14 @@ static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, wor
   int rs1 = BITS(i, 19, 15);
   int rs2 = BITS(i, 24, 20);
   *dest = rd;
-  switch (type)
+  printf("type : %d\n", type);
+  switch (type)  // riscv64 4 base inst type (R I S U) 2 mutate type S->B U->J
   {
     case TYPE_I:
-      src1R();
-      immI();
+      src1R();  // load register 1 value to src1
+      immI();   // load imm value to imm
       break;
+    case TYPE_J: immJ(); break;
     case TYPE_U: immU(); break;
     case TYPE_S:
       src1R();
@@ -91,15 +105,25 @@ static int decode_exec(Decode *s)
     decode_operand(s, &dest, &src1, &src2, &imm, concat(TYPE_, type)); \
     __VA_ARGS__;                                                       \
   }
-
-  INSTPAT_START();
+  INSTPAT_START();  //                            | name | type |
   INSTPAT("??????? ????? ????? ??? ????? 00101 11", auipc, U, R(dest) = s->pc + imm);
   INSTPAT("??????? ????? ????? 011 ????? 00000 11", ld, I, R(dest) = Mr(src1 + imm, 8));
+
+  // NOTE :JAL stores the address of the instruction following the jump (pc+4) into register rd.
+  INSTPAT("??????? ????? ????? 000 ????? 00100 11", addi, I, R(dest) = src1 + imm);
+  INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + imm; R(dest) = s->snpc);
+  INSTPAT("0000000 00000 ????? 000 ????? 00100 11", mv, I, R(dest) = src1 + imm);  // mv rd rs == add rd rs 0
+  INSTPAT("??????? ????? ????? ??? ????? 00100 11", li, U, R(dest) = imm);
+  INSTPAT("??????? ????? ????? ??? ????? 11011 11", j, J, s->dnpc = s->pc + imm; R(dest) = s->snpc);  // j
+  INSTPAT("??????? ????? ????? 000 ????? 11001 11", ret, I, s->dnpc = src1);                          // ret
+
   INSTPAT("??????? ????? ????? 011 ????? 01000 11", sd, S, Mw(src1 + imm, 8, src2));
 
   INSTPAT("0000000 00001 00000 000 00000 11100 11", ebreak, N, NEMUTRAP(s->pc, R(10)));  // R(10) is $a0
   INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv, N, INV(s->pc));
+
   INSTPAT_END();
+  printf("imm dec value : %ld | imm hex value : %lx | imm bin value : %032lb \n", imm, imm, imm);
 
   R(0) = 0;  // reset $zero to 0
 

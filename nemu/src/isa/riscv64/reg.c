@@ -31,7 +31,7 @@ void isa_reg_display()
 {
   for (int i = 0; i < 31; i++)
   {
-    printf("register name: %s value: %lu \n", reg_name(i, NOTIMPLEMENT), cpu.gpr[i]);
+    printf("register name: %s | dec value: %lu | hex value: %lx\n", reg_name(i, NOTIMPLEMENT), cpu.gpr[i], cpu.gpr[i]);
   }
 }
 
