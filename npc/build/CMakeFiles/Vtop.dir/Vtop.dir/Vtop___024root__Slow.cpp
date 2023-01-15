@@ -28,9 +28,10 @@ Vtop___024root::~Vtop___024root() {
 }
 
 // Coverage
-void Vtop___024root::__vlCoverInsert(uint32_t* countp, bool enable, const char* filenamep, int lineno, int column,
+void Vtop___024root::__vlCoverInsert(std::atomic<uint32_t>* countp, bool enable, const char* filenamep, int lineno, int column,
     const char* hierp, const char* pagep, const char* commentp, const char* linescovp) {
-    uint32_t* count32p = countp;
+    assert(sizeof(uint32_t) == sizeof(std::atomic<uint32_t>));
+    uint32_t* count32p = reinterpret_cast<uint32_t*>(countp);
     static uint32_t fake_zero_count = 0;
     if (!enable) count32p = &fake_zero_count;
     *count32p = 0;
