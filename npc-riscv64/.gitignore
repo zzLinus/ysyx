@@ -1,0 +1,14 @@
+*.*
+*
+!*/
+!Makefile
+!CMakeLists.txt
+!*.mk
+!*.[cSh]
+!*.v
+!*.cc
+!*.cpp
+!.gitignore
+!README.md
+build
+!*.txt
