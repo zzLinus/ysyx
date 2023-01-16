@@ -116,7 +116,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
         Vtop___024root___eval_triggers__ico(vlSelf);
         if (vlSelf->__VicoTriggered.any()) {
             __VicoContinue = 1U;
-            if ((0x64U < vlSelf->__VicoIterCount)) {
+            if (VL_UNLIKELY((0x64U < vlSelf->__VicoIterCount))) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__ico(vlSelf);
 #endif
@@ -139,7 +139,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
             Vtop___024root___eval_triggers__act(vlSelf);
             if (vlSelf->__VactTriggered.any()) {
                 vlSelf->__VactContinue = 1U;
-                if ((0x64U < vlSelf->__VactIterCount)) {
+                if (VL_UNLIKELY((0x64U < vlSelf->__VactIterCount))) {
 #ifdef VL_DEBUG
                     Vtop___024root___dump_triggers__act(vlSelf);
 #endif
@@ -154,7 +154,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
         }
         if (vlSelf->__VnbaTriggered.any()) {
             __VnbaContinue = 1U;
-            if ((0x64U < __VnbaIterCount)) {
+            if (VL_UNLIKELY((0x64U < __VnbaIterCount))) {
 #ifdef VL_DEBUG
                 Vtop___024root___dump_triggers__nba(vlSelf);
 #endif

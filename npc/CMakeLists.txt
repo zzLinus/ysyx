@@ -33,14 +33,14 @@ endif()
 add_executable(Vtop ../csrc/main.cc)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
-target_link_libraries(Vtop ${CMAKE_SOURCE_DIR}/nvboard.a)
-target_link_libraries(Vtop SDL2 SDL2_image)
+target_link_libraries(Vtop PUBLIC ${CMAKE_SOURCE_DIR}/nvboard.a)
+target_link_libraries(Vtop PUBLIC SDL2 SDL2_image)
 
 # Add the Verilated circuit to the target
 verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
-	VERILATOR_ARGS -f ./input.vc -x-assign fast --trace
+	VERILATOR_ARGS -x-assign fast --trace
 	SOURCES vsrc/top.v vsrc/led.v vsrc/ps2_keyboard.v vsrc/seg.v vsrc/vga_ctrl.v
 	vsrc/multiselector.v vsrc/decoder.v vsrc/encoder.v vsrc/alu.v vsrc/binary_counter.v
 	vsrc/timer.v vsrc/shift_register.v vsrc/state_machine.v vsrc/multiselector-template.v

@@ -441,6 +441,30 @@ usr/share/verilator/include/verilated_cov.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/usr/share/verilator/include/verilated_cov.cpp.s
 .PHONY : usr/share/verilator/include/verilated_cov.cpp.s
 
+usr/share/verilator/include/verilated_threads.o: usr/share/verilator/include/verilated_threads.cpp.o
+.PHONY : usr/share/verilator/include/verilated_threads.o
+
+# target to build an object file
+usr/share/verilator/include/verilated_threads.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/usr/share/verilator/include/verilated_threads.cpp.o
+.PHONY : usr/share/verilator/include/verilated_threads.cpp.o
+
+usr/share/verilator/include/verilated_threads.i: usr/share/verilator/include/verilated_threads.cpp.i
+.PHONY : usr/share/verilator/include/verilated_threads.i
+
+# target to preprocess a source file
+usr/share/verilator/include/verilated_threads.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/usr/share/verilator/include/verilated_threads.cpp.i
+.PHONY : usr/share/verilator/include/verilated_threads.cpp.i
+
+usr/share/verilator/include/verilated_threads.s: usr/share/verilator/include/verilated_threads.cpp.s
+.PHONY : usr/share/verilator/include/verilated_threads.s
+
+# target to generate assembly for a file
+usr/share/verilator/include/verilated_threads.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vtop.dir/build.make CMakeFiles/Vtop.dir/usr/share/verilator/include/verilated_threads.cpp.s
+.PHONY : usr/share/verilator/include/verilated_threads.cpp.s
+
 usr/share/verilator/include/verilated_vcd_c.o: usr/share/verilator/include/verilated_vcd_c.cpp.o
 .PHONY : usr/share/verilator/include/verilated_vcd_c.o
 
@@ -513,6 +537,9 @@ help:
 	@echo "... usr/share/verilator/include/verilated_cov.o"
 	@echo "... usr/share/verilator/include/verilated_cov.i"
 	@echo "... usr/share/verilator/include/verilated_cov.s"
+	@echo "... usr/share/verilator/include/verilated_threads.o"
+	@echo "... usr/share/verilator/include/verilated_threads.i"
+	@echo "... usr/share/verilator/include/verilated_threads.s"
 	@echo "... usr/share/verilator/include/verilated_vcd_c.o"
 	@echo "... usr/share/verilator/include/verilated_vcd_c.i"
 	@echo "... usr/share/verilator/include/verilated_vcd_c.s"

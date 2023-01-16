@@ -126,7 +126,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__my_keyboard__DOT____Vtogcov__count;
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
-        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h68ebe97f__0;
+        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h6f20105c__0;
         CData/*3:0*/ top__DOT__alu__DOT__tmp;
         CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
         CData/*3:0*/ top__DOT__state_machine__DOT__state_din;
@@ -145,14 +145,14 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_he230faa8__0;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h84adcffd__0;
     };
     struct {
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_he230faa8__1;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h84adcffd__1;
         CData/*7:0*/ top__DOT__lookup__DOT__ascii;
         CData/*0:0*/ top__DOT__lookup__DOT__pressing;
         CData/*0:0*/ top__DOT__lookup__DOT____Vtogcov__pressing;
-        CData/*0:0*/ __VdfgTmp_hcb78dc13__0;
+        CData/*0:0*/ __VdfgTmp_hdc53e345__0;
         CData/*3:0*/ __Vdly__top__DOT__my_keyboard__DOT__count;
         CData/*0:0*/ __Vdly__timer_out;
         CData/*0:0*/ __Vtrigrprev__TOP__clk;
@@ -186,7 +186,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_data;
-        SData/*11:0*/ top__DOT__my_vmem__DOT____VdfgTmp_hcec74e9b__0;
+        SData/*11:0*/ top__DOT__my_vmem__DOT____VdfgTmp_h1bcba204__0;
         SData/*9:0*/ __Vdly__top__DOT__my_keyboard__DOT__buffer;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
@@ -244,7 +244,7 @@ class Vtop___024root final : public VerilatedModule {
 
     // INTERNAL METHODS
     void __Vconfigure(bool first);
-    void __vlCoverInsert(uint32_t* countp, bool enable, const char* filenamep, int lineno, int column,
+    void __vlCoverInsert(std::atomic<uint32_t>* countp, bool enable, const char* filenamep, int lineno, int column,
         const char* hierp, const char* pagep, const char* commentp, const char* linescovp);
 } VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
 
