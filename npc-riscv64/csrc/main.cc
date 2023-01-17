@@ -79,8 +79,11 @@ int main(int argc, char **argv, char **env) {
   top->_pcen = 1;
 
   int step = 5;
+  top->_exu_inX = 1;
+  top->_exu_inY = 1;
   while (step--) {
     contextp->timeInc(1);
+    top->_exu_inX++;
 
     top->_inst = mem->pmem_read(top->_pc_out, 4);
     // top->_pcen = !top->_pcen;
