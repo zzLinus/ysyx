@@ -1,12 +1,15 @@
 module top(
 	input _clk,
 	input _rst,
-	input _pcen,
-	input [63:0] _exu_inX,
-	input [63:0] _exu_inY,
-	output [63:0] _exu_out,
-	output _exu_carry,
+	input _pcen, // programe conter enable
+	input [63:0] _exu_inA,
+	input [63:0] _exu_inB,
 	input [31:0] _inst, // 32 bits instruction
+	input [3:0] _exu_ctr,
+	output [63:0] _exu_out,
+	output _exu_zero,
+	output _exu_less,
+	output _exu_carry,
 	output [63:0] _pc_out // TODO : implement PC 
 );
 
@@ -41,10 +44,13 @@ IDU _idu(
 EXU #(
 	.BITS(64)
 ) _exu (
-	.exu_inX(_exu_inX),
-	.exu_inY(_exu_inY),
-	.exu_out(_exu_out),
-	.exu_carry(_exu_carry)
+	.clk(_clk),
+	.alu_ctr(_exu_ctr),
+	.alu_a(_exu_inA),
+	.alu_b(_exu_inB),
+	.alu_out(_exu_out),
+	.alu_zero(_exu_zero),
+	.alu_less(_exu_less)
 ); // execute
 
 endmodule;

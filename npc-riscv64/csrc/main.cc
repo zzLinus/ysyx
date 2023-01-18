@@ -79,11 +79,12 @@ int main(int argc, char **argv, char **env) {
   top->_pcen = 1;
 
   int step = 5;
-  top->_exu_inX = 1;
-  top->_exu_inY = 1;
+
+  top->_exu_ctr = 0b1000;
+  top->_exu_inA = 10;
+  top->_exu_inB = 1;
   while (step--) {
     contextp->timeInc(1);
-    top->_exu_inX++;
 
     top->_inst = mem->pmem_read(top->_pc_out, 4);
     // top->_pcen = !top->_pcen;
@@ -91,8 +92,9 @@ int main(int argc, char **argv, char **env) {
     printf("inst : %02x %02x %02x %02x\n", (top->_inst >> 24) & 0xff,
            (top->_inst >> 16) & 0xff, (top->_inst >> 8) & 0xff,
            (top->_inst) & 0xff);
+    single_cycle();
+    printf("alu_out : %lu\n", top->_exu_out);
 
-    single_cycle(); //
     tfp->dump(contextp->time());
   }
 

@@ -1,25 +1,4 @@
-// module adder_1bit (
-// 	input c,
-// 	input a,
-// 	input b,
-// 	output reg s,
-// 	output reg c_out
-// );
-//
-// reg tmp;
-// always @(*) begin
-// 	assign tmp = (a|b)&(~(a&b));
-// 	assign s = (tmp|c)&(~(tmp&c));
-// 	assign c_out = (a&b)|(c&tmp);
-// end
-//
-// endmodule
-
-// 000 | 加法     | A+B
-// 001 | 减法     | A-B
-// 010 | 取反     | Not A
-// 011 | 与 A     | and B
-// 100 | 或 A     | or B
+2
 // 101 | 异或     | A xor B
 // 110 | 比较大小 | If A<B then out=1; else out=0;
 // 111 | 判断相等 | If A==B then out=1; else out=0;

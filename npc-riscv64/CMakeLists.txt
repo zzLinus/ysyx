@@ -40,5 +40,5 @@ verilate(
 	INCLUDE_DIRS "../"
 	VERILATOR_ARGS -x-assign fast --trace
 	SOURCES vsrc/top.v vsrc/REG.v vsrc/IFU.v vsrc/IDU.v vsrc/EXU.v vsrc/PC.v vsrc/GPR.v 
-	vsrc/MUXKEY.v vsrc/ALU.v
+	vsrc/MUXKEY.v
 )
