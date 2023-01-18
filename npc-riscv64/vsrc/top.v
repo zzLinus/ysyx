@@ -41,6 +41,7 @@ IFU _ifu(
 IDU _idu(
 ); // decode
 
+
 EXU #(
 	.BITS(64)
 ) _exu (

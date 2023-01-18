@@ -20,5 +20,5 @@
 
 void init_rand()
 {
-  srand(MUXDEF(CONFIG_TARGET_AM, 0, time(0)));
+    srand(MUXDEF(CONFIG_TARGET_AM, 0, time(0)));
 }

@@ -29,22 +29,22 @@ const char *regs[] = { // cpu_gpr[32]
 
 void isa_reg_display()
 {
-  for (int i = 0; i < 31; i++)
-  {
-    printf("register name: %s | dec value: %lu | hex value: %lx\n", reg_name(i, NOTIMPLEMENT), cpu.gpr[i], cpu.gpr[i]);
-  }
+    for (int i = 0; i < 31; i++)
+    {
+        printf("register name: %s | dec value: %lu | hex value: %lx\n", reg_name(i, NOTIMPLEMENT), cpu.gpr[i], cpu.gpr[i]);
+    }
 }
 
 word_t isa_reg_str2val(const char *s, bool *success)
 {
-  word_t reg_val;
-  for (int i = 0; i < 31; i++)
-  {
-    if (strcmp(s, reg_name(i, NOTIMPLEMENT)) == 0)
+    word_t reg_val;
+    for (int i = 0; i < 31; i++)
     {
-      reg_val = cpu.gpr[i];
-      *success = true;
+        if (strcmp(s, reg_name(i, NOTIMPLEMENT)) == 0)
+        {
+            reg_val = cpu.gpr[i];
+            *success = true;
+        }
     }
-  }
-  return reg_val;
+    return reg_val;
 }
