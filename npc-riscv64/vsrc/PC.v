@@ -6,16 +6,14 @@ module PC #(
 	input clk,
 	input w_en,
 	input rst,
-	input [BITS-1:0] pc_j,
+	input [BITS-1:0] dpc,
 	output reg [BITS-1:0] pc_out
 );
 
 always @ (posedge clk) begin
 	if (rst) pc_out <= BASE;
-	else begin
-		if (w_en) pc_out <= pc_j;
-		else pc_out <= pc_out + DELTA;
-	end
+	else pc_out <= (w_en) ? dpc : pc_out + DELTA;
 end
 
 endmodule;
+

@@ -64,7 +64,6 @@ enum
             ((SEXT(BITS(i, 30, 30), 1) << 19) | (SEXT(BITS(i, 19, 12), 8) << 18) | (SEXT(BITS(i, 20, 20), 1) << 10) | \
              BITS(i, 30, 21));                                                                                        \
         *imm = *imm << 1;                                                                                             \
-        printf(" imm : %lx\n", *imm);                                                                                 \
     } while (0)
 // NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
 // multiples of 2 bytes.
@@ -76,7 +75,6 @@ static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, wor
     int rs1 = BITS(i, 19, 15);
     int rs2 = BITS(i, 24, 20);
     *dest = rd;
-    printf("type : %d\n", type);
     switch (type)  // riscv64 4 base inst type (R I S U) 2 mutate type S->B U->J
     {
         case TYPE_I:
@@ -123,7 +121,6 @@ static int decode_exec(Decode *s)
     INSTPAT("??????? ????? ????? ??? ????? ????? ??", inv, N, INV(s->pc));
 
     INSTPAT_END();
-    printf("imm dec value : %ld | imm hex value : %lx | imm bin value : %032lb \n", imm, imm, imm);
 
     R(0) = 0;  // reset $zero to 0
 

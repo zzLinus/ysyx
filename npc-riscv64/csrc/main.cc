@@ -5,16 +5,16 @@
 #include <verilated_vcd_c.h>
 
 #define CONFIG_MBASE 0x80000000
-#define INST_NUM     2
+#define INST_NUM     5
 
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
 
 static void single_cycle()
 {
-    top->_clk = 0;
-    top->eval();
     top->_clk = 1;
+    top->eval();
+    top->_clk = 0;
     top->eval();
 }
 
@@ -27,8 +27,11 @@ static void reset(int n)
 }
 
 uint32_t inst[INST_NUM] = {
-    0xaabbccdd,
-    0x11223344,
+    0b00000000000100000000000010010011,  // 0000 0000 0001 00000 000 00001 0010011 -> addi ra,$0,1
+    0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
+    0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
+    0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
+    0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
 };
 
 class pmem
@@ -36,8 +39,10 @@ class pmem
    public:
     pmem()
     {
-        memcpy(mem, inst, sizeof(uint32_t));
-        memcpy(mem + 4, inst + 1, sizeof(uint32_t));
+        for (int i = 0; i < INST_NUM; i++)
+        {
+            memcpy(mem + i * 4, inst + i * 1, sizeof(uint32_t));
+        }
     };
     ~pmem(){};
     uint64_t pmem_read(uint64_t addr, uint8_t instLen)
@@ -70,13 +75,7 @@ class pmem
 
 void print_exu()
 {
-    printf(
-        "exu state : less : %u zero : %d\nout : 0d%ld 0b%064lb 0b%08lx\n",
-        top->_exu_less,
-        top->_exu_zero,
-        top->_exu_out,
-        top->_exu_out,
-        top->_exu_out);
+    printf("exu state : out : 0d%u 0b%031b 0x%08x\n", top->_exu_out, top->_exu_out, top->_exu_out);
 }
 
 int main(int argc, char **argv, char **env)
@@ -92,25 +91,17 @@ int main(int argc, char **argv, char **env)
     tfp->dumpvars(1, "top");
 
     reset(10);
-    top->_pcen = 1;
 
-    int step = 5;
+    int step = INST_NUM;
+    top->_exu_ctr = 0b0000;  // TODO :decode ctr from IDU
 
-    top->_exu_ctr = 0b0010;
-
-    top->_exu_inA = 0b0111;
-    top->_exu_inB = 0b0100;
-
-    while (step--)
+    while (step--)  // TODO : DPI-C ebreak
     {
         contextp->timeInc(1);
 
         top->_inst = mem->pmem_read(top->_pc_out, 4);
-        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
-        printf("pc : 0x%08lx\n", top->_pc_out);
+
         single_cycle();
-        // top->_exu_inB++;
-        print_exu();
 
         tfp->dump(contextp->time());
     }
