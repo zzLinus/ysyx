@@ -4,15 +4,17 @@ module PC #(
 	BASE = 0
 )(
 	input clk,
-	input en,
+	input w_en,
 	input rst,
-	output reg [BITS-1:0] ctr_out
+	input [BITS-1:0] pc_j,
+	output reg [BITS-1:0] pc_out
 );
 
 always @ (posedge clk) begin
-	if (rst) ctr_out <= BASE;
+	if (rst) pc_out <= BASE;
 	else begin
-		if (en) ctr_out <= ctr_out + DELTA;
+		if (w_en) pc_out <= pc_j;
+		else pc_out <= pc_out + DELTA;
 	end
 end
 

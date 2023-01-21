@@ -39,6 +39,6 @@ verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
 	VERILATOR_ARGS -x-assign fast --trace
-	SOURCES vsrc/top.v vsrc/REG.v vsrc/IFU.v vsrc/IDU.v vsrc/EXU.v vsrc/PC.v vsrc/GPR.v 
+	SOURCES vsrc/top.v vsrc/IFU.v vsrc/IDU.v vsrc/EXU.v vsrc/PC.v vsrc/RF.v 
 	vsrc/MUXKEY.v
 )

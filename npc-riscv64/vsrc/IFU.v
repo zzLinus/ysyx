@@ -1,2 +1,5 @@
-module IFU();
+module IFU #(
+)(
+);
+
 endmodule;

@@ -71,7 +71,7 @@ class pmem
 void print_exu()
 {
     printf(
-        "exu state : less : %u zero : %d\nout : 0d%ld 0b%064lb 0b%08lx\n\n",
+        "exu state : less : %u zero : %d\nout : 0d%ld 0b%064lb 0b%08lx\n",
         top->_exu_less,
         top->_exu_zero,
         top->_exu_out,
@@ -99,7 +99,6 @@ int main(int argc, char **argv, char **env)
     top->_exu_ctr = 0b0010;
 
     top->_exu_inA = 0b0111;
-    // top->_exu_inA = 0b10010110;
     top->_exu_inB = 0b0100;
 
     while (step--)
@@ -107,14 +106,8 @@ int main(int argc, char **argv, char **env)
         contextp->timeInc(1);
 
         top->_inst = mem->pmem_read(top->_pc_out, 4);
-        // top->_pcen = !top->_pcen;
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n");
         printf("pc : 0x%08lx\n", top->_pc_out);
-        printf(
-            "inst : %02x %02x %02x %02x\n",
-            (top->_inst >> 24) & 0xff,
-            (top->_inst >> 16) & 0xff,
-            (top->_inst >> 8) & 0xff,
-            (top->_inst) & 0xff);
         single_cycle();
         // top->_exu_inB++;
         print_exu();

@@ -14,26 +14,31 @@
 		output [63:0] _pc_out // TODO : implement PC 
 	);
 	
-	wire [63:0] _genRegDout; // TODO :no connection here
-	wire [63:0] _genRegDin;  // TODO :no connection here
+	reg [31:0] inst_val;
+	
+	always @(posedge _clk) $display("inst : %x",_inst);
 	
 	PC #(
 		.BITS(64),
 		.DELTA(4),
 		.BASE(64'h80000000)
-	) ctr (
+	) pc (
 		.clk(_clk),
-		.en(_pcen),
+		.w_en(1'b0),
 		.rst(_rst),
-		.ctr_out(_pc_out)
+		.pc_j(),
+		.pc_out(_pc_out)
 	);
 	
-	GPR _gpr(
-		.clk(_clk),
-		.rst(_rst),
-		.select(1'b0), // didn't mean anything yet
-		.din(_genRegDin),
-		.dout(_genRegDout)
+	RF _gpr(
+		.ra(),
+		.rb(),
+		.rw(),
+		.busW(),
+		.busA(),
+		.busB(),
+		// .wrClk(),
+		.regWr(0'b0)
 	);
 	
 	IFU _ifu(
