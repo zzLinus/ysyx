@@ -29,7 +29,7 @@
 		$display("zero %d"    ,_exu_zero);
 		$display("carry %d"   ,_exu_carry);
 		$display("overflow %d",_exu_overflow);
-		$display("less %d"  ,_exu_less);
+		$display("less %d"    ,_exu_less);
 	end
 	
 	always @(posedge _clk) $display("inst : %x\n",_inst);

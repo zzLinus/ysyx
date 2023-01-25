@@ -5,20 +5,26 @@
 #include <verilated_vcd_c.h>
 
 #define CONFIG_MBASE 0x80000000
-#define INST_NUM     5
+#define INST_NUM     6
 
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
+bool NPC_RUN = true;
 
-static void single_cycle()
+static inline void single_cycle()
 {
     top->_clk = 1;
     top->eval();
+    if (!NPC_RUN)
+    {
+        printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
+        exit(0);
+    }
     top->_clk = 0;
     top->eval();
 }
 
-static void reset(int n)
+static inline void reset(int n)
 {
     top->_rst = 1;
     while (n-- > 0)
@@ -32,6 +38,7 @@ uint32_t inst[INST_NUM] = {
     0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
     0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
     0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
+    0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
 };
 
 class pmem
@@ -78,6 +85,15 @@ void print_exu()
     printf("exu state : out : 0d%u 0b%031b 0x%08x\n", top->_exu_out, top->_exu_out, top->_exu_out);
 }
 
+extern "C"
+{
+    void stop_npc()
+    {
+        printf("hi!~``\n");
+        NPC_RUN = false;
+    }
+}
+
 int main(int argc, char **argv, char **env)
 {
     pmem *mem = new pmem();
@@ -92,17 +108,15 @@ int main(int argc, char **argv, char **env)
 
     reset(10);
 
-    int step = INST_NUM;
     top->_exu_ctr = 0b0000;  // TODO :decode ctr from IDU
 
-    while (step--)  // TODO : DPI-C ebreak
+    while (true)  // TODO : DPI-C ebreak
     {
         contextp->timeInc(1);
 
+        printf("~~~~~~~~~~~~~~~~~~~~~~~~\n");
         top->_inst = mem->pmem_read(top->_pc_out, 4);
-
         single_cycle();
-
         tfp->dump(contextp->time());
     }
 

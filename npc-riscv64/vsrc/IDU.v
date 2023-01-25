@@ -1,3 +1,5 @@
+import "DPI-C" function void stop_npc();
+
 module IDU(
 	input clk,
 	input [31:0] inst,
@@ -20,6 +22,15 @@ always @(posedge clk) begin
 			rb = 5'b11111;
 			valC[11:0] = inst[31:20];
 			regWr = 1'b1;
+		end
+		7'b1110011:begin
+			stop_npc();
+			rw = 5'b11111;
+			funct3 = inst[14:12];
+			ra = 5'b11111;
+			rb = 5'b11111;
+			valC[11:0] = 12'b0;
+			regWr = 1'b0;
 		end
 	default:;
 	endcase

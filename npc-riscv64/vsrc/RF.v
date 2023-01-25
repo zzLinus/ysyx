@@ -27,4 +27,3 @@ end
 always @(negedge clk) regs[32*rw+:32] = (regWr) ? busW : regs[32*rw+:32];
 
 endmodule;
-
