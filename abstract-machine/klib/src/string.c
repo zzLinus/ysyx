@@ -26,7 +26,14 @@ char *strcat(char *dst, const char *src)
 
 int strcmp(const char *s1, const char *s2)
 {
-    panic("Not implemented");
+    int diff = 0;
+    for (int i = 0;; i++)
+    {
+        diff += s1[i] - s2[i];
+        if (s1[i] == '\0' || s2[i] == '\0')
+            break;
+    }
+    return diff;
 }
 
 int strncmp(const char *s1, const char *s2, size_t n)
