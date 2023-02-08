@@ -26,14 +26,17 @@ char *strcat(char *dst, const char *src)
 
 int strcmp(const char *s1, const char *s2)
 {
-    int diff = 0;
-    for (int i = 0;; i++)
+    int charCompareStatus = 0;
+    while (*s1 == *s2)
     {
-        diff = s1[i] - s2[i];
-        if (s1[i] == '\0' || s2[i] == '\0')
+        s1++;
+        s2++;
+        if (!(*s1 != '\0' && *s2 != '\0'))
             break;
     }
-    return diff;
+    // compare the mismatching character
+    charCompareStatus = (*s1 == *s2) ? 0 : (*s1 > *s2) ? 1 : -1;
+    return charCompareStatus;
 }
 
 int strncmp(const char *s1, const char *s2, size_t n)
