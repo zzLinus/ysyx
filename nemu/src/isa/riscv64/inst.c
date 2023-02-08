@@ -26,6 +26,7 @@
 enum
 {
     TYPE_I,
+    TYPE_B,
     TYPE_U,
     TYPE_S,
     TYPE_J,
@@ -66,6 +67,13 @@ enum
              BITS(i, 30, 21));                                                                                        \
         *imm = *imm << 1;                                                                                             \
     } while (0)
+#define immB()                                                                                                       \
+    do                                                                                                               \
+    {                                                                                                                \
+        *imm = (SEXT(BITS(i, 31, 31), 1) << 11) | (SEXT(BITS(i, 7, 7), 1) << 10) | (SEXT(BITS(i, 30, 25), 6) << 4) | \
+               SEXT(BITS(i, 11, 8), 4);                                                                              \
+        *imm = *imm << 1;                                                                                            \
+    } while (0)
 // NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
 // multiples of 2 bytes.
 
@@ -83,6 +91,11 @@ static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, wor
             immI();   // load imm value to imm
             break;
         case TYPE_J: immJ(); break;
+        case TYPE_B:
+            src1R();
+            src2R();
+            immB();
+            break;
         case TYPE_U: immU(); break;
         case TYPE_S:
             src1R();
@@ -142,12 +155,8 @@ static int decode_exec(Decode *s)
     INSTPAT("??????? ????? ????? 100 ????? 00000 11", lbu, I, R(dest) = Mr(src1 + imm, 8));
     INSTPAT("0100000 ????? ????? 000 ????? 01110 11", subw, R, R(dest) = src1 - src2);
     INSTPAT("0000000 ????? ????? 000 ????? 01110 11", addw, R, R(dest) = src1 + src2;);
-    INSTPAT("??????? ????? ????? 000 ????? 11000 11", beqz, S, s->dnpc = (src1 == src2) ? s->pc + imm : s->snpc);
-    INSTPAT("??????? ????? ????? 001 ????? 11000 11", bnez, S, s->dnpc = (src1 != src2) ? s->pc + imm - 1 : s->snpc);
-    /* printf("pc : %lx ,imm: %ld,dnpc : %lx\n", s->pc, imm, s->dnpc)); */
-
-    // 8000005c:	00a02533          	sgtz	a0,a0 -> slt a0, x0, a0
-    //       0000000 01010 00000 010 01010 01100 11
+    INSTPAT("??????? ????? ????? 000 ????? 11000 11", beqz, B, s->dnpc = (src1 == src2) ? s->pc + imm : s->snpc);
+    INSTPAT("??????? ????? ????? 001 ????? 11000 11", bnez, B, s->dnpc = (src1 != src2) ? s->pc + imm : s->snpc);
     INSTPAT("0000000 ????? ????? 010 ????? 01100 11", sgtz, R, R(dest) = (src1 < src2) ? 1 : 0);
 
     INSTPAT("0000000 ????? ????? 101 ????? 00110 11", srliw, I, R(dest) = (int)((unsigned int)src1 >> imm));
@@ -157,6 +166,16 @@ static int decode_exec(Decode *s)
     INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + imm; R(dest) = s->snpc);
     INSTPAT("0000000 00000 ????? 000 ????? 00100 11", mv, I, R(dest) = src1 + imm);  // mv rd rs == add rd rs 0
     INSTPAT("??????? ????? ????? 001 ????? 00100 11", slli, I, R(dest) = src1 << imm);
+
+    //	     0x0000000080000044: 00 15 35 13 seqz    a0, a0
+    //	     0000000 00001 01010 011 01010 00100 11
+    /* SLTI (set less than immediate) places the value 1 in register rd if register rs1 is less than the sign- */
+    /* extended immediate when both are treated as signed numbers, else 0 is written to rd. SLTIU is */
+    /* similar but compares the values as unsigned numbers (i.e., the immediate is first sign-extended to */
+    /* XLEN bits then treated as an unsigned number). Note, SLTIU rd, rs1, 1 sets rd to 1 if rs1 equals */
+    /* zero, otherwise sets rd to 0 (assembler pseudoinstruction SEQZ rd, rs). */
+    INSTPAT("??????? ????? ????? 011 ????? 00100 11", seqz, I, R(dest) = src1 == 0 ? imm : 0);
+
     INSTPAT("??????? ????? ????? ??? ????? 00100 11", li, U, R(dest) = imm);
     INSTPAT("??????? ????? ????? ??? ????? 11011 11", j, J, s->dnpc = s->pc + imm; R(dest) = s->snpc);
     INSTPAT("??????? ????? ????? 000 ????? 11001 11", ret, I, s->dnpc = src1);
