@@ -39,7 +39,7 @@
 // See https://stackoverflow.com/questions/26099745/test-if-preprocessor-symbol-is-defined-inside-macro
 #define CHOOSE2nd(a, b, ...) b
 #define MUX_WITH_COMMA(contain_comma, a, b) \
-  CHOOSE2nd(contain_comma a, b)  // NOTE: CHOOSE2nd(X, X, Y) -> second is X or CHOOSE2nd(__P_DEF_ X, Y)  -> second is Y
+    CHOOSE2nd(contain_comma a, b)  // NOTE: CHOOSE2nd(X, X, Y) -> second is X or CHOOSE2nd(__P_DEF_ X, Y)  -> second is Y
 #define MUX_MACRO_PROPERTY(p, macro, a, b) MUX_WITH_COMMA(concat(p, macro), a, b)
 // define placeholders for some property
 #define __P_DEF_0  X,
@@ -86,14 +86,14 @@
 
 #define BITMASK(bits)   ((1ull << (bits)) - 1)
 #define BITS(x, hi, lo) (((x) >> (lo)) & BITMASK((hi) - (lo) + 1))  // similar to x[hi:lo] in verilog
-#define SEXT(x, len)    \
-  ({                    \
-    struct              \
-    {                   \
-      int64_t n : len;  \
-    } __x = { .n = x }; \
-    (uint64_t) __x.n;   \
-  })
+#define SEXT(x, len)         \
+    ({                       \
+        struct               \
+        {                    \
+            int64_t n : len; \
+        } __x = { .n = x };  \
+        (uint64_t) __x.n;    \
+    })
 
 #define ROUNDUP(a, sz)   ((((uintptr_t)a) + (sz)-1) & ~((sz)-1))
 #define ROUNDDOWN(a, sz) ((((uintptr_t)a)) & ~((sz)-1))
@@ -106,17 +106,17 @@
 #endif
 
 // for AM IOE
-#define io_read(reg)            \
-  ({                            \
-    reg##_T __io_param;         \
-    ioe_read(reg, &__io_param); \
-    __io_param;                 \
-  })
+#define io_read(reg)                \
+    ({                              \
+        reg##_T __io_param;         \
+        ioe_read(reg, &__io_param); \
+        __io_param;                 \
+    })
 
-#define io_write(reg, ...)                         \
-  ({                                               \
-    reg##_T __io_param = (reg##_T){ __VA_ARGS__ }; \
-    ioe_write(reg, &__io_param);                   \
-  })
+#define io_write(reg, ...)                             \
+    ({                                                 \
+        reg##_T __io_param = (reg##_T){ __VA_ARGS__ }; \
+        ioe_write(reg, &__io_param);                   \
+    })
 
 #endif
