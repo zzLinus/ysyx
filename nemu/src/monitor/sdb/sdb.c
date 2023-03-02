@@ -22,6 +22,8 @@
 #include <stdlib.h>
 
 #include "memory/paddr.h"
+#define CHECKASCII(byte)             ((byte) >= 33 && (byte) <= 126) ? byte : '.'
+#define HEXTOCHAR(arg1, len, sftamt) (uint8_t)(paddr_read(arg1, len) >> (sftamt))
 
 static int is_batch_mode = false;
 
@@ -140,7 +142,13 @@ static int cmd_x(char *args)
     arg1 = strtol(arg, NULL, 16);
     for (int i = 0; i < arg0; i++)
     {
-        printf("0x%08lx\n", paddr_read(arg1, 4));
+        printf(
+            "0x%08lx\t%c%c%c%c\n",
+            paddr_read(arg1, 4),
+            CHECKASCII(HEXTOCHAR(arg1, 4, 24)),
+            CHECKASCII(HEXTOCHAR(arg1, 4, 16)),
+            CHECKASCII(HEXTOCHAR(arg1, 4, 8)),
+            CHECKASCII(HEXTOCHAR(arg1, 4, 0)));
         arg1 += 4;
     }
     return 0;

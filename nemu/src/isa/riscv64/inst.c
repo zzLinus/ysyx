@@ -199,7 +199,6 @@ static int decode_exec(Decode *s)
     /* similar but compares the values as un"signed numbers (i.e., the immediate is first sign-extended to            */
     /* XLEN bits then treated as an unsigned number). Note, SLTIU rd, rs1, 1 sets rd to 1 if rs1 equals               */
     /* zero, otherwise sets rd to 0 (assembler pseudoinstruction SEQZ rd, rs).                                        */
-
     INSTPAT("??????? ????? ????? 011 ????? 00100 11", seqz, I, R(dest) = src1 == 0 ? imm : 0);
 
     INSTPAT("??????? ????? ????? ??? ????? 00100 11", li, U, R(dest) = imm);
