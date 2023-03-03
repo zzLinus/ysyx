@@ -20,15 +20,28 @@ int sprintf(char *out, const char *fmt, ...)
 {
     va_list args;
     va_start(args, fmt);
-    // size_t fmt_lent = strlen(fmt);
-    size_t fmt_num;
-    const char *fmt_ptr = fmt;
-    for (fmt_num = 0;*fmt_ptr++;)
-        if (*fmt_ptr == '%')
-            fmt_num++;
+    for (const char *p = fmt; *p != '\0'; ++p)
+    {
+        switch (*p)
+        {
+            case '%':
+                switch (*++p)
+                {
+                    case 'd': itoa(va_arg(args, int), out, 10); break;
+                    case 's':
+                        strcpy(out, va_arg(args, const char *));
+                        out += strlen(out);  // it will set out to where \0 is and ready to overwrite it
+                        break;
+                }
+                break;
+            case '\n': break;  // TODO : implement \n \t
+            case '\t': break;
+            default: *out = *p; out++;  // copy one charactor
+        }
+    }
 
     va_end(args);
-    return fmt_num;
+    return 1;
 }
 
 int snprintf(char *out, size_t n, const char *fmt, ...)

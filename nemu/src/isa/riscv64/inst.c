@@ -59,6 +59,8 @@ enum
     {                                                            \
         *imm = (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); \
     } while (0)
+// NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
+// multiples of 2 bytes.
 #define immJ()                                                                                                        \
     do                                                                                                                \
     {                                                                                                                 \
@@ -71,11 +73,10 @@ enum
     do                                                                                                               \
     {                                                                                                                \
         *imm = (SEXT(BITS(i, 31, 31), 1) << 11) | (SEXT(BITS(i, 7, 7), 1) << 10) | (SEXT(BITS(i, 30, 25), 6) << 4) | \
-               SEXT(BITS(i, 11, 8), 4);                                                                              \
+               BITS(i, 11, 8);                                                                                       \
         *imm = *imm << 1;                                                                                            \
     } while (0)
-// NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
-// multiples of 2 bytes.
+// INFO : why if i do SEXT(BITS(i, 11, 8), 4) it will overflow but BITS(i, 11, 8) is normal
 
 static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, word_t *imm, int type)
 {
@@ -164,7 +165,9 @@ static int decode_exec(Decode *s)
     INSTPAT("0000000 ????? ????? 000 ????? 01100 11", add, R, R(dest) = src1 + src2);
 
     // branch instruction
-    INSTPAT("??????? ????? ????? 000 ????? 11000 11", beqz, B, s->dnpc = (src1 == src2) ? s->pc + imm : s->snpc);
+    // 800000d0:	00e78c63          	beq	a5,a4,800000e8 <sprintf+0x54>
+    //       0000000 01110 01111 000 10100 11000 11
+    INSTPAT("??????? ????? ????? 000 ????? 11000 11", beq, B, s->dnpc = (src1 == src2) ? s->pc + imm : s->snpc);
     INSTPAT("??????? ????? ????? 001 ????? 11000 11", bnez, B, s->dnpc = (src1 != src2) ? s->pc + imm : s->snpc);
     INSTPAT("??????? ????? ????? 110 ????? 11000 11", bltu, B, s->dnpc = (src1 < (unsigned)src2) ? s->pc + imm : s->snpc);
     INSTPAT("??????? ????? ????? 111 ????? 11000 11", bgeu, B, s->dnpc = (src1 >= src2) ? s->pc + imm : s->snpc);
@@ -177,16 +180,17 @@ static int decode_exec(Decode *s)
     INSTPAT("0000000 ????? ????? 101 ????? 00110 11", srliw, I, R(dest) = (int)((unsigned int)src1 >> imm));
 
     // NOTE :JAL stores the address of the instruction following the jump (pc+4) into register rd.
-		//
+    //
     // 800000dc:	0ff5f593          	zext.b	a1,a1
-		//       0000111 11111 01011 111 01011 00100 11    35 -> 0x22
-		//                                                       0010 0010  0101
-		//                                                    +  1111 1111  1111
-		//																										  10010 0001 10100
-		//																										   0x121
-		//// FIXME : according to `https://github.com/riscv/riscv-code-size-reduction/blob/main/Zc-specification/c_zext_b.adoc` 
-		///  zext.b should equivalent to `addi rd r1 0xff` ,but it's value always less one
-    INSTPAT("??????? ????? ????? 111 ????? 00100 11", zext.b, I, R(dest) = src1 + imm + 1); 
+    //       0000111 11111 01011 111 01011 00100 11    35 -> 0x22
+    //                                                       0010 0010  0101
+    //                                                    +  1111 1111  1111
+    //																										  10010
+    // 0001 10100
+    // 0x121
+    //// FIXME : according to `https://github.com/riscv/riscv-code-size-reduction/blob/main/Zc-specification/c_zext_b.adoc`
+    ///  zext.b should equivalent to `addi rd r1 0xff` ,but it's value always less one
+    INSTPAT("??????? ????? ????? 111 ????? 00100 11", zext.b, I, R(dest) = src1 + imm + 1);
     INSTPAT("??????? ????? ????? 000 ????? 00100 11", addi, I, R(dest) = src1 + imm);
     INSTPAT("??????? ????? ????? 000 ????? 00110 11", addiw, I, R(dest) = src1 + imm);  // FIXME : data length should be fix
     INSTPAT("??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + imm; R(dest) = s->snpc);

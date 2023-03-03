@@ -110,4 +110,20 @@ int memcmp(const void *s1, const void *s2, size_t n)
     return 0;
 }
 
+void strrev(char *arr, int start, int end)
+{
+    char temp;
+
+    if (start >= end)
+        return;
+
+    temp = *(arr + start);
+    *(arr + start) = *(arr + end);
+    *(arr + end) = temp;
+
+    start++;
+    end--;
+    strrev(arr, start, end);
+}
+
 #endif
