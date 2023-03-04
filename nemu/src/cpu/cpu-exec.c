@@ -53,12 +53,6 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc)
         log_write("%s\n", _this->logbuf);
     }
 #endif
-#ifdef CONFIG_MTRACE_COND
-    if (MTRACE_COND)
-    {
-        printf("%d mtrace enable\n", MTRACE_COND);
-    }
-#endif
     if (g_print_step)
     {
         IFDEF(CONFIG_ITRACE, puts(_this->logbuf));
