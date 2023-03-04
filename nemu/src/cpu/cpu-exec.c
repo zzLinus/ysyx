@@ -25,6 +25,18 @@
  */
 #define MAX_INST_TO_PRINT 20
 
+#ifdef CONFIG_ITRACE
+#define RINGBUFSIZE 20
+#define INSTLEN     80
+typedef struct ring_buffer
+{
+    char insts[RINGBUFSIZE][INSTLEN];
+    uint8_t cur_inst;
+} ring_buffer;
+
+static ring_buffer r;
+#endif
+
 CPU_state cpu = {};
 uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0;  // unit: us
@@ -76,6 +88,13 @@ static void exec_once(Decode *s, vaddr_t pc)
     void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);
     disassemble(
         p, s->logbuf + sizeof(s->logbuf) - p, MUXDEF(CONFIG_ISA_x86, s->snpc, s->pc), (uint8_t *)&s->isa.inst.val, ilen);
+
+    if (nemu_state.state == true)
+        strcpy(r.insts[r.cur_inst++], s->logbuf);
+    else
+        strcpy(r.insts[r.cur_inst++], s->logbuf);
+    r.cur_inst %= RINGBUFSIZE;
+
 #endif
 }
 
@@ -105,9 +124,24 @@ static void statistic()
         Log("Finish running in less than 1 us and can not calculate the simulation frequency");
 }
 
+static void display_ringbuf()
+{
+		printf("\n");
+    for (int i = 0; i < RINGBUFSIZE; i++)
+    {
+        if (i == RINGBUFSIZE - 1)
+            printf("--> ");
+        else
+            printf("    ");
+
+        printf("%s\n", r.insts[(r.cur_inst + i) % RINGBUFSIZE]);
+    }
+}
+
 void assert_fail_msg()
 {
     isa_reg_display();
+    display_ringbuf();
     statistic();
 }
 
