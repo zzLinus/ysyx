@@ -53,6 +53,12 @@ static void trace_and_difftest(Decode *_this, vaddr_t dnpc)
         log_write("%s\n", _this->logbuf);
     }
 #endif
+#ifdef CONFIG_MTRACE_COND
+    if (MTRACE_COND)
+    {
+        printf("%d mtrace enable\n", MTRACE_COND);
+    }
+#endif
     if (g_print_step)
     {
         IFDEF(CONFIG_ITRACE, puts(_this->logbuf));
@@ -124,9 +130,9 @@ static void statistic()
         Log("Finish running in less than 1 us and can not calculate the simulation frequency");
 }
 
-static void display_ringbuf()
+static void disp_ringbuf()
 {
-		printf("\n");
+    printf("itrace : \n");
     for (int i = 0; i < RINGBUFSIZE; i++)
     {
         if (i == RINGBUFSIZE - 1)
@@ -141,7 +147,7 @@ static void display_ringbuf()
 void assert_fail_msg()
 {
     isa_reg_display();
-    display_ringbuf();
+    disp_ringbuf();
     statistic();
 }
 
