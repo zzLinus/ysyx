@@ -42,6 +42,14 @@ uint64_t g_nr_guest_inst = 0;
 static uint64_t g_timer = 0;  // unit: us
 static bool g_print_step = false;
 
+#ifdef CONFIG_FTRACE
+extern uint8_t call_ret;
+uint64_t fs_size = 0;  // function stack size
+#define PRINT_TAB(n)                 \
+    for (size_t i = 0; i < (n); i++) \
+        printf("  ");
+#endif
+
 void device_update();
 void check_wp();
 
@@ -95,6 +103,23 @@ static void exec_once(Decode *s, vaddr_t pc)
         strcpy(r.insts[r.cur_inst++], s->logbuf);
     r.cur_inst %= RINGBUFSIZE;
 
+#endif
+#ifdef CONFIG_FTRACE
+    if (call_ret == 2)
+    {
+        fs_size++;
+        printf("%lx :", pc);
+        PRINT_TAB(fs_size);
+        printf("%s []\n", ANSI_FMT("call", ANSI_FG_BLUE));
+    }
+    else if (call_ret == 4)
+    {
+        printf("%lx :", pc);
+        PRINT_TAB(fs_size);
+        fs_size--;
+        printf("%s []\n", ANSI_FMT("return", ANSI_FG_GREEN));
+    }
+    call_ret = 0;
 #endif
 }
 
