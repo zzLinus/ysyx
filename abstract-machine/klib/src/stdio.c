@@ -27,18 +27,20 @@ int sprintf(char *out, const char *fmt, ...)
             case '%':
                 switch (*++p)
                 {
-                    case 'd': itoa(va_arg(args, int), out, 10); break;
+                    case 'd':
+                        itoa(va_arg(args, int), out, 10);
+                        out += strlen(out);  // it will set out to where \0 is and ready to overwrite it
+                        break;
                     case 's':
                         strcpy(out, va_arg(args, const char *));
                         out += strlen(out);  // it will set out to where \0 is and ready to overwrite it
                         break;
                 }
                 break;
-            case '\n': break;  // TODO : implement \n \t
-            case '\t': break;
             default: *out = *p; out++;  // copy one charactor
         }
     }
+		*out = '\0';
 
     va_end(args);
     return 1;
