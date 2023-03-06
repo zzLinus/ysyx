@@ -23,7 +23,7 @@
  * This is useful when you use the `si' command.
  * You can modify this value as you want.
  */
-#define MAX_INST_TO_PRINT 20
+#define MAX_INST_TO_PRINT 50
 
 #ifdef CONFIG_ITRACE
 #define RINGBUFSIZE 20
@@ -109,15 +109,17 @@ static void exec_once(Decode *s, vaddr_t pc)
     {
         fs_size++;
         printf("%lx :", pc);
-        // PRINT_TAB(fs_size);
-        printf("%s []\n", ANSI_FMT("call", ANSI_FG_BLUE));
+        if (fs_size < 10)
+            PRINT_TAB(fs_size);
+        printf("%ld %s []\n",fs_size, ANSI_FMT("call", ANSI_FG_BLUE));
     }
     else if (call_ret == 4)
     {
         printf("%lx :", pc);
-        // PRINT_TAB(fs_size);
+        if (fs_size < 10)
+            PRINT_TAB(fs_size);
         fs_size--;
-        printf("%s []\n", ANSI_FMT("return", ANSI_FG_GREEN));
+        printf("%ld %s []\n",fs_size, ANSI_FMT("return", ANSI_FG_GREEN));
     }
     call_ret = 0;
 #endif
