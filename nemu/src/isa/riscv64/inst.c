@@ -81,11 +81,9 @@ enum
 #ifdef CONFIG_FTRACE
 uint8_t call_ret = 0;
 #define RET(addr)      \
-    call_ret = 1 << 2; \
-    printf("%lx\n", addr);
+    call_ret = 1 << 2; 
 #define CALL(addr)     \
-    call_ret = 1 << 1; \
-    printf("%lx\n", addr);
+    call_ret = 1 << 1; 
 #endif
 
 static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, word_t *imm, int type)
@@ -173,7 +171,7 @@ static int decode_exec(Decode *s)
     INSTPAT("??????? ????? ????? 010 ????? 00000 11", lw, I, R(dest) = (uint32_t)Mr(src1 + imm, 4));
     INSTPAT("??????? ????? ????? 100 ????? 00000 11", lbu, I, R(dest) = (uint8_t)Mr(src1 + imm, 1));
     INSTPAT("0100000 ????? ????? 000 ????? 01110 11", subw, R, R(dest) = src1 - src2);
-    INSTPAT("0000000 ????? ????? 000 ????? 01110 11", addw, R, R(dest) = (uint32_t)(src1 + src2));
+    INSTPAT("0000000 ????? ????? 000 ????? 01110 11", addw, R, R(dest) = (uint32_t)(src1 + src2););
     // 80000280:	0317683b          	remw	a6,a4,a7
     //        0000001 10001 01110 110 10000 01110 11
     INSTPAT("0000001 ????? ????? 110 ????? 01110 11", remw, R, R(dest) = src1 % src2;);
@@ -251,11 +249,10 @@ static int decode_exec(Decode *s)
     // 800000a0:	00008067          	ret
     //       0000000 00000 00001 000 00000 11001 11
     INSTPAT(
-        "??????? ????? ????? 000 ????? 11001 11", jalr / ret / jr, I, s->dnpc = src1 + imm;
-        if (BITS(s->isa.inst.val, 19, 15) != 1) {
-            R(dest) = s->snpc;
+        "??????? ????? ????? 000 ????? 11001 11", jalr / ret / jr, I, s->dnpc = src1 + imm; R(dest) = s->snpc;
+        if (BITS(s->isa.inst.val, 19, 15) == 1 && dest == 0) { IFDEF(CONFIG_FTRACE, RET(s->dnpc)); } else {
             IFDEF(CONFIG_FTRACE, CALL(s->dnpc));
-        } else { IFDEF(CONFIG_FTRACE, RET(s->dnpc)); });
+        });
 
     // FIXME : The SD, SW, SH, and SB instructions store 64 - bit, 32 - bit, 16 - bit,
     // and8 - bit values from the low bits of register rs2 to memory respectively.

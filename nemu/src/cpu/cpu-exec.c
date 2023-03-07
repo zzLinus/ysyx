@@ -109,17 +109,15 @@ static void exec_once(Decode *s, vaddr_t pc)
     {
         fs_size++;
         printf("%lx :", pc);
-        if (fs_size < 10)
             PRINT_TAB(fs_size);
-        printf("%ld %s []\n",fs_size, ANSI_FMT("call", ANSI_FG_BLUE));
+        printf("%s []\n", ANSI_FMT("call", ANSI_FG_BLUE));
     }
     else if (call_ret == 4)
     {
         printf("%lx :", pc);
-        if (fs_size < 10)
             PRINT_TAB(fs_size);
         fs_size--;
-        printf("%ld %s []\n",fs_size, ANSI_FMT("return", ANSI_FG_GREEN));
+        printf("%s []\n", ANSI_FMT("return", ANSI_FG_GREEN));
     }
     call_ret = 0;
 #endif
