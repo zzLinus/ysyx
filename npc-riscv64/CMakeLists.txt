@@ -20,7 +20,7 @@
 # cmake --build .
 
 cmake_minimum_required(VERSION 3.8)
-project(ysyx_hello_verilator!)
+project(ysyx_npc_riscv64!)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
@@ -33,11 +33,12 @@ endif()
 add_executable(Vtop ../csrc/main.cc)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
-target_link_libraries(Vtop PUBLIC SDL2 SDL2_image)
 
 # Add the Verilated circuit to the target
 verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
-	SOURCES vsrc/top.v vsrc/template.v
+	VERILATOR_ARGS -x-assign fast --trace
+	SOURCES vsrc/top.v vsrc/IFU.v vsrc/IDU.v vsrc/EXU.v vsrc/PC.v vsrc/RF.v 
+	vsrc/MUXKEY.v
 )

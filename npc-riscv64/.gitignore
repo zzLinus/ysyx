@@ -10,5 +10,4 @@
 !*.cpp
 !.gitignore
 !README.md
-build
-!*.txt
+build/

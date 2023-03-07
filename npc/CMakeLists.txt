@@ -40,6 +40,7 @@ target_link_libraries(Vtop PUBLIC SDL2 SDL2_image)
 verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
+	VERILATOR_ARGS -x-assign fast --trace
 	SOURCES vsrc/top.v vsrc/led.v vsrc/ps2_keyboard.v vsrc/seg.v vsrc/vga_ctrl.v
 	vsrc/multiselector.v vsrc/decoder.v vsrc/encoder.v vsrc/alu.v vsrc/binary_counter.v
 	vsrc/timer.v vsrc/shift_register.v vsrc/state_machine.v vsrc/multiselector-template.v
