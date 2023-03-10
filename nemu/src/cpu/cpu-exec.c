@@ -44,6 +44,8 @@ static bool g_print_step = false;
 
 #ifdef CONFIG_FTRACE
 extern uint8_t call_ret;
+extern uint32_t elf_nums;
+extern ElfFuncInfo elf_funcs[ELF_FUNC_MAX];
 uint64_t fs_size = 0;  // function stack size
 #define PRINT_TAB(n)                 \
     for (size_t i = 0; i < (n); i++) \
@@ -109,15 +111,25 @@ static void exec_once(Decode *s, vaddr_t pc)
     {
         fs_size++;
         printf("%lx :", pc);
-            PRINT_TAB(fs_size);
-        printf("%s []\n", ANSI_FMT("call", ANSI_FG_BLUE));
+        PRINT_TAB(fs_size);
+        printf("%s  ", ANSI_FMT("call", ANSI_FG_BLUE));
+        for (int i = 0; i < elf_nums; i++)
+        {
+            if (s->dnpc == elf_funcs[i].addr)
+                printf("[%s@%lx]\n", elf_funcs[i].name, elf_funcs[i].addr);
+        }
     }
     else if (call_ret == 4)
     {
         printf("%lx :", pc);
-            PRINT_TAB(fs_size);
+        PRINT_TAB(fs_size);
         fs_size--;
-        printf("%s []\n", ANSI_FMT("return", ANSI_FG_GREEN));
+        printf("%s  ", ANSI_FMT("return", ANSI_FG_GREEN));
+        for (int i = 0; i < elf_nums; i++)
+        {
+            if (elf_funcs[i].addr <= s->dnpc && s->dnpc <= elf_funcs[i].addr + elf_funcs[i].size)
+                printf("[%s@%lx]\n", elf_funcs[i].name, s->dnpc);
+        }
     }
     call_ret = 0;
 #endif

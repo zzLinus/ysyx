@@ -163,8 +163,8 @@ config FTRACE
 
 config FTRACE_COND
   depends on FTRACE
-  string "Only trace function all when the condition is true"
-  default "false"
+  string "Only trace function when the condition is true"
+  default "true"
 
 config DIFFTEST
   depends on TARGET_NATIVE_ELF

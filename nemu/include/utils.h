@@ -64,6 +64,16 @@ uint64_t get_time();
 
 #define ANSI_FMT(str, fmt) fmt str ANSI_NONE
 
+#define ELF_FUNC_MAX      20
+#define ELF_FUNC_NAME_MAX 10
+
+typedef struct
+{
+    uint64_t addr;
+		uint64_t size;
+    char name[ELF_FUNC_NAME_MAX];
+} ElfFuncInfo;
+
 #define log_write(...)                  \
   IFDEF(                                \
       CONFIG_TARGET_NATIVE_ELF, do {    \
