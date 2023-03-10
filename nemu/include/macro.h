@@ -119,4 +119,6 @@
         ioe_write(reg, &__io_param);                   \
     })
 
+#define Elfw(type)        Elf64_##type
+
 #endif
