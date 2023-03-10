@@ -21,6 +21,7 @@ sigset_t __am_intr_sigmask = {};
 __am_cpu_t *__am_cpu_struct = NULL;
 int __am_ncpu = 0;
 int __am_pgsize;
+int memfd_create (const char *__name, unsigned int __flags) __THROW;
 
 static void save_context_handler(int sig, siginfo_t *info, void *ucontext)
 {

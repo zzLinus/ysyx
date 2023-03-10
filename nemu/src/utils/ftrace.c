@@ -59,11 +59,11 @@ void init_ftrace(const char* p)
         for (int i = 0; i < elf_nums; i++)
         {
             printf(
-                "elf_funcs[%d] addr : %lx name : %s size : %ld \n",
+                "elf_funcs[%d] addr : %lx size : %5ld name : %s\n",
                 i,
                 elf_funcs[i].addr,
-                elf_funcs[i].name,
-                elf_funcs[i].size);
+                elf_funcs[i].size,
+                elf_funcs[i].name);
         }
 
         fclose(file);
