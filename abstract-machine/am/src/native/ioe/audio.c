@@ -6,6 +6,7 @@
 
 static int rfd = -1, wfd = -1;
 static volatile int count = 0;
+extern int pipe2 (int __pipedes[2], int __flags) __THROW __wur;
 
 void __am_audio_init()
 {

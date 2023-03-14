@@ -24,7 +24,23 @@ char *strcpy(char *dst, const char *src)
 
 char *strncpy(char *dst, const char *src, size_t n)
 {
-    panic("Not implemented");
+    if (dst == NULL)
+    {
+        return NULL;
+    }
+
+    char *saved = dst;
+
+    while (*src && n--)
+    {
+        *dst = *src;
+        dst++;
+        src++;
+    }
+
+    *dst = '\0';
+
+    return saved;
 }
 
 char *strcat(char *dst, const char *src)
@@ -57,7 +73,20 @@ int strcmp(const char *s1, const char *s2)
 
 int strncmp(const char *s1, const char *s2, size_t n)
 {
-    panic("Not implemented");
+    while (n && *s1 && (*s1 == *s2))
+    {
+        ++s1;
+        ++s2;
+        --n;
+    }
+    if (n == 0)
+    {
+        return 0;
+    }
+    else
+    {
+        return (*(unsigned char *)s1 - *(unsigned char *)s2);
+    }
 }
 
 void *memset(void *s, int c, size_t n)
@@ -72,7 +101,27 @@ void *memset(void *s, int c, size_t n)
 
 void *memmove(void *dst, const void *src, size_t n)
 {
-    panic("Not implemented");
+    char *pDest = (char *)dst;
+    const char *pSrc = (const char *)src;
+    char *tmp = (char *)malloc(sizeof(char) * n);
+    if (NULL == tmp)
+    {
+        return NULL;
+    }
+    else
+    {
+        unsigned int i = 0;
+        for (i = 0; i < n; ++i)
+        {
+            *(tmp + i) = *(pSrc + i);
+        }
+        for (i = 0; i < n; ++i)
+        {
+            *(pDest + i) = *(tmp + i);
+        }
+        free(tmp);
+    }
+    return dst;
 }
 
 void *memcpy(void *out, const void *in, size_t n)
