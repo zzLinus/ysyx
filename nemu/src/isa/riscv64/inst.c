@@ -61,29 +61,25 @@ enum
     } while (0)
 // NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
 // multiples of 2 bytes.
-#define immJ()                                                                                                        \
-    do                                                                                                                \
-    {                                                                                                                 \
-        *imm =                                                                                                        \
-            ((SEXT(BITS(i, 30, 30), 1) << 19) | (SEXT(BITS(i, 19, 12), 8) << 18) | (SEXT(BITS(i, 20, 20), 1) << 10) | \
-             BITS(i, 30, 21));                                                                                        \
-        *imm = *imm << 1;                                                                                             \
+// 1004bc
+#define immJ()                                                                                                         \
+    do                                                                                                                 \
+    {                                                                                                                  \
+        *imm = (SEXT(BITS(i, 31, 31), 1) << 19) | (BITS(i, 19, 12) << 11) | (BITS(i, 20, 20) << 10) | BITS(i, 30, 21); \
+        *imm = *imm << 1;                                                                                              \
     } while (0)
-#define immB()                                                                                                       \
-    do                                                                                                               \
-    {                                                                                                                \
-        *imm = (SEXT(BITS(i, 31, 31), 1) << 11) | (SEXT(BITS(i, 7, 7), 1) << 10) | (SEXT(BITS(i, 30, 25), 6) << 4) | \
-               BITS(i, 11, 8);                                                                                       \
-        *imm = *imm << 1;                                                                                            \
+#define immB()                                                                                                     \
+    do                                                                                                             \
+    {                                                                                                              \
+        *imm = (SEXT(BITS(i, 31, 31), 1) << 11) | (BITS(i, 7, 7) << 10) | (BITS(i, 30, 25) << 4) | BITS(i, 11, 8); \
+        *imm = *imm << 1;                                                                                          \
     } while (0)
 // INFO : why if i do SEXT(BITS(i, 11, 8), 4) it will overflow but BITS(i, 11, 8) is normal
 
 #ifdef CONFIG_FTRACE
 uint8_t call_ret = 0;
-#define RET(addr)      \
-    call_ret = 1 << 2; 
-#define CALL(addr)     \
-    call_ret = 1 << 1; 
+#define RET(addr)  call_ret = 1 << 2;
+#define CALL(addr) call_ret = 1 << 1;
 #endif
 
 static void decode_operand(Decode *s, int *dest, word_t *src1, word_t *src2, word_t *imm, int type)
@@ -212,13 +208,17 @@ static int decode_exec(Decode *s)
     //																										  10010
     // 0001 10100
     // 0x121
-    //// FIXME : according to `https://github.com/riscv/riscv-code-size-reduction/blob/main/Zc-specification/c_zext_b.adoc`
-    ///  zext.b should equivalent to `addi rd r1 0xff` ,but it's value always less one
+    //  FIXME : according to `https://github.com/riscv/riscv-code-size-reduction/blob/main/Zc-specification/c_zext_b.adoc`
+    //  zext.b should equivalent to `addi rd r1 0xff` ,but it's value always less one
     INSTPAT("??????? ????? ????? 111 ????? 00100 11", zext.b, I, R(dest) = src1 + imm + 1);
     INSTPAT("??????? ????? ????? 000 ????? 00100 11", addi, I, R(dest) = src1 + imm);
     INSTPAT("??????? ????? ????? 000 ????? 00110 11", addiw, I, R(dest) = src1 + imm);  // FIXME : data length should be fix
+    // 8000000c:	4bc000ef          	jal	ra,800004c8 <_trm_init>
+    //   0100101 11100 00000 000 00001 11011 11
     INSTPAT(
-        "??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + imm; if (dest != 0) {
+        "??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + imm;
+        printf("%lx %lx %lx", s->pc, imm, s->pc + imm);
+        if (dest != 0) {
             R(dest) = s->snpc;
 
             IFDEF(CONFIG_FTRACE, CALL(s->dnpc))
@@ -226,7 +226,7 @@ static int decode_exec(Decode *s)
     INSTPAT("0000000 00000 ????? 000 ????? 00100 11", mv, I, R(dest) = src1 + imm);  // mv rd rs == add rd rs 0
     INSTPAT("0000000 ????? ????? 101 ????? 00110 11", srliw, I, R(dest) = (int)((unsigned int)src1 >> imm));
     // 800000a4:	401ddb9b          	sraiw	s7,s11,0x1
-		//       0100000 00001 11011 101 10111 00110 11
+    //       0100000 00001 11011 101 10111 00110 11
     INSTPAT("0100000 ????? ????? 101 ????? 00110 11", sraiw, I, R(dest) = (int)(src1 >> imm));
     INSTPAT("??????? ????? ????? 001 ????? 00100 11", slli, I, R(dest) = src1 << imm);
     // 8000018c:	0019179b          	slliw	a5,s2,0x1
