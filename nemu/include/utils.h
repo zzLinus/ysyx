@@ -64,8 +64,8 @@ uint64_t get_time();
 
 #define ANSI_FMT(str, fmt) fmt str ANSI_NONE
 
-#define ELF_FUNC_MAX      20
-#define ELF_FUNC_NAME_MAX 10
+#define ELF_FUNC_MAX      30
+#define ELF_FUNC_NAME_MAX 30
 
 typedef struct
 {

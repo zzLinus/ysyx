@@ -47,9 +47,13 @@ extern uint8_t call_ret;
 extern uint32_t elf_nums;
 extern ElfFuncInfo elf_funcs[ELF_FUNC_MAX];
 uint64_t fs_size = 0;  // function stack size
-#define PRINT_TAB(n)                 \
-    for (size_t i = 0; i < (n); i++) \
-        printf("  ");
+#define PRINT_TAB(n)                     \
+    if ((n) < 10)                        \
+        for (size_t i = 0; i < (n); i++) \
+            printf("  ");                \
+    else                                 \
+        for (size_t i = 0; i < 10; i++)  \
+            printf("  ");
 #endif
 
 void device_update();
