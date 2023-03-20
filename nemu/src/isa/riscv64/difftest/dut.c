@@ -27,7 +27,6 @@ bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc)  // TODO:
     {
         if (cpu.gpr[i] != ref_r->gpr[i])
         {
-						printf("%ld %ld\n",SEXT(0x80000000,32),SEXT(0x80000000,32));
             printf("\nDifftest found register name: %s is %s!\n", reg_name(i, NOTIMPLEMENT), ANSI_FMT("WRONG", ANSI_FG_RED));
             printf(ANSI_FMT("decimal : %14ld hex : %lx\n", ANSI_FG_RED), cpu.gpr[i], cpu.gpr[i]);
             printf(ANSI_FMT("decimal : %14ld hex : %lx\n\n", ANSI_FG_GREEN), ref_r->gpr[i], ref_r->gpr[i]);
