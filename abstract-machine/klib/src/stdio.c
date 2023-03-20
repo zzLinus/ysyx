@@ -15,7 +15,6 @@ int vsprintf(char *out, const char *fmt, va_list ap)
     panic("Not implemented");
 }
 
-// TODO:  implement this tody
 int sprintf(char *out, const char *fmt, ...)
 {
     va_list args;

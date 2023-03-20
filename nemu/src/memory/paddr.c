@@ -91,7 +91,7 @@ void paddr_write(paddr_t addr, int len, word_t data)
 #ifdef CONFIG_MTRACE_COND
     if (MTRACE_COND)
     {
-        printf("write %d bytes begin from %x\n", len, addr);
+        printf("write %d bytes begin with %x\n", len, addr);
     }
 #endif
     if (likely(in_pmem(addr)))
