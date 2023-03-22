@@ -36,10 +36,10 @@ bool isa_difftest_checkregs(CPU_state *ref_r, vaddr_t pc)  // TODO:
             ret = false;
         }
     }
-        for (int i = 0; i < 32; ++i)
-        {
-            printf("ref reg %s  | %ld | %lx\n", reg_name(i, NOTIMPLEMENT), ref_r->gpr[i], ref_r->gpr[i]);
-        }
+        /**for (int i = 0; i < 32; ++i)*/
+        /**{*/
+        /**    printf("ref reg %s  | %ld | %lx\n", reg_name(i, NOTIMPLEMENT), ref_r->gpr[i], ref_r->gpr[i]);*/
+        /**}*/
     return ret;
 }
 
