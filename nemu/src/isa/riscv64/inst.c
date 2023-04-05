@@ -269,3 +269,21 @@ int isa_exec_once(Decode *s)
     s->isa.inst.val = inst_fetch(&s->snpc, 4);
     return decode_exec(s);
 }
+
+
+// INSTPAT("??????? ????? ????? 111 ????? 00100 11", andi, I, R(dest) = src1 & imm);
+// J type
+// x << 1 >> 22
+// x << 11 >> 31 << 10 
+// x << 12 >> 24 << 11 
+// x >> 31 << 19
+//
+// S type
+// x << 20 >> 27
+// x >> 25 << 5
+//
+// B type
+// x << 20 >> 28 
+// x << 1 >> 26 << 4
+// x << 24 >> 31 << 10
+// x >> 31 << 11
