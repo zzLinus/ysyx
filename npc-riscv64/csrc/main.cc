@@ -1,11 +1,11 @@
 #include <Vtop.h>
 #include <assert.h>
+#include <stdio.h>
 #include <stdlib.h>
 #include <verilated.h>
 #include <verilated_vcd_c.h>
 
-#define CONFIG_MBASE 0x80000000
-#define INST_NUM     6
+#include "defs.h"
 
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
@@ -32,7 +32,7 @@ static inline void reset(int n)
     top->_rst = 0;
 }
 
-uint32_t inst[INST_NUM] = {
+uint32_t img[INST_NUM] = {
     0b00000000000100000000000010010011,  // 0000 0000 0001 00000 000 00001 0010011 -> addi ra,$0,1
     0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
     0b00000000000100001000000010010011,  // 0000 0000 0001 00001 000 00001 0010011 -> addi ra,ra,1
@@ -44,14 +44,37 @@ uint32_t inst[INST_NUM] = {
 class pmem
 {
    public:
-    pmem()
+    pmem() : fp(NULL)
     {
-        for (int i = 0; i < INST_NUM; i++)
+        FILE *fp = NULL;
+        for (int i = 0; i < INST_NUM; i++)  // read in defualt img
         {
-            memcpy(mem + i * 4, inst + i * 1, sizeof(uint32_t));
+            memcpy(mem + i * 4, img + i * 1, sizeof(uint32_t));
         }
-    };
+    }
     ~pmem(){};
+    void read_img(const char *img_file)
+    {
+        fp = fopen(img_file, "rb");
+        if (fp == NULL)
+        {
+            printf("failed to load img : %s\n", img_file);
+            assert(0);
+        }
+        else
+        {
+            printf("Success to load img\n");
+        }
+
+        fseek(fp, 0, SEEK_END);
+        long size = ftell(fp);
+        printf("The image is %s, size = %ld", img_file, size);
+
+        fseek(fp, 0, SEEK_SET);
+        int ret = fread(guest_to_host(RESET_VECTOR), size, 1, fp);
+        assert(ret == 1);
+        fclose(fp);
+    }
     uint64_t pmem_read(uint64_t addr, uint8_t instLen)
     {
         uint64_t ret = host_read(guest_to_host(addr), instLen);
@@ -77,7 +100,8 @@ class pmem
     }
 
    private:
-    uint8_t mem[2048];
+    FILE *fp;
+    uint8_t mem[CONFIG_MSIZE];
 };
 
 void print_exu()
@@ -97,6 +121,7 @@ extern "C"
 int main(int argc, char **argv, char **env)
 {
     pmem *mem = new pmem();
+    // mem->read_img(__IMG_);
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
@@ -105,13 +130,12 @@ int main(int argc, char **argv, char **env)
     top->trace(tfp, 99);
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");
-		printf("img : %s", __IMG_ );
 
     reset(10);
 
-    top->_exu_ctr = 0b0000;  // TODO :decode ctr from IDU
+    top->_exu_ctr = 0b0000;
 
-    while (true)  // TODO : DPI-C ebreak
+    while (true)
     {
         contextp->timeInc(1);
 

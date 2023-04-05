@@ -34,6 +34,8 @@ endif()
 add_executable(Vtop ../csrc/main.cc)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
+target_include_directories(Vtop PUBLIC ./include)
+
 
 # Add the Verilated circuit to the target
 verilate(
