@@ -23,6 +23,7 @@ cmake_minimum_required(VERSION 3.8)
 project(ysyx_npc_riscv64!)
 
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+add_definitions(-D__IMG_="${__IMG__}")
 
 find_package(verilator HINTS $ENV{VERILATOR_ROOT} ${VERILATOR_ROOT})
 if (NOT verilator_FOUND)

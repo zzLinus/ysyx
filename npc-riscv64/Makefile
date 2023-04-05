@@ -37,7 +37,7 @@ sim:
 
 	@echo
 	@echo "-- VERILATE ----------------"
-	mkdir -p build && cd build && cmake ..
+	mkdir -p build && cd build && cmake -D__IMG__=$(IMG) ..
 
 	@echo
 	@echo "-- BUILD -------------------"

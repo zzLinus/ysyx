@@ -105,6 +105,7 @@ int main(int argc, char **argv, char **env)
     top->trace(tfp, 99);
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");
+		printf("img : %s", __IMG_ );
 
     reset(10);
 
