@@ -28,7 +28,7 @@ end
 endmodule
 
 
-module ALU#(
+module ALU#( // TODO : refector ALU
 	BITS = 32
 )( 
 	input [3:0] alu_ctr,

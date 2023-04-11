@@ -9,8 +9,8 @@ module top(
 wire [4:0] w_ra;
 wire [4:0] w_rb;
 wire [4:0] w_rw;
-wire [31:0] w_busA;
-wire [31:0] w_busB;
+wire [31:0] alu_inA;
+wire [31:0] alu_inB;
 
 // NOTE : control signal
 wire reg_write; // register write signal
@@ -18,8 +18,8 @@ wire mem2reg; // memory to register
 wire alu_src; // alu inputr src control
 wrie mem_write, mem_read; // memory r/w signal
 wire [3:0] alu_cc;  // 4 bits alu controler output
-wire [6:0] opcode, funct7;
-wire [2:0] funct3;
+wire [6:0] opcode, funct7; // TODO : get funct7
+wire [2:0] funct3; // TODO : get funct3
 wire [1:0] alu_op;
 
 wire alu_zero;
@@ -52,22 +52,21 @@ IDU _idu(
 	.ra(w_ra),
 	.rb(w_rb),
 	.rw(w_rw),
-	.valC(w_busB[19:0])
+	.valC(alu_inB[19:0])
 ); // decode
 
 ALU #(
 	.BITS(32)
 ) _alu (
 	.alu_ctr(alu_cc),
-	.alu_a(w_busA),
-	.alu_b(w_busB),
+	.alu_a(alu_inA),
+	.alu_b(alu_inB),
 	.alu_out(alu_out),
 	.alu_zero(alu_zero),
 	.alu_carry(alu_carry),
 	.alu_less(alu_less),
 	.alu_overflow(alu_overflow)
 ); // execute
-
 
 
 PC #(
@@ -88,8 +87,8 @@ RF _gpr(
 	.rb(w_rb),
 	.rw(w_rw),
 	.busW(alu_out),
-	.busA(w_busA),
-	.busB(w_busB),
+	.busA(alu_inA),
+	.busB(alu_inB),
 	.regWr(reg_write)
 );
 

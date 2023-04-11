@@ -1,29 +1,30 @@
 module RF(
 	input clk,
+	input rst,
+	input reg_w_EN, // register write enable
 	input [4:0] ra,
 	input [4:0] rb,
 	input [4:0] rw,
-	input [31:0] busW,
-	output reg [31:0] busA,
-	output reg [31:0] busB,
-	// input wrClk,
-	input regWr
+	input [31:0] rw_data,
+	output [31:0] ra_data,
+	output [31:0] rb_data 
 );
 
-reg [32*32-1:0] regs;
+reg [31:0] regs [31:0];
+int i;
 
-always @(posedge clk) begin
-	if (ra == 0) busA = 32'b0;
-	else if(ra != 5'b11111) busA = regs[32*ra+:32];
-	if (rb == 0) busB = 32'b0;
-	else if(rb != 5'b11111) busB = regs[32*rb+:32];
-
-	$display("rf ra value: %d", busA);
-	$display("rf rb value: %d", busB);
+always @(posedge clk, posedge reset) begin
+		if(rst) begin
+				for(i=0;i<31;i=i+1)
+						regs[i] = 32'b0;
+		end
+		else begin
+				if(reg_w_EN)
+						regs[rw] <= rw_data;
+		end
 end
 
-// always @(posedge wrClk) begin
-
-always @(negedge clk) regs[32*rw+:32] = (regWr) ? busW : regs[32*rw+:32];
+assign ra_data = regs[ra];
+assign rb_data = regs[rb];
 
 endmodule;
