@@ -58,7 +58,7 @@ IDU _idu(
 ALU #(
 	.BITS(32)
 ) _alu (
-	.alu_ctr(alu_ctr),
+	.alu_ctr(alu_cc),
 	.alu_a(w_busA),
 	.alu_b(w_busB),
 	.alu_out(alu_out),
@@ -76,9 +76,9 @@ PC #(
 	.BASE(64'h80000000)
 ) pc (
 	.clk(clk),
-	.w_en(1'b0), // TODO: for jump instruction
+	.w_en(1'b0), // FIXME : for jump instruction
 	.rst(rst),
-	.dpc(), // TODO: for jump instruction
+	.dpc(), // FIXME : for jump instruction
 	.pc_out(pc_out)
 );
 
@@ -87,21 +87,27 @@ RF _gpr(
 	.ra(w_ra),
 	.rb(w_rb),
 	.rw(w_rw),
-	.busW(alu_out), // TODO:
+	.busW(alu_out),
 	.busA(w_busA),
 	.busB(w_busB),
 	.regWr(reg_write)
 );
 
+ALU_CTR _alu_ctr(
+		.alu_op(alu_op),
+		.funct7(funct7),
+		.funct3(funct3),
+		.operation(alu_cc)
+);
 
 CTRLER _controler (
-		.op_code(opcode),
-		.alu_src(alu_src), // select alu source by a mux21
-		.mem2reg(mem2reg),
-		.reg_w(reg_write),
-		.mem_w(mem_write),
-		.mem_r(mem_read),
-		.alu_op(alu_op)
+		.op_code(opcode), // TODO : feed opcode to controler here
+		.alu_src(alu_src), // TODO : select alu source by a mux21
+		.mem2reg(mem2reg), // TODO : control wirte back here
+		.reg_w(reg_write), // TODO : control register write back here
+		.mem_w(mem_write), // TODO : control memory write back here
+		.mem_r(mem_read), // TODO : control memory access(read) here
+		.alu_op(alu_op) // TODO : give alu controler to compute what kind of operation alu need perform here
 );
 
 endmodule;

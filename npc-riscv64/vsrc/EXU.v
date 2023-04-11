@@ -1,9 +1,30 @@
 module ALU_CTR(
 		input [1:0] alu_op,
-		funct7,
-		funct3,
-		alu_op_ctr
+		input [6:0] funct7,
+		input [2:0] funct3,
+		output reg [3:0] operation 
 );
+
+always @(*) begin
+		case ({funct3,alu_op})
+				5'b11110 : operation = 4'b0000; // AND opp
+				5'b11010 : operation = 4'b0001; // OR op
+				5'b10010 : operation = 4'b1100; // NOR op
+				5'b01010 : operation = 4'b0111; // SLT op
+				5'b00010 :if(funct7 == 7'h00)   // ADD op
+										operation = 4'b0010;
+								  else if(funct7 == 7'h20) // SUB op
+                    operation = 4'b0110;
+				5'b11100 : operation = 4'b0000; // ANDI op
+				5'b11000 : operation = 4'b0001; // ORI op
+				5'b10000 : operation = 4'b1100; // NORI op
+				5'b01000 : operation = 4'b0111; // SLTI op
+				5'b00000 : operation = 4'b0010; // ADDI op
+				5'b01001 : operation = 4'b0010; // LW or SW op
+				default  : operation = 4'b0000; // dufault to AND op
+		endcase
+end
+
 endmodule
 
 
