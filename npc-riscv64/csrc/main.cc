@@ -13,23 +13,23 @@ bool NPC_RUN = true;
 
 static inline void single_cycle()
 {
-    top->_clk = 1;
+    top->clk = 1;
     top->eval();
     if (!NPC_RUN)
     {
         printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
         exit(0);
     }
-    top->_clk = 0;
+    top->clk = 0;
     top->eval();
 }
 
 static inline void reset(int n)
 {
-    top->_rst = 1;
+    top->rst = 1;
     while (n-- > 0)
         single_cycle();
-    top->_rst = 0;
+    top->rst = 0;
 }
 
 uint32_t img[INST_NUM] = {
@@ -104,16 +104,16 @@ class pmem
     uint8_t mem[CONFIG_MSIZE];
 };
 
-void print_exu()
+void print_alu()
 {
-    printf("exu state : out : 0d%u 0b%031b 0x%08x\n", top->_exu_out, top->_exu_out, top->_exu_out);
+    printf("alu state : out : 0d%u 0b%031b 0x%08x\n", top->alu_out, top->alu_out, top->alu_out);
 }
 
 extern "C"
 {
     void stop_npc()
     {
-        printf("hi!~``\n");
+        printf("EBREAK !\n");
         NPC_RUN = false;
     }
 }
@@ -121,7 +121,7 @@ extern "C"
 int main(int argc, char **argv, char **env)
 {
     pmem *mem = new pmem();
-    // mem->read_img(__IMG_);
+		 mem->read_img(__IMG_);
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
@@ -133,14 +133,12 @@ int main(int argc, char **argv, char **env)
 
     reset(10);
 
-    top->_exu_ctr = 0b0000;
-
     while (true)
     {
         contextp->timeInc(1);
 
         printf("~~~~~~~~~~~~~~~~~~~~~~~~\n");
-        top->_inst = mem->pmem_read(top->_pc_out, 4);
+        top->inst = mem->pmem_read(top->pc_out, 4);
         single_cycle();
         tfp->dump(contextp->time());
     }

@@ -1,7 +1,15 @@
-module EXU#(
+module ALU_CTR(
+		input [1:0] alu_op,
+		funct7,
+		funct3,
+		alu_op_ctr
+);
+endmodule
+
+
+module ALU#(
 	BITS = 32
 )( 
-	input clk,
 	input [3:0] alu_ctr,
 	input [BITS-1:0] alu_a,
 	input [BITS-1:0] alu_b,
@@ -11,11 +19,6 @@ module EXU#(
 	output alu_less,
 	output alu_overflow
 );
-
-always @(negedge clk)begin 
-	$display("\nadder out : %d",adder_out);
-	$display("sub_or_add: %d",alu_ctr_sa);
-end
 
 wire [BITS-1:0] adder_out;
 wire [BITS-1:0] sft_out;
