@@ -8,7 +8,7 @@ module CTRLER (
 		output reg [1:0] alu_op
 );
 
-always @(*)
+always @(*) begin
 		case(op_code)
 				7'b0000011 : begin // opcode for load word
 						mem2reg = 1'b1;
@@ -55,5 +55,6 @@ always @(*)
 						alu_op  = 2'b00;
 				end
 		endcase
+end
 
 endmodule

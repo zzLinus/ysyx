@@ -13,7 +13,7 @@ module RF(
 reg [31:0] regs [31:0];
 int i;
 
-always @(posedge clk, posedge reset) begin
+always @(posedge clk, posedge rst) begin
 		if(rst) begin
 				for(i=0;i<31;i=i+1)
 						regs[i] = 32'b0;
