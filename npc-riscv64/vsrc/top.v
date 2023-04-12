@@ -24,7 +24,7 @@ wire [4:0] rb;
 wire [4:0] rw;
 
 // NOTE : ALU input wire
-wire [19:0] imm_value;
+wire [31:0] imm_value;
 wire [31:0] reg_value;
 wire [31:0] alu_inA;
 wire [31:0] alu_inB;
@@ -36,24 +36,26 @@ wire alu_carry;
 wire alu_overflow;
 reg state_reg [3:0];
 
+// NOTE : Memory data wire
+wire [31:0] mem_data;
+
 always @(negedge clk)begin // TODO : refector this pice of shit
 	state_reg[0] = alu_zero;
 	state_reg[1] = alu_carry;
 	state_reg[2] = alu_overflow;
 	state_reg[3] = alu_less;
-	$display("\nstate regs:");
+	$display("\ninst : %b", inst);
+	$display("pc : %x", pc_out);
 	$display("zero %d"    ,alu_zero);
 	$display("carry %d"   ,alu_carry);
 	$display("overflow %d",alu_overflow);
 	$display("less %d"    ,alu_less);
 end
 
-always @(posedge clk) $display("inst : %x\n",inst);
-
 IFU _ifu( // NOTE : implement with C code
 ); // fetch
 
-IDU _idu( // TODO : refector decode unit
+IDU _idu (
 	.clk(clk),
 	.inst(inst),
 	.ra(ra),
@@ -65,7 +67,7 @@ IDU _idu( // TODO : refector decode unit
 	.imm(imm_value)
 ); // decode
 
-ALU #(
+ALU #( // TODO : refector ALU
 	.BITS(32)
 ) _alu (
 	.alu_ctr(alu_cc),
@@ -107,7 +109,7 @@ MuxKey #(
 	.key(mem2reg),
 	.lut({
 		1'b0, alu_out,
-		1'b1, mem_data  // TODO : 
+		1'b1, mem_data
 	})
 );
 
@@ -124,11 +126,19 @@ MuxKey #(
 	})
 );
 
-ALU_CTR _alu_ctr(
+ALU_CTR _alu_ctr (
 		.alu_op(alu_op),
 		.funct7(funct7),
 		.funct3(funct3),
 		.operation(alu_cc)
+);
+
+DMEM _dmem (
+		.mem_w_EN(mem_write),
+		.mem_r_EN(mem_read),
+		.addr(alu_out[8:0]),
+		.write_data(reg_value),
+		.mem_out(mem_data)
 );
 
 CTRLER _controler (
@@ -136,8 +146,8 @@ CTRLER _controler (
 		.alu_src(alu_src),
 		.mem2reg(mem2reg),
 		.reg_w(reg_write),
-		.mem_w(mem_write), // TODO : control memory write back here
-		.mem_r(mem_read), // TODO : control memory access(read) here
+		.mem_w(mem_write),
+		.mem_r(mem_read),
 		.alu_op(alu_op)
 );
 

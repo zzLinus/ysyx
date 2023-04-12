@@ -121,7 +121,7 @@ extern "C"
 int main(int argc, char **argv, char **env)
 {
     pmem *mem = new pmem();
-		 mem->read_img(__IMG_);
+    // mem->read_img(__IMG_);
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
@@ -132,13 +132,14 @@ int main(int argc, char **argv, char **env)
     tfp->dumpvars(1, "top");
 
     reset(10);
+    printf("reset finished!\n");
 
     while (true)
     {
         contextp->timeInc(1);
 
         printf("~~~~~~~~~~~~~~~~~~~~~~~~\n");
-        top->inst = mem->pmem_read(top->pc_out, 4);
+        top->inst = mem->pmem_read(0x80000000 + top->pc_out * 4, 4);
         single_cycle();
         tfp->dump(contextp->time());
     }

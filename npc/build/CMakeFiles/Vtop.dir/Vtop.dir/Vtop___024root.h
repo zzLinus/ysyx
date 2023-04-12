@@ -126,7 +126,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__my_keyboard__DOT____Vtogcov__count;
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
-        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h6f20105c__0;
+        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h747c9236__0;
         CData/*3:0*/ top__DOT__alu__DOT__tmp;
         CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
         CData/*3:0*/ top__DOT__state_machine__DOT__state_din;
@@ -145,10 +145,10 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h84adcffd__0;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h18064a31__0;
     };
     struct {
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h84adcffd__1;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h18064a31__1;
         CData/*7:0*/ top__DOT__lookup__DOT__ascii;
         CData/*0:0*/ top__DOT__lookup__DOT__pressing;
         CData/*0:0*/ top__DOT__lookup__DOT____Vtogcov__pressing;
@@ -238,7 +238,7 @@ class Vtop___024root final : public VerilatedModule {
     Vtop__Syms* const vlSymsp;
 
     // CONSTRUCTORS
-    Vtop___024root(Vtop__Syms* symsp, const char* name);
+    Vtop___024root(Vtop__Syms* symsp, const char* v__name);
     ~Vtop___024root();
     VL_UNCOPYABLE(Vtop___024root);
 

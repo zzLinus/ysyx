@@ -313,7 +313,7 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__count = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync = VL_RAND_RESET_I(3);
     vlSelf->top__DOT__my_keyboard__DOT____Vtogcov__sampling = VL_RAND_RESET_I(1);
-    vlSelf->top__DOT__my_keyboard__DOT____Vlvbound_h6f20105c__0 = VL_RAND_RESET_I(1);
+    vlSelf->top__DOT__my_keyboard__DOT____Vlvbound_h747c9236__0 = VL_RAND_RESET_I(1);
     vlSelf->top__DOT__alu__DOT__tmp = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__alu__DOT____Vtogcov__tmp = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__state_machine__DOT__state_din = VL_RAND_RESET_I(4);
@@ -396,8 +396,8 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_cord_v = VL_RAND_RESET_I(12);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_cord_h = VL_RAND_RESET_I(4);
     vlSelf->top__DOT__my_vmem__DOT____Vtogcov__font_data = VL_RAND_RESET_I(12);
-    vlSelf->top__DOT__my_vmem__DOT____Vlvbound_h84adcffd__0 = VL_RAND_RESET_I(8);
-    vlSelf->top__DOT__my_vmem__DOT____Vlvbound_h84adcffd__1 = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT__my_vmem__DOT____Vlvbound_h18064a31__0 = VL_RAND_RESET_I(8);
+    vlSelf->top__DOT__my_vmem__DOT____Vlvbound_h18064a31__1 = VL_RAND_RESET_I(8);
     vlSelf->top__DOT__my_vmem__DOT____VdfgTmp_h1bcba204__0 = 0;
     vlSelf->top__DOT__timer_1s__DOT__count_clk = VL_RAND_RESET_I(32);
     vlSelf->top__DOT__timer_1s__DOT____Vtogcov__count_clk = VL_RAND_RESET_I(32);
@@ -408,15 +408,11 @@ VL_ATTR_COLD void Vtop___024root___ctor_var_reset(Vtop___024root* vlSelf) {
     vlSelf->__Vdly__top__DOT__my_keyboard__DOT__count = VL_RAND_RESET_I(4);
     vlSelf->__Vdly__top__DOT__my_keyboard__DOT__buffer = VL_RAND_RESET_I(10);
     vlSelf->__Vdly__timer_out = VL_RAND_RESET_I(1);
-    vlSelf->__VstlIterCount = 0;
-    vlSelf->__VicoIterCount = 0;
     vlSelf->__Vtrigrprev__TOP__clk = VL_RAND_RESET_I(1);
     vlSelf->__Vtrigrprev__TOP__top__DOT__my_keyboard__DOT__keycode = VL_RAND_RESET_I(8);
     vlSelf->__Vtrigrprev__TOP__timer_out = VL_RAND_RESET_I(1);
     vlSelf->__Vtrigrprev__TOP__top__DOT__lookup__DOT__ascii = VL_RAND_RESET_I(8);
     vlSelf->__VactDidInit = 0;
-    vlSelf->__VactIterCount = 0;
-    vlSelf->__VactContinue = 0;
     for (int __Vi0 = 0; __Vi0 < 5; ++__Vi0) {
         vlSelf->__Vm_traceActivity[__Vi0] = 0;
     }

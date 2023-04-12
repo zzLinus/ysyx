@@ -23,7 +23,7 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_initial__TOP\n"); );
     // Init
-    VlWide<6>/*191:0*/ __Vtemp_hb267fa8c__0;
+    VlWide<6>/*191:0*/ __Vtemp_hb26badad__0;
     // Body
     vlSymsp->__Vcoverage[329].fetch_add(1, std::memory_order_relaxed);
     vlSymsp->__Vcoverage[396].fetch_add(1, std::memory_order_relaxed);
@@ -114,13 +114,13 @@ VL_ATTR_COLD void Vtop___024root___eval_initial__TOP(Vtop___024root* vlSelf) {
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[6U] = 4U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[7U] = 2U;
     vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__pair_list[8U] = 0U;
-    __Vtemp_hb267fa8c__0[0U] = 0x2e747874U;
-    __Vtemp_hb267fa8c__0[1U] = 0x666f6e74U;
-    __Vtemp_hb267fa8c__0[2U] = 0x7667615fU;
-    __Vtemp_hb267fa8c__0[3U] = 0x7263652fU;
-    __Vtemp_hb267fa8c__0[4U] = 0x65736f75U;
-    __Vtemp_hb267fa8c__0[5U] = 0x72U;
-    VL_READMEM_N(true, 12, 4096, 0, VL_CVT_PACK_STR_NW(6, __Vtemp_hb267fa8c__0)
+    __Vtemp_hb26badad__0[0U] = 0x2e747874U;
+    __Vtemp_hb26badad__0[1U] = 0x666f6e74U;
+    __Vtemp_hb26badad__0[2U] = 0x7667615fU;
+    __Vtemp_hb26badad__0[3U] = 0x7263652fU;
+    __Vtemp_hb26badad__0[4U] = 0x65736f75U;
+    __Vtemp_hb26badad__0[5U] = 0x72U;
+    VL_READMEM_N(true, 12, 4096, 0, VL_CVT_PACK_STR_NW(6, __Vtemp_hb26badad__0)
                  ,  &(vlSelf->top__DOT__my_vmem__DOT__font_rom)
                  , 0, ~0ULL);
     vlSymsp->__Vcoverage[1033].fetch_add(1, std::memory_order_relaxed);
@@ -154,8 +154,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___stl_sequent__TOP__0\n"); );
     // Init
-    VlWide<3>/*95:0*/ __Vtemp_h4d1542a0__0;
-    VlWide<3>/*95:0*/ __Vtemp_hbaff1cc1__0;
+    VlWide<3>/*95:0*/ __Vtemp_h890864a7__0;
     // Body
     if ((0U == (IData)(vlSelf->s))) {
         vlSymsp->__Vcoverage[391].fetch_add(1, std::memory_order_relaxed);
@@ -4768,45 +4767,7 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                     < (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)) 
                                                    & (0x203U 
                                                       >= (IData)(vlSelf->top__DOT__my_vga_ctrl__DOT__y_cnt)));
-    __Vtemp_h4d1542a0__0[0U] = (IData)((0x1020304000000000ULL 
-                                        | (((QData)((IData)(
-                                                            ((IData)(vlSelf->rand_in)
-                                                              ? 5U
-                                                              : 2U))) 
-                                            << 0x38U) 
-                                           | (((QData)((IData)(
-                                                               ((IData)(vlSelf->rand_in)
-                                                                 ? 5U
-                                                                 : 3U))) 
-                                               << 0x30U) 
-                                              | (((QData)((IData)(
-                                                                  ((IData)(vlSelf->rand_in)
-                                                                    ? 5U
-                                                                    : 4U))) 
-                                                  << 0x28U) 
-                                                 | (((QData)((IData)(
-                                                                     ((IData)(vlSelf->rand_in)
-                                                                       ? 5U
-                                                                       : 4U))) 
-                                                     << 0x20U) 
-                                                    | (QData)((IData)(
-                                                                      (0x50607080U 
-                                                                       | ((((IData)(vlSelf->rand_in)
-                                                                             ? 6U
-                                                                             : 1U) 
-                                                                           << 0x18U) 
-                                                                          | ((((IData)(vlSelf->rand_in)
-                                                                                ? 7U
-                                                                                : 1U) 
-                                                                              << 0x10U) 
-                                                                             | ((((IData)(vlSelf->rand_in)
-                                                                                 ? 8U
-                                                                                 : 1U) 
-                                                                                << 8U) 
-                                                                                | ((IData)(vlSelf->rand_in)
-                                                                                 ? 8U
-                                                                                 : 1U)))))))))))));
-    __Vtemp_h4d1542a0__0[1U] = (IData)(((0x1020304000000000ULL 
+    __Vtemp_h890864a7__0[1U] = (IData)(((0x1020304000000000ULL 
                                          | (((QData)((IData)(
                                                              ((IData)(vlSelf->rand_in)
                                                                ? 5U
@@ -4845,36 +4806,46 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
                                                                                  ? 8U
                                                                                  : 1U)))))))))))) 
                                         >> 0x20U));
-    if (vlSelf->rand_in) {
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[0U] = 8U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[1U] = 8U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[2U] = 7U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[3U] = 6U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[4U] = 5U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[5U] = 5U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[6U] = 5U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[7U] = 5U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[8U] = 5U;
-        __Vtemp_h4d1542a0__0[2U] = 5U;
-    } else {
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[0U] = 1U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[1U] = 1U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[2U] = 1U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[3U] = 1U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[4U] = 4U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[5U] = 4U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[6U] = 3U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[7U] = 2U;
-        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[8U] = 1U;
-        __Vtemp_h4d1542a0__0[2U] = 1U;
-    }
-    VL_EXTEND_WW(72,68, __Vtemp_hbaff1cc1__0, __Vtemp_h4d1542a0__0);
     vlSelf->top__DOT__state_machine__DOT____Vcellinp__stateMux__lut[0U] 
-        = __Vtemp_hbaff1cc1__0[0U];
+        = (IData)((0x1020304000000000ULL | (((QData)((IData)(
+                                                             ((IData)(vlSelf->rand_in)
+                                                               ? 5U
+                                                               : 2U))) 
+                                             << 0x38U) 
+                                            | (((QData)((IData)(
+                                                                ((IData)(vlSelf->rand_in)
+                                                                  ? 5U
+                                                                  : 3U))) 
+                                                << 0x30U) 
+                                               | (((QData)((IData)(
+                                                                   ((IData)(vlSelf->rand_in)
+                                                                     ? 5U
+                                                                     : 4U))) 
+                                                   << 0x28U) 
+                                                  | (((QData)((IData)(
+                                                                      ((IData)(vlSelf->rand_in)
+                                                                        ? 5U
+                                                                        : 4U))) 
+                                                      << 0x20U) 
+                                                     | (QData)((IData)(
+                                                                       (0x50607080U 
+                                                                        | ((((IData)(vlSelf->rand_in)
+                                                                              ? 6U
+                                                                              : 1U) 
+                                                                            << 0x18U) 
+                                                                           | ((((IData)(vlSelf->rand_in)
+                                                                                 ? 7U
+                                                                                 : 1U) 
+                                                                               << 0x10U) 
+                                                                              | ((((IData)(vlSelf->rand_in)
+                                                                                 ? 8U
+                                                                                 : 1U) 
+                                                                                << 8U) 
+                                                                                | ((IData)(vlSelf->rand_in)
+                                                                                 ? 8U
+                                                                                 : 1U)))))))))))));
     vlSelf->top__DOT__state_machine__DOT____Vcellinp__stateMux__lut[1U] 
-        = __Vtemp_hbaff1cc1__0[1U];
-    vlSelf->top__DOT__state_machine__DOT____Vcellinp__stateMux__lut[2U] 
-        = __Vtemp_hbaff1cc1__0[2U];
+        = __Vtemp_h890864a7__0[1U];
     vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[0U] 
         = (0x80U | ((IData)(vlSelf->rand_in) ? 8U : 1U));
     vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[1U] 
@@ -4891,8 +4862,31 @@ VL_ATTR_COLD void Vtop___024root___stl_sequent__TOP__0(Vtop___024root* vlSelf) {
         = (0x20U | ((IData)(vlSelf->rand_in) ? 5U : 3U));
     vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[7U] 
         = (0x10U | ((IData)(vlSelf->rand_in) ? 5U : 2U));
-    vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[8U] 
-        = ((IData)(vlSelf->rand_in) ? 5U : 1U);
+    if (vlSelf->rand_in) {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[0U] = 8U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[1U] = 8U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[2U] = 7U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[3U] = 6U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[4U] = 5U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[5U] = 5U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[6U] = 5U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[7U] = 5U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[8U] = 5U;
+        vlSelf->top__DOT__state_machine__DOT____Vcellinp__stateMux__lut[2U] = 5U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[8U] = 5U;
+    } else {
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[0U] = 1U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[1U] = 1U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[2U] = 1U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[3U] = 1U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[4U] = 4U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[5U] = 4U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[6U] = 3U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[7U] = 2U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__data_list[8U] = 1U;
+        vlSelf->top__DOT__state_machine__DOT____Vcellinp__stateMux__lut[2U] = 1U;
+        vlSelf->top__DOT__state_machine__DOT__stateMux__DOT__i0__DOT__pair_list[8U] = 1U;
+    }
     if (((IData)(vlSelf->VGA_CLK) ^ (IData)(vlSelf->top__DOT____Vtogcov__VGA_CLK))) {
         vlSymsp->__Vcoverage[104].fetch_add(1, std::memory_order_relaxed);
         vlSelf->top__DOT____Vtogcov__VGA_CLK = vlSelf->VGA_CLK;

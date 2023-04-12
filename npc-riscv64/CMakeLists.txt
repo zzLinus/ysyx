@@ -41,7 +41,7 @@ target_include_directories(Vtop PUBLIC ./include)
 verilate(
 	Vtop COVERAGE TRACE
 	INCLUDE_DIRS "../"
-	VERILATOR_ARGS -x-assign fast --trace
+	VERILATOR_ARGS -x-assign fast --trace -Wno-LATCH -Wno-COMBDLY
 	SOURCES vsrc/top.v vsrc/IFU.v vsrc/IDU.v vsrc/EXU.v vsrc/PC.v vsrc/RF.v 
-	vsrc/MUXKEY.v vsrc/CTRL.v
+	vsrc/MUXKEY.v vsrc/CTRL.v vsrc/DMEM.v
 )

@@ -23,10 +23,6 @@ TARGET := oldcmake
 endif
 endif
 
-# compile commands verilator --trace --cc --exe --build -j 0 -Wall csrc/main.cpp vsrc/our.v
-# CC = verilator
-# FLAGS = --trace --cc --exe --build -j 0 -Wall 
-
 all:
 	@echo "Write this Makefile by your self."
 

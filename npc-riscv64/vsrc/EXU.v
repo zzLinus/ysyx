@@ -11,10 +11,9 @@ always @(*) begin
 				5'b11010 : operation = 4'b0001; // OR op
 				5'b10010 : operation = 4'b1100; // NOR op
 				5'b01010 : operation = 4'b0111; // SLT op
-				5'b00010 :if(funct7 == 7'h00)   // ADD op
-										operation = 4'b0010;
-								  else if(funct7 == 7'h20) // SUB op
-                    operation = 4'b0110;
+				5'b00010 : if(funct7 == 7'h00) operation = 4'b0010; // ADD op
+									 else if(funct7 == 7'h20) operation = 4'b0110; // SUB op
+									 else operation = 4'b0000;
 				5'b11100 : operation = 4'b0000; // ANDI op
 				5'b11000 : operation = 4'b0001; // ORI op
 				5'b10000 : operation = 4'b1100; // NORI op

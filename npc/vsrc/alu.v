@@ -1,4 +1,3 @@
-2
 // 101 | 异或     | A xor B
 // 110 | 比较大小 | If A<B then out=1; else out=0;
 // 111 | 判断相等 | If A==B then out=1; else out=0;

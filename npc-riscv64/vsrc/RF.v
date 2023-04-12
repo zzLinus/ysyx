@@ -22,6 +22,8 @@ always @(posedge clk, posedge rst) begin
 				if(reg_w_EN)
 						regs[rw] <= rw_data;
 		end
+		for(i=0;i<31;i=i+1)
+				$display("reg num %d value : %d",i,regs[i]);
 end
 
 assign ra_data = regs[ra];
