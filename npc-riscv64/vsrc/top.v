@@ -44,7 +44,8 @@ always @(negedge clk)begin // TODO : refector this pice of shit
 	state_reg[1] = alu_carry;
 	state_reg[2] = alu_overflow;
 	state_reg[3] = alu_less;
-	$display("\ninst : %b", inst);
+	$display("\nTop module");
+	$display("inst : %b", inst);
 	$display("pc : %x", pc_out);
 	$display("zero %d"    ,alu_zero);
 	$display("carry %d"   ,alu_carry);
@@ -121,8 +122,8 @@ MuxKey #(
 	.out(alu_inB),
 	.key(alu_src),
 	.lut({
-		1'b0, imm_value,
-		1'b1, reg_value 
+		1'b0, reg_value,
+		1'b1, imm_value 
 	})
 );
 

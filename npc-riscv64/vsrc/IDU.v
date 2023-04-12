@@ -21,6 +21,7 @@ always @(inst) begin
 				7'b1110011 : stop_npc();
 				default    : imm = 32'b0;
 		endcase
+		$display("imm : %d",imm);
 end
 
 assign ra = inst[19:15]; // rs1

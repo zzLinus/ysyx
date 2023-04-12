@@ -13,14 +13,13 @@ module RF(
 reg [31:0] regs [31:0];
 int i;
 
-always @(posedge clk, posedge rst) begin
+always @(negedge clk, posedge rst) begin
 		if(rst) begin
 				for(i=0;i<31;i=i+1)
 						regs[i] = 32'b0;
 		end
 		else begin
-				if(reg_w_EN)
-						regs[rw] <= rw_data;
+				if(reg_w_EN) regs[rw] <= rw_data;
 		end
 		for(i=0;i<31;i=i+1)
 				$display("reg num %d value : %d",i,regs[i]);

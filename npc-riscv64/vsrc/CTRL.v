@@ -55,6 +55,13 @@ always @(*) begin
 						alu_op  = 2'b00;
 				end
 		endcase
+		$display("\nctrl module");
+		$display("mem2reg %d", mem2reg);
+		$display("mem_w %d", mem_w);
+		$display("mem_r %d", mem_r);
+		$display("alu_src %d", alu_src);
+		$display("reg_w %d", reg_w);
+		$display("alu_op %d", alu_op);
 end
 
 endmodule

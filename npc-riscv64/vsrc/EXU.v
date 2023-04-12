@@ -19,7 +19,7 @@ always @(*) begin
 				5'b10000 : operation = 4'b1100; // NORI op
 				5'b01000 : operation = 4'b0111; // SLTI op
 				5'b00000 : operation = 4'b0010; // ADDI op
-				5'b01001 : operation = 4'b0010; // LW or SW op
+				5'b01001 : operation = 4'b0010; // LW or SW op // TODO :
 				default  : operation = 4'b0000; // dufault to AND op
 		endcase
 end
@@ -33,7 +33,7 @@ module ALU#( // TODO : refector ALU
 	input [3:0] alu_ctr,
 	input [BITS-1:0] alu_a,
 	input [BITS-1:0] alu_b,
-	output [BITS-1:0] alu_out,
+	output reg [BITS-1:0] alu_out,
 	output alu_zero,
 	output alu_carry,
 	output alu_less,
@@ -49,8 +49,9 @@ wire less_b = alu_ctr_sa ^ alu_carry;
 
 wire [BITS-1:0] alu_and = alu_a & alu_b; 
 wire [BITS-1:0] alu_or = alu_a | alu_b;
+wire [BITS-1:0] alu_nor = ~(alu_a | alu_b);
 wire [BITS-1:0] alu_xor = alu_a ^ alu_b; 
-wire [BITS-1:0] alu_b_s = (alu_b ^ {32{alu_ctr_sa}}); // alu_b after xor
+wire [BITS-1:0] alu_b_s = (alu_b ^ {32{alu_ctr[2]}}); // alu_b after xor
 
 wire alu_ctr_al = alu_ctr[3];
 wire alu_ctr_lr = ~alu_ctr[2];
@@ -62,7 +63,7 @@ ADDER #(
 ) adder(
 	.in_a(alu_a),
 	.in_b(alu_b_s),
-	.cin(alu_ctr_sa),
+	.cin(alu_ctr[2]),
 	.out_s(adder_out),
 	.out_c(alu_carry),
 	.out_o(alu_overflow),
@@ -82,24 +83,23 @@ MuxKey #(
 	})
 );
 
-MuxKey #(
-	.NR_KEY(8),
-	.KEY_LEN(3),
-	.DATA_LEN(BITS) 
-) alu_out_MUX81 (
-	.out(alu_out),
-	.key(alu_ctr[2:0]),
-	.lut({ 
-		3'b000, adder_out, // add sub ✅
-		3'b001, sft_out, // shift left ✅
-		3'b010, {31'b0, alu_less}, // NOTE :zero extend less ✅
-		3'b011, alu_b, // out b ✅
-		3'b100, alu_xor,// xor  ✅
-		3'b101, sft_out, // shift right ✅
-		3'b110, alu_or, // or  ✅
-		3'b111, alu_and // and ✅
-	})
-);
+always @(*) begin
+		case (alu_ctr)
+				4'b0000 : alu_out = alu_and;
+				4'b0001 : alu_out = alu_or;
+				4'b1100 : alu_out = alu_nor; // TODO : nor
+				4'b0111 : alu_out = sft_out; // shift left
+				4'b0010 : alu_out = adder_out;
+				4'b0110 : alu_out = adder_out;
+				default : alu_out = adder_out;
+		endcase
+		$display("\nAlu module");
+		$display("alu_ctr %d", alu_ctr);
+		$display("alu_a %d", alu_a);
+		$display("alu_b %d", alu_b);
+		$display("alu_out %d", alu_out);
+		$display("adder_out %d", adder_out);
+end
 
 BARRELSHIFTER #(
 	.BITS(32)
