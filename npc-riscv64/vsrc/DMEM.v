@@ -10,7 +10,7 @@ reg [63:0] memory [127:0];
 int i;
 
 initial begin
-		for(i=0; i<128; i=i+1)begin
+		for(i=0; i<128; i=i+1) begin
 				memory[i] = 64'b0;
 		end
 end
