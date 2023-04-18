@@ -10,9 +10,14 @@ module PC #(
 	output reg [BITS-1:0] pc_out
 );
 
-always @ (posedge clk) begin
-	if (rst) pc_out <= BASE;
-	else pc_out <= (w_en) ? dpc : pc_out + DELTA;
+always @ (negedge clk) begin
+	if (rst) pc_out = BASE;
+	else begin 
+			pc_out = (w_en) ? dpc : pc_out + DELTA;
+	end
+
+	$display("\n** PC Module **");
+	$display("pc_out : 0x%x", pc_out);
 end
 
 endmodule;

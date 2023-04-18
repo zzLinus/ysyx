@@ -4,6 +4,7 @@ module IDU(
 	input clk,
 	input [31:0] inst,
 	output reg pc2imm,
+	output reg jump,
 	output [4:0] ra,
 	output [4:0] rb,
 	output [4:0] rw,
@@ -15,18 +16,51 @@ module IDU(
 );
 
 
+// TODO : move has_funct , pc2imm to CTRL Module
 always @(inst) begin
-		case(inst[6:0]) // FIXME :generate imm number base on opcode
+		case(inst[6:0])
 				// I type instruction
-				7'b0000011 : begin imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]}; has_funct=2'b01; pc2imm=0; end
+				7'b0000011 : begin
+				imm       = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
+				has_funct = 2'b01;
+				pc2imm    = 1'b0;
+				jump      = 1'b0;
+				end
 				// I type instruction
-				7'b0010011 : begin imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]}; has_funct=2'b01; pc2imm=0; end
+				7'b0010011 : begin
+				imm       = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
+				has_funct = 2'b01;
+				pc2imm    = 1'b0;
+				jump      = 1'b0;
+				end
 				// STORE instruction
-				7'b0100011 : begin imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:25], inst[11:7]};has_funct=2'b01; pc2imm=0; end
+				7'b0100011 : begin
+				imm       = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:25], inst[11:7]};
+				has_funct = 2'b01;
+				pc2imm    = 1'b0;
+				jump      = 1'b0;
+				end
 				// AUIPC
-				7'b0010111 : begin imm = {32'b0, {inst[31:12], 12'b0}}; has_funct = 2'b00; pc2imm=1; end
+				7'b0010111 : begin
+				imm       = {32'b0, {inst[31:12], 12'b0}};
+				has_funct = 2'b00;
+				pc2imm    = 1'b1;
+				jump      = 1'b0;
+				end
+				// J-type instruction
+				7'b1101111 : begin
+				imm       = {inst[31] ? {43{1'b1}} : 43'b0, inst[31], inst[19:12], inst[20], inst[30:21],1'b0};
+				has_funct = 2'b00;
+				pc2imm    = 1'b1;
+				jump      = 1'b1;
+				end
 				7'b1110011 : stop_npc();
-				default    : begin imm = 64'b0; pc2imm=0; end
+				default    : begin
+				imm       = 64'b0;
+				has_funct = 2'b00;
+				pc2imm    = 1'b0;
+				jump      = 1'b0;
+				end
 		endcase
 
 		$display("\n** DECODE Module **");

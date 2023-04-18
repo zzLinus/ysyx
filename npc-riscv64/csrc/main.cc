@@ -33,12 +33,10 @@ static inline void reset(int n)
 }
 
 uint32_t img[INST_NUM] = {
-    // 80000000:	00000413          	li	s0,0
-    // 80000004:	00009117          	auipc	sp,0x9
-    // 80000008:	ffc10113          	addi	sp,sp,-4 # 80009000 <_end>
-		0x00000413,
-		0x00009117,
-		0xffc10113,
+		0x00000413, // 80000000:	00000413          	li	s0,0
+		0x00009117, // 80000004:	00009117          	auipc	sp,0x9
+		0xffc10113, // 80000008:	ffc10113          	addi	sp,sp,-4 # 80009000 <_end>
+		0x00c000ef, // 8000000c:	00c000ef          	jal	ra,80000018 <_trm_init>
     // 0b00000000000100000000000010010011,  // 0000 0000 0001 00000 000 00001 0010011 -> addi ra,$0,1
     // 0b00000000001100000000000010010011,  // 0000 0000 0001 00000 000 00001 0010011 -> addi ra,$0,1
     // 0b00000000000100000000000010010011,  // 0000 0000 0001 00000 000 00001 0010011 -> addi ra,$0,1
@@ -119,7 +117,9 @@ extern "C"
 {
     void stop_npc()
     {
-        printf("EBREAK !\n");
+				printf("\n\t\t*************\n");
+        printf("\t\t** EBREAK! **\n");
+				printf("\t\t*************\n");
         NPC_RUN = false;
     }
 }
@@ -140,7 +140,8 @@ int main(int argc, char **argv, char **env)
     reset(2);
     printf("\n======== Reset Finished ========\n");
 
-    while (true)
+		int i = 6;
+    while (i--)
     {
         contextp->timeInc(1);
 

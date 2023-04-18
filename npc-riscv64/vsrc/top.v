@@ -9,11 +9,13 @@ module top(
 
 // NOTE : control signal wire
 wire reg_write; // register write signal
-wire mem2reg;
+wire mem2reg,spc2reg;
 wire pc2imm;
+wire jump;
 wire alu_src; // alu inputr src control
 wire mem_write, mem_read; // memory r/w signal
 wire [63:0] reg_w_data; // data that will need to write back to register
+wire [63:0] spc;
 wire [3:0] alu_cc;  // 4 bits alu controler output
 wire [6:0] opcode, funct7;
 wire [2:0] funct3;
@@ -72,6 +74,7 @@ IDU _idu (
 	.rw(rw),
 	.opcode(opcode), // NOTE : fetch from inst to ALU
 	.pc2imm(pc2imm),
+	.jump(jump),
 	.funct7(funct7),
 	.funct3(funct3),
 	.has_funct(has_funct),
@@ -93,34 +96,26 @@ ALU #( // TODO : refector ALU
 
 PC _pc (
 	.clk(clk),
-	.w_en(1'b0), // FIXME : for jump instruction
+	.w_en(jump),
 	.rst(rst),
-	.dpc(), // FIXME : for jump instruction
+	.dpc(alu_out),
 	.pc_out(pc_out)
 );
 
-RF _gpr(
-	.clk(clk),
-	.rst(rst),
-	.reg_w_EN(reg_write),
-	.ra(ra),
-	.rb(rb),
-	.rw(rw),
-	.rw_data(reg_w_data),
-	.ra_data(reg_value2),
-	.rb_data(reg_value)
-);
+// FIXME :
+assign spc = pc_out + 4;
 
 MuxKey #(
-	.NR_KEY(2),
-	.KEY_LEN(1),
+	.NR_KEY(3),
+	.KEY_LEN(2),
 	.DATA_LEN(64) 
 ) write_back_sel (
 	.out(reg_w_data),
-	.key(mem2reg),
+	.key({spc2reg,mem2reg}),
 	.lut({
-		1'b0, alu_out,
-		1'b1, mem_data
+		2'b00, alu_out,
+		2'b01, mem_data,
+		2'b10, spc
 	})
 );
 
@@ -150,6 +145,18 @@ MuxKey #(
 	})
 );
 
+RF _gpr(
+	.clk(clk),
+	.rst(rst),
+	.reg_w_EN(reg_write),
+	.ra(ra),
+	.rb(rb),
+	.rw(rw),
+	.rw_data(reg_w_data),
+	.ra_data(reg_value2),
+	.rb_data(reg_value)
+);
+
 ALU_CTR _alu_ctr (
 		.alu_op(alu_op),
 		.funct7(funct7),
@@ -170,6 +177,7 @@ CTRLER _controler (
 		.op_code(opcode),
 		.alu_src(alu_src),
 		.mem2reg(mem2reg),
+		.spc2reg(spc2reg),
 		.reg_w(reg_write),
 		.mem_w(mem_write),
 		.mem_r(mem_read),

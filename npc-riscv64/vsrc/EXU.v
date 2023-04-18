@@ -13,7 +13,7 @@ always @(*) begin
 						5'b11010 : operation = 4'b0001; // OR op
 						5'b10010 : operation = 4'b1100; // NOR op
 						5'b01010 : operation = 4'b0111; // SLT op
-						5'b00010 : if(funct7 == 7'h00) operation = 4'b0010; // ADD op
+						5'b00010 : if(funct7 == 7'h00) operation = 4'b0010;      // ADD op
 											 else if(funct7 == 7'h20) operation = 4'b0110; // SUB op
 											 else operation = 4'b0000;
 						5'b11100 : operation = 4'b0000; // ANDI op
@@ -21,14 +21,14 @@ always @(*) begin
 						5'b10000 : operation = 4'b1100; // NORI op
 						5'b01000 : operation = 4'b0111; // SLTI op
 						5'b00000 : operation = 4'b0010; // ADDI op
-						5'b01001 : operation = 4'b0010; // LW or SW op // TODO :
+						5'b01001 : operation = 4'b0010; // LW or SW op
 						default  : operation = 4'b0000; // dufault to AND op
 				endcase
 		end else if(has_funct == 2'b10) begin //  TODO :handle instruction has funct7
 		end else begin
 				case (alu_op)
 						2'b10   : operation = 4'b0010;
-						default : operation = 4'b0010;
+						default : operation = 4'b0000;
 				endcase
 		end
 end
@@ -104,10 +104,10 @@ always @(*) begin
 		endcase
 		$display("\n** ALU Module **");
 		$display("alu_ctr   %d", alu_ctr);
-		$display("alu_a     %d", alu_a);
-		$display("alu_b     %d", alu_b);
-		$display("alu_out   %d", alu_out);
-		$display("adder_out %d", adder_out);
+		$display("alu_a     %d %x", alu_a, alu_a);
+		$display("alu_b     %d %x", alu_b, alu_b);
+		$display("alu_out   %d %x", alu_out, alu_out);
+		$display("adder_out %d %x", adder_out, adder_out);
 end
 
 BARRELSHIFTER #(
