@@ -17,6 +17,7 @@ wire [3:0] alu_cc;  // 4 bits alu controler output
 wire [6:0] opcode, funct7;
 wire [2:0] funct3;
 wire [1:0] alu_op;
+wire [1:0] has_funct;
 
 // NOTE : reg address wire
 wire [4:0] ra;
@@ -39,18 +40,23 @@ reg state_reg [3:0];
 // NOTE : Memory data wire
 wire [31:0] mem_data;
 
-always @(negedge clk)begin // TODO : refector this pice of shit
+always @(negedge clk) begin // TODO : refector this pice of shit
 	state_reg[0] = alu_zero;
 	state_reg[1] = alu_carry;
 	state_reg[2] = alu_overflow;
 	state_reg[3] = alu_less;
-	$display("\nTop module");
-	$display("inst : %b", inst);
-	$display("pc : %x", pc_out);
+
+	$display("\n** TOP Module Negedge **");
 	$display("zero %d"    ,alu_zero);
 	$display("carry %d"   ,alu_carry);
 	$display("overflow %d",alu_overflow);
 	$display("less %d"    ,alu_less);
+end
+
+always @(posedge clk) begin
+	$display("\n** TOP Module Posedge **");
+	$display("inst : %b", inst);
+	$display("pc : %x", pc_out);
 end
 
 IFU _ifu( // NOTE : implement with C code
@@ -65,6 +71,7 @@ IDU _idu (
 	.opcode(opcode), // NOTE : fetch from inst to ALU
 	.funct7(funct7),
 	.funct3(funct3),
+	.has_funct(has_funct),
 	.imm(imm_value)
 ); // decode
 
@@ -131,6 +138,7 @@ ALU_CTR _alu_ctr (
 		.alu_op(alu_op),
 		.funct7(funct7),
 		.funct3(funct3),
+		.has_funct(has_funct),
 		.operation(alu_cc)
 );
 

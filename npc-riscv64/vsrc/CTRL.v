@@ -46,6 +46,15 @@ always @(*) begin
 						alu_op  = 2'b10;
 				end
 
+				7'b0010111 : begin // opcode for AUIPC
+						mem2reg = 1'b0;
+						mem_w   = 1'b0;
+						mem_r   = 1'b0;
+						alu_src = 1'b1;
+						reg_w   = 1'b1;
+						alu_op  = 2'b10;
+				end
+
 				default    : begin // set all signal to 0
 						mem2reg = 1'b0;
 						mem_w   = 1'b0;
@@ -55,12 +64,12 @@ always @(*) begin
 						alu_op  = 2'b00;
 				end
 		endcase
-		$display("\nctrl module");
+		$display("\n** CTRL Module **");
+		$display("alu_src %d", alu_src);
 		$display("mem2reg %d", mem2reg);
+		$display("reg_w %d", reg_w);
 		$display("mem_w %d", mem_w);
 		$display("mem_r %d", mem_r);
-		$display("alu_src %d", alu_src);
-		$display("reg_w %d", reg_w);
 		$display("alu_op %d", alu_op);
 end
 

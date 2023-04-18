@@ -19,8 +19,14 @@ always @(negedge clk, posedge rst) begin
 						regs[i] = 32'b0;
 		end
 		else begin
-				if(reg_w_EN) regs[rw] <= rw_data;
+				if(reg_w_EN) regs[rw] = rw_data;
 		end
+		$display("\n** RF Module : **");
+		$display("reg_w_EN : %d", reg_w_EN);
+		$display("ra : %d", ra);
+		$display("rb : %d", rb);
+		$display("rw : %d", rw);
+		$display("rw_dta : %d", rw_data);
 		for(i=0;i<31;i=i+1)
 				$display("reg num %d value : %d",i,regs[i]);
 end

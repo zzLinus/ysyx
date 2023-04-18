@@ -1,7 +1,7 @@
 module PC #(
 	BITS = 64,
-	DELTA = 1,
-	BASE = 0
+	DELTA = 4,
+	BASE = 64'h80000000
 )(
 	input clk,
 	input w_en,
