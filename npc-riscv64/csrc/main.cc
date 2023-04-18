@@ -138,14 +138,13 @@ int main(int argc, char **argv, char **env)
     tfp->dumpvars(1, "top");
 
     reset(2);
-    printf("reset finished!\n");
+    printf("\n======== Reset Finished ========\n");
 
     while (true)
     {
         contextp->timeInc(1);
 
         printf("\n================= CPU CYCLE DONE =================\n");
-				printf("pc : %lx\n",top->pc_out);
         top->inst = mem->pmem_read(top->pc_out, 4);
         single_cycle();
         tfp->dump(contextp->time());

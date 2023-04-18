@@ -67,10 +67,10 @@ always @(*) begin
 		$display("\n** CTRL Module **");
 		$display("alu_src %d", alu_src);
 		$display("mem2reg %d", mem2reg);
-		$display("reg_w %d", reg_w);
-		$display("mem_w %d", mem_w);
-		$display("mem_r %d", mem_r);
-		$display("alu_op %d", alu_op);
+		$display("reg_w   %d", reg_w);
+		$display("mem_w   %d", mem_w);
+		$display("mem_r   %d", mem_r);
+		$display("alu_op  %d", alu_op);
 end
 
 endmodule

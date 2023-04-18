@@ -2,7 +2,7 @@ module top(
 	input clk,
 	input rst,
 	input reg [31:0] inst, // 32 bits instruction
-	output [31:0] alu_out,
+	output [63:0] alu_out,
 	output [63:0] pc_out
 );
 
@@ -10,9 +10,10 @@ module top(
 // NOTE : control signal wire
 wire reg_write; // register write signal
 wire mem2reg;
+wire pc2imm;
 wire alu_src; // alu inputr src control
 wire mem_write, mem_read; // memory r/w signal
-wire [31:0] reg_w_data; // data that will need to write back to register
+wire [63:0] reg_w_data; // data that will need to write back to register
 wire [3:0] alu_cc;  // 4 bits alu controler output
 wire [6:0] opcode, funct7;
 wire [2:0] funct3;
@@ -25,10 +26,11 @@ wire [4:0] rb;
 wire [4:0] rw;
 
 // NOTE : ALU input wire
-wire [31:0] imm_value;
-wire [31:0] reg_value;
-wire [31:0] alu_inA;
-wire [31:0] alu_inB;
+wire [63:0] imm_value;
+wire [63:0] reg_value;
+wire [63:0] reg_value2;
+wire [63:0] alu_inA;
+wire [63:0] alu_inB;
 
 // NOTE : ALU output wire
 wire alu_zero;
@@ -38,7 +40,7 @@ wire alu_overflow;
 reg state_reg [3:0];
 
 // NOTE : Memory data wire
-wire [31:0] mem_data;
+wire [63:0] mem_data;
 
 always @(negedge clk) begin // TODO : refector this pice of shit
 	state_reg[0] = alu_zero;
@@ -47,16 +49,16 @@ always @(negedge clk) begin // TODO : refector this pice of shit
 	state_reg[3] = alu_less;
 
 	$display("\n** TOP Module Negedge **");
-	$display("zero %d"    ,alu_zero);
-	$display("carry %d"   ,alu_carry);
-	$display("overflow %d",alu_overflow);
-	$display("less %d"    ,alu_less);
+	$display("zero     : %d",alu_zero);
+	$display("carry    : %d",alu_carry);
+	$display("overflow : %d",alu_overflow);
+	$display("less     : %d",alu_less);
 end
 
 always @(posedge clk) begin
 	$display("\n** TOP Module Posedge **");
 	$display("inst : %b", inst);
-	$display("pc : %x", pc_out);
+	$display("pc   : %x", pc_out);
 end
 
 IFU _ifu( // NOTE : implement with C code
@@ -69,6 +71,7 @@ IDU _idu (
 	.rb(rb),
 	.rw(rw),
 	.opcode(opcode), // NOTE : fetch from inst to ALU
+	.pc2imm(pc2imm),
 	.funct7(funct7),
 	.funct3(funct3),
 	.has_funct(has_funct),
@@ -76,7 +79,7 @@ IDU _idu (
 ); // decode
 
 ALU #( // TODO : refector ALU
-	.BITS(32)
+	.BITS(64)
 ) _alu (
 	.alu_ctr(alu_cc),
 	.alu_a(alu_inA),
@@ -104,14 +107,14 @@ RF _gpr(
 	.rb(rb),
 	.rw(rw),
 	.rw_data(reg_w_data),
-	.ra_data(alu_inA),
+	.ra_data(reg_value2),
 	.rb_data(reg_value)
 );
 
 MuxKey #(
 	.NR_KEY(2),
 	.KEY_LEN(1),
-	.DATA_LEN(32) 
+	.DATA_LEN(64) 
 ) write_back_sel (
 	.out(reg_w_data),
 	.key(mem2reg),
@@ -124,13 +127,26 @@ MuxKey #(
 MuxKey #(
 	.NR_KEY(2),
 	.KEY_LEN(1),
-	.DATA_LEN(32) 
+	.DATA_LEN(64) 
+) alu_input_sel2 (
+	.out(alu_inA),
+	.key(pc2imm),
+	.lut({
+		1'b0, reg_value2,
+		1'b1, pc_out 
+	})
+);
+
+MuxKey #(
+	.NR_KEY(2),
+	.KEY_LEN(1),
+	.DATA_LEN(64) 
 ) alu_input_sel (
 	.out(alu_inB),
 	.key(alu_src),
 	.lut({
 		1'b0, reg_value,
-		1'b1, imm_value 
+		1'b1, imm_value
 	})
 );
 

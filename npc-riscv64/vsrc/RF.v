@@ -5,30 +5,30 @@ module RF(
 	input [4:0] ra,
 	input [4:0] rb,
 	input [4:0] rw,
-	input [31:0] rw_data,
-	output [31:0] ra_data,
-	output [31:0] rb_data 
+	input [63:0] rw_data,
+	output [63:0] ra_data,
+	output [63:0] rb_data 
 );
 
-reg [31:0] regs [31:0];
+reg [63:0] regs [31:0];
 int i;
 
 always @(negedge clk, posedge rst) begin
 		if(rst) begin
 				for(i=0;i<31;i=i+1)
-						regs[i] = 32'b0;
+						regs[i] = 64'b0;
 		end
 		else begin
 				if(reg_w_EN) regs[rw] = rw_data;
 		end
 		$display("\n** RF Module : **");
-		$display("reg_w_EN : %d", reg_w_EN);
-		$display("ra : %d", ra);
-		$display("rb : %d", rb);
-		$display("rw : %d", rw);
-		$display("rw_dta : %d", rw_data);
+		$display("reg_w_EN :  %d", reg_w_EN);
+		$display("ra       : %d", ra);
+		$display("rb       : %d", rb);
+		$display("rw       : %d", rw);
+		$display("rw_dta   : %d", rw_data);
 		for(i=0;i<31;i=i+1)
-				$display("reg num %d value : %d",i,regs[i]);
+				$display("reg num %d value : %d %x",i,regs[i],regs[i]);
 end
 
 assign ra_data = regs[ra];
