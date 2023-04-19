@@ -36,7 +36,7 @@ end
 endmodule
 
 
-module ALU#( // TODO : refector ALU
+module ALU#(
 	BITS = 64
 )( 
 	input [3:0] alu_ctr,
@@ -96,8 +96,8 @@ always @(*) begin
 		case (alu_ctr)
 				4'b0000 : alu_out = alu_and;
 				4'b0001 : alu_out = alu_or;
-				4'b1100 : alu_out = alu_nor; // TODO : nor
-				4'b0111 : alu_out = sft_out; // shift left
+				4'b1100 : alu_out = alu_nor;
+				4'b0111 : alu_out = sft_out;
 				4'b0010 : alu_out = adder_out;
 				4'b0110 : alu_out = adder_out;
 				default : alu_out = adder_out;

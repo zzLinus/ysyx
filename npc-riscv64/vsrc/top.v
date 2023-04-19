@@ -44,7 +44,7 @@ reg state_reg [3:0];
 // NOTE : Memory data wire
 wire [63:0] mem_data;
 
-always @(negedge clk) begin // TODO : refector this pice of shit
+always @(negedge clk) begin
 	state_reg[0] = alu_zero;
 	state_reg[1] = alu_carry;
 	state_reg[2] = alu_overflow;
@@ -73,15 +73,12 @@ IDU _idu (
 	.rb(rb),
 	.rw(rw),
 	.opcode(opcode), // NOTE : fetch from inst to ALU
-	.pc2imm(pc2imm),
-	.jump(jump),
 	.funct7(funct7),
 	.funct3(funct3),
-	.has_funct(has_funct),
 	.imm(imm_value)
 ); // decode
 
-ALU #( // TODO : refector ALU
+ALU #(
 	.BITS(64)
 ) _alu (
 	.alu_ctr(alu_cc),
@@ -168,7 +165,7 @@ ALU_CTR _alu_ctr (
 DMEM _dmem (
 		.mem_w_EN(mem_write),
 		.mem_r_EN(mem_read),
-		.addr(alu_out[8:0]),
+		.addr(alu_out),
 		.write_data(reg_value),
 		.mem_out(mem_data)
 );
@@ -177,6 +174,9 @@ CTRLER _controler (
 		.op_code(opcode),
 		.alu_src(alu_src),
 		.mem2reg(mem2reg),
+		.has_funct(has_funct),
+		.jump(jump),
+		.pc2imm(pc2imm),
 		.spc2reg(spc2reg),
 		.reg_w(reg_write),
 		.mem_w(mem_write),
