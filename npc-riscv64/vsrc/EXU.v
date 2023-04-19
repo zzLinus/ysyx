@@ -6,16 +6,20 @@ module ALU_CTR(
 		output reg [3:0] operation 
 );
 
-always @(*) begin
-		if(has_funct == 2'b01) begin
+always @(alu_op or funct3 or funct7) begin
+		if(has_funct == 2'b11) begin // NOTE :instruction has fucnt7 && funct3
+				case ({funct7,funct3,alu_op})
+						12'b000000000010 : operation = 4'b0010; // ADD op
+						12'b010000000010 : operation = 4'b0110; // SUB op
+						default  : operation = 4'b0000; // dufault to AND op
+				endcase
+		end else if(has_funct == 2'b01) begin // handle instruction has funct3
 				case ({funct3,alu_op})
 						5'b11110 : operation = 4'b0000; // AND opp
 						5'b11010 : operation = 4'b0001; // OR op
 						5'b10010 : operation = 4'b1100; // NOR op
 						5'b01010 : operation = 4'b0111; // SLT op
-						5'b00010 : if(funct7 == 7'h00) operation = 4'b0010;      // ADD op
-											 else if(funct7 == 7'h20) operation = 4'b0110; // SUB op
-											 else operation = 4'b0000;
+						5'b00010 : operation = 4'b0010; // JALR op -> ADD op
 						5'b11100 : operation = 4'b0000; // ANDI op
 						5'b11000 : operation = 4'b0001; // ORI op
 						5'b10000 : operation = 4'b1100; // NORI op
@@ -24,7 +28,6 @@ always @(*) begin
 						5'b01001 : operation = 4'b0010; // LW or SW op
 						default  : operation = 4'b0000; // dufault to AND op
 				endcase
-		end else if(has_funct == 2'b10) begin //  TODO :handle instruction has funct7
 		end else begin
 				case (alu_op)
 						2'b10   : operation = 4'b0010;
@@ -52,7 +55,7 @@ module ALU#(
 wire [BITS-1:0] adder_out;
 wire [BITS-1:0] sft_out;
 
-wire less_a = alu_overflow^ adder_out[BITS-1];
+wire less_a = alu_overflow ^ adder_out[BITS-1];
 wire less_b = alu_ctr_sa ^ alu_carry;
 
 
@@ -92,7 +95,7 @@ MuxKey #(
 	})
 );
 
-always @(*) begin
+always @(alu_ctr or alu_a or alu_b) begin
 		case (alu_ctr)
 				4'b0000 : alu_out = alu_and;
 				4'b0001 : alu_out = alu_or;

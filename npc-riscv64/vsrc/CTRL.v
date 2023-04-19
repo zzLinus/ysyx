@@ -12,7 +12,10 @@ module CTRLER (
 		output reg pc2imm
 );
 
-always @(*) begin
+// NOTE : alu_src 0 : reg_value
+//                1 : imm_value
+
+always @(op_code) begin
 		case(op_code)
 				7'b0000011 : begin // opcode for load word
 						mem2reg   = 1'b1;
@@ -79,7 +82,7 @@ always @(*) begin
 						alu_op    = 2'b10;
 				end
 				
-				7'b1101111 : begin // TODO : opcode for J-type insrtuction
+				7'b1101111 : begin // opcode for J-type insrtuction
 						mem2reg   = 1'b0;
 						has_funct = 2'b00;
 						pc2imm    = 1'b1;
@@ -88,6 +91,19 @@ always @(*) begin
 						mem_w     = 1'b0;
 						mem_r     = 1'b0;
 						alu_src   = 1'b1;
+						reg_w     = 1'b1;
+						alu_op    = 2'b10;
+				end
+
+				7'b1100111 : begin  // TODO :opcode for jalr
+						mem2reg   = 1'b0;
+						has_funct = 2'b01;
+						pc2imm    = 1'b0;
+						jump      = 1'b1;
+						spc2reg   = 1'b1;
+						mem_w     = 1'b0;
+						mem_r     = 1'b0;
+						alu_src   = 1'b0;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
 				end
@@ -116,6 +132,7 @@ always @(*) begin
 
 		$display("has_fucnt : %d",has_funct);
 		$display("pc2imm    : %d",pc2imm);
+		$display("jump      : %d",jump);
 end
 
 endmodule

@@ -7,8 +7,8 @@ module DMEM(
 );
 
 // NOTE : e.g addr : 0x80008ff0 -> sd 64 bits
-//        --> memory[addr[31:0] >> 4] <= write_data
-//        --> memory[addr[31:4]] <= write_data
+//        --> memory[addr[15:0] >> 6] <= write_data
+//        --> memory[addr[15:6]] <= write_data
 
 reg [63:0] memory [575:0]; // stack top -> 0x80009000
 int i;
