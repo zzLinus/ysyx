@@ -20,6 +20,8 @@ void putch(char ch)
 
 void halt(int code)
 {
+		// TODO : put a ebreak here
+		__asm__("ebreak");
     while (1)
         ;
 }

@@ -170,7 +170,7 @@ wire [127:0] din_double_l = {din,64'b0}; // for left shift
 
 always @(*) begin
 	case({al,lr})
-		2'b00: bs_out = din_double_r[shamt+63-:64]; // logit && right
+		2'b00: bs_out = din_double_r[shamt+63-:64]; // logic && right
 		2'b10: bs_out = din_double_r[shamt+63-:64]; // arithmetic && right
 	default: bs_out = din_double_l[63-shamt+1+:64]; // left shift
 	endcase

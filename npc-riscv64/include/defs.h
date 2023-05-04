@@ -8,6 +8,23 @@
 #define INST_NUM     14
 
 typedef uint64_t paddr_t;
+typedef uint64_t vaddr_t;
+
+enum
+{
+  NPC_RUNNING,
+  NPC_STOP,
+  NPC_END,
+  NPC_ABORT,
+  NPC_QUIT
+};
+
+typedef struct
+{
+  int state;
+  vaddr_t halt_pc;
+  uint32_t halt_ret;
+} NPCState;
 
 #define PMEM_LEFT    ((paddr_t)CONFIG_MBASE)
 #define PMEM_RIGHT   ((paddr_t)CONFIG_MBASE + CONFIG_MSIZE - 1)

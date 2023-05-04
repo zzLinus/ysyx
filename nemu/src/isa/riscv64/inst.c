@@ -231,15 +231,6 @@ static int decode_exec(Decode *s)
     INSTPAT("0100000 ????? ????? 000 ????? 01100 11", neg, R, R(dest) = src1 - src2);
     INSTPAT("0000000 ????? ????? 010 ????? 01100 11", sgtz, R, R(dest) = (src1 < src2) ? 1 : 0);
     INSTPAT("0000000 ????? ????? 011 ????? 01100 11", snez, R, R(dest) = (src2 != src1) ? 1 : 0);
-    // 80000170:	01c0006f          	j	8000018c <sprintf+0x70>
-    //       0000000 11010 00000 000 00000 11011 11
-    INSTPAT("??????? ????? ????? ??? ????? 11011 11", j, J, s->dnpc = s->pc + imm; R(dest) = s->snpc);
-    // 800001e8:	000780e7          	jalr	a5
-    //       0000000 00000 01111 000 00001 11001 11
-    // 80000098:	00078067          	jr	a5
-    //       0000000 00000 01111 000 00000 11001 11
-    // 800000a0:	00008067          	ret
-    //       0000000 00000 00001 000 00000 11001 11
     INSTPAT(
         "??????? ????? ????? 000 ????? 11001 11", jalr / ret / jr, I, s->dnpc = src1 + imm; R(dest) = s->snpc;
         if (BITS(s->isa.inst.val, 19, 15) == 1 && dest == 0) { IFDEF(CONFIG_FTRACE, RET(s->dnpc)); } else {

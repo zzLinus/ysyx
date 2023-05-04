@@ -95,7 +95,7 @@ always @(op_code) begin
 						alu_op    = 2'b10;
 				end
 
-				7'b1100111 : begin  // TODO :opcode for jalr
+				7'b1100111 : begin  // opcode for jalr
 						mem2reg   = 1'b0;
 						has_funct = 2'b01;
 						pc2imm    = 1'b0;

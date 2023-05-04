@@ -9,13 +9,13 @@
 
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
-bool NPC_RUN = true;
+NPCState npc_s = { NPC_STOP, 0, 0 };
 
 static inline void single_cycle()
 {
     top->clk = 1;
     top->eval();
-    if (!NPC_RUN)
+    if (npc_s.state != NPC_RUNNING)
     {
         printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
         exit(0);
@@ -33,24 +33,25 @@ static inline void reset(int n)
 }
 
 uint32_t img[INST_NUM] = {
-		0x00000413, // 80000000:	00000413          	li	s0,0
-		0x00009117, // 80000004:	00009117          	auipc	sp,0x9
-		0xffc10113, // 80000008:	ffc10113          	addi	sp,sp,-4 # 80009000 <_end>
-		0x00c000ef, // 8000000c:	00c000ef          	jal	ra,80000018 <_trm_init>
-								
-    0x00000513, // 80000010:	00000513          	li	a0,0
-    0x00008067, // TODO : 80000014:	00008067          	ret(jalr)
-								//        000000000000 00001 000 00000 11001 11
+    0x00000413,  // 80000000:	00000413          	li	s0,0
+    0x00009117,  // 80000004:	00009117          	auipc	sp,0x9
+    0xffc10113,  // 80000008:	ffc10113          	addi	sp,sp,-4 # 80009000 <_end>
+    0x00c000ef,  // 8000000c:	00c000ef          	jal	ra,80000018 <_trm_init>
 
-    0xff010113, // 80000018:	ff010113          	addi	sp,sp,-16
-    0x00000517, // 8000001c:	00000517          	auipc	a0,0x0
-    0x01450513, // 80000020:	01450513          	addi	a0,a0,20 # 80000030 <_etext>
-    0x00113423, // TODO : 80000024:	00113423          	sd	ra,8(sp)
+    0x00000513,  // 80000010:	00000513          	li	a0,0
+    0x00008067,  // 80000014:	00008067          	ret(jalr)
+                 //        000000000000 00001 000 00000 11001 11
 
-    0xfe9ff0ef, // 80000028:	fe9ff0ef          	jal	ra,80000010 <main>
-    0x0000006f, // TODO : 8000002c:	0000006f          	j	8000002c <_trm_init+0x14>
-								
-		// 0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
+    0xff010113,  // 80000018:	ff010113          	addi	sp,sp,-16
+    0x00000517,  // 8000001c:	00000517          	auipc	a0,0x0
+    0x01450513,  // 80000020:	01450513          	addi	a0,a0,20 # 80000030 <_etext>
+    0x00113423,  //  TODO : 80000024:	00113423          	sd	ra,8(sp)
+
+    0xfe9ff0ef,  // 80000028:	fe9ff0ef          	jal	ra,80000010 <main>
+    0x0000006f,  // 8000002c:	0000006f          	j	8000002c <_trm_init+0x14>
+                 //  WARN : infinet loop
+
+    // 0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
 };
 
 class pmem
@@ -125,17 +126,19 @@ extern "C"
 {
     void stop_npc()
     {
-				printf("\n\t\t*************\n");
+        printf("\n\t\t*************\n");
         printf("\t\t** EBREAK! **\n");
-				printf("\t\t*************\n");
-        NPC_RUN = false;
+        printf("\t\t*************\n");
+        npc_s.state = NPC_STOP;
     }
 }
 
+
 int main(int argc, char **argv, char **env)
 {
+		paddr_t last_pc = 0;
     pmem *mem = new pmem();
-    // mem->read_img(__IMG_);
+		mem->read_img(__IMG_);
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
@@ -145,16 +148,20 @@ int main(int argc, char **argv, char **env)
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");
 
+		npc_s.state = NPC_RUNNING;
     reset(2);
     printf("\n======== Reset Finished ========\n");
 
-		int i = 12;
+    int i = 15;
     while (i--)
     {
         contextp->timeInc(1);
 
         printf("\n================= CPU CYCLE DONE =================\n");
+				if(top->pc_out == last_pc)
+						printf("In a Infinet Loop NOW !!!\n");
         top->inst = mem->pmem_read(top->pc_out, 4);
+				last_pc = top->pc_out;
         single_cycle();
         tfp->dump(contextp->time());
     }
