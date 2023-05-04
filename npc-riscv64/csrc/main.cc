@@ -10,6 +10,7 @@
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
 NPCState npc_s = { NPC_STOP, 0, 0 };
+bool is_halt = false;
 
 static inline void single_cycle()
 {
@@ -18,7 +19,7 @@ static inline void single_cycle()
     if (npc_s.state != NPC_RUNNING)
     {
         printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
-        exit(0);
+				is_halt = true;
     }
     top->clk = 0;
     top->eval();
@@ -164,10 +165,13 @@ int main(int argc, char **argv, char **env)
 				last_pc = top->pc_out;
         single_cycle();
         tfp->dump(contextp->time());
+				if(is_halt)
+						break;
     }
 
     top->final();
     tfp->close();
 
     delete mem;
+		return npc_s.state;
 }

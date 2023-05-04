@@ -12,8 +12,8 @@ typedef uint64_t vaddr_t;
 
 enum
 {
-  NPC_RUNNING,
   NPC_STOP,
+  NPC_RUNNING,
   NPC_END,
   NPC_ABORT,
   NPC_QUIT

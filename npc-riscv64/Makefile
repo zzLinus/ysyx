@@ -55,6 +55,3 @@ sim:
 
 clean mostlyclean distclean maintainer-clean:
 	@rm -rf build logs
-
-
-include ../Makefile
