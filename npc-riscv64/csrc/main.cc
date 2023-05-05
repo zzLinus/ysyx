@@ -8,10 +8,15 @@
 #include "defs.h"
 #include "infrastructure.h"
 
+class pmem;
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
 NPCState npc_s = { NPC_STOP, 0, 0 };
 bool is_halt = false;
+paddr_t last_pc = 0;
+pmem *mem;
+void cpu_exec(uint64_t n);
+VerilatedVcdC *tfp;
 
 static inline void single_cycle()
 {
@@ -27,9 +32,10 @@ static inline void single_cycle()
 
 static inline void reset(int n)
 {
+    npc_s.state = NPC_RESETTING;
     top->rst = 1;
     while (n-- > 0)
-        single_cycle();
+        cpu_exec(1);
     top->rst = 0;
 }
 
@@ -48,10 +54,10 @@ uint32_t img[INST_NUM] = {
     0x01450513,  // 80000020:	01450513          	addi	a0,a0,20 # 80000030 <_etext>
     0x00113423,  //  TODO : 80000024:	00113423          	sd	ra,8(sp)
 
-    0xfe9ff0ef,  // 80000028:	fe9ff0ef          	jal	ra,80000010 <main>
+    0xfe9ff0ef,                          // 80000028:	fe9ff0ef          	jal	ra,80000010 <main>
     0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
-    0x0000006f,  // 8000002c:	0000006f          	j	8000002c <_trm_init+0x14>
-                 //  WARN : infinet loop should not reach here
+    0x0000006f,                          // 8000002c:	0000006f          	j	8000002c <_trm_init+0x14>
+                                         //  WARN : infinet loop should not reach here
 
 };
 
@@ -82,7 +88,7 @@ class pmem
 
         fseek(fp, 0, SEEK_END);
         long size = ftell(fp);
-        printf("The image is %s, size = %ld", img_file, size);
+        printf("The image is %s, size = %ld\n", img_file, size);
 
         fseek(fp, 0, SEEK_SET);
         int ret = fread(guest_to_host(RESET_VECTOR), size, 1, fp);
@@ -120,7 +126,7 @@ class pmem
 
 void print_alu()
 {
-    printf("alu state : out : 0d%u 0b%031b 0x%08x\n", top->alu_out, top->alu_out, top->alu_out);
+    printf("alu state : out : 0d%lu 0b%031b 0x%08lx\n", top->alu_out, top->alu_out, top->alu_out);
 }
 
 extern "C"
@@ -134,31 +140,14 @@ extern "C"
     }
 }
 
-int main(int argc, char **argv, char **env)
+void cpu_exec(uint64_t n)
 {
-    int cycle = 0;
-    paddr_t last_pc = 0;
-    pmem *mem = new pmem();
-    mem->read_img(__IMG_);
-
-    contextp->commandArgs(argc, argv);
-    contextp->traceEverOn(true);
-    VerilatedVcdC *tfp = new VerilatedVcdC;
-
-    top->trace(tfp, 99);
-    tfp->open("logs/vlt_dump.vcd");
-    tfp->dumpvars(1, "top");
-
-    npc_s.state = NPC_RUNNING;
-    reset(2);
-    printf("\n======== Reset Finished ========\n");
-
-		welcome();
-
-    while (1)
+    while (n--)
     {
-        cycle++;
         contextp->timeInc(1);
+
+        if (npc_s.state == NPC_RESETTING)
+            goto exec;
 
         if (top->pc_out == last_pc)
         {
@@ -167,12 +156,45 @@ int main(int argc, char **argv, char **env)
         }
         top->inst = mem->pmem_read(top->pc_out, 4);
         last_pc = top->pc_out;
-        single_cycle();
+
+    exec:
+        // NOTE : single cycle begin
+        top->clk = 1;
+        top->eval();
+        if (npc_s.state == NPC_STOP)
+        {
+            is_halt = true;
+						break;
+        }
+        top->clk = 0;
+        top->eval();
+        // end single cycle end
+
         tfp->dump(contextp->time());
-        printf("\n\n\t================= CPU CYCLE DONE (NO:%d) =================\n\n", cycle);
-        if (is_halt)
-            break;
+        printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
     }
+}
+
+int main(int argc, char **argv, char **env)
+{
+    mem = new pmem();
+    mem->read_img(__IMG_);
+
+    contextp->commandArgs(argc, argv);
+    contextp->traceEverOn(true);
+    tfp = new VerilatedVcdC;
+
+    top->trace(tfp, 99);
+    tfp->open("logs/vlt_dump.vcd");
+    tfp->dumpvars(1, "top");
+
+    reset(2);
+    printf("\n\t\t ======== Reset Finished ========\n");
+
+    welcome();
+
+    npc_s.state = NPC_RUNNING;
+    sdb_mainloop();
 
     top->final();
     tfp->close();

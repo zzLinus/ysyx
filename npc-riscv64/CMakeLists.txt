@@ -31,10 +31,11 @@ if (NOT verilator_FOUND)
 endif()
 
 # Create a new executable target that will contain all your sources
-add_executable(Vtop ../csrc/main.cc ../csrc/monitor.cc)
+add_executable(Vtop ../csrc/main.cc ../csrc/monitor.cc ../csrc/sdb.cc)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
 target_include_directories(Vtop PUBLIC ./include)
+target_link_libraries(Vtop PUBLIC -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -lreadline)
 
 
 # Add the Verilated circuit to the target

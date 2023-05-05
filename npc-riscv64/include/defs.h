@@ -13,6 +13,7 @@ typedef uint64_t vaddr_t;
 enum
 {
   NPC_STOP,
+  NPC_RESETTING,
   NPC_RUNNING,
   NPC_END,
   NPC_ABORT,
@@ -25,6 +26,7 @@ typedef struct
   vaddr_t halt_pc;
   uint32_t halt_ret;
 } NPCState;
+
 
 #define PMEM_LEFT    ((paddr_t)CONFIG_MBASE)
 #define PMEM_RIGHT   ((paddr_t)CONFIG_MBASE + CONFIG_MSIZE - 1)
@@ -52,5 +54,11 @@ typedef struct
 
 #define ANSI_FMT(str, fmt) fmt str ANSI_NONE
 
+
+#define ARRLEN(arr) (int)(sizeof(arr) / sizeof(arr[0]))
+#define NR_CMD ARRLEN(cmd_table)
+
+#define CHECKASCII(byte)             ((byte) >= 33 && (byte) <= 126) ? byte : '.'
+#define HEXTOCHAR(arg1, len, sftamt) (uint8_t)(paddr_read(arg1, len) >> (sftamt))
 
 #endif
