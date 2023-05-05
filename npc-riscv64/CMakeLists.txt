@@ -31,7 +31,7 @@ if (NOT verilator_FOUND)
 endif()
 
 # Create a new executable target that will contain all your sources
-add_executable(Vtop ../csrc/main.cc)
+add_executable(Vtop ../csrc/main.cc ../csrc/monitor.cc)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
 target_include_directories(Vtop PUBLIC ./include)

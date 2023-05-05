@@ -6,6 +6,7 @@
 #include <verilated_vcd_c.h>
 
 #include "defs.h"
+#include "infrastructure.h"
 
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
@@ -18,8 +19,7 @@ static inline void single_cycle()
     top->eval();
     if (npc_s.state != NPC_RUNNING)
     {
-        printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
-				is_halt = true;
+        is_halt = true;
     }
     top->clk = 0;
     top->eval();
@@ -49,10 +49,10 @@ uint32_t img[INST_NUM] = {
     0x00113423,  //  TODO : 80000024:	00113423          	sd	ra,8(sp)
 
     0xfe9ff0ef,  // 80000028:	fe9ff0ef          	jal	ra,80000010 <main>
+    0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
     0x0000006f,  // 8000002c:	0000006f          	j	8000002c <_trm_init+0x14>
-                 //  WARN : infinet loop
+                 //  WARN : infinet loop should not reach here
 
-    // 0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
 };
 
 class pmem
@@ -127,19 +127,19 @@ extern "C"
 {
     void stop_npc()
     {
-        printf("\n\t\t*************\n");
-        printf("\t\t** EBREAK! **\n");
-        printf("\t\t*************\n");
+        printf("\n\t\t\t    *************\n");
+        printf("\t\t\t    ** EBREAK! **\n");
+        printf("\t\t\t    *************\n");
         npc_s.state = NPC_STOP;
     }
 }
 
-
 int main(int argc, char **argv, char **env)
 {
-		paddr_t last_pc = 0;
+    int cycle = 0;
+    paddr_t last_pc = 0;
     pmem *mem = new pmem();
-		mem->read_img(__IMG_);
+    mem->read_img(__IMG_);
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
@@ -149,29 +149,39 @@ int main(int argc, char **argv, char **env)
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");
 
-		npc_s.state = NPC_RUNNING;
+    npc_s.state = NPC_RUNNING;
     reset(2);
     printf("\n======== Reset Finished ========\n");
 
-    int i = 15;
-    while (i--)
+		welcome();
+
+    while (1)
     {
+        cycle++;
         contextp->timeInc(1);
 
-        printf("\n================= CPU CYCLE DONE =================\n");
-				if(top->pc_out == last_pc)
-						printf("In a Infinet Loop NOW !!!\n");
+        if (top->pc_out == last_pc)
+        {
+            printf("In a Infinet Loop NOW !!!\n");
+            exit(-1);
+        }
         top->inst = mem->pmem_read(top->pc_out, 4);
-				last_pc = top->pc_out;
+        last_pc = top->pc_out;
         single_cycle();
         tfp->dump(contextp->time());
-				if(is_halt)
-						break;
+        printf("\n\n\t================= CPU CYCLE DONE (NO:%d) =================\n\n", cycle);
+        if (is_halt)
+            break;
     }
 
     top->final();
     tfp->close();
 
     delete mem;
-		return npc_s.state;
+
+    if (is_halt)
+        printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
+    else
+        printf("\033[1;31mNPC exit with code : %d\033[0m\n", 0);
+    return npc_s.state;
 }
