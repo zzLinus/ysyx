@@ -1,3 +1,5 @@
+import "DPI-C" function void set_gpr_ptr(input logic [63:0] a []);
+
 module RF(
 	input clk,
 	input rst,
@@ -12,6 +14,8 @@ module RF(
 
 reg [63:0] regs [31:0];
 int i;
+
+initial set_gpr_ptr(regs);
 
 always @(negedge clk, posedge rst) begin
 		if(rst) begin

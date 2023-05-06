@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <verilated.h>
+#include <verilated_dpi.h>
 #include <verilated_vcd_c.h>
 
 #include "defs.h"
@@ -15,6 +16,7 @@ NPCState npc_s = { NPC_STOP, 0, 0 };
 bool is_halt = false;
 paddr_t last_pc = 0;
 pmem *mem;
+uint64_t *cpu_gpr = NULL;
 void cpu_exec(uint64_t n);
 VerilatedVcdC *tfp;
 
@@ -136,7 +138,12 @@ extern "C"
         printf("\n\t\t\t    *************\n");
         printf("\t\t\t    ** EBREAK! **\n");
         printf("\t\t\t    *************\n");
-        npc_s.state = NPC_STOP;
+        npc_s.state = NPC_END;
+    }
+
+    void set_gpr_ptr(const svOpenArrayHandle r)
+    {
+        cpu_gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
     }
 }
 
@@ -161,14 +168,16 @@ void cpu_exec(uint64_t n)
         // NOTE : single cycle begin
         top->clk = 1;
         top->eval();
-        if (npc_s.state == NPC_STOP)
+        if (npc_s.state == NPC_END)
         {
             is_halt = true;
-						break;
+            break;
         }
         top->clk = 0;
         top->eval();
         // end single cycle end
+        if (check_wp())
+            return;
 
         tfp->dump(contextp->time());
         printf("\n\n\t================= CPU CYCLE DONE =================\n\n");

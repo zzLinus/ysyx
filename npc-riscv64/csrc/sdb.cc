@@ -1,13 +1,4 @@
-#include <stdlib.h>
-#include <string.h>
-
-#include <cstdio>
-
-//
-#include <readline/history.h>
-#include <readline/readline.h>
-
-#include "defs.h"
+#include "infrastructure.h"
 
 static int cmd_help(char *args);
 static int cmd_si(char *args);
@@ -20,6 +11,7 @@ static int cmd_q(char *args);
 static int cmd_c(char *args);
 extern void cpu_exec(uint64_t n);
 extern NPCState npc_s;
+extern uint64_t *cpu_gpr;
 
 static struct
 {
@@ -29,14 +21,14 @@ static struct
 } cmd_table[] = {
     { "help", "Display information about all supported commands", cmd_help },
     { "c", "Continue the execution of the program", cmd_c },
-    { "q", "Exit NEMU", cmd_q },
+    { "q", "Exit NPC", cmd_q },
     { "si", "Single step N times", cmd_si },
     { "info", "Print register value", cmd_info },
     { "x", "Value EXPR and store it's resalt in hex, print N bytes start with the resalt that's been store", cmd_x },
     { "p", "Evaluate EXPR", cmd_p },
     { "w", "Watch EXPR,if it change stop the program", cmd_w },
     { "d", "Delete watch point number N", cmd_d },
-    /* TODO: Add more commands */
+    //  TODO: Add more commands
 };
 
 static int cmd_help(char *args)
@@ -75,21 +67,33 @@ static int cmd_si(char *args)
         printf("Not enought arguments,Need 1 provided 0\n");
         return 0;
     }
+    if (npc_s.state == NPC_END)
+    {
+        printf("NPC is in halt stage, please restart npc\n");
+        return 0;
+    }
     cpu_exec(atoi(args));
     return 0;
+}
+
+void reg_display()
+{
+    for (int i = 0; i < 32; ++i)
+    {
+        printf("gpr[%d] = 0x%lx\n", i, cpu_gpr[i]);
+    }
 }
 
 static int cmd_info(char *args)
 {
     if (strcmp(args, "r") == 0)
     {
-        // TODO : display register here
-        // FIXME : isa_reg_display();
+        reg_display();
     }
     else if (strcmp(args, "w") == 0)
     {
-        // TODO : display watch point here
-        // FIXME : wp_disp();
+        // TODO: display watch point here
+				wp_disp();
         return 0;
     }
     else
@@ -121,8 +125,8 @@ static int cmd_x(char *args)
     arg1 = strtol(arg, NULL, 16);
     for (int i = 0; i < arg0; i++)
     {
-        // TODO :display content in memory here
-        // FIXME :
+        // TODO:display content in memory here
+        // FIXME:
         // printf(
         //     "0x%08lx\t%c%c%c%c\n",
         //     paddr_read(arg1, 4),
@@ -138,8 +142,8 @@ static int cmd_x(char *args)
 static int cmd_p(char *args)
 {
     bool success = false;
-    // TODO :stole expr from nemu
-    // FIXME :expr(args, &success);
+    // TODO:stole expr from nemu
+    // FIXME:expr(args, &success);
 
     if (!success)
         printf("Can't rauate expression.\n");
@@ -151,8 +155,8 @@ static int cmd_w(char *args)
     bool success = false;
     if (args != NULL)
     {
-        // TODO :manage watch point
-        // FIXME :create_wp(args, &success);
+        // TODO: manage watch point
+        create_wp(args, &success);
     }
     else
         printf("Invalied arguments.\n");
@@ -166,8 +170,8 @@ static int cmd_d(char *args)
 {
     bool success = false;
 
-    // TODO :manage watch point
-    // FIXME :delete_wp(args, &success);
+    // TODO: manage watch point
+    delete_wp(args, &success);
     if (!success)
         printf("Watch point delete failed.\n");
     return 0;
@@ -175,6 +179,11 @@ static int cmd_d(char *args)
 
 static int cmd_c(char *args)
 {
+    if (npc_s.state == NPC_END)
+    {
+        printf("NPC is in halt stage, please restart npc\n");
+        return 0;
+    }
     cpu_exec(-1);
     return 0;
 }
@@ -206,6 +215,7 @@ static char *rl_gets()
 
 void sdb_mainloop()
 {
+		init_wp_pool();
     for (char *str; (str = rl_gets()) != NULL;)
     {
         char *str_end = str + strlen(str);
@@ -227,11 +237,6 @@ void sdb_mainloop()
         {
             args = NULL;
         }
-
-#ifdef CONFIG_DEVICE
-        extern void sdl_clear_event_queue();
-        sdl_clear_event_queue();
-#endif
 
         int i;
         for (i = 0; i < NR_CMD; i++)
