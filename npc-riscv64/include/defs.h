@@ -32,7 +32,7 @@ typedef struct
 #define PMEM_RIGHT   ((paddr_t)CONFIG_MBASE + CONFIG_MSIZE - 1)
 #define RESET_VECTOR (PMEM_LEFT + CONFIG_PC_RESET_OFFSET)
 
-#define str(x)      #x
+#define _str(x)      #x
 
 #define ANSI_FG_BLACK   "\33[1;30m"
 #define ANSI_FG_RED     "\33[1;31m"
@@ -60,5 +60,17 @@ typedef struct
 
 #define CHECKASCII(byte)             ((byte) >= 33 && (byte) <= 126) ? byte : '.'
 #define HEXTOCHAR(arg1, len, sftamt) (uint8_t)(paddr_read(arg1, len) >> (sftamt))
+
+#ifdef CONFIG_ITRACE
+#define RINGBUFSIZE 20
+#define INSTLEN     80
+typedef struct ring_buffer
+{
+    char insts[RINGBUFSIZE][INSTLEN];
+    uint8_t cur_inst;
+} ring_buffer;
+
+static ring_buffer r;
+#endif
 
 #endif

@@ -13,6 +13,7 @@
 #include "defs.h"
 
 // macros
+#define TODO() printf("please implement me")
 
 extern void sdb_mainloop();
 
@@ -40,4 +41,9 @@ void init_wp_pool();
 
 // Expr
 int64_t eval_reg(char *str);
+uint64_t expr(char *e, bool *success);
 uint64_t reg_str2val(const char *s, bool *success);
+
+// disam
+void init_disasm(const char *triple);
+void disassemble(char *str, int size, uint64_t pc, uint8_t *code, int nbyte);

@@ -183,7 +183,7 @@ void assert_fail_msg()
 {
     isa_reg_display();
     disp_ringbuf();
-    statistic();
+statistic();
 }
 
 /* Simulate how the CPU works. */

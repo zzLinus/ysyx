@@ -92,8 +92,7 @@ static int cmd_info(char *args)
     }
     else if (strcmp(args, "w") == 0)
     {
-        // TODO: display watch point here
-				wp_disp();
+        wp_disp();
         return 0;
     }
     else
@@ -142,8 +141,7 @@ static int cmd_x(char *args)
 static int cmd_p(char *args)
 {
     bool success = false;
-    // TODO:stole expr from nemu
-    // FIXME:expr(args, &success);
+    expr(args, &success);
 
     if (!success)
         printf("Can't rauate expression.\n");
@@ -155,7 +153,6 @@ static int cmd_w(char *args)
     bool success = false;
     if (args != NULL)
     {
-        // TODO: manage watch point
         create_wp(args, &success);
     }
     else
@@ -170,7 +167,6 @@ static int cmd_d(char *args)
 {
     bool success = false;
 
-    // TODO: manage watch point
     delete_wp(args, &success);
     if (!success)
         printf("Watch point delete failed.\n");
@@ -215,7 +211,8 @@ static char *rl_gets()
 
 void sdb_mainloop()
 {
-		init_wp_pool();
+    init_wp_pool();
+
     for (char *str; (str = rl_gets()) != NULL;)
     {
         char *str_end = str + strlen(str);

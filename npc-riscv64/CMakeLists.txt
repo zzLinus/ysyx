@@ -26,21 +26,36 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 add_definitions(-D__IMG_="${__IMG__}")
 
 find_package(verilator HINTS $ENV{VERILATOR_ROOT} ${VERILATOR_ROOT})
+
+# add llvm inorder to implement itrace
+find_package(LLVM REQUIRED CONFIG)
+message(STATUS "Found LLVM ${LLVM_PACKAGE_VERSION}")
+message(STATUS "Using LLVMConfig.cmake in: ${LLVM_DIR}")
+
+
 if (NOT verilator_FOUND)
   message(FATAL_ERROR "Verilator was not found. Either install it, or set the VERILATOR_ROOT environment variable")
 endif()
+
+include_directories(${LLVM_INCLUDE_DIRS})
+separate_arguments(LLVM_DEFINITIONS_LIST NATIVE_COMMAND ${LLVM_DEFINITIONS})
+add_definitions(${LLVM_DEFINITIONS_LIST})
+
 
 # Create a new executable target that will contain all your sources
 add_executable(Vtop 
 		../csrc/main.cc ../csrc/monitor.cc
 		../csrc/sdb.cc ../csrc/watchpoint.cc
 		../csrc/expr.cc ../csrc/reg.cc
+		../csrc/disasm.cc
 		)
+
+
+llvm_map_components_to_libnames(llvm_libs support core irreader)
 
 target_include_directories(Vtop PUBLIC ../nvboard/include)
 target_include_directories(Vtop PUBLIC ./include)
-target_link_libraries(Vtop PUBLIC -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -lreadline)
-
+target_link_libraries(Vtop PUBLIC -D_DEFAULT_SOURCE -D_XOPEN_SOURCE=600 -lreadline ${llvm_libs} -lLLVM-15)
 
 # Add the Verilated circuit to the target
 verilate(

@@ -9,6 +9,8 @@
 #include "defs.h"
 #include "infrastructure.h"
 
+#define CONFIG_ITRACE
+
 class pmem;
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
@@ -19,6 +21,19 @@ pmem *mem;
 uint64_t *cpu_gpr = NULL;
 void cpu_exec(uint64_t n);
 VerilatedVcdC *tfp;
+
+#ifdef CONFIG_ITRACE
+#define RINGBUFSIZE 20
+#define INSTLEN     80
+typedef struct ring_buffer
+{
+    char insts[RINGBUFSIZE][INSTLEN];
+		uint8_t cur_inst;
+} ring_buffer;
+
+static ring_buffer r;
+#endif
+
 
 static inline void single_cycle()
 {
@@ -147,6 +162,20 @@ extern "C"
     }
 }
 
+static void disp_ringbuf()
+{
+    printf("itrace : \n");
+    for (int i = 0; i < RINGBUFSIZE; i++)
+    {
+        if (i == RINGBUFSIZE - 1)
+            printf("--> ");
+        else
+            printf("    ");
+
+        printf("%s\n", r.insts[(r.cur_inst + i) % RINGBUFSIZE]);
+    }
+}
+
 void cpu_exec(uint64_t n)
 {
     while (n--)
@@ -159,6 +188,7 @@ void cpu_exec(uint64_t n)
         if (top->pc_out == last_pc)
         {
             printf("In a Infinet Loop NOW !!!\n");
+						disp_ringbuf();
             exit(-1);
         }
         top->inst = mem->pmem_read(top->pc_out, 4);
@@ -181,6 +211,37 @@ void cpu_exec(uint64_t n)
 
         tfp->dump(contextp->time());
         printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
+
+#ifdef CONFIG_ITRACE
+#define BUFFSIZE 128
+				char logbuf[BUFFSIZE];
+        char *p = logbuf;
+        p += snprintf(p, sizeof(logbuf), "0x%016x " ":", top->pc_out);
+        int ilen = 4;
+        int i;
+        uint8_t *inst = (uint8_t *)&top->inst;
+        for (i = ilen - 1; i >= 0; i--)
+        {
+            p += snprintf(p, 4, " %02x", inst[i]);
+        }
+				int ilen_max =  8;
+				int space_len = ilen_max - ilen;
+				if (space_len < 0)
+						space_len = 0;
+				space_len = space_len * 3 + 1;
+				memset(p, ' ', space_len);
+				p += space_len;
+
+				disassemble(
+						p, logbuf + sizeof(logbuf) - p, top->pc_out, (uint8_t *)&top->inst, ilen);
+
+				if (npc_s.state == true)
+						strcpy(r.insts[r.cur_inst++], logbuf);
+				else
+						strcpy(r.insts[r.cur_inst++], logbuf);
+
+				r.cur_inst %= RINGBUFSIZE;
+#endif
     }
 }
 
@@ -197,13 +258,17 @@ int main(int argc, char **argv, char **env)
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");
 
-    reset(2);
     printf("\n\t\t ======== Reset Finished ========\n");
 
     welcome();
+    init_disasm("riscv64-pc-linux-gnu");
+    reset(2);
 
+		// Main loop
     npc_s.state = NPC_RUNNING;
-    sdb_mainloop();
+		sdb_mainloop();
+
+		disp_ringbuf();
 
     top->final();
     tfp->close();
@@ -211,8 +276,8 @@ int main(int argc, char **argv, char **env)
     delete mem;
 
     if (is_halt)
-        printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", 0);
+        printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", npc_s.state);
     else
-        printf("\033[1;31mNPC exit with code : %d\033[0m\n", 0);
+        printf("\033[1;31mNPC exit with code : %d\033[0m\n", npc_s.state);
     return npc_s.state;
 }
