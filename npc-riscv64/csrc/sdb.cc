@@ -67,7 +67,7 @@ static int cmd_si(char *args)
         printf("Not enought arguments,Need 1 provided 0\n");
         return 0;
     }
-    if (npc_s.state == NPC_END)
+    if (npc_s.state == NPC_END || npc_s.state == NPC_ABORT)
     {
         printf("NPC is in halt stage, please restart npc\n");
         return 0;
@@ -175,7 +175,7 @@ static int cmd_d(char *args)
 
 static int cmd_c(char *args)
 {
-    if (npc_s.state == NPC_END)
+    if (npc_s.state == NPC_END || npc_s.state == NPC_ABORT)
     {
         printf("NPC is in halt stage, please restart npc\n");
         return 0;

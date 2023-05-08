@@ -28,24 +28,11 @@ VerilatedVcdC *tfp;
 typedef struct ring_buffer
 {
     char insts[RINGBUFSIZE][INSTLEN];
-		uint8_t cur_inst;
+    uint8_t cur_inst;
 } ring_buffer;
 
 static ring_buffer r;
 #endif
-
-
-static inline void single_cycle()
-{
-    top->clk = 1;
-    top->eval();
-    if (npc_s.state != NPC_RUNNING)
-    {
-        is_halt = true;
-    }
-    top->clk = 0;
-    top->eval();
-}
 
 static inline void reset(int n)
 {
@@ -156,6 +143,17 @@ extern "C"
         npc_s.state = NPC_END;
     }
 
+    bool break_npc()
+    {
+        if (npc_s.state == NPC_RESETTING)
+            return 0;
+        printf("\n\t\t    ***********************************************\n");
+        printf("\t\t    ** NOT IMPLEMENTED OR JUMP TO WRONG ADDRESS! **\n");
+        printf("\t\t    ***********************************************\n");
+        npc_s.state = NPC_ABORT;
+        return 1;
+    }
+
     void set_gpr_ptr(const svOpenArrayHandle r)
     {
         cpu_gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
@@ -188,35 +186,30 @@ void cpu_exec(uint64_t n)
         if (top->pc_out == last_pc)
         {
             printf("In a Infinet Loop NOW !!!\n");
-						disp_ringbuf();
+            disp_ringbuf();
             exit(-1);
         }
+        if (top->pc_out < 0x80000000)
+            if (break_npc())
+                goto itrace;
+
         top->inst = mem->pmem_read(top->pc_out, 4);
         last_pc = top->pc_out;
 
     exec:
         // NOTE : single cycle begin
-        top->clk = 1;
-        top->eval();
-        if (npc_s.state == NPC_END)
-        {
-            is_halt = true;
-            break;
-        }
-        top->clk = 0;
-        top->eval();
-        // end single cycle end
-        if (check_wp())
-            return;
-
-        tfp->dump(contextp->time());
-        printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
 
 #ifdef CONFIG_ITRACE
 #define BUFFSIZE 128
-				char logbuf[BUFFSIZE];
+    itrace:
+        char logbuf[BUFFSIZE];
         char *p = logbuf;
-        p += snprintf(p, sizeof(logbuf), "0x%016x " ":", top->pc_out);
+        p += snprintf(
+            p,
+            sizeof(logbuf),
+            "0x%016x "
+            ":",
+            top->pc_out);
         int ilen = 4;
         int i;
         uint8_t *inst = (uint8_t *)&top->inst;
@@ -224,24 +217,38 @@ void cpu_exec(uint64_t n)
         {
             p += snprintf(p, 4, " %02x", inst[i]);
         }
-				int ilen_max =  8;
-				int space_len = ilen_max - ilen;
-				if (space_len < 0)
-						space_len = 0;
-				space_len = space_len * 3 + 1;
-				memset(p, ' ', space_len);
-				p += space_len;
+        int ilen_max = 8;
+        int space_len = ilen_max - ilen;
+        if (space_len < 0)
+            space_len = 0;
+        space_len = space_len * 3 + 1;
+        memset(p, ' ', space_len);
+        p += space_len;
 
-				disassemble(
-						p, logbuf + sizeof(logbuf) - p, top->pc_out, (uint8_t *)&top->inst, ilen);
+        disassemble(p, logbuf + sizeof(logbuf) - p, top->pc_out, (uint8_t *)&top->inst, ilen);
 
-				if (npc_s.state == true)
-						strcpy(r.insts[r.cur_inst++], logbuf);
-				else
-						strcpy(r.insts[r.cur_inst++], logbuf);
+        if (npc_s.state == true)
+            strcpy(r.insts[r.cur_inst++], logbuf);
+        else
+            strcpy(r.insts[r.cur_inst++], logbuf);
 
-				r.cur_inst %= RINGBUFSIZE;
+        r.cur_inst %= RINGBUFSIZE;
 #endif
+
+				// single clk pauls
+				IF_NPC_S_EXIT(NPC_ABORT);
+        top->clk = 1;
+        top->eval();
+				IF_NPC_S_EXIT(NPC_END);
+        top->clk = 0;
+        top->eval();
+        // end single cycle
+				//
+        if (check_wp())
+            return;
+
+        tfp->dump(contextp->time());
+        printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
     }
 }
 
@@ -264,18 +271,18 @@ int main(int argc, char **argv, char **env)
     init_disasm("riscv64-pc-linux-gnu");
     reset(2);
 
-		// Main loop
+    // Main loop
     npc_s.state = NPC_RUNNING;
-		sdb_mainloop();
+    sdb_mainloop();
 
-		disp_ringbuf();
+    disp_ringbuf();
 
     top->final();
     tfp->close();
 
     delete mem;
 
-    if (is_halt)
+    if (npc_s.state == NPC_STOP)
         printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", npc_s.state);
     else
         printf("\033[1;31mNPC exit with code : %d\033[0m\n", npc_s.state);

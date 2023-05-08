@@ -1,4 +1,5 @@
 import "DPI-C" function void stop_npc();
+import "DPI-C" function void break_npc();
 
 module IDU(
 	input clk,
@@ -28,7 +29,7 @@ always @(inst) begin
         // jalr
         7'b1100111 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
         7'b1110011 : stop_npc();
-    default    : imm = 64'b0;
+    default    : break_npc();
     endcase
 
     $display("\n** DECODE Module **");
