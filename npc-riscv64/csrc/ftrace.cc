@@ -1,13 +1,14 @@
-#include <common.h>
 #include <elf.h>
+#include "defs.h"
+#include <stdio.h>
+#include <cstring>
 
 ElfFuncInfo elf_funcs[ELF_FUNC_MAX];
 uint32_t elf_nums = 0;
 
 void init_ftrace(const char* p)
 {
-#ifdef CONFIG_FTRACE
-    Log("Ready to parse elf file %s\n", p);
+    printf("Ready to parse elf file %s\n", p);  // TODO : implement elf parsing
     Elfw(Ehdr) header;
     Elfw(Shdr) sec_header;
     Elfw(Sym) symtab;
@@ -22,7 +23,7 @@ void init_ftrace(const char* p)
         fread(&header, sizeof(header), 1, file);
         if (memcmp(header.e_ident, ELFMAG, SELFMAG) == 0)
         {
-            Log("Valid elf file");
+            printf("Valid elf file");
         }
         fseek(file, header.e_shoff, SEEK_SET);
 
@@ -55,7 +56,7 @@ void init_ftrace(const char* p)
             }
         }
 
-        Log("Ftrace init success");
+        printf("Ftrace init success");
         for (int i = 0; i < elf_nums; i++)
         {
             printf(
@@ -68,5 +69,4 @@ void init_ftrace(const char* p)
 
         fclose(file);
     }
-#endif
 }

@@ -47,7 +47,7 @@ add_executable(Vtop
 		../csrc/main.cc ../csrc/monitor.cc
 		../csrc/sdb.cc ../csrc/watchpoint.cc
 		../csrc/expr.cc ../csrc/reg.cc
-		../csrc/disasm.cc
+		../csrc/disasm.cc ../csrc/ftrace.cc
 		)
 
 

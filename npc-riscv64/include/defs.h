@@ -59,9 +59,38 @@ typedef struct
 #define CHECKASCII(byte)             ((byte) >= 33 && (byte) <= 126) ? byte : '.'
 #define HEXTOCHAR(arg1, len, sftamt) (uint8_t)(paddr_read(arg1, len) >> (sftamt))
 
+#define CONFIG_FTRACE
+
+#ifdef CONFIG_FTRACE
+#define ELF_FUNC_MAX      30
+#define ELF_FUNC_NAME_MAX 30
+#define FTRACE_FLAGS      0b10000000
+
+typedef struct
+{
+    uint64_t addr;
+		uint64_t size;
+    char name[ELF_FUNC_NAME_MAX];
+} ElfFuncInfo;
+
+#define Elfw(type)        Elf64_##type
+
+#define PRINT_TAB(n)                     \
+    if ((n) < 30)                        \
+        for (size_t i = 0; i < (n); i++) \
+            printf("  ");                \
+    else                                 \
+        for (size_t i = 0; i < 30; i++)  \
+            printf("  ");
+#endif
+
+#define BITMASK(bits)   ((1ull << (bits)) - 1)
+#define BITS(x, hi, lo) (((x) >> (lo)) & BITMASK((hi) - (lo) + 1))  // similar to x[hi:lo] in verilog
+
 #ifdef CONFIG_ITRACE
 #define RINGBUFSIZE 20
 #define INSTLEN     80
+
 typedef struct ring_buffer
 {
     char insts[RINGBUFSIZE][INSTLEN];
