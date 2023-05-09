@@ -190,7 +190,7 @@ static int decode_exec(Decode *s)
     INSTPAT(
         "??????? ????? ????? ??? ????? 11011 11", jal, J, s->dnpc = s->pc + imm; if (dest != 0) {
             R(dest) = s->snpc;
-            IFDEF(CONFIG_FTRACE, CALL(s->dnpc))
+            IFDEF(CONFIG_FTRACE, CALL())
         });
     INSTPAT("??????? 00000 ????? 000 ????? 00100 11", mv, I, R(dest) = src1 + imm);  // mv rd rs == add rd rs 0
     INSTPAT("0100000 ????? ????? 101 ????? 01110 11", sraw, R, R(dest) = SEXT((int64_t)src1 >> src2, 32));
@@ -233,8 +233,8 @@ static int decode_exec(Decode *s)
     INSTPAT("0000000 ????? ????? 011 ????? 01100 11", snez, R, R(dest) = (src2 != src1) ? 1 : 0);
     INSTPAT(
         "??????? ????? ????? 000 ????? 11001 11", jalr / ret / jr, I, s->dnpc = src1 + imm; R(dest) = s->snpc;
-        if (BITS(s->isa.inst.val, 19, 15) == 1 && dest == 0) { IFDEF(CONFIG_FTRACE, RET(s->dnpc)); } else {
-            IFDEF(CONFIG_FTRACE, CALL(s->dnpc));
+        if (BITS(s->isa.inst.val, 19, 15) == 1 && dest == 0) { IFDEF(CONFIG_FTRACE, RET()); } else {
+            IFDEF(CONFIG_FTRACE, CALL());
         });
 
     // NOTE : The SD, SW, SH, and SB instructions store 64 - bit, 32 - bit, 16 - bit,

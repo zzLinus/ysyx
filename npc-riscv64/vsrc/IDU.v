@@ -1,6 +1,5 @@
 import "DPI-C" function void stop_npc();
 import "DPI-C" function void break_npc();
-import "DPI-C" function void judge_jump(input [7:0] dst_reg);
 
 module IDU(
 	input clk,
@@ -26,15 +25,9 @@ always @(inst) begin
         // AUIPC
         7'b0010111 : imm = {32'b0, {inst[31:12], 12'b0}};
         // J-type instruction
-				7'b1101111 : begin
-						imm = {inst[31] ? {43{1'b1}} : 43'b0, inst[31], inst[19:12], inst[20], inst[30:21],1'b0};
-						judge_jump({3'b000, rw});
-				end
+        7'b1101111 : imm = {inst[31] ? {43{1'b1}} : 43'b0, inst[31], inst[19:12], inst[20], inst[30:21],1'b0};
         // jalr
-				7'b1100111 : begin
-						imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
-						judge_jump({3'b100, rw});
-				end
+        7'b1100111 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
         7'b1110011 : stop_npc();
     default    : break_npc();
     endcase

@@ -25,11 +25,9 @@ uint64_t fs_size = 0;  // function stack size
 extern uint32_t elf_nums;
 extern ElfFuncInfo elf_funcs[ELF_FUNC_MAX];
 
-#ifdef CONFIG_FTRACE
 uint8_t call_ret = 0;
-#define RET(addr)  call_ret = 1 << 2;
-#define CALL(addr) call_ret = 1 << 1;
-#endif
+#define RET  call_ret = 1 << 2;
+#define CALL call_ret = 1 << 1;
 
 #ifdef CONFIG_ITRACE
 #define RINGBUFSIZE 20
@@ -168,20 +166,27 @@ extern "C"
         cpu_gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
     }
 
-    void judge_jump(uint8_t dest)
+    void judge_jump()
     {
-        //  NOTE: high 3bit is flag bits, 100 -> jalr 000 -> jal
-        if (dest != 0 && !(dest & FTRACE_FLAGS))
-        {
-            CALL(s->dnpc)
+
+        uint8_t dest = BITS(top->inst, 11, 7);
+        if ((top->inst & 0x7f) == 0b1100111)
+            goto jalr;
+				if ((top->inst & 0x7f) != 0b1101111)
 						return;
+
+        if (dest != 0)
+        {
+            call_ret = 1 << 1;
+            return;
         };
 
-        // jalr
+    jalr:
         if (BITS(top->inst, 19, 15) == 1 && dest == 0)
-            RET(s->dnpc)
+            call_ret = 1 << 2;
         else
-            CALL(s->dnpc)
+            call_ret = 1 << 1;
+
         printf("dest reg : %u\n", dest);
     }
 }
@@ -268,6 +273,7 @@ void cpu_exec(uint64_t n)
         IF_NPC_S_EXIT(NPC_END);
         top->clk = 0;
         top->eval();
+				judge_jump();
         // end single cycle
         //
         if (check_wp())
