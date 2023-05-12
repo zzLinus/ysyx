@@ -167,6 +167,7 @@ static void statistic()
 
 static void disp_ringbuf()
 {
+#ifdef CONFIG_ITRACE
     printf("itrace : \n");
     for (int i = 0; i < RINGBUFSIZE; i++)
     {
@@ -177,6 +178,7 @@ static void disp_ringbuf()
 
         printf("%s\n", r.insts[(r.cur_inst + i) % RINGBUFSIZE]);
     }
+#endif
 }
 
 void assert_fail_msg()

@@ -168,12 +168,11 @@ extern "C"
 
     void judge_jump()
     {
-
         uint8_t dest = BITS(top->inst, 11, 7);
         if ((top->inst & 0x7f) == 0b1100111)
             goto jalr;
-				if ((top->inst & 0x7f) != 0b1101111)
-						return;
+        if ((top->inst & 0x7f) != 0b1101111)
+            return;
 
         if (dest != 0)
         {
@@ -273,7 +272,7 @@ void cpu_exec(uint64_t n)
         IF_NPC_S_EXIT(NPC_END);
         top->clk = 0;
         top->eval();
-				judge_jump();
+        judge_jump();
         // end single cycle
         //
         if (check_wp())
@@ -311,15 +310,15 @@ void cpu_exec(uint64_t n)
     }
 }
 
-void get_imgprefix(std::string &dst)
+void get_imgprefix(std::string &dst, char *p)
 {
     for (int i = 0;; i++)
     {
-        if (__IMG_[i] == '.')
+        if (p[i] == '.')
             return;
         else
         {
-            dst.push_back(__IMG_[i]);
+            dst.push_back(p[i]);
         }
     }
 }
@@ -329,7 +328,7 @@ int main(int argc, char **argv, char **env)
     mem = new pmem();
     std::string img_prefix;
 
-    get_imgprefix(img_prefix);
+    get_imgprefix(img_prefix, argv[argc - 2]);
     mem->read_img(img_prefix.append(".bin").c_str());
 
     contextp->commandArgs(argc, argv);

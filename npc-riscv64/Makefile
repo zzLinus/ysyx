@@ -1,27 +1,42 @@
-# I "BORROW" the following 23 lines from verilator example in my system path /usr/share/verilator/example/...
-# I need to use the cmake build system because i need the compile_commands.json file in order to make my editor works properly
+ifneq ($(words $(CURDIR)),1)
+ $(error Unsupported: GNU Make cannot build in directories containing spaces, build elsewhere: '$(CURDIR)')
+endif
+
 ifeq ($(VERILATOR_ROOT),)
+VERILATOR = verilator
 VERILATOR_COVERAGE = verilator_coverage
 else
 export VERILATOR_ROOT
+VERILATOR = $(VERILATOR_ROOT)/bin/verilator
 VERILATOR_COVERAGE = $(VERILATOR_ROOT)/bin/verilator_coverage
 endif
-######################################################################
+ 
+WORK_DIR  = $(shell pwd)
+CXXSRC = $(wildcard csrc/*.cc)
+VSRC   = vsrc/top.v
+VSRC  += $(filter-out $(wildcard vsrc/top.v), $(wildcard vsrc/*.v))
 
-# Check if CMake is installed and of correct version
-ifeq ($(shell which cmake),)
-TARGET := nocmake
-else
-CMAKE_VERSION := $(shell cmake --version | grep -Po '(\d[\.\d]+)')
-CMAKE_MAJOR := $(shell echo $(CMAKE_VERSION) | cut -f1 -d.)
-CMAKE_MINOR := $(shell echo $(CMAKE_VERSION) | cut -f2 -d.)
-CMAKE_GT_3_8 := $(shell [ $(CMAKE_MAJOR) -gt 3 -o \( $(CMAKE_MAJOR) -eq 3 -a $(CMAKE_MINOR) -ge 8 \) ] && echo true)
-ifeq ($(CMAKE_GT_3_8),true)
-TARGET := run
-else
-TARGET := oldcmake
-endif
-endif
+# Generate C++ in executable form
+VERILATOR_FLAGS += -cc --exe
+# Generate makefile dependencies (not shown as complicates the Makefile)
+#VERILATOR_FLAGS += -MMD
+# Optimize
+VERILATOR_FLAGS += -x-assign fast
+# Warn abount lint issues; may not want this on less solid designs
+ VERILATOR_FLAGS += -Wno-COMBDLY
+# Make waveforms
+VERILATOR_FLAGS += --trace
+# Check SystemVerilog assertions
+VERILATOR_FLAGS += --assert
+# Generate coverage analysis
+VERILATOR_FLAGS += --coverage
+# Run Verilator in debug mode
+#VERILATOR_FLAGS += --debug
+# Add this trace to get a backtrace in gdb
+#VERILATOR_FLAGS += --gdbbt
+
+# Input files for Verilator
+VERILATOR_INPUT = -f input.vc $(VSRC) $(CXXSRC)
 
 all:
 	@echo "Write this Makefile by your self."
@@ -29,23 +44,26 @@ all:
 sim:
 	$(call git_commit, "sim RTL") # DO NOT REMOVE THIS LINE!!!
 	@echo
+	@echo "include dir : "$(INCLUDE_DIR)
 	@echo "-- Verilator CMake hello world example"
 
 	@echo
 	@echo "-- VERILATE ----------------"
-	mkdir -p build && cd build && cmake -D__IMG__=$(IMG) ..
+	$(VERILATOR) $(VERILATOR_FLAGS) $(VERILATOR_INPUT)
 
 	@echo
 	@echo "-- BUILD -------------------"
-	cmake --build build -j
+	$(MAKE) -j -C obj_dir -f ../Makefile_obj
 
 	@echo
 	@echo "-- RUN ---------------------"
+	@rm -rf logs
 	@mkdir -p logs
-	build/Vtop +trace
+	obj_dir/Vtop $(IMG) +trace
 
 	@echo
 	@echo "-- COVERAGE ----------------"
+	@rm -rf logs/annotated
 	$(VERILATOR_COVERAGE) --annotate logs/annotated logs/coverage.dat
 
 	@echo
