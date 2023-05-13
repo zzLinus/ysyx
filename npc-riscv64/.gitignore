@@ -10,5 +10,6 @@
 !*.cpp
 !.gitignore
 !README.md
+!Makefile_obj
 build/
 obj_dir/

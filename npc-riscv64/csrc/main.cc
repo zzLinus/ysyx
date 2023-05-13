@@ -7,6 +7,7 @@
 #include <verilated_vcd_c.h>
 
 #include "defs.h"
+#include "difftest.h"
 #include "infrastructure.h"
 
 #define CONFIG_ITRACE
@@ -327,6 +328,8 @@ int main(int argc, char **argv, char **env)
 {
     mem = new pmem();
     std::string img_prefix;
+		if(argc != 3)
+				exit(0);
 
     get_imgprefix(img_prefix, argv[argc - 2]);
     mem->read_img(img_prefix.append(".bin").c_str());
@@ -335,6 +338,9 @@ int main(int argc, char **argv, char **env)
     contextp->traceEverOn(true);
     tfp = new VerilatedVcdC;
 
+		//void * shit;
+		//bool ha;
+		//difftest_regcpy(shit,ha);
     top->trace(tfp, 99);
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");

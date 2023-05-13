@@ -57,13 +57,10 @@ sim:
 
 	@echo
 	@echo "-- RUN ---------------------"
-	@rm -rf logs
-	@mkdir -p logs
 	obj_dir/Vtop $(IMG) +trace
 
 	@echo
 	@echo "-- COVERAGE ----------------"
-	@rm -rf logs/annotated
 	$(VERILATOR_COVERAGE) --annotate logs/annotated logs/coverage.dat
 
 	@echo
@@ -72,4 +69,4 @@ sim:
 	@echo
 
 clean mostlyclean distclean maintainer-clean:
-	@rm -rf build logs
+	@rm -rf build logs obj_dir
