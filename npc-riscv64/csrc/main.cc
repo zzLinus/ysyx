@@ -1,11 +1,3 @@
-#include <Vtop.h>
-#include <assert.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <verilated.h>
-#include <verilated_dpi.h>
-#include <verilated_vcd_c.h>
-
 #include "defs.h"
 #include "difftest.h"
 #include "infrastructure.h"
@@ -16,20 +8,23 @@ class pmem;
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
 NPCState npc_s = { NPC_STOP, 0, 0 };
-bool is_halt = false;
-paddr_t last_pc = 0;
 pmem *mem;
-uint64_t *cpu_gpr = NULL;
-void cpu_exec(uint64_t n);
 VerilatedVcdC *tfp;
+
+bool is_halt = false;
 uint64_t fs_size = 0;  // function stack size
 extern uint32_t elf_nums;
 extern ElfFuncInfo elf_funcs[ELF_FUNC_MAX];
+CPU_state cpu_state = { 0 };
 
+// NOTE: ftrace
+#ifdef CONFIG_FTRACE
 uint8_t call_ret = 0;
 #define RET  call_ret = 1 << 2;
 #define CALL call_ret = 1 << 1;
+#endif
 
+// NOTE: itrace
 #ifdef CONFIG_ITRACE
 #define RINGBUFSIZE 20
 #define INSTLEN     80
@@ -136,11 +131,6 @@ class pmem
     uint8_t mem[CONFIG_MSIZE];
 };
 
-void print_alu()
-{
-    printf("alu state : out : 0d%lu 0b%031b 0x%08lx\n", top->alu_out, top->alu_out, top->alu_out);
-}
-
 extern "C"
 {
     void stop_npc()
@@ -164,7 +154,7 @@ extern "C"
 
     void set_gpr_ptr(const svOpenArrayHandle r)
     {
-        cpu_gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
+        cpu_state.gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
     }
 
     void judge_jump()
@@ -177,17 +167,14 @@ extern "C"
 
         if (dest != 0)
         {
-            call_ret = 1 << 1;
-            return;
+            CALL return;
         };
 
     jalr:
         if (BITS(top->inst, 19, 15) == 1 && dest == 0)
-            call_ret = 1 << 2;
-        else
-            call_ret = 1 << 1;
+            RET else CALL
 
-        printf("dest reg : %u\n", dest);
+                printf("dest reg : %u\n", dest);
     }
 }
 
@@ -214,7 +201,7 @@ void cpu_exec(uint64_t n)
         if (npc_s.state == NPC_RESETTING)
             goto exec;
 
-        if (top->pc_out == last_pc)
+        if (top->pc_out == cpu_state.pc)
         {
             printf("In a Infinet Loop NOW !!!\n");
             disp_ringbuf();
@@ -225,7 +212,7 @@ void cpu_exec(uint64_t n)
                 goto itrace;
 
         top->inst = mem->pmem_read(top->pc_out, 4);
-        last_pc = top->pc_out;
+        cpu_state.pc = top->pc_out;
 
     exec:
         // NOTE : single cycle begin
@@ -282,7 +269,7 @@ void cpu_exec(uint64_t n)
         if (call_ret == 2)
         {
             fs_size++;
-            printf("%lx :", last_pc);
+            printf("%lx :", cpu_state.pc);
             PRINT_TAB(fs_size);
             printf("%s  ", ANSI_FMT("call", ANSI_FG_BLUE));
             for (int i = 0; i < elf_nums; i++)
@@ -293,7 +280,7 @@ void cpu_exec(uint64_t n)
         }
         else if (call_ret == 4)
         {
-            printf("%lx :", last_pc);
+            printf("%lx :", cpu_state.pc);
             PRINT_TAB(fs_size);
             fs_size--;
             printf("%s  ", ANSI_FMT("return", ANSI_FG_GREEN));
@@ -307,6 +294,7 @@ void cpu_exec(uint64_t n)
 #endif
 
         tfp->dump(contextp->time());
+				trace_and_difftest(&cpu_state, top);
         printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
     }
 }
@@ -328,8 +316,8 @@ int main(int argc, char **argv, char **env)
 {
     mem = new pmem();
     std::string img_prefix;
-		if(argc != 3)
-				exit(0);
+    if (argc != 3)
+        exit(0);
 
     get_imgprefix(img_prefix, argv[argc - 2]);
     mem->read_img(img_prefix.append(".bin").c_str());
@@ -338,9 +326,6 @@ int main(int argc, char **argv, char **env)
     contextp->traceEverOn(true);
     tfp = new VerilatedVcdC;
 
-		//void * shit;
-		//bool ha;
-		//difftest_regcpy(shit,ha);
     top->trace(tfp, 99);
     tfp->open("logs/vlt_dump.vcd");
     tfp->dumpvars(1, "top");
@@ -348,6 +333,7 @@ int main(int argc, char **argv, char **env)
     welcome();
     init_disasm("riscv64-pc-linux-gnu");
     init_ftrace(img_prefix.erase(img_prefix.find(".bin"), 4).append(".elf").c_str());
+		difftest_init(0);
 
     reset(2);
 
@@ -364,7 +350,7 @@ int main(int argc, char **argv, char **env)
 
     delete mem;
 
-    if (npc_s.state != NPC_STOP)
+    if (npc_s.state == NPC_END)
         printf("\033[32;1;4mNPC exit with code : %d\033[0m\n", npc_s.state);
     else
         printf("\033[1;31mNPC exit with code : %d\033[0m\n", npc_s.state);

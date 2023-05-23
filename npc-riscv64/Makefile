@@ -69,4 +69,4 @@ sim:
 	@echo
 
 clean mostlyclean distclean maintainer-clean:
-	@rm -rf build logs obj_dir
+	@rm -rf build obj_dir

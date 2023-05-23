@@ -11,7 +11,6 @@ static int cmd_q(char *args);
 static int cmd_c(char *args);
 extern void cpu_exec(uint64_t n);
 extern NPCState npc_s;
-extern uint64_t *cpu_gpr;
 
 static struct
 {
@@ -76,13 +75,6 @@ static int cmd_si(char *args)
     return 0;
 }
 
-void reg_display()
-{
-    for (int i = 0; i < 32; ++i)
-    {
-        printf("gpr[%d] = 0x%lx\n", i, cpu_gpr[i]);
-    }
-}
 
 static int cmd_info(char *args)
 {

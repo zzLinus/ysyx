@@ -1,7 +1,16 @@
 #ifndef __NPC_DEFS_H__
 #define __NPC_DEFS_H__
 
+#include <Vtop.h>
+#include <assert.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <verilated.h>
+#include <verilated_dpi.h>
+#include <verilated_vcd_c.h>
+
 #include <cstdint>
+
 #define CONFIG_MBASE           0x80000000
 #define CONFIG_MSIZE           0x8000000
 #define CONFIG_PC_RESET_OFFSET 0x0
@@ -19,6 +28,24 @@ enum
     NPC_ABORT,
     NPC_QUIT
 };
+
+enum
+{
+  DIFFTEST_TO_DUT,
+  DIFFTEST_TO_REF
+};
+
+typedef struct
+{
+    uint64_t *gpr;  // general perpus register
+    uint64_t pc;
+} CPU_state;
+
+typedef struct
+{
+    uint64_t gpr[32];  // general perpus register
+    uint64_t pc;
+} ref_CPU_state;
 
 typedef struct
 {
@@ -66,14 +93,16 @@ typedef struct
 #define ELF_FUNC_NAME_MAX 30
 #define FTRACE_FLAGS      0b10000000
 
+#define FMT_WORD  "0x%016lx"
+
 typedef struct
 {
     uint64_t addr;
-		uint64_t size;
+    uint64_t size;
     char name[ELF_FUNC_NAME_MAX];
 } ElfFuncInfo;
 
-#define Elfw(type)        Elf64_##type
+#define Elfw(type) Elf64_##type
 
 #define PRINT_TAB(n)                     \
     if ((n) < 30)                        \

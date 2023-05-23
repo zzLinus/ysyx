@@ -17,7 +17,7 @@ CPPFLAGS += -MMD -MP
 CPPFLAGS += -I/home/zzlinus/Dev/C/ysyx/ysyx-workbench/npc-riscv64/include 
 
 # llvm link && defines
-CPPFLAGS += $(shell llvm-config --cxxflags) -fPIE
+CPPFLAGS += -std=c++14 -fno-exceptions -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -fPIE
 
 LIBS     += $(shell llvm-config --libs) -lreadline
 
@@ -31,7 +31,7 @@ CPPFLAGS += -DVL_DEBUG=1
 # For testing inside Verilator, "configure --enable-ccwarn" will do this
 # automatically; otherwise you may want this unconditionally enabled
 ifeq ($(CFG_WITH_CCWARN),yes)	# Local... Else don't burden users
-USER_CPPFLAGS_WALL += -W -Werror -Wall $(shell llvm-config --cxxflags --libs) -fPIE
+USER_CPPFLAGS_WALL += -W -Werror -Wall
 endif
 
 # See the benchmarking section of bin/verilator.
