@@ -101,6 +101,7 @@ class pmem
         int ret = fread(guest_to_host(RESET_VECTOR), size, 1, fp);
         assert(ret == 1);
         fclose(fp);
+        difftest_loadimg((uint32_t *)mem, size);
     }
     uint64_t pmem_read(uint64_t addr, uint8_t instLen)
     {
@@ -294,7 +295,7 @@ void cpu_exec(uint64_t n)
 #endif
 
         tfp->dump(contextp->time());
-				trace_and_difftest(&cpu_state, top);
+        trace_and_difftest(&cpu_state, top);
         printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
     }
 }
@@ -320,7 +321,7 @@ int main(int argc, char **argv, char **env)
         exit(0);
 
     get_imgprefix(img_prefix, argv[argc - 2]);
-    mem->read_img(img_prefix.append(".bin").c_str());
+
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
@@ -332,8 +333,10 @@ int main(int argc, char **argv, char **env)
 
     welcome();
     init_disasm("riscv64-pc-linux-gnu");
+    difftest_init(0);
+
+    mem->read_img(img_prefix.append(".bin").c_str());
     init_ftrace(img_prefix.erase(img_prefix.find(".bin"), 4).append(".elf").c_str());
-		difftest_init(0);
 
     reset(2);
 

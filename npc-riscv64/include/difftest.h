@@ -10,6 +10,7 @@ extern "C"
     void difftest_exec(uint64_t n);
     void difftest_raise_intr(uint64_t NO);
     void difftest_init(int port);
+		void difftest_loadimg(uint32_t *img, long size);
 }
 
 void trace_and_difftest(CPU_state * cpu_s, Vtop *top);
