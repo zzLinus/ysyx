@@ -12,6 +12,8 @@ module IDU(
 	output [2:0] funct3,
 	output reg [63:0] imm
 );
+//  opcode : 0x3b  0111011
+//  opcode : 0x33  0110011
 
 
 always @(inst) begin
@@ -25,10 +27,17 @@ always @(inst) begin
         // AUIPC
         7'b0010111 : imm = {32'b0, {inst[31:12], 12'b0}};
         // J-type instruction
-        7'b1101111 : imm = {inst[31] ? {43{1'b1}} : 43'b0, inst[31], inst[19:12], inst[20], inst[30:21],1'b0};
+        7'b1101111 : imm = {inst[31] ? {43{1'b1}} : 43'b0, inst[31], inst[19:12], inst[20], inst[30:21], 1'b0};
         // jalr
         7'b1100111 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
-        7'b1110011 : stop_npc();
+				// addw R-type instruction
+				7'b0111011 : imm = {64'b0};
+				// sub R-type instruction
+				7'b0110011 : imm = {64'b0};
+				// Conditional Branches (B-type instruction)
+				7'b1100011 : imm = {inst[31] ? {51{1'b1}} : 51'b0, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};
+
+        7'b1110011 : stop_npc(); // ebreak
     default    : break_npc();
     endcase
 

@@ -36,10 +36,10 @@ always @(op_code) begin
 						pc2imm    = 1'b0;
 						jump      = 1'b0;
 						spc2reg   = 1'b0;
-						mem_w     = 1'b0;
+						mem_w     = 1'b1;
 						mem_r     = 1'b0;
 						alu_src   = 1'b1;
-						reg_w     = 1'b1;
+						reg_w     = 1'b0;
 						alu_op    = 2'b00;
 				end
 
@@ -56,7 +56,7 @@ always @(op_code) begin
 						alu_op    = 2'b00;
 				end
 
-				7'b0110011 : begin // opcode for R-type Instruction
+				7'b0110011 : begin // opcode for SUB (R-type Instruction)
 						mem2reg   = 1'b0;
 						has_funct = 2'b11;
 						pc2imm    = 1'b0;
@@ -105,6 +105,33 @@ always @(op_code) begin
 						mem_r     = 1'b0;
 						alu_src   = 1'b0;
 						reg_w     = 1'b1;
+						alu_op    = 2'b10;
+				end
+
+				// FIXME: W -> 32bit
+				7'b0111011 : begin // opcode for addw (R-type instruction)
+						mem2reg   = 1'b0;
+						has_funct = 2'b11;
+						pc2imm    = 1'b0;
+						jump      = 1'b0;
+						spc2reg   = 1'b0;
+						mem_w     = 1'b0;
+						mem_r     = 1'b0;
+						alu_src   = 1'b0; // NOTE: alu_src(0=>reg_value ,1=>imm_value)
+						reg_w     = 1'b1;
+						alu_op    = 2'b10;
+				end
+
+				7'b1100011 : begin // TODO: opcode for conditional branch instruction
+						mem2reg   = 1'b0;
+						has_funct = 2'b01;
+						pc2imm    = 1'b1;
+						jump      = 1'b1;
+						spc2reg   = 1'b0;
+						mem_w     = 1'b0;
+						mem_r     = 1'b0;
+						alu_src   = 1'b1;
+						reg_w     = 1'b0;
 						alu_op    = 2'b10;
 				end
 

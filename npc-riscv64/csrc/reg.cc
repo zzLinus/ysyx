@@ -1,8 +1,7 @@
 #include "infrastructure.h"
 
 #define NOTIMPLEMENT 0
-#define gpr(idx) (cpu.gpr[check_reg_idx(idx)])
-
+#define gpr(idx)     (cpu.gpr[check_reg_idx(idx)])
 
 // clang-format off
 const char *regs[] = { // cpu_gpr[32]
@@ -15,13 +14,11 @@ const char *regs[] = { // cpu_gpr[32]
 
 extern CPU_state cpu_state;
 
-
 static inline int check_reg_idx(int idx)
 {
     assert(idx >= 0 && idx < 32);
     return idx;
 }
-
 
 static inline const char *reg_name(int idx, int width)
 {
@@ -36,7 +33,11 @@ bool difftest_checkregs(ref_CPU_state *ref_r, vaddr_t pc)  // TODO:
     {
         if (cpu_state.gpr[i] != ref_r->gpr[i])
         {
-            printf("\nDifftest found register name: %s is %s!\n", reg_name(i, NOTIMPLEMENT), ANSI_FMT("WRONG", ANSI_FG_RED));
+            printf(
+                "\nDifftest found register name: %s (NO.%d) is %s!\n",
+                reg_name(i, NOTIMPLEMENT),
+                i,
+                ANSI_FMT("WRONG", ANSI_FG_RED));
             printf("stop at pc : %lx\n", pc);
             printf(ANSI_FMT("decimal : %14ld hex : %lx\n", ANSI_FG_RED), cpu_state.gpr[i], cpu_state.gpr[i]);
             printf(ANSI_FMT("decimal : %14ld hex : %lx\n\n", ANSI_FG_GREEN), ref_r->gpr[i], ref_r->gpr[i]);
@@ -48,12 +49,12 @@ bool difftest_checkregs(ref_CPU_state *ref_r, vaddr_t pc)  // TODO:
 
 uint64_t reg_str2val(const char *s, bool *success)
 {
-    uint64_t  reg_val;
+    uint64_t reg_val;
     for (int i = 0; i < 31; i++)
     {
         if (strcmp(s, reg_name(i, NOTIMPLEMENT)) == 0)
         {
-						printf("watch reg NO:%d\n",i);
+            printf("watch reg NO:%d\n", i);
             reg_val = cpu_state.gpr[i];
             *success = true;
         }

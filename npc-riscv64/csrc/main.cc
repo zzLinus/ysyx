@@ -322,7 +322,6 @@ int main(int argc, char **argv, char **env)
 
     get_imgprefix(img_prefix, argv[argc - 2]);
 
-
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);
     tfp = new VerilatedVcdC;
