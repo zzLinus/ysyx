@@ -1,5 +1,8 @@
 module CTRLER (
 		input [6:0] op_code,
+		input [2:0] func3,
+		input [63:0] reg1,
+		input [63:0] reg2,
 		output reg alu_src,
 		output reg mem2reg,
 		output reg spc2reg,
@@ -12,10 +15,23 @@ module CTRLER (
 		output reg pc2imm
 );
 
+wire reg1_reg2_eq;
+wire reg1_reg2_ne;
+wire reg1_reg2_lt;
+wire reg1_reg2_ge;
+wire reg1_reg2_ltu;
+wire reg1_reg2_geu;
+
+assign reg1_reg2_eq = (reg1 == reg2);
+assign reg1_reg2_ne = !reg1_reg2_eq;
+assign reg1_reg2_lt = ($signed(reg1) < $signed(reg2));
+assign reg1_reg2_ltu = (reg1 < reg2);
+assign reg1_reg2_ge = ($signed(reg1) >= $signed(reg2));
+assign reg1_reg2_geu = (reg1>= reg2);
+
 // NOTE : alu_src 0 : reg_value
 //                1 : imm_value
-
-always @(op_code) begin
+always @(*) begin
 		case(op_code)
 				7'b0000011 : begin // opcode for load word
 						mem2reg   = 1'b1;
@@ -126,7 +142,15 @@ always @(op_code) begin
 						mem2reg   = 1'b0;
 						has_funct = 2'b01;
 						pc2imm    = 1'b1;
-						jump      = 1'b1;
+						case(func3)
+								3'b000 : jump = {reg1_reg2_eq  ? 1'b1 : 1'b0}; // BEQ
+								3'b001 : jump = {reg1_reg2_ne  ? 1'b1 : 1'b0}; // BNE
+								3'b100 : jump = {reg1_reg2_lt  ? 1'b1 : 1'b0}; // BLT
+								3'b101 : jump = {reg1_reg2_ge  ? 1'b1 : 1'b0}; // BGE
+								3'b110 : jump = {reg1_reg2_ltu ? 1'b1 : 1'b0}; // BLTU
+								3'b111 : jump = {reg1_reg2_geu ? 1'b1 : 1'b0}; // BGEU
+								default : jump = 0;
+						endcase
 						spc2reg   = 1'b0;
 						mem_w     = 1'b0;
 						mem_r     = 1'b0;
@@ -148,7 +172,11 @@ always @(op_code) begin
 						alu_op    = 2'b00;
 				end
 		endcase
+
 		$display("\n** CTRL Module **");
+		$display("reg1  %d", reg1);
+		$display("reg2  %d", reg2);
+
 		$display("alu_src %d", alu_src);
 		$display("mem2reg %d", mem2reg);
 		$display("spc2reg %d", spc2reg);

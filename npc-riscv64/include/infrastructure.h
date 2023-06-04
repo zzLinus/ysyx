@@ -44,6 +44,7 @@ void init_wp_pool();
 // Expr
 int64_t eval_reg(char *str);
 uint64_t expr(char *e, bool *success);
+void init_regex();
 
 // disam
 void init_disasm(const char *triple);

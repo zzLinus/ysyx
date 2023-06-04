@@ -171,7 +171,12 @@ DMEM _dmem (
 );
 
 CTRLER _controler (
+		// INPUT
 		.op_code(opcode),
+		.func3(funct3),
+		.reg1(reg_value2),
+		.reg2(reg_value),
+		// OUTPUT
 		.alu_src(alu_src),
 		.mem2reg(mem2reg),
 		.has_funct(has_funct),

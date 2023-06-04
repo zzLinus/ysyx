@@ -103,23 +103,17 @@ class pmem
         fclose(fp);
         difftest_loadimg((uint32_t *)mem, size);
     }
-    uint64_t pmem_read(uint64_t addr, uint8_t instLen)
-    {
-        uint64_t ret = host_read(guest_to_host(addr), instLen);
-        return ret;
-    }
 
-   private:
     uint8_t *guest_to_host(uint64_t paddr)
     {
         return mem + paddr - CONFIG_MBASE;
     }
+		
     uint64_t host_read(void *addr, uint8_t len)
     {
         switch (len)
         {
             case 1:  // == *((type *)addr)
-                return *(uint8_t *)addr;
             case 2: return *(uint16_t *)addr;
             case 4: return *(uint32_t *)addr;
             case 8: return *(uint64_t *)addr;
@@ -156,6 +150,15 @@ extern "C"
     void set_gpr_ptr(const svOpenArrayHandle r)
     {
         cpu_state.gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
+    }
+
+    void pmem_read(uint64_t raddr, uint64_t *rdata)
+    {
+        *rdata = mem->host_read(mem->guest_to_host(raddr), sizeof(*rdata));
+    }
+
+    void pmem_write(long long waddr, long long wdata, char wmask)
+    {
     }
 
     void judge_jump()
@@ -212,7 +215,9 @@ void cpu_exec(uint64_t n)
             if (break_npc())
                 goto itrace;
 
-        top->inst = mem->pmem_read(top->pc_out, 4);
+				uint64_t ti;
+        pmem_read(top->pc_out, &ti);
+        top->inst = (uint32_t)ti;
         cpu_state.pc = top->pc_out;
 
     exec:
@@ -296,7 +301,7 @@ void cpu_exec(uint64_t n)
 
         tfp->dump(contextp->time());
         trace_and_difftest(&cpu_state, top);
-        printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
+        // printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
     }
 }
 
@@ -336,6 +341,7 @@ int main(int argc, char **argv, char **env)
 
     mem->read_img(img_prefix.append(".bin").c_str());
     init_ftrace(img_prefix.erase(img_prefix.find(".bin"), 4).append(".elf").c_str());
+    init_regex();
 
     reset(2);
 

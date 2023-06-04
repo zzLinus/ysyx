@@ -22,6 +22,9 @@ end
 always @(*) begin
 		if(mem_w_EN)
 				memory[addr[15:6]] <= write_data;
+		//$display("\n** DMEM Module **");
+		//$display("addr    %x", mem_out);
+		//$display("mem_out %d", mem_out);
 end
 
 assign mem_out = mem_r_EN ? memory[addr[15:6]] : 64'b0;
