@@ -1,14 +1,3 @@
-import "DPI-C" function void pmem_read(
-		input  longint raddr,
-		output longint rdata
-);
-
-import "DPI-C" function void pmem_write(
-		input longint waddr,
-		input longint wdata,
-		input byte wmask
-);
-
 module DMEM (
 		input mem_w_EN,
 		input mem_r_EN,

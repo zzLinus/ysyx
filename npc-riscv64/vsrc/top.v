@@ -1,9 +1,21 @@
+import "DPI-C" function void pmem_read(
+		input  longint raddr,
+		output longint rdata
+);
+
+import "DPI-C" function void pmem_write(
+		input longint waddr,
+		input longint wdata,
+		input byte wmask
+);
+
+
 module top(
 	input clk,
 	input rst,
-	input reg [31:0] inst, // 32 bits instruction
 	output [63:0] alu_out,
-	output [63:0] pc_out
+	output [63:0] pc_out,
+	output wire [63:0] inst
 );
 
 
@@ -64,11 +76,14 @@ always @(posedge clk) begin
 end
 
 IFU _ifu( // NOTE : implement with C code
+		.clk(clk),
+		.pc(pc_out),
+		.inst(inst)
 ); // fetch
 
 IDU _idu (
 	.clk(clk),
-	.inst(inst),
+	.inst(inst[31:0]),
 	.ra(ra),
 	.rb(rb),
 	.rw(rw),

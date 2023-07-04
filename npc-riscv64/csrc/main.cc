@@ -46,6 +46,7 @@ static inline void reset(int n)
     top->rst = 0;
 }
 
+// NOTE: dummy image (if no input image,npc will fall back to this dummy image)
 uint32_t img[INST_NUM] = {
     // default dummy test instructions
     0x00000413,  // 80000000:	00000413          	li	s0,0
@@ -108,7 +109,7 @@ class pmem
     {
         return mem + paddr - CONFIG_MBASE;
     }
-		
+
     uint64_t host_read(void *addr, uint8_t len)
     {
         switch (len)
@@ -121,11 +122,24 @@ class pmem
         }
     }
 
+    void host_write(void *addr, uint64_t data, uint8_t mask)
+    {
+        switch (mask)
+        {
+            case 0x1: *(uint8_t *)addr = data; return;
+            case 0x2: *(uint16_t *)addr = data; return;
+            case 0xf: *(uint32_t *)addr = data; return;
+            case 0xff: *(uint64_t *)addr = data; return;
+            default: assert(0);  // NOTE: should not get here
+        }
+    }
+
    private:
     FILE *fp;
     uint8_t mem[CONFIG_MSIZE];
 };
 
+// NOTE: DPI-C functions
 extern "C"
 {
     void stop_npc()
@@ -157,8 +171,9 @@ extern "C"
         *rdata = mem->host_read(mem->guest_to_host(raddr), sizeof(*rdata));
     }
 
-    void pmem_write(long long waddr, long long wdata, char wmask)
+    void pmem_write(long long waddr, long long wdata, uint8_t wmask)
     {
+        mem->host_write(mem->guest_to_host(waddr), wdata, wmask);
     }
 
     void judge_jump()
@@ -215,7 +230,7 @@ void cpu_exec(uint64_t n)
             if (break_npc())
                 goto itrace;
 
-				uint64_t ti;
+        uint64_t ti;
         pmem_read(top->pc_out, &ti);
         top->inst = (uint32_t)ti;
         cpu_state.pc = top->pc_out;
