@@ -56,3 +56,50 @@ void init_ftrace(const char* p);
 // reg
 uint64_t reg_str2val(const char *s, bool *success);
 void reg_display();
+
+
+// trace
+// NOTE: ftrace
+#define CONFIG_FTRACE
+
+#ifdef CONFIG_FTRACE
+
+#define RET  call_ret = 1 << 2;
+#define CALL call_ret = 1 << 1;
+#define ELF_FUNC_MAX      30
+#define ELF_FUNC_NAME_MAX 30
+#define FTRACE_FLAGS      0b10000000
+#define FMT_WORD  "0x%016lx"
+
+typedef struct
+{
+    uint64_t addr;
+    uint64_t size;
+    char name[ELF_FUNC_NAME_MAX];
+} ElfFuncInfo;
+
+#define Elfw(type) Elf64_##type
+
+#define PRINT_TAB(n)                     \
+    if ((n) < 30)                        \
+        for (size_t i = 0; i < (n); i++) \
+            printf("  ");                \
+    else                                 \
+        for (size_t i = 0; i < 30; i++)  \
+            printf("  ");
+
+#endif
+
+// NOTE: itrace
+#define CONFIG_ITRACE
+#ifdef CONFIG_ITRACE
+#define RINGBUFSIZE 20
+#define INSTLEN     80
+typedef struct ring_buffer
+{
+    char insts[RINGBUFSIZE][INSTLEN];
+    uint8_t cur_inst;
+} ring_buffer;
+
+static ring_buffer r;
+#endif

@@ -35,6 +35,7 @@ always @(inst) begin
 				// sub R-type instruction
 				7'b0110011 : imm = {64'b0};
 				// Conditional Branches (B-type instruction)
+				7'b0011011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
 				7'b1100011 : imm = {inst[31] ? {51{1'b1}} : 51'b0, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};
 
         7'b1110011 : stop_npc(); // ebreak

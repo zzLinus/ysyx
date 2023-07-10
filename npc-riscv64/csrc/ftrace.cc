@@ -1,5 +1,6 @@
 #include <elf.h>
 #include "defs.h"
+#include "infrastructure.h"
 #include <stdio.h>
 #include <cstring>
 

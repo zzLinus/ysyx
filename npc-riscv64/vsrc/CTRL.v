@@ -138,6 +138,19 @@ always @(*) begin
 						alu_op    = 2'b10;
 				end
 
+				7'b0011011 : begin // NOTE: ADDIW
+						mem2reg   = 1'b0;
+						has_funct = 2'b01;
+						pc2imm    = 1'b0;
+						jump      = 1'b0;
+						spc2reg   = 1'b0;
+						mem_w     = 1'b0;
+						mem_r     = 1'b0;
+						alu_src   = 1'b1;
+						reg_w     = 1'b1;
+						alu_op    = 2'b10;
+				end
+
 				7'b1100011 : begin // TODO: opcode for conditional branch instruction
 						mem2reg   = 1'b0;
 						has_funct = 2'b01;

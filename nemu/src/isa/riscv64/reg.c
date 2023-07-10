@@ -29,7 +29,7 @@ const char *regs[] = { // cpu_gpr[32]
 
 void isa_reg_display()
 {
-    for (int i = 0; i < 31; i++)
+    for (int i = 0; i < 32; i++)
     {
         printf("register name: %s | dec value: %lu | hex value: %lx\n", reg_name(i, NOTIMPLEMENT), cpu.gpr[i], cpu.gpr[i]);
     }

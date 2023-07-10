@@ -114,6 +114,15 @@ PC _pc (
 	.pc_out(pc_out)
 );
 
+DMEM _dmem (
+		.mem_w_EN(mem_write),
+		.mem_r_EN(mem_read),
+		.funct3(funct3),
+		.addr(alu_out),
+		.write_data(reg_value),
+		.mem_out(mem_data)
+);
+
 // FIXME :
 assign spc = pc_out + 4;
 
@@ -177,13 +186,6 @@ ALU_CTR _alu_ctr (
 		.operation(alu_cc)
 );
 
-DMEM _dmem (
-		.mem_w_EN(mem_write),
-		.mem_r_EN(mem_read),
-		.addr(alu_out),
-		.write_data(reg_value),
-		.mem_out(mem_data)
-);
 
 CTRLER _controler (
 		// INPUT

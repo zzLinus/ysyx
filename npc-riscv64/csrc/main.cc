@@ -1,10 +1,9 @@
 #include "defs.h"
 #include "difftest.h"
 #include "infrastructure.h"
+#include "mem.h"
+#include "dpifunc.h"
 
-#define CONFIG_ITRACE
-
-class pmem;
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
 NPCState npc_s = { NPC_STOP, 0, 0 };
@@ -20,21 +19,6 @@ CPU_state cpu_state = { 0 };
 // NOTE: ftrace
 #ifdef CONFIG_FTRACE
 uint8_t call_ret = 0;
-#define RET  call_ret = 1 << 2;
-#define CALL call_ret = 1 << 1;
-#endif
-
-// NOTE: itrace
-#ifdef CONFIG_ITRACE
-#define RINGBUFSIZE 20
-#define INSTLEN     80
-typedef struct ring_buffer
-{
-    char insts[RINGBUFSIZE][INSTLEN];
-    uint8_t cur_inst;
-} ring_buffer;
-
-static ring_buffer r;
 #endif
 
 static inline void reset(int n)
@@ -46,162 +30,12 @@ static inline void reset(int n)
     top->rst = 0;
 }
 
-// NOTE: dummy image (if no input image,npc will fall back to this dummy image)
-uint32_t img[INST_NUM] = {
-    // default dummy test instructions
-    0x00000413,  // 80000000:	00000413          	li	s0,0
-    0x00009117,  // 80000004:	00009117          	auipc	sp,0x9
-    0xffc10113,  // 80000008:	ffc10113          	addi	sp,sp,-4 # 80009000 <_end>
-    0x00c000ef,  // 8000000c:	00c000ef          	jal	ra,80000018 <_trm_init>
-
-    0x00000513,  // 80000010:	00000513          	li	a0,0
-    0x00008067,  // 80000014:	00008067          	ret(jalr)
-
-    0xff010113,  // 80000018:	ff010113          	addi	sp,sp,-16
-    0x00000517,  // 8000001c:	00000517          	auipc	a0,0x0
-    0x01450513,  // 80000020:	01450513          	addi	a0,a0,20 # 80000030 <_etext>
-    0x00113423,  //  TODO : 80000024:	00113423          	sd	ra,8(sp)
-
-    0xfe9ff0ef,                          // 80000028:	fe9ff0ef          	jal	ra,80000010 <main>
-    0b00000000000000000000000001110011,  // 0000 0000 0000 00000 000 00000 1110011 -> ebreak
-    0x0000006f,                          // 8000002c:	0000006f          	j	8000002c <_trm_init+0x14>
-                                         //  WARN : infinet loop should not reach here
-
-};
-
-class pmem
-{
-   public:
-    pmem() : fp(NULL)
-    {
-        FILE *fp = NULL;
-        for (int i = 0; i < INST_NUM; i++)  // read in defualt img
-        {
-            memcpy(mem + i * 4, img + i * 1, sizeof(uint32_t));
-        }
-    }
-    ~pmem(){};
-    void read_img(const char *img_file)
-    {
-        fp = fopen(img_file, "rb");
-        if (fp == NULL)
-        {
-            printf("failed to load img : %s\n", img_file);
-            assert(0);
-        }
-        else
-        {
-            printf("Success to load img\n");
-        }
-
-        fseek(fp, 0, SEEK_END);
-        long size = ftell(fp);
-        printf("The image is %s, size = %ld\n", img_file, size);
-
-        fseek(fp, 0, SEEK_SET);
-        int ret = fread(guest_to_host(RESET_VECTOR), size, 1, fp);
-        assert(ret == 1);
-        fclose(fp);
-        difftest_loadimg((uint32_t *)mem, size);
-    }
-
-    uint8_t *guest_to_host(uint64_t paddr)
-    {
-        return mem + paddr - CONFIG_MBASE;
-    }
-
-    uint64_t host_read(void *addr, uint8_t len)
-    {
-        switch (len)
-        {
-            case 1:  // == *((type *)addr)
-            case 2: return *(uint16_t *)addr;
-            case 4: return *(uint32_t *)addr;
-            case 8: return *(uint64_t *)addr;
-            default: assert(0);
-        }
-    }
-
-    void host_write(void *addr, uint64_t data, uint8_t mask)
-    {
-        switch (mask)
-        {
-            case 0x1: *(uint8_t *)addr = data; return;
-            case 0x2: *(uint16_t *)addr = data; return;
-            case 0xf: *(uint32_t *)addr = data; return;
-            case 0xff: *(uint64_t *)addr = data; return;
-            default: assert(0);  // NOTE: should not get here
-        }
-    }
-
-   private:
-    FILE *fp;
-    uint8_t mem[CONFIG_MSIZE];
-};
-
-// NOTE: DPI-C functions
-extern "C"
-{
-    void stop_npc()
-    {
-        printf("\n\t\t\t    *************\n");
-        printf("\t\t\t    ** EBREAK! **\n");
-        printf("\t\t\t    *************\n");
-        npc_s.state = NPC_END;
-    }
-
-    bool break_npc()
-    {
-        if (npc_s.state == NPC_RESETTING)
-            return 0;
-        printf("\n\t\t    ***********************************************\n");
-        printf("\t\t    ** NOT IMPLEMENTED OR JUMP TO WRONG ADDRESS! **\n");
-        printf("\t\t    ***********************************************\n");
-        npc_s.state = NPC_ABORT;
-        return 1;
-    }
-
-    void set_gpr_ptr(const svOpenArrayHandle r)
-    {
-        cpu_state.gpr = (uint64_t *)(((VerilatedDpiOpenVar *)r)->datap());
-    }
-
-    void pmem_read(uint64_t raddr, uint64_t *rdata)
-    {
-        *rdata = mem->host_read(mem->guest_to_host(raddr), sizeof(*rdata));
-    }
-
-    void pmem_write(long long waddr, long long wdata, uint8_t wmask)
-    {
-        mem->host_write(mem->guest_to_host(waddr), wdata, wmask);
-    }
-
-    void judge_jump()
-    {
-        uint8_t dest = BITS(top->inst, 11, 7);
-        if ((top->inst & 0x7f) == 0b1100111)
-            goto jalr;
-        if ((top->inst & 0x7f) != 0b1101111)
-            return;
-
-        if (dest != 0)
-        {
-            CALL return;
-        };
-
-    jalr:
-        if (BITS(top->inst, 19, 15) == 1 && dest == 0)
-            RET else CALL
-
-                printf("dest reg : %u\n", dest);
-    }
-}
 
 static void disp_ringbuf()
 {
     printf("itrace : \n");
     for (int i = 0; i < RINGBUFSIZE; i++)
-    {
+{
         if (i == RINGBUFSIZE - 1)
             printf("--> ");
         else
@@ -266,10 +100,9 @@ void cpu_exec(uint64_t n)
 
         disassemble(p, logbuf + sizeof(logbuf) - p, top->pc_out, (uint8_t *)&top->inst, ilen);
 
-        if (npc_s.state == true)
-            strcpy(r.insts[r.cur_inst++], logbuf);
-        else
-            strcpy(r.insts[r.cur_inst++], logbuf);
+        strcpy(r.insts[r.cur_inst++], logbuf);
+        printf(ANSI_FMT("==>", ANSI_FG_GREEN));
+        printf("current inst : %s\n", logbuf);
 
         r.cur_inst %= RINGBUFSIZE;
 #endif
@@ -316,7 +149,7 @@ void cpu_exec(uint64_t n)
 
         tfp->dump(contextp->time());
         trace_and_difftest(&cpu_state, top);
-        // printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
+        printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
     }
 }
 

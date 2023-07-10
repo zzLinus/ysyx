@@ -1,4 +1,6 @@
+#include "dpifunc.h"
 #include "infrastructure.h"
+#include "mem.h"
 
 static int cmd_help(char *args);
 static int cmd_si(char *args);
@@ -11,6 +13,7 @@ static int cmd_q(char *args);
 static int cmd_c(char *args);
 extern void cpu_exec(uint64_t n);
 extern NPCState npc_s;
+extern pmem *mem;
 
 static struct
 {
@@ -75,7 +78,6 @@ static int cmd_si(char *args)
     return 0;
 }
 
-
 static int cmd_info(char *args)
 {
     if (strcmp(args, "r") == 0)
@@ -117,14 +119,9 @@ static int cmd_x(char *args)
     for (int i = 0; i < arg0; i++)
     {
         // TODO:display content in memory here
-        // FIXME:
-        // printf(
-        //     "0x%08lx\t%c%c%c%c\n",
-        //     paddr_read(arg1, 4),
-        //     CHECKASCII(HEXTOCHAR(arg1, 4, 24)),
-        //    CHECKASCII(HEXTOCHAR(arg1, 4, 16)),
-        //    CHECKASCII(HEXTOCHAR(arg1, 4, 8)),
-        //    CHECKASCII(HEXTOCHAR(arg1, 4, 0)));
+				uint64_t content;
+        pmem_read((uint64_t)arg1, &content);
+        printf("0x%08x\n", content);
         arg1 += 4;
     }
     return 0;
