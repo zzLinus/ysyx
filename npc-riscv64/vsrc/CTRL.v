@@ -7,6 +7,7 @@ module CTRLER (
 		output reg mem2reg,
 		output reg spc2reg,
 		output reg reg_w,
+		output reg need_sext,
 		output reg mem_w,
 		output reg mem_r,
 		output reg [1:0] alu_op,
@@ -44,6 +45,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b01;
+						need_sext = 1'b0;
 				end
 
 				7'b0100011 : begin // opcode for store word
@@ -57,6 +59,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b0;
 						alu_op    = 2'b00;
+						need_sext = 1'b0;
 				end
 
 				7'b0010011 : begin // opcode for I-type Instruction
@@ -70,6 +73,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b00;
+						need_sext = 1'b0;
 				end
 
 				7'b0110011 : begin // opcode for SUB (R-type Instruction)
@@ -83,6 +87,7 @@ always @(*) begin
 						alu_src   = 1'b0;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
+						need_sext = 1'b0;
 				end
 
 				7'b0010111 : begin // opcode for AUIPC
@@ -96,6 +101,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
+						need_sext = 1'b0;
 				end
 				
 				7'b1101111 : begin // opcode for J-type insrtuction
@@ -109,6 +115,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
+						need_sext = 1'b0;
 				end
 
 				7'b1100111 : begin  // opcode for jalr
@@ -122,6 +129,7 @@ always @(*) begin
 						alu_src   = 1'b0;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
+						need_sext = 1'b0;
 				end
 
 				// FIXME: W -> 32bit
@@ -136,9 +144,10 @@ always @(*) begin
 						alu_src   = 1'b0; // NOTE: alu_src(0=>reg_value ,1=>imm_value)
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
+						need_sext = 1'b1;
 				end
 
-				7'b0011011 : begin // NOTE: ADDIW
+				7'b0011011 : begin    // NOTE: ADDIW
 						mem2reg   = 1'b0;
 						has_funct = 2'b01;
 						pc2imm    = 1'b0;
@@ -149,6 +158,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
+						need_sext = 1'b1;
 				end
 
 				7'b1100011 : begin // TODO: opcode for conditional branch instruction
@@ -170,6 +180,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b0;
 						alu_op    = 2'b10;
+						need_sext = 1'b0;
 				end
 
 				default    : begin // set all signal to 0
@@ -183,6 +194,7 @@ always @(*) begin
 						alu_src   = 1'b0;
 						reg_w     = 1'b0;
 						alu_op    = 2'b00;
+						need_sext = 1'b0;
 				end
 		endcase
 

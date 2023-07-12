@@ -43,6 +43,7 @@ endmodule
 module ALU#(
 	BITS = 64
 )( 
+	input need_sext,
 	input [3:0] alu_ctr,
 	input [BITS-1:0] alu_a,
 	input [BITS-1:0] alu_b,
@@ -61,7 +62,7 @@ wire less_b = alu_ctr_sa ^ alu_carry;
 
 
 wire [BITS-1:0] alu_and = alu_a & alu_b; 
-wire [BITS-1:0] alu_or = alu_a | alu_b;
+wire [BITS-1:0] alu_or  = alu_a | alu_b;
 wire [BITS-1:0] alu_nor = ~(alu_a | alu_b);
 wire [BITS-1:0] alu_xor = alu_a ^ alu_b; 
 wire [BITS-1:0] alu_b_s = (alu_b ^ {64{alu_ctr[2]}}); // alu_b after xor
@@ -105,6 +106,9 @@ always @(alu_ctr or alu_a or alu_b) begin
 				4'b0010 : alu_out = adder_out;
 				default : alu_out = adder_out;
 		endcase
+
+		if(need_sext == 1'b1) alu_out = {alu_out[31] ? {32{1'b1}} : 32'b0, alu_out[31:0]};
+
 		$display("\n** ALU Module **");
 		$display("alu_ctr   %d", alu_ctr);
 		$display("alu_a     %d %x", alu_a, alu_a);

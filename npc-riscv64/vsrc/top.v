@@ -24,6 +24,7 @@ wire reg_write; // register write signal
 wire mem2reg,spc2reg;
 wire pc2imm;
 wire jump;
+wire need_sext;
 wire alu_src; // alu inputr src control
 wire mem_write, mem_read; // memory r/w signal
 wire [63:0] reg_w_data; // data that will need to write back to register
@@ -96,6 +97,7 @@ IDU _idu (
 ALU #(
 	.BITS(64)
 ) _alu (
+	.need_sext(need_sext),
 	.alu_ctr(alu_cc),
 	.alu_a(alu_inA),
 	.alu_b(alu_inB),
@@ -197,6 +199,7 @@ CTRLER _controler (
 		.alu_src(alu_src),
 		.mem2reg(mem2reg),
 		.has_funct(has_funct),
+		.need_sext(need_sext),
 		.jump(jump),
 		.pc2imm(pc2imm),
 		.spc2reg(spc2reg),
