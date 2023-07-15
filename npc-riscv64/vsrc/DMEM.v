@@ -13,9 +13,8 @@ module DMEM (
 
 reg [63:0] tmp;
 always @(addr) begin
-		if(mem_w_EN) pmem_write(addr, write_data, 8'b1);
+		if(mem_w_EN) pmem_write(addr, write_data, {8{1'b1}});
 		if(mem_r_EN == 1'b1) begin
-				$display("pmem read fuck!");
 				pmem_read(addr, tmp);
 			case(funct3)
 				3'b000: mem_out = {tmp[7]  ? {56{1'b1}} : 56'b0, tmp[7:0]};

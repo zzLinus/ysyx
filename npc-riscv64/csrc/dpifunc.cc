@@ -36,6 +36,7 @@ extern "C"
     {
         printf("pmem read : addr :%lx\n", raddr);
         *rdata = mem->host_read(mem->guest_to_host(raddr), sizeof(*rdata));
+        printf("rdata : %lx\n", *rdata);
     }
 
     void pmem_write(uint64_t waddr, uint64_t wdata, uint8_t wmask)
