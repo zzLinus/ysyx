@@ -6,6 +6,10 @@ module IFU (
 
 always @ (posedge clk) begin
 		pmem_read(pc, inst);
+
+    $display("\n** FETCH Module **");
+    $display("pc : %x",pc);
+    $display("inst : %x",inst);
 end
 
 endmodule;

@@ -15,7 +15,6 @@ module IDU(
 //  opcode : 0x3b  0111011
 //  opcode : 0x33  0110011
 
-
 always @(inst) begin
     case(inst[6:0])
         // I type instruction

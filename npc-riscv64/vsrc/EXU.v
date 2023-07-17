@@ -6,6 +6,9 @@ module ALU_CTR(
 		output reg [3:0] operation 
 );
 
+// 4035d793
+// 0100 0000 0011 01011 101 01111 0010011
+
 always @(alu_op or funct3 or funct7) begin
 		if(has_funct == 2'b11) begin // NOTE :instruction has fucnt7 && funct3
 				case ({funct7,funct3,alu_op})
@@ -21,6 +24,7 @@ always @(alu_op or funct3 or funct7) begin
 						5'b01010 : operation = 4'b0111; // SLT op
 						5'b00010 : operation = 4'b0010; // BRANCH JALR op -> ADD op
 						5'b11100 : operation = 4'b0000; // ANDI op
+						5'b10100 : operation = 4'b0011; // SARI op
 						5'b11000 : operation = 4'b0001; // ORI op
 						5'b10000 : operation = 4'b1100; // NORI op
 						5'b01000 : operation = 4'b0111; // SLTI op
@@ -103,6 +107,7 @@ always @(alu_ctr or alu_a or alu_b) begin
 				4'b0001 : alu_out = alu_or;
 				4'b1100 : alu_out = alu_nor;
 				4'b0111 : alu_out = sft_out;
+				4'b0011 : alu_out = sft_out;
 				4'b0010 : alu_out = adder_out;
 				default : alu_out = adder_out;
 		endcase

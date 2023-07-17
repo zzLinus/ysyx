@@ -11,8 +11,11 @@ module DMEM (
 //        --> memory[addr[15:0] >> 6] <= write_data
 //        --> memory[addr[15:6]] <= write_data
 
+// 00054503
+// 0000 0000 0000 01010 100 01010 0000011
+
 reg [63:0] tmp;
-always @(addr) begin
+always @(addr or mem_w_EN or mem_r_EN) begin
 		if(mem_w_EN) pmem_write(addr, write_data, {8{1'b1}});
 		if(mem_r_EN == 1'b1) begin
 				pmem_read(addr, tmp);
@@ -21,6 +24,7 @@ always @(addr) begin
 				3'b001: mem_out = {tmp[15] ? {48{1'b1}} : 48'b0, tmp[15:0]};
 				3'b010: mem_out = {tmp[31] ? {32{1'b1}} : 32'b0, tmp[31:0]};
 				3'b011: mem_out = tmp;
+				3'b100: mem_out = {56'b0, tmp[7:0]};
 				default: mem_out = 64'b0;
 			endcase
 		end

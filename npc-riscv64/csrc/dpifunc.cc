@@ -10,9 +10,9 @@ extern "C"
 {
     void stop_npc()
     {
-        printf("\n\t\t\t    *************\n");
-        printf("\t\t\t    ** EBREAK! **\n");
-        printf("\t\t\t    *************\n");
+        printf(ANSI_FMT("\n\t\t\t    *************\n", ANSI_FG_GREEN));
+        printf(ANSI_FMT("\t\t\t    ** EBREAK! **\n", ANSI_FG_GREEN));
+        printf(ANSI_FMT("\t\t\t    *************\n", ANSI_FG_GREEN));
         npc_s.state = NPC_END;
     }
 
@@ -35,6 +35,11 @@ extern "C"
     void pmem_read(uint64_t raddr, uint64_t *rdata)
     {
         printf("pmem read : addr :%lx\n", raddr);
+        if (raddr<0x80000000 | raddr> 0x8fffffff)
+        {
+            printf(ANSI_FMT("\nInvalid memory address\n",ANSI_FG_RED));
+						return;
+        }
         *rdata = mem->host_read(mem->guest_to_host(raddr), sizeof(*rdata));
         printf("rdata : %lx\n", *rdata);
     }
