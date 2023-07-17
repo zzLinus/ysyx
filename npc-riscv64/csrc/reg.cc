@@ -66,6 +66,6 @@ void reg_display()
 {
     for (int i = 0; i < 32; ++i)
     {
-        printf("gpr[%d] = 0x%lx\n", i, cpu_state.gpr[i]);
+        printf("gpr[%d] %s = 0x%lx\n", i, regs[i], cpu_state.gpr[i]);
     }
 }

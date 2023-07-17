@@ -1,8 +1,8 @@
 #include "defs.h"
 #include "difftest.h"
+#include "dpifunc.h"
 #include "infrastructure.h"
 #include "mem.h"
-#include "dpifunc.h"
 
 VerilatedContext *contextp = new VerilatedContext;
 Vtop *top = new Vtop{ contextp };
@@ -21,6 +21,8 @@ CPU_state cpu_state = { 0 };
 uint8_t call_ret = 0;
 #endif
 
+uint64_t cpu_cycle = 0;
+
 static inline void reset(int n)
 {
     npc_s.state = NPC_RESETTING;
@@ -30,12 +32,11 @@ static inline void reset(int n)
     top->rst = 0;
 }
 
-
 static void disp_ringbuf()
 {
     printf("itrace : \n");
     for (int i = 0; i < RINGBUFSIZE; i++)
-{
+    {
         if (i == RINGBUFSIZE - 1)
             printf("--> ");
         else
@@ -149,7 +150,7 @@ void cpu_exec(uint64_t n)
 
         tfp->dump(contextp->time());
         trace_and_difftest(&cpu_state, top);
-        printf("\n\n\t================= CPU CYCLE DONE =================\n\n");
+        printf("\n\n\t================= CPU CYCLE [%ld] DONE =================\n\n", cpu_cycle++);
     }
 }
 

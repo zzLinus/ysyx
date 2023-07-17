@@ -49,7 +49,6 @@ wire [63:0] alu_inB;
 
 // NOTE : ALU output wire
 wire alu_zero;
-wire alu_less;
 wire alu_carry;
 wire alu_overflow;
 reg state_reg [3:0];
@@ -61,13 +60,11 @@ always @(negedge clk) begin
 	state_reg[0] = alu_zero;
 	state_reg[1] = alu_carry;
 	state_reg[2] = alu_overflow;
-	state_reg[3] = alu_less;
 
 	$display("\n** TOP Module Negedge **");
 	$display("zero     : %d",alu_zero);
 	$display("carry    : %d",alu_carry);
 	$display("overflow : %d",alu_overflow);
-	$display("less     : %d",alu_less);
 end
 
 always @(posedge clk) begin
@@ -105,7 +102,6 @@ ALU #(
 	.alu_out(alu_out),
 	.alu_zero(alu_zero),
 	.alu_carry(alu_carry),
-	.alu_less(alu_less),
 	.alu_overflow(alu_overflow)
 ); // execute
 

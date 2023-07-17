@@ -30,6 +30,7 @@ assign reg1_reg2_ltu = (reg1 < reg2);
 assign reg1_reg2_ge = ($signed(reg1) >= $signed(reg2));
 assign reg1_reg2_geu = (reg1>= reg2);
 
+
 // NOTE : alu_src 0 : reg_value
 //                1 : imm_value
 always @(*) begin
