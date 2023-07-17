@@ -6,14 +6,16 @@ module ALU_CTR(
 		output reg [3:0] operation 
 );
 
-// 4035d793
-// 0100 0000 0011 01011 101 01111 0010011
+// 00b797bb          	
+// 0000 000 01011 01111 001 01111 0111011
 
 always @(alu_op or funct3 or funct7) begin
 		if(has_funct == 2'b11) begin // NOTE :instruction has fucnt7 && funct3
 				case ({funct7,funct3,alu_op})
 						12'b000000000010 : operation = 4'b0010; // ADD op
 						12'b010000000010 : operation = 4'b0110; // SUB op
+						// FIXME: 32 bit operation needs sign extend
+						12'b000000000110:  operation = 4'b1011; // SLLW 
 						default  : operation = 4'b0000; // dufault to AND op
 				endcase
 		end else if(has_funct == 2'b01) begin // handle instruction has funct3
@@ -24,9 +26,9 @@ always @(alu_op or funct3 or funct7) begin
 						5'b01010 : operation = 4'b0111; // SLT op
 						5'b00010 : operation = 4'b0010; // BRANCH JALR op -> ADD op
 						5'b11100 : operation = 4'b0000; // ANDI op
-						5'b10100 : operation = 4'b0011; // SARI op
+						5'b10100 : operation = 4'b1111; // SARI op
 						5'b11000 : operation = 4'b0001; // ORI op
-						5'b10000 : operation = 4'b1100; // NORI op
+						5'b10000 : operation = 4'b1100; // XOR op
 						5'b01000 : operation = 4'b0111; // SLTI op
 						5'b00000 : operation = 4'b0010; // ADD op
 						5'b01001 : operation = 4'b0010; // LW or SW op
@@ -67,7 +69,6 @@ wire less_b = alu_ctr_sa ^ alu_carry;
 
 wire [BITS-1:0] alu_and = alu_a & alu_b; 
 wire [BITS-1:0] alu_or  = alu_a | alu_b;
-wire [BITS-1:0] alu_nor = ~(alu_a | alu_b);
 wire [BITS-1:0] alu_xor = alu_a ^ alu_b; 
 wire [BITS-1:0] alu_b_s = (alu_b ^ {64{alu_ctr[2]}}); // alu_b after xor
 
@@ -105,9 +106,10 @@ always @(alu_ctr or alu_a or alu_b) begin
 		case (alu_ctr)
 				4'b0000 : alu_out = alu_and;
 				4'b0001 : alu_out = alu_or;
-				4'b1100 : alu_out = alu_nor;
+				4'b1100 : alu_out = alu_xor;
 				4'b0111 : alu_out = sft_out;
-				4'b0011 : alu_out = sft_out;
+				4'b1111 : alu_out = sft_out;
+				4'b1011 : alu_out = sft_out;
 				4'b0010 : alu_out = adder_out;
 				default : alu_out = adder_out;
 		endcase
@@ -118,6 +120,7 @@ always @(alu_ctr or alu_a or alu_b) begin
 		$display("alu_ctr   %d", alu_ctr);
 		$display("alu_a     %d %x", alu_a, alu_a);
 		$display("alu_b     %d %x", alu_b, alu_b);
+		$display("sft_out   %d %x", sft_out, sft_out);
 		$display("alu_out   %d %x", alu_out, alu_out);
 		$display("adder_out %d %x", adder_out, adder_out);
 end

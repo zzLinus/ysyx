@@ -23,9 +23,10 @@ always @(addr or mem_w_EN or mem_r_EN) begin
 				3'b000: mem_out = {tmp[7]  ? {56{1'b1}} : 56'b0, tmp[7:0]};
 				3'b001: mem_out = {tmp[15] ? {48{1'b1}} : 48'b0, tmp[15:0]};
 				3'b010: mem_out = {tmp[31] ? {32{1'b1}} : 32'b0, tmp[31:0]};
-				3'b011: mem_out = tmp;
 				3'b100: mem_out = {56'b0, tmp[7:0]};
-				default: mem_out = 64'b0;
+				3'b101: mem_out = {48'b0, tmp[15:0]};
+				3'b110: mem_out = {32'b0, tmp[31:0]};
+				default: mem_out = tmp; // 64 bit don't need extend
 			endcase
 		end
 		else mem_out= 64'b0;

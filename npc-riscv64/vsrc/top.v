@@ -74,6 +74,7 @@ always @(posedge clk) begin
 	$display("\n** TOP Module Posedge **");
 	$display("inst : %b", inst);
 	$display("pc   : %x", pc_out);
+	$display("reg_w_data : %d", reg_w_data);
 end
 
 IFU _ifu( // NOTE : implement with C code

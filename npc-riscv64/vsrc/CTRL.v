@@ -132,7 +132,6 @@ always @(*) begin
 						need_sext = 1'b0;
 				end
 
-				// FIXME: W -> 32bit
 				7'b0111011 : begin // opcode for addw (R-type instruction)
 						mem2reg   = 1'b0;
 						has_funct = 2'b11;
