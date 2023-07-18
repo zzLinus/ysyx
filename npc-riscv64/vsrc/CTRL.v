@@ -77,7 +77,7 @@ always @(*) begin
 						need_sext = 1'b0;
 				end
 
-				7'b0110011 : begin // opcode for SUB (R-type Instruction)
+				7'b0110011 : begin // opcode for (R-type Instruction)
 						mem2reg   = 1'b0;
 						has_funct = 2'b11;
 						pc2imm    = 1'b0;

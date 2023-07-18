@@ -6,16 +6,14 @@ module ALU_CTR(
 		output reg [3:0] operation 
 );
 
-// 00a03533
-// 0000 000 01010 00000 011 01010 0110011
-
 
 // NOTE: operation[3] -> sign unsign flag bit
 always @(alu_op or funct3 or funct7) begin
 		if(has_funct == 2'b11) begin // NOTE :instruction has fucnt7 && funct3
-				case ({funct7,funct3,alu_op})
+				case ({funct7,funct3,alu_op}) // NOTE: mostly R-type instruction
 						12'b000000000010 : operation = 4'b0010; // ADD op
 						12'b010000000010 : operation = 4'b0110; // SUB op
+						12'b000000011010 : operation = 4'b0001; // OR op
 						12'b000000001110 : operation = 4'b0011; // SLTU (sign)
 						// FIXME: 32 bit operation needs sign extend
 						12'b000000000110:  operation = 4'b1000; // SLLW 
@@ -41,6 +39,12 @@ always @(alu_op or funct3 or funct7) begin
 						default : operation = 4'b0000;
 				endcase
 		end
+
+		$display("\n** ALU CTRL Module **");
+		$display("alu_op    %d", alu_op);
+		$display("funct3    %d %x", funct3, funct3);
+		$display("funct7    %d %x", funct7, funct7);
+		$display("operation %d %x", operation, operation);
 end
 
 endmodule
