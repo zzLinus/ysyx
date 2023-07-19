@@ -47,6 +47,11 @@ extern "C"
     void pmem_write(uint64_t waddr, uint64_t wdata, uint8_t wmask)
     {
         printf("pmem write : addr[%lx] data[%lx] mask[%x]\n", waddr, wdata, wmask);
+        if (waddr<0x80000000 | waddr> 0x8fffffff)
+        {
+            printf(ANSI_FMT("\nInvalid memory address\n",ANSI_FG_RED));
+						return;
+        }
         mem->host_write(mem->guest_to_host(waddr), wdata, wmask);
     }
 

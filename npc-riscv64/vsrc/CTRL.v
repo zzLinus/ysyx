@@ -35,6 +35,9 @@ assign reg1_reg2_geu = (reg1>= reg2);
 // NOTE : alu_src 0 : reg_value
 //                1 : imm_value
 
+// 00f11423
+// 0000 0000 1111 00010 001 01000 0100011
+
 always @(*) begin
 		case(op_code)
 				7'b0000011 : begin // opcode for load word
@@ -61,7 +64,7 @@ always @(*) begin
 						mem_r     = 1'b0;
 						alu_src   = 1'b1;
 						reg_w     = 1'b0;
-						alu_op    = 2'b00;
+						alu_op    = 2'b01;
 						need_sext = 1'b0;
 				end
 
