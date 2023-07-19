@@ -1,3 +1,5 @@
+#include <getopt.h>
+
 #include "defs.h"
 #include "difftest.h"
 #include "dpifunc.h"
@@ -9,6 +11,7 @@ Vtop *top = new Vtop{ contextp };
 NPCState npc_s = { NPC_STOP, 0, 0 };
 pmem *mem;
 VerilatedVcdC *tfp;
+std::string img_prefix;
 
 bool is_halt = false;
 uint64_t fs_size = 0;  // function stack size
@@ -167,14 +170,35 @@ void get_imgprefix(std::string &dst, char *p)
     }
 }
 
+static int parse_args(int argc, char *argv[])
+{
+    const struct option table[] = { { "batch", no_argument, NULL, 'b' },
+                                    { "help", no_argument, NULL, 'h' },
+                                    { 0, 0, NULL, 0 } };
+    int o;
+    while ((o = getopt_long(argc, argv, "-bhl:d:p:e:", table, NULL)) != -1)
+    {
+        std::cout << "arg : " << o << optarg << std::endl;
+        switch (o)
+        {
+            case 'b': sdb_set_batch_mode(); break;
+            case 1: get_imgprefix(img_prefix, optarg); return 0;
+            default:
+                printf("Usage: %s [OPTION...] IMAGE [args]\n\n", argv[0]);
+                printf("\t-b,--batch              run with batch mode\n");
+                printf("\n");
+                exit(0);
+        }
+    }
+		return 0;
+}
+
 int main(int argc, char **argv, char **env)
 {
     mem = new pmem();
-    std::string img_prefix;
-    if (argc != 3)
-        exit(0);
 
-    get_imgprefix(img_prefix, argv[argc - 2]);
+    parse_args(argc, argv);
+    std::cout << "img frefix : " << img_prefix << std::endl;
 
     contextp->commandArgs(argc, argv);
     contextp->traceEverOn(true);

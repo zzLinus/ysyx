@@ -103,3 +103,6 @@ typedef struct ring_buffer
 
 static ring_buffer r;
 #endif
+
+// sdb
+void sdb_set_batch_mode();

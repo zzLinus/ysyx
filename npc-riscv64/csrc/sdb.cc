@@ -12,8 +12,10 @@ static int cmd_d(char *args);
 static int cmd_q(char *args);
 static int cmd_c(char *args);
 extern void cpu_exec(uint64_t n);
+static int is_batch_mode = false;
 extern NPCState npc_s;
 extern pmem *mem;
+
 
 static struct
 {
@@ -32,6 +34,11 @@ static struct
     { "d", "Delete watch point number N", cmd_d },
     //  TODO: Add more commands
 };
+
+void sdb_set_batch_mode()
+{
+    is_batch_mode = true;
+}
 
 static int cmd_help(char *args)
 {
@@ -201,6 +208,12 @@ static char *rl_gets()
 void sdb_mainloop()
 {
     init_wp_pool();
+
+    if (is_batch_mode)
+    {
+        cmd_c(NULL);
+        return;
+    }
 
     for (char *str; (str = rl_gets()) != NULL;)
     {

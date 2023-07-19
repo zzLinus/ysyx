@@ -57,7 +57,7 @@ sim:
 
 	@echo
 	@echo "-- RUN ---------------------"
-	obj_dir/Vtop $(IMG) +trace
+	obj_dir/Vtop $(ARGS) $(IMG) +trace
 
 	@echo
 	@echo "-- COVERAGE ----------------"
