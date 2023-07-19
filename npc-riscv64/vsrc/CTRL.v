@@ -138,6 +138,20 @@ always @(*) begin
 						need_sext = 1'b0;
 				end
 
+				7'b0110111 : begin // lui (U-type) instruction
+						mem2reg   = 1'b0;
+						has_funct = 2'b00;
+						pc2imm    = 1'b0;
+						jump      = 1'b0;
+						spc2reg   = 1'b0;
+						mem_w     = 1'b0;
+						mem_r     = 1'b0;
+						alu_src   = 1'b1;
+						reg_w     = 1'b1;
+						alu_op    = 2'b10;
+						need_sext = 1'b0;
+				end
+
 				7'b0111011 : begin // opcode for addw (R-type instruction)
 						mem2reg   = 1'b0;
 						has_funct = 2'b11;

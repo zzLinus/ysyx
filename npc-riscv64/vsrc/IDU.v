@@ -4,17 +4,17 @@ import "DPI-C" function void break_npc();
 module IDU(
 	input clk,
 	input [31:0] inst,
-	output [4:0] ra,
-	output [4:0] rb,
-	output [4:0] rw,
+	output reg [4:0] ra,
+	output reg [4:0] rb,
+	output reg [4:0] rw,
 	output [6:0] opcode,
 	output [6:0] funct7,
 	output [2:0] funct3,
 	output reg [63:0] imm
 );
 
-// 0307d793
-// 0000 0011 0000 01111 101 01111 0010011
+// aabbd4b7
+// 1010 1010 1011 10111 101 01001 0110111
 
 always @(inst) begin
     case(inst[6:0])
@@ -34,6 +34,8 @@ always @(inst) begin
 				7'b0111011 : imm = {64'b0};
 				// sub R-type instruction
 				7'b0110011 : imm = {64'b0};
+				// U-type instruction
+				7'b0110111 : imm = {inst[31] ? {32{1'b1}} : 32'b0, inst[31:12], 12'b0};
 				// Conditional Branches (B-type instruction)
 				7'b0011011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
 				7'b1100011 : imm = {inst[31] ? {51{1'b1}} : 51'b0, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};
@@ -42,6 +44,12 @@ always @(inst) begin
     default    : break_npc();
     endcase
 
+		if(inst[6:0] == 7'b0110111) ra = 5'b0;
+		else                        ra = inst[19:15]; // rs1
+
+		rb = inst[24:20]; // rs2
+		rw = inst[11:7];  // rd
+
     $display("\n** DECODE Module **");
     $display("opcode    : %d",opcode);
     $display("funct7    : %d",funct7);
@@ -49,9 +57,6 @@ always @(inst) begin
     $display("imm       : %d",imm);
 end
 
-assign ra = inst[19:15]; // rs1
-assign rb = inst[24:20]; // rs2
-assign rw = inst[11:7];  // rd
 assign opcode = inst[6:0];
 assign funct7 = inst[31:25];
 assign funct3 = inst[14:12];
