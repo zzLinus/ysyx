@@ -29,7 +29,8 @@ always @(alu_op or funct3 or funct7) begin
 						5'b11000 : operation = 4'b0001; // ORI op
 						5'b10000 : operation = 4'b1100; // XOR op
 						5'b00000 : operation = 4'b0010; // ADD op
-						5'b01001 : operation = 4'b0010; // LW or SW op
+						5'b01001 : operation = 4'b0010; // LW
+						5'b01000 : operation = 4'b0010; // SW
 						5'b01100 : operation = 4'b0010; // LD or SD op
 						default  : operation = 4'b0010; // dufault to AND op
 				endcase

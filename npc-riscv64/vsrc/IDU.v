@@ -13,8 +13,6 @@ module IDU(
 	output reg [63:0] imm
 );
 
-// 00e7e7b3
-// 0000 000 01110 01111 110 01111 0110011
 
 always @(inst) begin
     case(inst[6:0])

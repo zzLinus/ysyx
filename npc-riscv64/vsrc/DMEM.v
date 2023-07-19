@@ -16,7 +16,15 @@ module DMEM (
 
 reg [63:0] tmp;
 always @(addr or mem_w_EN or mem_r_EN) begin
-		if(mem_w_EN) pmem_write(addr, write_data, {8{1'b1}});
+		if(mem_w_EN) begin
+			case(funct3)
+				3'b000: pmem_write(addr, write_data, {7'b0, {1{1'b1}}});
+				3'b001: pmem_write(addr, write_data, {6'b0, {2{1'b1}}});
+				3'b010: pmem_write(addr, write_data, {4'b0, {4{1'b1}}});
+				default: pmem_write(addr, write_data, {8{1'b1}}); // 64 bit don't need extend
+			endcase
+				
+		end
 		if(mem_r_EN == 1'b1) begin
 				pmem_read(addr, tmp);
 			case(funct3)
@@ -33,6 +41,7 @@ always @(addr or mem_w_EN or mem_r_EN) begin
 		$display("\n** DMEM Module **");
 		$display("mem_r_EN %x", mem_r_EN);
 		$display("addr     %x", addr);
+		$display("tmp      %x", tmp);
 		$display("mem_out  %x", mem_out);
 end
 
