@@ -29,16 +29,17 @@ always @(alu_op or funct3 or funct7) begin
 						5'b10111 : operation = 4'b0010; // BGE  op -> ADD op
 						5'b11011 : operation = 4'b0010; // BLTU op -> ADD op
 						5'b11111 : operation = 4'b0010; // BGEU op -> ADD op
+						5'b10100 : operation = 4'b0100; // SRAI SRLI op
+						5'b10110 : operation = 4'b0100; // SRAIW op
+						5'b00110 : operation = 4'b1000; // SLLIW op
+						5'b00100 : operation = 4'b1000; // SLLI op
 						5'b11100 : operation = 4'b0000; // ANDI op
-						5'b10100 : operation = 4'b1111; // SARI op
 						5'b11000 : operation = 4'b0001; // ORI op
 						5'b10000 : operation = 4'b1100; // XOR op
 						5'b00000 : operation = 4'b0010; // ADD op
 						5'b01001 : operation = 4'b0010; // LW op
 						5'b01000 : operation = 4'b0010; // SW op
 						5'b01100 : operation = 4'b0010; // LD or SD op
-						5'b00110 : operation = 4'b1000; // SLLIW op
-						5'b10110 : operation = 4'b1111; // SRAIW op
 						default  : operation = 4'b0010; // dufault to AND op
 				endcase
 		end else begin
@@ -79,7 +80,8 @@ wire [BITS-1:0] alu_or  = alu_a | alu_b;
 wire [BITS-1:0] alu_xor = alu_a ^ alu_b; 
 wire [BITS-1:0] alu_b_s = (alu_b ^ {64{alu_ctr[2]}}); // alu_b after xor
 
-wire alu_ctr_al = alu_ctr[3];  // NOTE: arithmetic or logic
+// NOTE: alu_ctr[2] == 0 -> left shift alu_ctr[2] == 1 -> right shift
+wire alu_ctr_al = alu_b[30];  // NOTE: arithmetic or logic
 wire alu_ctr_lr = ~alu_ctr[2]; // NOTE: left or right
 wire alu_ctr_us = alu_ctr[3];  // NOTE: unsign or sign
 wire alu_ctr_sa = (alu_ctr[2:0] == 3'b010) ? 1'b1 : alu_ctr[3]; // NOTE: sub or add
@@ -103,7 +105,7 @@ always @(alu_ctr or alu_a or alu_b) begin
 				4'b0010 : alu_out = adder_out;
 				4'b0011 : alu_out = ($signed(alu_a) < $signed(alu_b)) ? 64'b1 : 64'b0;
 				4'b1100 : alu_out = alu_xor;
-				4'b1111 : alu_out = sft_out;
+				4'b0100 : alu_out = sft_out;
 				4'b1000 : alu_out = sft_out;
 				default : alu_out = adder_out;
 		endcase
@@ -123,7 +125,7 @@ BARRELSHIFTER #(
 	.BITS(64)
 ) BRSFT (
 	.din(alu_a),
-	.shamt(alu_b[4:0]),
+	.shamt(alu_b[5:0]),
 	.lr(alu_ctr_lr),
 	.al(alu_ctr_al),
 	.bs_out(sft_out)
@@ -165,7 +167,7 @@ module BARRELSHIFTER #(
 	BITS = 64
 )(
 	input [BITS-1:0] din,
-	input [4:0] shamt,
+	input [5:0] shamt,
 	input lr, // left right
 	input al, // arithmetic logic
 	output reg [BITS-1:0] bs_out
@@ -175,11 +177,18 @@ wire [127:0] din_double_r = (al == 1) ? {{64{din[63]}},din} : {64'b0,din}; // fo
 wire [127:0] din_double_l = {din,64'b0}; // for left shift
 
 always @(*) begin
+		$display("\n** SHIFTER Module **");
+		$display("lr al  %d %x", lr, al);
+		$display("din    %d",    din);
+		$display("shamt  %d %x", shamt, shamt);
+
 	case({al,lr})
 		2'b00: bs_out = din_double_r[shamt+63-:64]; // logic && right
 		2'b10: bs_out = din_double_r[shamt+63-:64]; // arithmetic && right
 	default: bs_out = din_double_l[63-shamt+1+:64]; // left shift
 	endcase
+
+		$display("bs_out %d %x", bs_out, bs_out);
 end
 
 endmodule
