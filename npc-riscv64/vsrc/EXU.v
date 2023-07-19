@@ -23,15 +23,22 @@ always @(alu_op or funct3 or funct7) begin
 				case ({funct3,alu_op})
 						5'b11110 : operation = 4'b0000; // AND opp
 						5'b11010 : operation = 4'b0001; // OR op
-						5'b00010 : operation = 4'b0010; // BRANCH JALR op -> ADD op
+						5'b00011 : operation = 4'b0010; // BEQ  op -> ADD op
+						5'b00111 : operation = 4'b0010; // BNE  op -> ADD op
+						5'b10011 : operation = 4'b0010; // BLT  op -> ADD op
+						5'b10111 : operation = 4'b0010; // BGE  op -> ADD op
+						5'b11011 : operation = 4'b0010; // BLTU op -> ADD op
+						5'b11111 : operation = 4'b0010; // BGEU op -> ADD op
 						5'b11100 : operation = 4'b0000; // ANDI op
 						5'b10100 : operation = 4'b1111; // SARI op
 						5'b11000 : operation = 4'b0001; // ORI op
 						5'b10000 : operation = 4'b1100; // XOR op
 						5'b00000 : operation = 4'b0010; // ADD op
-						5'b01001 : operation = 4'b0010; // LW
-						5'b01000 : operation = 4'b0010; // SW
+						5'b01001 : operation = 4'b0010; // LW op
+						5'b01000 : operation = 4'b0010; // SW op
 						5'b01100 : operation = 4'b0010; // LD or SD op
+						5'b00110 : operation = 4'b1000; // SLLIW op
+						5'b10110 : operation = 4'b1111; // SRAIW op
 						default  : operation = 4'b0010; // dufault to AND op
 				endcase
 		end else begin

@@ -18,10 +18,10 @@ reg [63:0] tmp;
 always @(addr or mem_w_EN or mem_r_EN) begin
 		if(mem_w_EN) begin
 			case(funct3)
-				3'b000: pmem_write(addr, write_data, {7'b0, {1{1'b1}}});
-				3'b001: pmem_write(addr, write_data, {6'b0, {2{1'b1}}});
-				3'b010: pmem_write(addr, write_data, {4'b0, {4{1'b1}}});
-				default: pmem_write(addr, write_data, {8{1'b1}}); // 64 bit don't need extend
+				3'b000: pmem_write(addr, write_data, 8'h1);
+				3'b001: pmem_write(addr, write_data, 8'h2);
+				3'b010: pmem_write(addr, write_data, 8'hf);
+				default: pmem_write(addr, write_data, 8'hff); // 64 bit don't need extend
 			endcase
 				
 		end

@@ -203,6 +203,7 @@ CTRLER _controler (
 		.reg_w(reg_write),
 		.mem_w(mem_write),
 		.mem_r(mem_read),
+		.funct3(funct3),
 		.alu_op(alu_op)
 );
 
