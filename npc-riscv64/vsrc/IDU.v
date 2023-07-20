@@ -13,9 +13,6 @@ module IDU(
 	output reg [63:0] imm
 );
 
-// aabbd4b7
-// 1010 1010 1011 10111 101 01001 0110111
-
 always @(inst) begin
     case(inst[6:0])
         // I type instruction
@@ -55,6 +52,8 @@ always @(inst) begin
     $display("funct7    : %d",funct7);
     $display("funct3    : %d",funct3);
     $display("imm       : %d",imm);
+    $display("ra        : %d",ra);
+    $display("rb        : %d",rb);
 end
 
 assign opcode = inst[6:0];

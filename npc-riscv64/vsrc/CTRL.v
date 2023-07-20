@@ -7,7 +7,7 @@ module CTRLER (
 		output reg mem2reg,
 		output reg spc2reg,
 		output reg reg_w,
-		output reg need_sext,
+		output reg [1:0] need_sext,
 		output reg mem_w,
 		output reg mem_r,
 		output reg [1:0] alu_op,
@@ -35,8 +35,8 @@ assign reg1_reg2_geu = (reg1>= reg2);
 // NOTE : alu_src 0 : reg_value
 //                1 : imm_value
 
-// 00f11423
-// 0000 0000 1111 00010 001 01000 0100011
+// 0075551b
+// 0000 000 00111 01010 101 01010 0011011
 
 always @(*) begin
 		case(op_code)
@@ -51,7 +51,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b01;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b0100011 : begin // opcode for store word
@@ -65,7 +65,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b0;
 						alu_op    = 2'b01;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b0010011 : begin // opcode for I-type Instruction
@@ -79,7 +79,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b00;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b0110011 : begin // opcode for (R-type Instruction)
@@ -93,7 +93,7 @@ always @(*) begin
 						alu_src   = 1'b0;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b0010111 : begin // opcode for AUIPC
@@ -107,7 +107,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 				
 				7'b1101111 : begin // opcode for J-type insrtuction
@@ -121,7 +121,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b1100111 : begin  // opcode for jalr
@@ -135,7 +135,7 @@ always @(*) begin
 						alu_src   = 1'b0;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b0110111 : begin // lui (U-type) instruction
@@ -149,7 +149,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				7'b0111011 : begin // opcode for addw (R-type instruction)
@@ -163,7 +163,10 @@ always @(*) begin
 						alu_src   = 1'b0; // NOTE: alu_src(0=>reg_value ,1=>imm_value)
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b1;
+						need_sext = 2'b1;
+
+						if(func3 == 3'b101) need_sext = 2'b10;
+						else need_sext = 2'b1;
 				end
 
 				7'b0011011 : begin    // NOTE: ADDIW
@@ -177,7 +180,10 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b1;
 						alu_op    = 2'b10;
-						need_sext = 1'b1;
+						need_sext = 2'b1;
+
+						if(func3 == 3'b101) need_sext = 2'b10;
+						else need_sext = 2'b1;
 				end
 
 				7'b1100011 : begin // TODO: opcode for conditional branch instruction
@@ -199,7 +205,7 @@ always @(*) begin
 						alu_src   = 1'b1;
 						reg_w     = 1'b0;
 						alu_op    = 2'b11;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 
 				default    : begin // set all signal to 0
@@ -213,7 +219,7 @@ always @(*) begin
 						alu_src   = 1'b0;
 						reg_w     = 1'b0;
 						alu_op    = 2'b00;
-						need_sext = 1'b0;
+						need_sext = 2'b0;
 				end
 		endcase
 
@@ -221,13 +227,14 @@ always @(*) begin
 		$display("reg1  %d", reg1);
 		$display("reg2  %d", reg2);
 
-		$display("alu_src %d", alu_src);
-		$display("mem2reg %d", mem2reg);
-		$display("spc2reg %d", spc2reg);
-		$display("reg_w   %d", reg_w);
-		$display("mem_w   %d", mem_w);
-		$display("mem_r   %d", mem_r);
-		$display("alu_op  %d", alu_op);
+		$display("alu_src   %d", alu_src);
+		$display("need_sext %d", need_sext);
+		$display("mem2reg   %d", mem2reg);
+		$display("spc2reg   %d", spc2reg);
+		$display("reg_w     %d", reg_w);
+		$display("mem_w     %d", mem_w);
+		$display("mem_r     %d", mem_r);
+		$display("alu_op    %d", alu_op);
 
 		$display("has_fucnt : %d",has_funct);
 		$display("pc2imm    : %d",pc2imm);
