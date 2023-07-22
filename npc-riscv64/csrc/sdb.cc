@@ -128,8 +128,8 @@ static int cmd_x(char *args)
         // TODO:display content in memory here
 				uint64_t content;
         pmem_read((uint64_t)arg1, &content);
-        printf("0x%08x\n", content);
-        arg1 += 4;
+        printf(ANSI_FG_RED "0x%016lx\n" ANSI_NONE, content);
+        arg1 += 8;
     }
     return 0;
 }

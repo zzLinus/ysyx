@@ -1,4 +1,5 @@
 module DMEM (
+		input clk,
 		input mem_w_EN,
 		input mem_r_EN,
 		input [2:0] funct3,
@@ -15,7 +16,7 @@ module DMEM (
 // 0000 0000 0000 01010 100 01010 0000011
 
 reg [63:0] tmp;
-always @(addr or mem_w_EN or mem_r_EN) begin
+always @(addr or mem_w_EN or mem_r_EN or edge clk) begin
 		if(mem_w_EN) begin
 			case(funct3)
 				3'b000: pmem_write(addr, write_data, 8'h1);

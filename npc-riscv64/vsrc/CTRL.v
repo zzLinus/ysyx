@@ -35,8 +35,8 @@ assign reg1_reg2_geu = (reg1>= reg2);
 // NOTE : alu_src 0 : reg_value
 //                1 : imm_value
 
-// 0075551b
-// 0000 000 00111 01010 101 01010 0011011
+// 04a5de63
+// 0000 010 01010 01011 101 11100 1100011
 
 always @(*) begin
 		case(op_code)

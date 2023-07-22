@@ -115,6 +115,7 @@ PC _pc (
 );
 
 DMEM _dmem (
+		.clk(clk),
 		.mem_w_EN(mem_write),
 		.mem_r_EN(mem_read),
 		.funct3(funct3),

@@ -80,10 +80,10 @@ void pmem::host_write(void *addr, uint64_t data, uint8_t mask)
     printf("host write : addr[%lx] data[%lx] mask[%x]\n", (uint64_t *)addr, data, mask);
     switch (mask)
     {
-        case 0x1: *(uint8_t *)addr = data; return;
-        case 0x2: *(uint16_t *)addr = data; return;
-        case 0xf: *(uint32_t *)addr = data; return;
-        case 0xff: *(uint64_t *)addr = data; return;
+        case 0x1: *(uint8_t *)addr = (uint8_t)data; return;
+        case 0x2: *(uint16_t *)addr = (uint16_t)data; return;
+        case 0xf: *(uint32_t *)addr = (uint32_t)data; return;
+        case 0xff: *(uint64_t *)addr = (uint64_t)data; return;
         default: assert(0);  // NOTE: should not get here
     }
 }

@@ -13,12 +13,16 @@ module IDU(
 	output reg [63:0] imm
 );
 
+// 06a5dc63
+// 0000 0110 1010 1 101 11000 1100011
+
 always @(inst) begin
     case(inst[6:0])
         // I type instruction
         7'b0000011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
         // I type instruction
         7'b0010011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
+				7'b0011011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
         // STORE instruction
         7'b0100011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:25], inst[11:7]};
         // AUIPC
@@ -34,7 +38,6 @@ always @(inst) begin
 				// U-type instruction
 				7'b0110111 : imm = {inst[31] ? {32{1'b1}} : 32'b0, inst[31:12], 12'b0};
 				// Conditional Branches (B-type instruction)
-				7'b0011011 : imm = {inst[31] ? {52{1'b1}} : 52'b0, inst[31:20]};
 				7'b1100011 : imm = {inst[31] ? {51{1'b1}} : 51'b0, inst[31], inst[7], inst[30:25], inst[11:8], 1'b0};
 
         7'b1110011 : stop_npc(); // ebreak

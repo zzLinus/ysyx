@@ -41,7 +41,7 @@ extern "C"
 						return;
         }
         *rdata = mem->host_read(mem->guest_to_host(raddr), sizeof(*rdata));
-        printf("rdata : %lx\n", *rdata);
+        printf("rdata : %016lx\n", *rdata);
     }
 
     void pmem_write(uint64_t waddr, uint64_t wdata, uint8_t wmask)
