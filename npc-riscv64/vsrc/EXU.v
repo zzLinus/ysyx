@@ -11,10 +11,18 @@ module ALU_CTR(
 always @(alu_op or funct3 or funct7) begin
 		if(has_funct == 2'b11) begin // NOTE :instruction has fucnt7 && funct3
 				case ({funct7,funct3,alu_op}) // NOTE: mostly R-type instruction
+						// FIXME: 32 bit (sub)operation needs sign extend
 						12'b000000000010 : operation = 4'b0010; // ADD op
+						12'b000000000011 : operation = 4'b0010; // ADDW op
+						12'b010000000011 : operation = 4'b0110; // SUBW op
 						12'b010000000010 : operation = 4'b0110; // SUB op
+						12'b000000011011 : operation = 4'b0001; // ORW op
 						12'b000000011010 : operation = 4'b0001; // OR op
-						12'b000000001110 : operation = 4'b0011; // SLTU (sign)
+						12'b000000001111 : operation = 4'b0011; // SLTU (sign)
+						12'b000000100010 : operation = 4'b0101; // MULW op
+						12'b000000100011: operation = 4'b1010; // MUL op
+						12'b000000110010 : operation = 4'b0111; // DIVW op
+						12'b000000111010 : operation = 4'b1001; // REMW op
             12'b010000010110 : operation = 4'b0100; // SRAW op
             12'b000000010110 : operation = 4'b0100; // SRLW op
 						// FIXME: 32 bit operation needs sign extend
@@ -36,6 +44,7 @@ always @(alu_op or funct3 or funct7) begin
 						5'b10110 : operation = 4'b0100; // SRAIW op
 						5'b00110 : operation = 4'b1000; // SLLIW op
 						5'b11100 : operation = 4'b0000; // ANDI op
+						5'b01100 : operation = 4'b0011; // SLTIU op
 						5'b11000 : operation = 4'b0001; // ORI op
 						5'b10000 : operation = 4'b1100; // XOR op
 						5'b00000 : operation = 4'b0010; // ADD op
@@ -86,6 +95,13 @@ wire [BITS-1:0] alu_xor = alu_a ^ alu_b;
 wire [BITS-1:0] alu_b_s = (alu_b ^ {64{alu_ctr[2]}}); // alu_b after xor
 wire [BITS-1:0] alu_a_s = (need_sext == 2'b10) ? {32'b0, alu_a[31:0]} : alu_a;
 
+wire [BITS-1:0] alu_mul = alu_a*alu_b;
+wire [BITS-1:0] alu_mul32 = {32'b0, alu_a[31:0]*alu_b[31:0]};
+wire [BITS-1:0] alu_div = alu_a/alu_b;
+wire [BITS-1:0] alu_div32 = {32'b0, alu_a[31:0]/alu_b[31:0]};
+wire [BITS-1:0] alu_rem = alu_a%alu_b;
+wire [BITS-1:0] alu_rem32 = {32'b0, alu_a[31:0]%alu_b[31:0]};
+
 // NOTE: alu_ctr[2] == 0 -> left shift alu_ctr[2] == 1 -> right shift
 wire alu_ctr_al = alu_b[30] | funct7[5];  // NOTE: arithmetic or logic
 wire alu_ctr_lr = ~alu_ctr[2]; // NOTE: left or right
@@ -109,9 +125,14 @@ always @(alu_ctr or alu_a or alu_b) begin
 				4'b0000 : alu_out = alu_and;
 				4'b0001 : alu_out = alu_or;
 				4'b0010 : alu_out = adder_out;
+				4'b0110 : alu_out = adder_out;
 				4'b0011 : alu_out = ($signed(alu_a) < $signed(alu_b)) ? 64'b1 : 64'b0;
 				4'b1100 : alu_out = alu_xor;
 				4'b0100 : alu_out = (need_sext == 2'b10) ? {bs_out32[31] ? {32{1'b1}} : 32'b0, bs_out32} : sft_out;
+				4'b0101 : alu_out = alu_mul32;
+				4'b0111 : alu_out = alu_div32;
+				4'b1001 : alu_out = alu_rem32;
+				4'b1010 : alu_out = alu_mul;
 				4'b1000 : alu_out = (need_sext == 2'b10) ? {bs_out32[31] ? {32{1'b1}} : 32'b0, bs_out32} : sft_out;				default : alu_out = adder_out;
 		endcase
 
