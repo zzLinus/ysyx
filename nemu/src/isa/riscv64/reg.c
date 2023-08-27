@@ -2,13 +2,13 @@
  * Copyright (c) 2014-2022 Zihao Yu, Nanjing University
  *
  * NEMU is licensed under Mulan PSL v2.
- * You can use this software according to the terms and conditions of the Mulan PSL v2.
- * You may obtain a copy of Mulan PSL v2 at:
+ * You can use this software according to the terms and conditions of the Mulan
+ *PSL v2. You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
  *
- * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
- * EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
- * MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+ * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY
+ *KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+ *NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
  *
  * See the Mulan PSL v2 for more details.
  ***************************************************************************************/
@@ -27,24 +27,20 @@ const char *regs[] = { // cpu_gpr[32]
 };
 // clang-format on
 
-void isa_reg_display()
-{
-    for (int i = 0; i < 32; i++)
-    {
-        printf("register name: %s | dec value: %lu | hex value: %lx\n", reg_name(i, NOTIMPLEMENT), cpu.gpr[i], cpu.gpr[i]);
-    }
+void isa_reg_display() {
+  for (int i = 0; i < 32; i++) {
+    printf("register name: %s | dec value: %lu | hex value: %lx\n",
+           reg_name(i, NOTIMPLEMENT), cpu.gpr[i], cpu.gpr[i]);
+  }
 }
 
-word_t isa_reg_str2val(const char *s, bool *success)
-{
-    word_t reg_val;
-    for (int i = 0; i < 31; i++)
-    {
-        if (strcmp(s, reg_name(i, NOTIMPLEMENT)) == 0)
-        {
-            reg_val = cpu.gpr[i];
-            *success = true;
-        }
+word_t isa_reg_str2val(const char *s, bool *success) {
+  word_t reg_val = 0;
+  for (int i = 0; i < 31; i++) {
+    if (strcmp(s, reg_name(i, NOTIMPLEMENT)) == 0) {
+      reg_val = cpu.gpr[i];
+      *success = true;
     }
-    return reg_val;
+  }
+  return reg_val;
 }

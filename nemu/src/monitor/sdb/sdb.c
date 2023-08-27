@@ -143,7 +143,7 @@ static int cmd_x(char *args)
     for (int i = 0; i < arg0; i++)
     {
         printf(
-            "0x%08x\t%c%c%c%c\n",
+            "0x%08lx\t%c%c%c%c\n",
             paddr_read(arg1, 4),
             CHECKASCII(HEXTOCHAR(arg1, 4, 24)),
             CHECKASCII(HEXTOCHAR(arg1, 4, 16)),

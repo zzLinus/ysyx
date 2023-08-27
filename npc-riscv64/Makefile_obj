@@ -14,7 +14,7 @@ COMPILE.cc = $(OBJCACHE) $(CXX) $(CXXFLAGS) $(CPPFLAGS) $(TARGET_ARCH) -c
 CPPFLAGS += -MMD -MP 
 
 # npc includes
-CPPFLAGS += -I/home/zzlinus/Dev/C/ysyx/ysyx-workbench/npc-riscv64/include 
+CPPFLAGS += -I/home/zzlinus/dev/c/ysyx/npc-riscv64/include 
 
 # llvm link && defines
 CPPFLAGS += -std=c++14 -fno-exceptions -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -fPIE
@@ -22,7 +22,7 @@ CPPFLAGS += -std=c++14 -fno-exceptions -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D
 LIBS     += $(shell llvm-config --libs) -lreadline
 
 # nemu difftest utils
-LIBS     += -L/home/zzlinus/Dev/C/ysyx/ysyx-workbench/nemu/build -l:riscv64-nemu-interpreter-so
+LIBS     += -L/home/zzlinus/dev/c/ysyx/nemu/build -l:riscv64-nemu-interpreter-so
 
 # Compile in Verilator runtime debugging, so +verilator+debug works
 CPPFLAGS += -DVL_DEBUG=1

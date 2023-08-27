@@ -4,6 +4,7 @@
 
 #include "verilated.h"
 
+#include "Vtop__Syms.h"
 #include "Vtop___024root.h"
 
 void Vtop___024root___ico_sequent__TOP__0(Vtop___024root* vlSelf);
@@ -13,7 +14,7 @@ void Vtop___024root___eval_ico(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_ico\n"); );
     // Body
-    if (vlSelf->__VicoTriggered.at(0U)) {
+    if ((1ULL & vlSelf->__VicoTriggered.word(0U))) {
         Vtop___024root___ico_sequent__TOP__0(vlSelf);
         vlSelf->__Vm_traceActivity[1U] = 1U;
     }
@@ -38,13 +39,13 @@ void Vtop___024root___eval_act(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_act\n"); );
     // Body
-    if (vlSelf->__VpreTriggered.at(0U)) {
+    if ((1ULL & vlSelf->__VpreTriggered.word(0U))) {
         Vtop___024root___act_sequent__TOP__0(vlSelf);
     }
-    if (vlSelf->__VactTriggered.at(1U)) {
+    if ((2ULL & vlSelf->__VactTriggered.word(0U))) {
         Vtop___024root___act_sequent__TOP__1(vlSelf);
     }
-    if (vlSelf->__VactTriggered.at(0U)) {
+    if ((1ULL & vlSelf->__VactTriggered.word(0U))) {
         Vtop___024root___act_sequent__TOP__2(vlSelf);
     }
 }
@@ -62,28 +63,28 @@ void Vtop___024root___eval_nba(Vtop___024root* vlSelf) {
     Vtop__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vtop___024root___eval_nba\n"); );
     // Body
-    if (vlSelf->__VnbaTriggered.at(0U)) {
+    if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_sequent__TOP__0(vlSelf);
         vlSelf->__Vm_traceActivity[2U] = 1U;
     }
-    if (vlSelf->__VnbaTriggered.at(2U)) {
+    if ((4ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_sequent__TOP__1(vlSelf);
         vlSelf->__Vm_traceActivity[3U] = 1U;
     }
-    if (vlSelf->__VnbaTriggered.at(3U)) {
+    if ((8ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_sequent__TOP__2(vlSelf);
     }
-    if (vlSelf->__VnbaTriggered.at(1U)) {
+    if ((2ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_sequent__TOP__3(vlSelf);
     }
-    if (vlSelf->__VnbaTriggered.at(0U)) {
+    if ((1ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_sequent__TOP__4(vlSelf);
     }
-    if ((vlSelf->__VnbaTriggered.at(0U) | vlSelf->__VnbaTriggered.at(3U))) {
+    if ((9ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_comb__TOP__0(vlSelf);
         vlSelf->__Vm_traceActivity[4U] = 1U;
     }
-    if (vlSelf->__VnbaTriggered.at(2U)) {
+    if ((4ULL & vlSelf->__VnbaTriggered.word(0U))) {
         Vtop___024root___nba_sequent__TOP__5(vlSelf);
     }
 }
@@ -148,7 +149,7 @@ void Vtop___024root___eval(Vtop___024root* vlSelf) {
                 vlSelf->__VactIterCount = ((IData)(1U) 
                                            + vlSelf->__VactIterCount);
                 vlSelf->__VpreTriggered.andNot(vlSelf->__VactTriggered, vlSelf->__VnbaTriggered);
-                vlSelf->__VnbaTriggered.set(vlSelf->__VactTriggered);
+                vlSelf->__VnbaTriggered.thisOr(vlSelf->__VactTriggered);
                 Vtop___024root___eval_act(vlSelf);
             }
         }

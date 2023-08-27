@@ -8,9 +8,10 @@
 #include "verilated.h"
 #include "verilated_cov.h"
 
+
 class Vtop__Syms;
 
-class Vtop___024root final : public VerilatedModule {
+class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final : public VerilatedModule {
   public:
 
     // DESIGN SPECIFIC STATE
@@ -126,7 +127,7 @@ class Vtop___024root final : public VerilatedModule {
         CData/*3:0*/ top__DOT__my_keyboard__DOT____Vtogcov__count;
         CData/*2:0*/ top__DOT__my_keyboard__DOT____Vtogcov__ps2_clk_sync;
         CData/*0:0*/ top__DOT__my_keyboard__DOT____Vtogcov__sampling;
-        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h747c9236__0;
+        CData/*0:0*/ top__DOT__my_keyboard__DOT____Vlvbound_h90f460a6__0;
         CData/*3:0*/ top__DOT__alu__DOT__tmp;
         CData/*3:0*/ top__DOT__alu__DOT____Vtogcov__tmp;
         CData/*3:0*/ top__DOT__state_machine__DOT__state_din;
@@ -145,20 +146,20 @@ class Vtop___024root final : public VerilatedModule {
         CData/*2:0*/ top__DOT__mu_seg__DOT__offset;
         CData/*2:0*/ top__DOT__mu_seg__DOT____Vtogcov__offset;
         CData/*3:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_h;
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h18064a31__0;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_ha10ca83c__0;
     };
     struct {
-        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_h18064a31__1;
+        CData/*7:0*/ top__DOT__my_vmem__DOT____Vlvbound_ha10ca83c__1;
         CData/*7:0*/ top__DOT__lookup__DOT__ascii;
         CData/*0:0*/ top__DOT__lookup__DOT__pressing;
         CData/*0:0*/ top__DOT__lookup__DOT____Vtogcov__pressing;
-        CData/*0:0*/ __VdfgTmp_hdc53e345__0;
+        CData/*0:0*/ __VdfgTmp_h4d092dc3__0;
         CData/*3:0*/ __Vdly__top__DOT__my_keyboard__DOT__count;
         CData/*0:0*/ __Vdly__timer_out;
-        CData/*0:0*/ __Vtrigrprev__TOP__clk;
-        CData/*7:0*/ __Vtrigrprev__TOP__top__DOT__my_keyboard__DOT__keycode;
-        CData/*0:0*/ __Vtrigrprev__TOP__timer_out;
-        CData/*7:0*/ __Vtrigrprev__TOP__top__DOT__lookup__DOT__ascii;
+        CData/*0:0*/ __Vtrigprevexpr___TOP__clk__0;
+        CData/*7:0*/ __Vtrigprevexpr___TOP__top__DOT__my_keyboard__DOT__keycode__0;
+        CData/*0:0*/ __Vtrigprevexpr___TOP__timer_out__0;
+        CData/*7:0*/ __Vtrigprevexpr___TOP__top__DOT__lookup__DOT__ascii__0;
         CData/*0:0*/ __VactDidInit;
         CData/*0:0*/ __VactContinue;
         VL_OUT16(ledr,15,0);
@@ -186,7 +187,7 @@ class Vtop___024root final : public VerilatedModule {
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__word;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_cord_v;
         SData/*11:0*/ top__DOT__my_vmem__DOT____Vtogcov__font_data;
-        SData/*11:0*/ top__DOT__my_vmem__DOT____VdfgTmp_h1bcba204__0;
+        SData/*11:0*/ top__DOT__my_vmem__DOT____VdfgTmp_h121ea448__0;
         SData/*9:0*/ __Vdly__top__DOT__my_keyboard__DOT__buffer;
         VL_IN(sft_rgtr_data,31,0);
         VL_OUT(sft_out_q,31,0);
@@ -246,7 +247,7 @@ class Vtop___024root final : public VerilatedModule {
     void __Vconfigure(bool first);
     void __vlCoverInsert(std::atomic<uint32_t>* countp, bool enable, const char* filenamep, int lineno, int column,
         const char* hierp, const char* pagep, const char* commentp, const char* linescovp);
-} VL_ATTR_ALIGNED(VL_CACHE_LINE_BYTES);
+};
 
 
 #endif  // guard

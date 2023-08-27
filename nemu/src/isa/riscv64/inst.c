@@ -2,13 +2,13 @@
  * Copyright (c) 2014-2022 Zihao Yu, Nanjing University
  *
  * NEMU is licensed under Mulan PSL v2.
- * You can use this software according to the terms and conditions of the Mulan PSL v2.
- * You may obtain a copy of Mulan PSL v2 at:
+ * You can use this software according to the terms and conditions of the Mulan
+ *PSL v2. You may obtain a copy of Mulan PSL v2 at:
  *          http://license.coscl.org.cn/MulanPSL2
  *
- * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY KIND,
- * EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO NON-INFRINGEMENT,
- * MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
+ * THIS SOFTWARE IS PROVIDED ON AN "AS IS" BASIS, WITHOUT WARRANTIES OF ANY
+ *KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+ *NON-INFRINGEMENT, MERCHANTABILITY OR FIT FOR A PARTICULAR PURPOSE.
  *
  * See the Mulan PSL v2 for more details.
  ***************************************************************************************/
@@ -59,9 +59,8 @@ enum
     {                                                            \
         *imm = (SEXT(BITS(i, 31, 25), 7) << 5) | BITS(i, 11, 7); \
     } while (0)
-// NOTE:The jump and link (JAL) instruction uses the J-type format, where the J-immediate encodes a signed offset in
-// multiples of 2 bytes.
-// 1004bc
+// NOTE:The jump and link (JAL) instruction uses the J-type format, where the
+// J-immediate encodes a signed offset in multiples of 2 bytes. 1004bc
 #define immJ()                                                                                                         \
     do                                                                                                                 \
     {                                                                                                                  \
@@ -74,7 +73,8 @@ enum
         *imm = (SEXT(BITS(i, 31, 31), 1) << 11) | (BITS(i, 7, 7) << 10) | (BITS(i, 30, 25) << 4) | BITS(i, 11, 8); \
         *imm = *imm << 1;                                                                                          \
     } while (0)
-// INFO : why if i do SEXT(BITS(i, 11, 8), 4) it will overflow but BITS(i, 11, 8) is normal
+// INFO : why if i do SEXT(BITS(i, 11, 8), 4) it will overflow but BITS(i, 11,
+// 8) is normal
 
 #ifdef CONFIG_FTRACE
 uint8_t call_ret = 0;
@@ -183,7 +183,8 @@ static int decode_exec(Decode *s)
     INSTPAT("0000001 ????? ????? 000 ????? 01110 11", mulw, R, R(dest) = SEXT((uint32_t)src1 * src2, 32));
     INSTPAT("0000001 ????? ????? 000 ????? 01100 11", mul, R, R(dest) = src1 * src2);
 
-    // NOTE :JAL stores the address of the instruction following the jump (pc+4) into register rd.
+    // NOTE :JAL stores the address of the instruction following the jump (pc+4)
+    // into register rd.
     INSTPAT("??????? ????? ????? 111 ????? 00100 11", zext.b, I, R(dest) = BITS(src1, 7, 0));
     INSTPAT("??????? ????? ????? 000 ????? 00100 11", addi, I, R(dest) = src1 + imm);
     INSTPAT("??????? ????? ????? 000 ????? 00110 11", addiw, I, R(dest) = SEXT((uint32_t)(src1 + imm), 32));
@@ -192,7 +193,8 @@ static int decode_exec(Decode *s)
             R(dest) = s->snpc;
             IFDEF(CONFIG_FTRACE, CALL())
         });
-    INSTPAT("??????? 00000 ????? 000 ????? 00100 11", mv, I, R(dest) = src1 + imm);  // mv rd rs == add rd rs 0
+    INSTPAT("??????? 00000 ????? 000 ????? 00100 11", mv, I,
+            R(dest) = src1 + imm);  // mv rd rs == add rd rs 0
     INSTPAT("0100000 ????? ????? 101 ????? 01110 11", sraw, R, R(dest) = SEXT((int64_t)src1 >> src2, 32));
     INSTPAT("0000000 ????? ????? 101 ????? 01110 11", srlw, R, R(dest) = (uint32_t)src1 >> src2);
     INSTPAT("0000000 ????? ????? 101 ????? 00110 11", srliw, I, R(dest) = (int)((unsigned int)src1 >> BITS(imm, 4, 0)));
@@ -202,11 +204,15 @@ static int decode_exec(Decode *s)
     INSTPAT("??????? ????? ????? 001 ????? 00110 11", slliw, I, R(dest) = SEXT(src1 << imm, 32));
     INSTPAT("??????? ????? ????? 101 ????? 00100 11", srli, I, R(dest) = src1 >> imm);
 
-    /* NOTE : SLTI (set less than immediate) places the value 1 in register rd if register rs1 is less than the sign- */
-    /* extended immediate when both are treated as signed numbers, else 0 is written to rd. SLTIU is                  */
-    /* similar but compares the values as un"signed numbers (i.e., the immediate is first sign-extended to            */
-    /* XLEN bits then treated as an unsigned number). Note, SLTIU rd, rs1, 1 sets rd to 1 if rs1 equals               */
-    /* zero, otherwise sets rd to 0 (assembler pseudoinstruction SEQZ rd, rs).                                        */
+    /* NOTE : SLTI (set less than immediate) places the value 1 in register rd if
+     * register rs1 is less than the sign- */
+    /* extended immediate when both are treated as signed numbers, else 0 is
+     * written to rd. SLTIU is                  */
+    /* similar but compares the values as un"signed numbers (i.e., the immediate
+     * is first sign-extended to            */
+    /* XLEN bits then treated as an unsigned number). Note, SLTIU rd, rs1, 1 sets
+     * rd to 1 if rs1 equals               */
+    /* zero, otherwise sets rd to 0 (assembler pseudoinstruction SEQZ rd, rs). */
     INSTPAT("??????? ????? ????? 011 ????? 00100 11", seqz, I, R(dest) = src1 == 0 ? imm : 0);
 
     // NOTE : branch instruction
@@ -237,8 +243,9 @@ static int decode_exec(Decode *s)
             IFDEF(CONFIG_FTRACE, CALL());
         });
 
-    // NOTE : The SD, SW, SH, and SB instructions store 64 - bit, 32 - bit, 16 - bit,
-    // and8 - bit values from the low bits of register rs2 to memory respectively.
+    // NOTE : The SD, SW, SH, and SB instructions store 64 - bit, 32 - bit, 16 -
+    // bit, and8 - bit values from the low bits of register rs2 to memory
+    // respectively.
     INSTPAT("??????? ????? ????? 011 ????? 01000 11", sd, S, Mw(src1 + imm, 8, src2));
     INSTPAT("??????? ????? ????? 010 ????? 01000 11", sw, S, Mw(src1 + imm, 4, src2));
     INSTPAT("??????? ????? ????? 001 ????? 01000 11", sh, S, Mw(src1 + imm, 2, src2));

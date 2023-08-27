@@ -479,7 +479,7 @@ VL_ATTR_COLD void Vtop___024root__trace_full_sub_0(Vtop___024root* vlSelf, Veril
     bufp->fullCData(oldp+92,(vlSelf->top__DOT__state_machine__DOT__state_dout),4);
     bufp->fullBit(oldp+93,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__lut_out));
     bufp->fullBit(oldp+94,(vlSelf->top__DOT__state_machine__DOT__outMux__DOT__i0__DOT__hit));
-    bufp->fullIData(oldp+95,(((IData)(vlSelf->__VdfgTmp_hdc53e345__0)
+    bufp->fullIData(oldp+95,(((IData)(vlSelf->__VdfgTmp_h4d092dc3__0)
                                ? 0xffffffU : 0U)),24);
     bufp->fullSData(oldp+96,(vlSelf->top__DOT__my_vmem__DOT__font_addr),12);
     bufp->fullSData(oldp+97,(vlSelf->top__DOT__my_vmem__DOT__word),12);
