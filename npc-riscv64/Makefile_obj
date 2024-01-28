@@ -17,7 +17,7 @@ CPPFLAGS += -MMD -MP
 CPPFLAGS += -I/home/zzlinus/dev/c/ysyx/npc-riscv64/include 
 
 # llvm link && defines
-CPPFLAGS += -std=c++14 -fno-exceptions -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -fPIE
+CPPFLAGS += -std=c++17 -fno-exceptions -D_GNU_SOURCE -D__STDC_CONSTANT_MACROS -D__STDC_LIMIT_MACROS -fPIE
 
 LIBS     += $(shell llvm-config --libs) -lreadline
 
